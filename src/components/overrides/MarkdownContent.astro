@@ -1,0 +1,14 @@
+---
+// Starlight's article body, with the official sources and last-verified date appended
+// to every page that lists sources in its frontmatter.
+import Default from '@astrojs/starlight/components/MarkdownContent.astro';
+import Sources from '../Sources.astro';
+
+const data = Astro.locals.starlightRoute.entry.data;
+const showSources = data.template !== 'splash' && (data.sources.length > 0 || data.status !== 'planned');
+---
+
+<Default>
+	<slot />
+	{showSources && <Sources />}
+</Default>

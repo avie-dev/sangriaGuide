@@ -1,0 +1,30 @@
+---
+title: Labels
+description: The labels used across the wiki to show where information comes from and who it applies to.
+status: verified
+lastVerified: 2026-11-22
+---
+
+import Label from '../../../components/Label.astro';
+import { LABELS, LABEL_INFO } from '../../../data/labels';
+
+Labels appear under an article's title, or next to a specific claim, so you can tell at a glance how solid a piece of information is.
+
+<table>
+	<thead>
+		<tr>
+			<th>Label</th>
+			<th>What it means</th>
+		</tr>
+	</thead>
+	<tbody>
+		{LABELS.map((key) => (
+			<tr>
+				<td><Label type={key} /></td>
+				<td>{LABEL_INFO[key].meaning}</td>
+			</tr>
+		))}
+	</tbody>
+</table>
+
+A page that isn't fully written or checked also shows a **Work in progress** notice at the top.

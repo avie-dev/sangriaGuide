@@ -1,0 +1,50 @@
+---
+// Table of all official sources, grouped by category, from src/data/official-sources.json.
+import sources from '../data/official-sources.json';
+
+const groups = [...new Set(sources.map((s) => s.category))];
+const langNote: Record<string, string> = { en: 'English', mixed: 'Mostly Portuguese', pt: 'Portuguese' };
+---
+
+{
+	groups.map((g) => (
+		<>
+			<h2 id={`sources-${g.toLowerCase().replace(/[^a-z]+/g, '-')}`}>{g}</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Page</th>
+						<th>Id</th>
+						<th>Other versions</th>
+						<th>Language of the "English" page</th>
+					</tr>
+				</thead>
+				<tbody>
+					{sources
+						.filter((s) => s.category === g)
+						.map((s) => (
+							<tr>
+								<td>
+									<a href={s.url_en}>{s.title}</a>
+								</td>
+								<td>
+									<code>{s.id}</code>
+								</td>
+								<td>
+									<a href={s.url_pt} hreflang="pt">Portuguese</a>
+									{s.url_en_chat && (
+										<>
+											{' · '}
+											<a href={s.url_en_chat}>Without the interface</a>
+										</>
+									)}
+								</td>
+								<td>{langNote[s.content_language]}</td>
+							</tr>
+						))}
+				</tbody>
+			</table>
+		</>
+	))
+}
+<p>Retrieved {sources[0]?.retrieved}.</p>

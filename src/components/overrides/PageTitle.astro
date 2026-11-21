@@ -1,0 +1,30 @@
+---
+// Starlight's title, followed by the page's labels and a work-in-progress notice when needed.
+import Default from '@astrojs/starlight/components/PageTitle.astro';
+import Label from '../Label.astro';
+import StatusNotice from '../StatusNotice.astro';
+
+const data = Astro.locals.starlightRoute.entry.data;
+const isSplash = data.template === 'splash';
+---
+
+<Default />
+{
+	!isSplash && data.labels.length > 0 && (
+		<p class="sf-labels">
+			{data.labels.map((l) => (
+				<Label type={l} />
+			))}
+		</p>
+	)
+}
+{!isSplash && <StatusNotice />}
+
+<style>
+	.sf-labels {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+		margin-top: 0.75rem;
+	}
+</style>

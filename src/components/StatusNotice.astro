@@ -1,0 +1,13 @@
+---
+// Tells readers how finished a page is, from its `status` frontmatter. Verified pages show nothing.
+import { Aside } from '@astrojs/starlight/components';
+
+const status: string = Astro.locals.starlightRoute?.entry?.data?.status ?? 'planned';
+const text: Record<string, string> = {
+	planned: 'This section is planned but not written yet. Use the official guides linked below in the meantime.',
+	draft: 'Draft: parts of this page are incomplete or not yet checked against the official guides.',
+	written: 'Written but not yet fully verified against the official guides.',
+};
+---
+
+{status !== 'verified' && <Aside type="caution" title="Work in progress">{text[status]}</Aside>}

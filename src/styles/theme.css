@@ -1,0 +1,72 @@
+/* Sangria Falls Wiki theme: charcoal, crimson and muted gold, on top of Starlight. */
+
+:root {
+	--sl-font: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+	--sf-font-display: 'Cinzel', Georgia, 'Times New Roman', serif;
+
+	--sf-gold: #c9a45c;
+	--sf-gold-dim: #8a7240;
+	--sf-crimson: #b3263a;
+	--sf-crimson-deep: #5c1220;
+}
+
+/* Dark (default) */
+:root,
+:root[data-theme='dark'] {
+	--sl-color-accent-low: #3a0f18;
+	--sl-color-accent: #d0384e;
+	--sl-color-accent-high: #e8808e;
+	--sl-color-white: #f4efe8;
+	--sl-color-gray-1: #e6dfd5;
+	--sl-color-gray-2: #c4bbaf;
+	--sl-color-gray-3: #998f83;
+	--sl-color-gray-4: #5f574f;
+	--sl-color-gray-5: #3a342f;
+	--sl-color-gray-6: #24201d;
+	--sl-color-black: #14110f;
+	--sf-heading: var(--sf-gold);
+}
+
+/* Light (opt-in) */
+:root[data-theme='light'] {
+	--sl-color-accent-low: #f6d9dd;
+	--sl-color-accent: #9e1f33;
+	--sl-color-accent-high: #4d0d18;
+	--sl-color-white: #1a1613;
+	--sl-color-gray-1: #2b2622;
+	--sl-color-gray-2: #423b35;
+	--sl-color-gray-3: #6b625a;
+	--sl-color-gray-4: #9c9389;
+	--sl-color-gray-5: #d9d1c6;
+	--sl-color-gray-6: #efe9e1;
+	--sl-color-gray-7: #f7f3ee;
+	--sl-color-black: #fcfaf7;
+	--sf-heading: #6e5320;
+}
+
+/* Fantasy display font for headings only; body text stays a plain, readable sans-serif. */
+.sl-markdown-content :is(h1, h2, h3),
+h1#_top,
+.site-title {
+	font-family: var(--sf-font-display);
+	letter-spacing: 0.02em;
+}
+.sl-markdown-content :is(h2, h3),
+h1#_top {
+	color: var(--sf-heading);
+}
+.sl-markdown-content h2 {
+	border-bottom: 1px solid color-mix(in srgb, var(--sf-gold-dim) 45%, transparent);
+	padding-bottom: 0.3rem;
+}
+
+/* Subtle gothic frame on the header. */
+header.header {
+	border-bottom: 1px solid color-mix(in srgb, var(--sf-crimson) 55%, transparent);
+	box-shadow: 0 1px 0 color-mix(in srgb, var(--sf-gold-dim) 30%, transparent);
+}
+
+/* Tables: readable zebra rows. */
+.sl-markdown-content table tr:nth-child(even) {
+	background: color-mix(in srgb, var(--sl-color-gray-6) 60%, transparent);
+}

@@ -1,0 +1,23 @@
+---
+// Like Starlight's ThemeProvider, but dark is the default. A reader who hasn't chosen a theme gets
+// "dark" stored as their choice, so Starlight's theme picker (which follows the OS in "auto")
+// shows Dark instead of switching to the system theme. Picking Auto or Light still works.
+---
+
+{/* Inlined to avoid a flash of the wrong theme. */}
+<script is:inline>
+	(() => {
+		let stored = null;
+		try {
+			stored = localStorage.getItem('starlight-theme');
+			if (stored === null) localStorage.setItem('starlight-theme', (stored = 'dark'));
+		} catch {}
+		const theme =
+			stored === 'light' || stored === 'dark'
+				? stored
+				: stored === '' && matchMedia('(prefers-color-scheme: light)').matches
+					? 'light'
+					: 'dark';
+		document.documentElement.dataset.theme = theme;
+	})();
+</script>

@@ -1,0 +1,53 @@
+---
+// Lists the official sources for a page plus its last-verified date.
+// Reads `sources` and `lastVerified` from the page frontmatter unless passed explicitly.
+import officialSources from '../data/official-sources.json';
+
+interface Props {
+	ids?: string[];
+	lastVerified?: Date;
+}
+const fm = Astro.locals.starlightRoute?.entry?.data ?? {};
+const ids: string[] = Astro.props.ids ?? fm.sources ?? [];
+const lastVerified: Date | undefined = Astro.props.lastVerified ?? fm.lastVerified;
+const byId = new Map(officialSources.map((s) => [s.id, s]));
+const missing = ids.filter((id) => !byId.has(id));
+if (missing.length) throw new Error(`Unknown source id(s): ${missing.join(', ')}`);
+const list = ids.map((id) => byId.get(id)!);
+const fmt = (d: Date) => d.toISOString().slice(0, 10);
+---
+
+<section class="sf-sources" aria-labelledby="official-sources">
+	<h2 id="official-sources">Official sources</h2>
+	{
+		list.length ? (
+			<ul>
+				{list.map((s) => (
+					<li>
+						<a href={s.url_en}>{s.title}</a>
+						{' · '}
+						<a href={s.url_pt} hreflang="pt">Portuguese</a>
+						{s.url_en_chat && (
+							<>
+								{' · '}
+								<a href={s.url_en_chat}>without the interface</a>
+							</>
+						)}
+					</li>
+				))}
+			</ul>
+		) : (
+			<p>No official source documents this page yet.</p>
+		)
+	}
+	<p class="sf-verified">
+		{lastVerified ? <>Last verified: <time datetime={fmt(lastVerified)}>{fmt(lastVerified)}</time></> : 'Not yet verified against its sources.'}
+	</p>
+</section>
+
+<style>
+	.sf-verified {
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+</style>
