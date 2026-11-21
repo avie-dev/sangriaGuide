@@ -22,3 +22,4 @@ Format: `ID · area · question — why it matters · source checked · status`.
 | Q-014 | Community | Is there a published set of community rules (site or Discord)? | "Community rules" article | Site-wide | Open |
 | Q-015 | Community | Do any community guides or builds exist in other languages worth crediting? | Community recommendations | comunidade, builds (client-rendered) | Open; recheck in a browser |
 | Q-016 | Getting started | Are there beginner XP bonuses beyond the tutorial gift mentioned in the Bank guide? | "Beginner XP bonuses" article | banco, nivel-e-prestigio | Open |
+| Q-017 | Character | What does each of prestiges 2–19 cost? The guide gives 75 (first), 4,467 (twentieth) and 22,760 (all 20). A geometric series with ratio ≈1.24 fits these three numbers to within rounding, but that is our inference, not a source. | Prestige calculator for partial ranges | nivel-e-prestigio (EN and PT, both modes) | Open; check `.level` in game at several prestiges |

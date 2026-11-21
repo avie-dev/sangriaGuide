@@ -1,0 +1,47 @@
+# Cost tables shown by <CostTable id="…" /> and reused by calculators.
+# `rows` hold numbers exactly as the sources state them. `total` is checked against the rows
+# at build time when every row has a cost. Leave a cost as null when the source doesn't give it.
+
+- id: class-evolution
+  title: Class evolution tributes
+  currency: ourosangue
+  rowLabel: Evolution
+  rows:
+    - { label: Evolution I, cost: 15000 }
+    - { label: Evolution II, cost: 30000 }
+    - { label: Evolution III, cost: 45000 }
+  total: 90000
+  note: Per class. Paid at the last step of each evolution quest, from the Bank.
+  sources: [classes, class-hub]
+
+- id: class-switch
+  title: Switching to a class you have already unlocked
+  currency: ourosangue
+  rowLabel: Action
+  rows:
+    - { label: Switch class, cost: 3000 }
+  note: The first class, chosen during The Path of Blood, is free.
+  sources: [classes]
+
+- id: character-prestige
+  title: Character prestige costs
+  currency: ourosangue
+  rowLabel: Prestige
+  rows:
+    - { label: 'Prestige 1', cost: 75 }
+    - { label: 'Prestiges 2–19', cost: null }
+    - { label: 'Prestige 20', cost: 4467 }
+  total: 22760
+  note: The official guide gives only the first and last cost and the total for all 20. Type `.level` in game to see your next prestige's cost.
+  missing: [Q-017]
+  sources: [nivel-e-prestigio]
+
+- id: transfusion
+  title: Transfusion cost
+  currency: ourosangue
+  rowLabel: Player
+  rows:
+    - { label: Without VIP, cost: 10000 }
+    - { label: With VIP, cost: 8000 }
+  note: Each Transfusion also needs 10 Pulses and yields 10 Plasmas. The limit is 250 Transfusions.
+  sources: [transfusao-e-plasmas]

@@ -1,0 +1,41 @@
+---
+// An amount of a server currency, formatted consistently and linked to the currencies page.
+//   <Currency id="ourosangue" amount={15000} />  →  15,000 Ourosangue
+import { getEntry } from 'astro:content';
+import { liveHref } from '../lib/coverage';
+
+interface Props {
+	id: string;
+	amount?: number;
+}
+const { id, amount } = Astro.props;
+const entry = await getEntry('currencies', id);
+if (!entry) throw new Error(`Currency: unknown id "${id}" (see src/data/currencies.yaml)`);
+const fmt = new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 });
+// Link to the currencies page only once it exists.
+const page = liveHref('economy/currencies');
+---
+
+<span class="sf-currency"
+	>{amount !== undefined && <span class="sf-currency__amount">{fmt.format(amount)}</span>}{amount !== undefined && ' '}{
+		page ? (
+			<a href={`${page}#${id}`} title={entry.data.summary}>{entry.data.name}</a>
+		) : (
+			<abbr title={entry.data.summary}>{entry.data.name}</abbr>
+		)
+	}</span
+>
+
+<style>
+	.sf-currency {
+		white-space: nowrap;
+	}
+	.sf-currency__amount {
+		font-variant-numeric: tabular-nums;
+		font-weight: 600;
+		color: var(--sf-gold);
+	}
+	:global([data-theme='light']) .sf-currency__amount {
+		color: var(--sf-heading);
+	}
+</style>

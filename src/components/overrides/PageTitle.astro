@@ -1,13 +1,41 @@
 ---
-// Starlight's title, followed by the page's labels and a work-in-progress notice when needed.
+// Breadcrumbs, Starlight's title, the page's labels, a work-in-progress notice when needed,
+// and "Before you read" links taken from `needs` in docs/coverage.yaml.
 import Default from '@astrojs/starlight/components/PageTitle.astro';
 import Label from '../Label.astro';
 import StatusNotice from '../StatusNotice.astro';
+import { plannedPages, sectionTitle, isLive } from '../../lib/coverage';
 
-const data = Astro.locals.starlightRoute.entry.data;
+const route = Astro.locals.starlightRoute;
+const data = route.entry.data;
 const isSplash = data.template === 'splash';
+const slug = route.id;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const [dir] = slug.split('/');
+const crumbs: { label: string; href?: string }[] = [{ label: 'Home', href: `${base}/` }];
+const secTitle = dir === 'about' ? 'About this wiki' : sectionTitle(dir);
+if (secTitle && slug !== dir) crumbs.push({ label: secTitle, href: `${base}/${dir}/` });
+
+const pages = plannedPages();
+const me = pages.find((p) => p.slug === slug);
+const needs = (me?.needs ?? []).map((n) => pages.find((p) => p.slug === n)!).filter(Boolean);
 ---
 
+{
+	!isSplash && (
+		<nav class="sf-crumbs" aria-label="Breadcrumb">
+			<ol>
+				{crumbs.map((c) => (
+					<li>
+						<a href={c.href}>{c.label}</a>
+					</li>
+				))}
+				<li aria-current="page">{data.title}</li>
+			</ol>
+		</nav>
+	)
+}
 <Default />
 {
 	!isSplash && data.labels.length > 0 && (
@@ -19,12 +47,53 @@ const isSplash = data.template === 'splash';
 	)
 }
 {!isSplash && <StatusNotice />}
+{
+	needs.length > 0 && (
+		<p class="sf-before">
+			<strong>Before you read:</strong>{' '}
+			{needs.map((n, i) => (
+				<>
+					{i > 0 && ' · '}
+					{isLive(n) ? <a href={`${base}/${n.slug}/`}>{n.title}</a> : <span>{n.title} (coming soon)</span>}
+				</>
+			))}
+		</p>
+	)
+}
 
 <style>
+	.sf-crumbs ol {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem;
+		list-style: none;
+		padding: 0;
+		margin: 1rem 0 0;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+	.sf-crumbs li + li::before {
+		content: '›';
+		margin-right: 0.25rem;
+		color: var(--sl-color-gray-4);
+	}
+	.sf-crumbs a {
+		color: var(--sl-color-gray-2);
+		text-decoration: none;
+	}
+	.sf-crumbs a:hover {
+		color: var(--sl-color-white);
+		text-decoration: underline;
+	}
 	.sf-labels {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.4rem;
 		margin-top: 0.75rem;
+	}
+	.sf-before {
+		margin-top: 1rem;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-2);
 	}
 </style>

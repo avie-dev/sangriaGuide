@@ -1,0 +1,99 @@
+---
+// A class summary card from src/data/classes.yaml.
+//   <ClassCard id="draekhar" />
+import { getEntry, type CollectionEntry } from 'astro:content';
+import { liveHref } from '../lib/coverage';
+
+interface Props {
+	id?: string;
+	entry?: CollectionEntry<'classes'>;
+}
+const entry = Astro.props.entry ?? (Astro.props.id ? await getEntry('classes', Astro.props.id) : undefined);
+if (!entry) throw new Error(`ClassCard: unknown class "${Astro.props.id}" (see src/data/classes.yaml)`);
+const c = entry.data;
+const roman = ['I', 'II', 'III'];
+const names = new Map<string, string>();
+for (const r of c.requires) names.set(r.class.id, (await getEntry('classes', r.class.id))!.data.name);
+const scalingText = { physical: 'Physical', magic: 'Magic', hybrid: 'Hybrid' }[c.scaling];
+// Class page slugs match the data ids; link only once the page exists.
+const href = liveHref(`classes/${entry.id}`);
+---
+
+<article class={`sf-class sf-class--${c.scaling} not-content`}>
+	<header>
+		<h3>{href ? <a href={href}>{c.name}</a> : c.name}</h3>
+		<span class="sf-class__scaling">{scalingText}</span>
+	</header>
+	<p class="sf-class__role">{c.role}</p>
+	<dl>
+		<dt>Weapons</dt>
+		<dd>{c.weapons.join(', ')}</dd>
+		{c.mentor && (<><dt>Master</dt><dd>{c.mentor}</dd></>)}
+		{c.evolutions.length > 0 && (<><dt>Evolutions</dt><dd>{c.evolutions.join(' → ')}</dd></>)}
+		<dt>Unlock</dt>
+		<dd>
+			{c.starting
+				? 'Every vampire starts here'
+				: c.requires.length
+					? c.requires.map((r) => `${names.get(r.class.id)} Evolution ${roman[r.evolution - 1]}`).join(', ')
+					: 'Free as your first class, or its Master’s quest'}
+		</dd>
+	</dl>
+</article>
+
+<style>
+	.sf-class {
+		border: 1px solid var(--sl-color-gray-5);
+		border-top: 3px solid var(--sf-crimson);
+		border-radius: 0.375rem;
+		padding: 1rem;
+		background: var(--sl-color-gray-6);
+	}
+	.sf-class--magic {
+		border-top-color: #6d5bd0;
+	}
+	.sf-class--hybrid {
+		border-top-color: var(--sf-gold);
+	}
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 0.5rem;
+	}
+	h3 {
+		margin: 0;
+		font-family: var(--sf-font-display);
+		font-size: var(--sl-text-xl);
+	}
+	h3 a {
+		color: var(--sf-heading);
+		text-decoration: none;
+	}
+	h3 a:hover {
+		text-decoration: underline;
+	}
+	.sf-class__scaling {
+		font-size: var(--sl-text-xs);
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		color: var(--sl-color-gray-3);
+	}
+	.sf-class__role {
+		margin: 0.5rem 0;
+		color: var(--sl-color-gray-2);
+	}
+	dl {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 0.2rem 0.75rem;
+		margin: 0;
+		font-size: var(--sl-text-sm);
+	}
+	dt {
+		color: var(--sl-color-gray-3);
+	}
+	dd {
+		margin: 0;
+	}
+</style>

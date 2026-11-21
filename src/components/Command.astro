@@ -1,0 +1,60 @@
+---
+// A copyable chat command. Command syntax is never translated: pass it exactly as typed in game.
+//   <Command cmd=".meditate panel">Opens the meditation panel.</Command>
+interface Props {
+	cmd: string;
+}
+const { cmd } = Astro.props;
+const hasDescription = Astro.slots.has('default');
+---
+
+<div class="sf-command not-content">
+	<code class="sf-command__code">{cmd}</code>
+	<button type="button" class="sf-copy" data-copy={cmd} aria-label={`Copy ${cmd}`}>Copy</button>
+	{hasDescription && <span class="sf-command__desc"><slot /></span>}
+</div>
+
+<script>
+	import { wireCopyButtons } from '../scripts/copy';
+	wireCopyButtons();
+</script>
+
+<style>
+	.sf-command {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.5rem 0.75rem;
+		margin-block: 0.75rem;
+		padding: 0.5rem 0.75rem;
+		border: 1px solid var(--sl-color-gray-5);
+		border-left: 3px solid var(--sl-color-accent);
+		border-radius: 0.25rem;
+		background: var(--sl-color-gray-6);
+	}
+	.sf-command__code {
+		font-family: var(--__sl-font-mono, monospace);
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-white);
+		background: none;
+	}
+	.sf-command__desc {
+		flex-basis: 100%;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-2);
+	}
+	:global(.sf-copy) {
+		font-size: var(--sl-text-xs);
+		padding: 0.15rem 0.6rem;
+		border: 1px solid var(--sl-color-gray-4);
+		border-radius: 0.25rem;
+		background: transparent;
+		color: var(--sl-color-gray-2);
+		cursor: pointer;
+	}
+	:global(.sf-copy:hover),
+	:global(.sf-copy:focus-visible) {
+		color: var(--sl-color-white);
+		border-color: var(--sl-color-accent);
+	}
+</style>

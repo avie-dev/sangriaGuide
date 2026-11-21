@@ -1,14 +1,19 @@
 ---
-// Starlight's article body, with the official sources and last-verified date appended
-// to every page that lists sources in its frontmatter.
+// Starlight's article body, followed by related guides, the official sources with the
+// last-verified date, and a "copy for Discord" button.
 import Default from '@astrojs/starlight/components/MarkdownContent.astro';
+import RelatedGuides from '../RelatedGuides.astro';
 import Sources from '../Sources.astro';
+import DiscordShare from '../DiscordShare.astro';
 
 const data = Astro.locals.starlightRoute.entry.data;
-const showSources = data.template !== 'splash' && (data.sources.length > 0 || data.status !== 'planned');
+const isArticle = data.template !== 'splash';
+const showSources = isArticle && (data.sources.length > 0 || data.status !== 'planned');
 ---
 
 <Default>
 	<slot />
+	{isArticle && <RelatedGuides />}
 	{showSources && <Sources />}
+	{isArticle && <DiscordShare />}
 </Default>

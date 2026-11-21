@@ -25,6 +25,7 @@ npm run build      # static site in dist/, with the search index
 npm run preview    # serve the built site
 npm run check      # type-check, and fail if docs/progress.md is out of date
 npm run coverage   # validate docs/coverage.yaml and regenerate docs/progress.md
+npm run check:external  # after a build: check links to outside sites
 ```
 
 ## Project layout
@@ -35,7 +36,9 @@ docs/
   information-architecture.md  sections, URL scheme, page types, unlock dependencies
   coverage.yaml           every planned page: brief items, sources, reading order, status
   progress.md             tracker (article tables generated from coverage.yaml)
-scripts/coverage.mjs      validates coverage.yaml, regenerates the tracker
+scripts/
+  coverage.mjs            validates coverage.yaml, regenerates the tracker
+  check-external-links.mjs  checks outside links in the built site
 research/                 source research (Phase 1)
   fetch.mjs               downloads official pages into research/raw/ (gitignored)
   extract.mjs             converts them to plain text in research/text/ (gitignored)
@@ -44,9 +47,10 @@ research/                 source research (Phase 1)
   open-questions.md       things that need staff or community confirmation
 src/
   content/docs/           wiki articles, one folder per sidebar section
-  components/             Label, Sources, StatusNotice, SourceRegistry
+  components/             article components (see /about/components/ on the site)
   components/overrides/   Starlight overrides (dark default, labels, sources, footer)
-  data/                   official-sources.json, labels.ts, game data
+  data/                   game data (currencies, classes, cost tables), source registry, labels
+  lib/coverage.ts         build-time access to the page plan and open questions
   styles/theme.css        charcoal, crimson and gold theme
 ```
 

@@ -10,7 +10,8 @@
     "preview": "astro preview",
     "check": "astro check && node scripts/coverage.mjs --check",
     "research": "node research/fetch.mjs && node research/extract.mjs && node research/inventory.mjs",
-    "coverage": "node scripts/coverage.mjs"
+    "coverage": "node scripts/coverage.mjs",
+    "check:external": "node scripts/check-external-links.mjs"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.43.1",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.12",
+    "starlight-links-validator": "^0.27.0",
     "typescript": "^6.0.3",
     "yaml": "^2.9.1"
   }

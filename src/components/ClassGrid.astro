@@ -1,0 +1,82 @@
+---
+// All classes as cards, with buttons to filter by damage scaling.
+import { getCollection } from 'astro:content';
+import ClassCard from './ClassCard.astro';
+
+interface Props {
+	/** Include the starting Awakened state. */
+	includeStarting?: boolean;
+}
+const all = await getCollection('classes');
+const list = all.filter((c) => Astro.props.includeStarting || !c.data.starting).sort((a, b) => a.data.order - b.data.order);
+const filters = [
+	['all', 'All'],
+	['physical', 'Physical'],
+	['magic', 'Magic'],
+	['hybrid', 'Hybrid'],
+	['advanced', 'Needs other classes'],
+] as const;
+---
+
+<sf-class-grid>
+	<div class="sf-filters" role="group" aria-label="Filter classes">
+		{filters.map(([key, label], i) => <button type="button" data-filter={key} aria-pressed={i === 0 ? 'true' : 'false'}>{label}</button>)}
+	</div>
+	<div class="sf-grid">
+		{
+			list.map((c) => (
+				<div data-scaling={c.data.scaling} data-advanced={c.data.requires.length > 0 ? 'true' : 'false'}>
+					<ClassCard entry={c} />
+				</div>
+			))
+		}
+	</div>
+</sf-class-grid>
+
+<script>
+	class ClassGridEl extends HTMLElement {
+		connectedCallback() {
+			const buttons = [...this.querySelectorAll<HTMLButtonElement>('[data-filter]')];
+			const items = [...this.querySelectorAll<HTMLElement>('[data-scaling]')];
+			for (const b of buttons)
+				b.addEventListener('click', () => {
+					const f = b.dataset.filter;
+					for (const x of buttons) x.setAttribute('aria-pressed', String(x === b));
+					for (const it of items)
+						it.hidden = !(f === 'all' || it.dataset.scaling === f || (f === 'advanced' && it.dataset.advanced === 'true'));
+				});
+		}
+	}
+	if (!customElements.get('sf-class-grid')) customElements.define('sf-class-grid', ClassGridEl);
+</script>
+
+<style>
+	.sf-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+	.sf-grid > [hidden] {
+		display: none;
+	}
+	.sf-filters {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+	}
+	.sf-filters button {
+		font-size: var(--sl-text-sm);
+		padding: 0.25rem 0.75rem;
+		border: 1px solid var(--sl-color-gray-4);
+		border-radius: 999px;
+		background: transparent;
+		color: var(--sl-color-gray-2);
+		cursor: pointer;
+	}
+	.sf-filters button[aria-pressed='true'] {
+		background: var(--sl-color-accent-low);
+		border-color: var(--sl-color-accent);
+		color: var(--sl-color-white);
+	}
+</style>

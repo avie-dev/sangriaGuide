@@ -1,0 +1,43 @@
+# The five Bank balances. Source: Bank guide (banco), retrieved 2026-11-22.
+# Every value here must be stated by a listed source. Add `verify: true` to anything that isn't.
+
+- id: ourosangue
+  name: Ourosangue
+  aliases: [Blood Gold]
+  summary: The everyday currency.
+  earn: [Events, Contracts, Market sales, Shadow Merchant sales, Gathering professions, Exchanging Sangricoins]
+  spend: [Market shop and purchases, Vault, Illusory Arena entry, Prestige, Transfusions, Class evolutions, Sangrulho fusion, Casino]
+  item: Primal Stygian Shard turns into Ourosangue when deposited.
+  sources: [banco]
+
+- id: sangricoins
+  name: Sangricoins
+  summary: The special currency.
+  earn: [Reality Rupture, "Goreswine's Judgment", Tower of the Immortals, Online Reward, Battle Pass, Donations]
+  spend: [Meditation, Speeding up Sangrulho incubation, Pet crystal reset, Transfusion preset reset, Exchange to Ourosangue]
+  sources: [banco]
+
+- id: quitina
+  name: Quitina
+  aliases: [Chitin]
+  summary: Activates 2x XP for 30 minutes on Character, Weapon or Blood.
+  earn: [Outpost missions, Battle Pass]
+  spend: [Double XP]
+  item: The only balance you can withdraw as an item.
+  sources: [banco, nivel-e-prestigio]
+
+- id: ressonador
+  name: Resonator
+  ptName: Ressonador
+  summary: Rolls a Sangrulho egg.
+  earn: [Illusory Arena (rare prize), Dungeons, Battle Pass]
+  spend: [Sangrulho eggs]
+  sources: [banco, sangrulhos]
+
+- id: cristais
+  name: Crystals
+  ptName: Cristais
+  summary: Levels up a pet's attributes.
+  earn: [Dungeons, Drops]
+  spend: [Pet attribute upgrades]
+  sources: [banco, pets]

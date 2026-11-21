@@ -1,0 +1,101 @@
+---
+// Renders a cost table from src/data/cost-tables.yaml, with its total, note and sources.
+//   <CostTable id="class-evolution" />
+import { getEntry } from 'astro:content';
+import Currency from './Currency.astro';
+import officialSources from '../data/official-sources.json';
+
+interface Props {
+	id: string;
+}
+const entry = await getEntry('costTables', Astro.props.id);
+if (!entry) throw new Error(`CostTable: unknown id "${Astro.props.id}" (see src/data/cost-tables.yaml)`);
+const t = entry.data;
+const currency = t.currency.id;
+const sources = t.sources.map((id) => officialSources.find((s) => s.id === id)!);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+// Inline `code` in notes, nothing else.
+const note = t.note?.split(/(`[^`]+`)/).map((part) => (part.startsWith('`') ? { code: part.slice(1, -1) } : { text: part }));
+---
+
+<figure class="sf-cost">
+	<table>
+		<caption>{t.title}</caption>
+		<thead>
+			<tr><th scope="col">{t.rowLabel}</th><th scope="col">Cost</th></tr>
+		</thead>
+		<tbody>
+			{
+				t.rows.map((r) => (
+					<tr>
+						<th scope="row">{r.label}</th>
+						<td>{r.cost === null ? <span class="sf-cost__unknown">Not published</span> : <Currency id={currency} amount={r.cost} />}</td>
+					</tr>
+				))
+			}
+		</tbody>
+		{
+			t.total !== undefined && (
+				<tfoot>
+					<tr><th scope="row">Total</th><td><Currency id={currency} amount={t.total} /></td></tr>
+				</tfoot>
+			)
+		}
+	</table>
+	<figcaption>
+		{note && <p>{note.map((p) => ('code' in p ? <code>{p.code}</code> : p.text))}</p>}
+		{
+			t.missing.length > 0 && (
+				<p>
+					Open question:{' '}
+					{t.missing.map((q, i) => (
+						<>
+							{i > 0 && ', '}
+							<a href={`${base}/about/open-questions/#${q.toLowerCase()}`}>{q}</a>
+						</>
+					))}
+				</p>
+			)
+		}
+		<p class="sf-cost__src">
+			Source:{' '}
+			{sources.map((s, i) => (
+				<>
+					{i > 0 && ', '}
+					<a href={s.url_en}>{s.title}</a>
+				</>
+			))}
+		</p>
+	</figcaption>
+</figure>
+
+<style>
+	.sf-cost {
+		margin-block: 1.5rem;
+	}
+	.sf-cost caption {
+		text-align: start;
+		font-weight: 600;
+		padding-bottom: 0.4rem;
+		color: var(--sl-color-white);
+	}
+	.sf-cost td {
+		text-align: end;
+	}
+	.sf-cost tfoot th,
+	.sf-cost tfoot td {
+		border-top: 2px solid var(--sf-gold-dim);
+		font-weight: 700;
+	}
+	.sf-cost__unknown {
+		color: var(--sl-color-gray-3);
+		font-style: italic;
+	}
+	.sf-cost figcaption {
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+	.sf-cost figcaption p {
+		margin: 0.3rem 0 0;
+	}
+</style>

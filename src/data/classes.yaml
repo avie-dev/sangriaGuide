@@ -1,0 +1,144 @@
+# Classes, from the Classes guide (classes) and each class page (class-*), retrieved 2026-11-22.
+# The class pages are in Portuguese; English names here are this wiki's translations unless
+# the English Classes guide uses them (weapon names, evolution names, role lines).
+# `order` follows the official class list.
+
+- id: awakened
+  order: 0
+  name: Awakened
+  ptName: Despertado
+  role: Starting state, no kit of its own
+  scaling: hybrid
+  weapons: [Any]
+  mentor: null
+  evolutions: []
+  requires: []
+  starting: true
+  sources: [class-despertado, classes]
+
+- id: mortak
+  order: 1
+  name: Mortak
+  role: Greatsword and Mace tank. Lots of health and resistance.
+  scaling: physical
+  weapons: [Greatsword, Mace]
+  mentor: Razor Mortak
+  evolutions: [Initiate, Sworn, Eternal]
+  requires: []
+  sources: [class-mortak, classes]
+
+- id: noctarin
+  order: 2
+  name: Noctarin
+  role: Longbow and Crossbow archer. Fast and lethal from afar.
+  scaling: physical
+  weapons: [Longbow, Crossbow]
+  mentor: Dama Lilith Noctarin
+  evolutions: [Initiate, Penumbra, Nocturnal]
+  requires: []
+  sources: [class-noctarin, classes]
+
+- id: bastien
+  order: 3
+  name: Bastien
+  role: Spear and Whip. Reach, control and survival.
+  scaling: physical
+  weapons: [Spear, Whip]
+  mentor: Lady Aria Bastien
+  evolutions: [Initiate, Contracted, Loyal]
+  requires: []
+  sources: [class-bastien, classes]
+
+- id: carmesyne
+  order: 4
+  name: Carmesyne
+  role: Sword and Pistols duelist. Explosive physical damage.
+  scaling: physical
+  weapons: [Sword, Pistols]
+  mentor: Sylar Carmesyne
+  evolutions: [Initiate, Purifier, Verdict]
+  requires: []
+  sources: [class-carmesyne, classes]
+
+- id: skarn
+  order: 5
+  name: Skarn
+  role: Axe and Claws. Brute force and summoned beasts.
+  scaling: physical
+  weapons: [Axe, Claws]
+  mentor: Lord Draco Skarn
+  evolutions: [Initiate, Feral, Savage]
+  requires: []
+  sources: [class-skarn, classes]
+
+- id: sepulkros
+  order: 6
+  name: Sepulkros
+  role: Scythe necromancer. Commands the dead.
+  scaling: magic
+  weapons: [Scythe]
+  mentor: Ozzy Sepulkros
+  evolutions: [Initiate, Profane, Immortal]
+  requires: []
+  sources: [class-sepulkros, classes]
+
+- id: draekhar
+  order: 7
+  name: Draekhar
+  role: Staff mage. Lots of magic damage, little health.
+  scaling: magic
+  weapons: [Staff (Spear)]
+  mentor: Kaelmor Draekhar
+  evolutions: [Apprentice, Arcanist, Archmage]
+  requires: []
+  sources: [class-draekhar, classes]
+
+- id: umbrellis
+  order: 8
+  name: Umbrellis
+  role: Twinblades, Slashers and Daggers assassin. Speed and damage, no defence.
+  scaling: physical
+  weapons: [Twinblades, Slashers, Daggers]
+  mentor: Mister Nyx Umbrellis
+  evolutions: [Initiate, Veiled, Obscuris]
+  requires: []
+  sources: [class-umbrellis, classes]
+
+- id: sangrael
+  order: 9
+  name: Sangrael
+  role: Staff cleric. Wounds, heals allies and raises the fallen.
+  scaling: magic
+  weapons: [Staff (Spear)]
+  mentor: Markus Sangrael
+  evolutions: [Acolyte, Celebrant, Hierophant]
+  requires: [{ class: draekhar, evolution: 1 }]
+  sources: [class-sangrael, classes]
+
+- id: la-muerte
+  order: 10
+  name: La Muerte
+  role: Cursed Pistols, death magic and minions.
+  scaling: hybrid
+  weapons: [Pistols]
+  mentor: Morrigan LaMuerte
+  evolutions: [Initiate, Mortis, Absolute]
+  requires:
+    - { class: draekhar, evolution: 3 }
+    - { class: sepulkros, evolution: 3 }
+    - { class: carmesyne, evolution: 2 }
+  sources: [class-lamuerte, classes]
+
+- id: general
+  order: 11
+  name: General
+  role: Twinblades commander. Force and speed in balance.
+  scaling: physical
+  weapons: [Twinblades]
+  mentor: Astra General
+  evolutions: [Initiate, Ascended, Sovereign]
+  requires:
+    - { class: umbrellis, evolution: 2 }
+    - { class: mortak, evolution: 3 }
+    - { class: bastien, evolution: 3 }
+  sources: [class-general, classes]

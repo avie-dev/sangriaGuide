@@ -1,0 +1,23 @@
+---
+// Copies a short, Discord-friendly summary of the page: title, one-line summary, link.
+const route = Astro.locals.starlightRoute;
+const data = route.entry.data;
+const summary = data.summary ?? data.description ?? '';
+const url = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
+const text = `**${data.title}** (Sangria Falls Wiki, unofficial)\n${summary}\n<${url}>`;
+---
+
+<p class="sf-share not-content">
+	<button type="button" class="sf-copy" data-copy={text}>Copy summary for Discord</button>
+</p>
+
+<script>
+	import { wireCopyButtons } from '../scripts/copy';
+	wireCopyButtons();
+</script>
+
+<style>
+	.sf-share {
+		margin-top: 1.5rem;
+	}
+</style>

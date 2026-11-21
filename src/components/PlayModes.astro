@@ -1,0 +1,18 @@
+---
+// Steps that differ for players with and without the ScarletInterface. The reader's choice is
+// remembered across pages (Starlight syncs tabs that share a syncKey).
+//   <PlayModes>
+//     <Fragment slot="interface">Press F10…</Fragment>
+//     <Fragment slot="chat">Type `.menu meditate`…</Fragment>
+//   </PlayModes>
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+---
+
+<Tabs syncKey="play-mode">
+	<TabItem label="With the interface" icon="laptop">
+		<slot name="interface" />
+	</TabItem>
+	<TabItem label="Without the interface" icon="seti:shell">
+		<slot name="chat" />
+	</TabItem>
+</Tabs>

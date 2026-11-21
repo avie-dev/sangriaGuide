@@ -1,0 +1,107 @@
+---
+// A progression checklist whose ticks are remembered in this browser only.
+//   <Checklist id="first-day" items={['Install the interface', 'Finish The Path of Blood']} />
+interface Props {
+	/** Unique per checklist; used as the storage key. */
+	id: string;
+	items: string[];
+	title?: string;
+}
+const { id, items, title } = Astro.props;
+---
+
+<sf-checklist data-id={id}>
+	{title && <p class="sf-check__title">{title}</p>}
+	<ul class="sf-check not-content">
+		{
+			items.map((item, i) => (
+				<li>
+					<label>
+						<input type="checkbox" data-index={i} />
+						<span>{item}</span>
+					</label>
+				</li>
+			))
+		}
+	</ul>
+	<p class="sf-check__meta">
+		<span class="sf-check__count"></span>
+		<button type="button" class="sf-check__reset">Clear ticks</button>
+	</p>
+</sf-checklist>
+
+<script>
+	class ChecklistEl extends HTMLElement {
+		connectedCallback() {
+			const key = `sf-checklist:${this.dataset.id}`;
+			const boxes = [...this.querySelectorAll<HTMLInputElement>('input[type=checkbox]')];
+			const count = this.querySelector<HTMLElement>('.sf-check__count')!;
+			let saved: number[] = [];
+			try {
+				saved = JSON.parse(localStorage.getItem(key) ?? '[]');
+			} catch {}
+			boxes.forEach((b, i) => (b.checked = saved.includes(i)));
+			const update = () => {
+				const done = boxes.flatMap((b, i) => (b.checked ? [i] : []));
+				count.textContent = `${done.length} of ${boxes.length} done`;
+				try {
+					localStorage.setItem(key, JSON.stringify(done));
+				} catch {}
+			};
+			boxes.forEach((b) => b.addEventListener('change', update));
+			this.querySelector('.sf-check__reset')!.addEventListener('click', () => {
+				boxes.forEach((b) => (b.checked = false));
+				update();
+			});
+			update();
+		}
+	}
+	if (!customElements.get('sf-checklist')) customElements.define('sf-checklist', ChecklistEl);
+</script>
+
+<style>
+	.sf-check__title {
+		font-weight: 700;
+		color: var(--sl-color-white);
+	}
+	.sf-check {
+		list-style: none;
+		padding: 0;
+	}
+	.sf-check li {
+		margin: 0.35rem 0;
+	}
+	.sf-check label {
+		display: flex;
+		gap: 0.6rem;
+		align-items: flex-start;
+		cursor: pointer;
+	}
+	.sf-check input {
+		margin-top: 0.3rem;
+		accent-color: var(--sl-color-accent);
+		width: 1.05rem;
+		height: 1.05rem;
+		flex-shrink: 0;
+	}
+	.sf-check input:checked + span {
+		color: var(--sl-color-gray-3);
+		text-decoration: line-through;
+	}
+	.sf-check__meta {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+	.sf-check__reset {
+		background: none;
+		border: none;
+		padding: 0;
+		color: var(--sl-color-text-accent);
+		text-decoration: underline;
+		cursor: pointer;
+		font: inherit;
+	}
+</style>

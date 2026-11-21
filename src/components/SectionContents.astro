@@ -1,37 +1,29 @@
 ---
 // Lists a section's pages, in reading order, with their writing status, from docs/coverage.yaml.
 // Pages that don't exist yet are shown without a link, so the overview never points at a 404.
-import fs from 'node:fs';
-import path from 'node:path';
-import { parse } from 'yaml';
+import { plannedPages, sectionTitle, liveHref, type PlannedPage } from '../lib/coverage';
 
 interface Props {
 	/** Section directory, e.g. "meditation". Defaults to the current page's section. */
 	section?: string;
 }
-const current = Astro.locals.starlightRoute.id.split('/')[0];
-const dir = Astro.props.section ?? current;
-const { sections } = parse(fs.readFileSync(path.join(process.cwd(), 'docs/coverage.yaml'), 'utf8'));
-const section = sections.find((s: { dir: string }) => s.dir === dir);
-if (!section) throw new Error(`SectionContents: no section "${dir}" in docs/coverage.yaml`);
-
-type Article = { slug: string; title: string; writing?: string; verified?: string; built?: string };
-const pages: Article[] = section.articles.filter((a: Article) => a.slug !== dir);
-const status = (a: Article) =>
+const dir = Astro.props.section ?? Astro.locals.starlightRoute.id.split('/')[0];
+if (!sectionTitle(dir)) throw new Error(`SectionContents: no section "${dir}" in docs/coverage.yaml`);
+const pages = plannedPages().filter((p) => p.section === dir && p.slug !== dir);
+const status = (a: PlannedPage) =>
 	a.verified === 'verified' ? 'Verified' : a.writing === 'written' ? 'Written' : a.writing === 'draft' ? 'Draft' : 'Planned';
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <ol class="sf-contents">
 	{
 		pages.map((a) => {
-			const live = a.built && a.built !== '—';
+			const href = liveHref(a.slug);
 			const s = status(a);
 			return (
 				<li>
 					<span class="sf-row">
-					{live ? <a href={`${base}/${a.slug}/`}>{a.title}</a> : <span>{a.title}</span>}
-					<span class={`sf-status sf-status--${s.toLowerCase()}`}>{s}</span>
+						{href ? <a href={href}>{a.title}</a> : <span>{a.title}</span>}
+						<span class={`sf-status sf-status--${s.toLowerCase()}`}>{s}</span>
 					</span>
 				</li>
 			);

@@ -1,0 +1,25 @@
+---
+// Marks a claim the official sources don't settle, linked to its open question.
+//   <Unverified q="Q-006">Whether friendly fire is on inside dungeons is not documented.</Unverified>
+import { Aside } from '@astrojs/starlight/components';
+import Label from './Label.astro';
+
+interface Props {
+	q?: string;
+	title?: string;
+}
+const { q, title = 'Requires verification' } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Aside type="caution" title={title}>
+	<slot />
+	{
+		q && (
+			<p>
+				<Label type="verify" /> Tracked as <a href={`${base}/about/open-questions/#${q.toLowerCase()}`}>{q}</a>. Know the answer? Tell
+				us, with a screenshot or a staff reply.
+			</p>
+		)
+	}
+</Aside>

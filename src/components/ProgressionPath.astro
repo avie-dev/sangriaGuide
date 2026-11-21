@@ -1,0 +1,92 @@
+---
+// A vertical progression diagram: stages in order, each with what unlocks it.
+//   <ProgressionPath steps={[
+//     { title: 'Level 90', detail: 'XP stops counting', href: '/character/levels-and-xp/' },
+//     { title: 'Prestige 1–20', detail: '75 to 4,467 Ourosangue each' },
+//   ]} />
+import { liveHref } from '../lib/coverage';
+
+interface Step {
+	title: string;
+	detail?: string;
+	href?: string;
+	/** Short tag on the node, e.g. "VIP" or "Optional". */
+	tag?: string;
+}
+interface Props {
+	steps: Step[];
+	label?: string;
+}
+const { steps, label = 'Progression path' } = Astro.props;
+// Internal links (e.g. "/character/prestige/") only become links once that page exists.
+const link = (href: string) => (href.startsWith('/') ? liveHref(href.replace(/^\/|\/$/g, '')) : href);
+---
+
+<ol class="sf-path not-content" aria-label={label}>
+	{
+		steps.map((s) => (
+			<li>
+				<span class="sf-path__dot" aria-hidden="true" />
+				<div>
+					<p class="sf-path__title">
+						{s.href && link(s.href) ? <a href={link(s.href)}>{s.title}</a> : s.title}
+						{s.tag && <span class="sf-path__tag">{s.tag}</span>}
+					</p>
+					{s.detail && <p class="sf-path__detail">{s.detail}</p>}
+				</div>
+			</li>
+		))
+	}
+</ol>
+
+<style>
+	.sf-path {
+		list-style: none;
+		padding: 0;
+		margin-block: 1.25rem;
+	}
+	.sf-path li {
+		position: relative;
+		display: flex;
+		gap: 0.9rem;
+		padding-bottom: 1rem;
+		margin: 0;
+	}
+	.sf-path li:not(:last-child)::before {
+		content: '';
+		position: absolute;
+		left: 0.45rem;
+		top: 1.1rem;
+		bottom: 0;
+		width: 2px;
+		background: linear-gradient(var(--sf-crimson), var(--sf-gold-dim));
+	}
+	.sf-path__dot {
+		flex-shrink: 0;
+		width: 0.95rem;
+		height: 0.95rem;
+		margin-top: 0.25rem;
+		border-radius: 50%;
+		border: 2px solid var(--sf-gold);
+		background: var(--sf-crimson-deep);
+	}
+	.sf-path__title {
+		margin: 0;
+		font-weight: 700;
+		color: var(--sl-color-white);
+	}
+	.sf-path__detail {
+		margin: 0.15rem 0 0;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-2);
+	}
+	.sf-path__tag {
+		margin-left: 0.5rem;
+		font-size: var(--sl-text-xs);
+		font-weight: 600;
+		padding: 0 0.4rem;
+		border-radius: 0.25rem;
+		border: 1px solid var(--sf-gold-dim);
+		color: var(--sf-gold);
+	}
+</style>

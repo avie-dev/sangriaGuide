@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightLinksValidator from 'starlight-links-validator';
 
 // Sidebar sections follow the wiki structure in docs/master-prompt.md (sections A–S).
 /** @param {string} label @param {string} directory */
@@ -12,12 +13,15 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Sangria Falls Wiki',
+			// Fails the build on broken internal links and anchors in articles.
+			plugins: [starlightLinksValidator()],
 			description:
 				'Unofficial, English-first community wiki for the Sangria Falls V Rising server: from your first login to endgame.',
 			lastUpdated: true,
 			// Off while every section has only an "Overview" page (prev/next would all read "Overview").
 			// Turn back on once sections have real articles.
 			pagination: false,
+			routeMiddleware: './src/routeData.ts',
 			customCss: [
 				'@fontsource/cinzel/600.css',
 				'@fontsource/cinzel/700.css',
@@ -39,7 +43,7 @@ export default defineConfig({
 				{ tag: 'meta', attrs: { property: 'og:site_name', content: 'Sangria Falls Wiki (unofficial)' } },
 			],
 			sidebar: [
-				{ label: 'About this wiki', items: ['about', 'about/labels', 'about/sources'] },
+				{ label: 'About this wiki', items: ['about', 'about/labels', 'about/sources', 'about/open-questions', 'about/components'] },
 				section('Getting started', 'getting-started'),
 				section('Progression walkthrough', 'walkthrough'),
 				section('Character progression', 'character'),

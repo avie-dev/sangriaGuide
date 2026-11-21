@@ -1,0 +1,64 @@
+---
+// Adds a text filter above any Markdown table placed inside it.
+//   <FilterTable placeholder="Filter commands…">
+//   | Command | What it does |
+//   |---|---|
+//   …
+//   </FilterTable>
+interface Props {
+	placeholder?: string;
+	label?: string;
+}
+const { placeholder = 'Filter this table…', label = 'Filter table' } = Astro.props;
+---
+
+<sf-filter-table>
+	<input type="search" class="sf-filter-input" placeholder={placeholder} aria-label={label} />
+	<p class="sf-filter-count" aria-live="polite"></p>
+	<slot />
+</sf-filter-table>
+
+<script>
+	class FilterTableEl extends HTMLElement {
+		connectedCallback() {
+			const input = this.querySelector<HTMLInputElement>('.sf-filter-input')!;
+			const count = this.querySelector<HTMLElement>('.sf-filter-count')!;
+			const rows = [...this.querySelectorAll<HTMLTableRowElement>('tbody tr')];
+			const norm = (s: string) => s.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '');
+			const text = rows.map((r) => norm(r.textContent ?? ''));
+			input.addEventListener('input', () => {
+				const terms = norm(input.value).split(/\s+/).filter(Boolean);
+				let shown = 0;
+				rows.forEach((r, i) => {
+					const hit = terms.every((t) => text[i].includes(t));
+					r.hidden = !hit;
+					if (hit) shown++;
+				});
+				count.textContent = terms.length ? `${shown} of ${rows.length} rows` : '';
+			});
+		}
+	}
+	if (!customElements.get('sf-filter-table')) customElements.define('sf-filter-table', FilterTableEl);
+</script>
+
+<style>
+	.sf-filter-input {
+		width: 100%;
+		max-width: 24rem;
+		padding: 0.4rem 0.7rem;
+		border: 1px solid var(--sl-color-gray-4);
+		border-radius: 0.25rem;
+		background: var(--sl-color-black);
+		color: var(--sl-color-white);
+		font: inherit;
+	}
+	.sf-filter-input:focus-visible {
+		outline: 2px solid var(--sl-color-accent);
+	}
+	.sf-filter-count {
+		min-height: 1.2em;
+		margin: 0.3rem 0 0;
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-gray-3);
+	}
+</style>

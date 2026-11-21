@@ -1,0 +1,51 @@
+---
+// The open-questions list from research/open-questions.md, one anchored entry per question.
+import { openQuestions } from '../lib/coverage';
+
+const list = openQuestions();
+// Render `code` spans; everything else is plain text.
+const rich = (s: string) => s.split(/(`[^`]+`)/).map((p) => (p.startsWith('`') ? { code: p.slice(1, -1) } : { text: p }));
+---
+
+{
+	list.map((q) => (
+		<section class="sf-q" id={q.id.toLowerCase()}>
+			<h3>
+				{q.id} · {q.area}
+			</h3>
+			<p>{rich(q.question).map((p) => ('code' in p ? <code>{p.code}</code> : p.text))}</p>
+			<dl>
+				<dt>Why it matters</dt>
+				<dd>{q.why}</dd>
+				<dt>Checked</dt>
+				<dd>{rich(q.checked).map((p) => ('code' in p ? <code>{p.code}</code> : p.text))}</dd>
+				<dt>Status</dt>
+				<dd>{rich(q.status).map((p) => ('code' in p ? <code>{p.code}</code> : p.text))}</dd>
+			</dl>
+		</section>
+	))
+}
+
+<style>
+	.sf-q {
+		margin-block: 1.25rem;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid var(--sl-color-hairline);
+	}
+	.sf-q h3 {
+		margin: 0;
+		font-size: var(--sl-text-lg);
+	}
+	dl {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 0.2rem 0.8rem;
+		font-size: var(--sl-text-sm);
+	}
+	dt {
+		color: var(--sl-color-gray-3);
+	}
+	dd {
+		margin: 0;
+	}
+</style>
