@@ -2,7 +2,9 @@
 
 The persistent tracker the brief asks for. Update it in the same commit as the work it describes.
 
-**Sources** use the source ids from the registry: `meditacao` means `https://www.sangriafalls.com/en/guias/meditacao/` (and its Portuguese and chat-only variants); `class-draekhar` means `/en/classes/draekhar/`. The full list with URLs is in [`research/sources.json`](../research/sources.json) and [`research/source-inventory.md`](../research/source-inventory.md). Open questions are numbered `Q-xxx` in [`research/open-questions.md`](../research/open-questions.md).
+The article list lives in [`docs/coverage.yaml`](coverage.yaml); the tables below are generated from it with `npm run coverage`, which also validates source ids, open-question ids, reading-order links and that every page file has an entry. How the list was designed is in [`docs/information-architecture.md`](information-architecture.md).
+
+**Sources** are ids from the registry: `meditacao` means `https://www.sangriafalls.com/en/guias/meditacao/` (plus its Portuguese and chat-only variants), `class-draekhar` means `/en/classes/draekhar/`. The full list is in [`research/source-inventory.md`](../research/source-inventory.md). Open questions are numbered `Q-xxx` in [`research/open-questions.md`](../research/open-questions.md).
 
 **Status values**
 - Research: `—` not started · `sources found` · `read` · `done`
@@ -17,8 +19,8 @@ A page stub is never counted as finished content.
 | Phase | Scope | Status | Notes |
 |---|---|---|---|
 | 1 | Research and source inventory | Done (2026-11-22) | 51 guides, 48 chat variants, 63 Portuguese originals, 12 class pages, 7 hubs captured. See source inventory. |
-| 2 | Information architecture and article coverage matrix | Not started | This tracker is the seed of the coverage matrix |
-| 3 | Site structure and reusable components | In progress | Done: Astro 7 + Starlight 0.43 scaffold, dark-default charcoal/crimson/gold theme, sidebar for all 18 sections (each with a "planned" overview page), frontmatter schema (status, lastVerified, sources, labels), Label, Sources, StatusNotice, SourceRegistry, About/Labels/Source registry pages, Pagefind, sitemap. To do: command block, class card, stat/cost tables, currency display, progression diagram, interface/chat tabs pattern, data validation, link checking. |
+| 2 | Information architecture and article coverage matrix | Done (2026-11-22) | 191 pages in 18 sections, every brief item mapped (`docs/coverage.yaml`); URL scheme, page types, label rules, unlock-dependency graph and audience paths (`docs/information-architecture.md`); `npm run coverage` validates the matrix and regenerates this tracker; section overviews list their pages from the matrix. |
+| 3 | Site structure and reusable components | In progress | Done: Astro 7 + Starlight 0.43 scaffold, dark-default charcoal/crimson/gold theme, sidebar for all 18 sections (each with a "planned" overview page), frontmatter schema (status, lastVerified, sources, labels), Label, Sources, StatusNotice, SourceRegistry, SectionContents, About/Labels/Source registry pages, Pagefind, sitemap. To do: command block, class card, stat/cost tables backed by `src/data/` files, currency display, progression diagram, interface/chat tabs pattern, "Before you read" and related-guides links from `needs`, broken-link checking. |
 | 4 | Beginner walkthrough | Not started | |
 | 5 | Progression, class and meditation guides | Not started | Class pages need translation from Portuguese |
 | 6 | Economy, professions, pets, equipment | Not started | |
@@ -27,199 +29,300 @@ A page stub is never counted as finished content.
 | 9 | Source verification and QA | Not started | |
 | 10 | Deployment and contribution readiness | Not started | Do not deploy until the user asks |
 
-## A. Getting started
+## Articles and tools
+
+<!-- coverage:start -->
+_Generated from `docs/coverage.yaml` by `npm run coverage`. Edit the YAML, not these tables._
+
+**191 pages planned** · written: 0 · drafts: 0 · verified: 0 · published: 0 · page stubs: 18
+
+| Phase | Pages |
+|---|---|
+| 4 | 36 |
+| 5 | 33 |
+| 6 | 49 |
+| 7 | 61 |
+| 8 | 9 |
+| 9 | 3 |
+
+### Getting started
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| What is Sangria Falls? | primeiros-passos, home | sources found | — | — | — | |
-| Sangria Falls vs vanilla V Rising | all guides (derived) | — | — | — | — | No official comparison; claims must each cite an SF guide |
-| Sangria Falls vs Bloodcraft | all guides (derived) | — | — | — | — | No official comparison; must not assume Bloodcraft mechanics |
-| How to join RPG 04 | primeiros-passos | sources found | — | — | — | Q-001, Q-002 |
-| Server selection | — | — | — | — | — | Q-001 |
-| Installing the custom interface | interface | sources found | — | — | — | Page is in Portuguese |
-| Setting the language to English | primeiros-passos, painel-do-site | sources found | — | — | — | |
-| Interface troubleshooting | interface | sources found | — | — | — | |
-| Understanding the HUD | primeiros-passos, nivel-e-prestigio, atalhos | sources found | — | — | — | |
-| The Path of Blood tutorial | classes, missoes, primeiros-passos | sources found | — | — | — | |
-| Choosing your first class | classes, class pages, sala-de-treinamento | sources found | — | — | — | |
-| Navigating Sangria Falls City | primeiros-passos, teleportes | sources found | — | — | — | |
-| Teleport hubs | teleportes | sources found | — | — | — | |
-| Important NPCs | all guides (compiled) | — | — | — | — | |
-| Building your first castle | castelo | sources found | — | — | — | Castle basics are vanilla; mark which parts are SF-specific |
-| First-day checklist | derived | — | — | — | — | |
-| First-week roadmap | derived | — | — | — | — | |
-| Common beginner mistakes | derived + guide warnings | — | — | — | — | |
+| Getting started <br>`/getting-started/` · phase 4 | `primeiros-passos` | sources found | — | — | page stub |  |
+| What is Sangria Falls? <br>`/getting-started/what-is-sangria-falls/` · phase 4 | `primeiros-passos`, `home` | sources found | — | — | — |  |
+| Sangria Falls vs vanilla V Rising <br>`/getting-started/vs-vanilla/` · phase 4 | `primeiros-passos`, `nivel-e-prestigio`, `classes`, `profissoes`, `banco` | sources found | — | — | — | No official comparison: every difference must cite an SF guide |
+| Sangria Falls vs Bloodcraft <br>`/getting-started/vs-bloodcraft/` · phase 4 | `nivel-e-prestigio`, `maestria-de-arma`, `linhagem-de-sangue`, `classes`, `profissoes`, `pets` | sources found | — | — | — | No official comparison; Bloodcraft is not a source for SF mechanics |
+| Joining the server <br>`/getting-started/joining/` · phase 4 | `primeiros-passos` | sources found | — | — | — | Q-001; Q-002 |
+| Installing the interface <br>`/getting-started/interface/` · phase 4 | `interface`, `primeiros-passos` | sources found | — | — | — | Source page is in Portuguese |
+| Interface troubleshooting <br>`/getting-started/interface-troubleshooting/` · phase 4 | `interface` | sources found | — | — | — |  |
+| Playing without the interface <br>`/getting-started/playing-without-the-interface/` · phase 4 | `primeiros-passos`, `comandos` | sources found | — | — | — | Derived from the 48 chat-only guide variants |
+| Setting the language to English <br>`/getting-started/language/` · phase 4 | `primeiros-passos`, `painel-do-site` | sources found | — | — | — |  |
+| Understanding the HUD <br>`/getting-started/hud/` · phase 4 | `primeiros-passos`, `nivel-e-prestigio`, `atalhos` | sources found | — | — | — |  |
+| The website panel <br>`/getting-started/website-panel/` · phase 4 | `painel-do-site` | sources found | — | — | — |  |
+| The Path of Blood tutorial <br>`/getting-started/path-of-blood/` · phase 4 | `missoes`, `classes`, `primeiros-passos` | sources found | — | — | — |  |
+| Choosing your first class <br>`/getting-started/first-class/` · phase 4 | `classes`, `class-hub`, `sala-de-treinamento` | sources found | — | — | — |  |
+| Navigating Sangria Falls City <br>`/getting-started/city/` · phase 4 | `primeiros-passos`, `teleportes` | sources found | — | — | — |  |
+| Teleports and teleport hubs <br>`/getting-started/teleports/` · phase 4 | `teleportes` | sources found | — | — | — |  |
+| Important NPCs <br>`/getting-started/important-npcs/` · phase 4 | `primeiros-passos`, `nivel-e-prestigio`, `profissoes`, `masmorras`, `escolas`, `sangrulhos`, `transfusao-e-plasmas` | sources found | — | — | — | Compiled from mentions across guides |
+| Building your first castle <br>`/getting-started/first-castle/` · phase 4 | `castelo`, `teleportes` | sources found | — | — | — | Castle building itself is base-game; only SF additions are sourced |
+| First-day checklist <br>`/getting-started/first-day/` · phase 4 | `primeiros-passos`, `missoes`, `classes` | sources found | — | — | — |  |
+| First-week roadmap <br>`/getting-started/first-week/` · phase 4 | `nivel-e-prestigio`, `profissoes`, `meditacao`, `pets` | sources found | — | — | — |  |
+| Common beginner mistakes <br>`/getting-started/beginner-mistakes/` · phase 4 | `primeiros-passos`, `nivel-e-prestigio`, `meditacao`, `profissoes` | sources found | — | — | — |  |
 
-## B. Progression walkthrough (stages 1–15)
-
-| Article | Sources | Research | Writing | Verification | Implementation | Missing information |
-|---|---|---|---|---|---|---|
-| Stage 1: First login and tutorial | primeiros-passos, interface, missoes | sources found | — | — | — | |
-| Stage 2: First class and starter equipment | classes, class pages | sources found | — | — | — | |
-| Stage 3: Early levelling and bosses | nivel-e-prestigio, cacada-de-v-bloods, passe-de-batalha | sources found | — | — | — | |
-| Stage 4: First professions and income | profissoes, coleta-…, oficios-…, contratos, mercador-sombrio | sources found | — | — | — | |
-| Stage 5: Weapon mastery and blood lineage | maestria-de-arma, linhagem-de-sangue | sources found | — | — | — | |
-| Stage 6: First pet | pets | sources found | — | — | — | |
-| Stage 7: Character Prestige 1–10 | nivel-e-prestigio, meditacao | sources found | — | — | — | |
-| Stage 8: Character Prestige 11–20 | nivel-e-prestigio, meditacao, auto-prestigio | sources found | — | — | — | |
-| Stage 9: Class evolutions | classes, class pages | sources found | — | — | — | |
-| Stage 10: Endgame gear | masmorras, oficios-… | sources found | — | — | — | Q-008 |
-| Stage 11: Vampiric Schools | escolas | sources found | — | — | — | |
-| Stage 12: Pulses and Transfusions | transfusao-e-plasmas | sources found | — | — | — | |
-| Stage 13: Advanced equipment enhancement | oficios-…, servicos-de-profissao | sources found | — | — | — | |
-| Stage 14: Master and Nightmare dungeons | masmorras, quadro-de-grupos | sources found | — | — | — | Q-006 |
-| Stage 15: Endgame optimisation | derived | — | — | — | — | Q-009, Q-013 |
-
-## C. Character progression
+### Progression walkthrough
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Levels and experience | nivel-e-prestigio | sources found | — | — | — | Q-011 |
-| Prestige system and cost table | nivel-e-prestigio | sources found | — | — | — | |
-| Permanent prestige bonuses | nivel-e-prestigio | sources found | — | — | — | |
-| Experience sources, penalties and multipliers | nivel-e-prestigio, meditacao, banco | sources found | — | — | — | Q-001 |
-| Quitina (Chitin) | banco, postos-avancados, passe-de-batalha | sources found | — | — | — | |
-| Beginner XP bonuses | banco, nivel-e-prestigio | sources found | — | — | — | Q-016 |
-| Server XP events | nivel-e-prestigio, meditacao | sources found | — | — | — | |
-| Weapon mastery and attributes | maestria-de-arma | sources found | — | — | — | |
-| Blood lineage and attributes | linhagem-de-sangue | sources found | — | — | — | |
-| Character statistics (profile) | perfil | sources found | — | — | — | |
-| Damage, crit, speed, resistance, healing | perfil, class pages | sources found | — | — | — | Q-009 |
+| Progression walkthrough <br>`/walkthrough/` · phase 4 | `primeiros-passos` | sources found | — | — | page stub |  |
+| Stage 1: First login and tutorial <br>`/walkthrough/01-first-login/` · phase 4 | `primeiros-passos`, `missoes`, `interface` | sources found | — | — | — |  |
+| Stage 2: First class and starter equipment <br>`/walkthrough/02-first-class/` · phase 4 | `classes`, `class-hub` | sources found | — | — | — |  |
+| Stage 3: Early levelling and bosses <br>`/walkthrough/03-early-levelling/` · phase 4 | `nivel-e-prestigio`, `cacada-de-v-bloods`, `passe-de-batalha`, `pets` | sources found | — | — | — |  |
+| Stage 4: First professions and income <br>`/walkthrough/04-professions-and-income/` · phase 4 | `profissoes`, `coleta-minerador-pescador-lenhador`, `contratos`, `mercador-sombrio`, `recompensa-online` | sources found | — | — | — |  |
+| Stage 5: Weapon mastery and blood lineage <br>`/walkthrough/05-mastery-and-blood/` · phase 4 | `maestria-de-arma`, `linhagem-de-sangue` | sources found | — | — | — |  |
+| Stage 6: Your first pet <br>`/walkthrough/06-first-pet/` · phase 4 | `pets` | sources found | — | — | — |  |
+| Stage 7: Character Prestige 1–10 <br>`/walkthrough/07-prestige-1-10/` · phase 4 | `nivel-e-prestigio`, `meditacao`, `banco` | sources found | — | — | — |  |
+| Stage 8: Character Prestige 11–20 <br>`/walkthrough/08-prestige-11-20/` · phase 4 | `nivel-e-prestigio`, `meditacao`, `auto-prestigio` | sources found | — | — | — |  |
+| Stage 9: Class evolutions <br>`/walkthrough/09-class-evolutions/` · phase 4 | `classes`, `class-hub` | sources found | — | — | — |  |
+| Stage 10: Endgame gear <br>`/walkthrough/10-endgame-gear/` · phase 4 | `masmorras`, `oficios-ferreiro-alfaiate-encantador`, `mercado` | sources found | — | — | — | Q-008 |
+| Stage 11: Vampiric Schools <br>`/walkthrough/11-schools/` · phase 4 | `escolas` | sources found | — | — | — |  |
+| Stage 12: Pulses and Transfusions <br>`/walkthrough/12-pulses-and-transfusions/` · phase 4 | `transfusao-e-plasmas`, `livro-perdido` | sources found | — | — | — |  |
+| Stage 13: Advanced equipment enhancement <br>`/walkthrough/13-advanced-enhancement/` · phase 4 | `oficios-ferreiro-alfaiate-encantador`, `coleta-minerador-pescador-lenhador`, `servicos-de-profissao` | sources found | — | — | — |  |
+| Stage 14: Master and Nightmare dungeons <br>`/walkthrough/14-master-and-nightmare/` · phase 4 | `masmorras`, `quadro-de-grupos`, `incursoes` | sources found | — | — | — | Q-006 |
+| Stage 15: Endgame optimisation <br>`/walkthrough/15-endgame-optimisation/` · phase 4 | `transfusao-e-plasmas`, `rankings`, `torre-dos-imortais` | sources found | — | — | — | Q-009; Q-013 |
 
-## D. Meditation and AFK progression
-
-| Article | Sources | Research | Writing | Verification | Implementation | Missing information |
-|---|---|---|---|---|---|---|
-| Meditation guide (all subtopics) | meditacao, auto-prestigio, recompensa-online, vip, transfusao-e-plasmas | read | — | — | — | Q-010, Q-011 |
-| Worked AFK examples (7 scenarios) | meditacao, nivel-e-prestigio, transfusao-e-plasmas | sources found | — | — | — | |
-
-## E. Class encyclopedia
+### Character progression
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Classes overview and comparison | classes, class hub | sources found | — | — | — | Portuguese source |
-| Awakened (Despertado) | class-despertado | sources found | — | — | — | Portuguese source |
-| Mortak | class-mortak | sources found | — | — | — | Portuguese source |
-| Noctarin | class-noctarin | sources found | — | — | — | Portuguese source |
-| Bastien | class-bastien | sources found | — | — | — | Portuguese source |
-| Carmesyne | class-carmesyne | sources found | — | — | — | Portuguese source |
-| Skarn | class-skarn | sources found | — | — | — | Portuguese source |
-| Sepulkros | class-sepulkros, classes (Minion Collectors) | sources found | — | — | — | Portuguese source |
-| Draekhar | class-draekhar | read | — | — | — | Q-004, Q-005 |
-| Umbrellis | class-umbrellis | sources found | — | — | — | Portuguese source |
-| Sangrael | class-sangrael | sources found | — | — | — | Portuguese source |
-| La Muerte | class-lamuerte | sources found | — | — | — | Portuguese source |
-| General | class-general | sources found | — | — | — | Portuguese source |
-| Training Room | sala-de-treinamento | sources found | — | — | — | |
+| Character progression <br>`/character/` · phase 5 | `nivel-e-prestigio`, `perfil` | sources found | — | — | page stub |  |
+| Levels and experience <br>`/character/levels-and-xp/` · phase 5 | `nivel-e-prestigio`, `arena-ilusional` | sources found | — | — | — | Q-011 |
+| Character prestige <br>`/character/prestige/` · phase 5 | `nivel-e-prestigio` | sources found | — | — | — |  |
+| XP bonuses, multipliers and events <br>`/character/xp-bonuses/` · phase 5 | `nivel-e-prestigio`, `banco`, `meditacao`, `vip` | sources found | — | — | — | Q-001; Q-016 |
+| Quitina (Chitin) <br>`/character/quitina/` · phase 5 | `banco`, `postos-avancados`, `passe-de-batalha` | sources found | — | — | — |  |
+| Weapon mastery <br>`/character/weapon-mastery/` · phase 5 | `maestria-de-arma` | sources found | — | — | — |  |
+| Blood lineage <br>`/character/blood-lineage/` · phase 5 | `linhagem-de-sangue` | sources found | — | — | — |  |
+| Character statistics <br>`/character/stats/` · phase 5 | `perfil`, `classes`, `class-hub` | sources found | — | — | — | Q-009 |
+| The profile sheet <br>`/character/profile/` · phase 5 | `perfil` | sources found | — | — | — |  |
 
-## F. Equipment and builds
+### Meditation
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Weapon, armour and jewellery progression | masmorras, mercado, oficios-… | sources found | — | — | — | Q-008 |
-| Dungeon weapons (rare, epic, legendary) and affinity | masmorras | sources found | — | — | — | |
-| Fortification and refinement | oficios-ferreiro-alfaiate-encantador, servicos-de-profissao | sources found | — | — | — | |
-| Perfect Gems | masmorras | sources found | — | — | — | |
-| Spell jewels | — | — | — | — | — | Q-007 |
-| Build archetypes (physical, magical, tank, healer, summoner, hybrid) | class pages | — | — | — | — | No testing data; community recommendations only |
+| Meditation <br>`/meditation/` · phase 5 | `meditacao` | read | — | — | page stub |  |
+| How meditation works <br>`/meditation/how-it-works/` · phase 5 | `meditacao` | read | — | — | — |  |
+| Costs and XP rates <br>`/meditation/costs-and-rates/` · phase 5 | `meditacao`, `vip`, `nivel-e-prestigio` | read | — | — | — | Q-010 |
+| Double Meditation <br>`/meditation/double-meditation/` · phase 5 | `meditacao`, `vip-page` | read | — | — | — |  |
+| Auto-Prestige and Auto-Pulse <br>`/meditation/auto-prestige/` · phase 5 | `auto-prestigio`, `transfusao-e-plasmas`, `vip` | sources found | — | — | — |  |
+| Recommended AFK settings <br>`/meditation/recommended-settings/` · phase 5 | `meditacao`, `auto-prestigio`, `recompensa-online` | sources found | — | — | — |  |
+| Worked meditation examples <br>`/meditation/examples/` · phase 5 | `meditacao`, `nivel-e-prestigio`, `maestria-de-arma`, `linhagem-de-sangue`, `pets`, `transfusao-e-plasmas` | sources found | — | — | — | Q-010; Q-011 |
+| Meditation troubleshooting <br>`/meditation/troubleshooting/` · phase 5 | `meditacao` | read | — | — | — |  |
 
-## G. Pets, H. Sangrulhos
-
-| Article | Sources | Research | Writing | Verification | Implementation | Missing information |
-|---|---|---|---|---|---|---|
-| Pets (capture, souls, tiers, levels, prestige, commands) | pets | read | — | — | — | |
-| Crystal system | pets | sources found | — | — | — | |
-| Pets vs class summons vs Sangrulhos | pets, sangrulhos, class pages | sources found | — | — | — | |
-| Sangrulhos | sangrulhos | sources found | — | — | — | |
-
-## I. Professions
+### Classes
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Professions overview and switching | profissoes | sources found | — | — | — | |
-| Blacksmith, Tailor, Enchanter | oficios-ferreiro-alfaiate-encantador | sources found | — | — | — | |
-| Miner, Fisher, Woodcutter (and comparison) | coleta-minerador-pescador-lenhador | sources found | — | — | — | Q-012 |
-| Profession services | servicos-de-profissao | sources found | — | — | — | |
-| Aquarium | aquario | sources found | — | — | — | |
+| Classes <br>`/classes/` · phase 5 | `classes`, `class-hub` | sources found | — | — | page stub |  |
+| Choosing a class <br>`/classes/choosing-a-class/` · phase 5 | `classes`, `class-hub`, `sala-de-treinamento` | sources found | — | — | — | No tier list without testing data |
+| Class evolutions and advanced classes <br>`/classes/evolutions/` · phase 5 | `classes`, `class-hub` | sources found | — | — | — |  |
+| Awakened (Despertado) <br>`/classes/awakened/` · phase 5 | `class-despertado`, `classes` | sources found | — | — | — | Source page is in Portuguese |
+| Mortak <br>`/classes/mortak/` · phase 5 | `class-mortak`, `classes` | sources found | — | — | — | Source page is in Portuguese |
+| Noctarin <br>`/classes/noctarin/` · phase 5 | `class-noctarin`, `classes` | sources found | — | — | — | Source page is in Portuguese |
+| Bastien <br>`/classes/bastien/` · phase 5 | `class-bastien`, `classes` | sources found | — | — | — | Source page is in Portuguese |
+| Carmesyne <br>`/classes/carmesyne/` · phase 5 | `class-carmesyne`, `classes` | sources found | — | — | — | Source page is in Portuguese |
+| Skarn <br>`/classes/skarn/` · phase 5 | `class-skarn`, `classes` | sources found | — | — | — | Source page is in Portuguese |
+| Sepulkros <br>`/classes/sepulkros/` · phase 5 | `class-sepulkros`, `classes` | sources found | — | — | — | Source page is in Portuguese |
+| Draekhar <br>`/classes/draekhar/` · phase 5 | `class-draekhar`, `classes` | read | — | — | — | Q-004; Q-005 |
+| Umbrellis <br>`/classes/umbrellis/` · phase 5 | `class-umbrellis`, `classes` | sources found | — | — | — | Source page is in Portuguese |
+| Sangrael <br>`/classes/sangrael/` · phase 5 | `class-sangrael`, `classes` | sources found | — | — | — | Source page is in Portuguese |
+| La Muerte <br>`/classes/la-muerte/` · phase 5 | `class-lamuerte`, `classes` | sources found | — | — | — | Source page is in Portuguese |
+| General <br>`/classes/general/` · phase 5 | `class-general`, `classes` | sources found | — | — | — | Source page is in Portuguese |
+| Training Room <br>`/classes/training-room/` · phase 5 | `sala-de-treinamento` | sources found | — | — | — |  |
 
-## J. Economy and currencies
-
-| Article | Sources | Research | Writing | Verification | Implementation | Missing information |
-|---|---|---|---|---|---|---|
-| Currencies (all five) | banco | sources found | — | — | — | |
-| Bank and transaction history | banco | sources found | — | — | — | |
-| Vault | cofre | sources found | — | — | — | |
-| Player market and shops | mercado | sources found | — | — | — | |
-| Contracts | contratos | sources found | — | — | — | |
-| Shadow Merchant | mercador-sombrio | sources found | — | — | — | |
-| Casino | cassino | sources found | — | — | — | |
-| Online reward | recompensa-online | sources found | — | — | — | |
-| Prisoner market | prisioneiros | sources found | — | — | — | |
-| Income guides and example budgets | derived | — | — | — | — | |
-
-## K. Dungeons, L. Events
+### Equipment and builds
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Dungeons (overview, keys, difficulties, loot) | masmorras | sources found | — | — | — | Q-006 |
-| Each of the four dungeons | masmorras | sources found | — | — | — | Per-room mechanics not documented |
-| Group board | quadro-de-grupos | sources found | — | — | — | |
-| Illusory Arena | arena-ilusional | sources found | — | — | — | |
-| Tower of the Immortals | torre-dos-imortais | sources found | — | — | — | |
-| Reality Rupture | ruptura-da-realidade | sources found | — | — | — | Q-003 |
-| Goreswine's Judgment | julgamento-de-goreswine | sources found | — | — | — | |
-| Rift Incursions | incursoes | sources found | — | — | — | |
-| V Blood Hunt | cacada-de-v-bloods | sources found | — | — | — | |
+| Equipment and builds <br>`/equipment/` · phase 6 | `masmorras`, `oficios-ferreiro-alfaiate-encantador` | sources found | — | — | page stub |  |
+| Weapon progression <br>`/equipment/weapons/` · phase 6 | `masmorras`, `mercado`, `mercador-sombrio` | sources found | — | — | — | Q-008 |
+| Weapon affinity <br>`/equipment/weapon-affinity/` · phase 6 | `masmorras`, `comandos` | sources found | — | — | — |  |
+| Armour and jewellery <br>`/equipment/armour-and-jewellery/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `mercado` | sources found | — | — | — | Q-008 |
+| Fortification <br>`/equipment/fortification/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `servicos-de-profissao` | sources found | — | — | — |  |
+| Refinement <br>`/equipment/refinement/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `coleta-minerador-pescador-lenhador`, `conquistas` | sources found | — | — | — |  |
+| Perfect Gems <br>`/equipment/perfect-gems/` · phase 6 | `masmorras` | sources found | — | — | — |  |
+| Spell jewels <br>`/equipment/spell-jewels/` · phase 6 | — | — | — | — | — | Q-007 |
+| Which bonuses help which class <br>`/equipment/bonuses-by-class/` · phase 6 | `classes`, `class-hub` | sources found | — | — | — |  |
+| Upgrade priorities <br>`/equipment/upgrade-priorities/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `masmorras` | sources found | — | — | — | Community recommendation |
+| Physical DPS builds <br>`/equipment/builds-physical/` · phase 6 | `classes` | sources found | — | — | — | Community recommendation; no testing data yet |
+| Magical DPS builds <br>`/equipment/builds-magical/` · phase 6 | `classes`, `class-draekhar` | sources found | — | — | — | Community recommendation; no testing data yet |
+| Tank builds <br>`/equipment/builds-tank/` · phase 6 | `classes`, `class-mortak` | sources found | — | — | — | Community recommendation; no testing data yet |
+| Healer builds <br>`/equipment/builds-healer/` · phase 6 | `classes`, `class-sangrael` | sources found | — | — | — | Community recommendation; no testing data yet |
+| Summoner builds <br>`/equipment/builds-summoner/` · phase 6 | `classes`, `class-sepulkros`, `class-lamuerte` | sources found | — | — | — | Community recommendation; no testing data yet |
+| Hybrid builds <br>`/equipment/builds-hybrid/` · phase 6 | `classes` | sources found | — | — | — | Community recommendation; no testing data yet |
 
-## M. Outposts and quests, N. Schools, O. Endgame
-
-| Article | Sources | Research | Writing | Verification | Implementation | Missing information |
-|---|---|---|---|---|---|---|
-| Outposts | postos-avancados | sources found | — | — | — | |
-| Quests | missoes | sources found | — | — | — | |
-| The Lost Book and Nyxaris | livro-perdido | sources found | — | — | — | |
-| Vampiric Schools | escolas | sources found | — | — | — | Q-003 |
-| Pulses, Transfusions and Plasmas | transfusao-e-plasmas | sources found | — | — | — | Q-013 |
-| Auto-Prestige | auto-prestigio | sources found | — | — | — | |
-
-## P. Battle Pass, Q. VIP, R. World and community
+### Pets and Sangrulhos
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Battle Pass | passe-de-batalha | sources found | — | — | — | |
-| VIP and optional purchases | vip, home `/en/vip/` | sources found | — | — | — | No prices published (by design) |
-| Castle helpers | castelo | sources found | — | — | — | |
-| Furniture | moveis | sources found | — | — | — | |
-| Clan | clan | sources found | — | — | — | |
-| Marriage | casamento | sources found | — | — | — | |
-| Mail | correio | sources found | — | — | — | |
-| Rankings | rankings | sources found | — | — | — | |
-| Achievements | conquistas | sources found | — | — | — | |
-| Feats, Fame and titles | facanhas | sources found | — | — | — | |
-| Profile | perfil | sources found | — | — | — | |
-| Website panel | painel-do-site | sources found | — | — | — | |
-| Community rules | — | — | — | — | — | Q-014 |
+| Pets and Sangrulhos <br>`/companions/` · phase 6 | `pets`, `sangrulhos`, `classes` | sources found | — | — | page stub |  |
+| How pets work <br>`/companions/pets/` · phase 6 | `pets` | read | — | — | — |  |
+| Capturing pets <br>`/companions/pet-capture/` · phase 6 | `pets`, `escolas` | read | — | — | — |  |
+| Pet souls <br>`/companions/pet-souls/` · phase 6 | `pets`, `coleta-minerador-pescador-lenhador`, `arena-ilusional` | read | — | — | — |  |
+| Pet tiers, levels and prestige <br>`/companions/pet-progression/` · phase 6 | `pets`, `meditacao` | sources found | — | — | — |  |
+| Pet crystals <br>`/companions/pet-crystals/` · phase 6 | `pets`, `masmorras` | sources found | — | — | — |  |
+| Recommended pets and upgrade priorities <br>`/companions/pet-recommendations/` · phase 6 | `pets` | sources found | — | — | — | Community recommendation |
+| Sangrulhos <br>`/companions/sangrulhos/` · phase 6 | `sangrulhos` | sources found | — | — | — |  |
+| Sangrulho eggs and incubation <br>`/companions/sangrulho-eggs/` · phase 6 | `sangrulhos`, `masmorras`, `arena-ilusional` | sources found | — | — | — |  |
+| Sangrulho fusion and duplicates <br>`/companions/sangrulho-fusion/` · phase 6 | `sangrulhos` | sources found | — | — | — |  |
 
-## S. Reference
+### Professions
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| All player commands (309) | comandos | sources found | — | — | — | Portuguese descriptions; syntax stays literal |
-| Interface shortcuts | atalhos | sources found | — | — | — | Portuguese source |
-| NPC, item, currency, boss directories | all guides (compiled) | — | — | — | — | |
-| Glossary (PT ↔ EN terms) | all guides | — | — | — | — | |
-| Upgrade cost and drop-rate tables | nivel-e-prestigio, pets, masmorras, classes | sources found | — | — | — | |
-| FAQ and troubleshooting | guide FAQ sections | — | — | — | — | |
+| Professions <br>`/professions/` · phase 6 | `profissoes` | sources found | — | — | page stub |  |
+| Daily orders and profession XP <br>`/professions/orders/` · phase 6 | `profissoes` | sources found | — | — | — |  |
+| Blacksmith <br>`/professions/blacksmith/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `profissoes` | sources found | — | — | — |  |
+| Tailor <br>`/professions/tailor/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `profissoes` | sources found | — | — | — |  |
+| Enchanter <br>`/professions/enchanter/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `profissoes` | sources found | — | — | — |  |
+| Miner <br>`/professions/miner/` · phase 6 | `coleta-minerador-pescador-lenhador`, `profissoes` | sources found | — | — | — |  |
+| Fisher <br>`/professions/fisher/` · phase 6 | `coleta-minerador-pescador-lenhador`, `profissoes`, `aquario` | sources found | — | — | — |  |
+| Woodcutter <br>`/professions/woodcutter/` · phase 6 | `coleta-minerador-pescador-lenhador`, `profissoes` | sources found | — | — | — |  |
+| Comparing the gathering professions <br>`/professions/gathering-comparison/` · phase 6 | `coleta-minerador-pescador-lenhador`, `oficios-ferreiro-alfaiate-encantador` | sources found | — | — | — | Q-012 |
+| Profession services <br>`/professions/services/` · phase 6 | `servicos-de-profissao` | sources found | — | — | — |  |
+| Aquarium <br>`/professions/aquarium/` · phase 6 | `aquario` | sources found | — | — | — |  |
 
-## Interactive tools
+### Economy
 
-| Tool | Sources for formulas | Research | Implementation | Missing information |
-|---|---|---|---|---|
-| Meditation calculator | meditacao, recompensa-online, vip | read | — | Q-010, Q-011 |
-| Prestige calculator | nivel-e-prestigio | sources found | — | |
-| Pulse and Transfusion calculator | transfusao-e-plasmas | sources found | — | |
-| Profession income calculator | coleta-minerador-pescador-lenhador | sources found | — | Q-012 (user-supplied rates) |
-| Class evolution calculator | classes | read | — | |
-| Pet upgrade calculator | pets | read | — | |
-| Dungeon key calculator | masmorras | sources found | — | |
-| Build planner | class pages, perfil | — | — | Q-009: show computed stats only when stacking is verified |
+| Article | Sources | Research | Writing | Verification | Implementation | Missing information |
+|---|---|---|---|---|---|---|
+| Economy <br>`/economy/` · phase 6 | `banco` | sources found | — | — | page stub |  |
+| Currencies <br>`/economy/currencies/` · phase 6 | `banco`, `recompensa-online`, `pets`, `sangrulhos` | sources found | — | — | — |  |
+| Bank <br>`/economy/bank/` · phase 6 | `banco` | sources found | — | — | — |  |
+| Vault <br>`/economy/vault/` · phase 6 | `cofre` | sources found | — | — | — |  |
+| Player market and shops <br>`/economy/market/` · phase 6 | `mercado` | sources found | — | — | — |  |
+| Contracts <br>`/economy/contracts/` · phase 6 | `contratos` | sources found | — | — | — |  |
+| Shadow Merchant <br>`/economy/shadow-merchant/` · phase 6 | `mercador-sombrio` | sources found | — | — | — |  |
+| Casino <br>`/economy/casino/` · phase 6 | `cassino` | sources found | — | — | — |  |
+| Online reward <br>`/economy/online-reward/` · phase 6 | `recompensa-online` | sources found | — | — | — |  |
+| Prisoner market <br>`/economy/prisoners/` · phase 6 | `prisioneiros` | sources found | — | — | — |  |
+| How to earn currency <br>`/economy/earning-guide/` · phase 6 | `coleta-minerador-pescador-lenhador`, `contratos`, `mercador-sombrio`, `postos-avancados`, `recompensa-online`, `ruptura-da-realidade`, `torre-dos-imortais` | sources found | — | — | — | Income rates are not published; use ranges labelled as estimates |
+| Example budgets <br>`/economy/budgets/` · phase 6 | `nivel-e-prestigio`, `classes`, `transfusao-e-plasmas`, `maestria-de-arma`, `linhagem-de-sangue` | sources found | — | — | — |  |
+
+### Dungeons
+
+| Article | Sources | Research | Writing | Verification | Implementation | Missing information |
+|---|---|---|---|---|---|---|
+| Dungeons <br>`/dungeons/` · phase 7 | `masmorras` | sources found | — | — | page stub |  |
+| Dungeon keys <br>`/dungeons/keys/` · phase 7 | `masmorras`, `incursoes` | sources found | — | — | — |  |
+| Forming a party <br>`/dungeons/forming-a-party/` · phase 7 | `masmorras`, `quadro-de-grupos` | sources found | — | — | — |  |
+| Difficulties and preparation <br>`/dungeons/difficulties/` · phase 7 | `masmorras` | sources found | — | — | — |  |
+| Death, wipes and dungeon rules <br>`/dungeons/rules-and-risks/` · phase 7 | `masmorras`, `pets` | sources found | — | — | — | Q-006 |
+| Dungeon rewards and loot <br>`/dungeons/rewards/` · phase 7 | `masmorras`, `correio` | sources found | — | — | — |  |
+| Party roles and compositions <br>`/dungeons/party-roles/` · phase 7 | `masmorras`, `classes` | sources found | — | — | — | Community recommendation |
+| Sanctuary of Redemption <br>`/dungeons/sanctuary-of-redemption/` · phase 7 | `masmorras` | sources found | — | — | — | Room and boss mechanics are not documented officially |
+| Grove of Disenchantment <br>`/dungeons/grove-of-disenchantment/` · phase 7 | `masmorras` | sources found | — | — | — | Room and boss mechanics are not documented officially |
+| Blood Dominion <br>`/dungeons/blood-dominion/` · phase 7 | `masmorras` | sources found | — | — | — | Room and boss mechanics are not documented officially |
+| Corrupted Temple <br>`/dungeons/corrupted-temple/` · phase 7 | `masmorras` | sources found | — | — | — | Room and boss mechanics are not documented officially |
+
+### Events
+
+| Article | Sources | Research | Writing | Verification | Implementation | Missing information |
+|---|---|---|---|---|---|---|
+| Events <br>`/events/` · phase 7 | `quadro-de-grupos`, `ruptura-da-realidade` | sources found | — | — | page stub |  |
+| Illusory Arena <br>`/events/illusory-arena/` · phase 7 | `arena-ilusional` | sources found | — | — | — |  |
+| Tower of the Immortals <br>`/events/tower-of-the-immortals/` · phase 7 | `torre-dos-imortais` | sources found | — | — | — |  |
+| Reality Rupture <br>`/events/reality-rupture/` · phase 7 | `ruptura-da-realidade` | sources found | — | — | — |  |
+| Goreswine's Judgment <br>`/events/goreswines-judgment/` · phase 7 | `julgamento-de-goreswine` | sources found | — | — | — |  |
+| Rift Incursions <br>`/events/rift-incursions/` · phase 7 | `incursoes` | sources found | — | — | — |  |
+| V Blood Hunt <br>`/events/v-blood-hunt/` · phase 7 | `cacada-de-v-bloods` | sources found | — | — | — |  |
+| Group board <br>`/events/group-board/` · phase 7 | `quadro-de-grupos` | sources found | — | — | — |  |
+| Seasonal events <br>`/events/seasonal/` · phase 7 | `facanhas`, `pets`, `passe-de-batalha` | sources found | — | — | — | Only Sangrisween 2026 medals and event pets are documented |
+
+### Outposts and quests
+
+| Article | Sources | Research | Writing | Verification | Implementation | Missing information |
+|---|---|---|---|---|---|---|
+| Outposts and quests <br>`/quests/` · phase 7 | `missoes`, `postos-avancados` | sources found | — | — | page stub |  |
+| Outposts <br>`/quests/outposts/` · phase 7 | `postos-avancados` | sources found | — | — | — |  |
+| Quests and quest tracking <br>`/quests/quests/` · phase 7 | `missoes` | sources found | — | — | — |  |
+| Class unlock and evolution quests <br>`/quests/class-quests/` · phase 7 | `classes`, `class-hub` | sources found | — | — | — |  |
+| Nyxaris and the endgame quests <br>`/quests/nyxaris/` · phase 7 | `transfusao-e-plasmas`, `livro-perdido`, `missoes` | sources found | — | — | — |  |
+| The Lost Book <br>`/quests/lost-book/` · phase 7 | `livro-perdido` | sources found | — | — | — |  |
+
+### Vampiric Schools
+
+| Article | Sources | Research | Writing | Verification | Implementation | Missing information |
+|---|---|---|---|---|---|---|
+| Vampiric Schools <br>`/schools/` · phase 7 | `escolas` | sources found | — | — | page stub |  |
+| School ranks and points <br>`/schools/ranks-and-points/` · phase 7 | `escolas` | sources found | — | — | — |  |
+| School spells <br>`/schools/spells/` · phase 7 | `escolas`, `classes` | sources found | — | — | — |  |
+
+### Endgame
+
+| Article | Sources | Research | Writing | Verification | Implementation | Missing information |
+|---|---|---|---|---|---|---|
+| Endgame <br>`/endgame/` · phase 7 | `transfusao-e-plasmas`, `nivel-e-prestigio` | sources found | — | — | page stub |  |
+| Pulses <br>`/endgame/pulses/` · phase 7 | `transfusao-e-plasmas`, `auto-prestigio` | sources found | — | — | — |  |
+| Transfusions <br>`/endgame/transfusions/` · phase 7 | `transfusao-e-plasmas`, `livro-perdido` | sources found | — | — | — |  |
+| Plasmas <br>`/endgame/plasmas/` · phase 7 | `transfusao-e-plasmas` | sources found | — | — | — | Q-013 |
+| Plasma investment by class <br>`/endgame/plasmas-by-class/` · phase 7 | `transfusao-e-plasmas`, `classes` | sources found | — | — | — | Community recommendation |
+| After 250 transfusions <br>`/endgame/after-250-transfusions/` · phase 7 | `transfusao-e-plasmas`, `rankings` | sources found | — | — | — |  |
+
+### Battle Pass and VIP
+
+| Article | Sources | Research | Writing | Verification | Implementation | Missing information |
+|---|---|---|---|---|---|---|
+| Battle Pass and VIP <br>`/support/` · phase 7 | `vip`, `vip-page` | sources found | — | — | page stub |  |
+| Battle Pass <br>`/support/battle-pass/` · phase 7 | `passe-de-batalha` | sources found | — | — | — |  |
+| Farming Battle Pass XP <br>`/support/battle-pass-farming/` · phase 7 | `passe-de-batalha`, `cacada-de-v-bloods`, `ruptura-da-realidade` | sources found | — | — | — | Community recommendation |
+| VIP <br>`/support/vip/` · phase 7 | `vip`, `vip-page`, `auto-prestigio`, `meditacao` | sources found | — | — | — |  |
+| Optional purchases <br>`/support/optional-purchases/` · phase 7 | `vip-page`, `meditacao`, `passe-de-batalha`, `clan` | sources found | — | — | — | No prices are published; do not invent them |
+| Free vs VIP progression <br>`/support/free-vs-vip/` · phase 7 | `vip`, `meditacao`, `transfusao-e-plasmas`, `sangrulhos`, `teleportes` | sources found | — | — | — |  |
+
+### World and community
+
+| Article | Sources | Research | Writing | Verification | Implementation | Missing information |
+|---|---|---|---|---|---|---|
+| World and community <br>`/world/` · phase 7 | `castelo`, `clan` | sources found | — | — | page stub |  |
+| Castle helpers <br>`/world/castle/` · phase 7 | `castelo` | sources found | — | — | — |  |
+| Furniture <br>`/world/furniture/` · phase 7 | `moveis` | sources found | — | — | — |  |
+| Clan <br>`/world/clan/` · phase 7 | `clan` | sources found | — | — | — |  |
+| Marriage <br>`/world/marriage/` · phase 7 | `casamento` | sources found | — | — | — |  |
+| Mail <br>`/world/mail/` · phase 7 | `correio` | sources found | — | — | — |  |
+| Rankings <br>`/world/rankings/` · phase 7 | `rankings` | sources found | — | — | — |  |
+| Achievements <br>`/world/achievements/` · phase 7 | `conquistas` | sources found | — | — | — |  |
+| Feats, Fame and titles <br>`/world/feats-fame-titles/` · phase 7 | `facanhas`, `conquistas`, `casamento` | sources found | — | — | — |  |
+| Community rules <br>`/world/community-rules/` · phase 7 | — | — | — | — | — | Q-014 |
+| Frequently asked questions <br>`/world/faq/` · phase 9 | `primeiros-passos` | sources found | — | — | — | Compiled from every guide FAQ |
+
+### Reference
+
+| Article | Sources | Research | Writing | Verification | Implementation | Missing information |
+|---|---|---|---|---|---|---|
+| Reference <br>`/reference/` · phase 7 | `comandos`, `atalhos` | sources found | — | — | page stub |  |
+| Player commands <br>`/reference/commands/` · phase 7 | `comandos` | sources found | — | — | — | 309 commands; descriptions are in Portuguese |
+| Keyboard shortcuts <br>`/reference/shortcuts/` · phase 7 | `atalhos` | sources found | — | — | — | Source page is in Portuguese |
+| NPC directory <br>`/reference/npcs/` · phase 7 | `primeiros-passos`, `profissoes`, `masmorras`, `escolas`, `sangrulhos`, `transfusao-e-plasmas`, `postos-avancados` | sources found | — | — | — | Compiled across guides |
+| Item directory <br>`/reference/items/` · phase 7 | `masmorras`, `banco`, `pets`, `sangrulhos`, `oficios-ferreiro-alfaiate-encantador` | sources found | — | — | — | Compiled across guides |
+| Boss directory <br>`/reference/bosses/` · phase 7 | `pets`, `cacada-de-v-bloods`, `ruptura-da-realidade`, `julgamento-de-goreswine` | sources found | — | — | — | Compiled across guides |
+| Glossary <br>`/reference/glossary/` · phase 7 | `comandos` | sources found | — | — | — | Portuguese–English term map compiled across guides |
+| Upgrade cost tables <br>`/reference/cost-tables/` · phase 7 | `nivel-e-prestigio`, `maestria-de-arma`, `linhagem-de-sangue`, `classes`, `pets`, `oficios-ferreiro-alfaiate-encantador`, `transfusao-e-plasmas` | sources found | — | — | — |  |
+| Drop rates <br>`/reference/drop-rates/` · phase 7 | `pets`, `masmorras`, `arena-ilusional`, `coleta-minerador-pescador-lenhador` | sources found | — | — | — |  |
+| Progression requirements <br>`/reference/progression-requirements/` · phase 7 | `classes`, `escolas`, `transfusao-e-plasmas`, `julgamento-de-goreswine`, `ruptura-da-realidade`, `oficios-ferreiro-alfaiate-encantador` | sources found | — | — | — |  |
+| Server mechanics FAQ <br>`/reference/mechanics-faq/` · phase 9 | `nivel-e-prestigio`, `meditacao` | sources found | — | — | — |  |
+| Troubleshooting <br>`/reference/troubleshooting/` · phase 9 | `interface`, `meditacao`, `missoes`, `painel-do-site` | sources found | — | — | — |  |
+
+### Tools
+
+| Article | Sources | Research | Writing | Verification | Implementation | Missing information |
+|---|---|---|---|---|---|---|
+| Tools <br>`/tools/` · phase 8 | `meditacao` | sources found | — | — | page stub |  |
+| Meditation calculator <br>`/tools/meditation-calculator/` · phase 8 | `meditacao`, `nivel-e-prestigio`, `recompensa-online`, `vip` | read | — | — | — | Q-010; Q-011 |
+| Prestige calculator <br>`/tools/prestige-calculator/` · phase 8 | `nivel-e-prestigio`, `maestria-de-arma`, `linhagem-de-sangue` | sources found | — | — | — |  |
+| Pulse and Transfusion calculator <br>`/tools/pulse-calculator/` · phase 8 | `transfusao-e-plasmas`, `meditacao` | sources found | — | — | — |  |
+| Profession income calculator <br>`/tools/profession-income-calculator/` · phase 8 | `coleta-minerador-pescador-lenhador` | sources found | — | — | — | Q-012 |
+| Class evolution calculator <br>`/tools/class-evolution-calculator/` · phase 8 | `classes` | sources found | — | — | — |  |
+| Pet upgrade calculator <br>`/tools/pet-upgrade-calculator/` · phase 8 | `pets` | sources found | — | — | — |  |
+| Dungeon key calculator <br>`/tools/dungeon-key-calculator/` · phase 8 | `masmorras` | sources found | — | — | — |  |
+| Build planner <br>`/tools/build-planner/` · phase 8 | `classes`, `perfil`, `maestria-de-arma`, `linhagem-de-sangue`, `escolas`, `pets`, `sangrulhos`, `transfusao-e-plasmas` | sources found | — | — | — | Q-009 |
+<!-- coverage:end -->

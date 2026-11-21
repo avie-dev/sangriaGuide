@@ -1,0 +1,893 @@
+# Article coverage matrix: the single source of truth for which pages the wiki will have.
+#
+# One entry per page. `npm run coverage` validates this file and regenerates the article
+# tables in docs/progress.md. See docs/information-architecture.md for the reasoning.
+#
+# Fields
+#   slug      URL path under the site root; the file is src/content/docs/<slug>.mdx
+#             (a section overview is <section>/index.mdx and has slug "<section>")
+#   title     page title
+#   brief     brief item(s) it covers, as "<section letter>: <item>" from docs/master-prompt.md
+#   sources   official source ids (src/data/official-sources.json)
+#   needs     slugs a reader should know first (used for "read this first" links and the walkthrough order)
+#   phase     the execution phase that writes it (4–8)
+#   missing   open question ids (research/open-questions.md) or short notes
+#   research  sources found (default when sources exist) | read | done
+#   writing   — | draft | written
+#   verified  — | partly checked | verified
+#   built     — | page stub | published (tools: built | tested)
+
+sections:
+  - dir: getting-started
+    title: Getting started
+    articles:
+      - slug: getting-started
+        title: Getting started
+        brief: ['A: section overview']
+        sources: [primeiros-passos]
+        phase: 4
+        built: page stub
+      - slug: getting-started/what-is-sangria-falls
+        title: What is Sangria Falls?
+        brief: ['A: What is Sangria Falls?']
+        sources: [primeiros-passos, home]
+        phase: 4
+      - slug: getting-started/vs-vanilla
+        title: Sangria Falls vs vanilla V Rising
+        brief: ['A: Sangria Falls vs Vanilla V Rising']
+        sources: [primeiros-passos, nivel-e-prestigio, classes, profissoes, banco]
+        phase: 4
+        missing: ['No official comparison: every difference must cite an SF guide']
+      - slug: getting-started/vs-bloodcraft
+        title: Sangria Falls vs Bloodcraft
+        brief: ['A: Sangria Falls vs Bloodcraft']
+        sources: [nivel-e-prestigio, maestria-de-arma, linhagem-de-sangue, classes, profissoes, pets]
+        phase: 4
+        missing: ['No official comparison; Bloodcraft is not a source for SF mechanics']
+      - slug: getting-started/joining
+        title: Joining the server
+        brief: ['A: How to join RPG 04', 'A: Server selection']
+        sources: [primeiros-passos]
+        phase: 4
+        missing: [Q-001, Q-002]
+      - slug: getting-started/interface
+        title: Installing the interface
+        brief: ['A: Installing the custom interface']
+        sources: [interface, primeiros-passos]
+        phase: 4
+        missing: ['Source page is in Portuguese']
+      - slug: getting-started/interface-troubleshooting
+        title: Interface troubleshooting
+        brief: ['A: Interface troubleshooting']
+        sources: [interface]
+        needs: [getting-started/interface]
+        phase: 4
+      - slug: getting-started/playing-without-the-interface
+        title: Playing without the interface
+        brief: ['A: Installing the custom interface (alternative)']
+        sources: [primeiros-passos, comandos]
+        phase: 4
+        missing: ['Derived from the 48 chat-only guide variants']
+      - slug: getting-started/language
+        title: Setting the language to English
+        brief: ['A: Setting the language to English']
+        sources: [primeiros-passos, painel-do-site]
+        phase: 4
+      - slug: getting-started/hud
+        title: Understanding the HUD
+        brief: ['A: Understanding the HUD']
+        sources: [primeiros-passos, nivel-e-prestigio, atalhos]
+        needs: [getting-started/interface]
+        phase: 4
+      - slug: getting-started/website-panel
+        title: The website panel
+        brief: ['R: (official system not in the brief)']
+        sources: [painel-do-site]
+        phase: 4
+      - slug: getting-started/path-of-blood
+        title: The Path of Blood tutorial
+        brief: ['A: The Path of Blood tutorial', 'M: Main tutorial quest']
+        sources: [missoes, classes, primeiros-passos]
+        phase: 4
+      - slug: getting-started/first-class
+        title: Choosing your first class
+        brief: ['A: Choosing your first class']
+        sources: [classes, class-hub, sala-de-treinamento]
+        needs: [getting-started/path-of-blood]
+        phase: 4
+      - slug: getting-started/city
+        title: Navigating Sangria Falls City
+        brief: ['A: Navigating Sangria Falls City']
+        sources: [primeiros-passos, teleportes]
+        phase: 4
+      - slug: getting-started/teleports
+        title: Teleports and teleport hubs
+        brief: ['A: Teleport hubs', 'R: Teleportation']
+        sources: [teleportes]
+        phase: 4
+      - slug: getting-started/important-npcs
+        title: Important NPCs
+        brief: ['A: Important NPCs']
+        sources: [primeiros-passos, nivel-e-prestigio, profissoes, masmorras, escolas, sangrulhos, transfusao-e-plasmas]
+        phase: 4
+        missing: ['Compiled from mentions across guides']
+      - slug: getting-started/first-castle
+        title: Building your first castle
+        brief: ['A: Building your first castle']
+        sources: [castelo, teleportes]
+        phase: 4
+        missing: ['Castle building itself is base-game; only SF additions are sourced']
+      - slug: getting-started/first-day
+        title: First-day checklist
+        brief: ['A: First-day checklist']
+        sources: [primeiros-passos, missoes, classes]
+        needs: [getting-started/path-of-blood]
+        phase: 4
+      - slug: getting-started/first-week
+        title: First-week roadmap
+        brief: ['A: First-week progression roadmap']
+        sources: [nivel-e-prestigio, profissoes, meditacao, pets]
+        needs: [getting-started/first-day]
+        phase: 4
+      - slug: getting-started/beginner-mistakes
+        title: Common beginner mistakes
+        brief: ['A: Common beginner mistakes']
+        sources: [primeiros-passos, nivel-e-prestigio, meditacao, profissoes]
+        phase: 4
+
+  - dir: walkthrough
+    title: Progression walkthrough
+    articles:
+      - slug: walkthrough
+        title: Progression walkthrough
+        brief: ['B: overview and stage map']
+        sources: [primeiros-passos]
+        phase: 4
+        built: page stub
+      - slug: walkthrough/01-first-login
+        title: 'Stage 1: First login and tutorial'
+        brief: ['B: Stage 1']
+        sources: [primeiros-passos, missoes, interface]
+        phase: 4
+      - slug: walkthrough/02-first-class
+        title: 'Stage 2: First class and starter equipment'
+        brief: ['B: Stage 2']
+        sources: [classes, class-hub]
+        needs: [walkthrough/01-first-login]
+        phase: 4
+      - slug: walkthrough/03-early-levelling
+        title: 'Stage 3: Early levelling and bosses'
+        brief: ['B: Stage 3']
+        sources: [nivel-e-prestigio, cacada-de-v-bloods, passe-de-batalha, pets]
+        needs: [walkthrough/02-first-class]
+        phase: 4
+      - slug: walkthrough/04-professions-and-income
+        title: 'Stage 4: First professions and income'
+        brief: ['B: Stage 4']
+        sources: [profissoes, coleta-minerador-pescador-lenhador, contratos, mercador-sombrio, recompensa-online]
+        needs: [walkthrough/02-first-class]
+        phase: 4
+      - slug: walkthrough/05-mastery-and-blood
+        title: 'Stage 5: Weapon mastery and blood lineage'
+        brief: ['B: Stage 5']
+        sources: [maestria-de-arma, linhagem-de-sangue]
+        needs: [walkthrough/03-early-levelling]
+        phase: 4
+      - slug: walkthrough/06-first-pet
+        title: 'Stage 6: Your first pet'
+        brief: ['B: Stage 6']
+        sources: [pets]
+        needs: [walkthrough/03-early-levelling]
+        phase: 4
+      - slug: walkthrough/07-prestige-1-10
+        title: 'Stage 7: Character Prestige 1–10'
+        brief: ['B: Stage 7']
+        sources: [nivel-e-prestigio, meditacao, banco]
+        needs: [walkthrough/03-early-levelling]
+        phase: 4
+      - slug: walkthrough/08-prestige-11-20
+        title: 'Stage 8: Character Prestige 11–20'
+        brief: ['B: Stage 8']
+        sources: [nivel-e-prestigio, meditacao, auto-prestigio]
+        needs: [walkthrough/07-prestige-1-10]
+        phase: 4
+      - slug: walkthrough/09-class-evolutions
+        title: 'Stage 9: Class evolutions'
+        brief: ['B: Stage 9']
+        sources: [classes, class-hub]
+        needs: [walkthrough/04-professions-and-income]
+        phase: 4
+      - slug: walkthrough/10-endgame-gear
+        title: 'Stage 10: Endgame gear'
+        brief: ['B: Stage 10']
+        sources: [masmorras, oficios-ferreiro-alfaiate-encantador, mercado]
+        needs: [walkthrough/07-prestige-1-10]
+        phase: 4
+        missing: [Q-008]
+      - slug: walkthrough/11-schools
+        title: 'Stage 11: Vampiric Schools'
+        brief: ['B: Stage 11']
+        sources: [escolas]
+        needs: [walkthrough/08-prestige-11-20]
+        phase: 4
+      - slug: walkthrough/12-pulses-and-transfusions
+        title: 'Stage 12: Pulses and Transfusions'
+        brief: ['B: Stage 12']
+        sources: [transfusao-e-plasmas, livro-perdido]
+        needs: [walkthrough/08-prestige-11-20]
+        phase: 4
+      - slug: walkthrough/13-advanced-enhancement
+        title: 'Stage 13: Advanced equipment enhancement'
+        brief: ['B: Stage 13']
+        sources: [oficios-ferreiro-alfaiate-encantador, coleta-minerador-pescador-lenhador, servicos-de-profissao]
+        needs: [walkthrough/10-endgame-gear]
+        phase: 4
+      - slug: walkthrough/14-master-and-nightmare
+        title: 'Stage 14: Master and Nightmare dungeons'
+        brief: ['B: Stage 14']
+        sources: [masmorras, quadro-de-grupos, incursoes]
+        needs: [walkthrough/10-endgame-gear]
+        phase: 4
+        missing: [Q-006]
+      - slug: walkthrough/15-endgame-optimisation
+        title: 'Stage 15: Endgame optimisation'
+        brief: ['B: Stage 15']
+        sources: [transfusao-e-plasmas, rankings, torre-dos-imortais]
+        needs: [walkthrough/12-pulses-and-transfusions]
+        phase: 4
+        missing: [Q-009, Q-013]
+
+  - dir: character
+    title: Character progression
+    articles:
+      - slug: character
+        title: Character progression
+        brief: ['C: overview; character vs equipment progression']
+        sources: [nivel-e-prestigio, perfil]
+        phase: 5
+        built: page stub
+      - slug: character/levels-and-xp
+        title: Levels and experience
+        brief: ['C: Character levels and experience', 'C: Experience sources']
+        sources: [nivel-e-prestigio, arena-ilusional]
+        phase: 5
+        missing: [Q-011]
+      - slug: character/prestige
+        title: Character prestige
+        brief: ['C: Prestige system', 'C: Complete prestige cost table', 'C: Permanent prestige bonuses']
+        sources: [nivel-e-prestigio]
+        needs: [character/levels-and-xp]
+        phase: 5
+      - slug: character/xp-bonuses
+        title: XP bonuses, multipliers and events
+        brief: ['C: XP penalties and multipliers', 'C: Beginner XP bonuses', 'C: Server XP events']
+        sources: [nivel-e-prestigio, banco, meditacao, vip]
+        phase: 5
+        missing: [Q-001, Q-016]
+      - slug: character/quitina
+        title: Quitina (Chitin)
+        brief: ['C: Chitin/Quitina', 'J: Chitin/Quitina']
+        sources: [banco, postos-avancados, passe-de-batalha]
+        phase: 5
+      - slug: character/weapon-mastery
+        title: Weapon mastery
+        brief: ['C: Weapon mastery', 'C: Weapon attributes']
+        sources: [maestria-de-arma]
+        phase: 5
+      - slug: character/blood-lineage
+        title: Blood lineage
+        brief: ['C: Blood lineage', 'C: Blood attributes']
+        sources: [linhagem-de-sangue]
+        phase: 5
+      - slug: character/stats
+        title: Character statistics
+        brief: ['C: Character statistics', 'C: Damage scaling', 'C: Physical vs magical damage', 'C: Critical chance and critical damage', 'C: Attack speed and ability speed', 'C: Damage resistance', 'C: Healing and life leech']
+        sources: [perfil, classes, class-hub]
+        phase: 5
+        missing: [Q-009]
+      - slug: character/profile
+        title: The profile sheet
+        brief: ['R: (official system not in the brief)']
+        sources: [perfil]
+        phase: 5
+
+  - dir: meditation
+    title: Meditation
+    articles:
+      - slug: meditation
+        title: Meditation
+        brief: ['D: overview']
+        sources: [meditacao]
+        phase: 5
+        research: read
+        built: page stub
+      - slug: meditation/how-it-works
+        title: How meditation works
+        brief: ['D: How meditation works', 'D: How to unlock the Meditation Chamber', 'D: How to enter and exit', 'D: F10 interface', 'D: Character / Weapon mastery / Bloodline / Pet meditation', 'D: Single meditation', 'D: How to enable and disable each track']
+        sources: [meditacao]
+        phase: 5
+        research: read
+      - slug: meditation/costs-and-rates
+        title: Costs and XP rates
+        brief: ['D: Sangricoin consumption', 'D: XP gained per minute', 'D: Normal vs VIP XP rates', 'D: Server-wide XP multipliers', 'D: Which XP buffs work / do not work', 'D: What happens when coins run out']
+        sources: [meditacao, vip, nivel-e-prestigio]
+        phase: 5
+        research: read
+        missing: [Q-010]
+      - slug: meditation/double-meditation
+        title: Double Meditation
+        brief: ['D: Double Meditation']
+        sources: [meditacao, vip-page]
+        phase: 5
+        research: read
+      - slug: meditation/auto-prestige
+        title: Auto-Prestige and Auto-Pulse
+        brief: ['D: Automatic prestige', 'D: Automatic Pulse', 'D: Prestige target configuration', 'D: Currency spending limits', 'D: What happens at maximum level']
+        sources: [auto-prestigio, transfusao-e-plasmas, vip]
+        phase: 5
+      - slug: meditation/recommended-settings
+        title: Recommended AFK settings
+        brief: ['D: Recommended AFK settings', 'D: Online reward income', 'D: What happens without an active pet']
+        sources: [meditacao, auto-prestigio, recompensa-online]
+        needs: [meditation/how-it-works, meditation/costs-and-rates]
+        phase: 5
+      - slug: meditation/examples
+        title: Worked meditation examples
+        brief: ['D: AFK levelling for beginners', 'D: Overnight meditation', 'D: Reaching character Prestige 20', 'D: Maximising weapon mastery', 'D: Maximising blood lineage', 'D: Pet Prestige 20', 'D: Farming Pulses', 'O: meditation cost for Pulses']
+        sources: [meditacao, nivel-e-prestigio, maestria-de-arma, linhagem-de-sangue, pets, transfusao-e-plasmas]
+        needs: [meditation/costs-and-rates]
+        phase: 5
+        missing: [Q-010, Q-011]
+      - slug: meditation/troubleshooting
+        title: Meditation troubleshooting
+        brief: ['D: Troubleshooting']
+        sources: [meditacao]
+        phase: 5
+        research: read
+
+  - dir: classes
+    title: Classes
+    articles:
+      - slug: classes
+        title: Classes
+        brief: ['E: overview']
+        sources: [classes, class-hub]
+        phase: 5
+        built: page stub
+      - slug: classes/choosing-a-class
+        title: Choosing a class
+        brief: ['E: comparison tables by playstyle', 'Design: class selection guide']
+        sources: [classes, class-hub, sala-de-treinamento]
+        phase: 5
+        missing: ['No tier list without testing data']
+      - slug: classes/evolutions
+        title: Class evolutions and advanced classes
+        brief: ['E: Evolution I, II and III', 'E: Evolution requirements', 'E: Evolution costs', 'E: La Muerte and General prerequisites', 'M: Evolution quests', 'M: Class unlock quests']
+        sources: [classes, class-hub]
+        phase: 5
+      - slug: classes/awakened
+        title: Awakened (Despertado)
+        brief: ['E: starting Awakened state']
+        sources: [class-despertado, classes]
+        phase: 5
+        missing: ['Source page is in Portuguese']
+      - {slug: classes/mortak, title: Mortak, brief: ['E: Mortak'], sources: [class-mortak, classes], phase: 5, missing: ['Source page is in Portuguese']}
+      - {slug: classes/noctarin, title: Noctarin, brief: ['E: Noctarin'], sources: [class-noctarin, classes], phase: 5, missing: ['Source page is in Portuguese']}
+      - {slug: classes/bastien, title: Bastien, brief: ['E: Bastien'], sources: [class-bastien, classes], phase: 5, missing: ['Source page is in Portuguese']}
+      - {slug: classes/carmesyne, title: Carmesyne, brief: ['E: Carmesyne'], sources: [class-carmesyne, classes], phase: 5, missing: ['Source page is in Portuguese']}
+      - {slug: classes/skarn, title: Skarn, brief: ['E: Skarn'], sources: [class-skarn, classes], phase: 5, missing: ['Source page is in Portuguese']}
+      - {slug: classes/sepulkros, title: Sepulkros, brief: ['E: Sepulkros (Reaper vs Summoner, minions, Minion Collectors)'], sources: [class-sepulkros, classes], phase: 5, missing: ['Source page is in Portuguese']}
+      - {slug: classes/draekhar, title: Draekhar, brief: ['E: Draekhar (spear as staff, six Currents)'], sources: [class-draekhar, classes], phase: 5, research: read, missing: [Q-004, Q-005]}
+      - {slug: classes/umbrellis, title: Umbrellis, brief: ['E: Umbrellis'], sources: [class-umbrellis, classes], phase: 5, missing: ['Source page is in Portuguese']}
+      - {slug: classes/sangrael, title: Sangrael, brief: ['E: Sangrael (healing, resurrection, support)'], sources: [class-sangrael, classes], needs: [classes/draekhar], phase: 5, missing: ['Source page is in Portuguese']}
+      - {slug: classes/la-muerte, title: La Muerte, brief: ['E: La Muerte'], sources: [class-lamuerte, classes], needs: [classes/evolutions], phase: 5, missing: ['Source page is in Portuguese']}
+      - {slug: classes/general, title: General, brief: ['E: General'], sources: [class-general, classes], needs: [classes/evolutions], phase: 5, missing: ['Source page is in Portuguese']}
+      - slug: classes/training-room
+        title: Training Room
+        brief: ['E: (official system: test any class)']
+        sources: [sala-de-treinamento]
+        phase: 5
+
+  - dir: equipment
+    title: Equipment and builds
+    articles:
+      - slug: equipment
+        title: Equipment and builds
+        brief: ['F: overview; upgrade priorities']
+        sources: [masmorras, oficios-ferreiro-alfaiate-encantador]
+        phase: 6
+        built: page stub
+      - slug: equipment/weapons
+        title: Weapon progression
+        brief: ['F: Weapon progression', 'F: Ancestral weapons', 'F: Rare / Epic / Legendary weapons', 'F: Unique weapon effects', 'F: How to obtain legendary weapons']
+        sources: [masmorras, mercado, mercador-sombrio]
+        phase: 6
+        missing: [Q-008]
+      - slug: equipment/weapon-affinity
+        title: Weapon affinity
+        brief: ['F: Weapon affinity', 'K: Weapon affinity']
+        sources: [masmorras, comandos]
+        phase: 6
+      - slug: equipment/armour-and-jewellery
+        title: Armour and jewellery
+        brief: ['F: Armor progression', 'F: Jewelry progression']
+        sources: [oficios-ferreiro-alfaiate-encantador, mercado]
+        phase: 6
+        missing: [Q-008]
+      - slug: equipment/fortification
+        title: Fortification
+        brief: ['F: Equipment fortification', 'I: Fortification']
+        sources: [oficios-ferreiro-alfaiate-encantador, servicos-de-profissao]
+        phase: 6
+      - slug: equipment/refinement
+        title: Refinement
+        brief: ['F: Equipment refinement', 'F: Refinement materials', 'I: Refinement']
+        sources: [oficios-ferreiro-alfaiate-encantador, coleta-minerador-pescador-lenhador, conquistas]
+        phase: 6
+      - slug: equipment/perfect-gems
+        title: Perfect Gems
+        brief: ['F: Perfect Gems']
+        sources: [masmorras]
+        phase: 6
+      - slug: equipment/spell-jewels
+        title: Spell jewels
+        brief: ['F: Spell jewels']
+        sources: []
+        phase: 6
+        missing: [Q-007]
+      - slug: equipment/bonuses-by-class
+        title: Which bonuses help which class
+        brief: ['F: Explain which equipment bonuses actually benefit each class']
+        sources: [classes, class-hub]
+        needs: [classes/choosing-a-class]
+        phase: 6
+      - slug: equipment/upgrade-priorities
+        title: Upgrade priorities
+        brief: ['F: Equipment upgrade priorities']
+        sources: [oficios-ferreiro-alfaiate-encantador, masmorras]
+        phase: 6
+        missing: ['Community recommendation']
+      - {slug: equipment/builds-physical, title: Physical DPS builds, brief: ['F: Physical DPS builds'], sources: [classes], phase: 6, missing: ['Community recommendation; no testing data yet']}
+      - {slug: equipment/builds-magical, title: Magical DPS builds, brief: ['F: Magical DPS builds'], sources: [classes, class-draekhar], phase: 6, missing: ['Community recommendation; no testing data yet']}
+      - {slug: equipment/builds-tank, title: Tank builds, brief: ['F: Tank builds'], sources: [classes, class-mortak], phase: 6, missing: ['Community recommendation; no testing data yet']}
+      - {slug: equipment/builds-healer, title: Healer builds, brief: ['F: Healer builds'], sources: [classes, class-sangrael], phase: 6, missing: ['Community recommendation; no testing data yet']}
+      - {slug: equipment/builds-summoner, title: Summoner builds, brief: ['F: Summoner builds'], sources: [classes, class-sepulkros, class-lamuerte], phase: 6, missing: ['Community recommendation; no testing data yet']}
+      - {slug: equipment/builds-hybrid, title: Hybrid builds, brief: ['F: Hybrid builds'], sources: [classes], phase: 6, missing: ['Community recommendation; no testing data yet']}
+
+  - dir: companions
+    title: Pets and Sangrulhos
+    articles:
+      - slug: companions
+        title: Pets and Sangrulhos
+        brief: ['G: overview', 'G: pets vs class summons vs Sangrulhos']
+        sources: [pets, sangrulhos, classes]
+        phase: 6
+        built: page stub
+      - slug: companions/pets
+        title: How pets work
+        brief: ['G: How pets work', 'G: Pet commands', 'G: Summoning and dismissing pets', 'G: Pet management']
+        sources: [pets]
+        phase: 6
+        research: read
+      - slug: companions/pet-capture
+        title: Capturing pets
+        brief: ['G: How to capture bosses', 'G: Pet capture probability', 'G: Eligible and ineligible bosses']
+        sources: [pets, escolas]
+        phase: 6
+        research: read
+      - slug: companions/pet-souls
+        title: Pet souls
+        brief: ['G: Boss Souls', 'G: Act Souls', 'G: How to farm pet souls']
+        sources: [pets, coleta-minerador-pescador-lenhador, arena-ilusional]
+        phase: 6
+        research: read
+      - slug: companions/pet-progression
+        title: Pet tiers, levels and prestige
+        brief: ['G: Pet levels', 'G: Pet prestige', 'G: Pet tiers', 'G: Pet attributes', 'G: Pet variants', 'G: Pet damage scaling', 'G: Pet meditation']
+        sources: [pets, meditacao]
+        phase: 6
+      - slug: companions/pet-crystals
+        title: Pet crystals
+        brief: ['G: Crystal system (all items)']
+        sources: [pets, masmorras]
+        phase: 6
+      - slug: companions/pet-recommendations
+        title: Recommended pets and upgrade priorities
+        brief: ['G: Recommended pets by role', 'G: Pet upgrade priorities']
+        sources: [pets]
+        needs: [companions/pet-progression]
+        phase: 6
+        missing: ['Community recommendation']
+      - slug: companions/sangrulhos
+        title: Sangrulhos
+        brief: ['H: Introduction', 'H: Collection system', 'H: Equipping Sangrulhos', 'H: Attribute bonuses', 'H: Recommended progression']
+        sources: [sangrulhos]
+        phase: 6
+      - slug: companions/sangrulho-eggs
+        title: Sangrulho eggs and incubation
+        brief: ['H: Obtaining eggs', 'H: Resonators', 'H: Incubation', 'H: Rarities']
+        sources: [sangrulhos, masmorras, arena-ilusional]
+        phase: 6
+      - slug: companions/sangrulho-fusion
+        title: Sangrulho fusion and duplicates
+        brief: ['H: Fusion', 'H: Duplicate management']
+        sources: [sangrulhos]
+        phase: 6
+
+  - dir: professions
+    title: Professions
+    articles:
+      - slug: professions
+        title: Professions
+        brief: ['I: overview', 'I: Profession switching', 'I: Gathering and crafting synergy']
+        sources: [profissoes]
+        phase: 6
+        built: page stub
+      - slug: professions/orders
+        title: Daily orders and profession XP
+        brief: ['I: Experience sources', 'I: Daily orders', 'I: Level requirements']
+        sources: [profissoes]
+        phase: 6
+      - {slug: professions/blacksmith, title: Blacksmith, brief: ['I: Blacksmith'], sources: [oficios-ferreiro-alfaiate-encantador, profissoes], phase: 6}
+      - {slug: professions/tailor, title: Tailor, brief: ['I: Tailor'], sources: [oficios-ferreiro-alfaiate-encantador, profissoes], phase: 6}
+      - {slug: professions/enchanter, title: Enchanter, brief: ['I: Enchanter'], sources: [oficios-ferreiro-alfaiate-encantador, profissoes], phase: 6}
+      - {slug: professions/miner, title: Miner, brief: ['I: Miner'], sources: [coleta-minerador-pescador-lenhador, profissoes], phase: 6}
+      - {slug: professions/fisher, title: Fisher, brief: ['I: Fisher'], sources: [coleta-minerador-pescador-lenhador, profissoes, aquario], phase: 6}
+      - {slug: professions/woodcutter, title: Woodcutter, brief: ['I: Woodcutter'], sources: [coleta-minerador-pescador-lenhador, profissoes], phase: 6}
+      - slug: professions/gathering-comparison
+        title: Comparing the gathering professions
+        brief: ['I: Compare gathering professions (income, availability, convenience, refinement materials, combat benefits)']
+        sources: [coleta-minerador-pescador-lenhador, oficios-ferreiro-alfaiate-encantador]
+        phase: 6
+        missing: [Q-012]
+      - slug: professions/services
+        title: Profession services
+        brief: ['I: Profession services', 'I: Offline service sales', 'J: Profession services']
+        sources: [servicos-de-profissao]
+        phase: 6
+      - slug: professions/aquarium
+        title: Aquarium
+        brief: ['I: Aquarium mechanics']
+        sources: [aquario]
+        phase: 6
+
+  - dir: economy
+    title: Economy
+    articles:
+      - slug: economy
+        title: Economy
+        brief: ['J: overview']
+        sources: [banco]
+        phase: 6
+        built: page stub
+      - slug: economy/currencies
+        title: Currencies
+        brief: ['J: Ourosangue', 'J: Sangricoins', 'J: Crystals', 'J: Other documented currencies', 'S: Currency directory']
+        sources: [banco, recompensa-online, pets, sangrulhos]
+        phase: 6
+      - slug: economy/bank
+        title: Bank
+        brief: ['J: Bank system', 'J: Transaction history']
+        sources: [banco]
+        phase: 6
+      - {slug: economy/vault, title: Vault, brief: ['J: Vault'], sources: [cofre], phase: 6}
+      - slug: economy/market
+        title: Player market and shops
+        brief: ['J: Player marketplace', 'J: Opening a shop', 'J: Offline sales']
+        sources: [mercado]
+        phase: 6
+      - slug: economy/contracts
+        title: Contracts
+        brief: ['J: Contracts', 'J: Player contracts']
+        sources: [contratos]
+        phase: 6
+      - slug: economy/shadow-merchant
+        title: Shadow Merchant
+        brief: ['J: Shadow Merchant', 'J: Selling raw materials', 'J: Selling refined materials']
+        sources: [mercador-sombrio]
+        phase: 6
+      - {slug: economy/casino, title: Casino, brief: ['J: (official system not in the brief)'], sources: [cassino], phase: 6}
+      - {slug: economy/online-reward, title: Online reward, brief: ['J: Online rewards'], sources: [recompensa-online], phase: 6}
+      - {slug: economy/prisoners, title: Prisoner market, brief: ['R: Prisoner market'], sources: [prisioneiros], phase: 6}
+      - slug: economy/earning-guide
+        title: How to earn currency
+        brief: ['J: Beginner income', 'J: Daily income', 'J: Weekly income', 'J: Active farming', 'J: Passive income', 'J: Gathering profession income', 'J: Selling surplus resources']
+        sources: [coleta-minerador-pescador-lenhador, contratos, mercador-sombrio, postos-avancados, recompensa-online, ruptura-da-realidade, torre-dos-imortais]
+        phase: 6
+        missing: ['Income rates are not published; use ranges labelled as estimates']
+      - slug: economy/budgets
+        title: Example budgets
+        brief: ['J: Example budgets for character prestige, class evolutions and Transfusions']
+        sources: [nivel-e-prestigio, classes, transfusao-e-plasmas, maestria-de-arma, linhagem-de-sangue]
+        needs: [character/prestige, classes/evolutions]
+        phase: 6
+
+  - dir: dungeons
+    title: Dungeons
+    articles:
+      - slug: dungeons
+        title: Dungeons
+        brief: ['K: overview', 'K: Dungeon unlock requirements', 'K: Events Hub location', 'K: Mark NPC', 'K: Party size', 'K: Time limits', 'K: Enemy scaling']
+        sources: [masmorras]
+        phase: 7
+        built: page stub
+      - slug: dungeons/keys
+        title: Dungeon keys
+        brief: ['K: Dungeon keys', 'K: Key crafting recipes', 'K: Key material refunds']
+        sources: [masmorras, incursoes]
+        phase: 7
+      - slug: dungeons/forming-a-party
+        title: Forming a party
+        brief: ['K: Party formation', 'K: Group finder', 'K: Party size']
+        sources: [masmorras, quadro-de-grupos]
+        phase: 7
+      - slug: dungeons/difficulties
+        title: Difficulties and preparation
+        brief: ['K: Difficulty levels', 'K: Difficulty modifiers', 'K: Preparation guides for each difficulty']
+        sources: [masmorras]
+        phase: 7
+      - slug: dungeons/rules-and-risks
+        title: Death, wipes and dungeon rules
+        brief: ['K: Death and revival', 'K: Party wipes', 'K: Inventory loss risks', 'K: Friendly fire and PvP behavior', 'K: Pet restrictions', 'K: Class summon restrictions']
+        sources: [masmorras, pets]
+        phase: 7
+        missing: [Q-006]
+      - slug: dungeons/rewards
+        title: Dungeon rewards and loot
+        brief: ['K: Reward distribution', 'K: Reward probabilities', 'K: Reward mail', 'K: Loot encyclopedia']
+        sources: [masmorras, correio]
+        phase: 7
+      - slug: dungeons/party-roles
+        title: Party roles and compositions
+        brief: ['K: Recommended party compositions; tank, healer, magical and physical DPS roles']
+        sources: [masmorras, classes]
+        phase: 7
+        missing: ['Community recommendation']
+      - {slug: dungeons/sanctuary-of-redemption, title: Sanctuary of Redemption, brief: ['K: Sanctuary of Redemption', 'K: Room and boss mechanics'], sources: [masmorras], phase: 7, missing: ['Room and boss mechanics are not documented officially']}
+      - {slug: dungeons/grove-of-disenchantment, title: Grove of Disenchantment, brief: ['K: Grove of Disenchantment', 'K: Room and boss mechanics'], sources: [masmorras], phase: 7, missing: ['Room and boss mechanics are not documented officially']}
+      - {slug: dungeons/blood-dominion, title: Blood Dominion, brief: ['K: Blood Dominion', 'K: Room and boss mechanics'], sources: [masmorras], phase: 7, missing: ['Room and boss mechanics are not documented officially']}
+      - {slug: dungeons/corrupted-temple, title: Corrupted Temple, brief: ['K: Corrupted Temple', 'K: Room and boss mechanics'], sources: [masmorras], phase: 7, missing: ['Room and boss mechanics are not documented officially']}
+
+  - dir: events
+    title: Events
+    articles:
+      - slug: events
+        title: Events
+        brief: ['L: overview and schedule table']
+        sources: [quadro-de-grupos, ruptura-da-realidade]
+        phase: 7
+        built: page stub
+      - {slug: events/illusory-arena, title: Illusory Arena, brief: ['L: Illusory Arena'], sources: [arena-ilusional], phase: 7}
+      - {slug: events/tower-of-the-immortals, title: Tower of the Immortals, brief: ['L: Tower of the Immortals'], sources: [torre-dos-imortais], phase: 7}
+      - {slug: events/reality-rupture, title: Reality Rupture, brief: ['L: Reality Ruptures'], sources: [ruptura-da-realidade], phase: 7}
+      - {slug: events/goreswines-judgment, title: "Goreswine's Judgment", brief: ["L: Goreswine's Judgment"], sources: [julgamento-de-goreswine], phase: 7}
+      - {slug: events/rift-incursions, title: Rift Incursions, brief: ['L: Rift Incursions'], sources: [incursoes], phase: 7}
+      - {slug: events/v-blood-hunt, title: V Blood Hunt, brief: ['L: V Blood Hunt'], sources: [cacada-de-v-bloods], phase: 7}
+      - {slug: events/group-board, title: Group board, brief: ['L: Group Board'], sources: [quadro-de-grupos], phase: 7}
+      - slug: events/seasonal
+        title: Seasonal events
+        brief: ['L: Other documented seasonal events']
+        sources: [facanhas, pets, passe-de-batalha]
+        phase: 7
+        missing: ['Only Sangrisween 2026 medals and event pets are documented']
+
+  - dir: quests
+    title: Outposts and quests
+    articles:
+      - slug: quests
+        title: Outposts and quests
+        brief: ['M: overview']
+        sources: [missoes, postos-avancados]
+        phase: 7
+        built: page stub
+      - slug: quests/outposts
+        title: Outposts
+        brief: ['M: Every outpost and location', 'M: Outpost commanders', 'M: Daily missions', 'M: Weekly missions', 'M: Reputation ranks', 'M: Reputation bonuses', 'M: Specialized rewards', 'M: Mission restrictions']
+        sources: [postos-avancados]
+        phase: 7
+      - slug: quests/quests
+        title: Quests and quest tracking
+        brief: ['M: Quest tracking', 'M: How to find NPCs', 'M: Troubleshooting quests']
+        sources: [missoes]
+        phase: 7
+      - slug: quests/class-quests
+        title: Class unlock and evolution quests
+        brief: ['M: Class unlock quests', 'M: Evolution quests']
+        sources: [classes, class-hub]
+        needs: [classes/evolutions]
+        phase: 7
+      - slug: quests/nyxaris
+        title: Nyxaris and the endgame quests
+        brief: ['M: Endgame quests', 'M: Nyxaris and the laboratory']
+        sources: [transfusao-e-plasmas, livro-perdido, missoes]
+        phase: 7
+      - {slug: quests/lost-book, title: The Lost Book, brief: ['M: The Lost Book'], sources: [livro-perdido], phase: 7}
+
+  - dir: schools
+    title: Vampiric Schools
+    articles:
+      - slug: schools
+        title: Vampiric Schools
+        brief: ['N: How to unlock schools', 'N: How to enroll', 'N: Enrollment NPC', 'N: School headquarters', 'N: All four schools', 'N: Changing schools', 'N: Does a school change combat power?']
+        sources: [escolas]
+        phase: 7
+        built: page stub
+      - slug: schools/ranks-and-points
+        title: School ranks and points
+        brief: ['N: School ranks', 'N: School points', 'N: Daily missions', 'N: School events', 'N: School bonuses', 'N: Sunday bonuses']
+        sources: [escolas]
+        phase: 7
+      - slug: schools/spells
+        title: School spells
+        brief: ['N: School spells', 'N: Spell tiers', 'N: Spell cooldowns', 'N: Recommended spells by class']
+        sources: [escolas, classes]
+        phase: 7
+
+  - dir: endgame
+    title: Endgame
+    articles:
+      - slug: endgame
+        title: Endgame
+        brief: ['O: overview', 'O: Character Prestige 20', 'O: Long-term progression']
+        sources: [transfusao-e-plasmas, nivel-e-prestigio]
+        phase: 7
+        built: page stub
+      - slug: endgame/pulses
+        title: Pulses
+        brief: ['O: Pulses', 'O: Pulse requirements', 'O: Pulse costs', 'O: Automatic Pulse']
+        sources: [transfusao-e-plasmas, auto-prestigio]
+        phase: 7
+      - slug: endgame/transfusions
+        title: Transfusions
+        brief: ['O: Transfusions', 'O: Transfusion costs', 'O: VIP discounts', 'O: Ourosangue needed for Transfusions']
+        sources: [transfusao-e-plasmas, livro-perdido]
+        needs: [endgame/pulses]
+        phase: 7
+      - slug: endgame/plasmas
+        title: Plasmas
+        brief: ['O: Plasmas', 'O: Plasma allocation', 'O: Plasma reset mechanics', 'O: All available Plasma attributes', 'O: Diminishing returns']
+        sources: [transfusao-e-plasmas]
+        needs: [endgame/transfusions]
+        phase: 7
+        missing: [Q-013]
+      - slug: endgame/plasmas-by-class
+        title: Plasma investment by class
+        brief: ['O: Recommended Plasma investment by class']
+        sources: [transfusao-e-plasmas, classes]
+        needs: [endgame/plasmas]
+        phase: 7
+        missing: ['Community recommendation']
+      - slug: endgame/after-250-transfusions
+        title: After 250 transfusions
+        brief: ['O: Endgame optimization', 'R: Rankings (Kill Points)']
+        sources: [transfusao-e-plasmas, rankings]
+        phase: 7
+
+  - dir: support
+    title: Battle Pass and VIP
+    articles:
+      - slug: support
+        title: Battle Pass and VIP
+        brief: ['Q: Clearly identify which systems require separate purchases']
+        sources: [vip, vip-page]
+        phase: 7
+        built: page stub
+      - slug: support/battle-pass
+        title: Battle Pass
+        brief: ['P: How Battle Pass works', 'P: Free reward track', 'P: Bloody reward track', 'P: How to unlock Bloody Pass', 'P: Seasonal progression', 'P: Battle Pass experience', 'P: Boss XP rewards', 'P: Event XP rewards', 'P: Reward claiming', 'P: Retroactive premium rewards', 'P: Season expiration']
+        sources: [passe-de-batalha]
+        phase: 7
+      - slug: support/battle-pass-farming
+        title: Farming Battle Pass XP
+        brief: ['P: Efficient Battle Pass farming']
+        sources: [passe-de-batalha, cacada-de-v-bloods, ruptura-da-realidade]
+        needs: [support/battle-pass]
+        phase: 7
+        missing: ['Community recommendation']
+      - slug: support/vip
+        title: VIP
+        brief: ['Q: VIP benefits', 'Q: VIP duration', 'Q: Meditation bonuses', 'Q: Automatic prestige', 'Q: Automatic Pulse']
+        sources: [vip, vip-page, auto-prestigio, meditacao]
+        phase: 7
+      - slug: support/optional-purchases
+        title: Optional purchases
+        brief: ['Q: Double Meditation', 'Q: Bloody Battle Pass', 'Q: Available donation options']
+        sources: [vip-page, meditacao, passe-de-batalha, clan]
+        phase: 7
+        missing: ['No prices are published; do not invent them']
+      - slug: support/free-vs-vip
+        title: Free vs VIP progression
+        brief: ['Q: Free vs VIP progression comparison', 'Q: What free players can accomplish']
+        sources: [vip, meditacao, transfusao-e-plasmas, sangrulhos, teleportes]
+        needs: [support/vip]
+        phase: 7
+
+  - dir: world
+    title: World and community
+    articles:
+      - slug: world
+        title: World and community
+        brief: ['R: overview']
+        sources: [castelo, clan]
+        phase: 7
+        built: page stub
+      - slug: world/castle
+        title: Castle helpers
+        brief: ['R: Castle systems', 'R: Castle storage', 'R: Castle search', 'R: Castle building limits']
+        sources: [castelo]
+        phase: 7
+      - {slug: world/furniture, title: Furniture, brief: ['R: Furniture'], sources: [moveis], phase: 7}
+      - {slug: world/clan, title: Clan, brief: ['R: Clan mechanics'], sources: [clan], phase: 7}
+      - {slug: world/marriage, title: Marriage, brief: ['R: Marriage'], sources: [casamento], phase: 7}
+      - {slug: world/mail, title: Mail, brief: ['R: Mail'], sources: [correio], phase: 7}
+      - {slug: world/rankings, title: Rankings, brief: ['R: Rankings'], sources: [rankings], phase: 7}
+      - {slug: world/achievements, title: Achievements, brief: ['R: Achievements'], sources: [conquistas], phase: 7}
+      - slug: world/feats-fame-titles
+        title: Feats, Fame and titles
+        brief: ['R: Feats', 'R: Fame', 'R: Titles', 'R: How to equip or hide titles']
+        sources: [facanhas, conquistas, casamento]
+        phase: 7
+      - slug: world/community-rules
+        title: Community rules
+        brief: ['R: Community rules']
+        sources: []
+        phase: 7
+        missing: [Q-014]
+      - slug: world/faq
+        title: Frequently asked questions
+        brief: ['R: Frequently asked questions']
+        sources: [primeiros-passos]
+        phase: 9
+        missing: ['Compiled from every guide FAQ']
+
+  - dir: reference
+    title: Reference
+    articles:
+      - slug: reference
+        title: Reference
+        brief: ['S: overview']
+        sources: [comandos, atalhos]
+        phase: 7
+        built: page stub
+      - slug: reference/commands
+        title: Player commands
+        brief: ['S: All player commands', 'S: Portuguese command names and English descriptions']
+        sources: [comandos]
+        phase: 7
+        missing: ['309 commands; descriptions are in Portuguese']
+      - {slug: reference/shortcuts, title: Keyboard shortcuts, brief: ['S: All keyboard shortcuts'], sources: [atalhos], phase: 7, missing: ['Source page is in Portuguese']}
+      - {slug: reference/npcs, title: NPC directory, brief: ['S: NPC directory'], sources: [primeiros-passos, profissoes, masmorras, escolas, sangrulhos, transfusao-e-plasmas, postos-avancados], phase: 7, missing: ['Compiled across guides']}
+      - {slug: reference/items, title: Item directory, brief: ['S: Item directory'], sources: [masmorras, banco, pets, sangrulhos, oficios-ferreiro-alfaiate-encantador], phase: 7, missing: ['Compiled across guides']}
+      - {slug: reference/bosses, title: Boss directory, brief: ['S: Boss directory'], sources: [pets, cacada-de-v-bloods, ruptura-da-realidade, julgamento-de-goreswine], phase: 7, missing: ['Compiled across guides']}
+      - {slug: reference/glossary, title: Glossary, brief: ['S: Terminology glossary'], sources: [comandos], phase: 7, missing: ['Portuguese–English term map compiled across guides']}
+      - slug: reference/cost-tables
+        title: Upgrade cost tables
+        brief: ['S: Upgrade cost tables']
+        sources: [nivel-e-prestigio, maestria-de-arma, linhagem-de-sangue, classes, pets, oficios-ferreiro-alfaiate-encantador, transfusao-e-plasmas]
+        phase: 7
+      - {slug: reference/drop-rates, title: Drop rates, brief: ['S: Drop rate tables'], sources: [pets, masmorras, arena-ilusional, coleta-minerador-pescador-lenhador], phase: 7}
+      - slug: reference/progression-requirements
+        title: Progression requirements
+        brief: ['S: Progression requirements']
+        sources: [classes, escolas, transfusao-e-plasmas, julgamento-de-goreswine, ruptura-da-realidade, oficios-ferreiro-alfaiate-encantador]
+        phase: 7
+      - {slug: reference/mechanics-faq, title: Server mechanics FAQ, brief: ['S: Server mechanics FAQ'], sources: [nivel-e-prestigio, meditacao], phase: 9}
+      - {slug: reference/troubleshooting, title: Troubleshooting, brief: ['S: Troubleshooting encyclopedia'], sources: [interface, meditacao, missoes, painel-do-site], phase: 9}
+
+  - dir: tools
+    title: Tools
+    articles:
+      - slug: tools
+        title: Tools
+        brief: ['4: overview']
+        sources: [meditacao]
+        phase: 8
+        built: page stub
+      - {slug: tools/meditation-calculator, title: Meditation calculator, brief: ['4.1 Meditation Calculator'], sources: [meditacao, nivel-e-prestigio, recompensa-online, vip], phase: 8, research: read, missing: [Q-010, Q-011]}
+      - {slug: tools/prestige-calculator, title: Prestige calculator, brief: ['4.2 Prestige Calculator'], sources: [nivel-e-prestigio, maestria-de-arma, linhagem-de-sangue], phase: 8}
+      - {slug: tools/pulse-calculator, title: Pulse and Transfusion calculator, brief: ['4.3 Pulse and Transfusion Calculator'], sources: [transfusao-e-plasmas, meditacao], phase: 8}
+      - {slug: tools/profession-income-calculator, title: Profession income calculator, brief: ['4.4 Profession Income Calculator'], sources: [coleta-minerador-pescador-lenhador], phase: 8, missing: [Q-012]}
+      - {slug: tools/class-evolution-calculator, title: Class evolution calculator, brief: ['4.5 Class Evolution Calculator'], sources: [classes], phase: 8}
+      - {slug: tools/pet-upgrade-calculator, title: Pet upgrade calculator, brief: ['4.6 Pet Upgrade Calculator'], sources: [pets], phase: 8}
+      - {slug: tools/dungeon-key-calculator, title: Dungeon key calculator, brief: ['4.7 Dungeon Key Calculator'], sources: [masmorras], phase: 8}
+      - {slug: tools/build-planner, title: Build planner, brief: ['4.8 Build Planner'], sources: [classes, perfil, maestria-de-arma, linhagem-de-sangue, escolas, pets, sangrulhos, transfusao-e-plasmas], phase: 8, missing: [Q-009]}

@@ -1,0 +1,61 @@
+---
+// Lists a section's pages, in reading order, with their writing status, from docs/coverage.yaml.
+// Pages that don't exist yet are shown without a link, so the overview never points at a 404.
+import fs from 'node:fs';
+import path from 'node:path';
+import { parse } from 'yaml';
+
+interface Props {
+	/** Section directory, e.g. "meditation". Defaults to the current page's section. */
+	section?: string;
+}
+const current = Astro.locals.starlightRoute.id.split('/')[0];
+const dir = Astro.props.section ?? current;
+const { sections } = parse(fs.readFileSync(path.join(process.cwd(), 'docs/coverage.yaml'), 'utf8'));
+const section = sections.find((s: { dir: string }) => s.dir === dir);
+if (!section) throw new Error(`SectionContents: no section "${dir}" in docs/coverage.yaml`);
+
+type Article = { slug: string; title: string; writing?: string; verified?: string; built?: string };
+const pages: Article[] = section.articles.filter((a: Article) => a.slug !== dir);
+const status = (a: Article) =>
+	a.verified === 'verified' ? 'Verified' : a.writing === 'written' ? 'Written' : a.writing === 'draft' ? 'Draft' : 'Planned';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<ol class="sf-contents">
+	{
+		pages.map((a) => {
+			const live = a.built && a.built !== '—';
+			const s = status(a);
+			return (
+				<li>
+					<span class="sf-row">
+					{live ? <a href={`${base}/${a.slug}/`}>{a.title}</a> : <span>{a.title}</span>}
+					<span class={`sf-status sf-status--${s.toLowerCase()}`}>{s}</span>
+					</span>
+				</li>
+			);
+		})
+	}
+</ol>
+
+<style>
+	.sf-row {
+		display: inline-flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.5rem;
+	}
+	.sf-status {
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-gray-3);
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.25rem;
+		padding: 0 0.4em;
+	}
+	.sf-status--verified,
+	.sf-status--written {
+		color: var(--sl-color-white);
+		border-color: var(--sf-gold-dim);
+	}
+</style>

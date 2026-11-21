@@ -23,13 +23,19 @@ npm install
 npm run dev        # http://localhost:4321
 npm run build      # static site in dist/, with the search index
 npm run preview    # serve the built site
-npm run check      # type-check .astro, .ts and content frontmatter
+npm run check      # type-check, and fail if docs/progress.md is out of date
+npm run coverage   # validate docs/coverage.yaml and regenerate docs/progress.md
 ```
 
 ## Project layout
 
 ```
-docs/                     brief and progress tracker
+docs/
+  master-prompt.md        the project brief
+  information-architecture.md  sections, URL scheme, page types, unlock dependencies
+  coverage.yaml           every planned page: brief items, sources, reading order, status
+  progress.md             tracker (article tables generated from coverage.yaml)
+scripts/coverage.mjs      validates coverage.yaml, regenerates the tracker
 research/                 source research (Phase 1)
   fetch.mjs               downloads official pages into research/raw/ (gitignored)
   extract.mjs             converts them to plain text in research/text/ (gitignored)
