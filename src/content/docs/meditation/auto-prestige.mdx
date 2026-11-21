@@ -1,0 +1,90 @@
+---
+title: Auto-Prestige and Auto-Pulse
+description: The VIP Auto-Prestige perk prestiges your character, weapon, blood and pet automatically at max level. How to set targets, a spending cap and Pulse limits, with and without the interface.
+summary: VIP-only. Auto-Prestige prestiges character, weapon in hand, active blood and summoned pet at max level, at the normal cost. Set a target and a spending cap. Auto pulse is on by default at prestige 20; it never transfuses.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - auto-prestigio
+  - transfusao-e-plasmas
+  - vip
+labels: [official, vip]
+sidebar:
+  order: 4
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+**Auto-Prestige** is a VIP perk. It prestiges your character, weapon, blood and pet **automatically, the moment each reaches max level**. You don't need to be meditating or standing still, only online.
+
+<QuickFacts
+	facts={[
+		['Requires', 'Active VIP (turns off when VIP ends)'],
+		['Types', 'Character XP, Weapon Mastery, Bloodline, Pet'],
+		['Cost', 'Same as manual prestige; pet prestige is free'],
+		['Limits', 'Target, spending cap, number of Pulses'],
+		['Never', 'Transfuses (always manual)'],
+	]}
+/>
+
+## Opening it
+
+<PlayModes>
+	<Fragment slot="interface">**F8** (VIP panel) → **CONFIGURE** on the Auto-Prestige perk. Or use the Profile (F1) → ACCOUNT → Auto-Prestige → **Config.**, or type `.ap panel`. Without VIP, the panel shows *AUTO-PRESTIGE LOCKED*.</Fragment>
+	<Fragment slot="chat"><Command cmd=".ap status">Shows the types turned on, targets, Pulses and cap.</Command> The character menu (`.level`) also has an Auto-prestige option.</Fragment>
+</PlayModes>
+
+## Turning types on
+
+Each type has its own card. Click **OFF** to switch it **ON**, and click again to turn it off. The band at the top shows how many are active (for example "2/4 types active").
+
+| Type | Acts on |
+|---|---|
+| Character XP | Your character, at level 90 |
+| Weapon Mastery | **The weapon in your hand**, at 100 |
+| Bloodline | **Your active blood**, at 100 |
+| Pet | **Your summoned pet**, at 100 |
+
+<Command cmd=".ap enable exp">Turns a type on. Use `exp`, `arma`, `sangue` or `pet`; `.ap disable exp` turns it off.</Command>
+
+<Aside type="caution" title="It spends without asking">
+With a type on, Ourosangue leaves your Bank without a prompt. **Set a spending cap first.**
+</Aside>
+
+## Target: how far to go
+
+On each card, use **−** and **+**. **MAX** means prestige 20, and a number such as 10/20 means stop at 10. When the target is reached, the type **pauses** and tells you in chat. It doesn't switch off, so raise the target to continue.
+
+<Command cmd=".ap target arma 10">The weapon stops at prestige 10 (`max` removes the target).</Command>
+
+## Spending cap
+
+In the **LIMITS** board, type an amount in **Spending cap** (for example 5000) and click **OK**. Type 0 to remove the limit. The board shows how much has been spent. When the next prestige wouldn't fit under the cap, Auto-Prestige pauses and tells you. Setting a new cap resets the count.
+
+<Command cmd=".ap cap 5000">Limits Auto-Prestige to 5,000 Ourosangue (0 removes the limit).</Command>
+
+## Pulses
+
+At **prestige 20**, the Character XP type starts giving **Pulses** when you reach 90. A Pulse returns you to level 1 for free (see [Endgame](/endgame/)).
+
+- **Auto pulse is ON by default.** To stop it, click **Auto pulse** in the LIMITS board until it reads OFF, ideally before reaching prestige 20. Prestiges continue normally.
+- **Pulses to give:** type a number and click OK to cap how many it gives (0 = no limit).
+- After 250 transfusions, Pulses end and auto pulse stops by itself.
+
+<Command cmd=".ap pulse desligar">Turns auto pulse off (`.ap pulse ligar` turns it on).</Command>
+<Command cmd=".ap pulses 5">Lets auto pulse give at most 5 Pulses (0 removes the limit).</Command>
+
+Auto-Prestige **never transfuses**. Click TRANSFUSE yourself.
+
+## Common questions
+
+### I turned on Weapon Mastery and nothing happened.
+
+It only watches the weapon in your hand, the active blood and the summoned pet, and only acts at max level. It also does nothing without Ourosangue in your Bank.
+
+### My VIP ended.
+
+Auto-Prestige turns off with it. Everything already prestiged stays.

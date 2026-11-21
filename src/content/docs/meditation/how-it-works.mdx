@@ -1,0 +1,78 @@
+---
+title: How meditation works
+description: Step by step, how to meditate on Sangria Falls with and without the interface, what each of the four paths needs, and how to switch paths.
+summary: Pick a path (F10 or .meditate), click MEDITATE to go to the Meditation Chamber, and stay inside. XP arrives every 60 seconds. Weapon needs the weapon in hand, Blood an active blood, Pet the pet summoned inside.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - meditacao
+labels: [official]
+sidebar:
+  order: 1
+---
+
+import Requirements from '../../../components/Requirements.astro';
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<Requirements items={['The starter tutorial finished', 'A meditation path chosen', 'At least 0.35 Sangricoin in your Bank']} />
+
+## Start meditating
+
+<PlayModes>
+	<Fragment slot="interface">
+		1. Press **F10** (or type `.meditate panel`). The MEDITATION panel opens anywhere on the map. On the left are the MEDITATION TYPES, each with its XP per minute. On the right is YOUR SESSION, with your Balance, the Cost and the Session total.
+		2. On the path you want, click **SELECT**. It shows ACTIVE.
+		3. Click **MEDITATE**. You're taken to the Meditation Chamber.
+		4. Stay inside. The first XP arrives after **60 seconds**, then every minute. An aura on your character shows it's running.
+	</Fragment>
+	<Fragment slot="chat">
+		1. Type `.menu meditate` (or `.meditate`). The first line shows your active path.
+		2. Type the path number: **1** Character XP, **2** Weapon Mastery, **3** Bloodline, **4** Pet. The chosen one gets a ✓.
+		3. Choose *Go to the meditation area*. You're taken to the Meditation Chamber.
+		4. Stay inside. The first XP arrives after 60 seconds, then every minute. An aura shows it's running.
+
+		Stand still while the menu is open, because walking more than 5 metres closes it.
+	</Fragment>
+</PlayModes>
+
+You can also walk in. At the city teleport hub, use the **Meditation Portal**. Inside, the guardian **Haruki** can switch your path too. To leave, use the chamber's exit doors.
+
+## The four paths
+
+| Path | Needs | Raises |
+|---|---|---|
+| Character XP | Nothing | Your character level, up to 90 |
+| Weapon Mastery | The weapon **in your hand** | The weapon equipped that minute |
+| Bloodline | An **active blood type** | Your current blood |
+| Pet | Your pet **summoned inside the chamber** | That pet. A pet with prestige gains less on this path. |
+
+<Aside type="tip" title="Pets in the chamber">
+The city doesn't let you summon a pet, but the chamber does. Enter first, then summon your pet inside (F2 or `.pet`). On the Pet path, the aura appears on the pet, not on you.
+</Aside>
+
+You meditate **one path at a time**. Character and weapon don't level together. The exception is [Double Meditation](/meditation/double-meditation/), a separate unlock.
+
+## Switching paths
+
+Click **SELECT** on another path, or type its number in the menu. You don't need to leave the chamber. A path that can't progress right now shows a reason in red on the panel (UNARMED, NO BLOOD, NO PET or MAX LEVEL), or appears grey in the chat menu.
+
+## What stops it
+
+Meditation keeps running while you stand still. It stops if you:
+
+- leave the chamber
+- disconnect
+- run out of Sangricoins (below 0.35)
+
+A path that isn't yielding (max level, no weapon, no pet) **costs nothing**.
+
+## Direct commands
+
+<Command cmd=".meditate xp">Chooses the Character XP path.</Command>
+<Command cmd=".meditate weapon">Chooses the Weapon Mastery path.</Command>
+<Command cmd=".meditate blood">Chooses the Bloodline path.</Command>
+<Command cmd=".meditate pet">Chooses the Pet path.</Command>
+<Command cmd=".meditate go">Takes you to the Meditation Chamber.</Command>
+<Command cmd=".meditate type">Shows your current path.</Command>

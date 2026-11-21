@@ -1,0 +1,111 @@
+---
+title: Character prestige
+description: All 20 Sangria Falls character prestige buffs, what prestige costs, how to prestige with and without the interface, and what unlocks at prestige 20.
+summary: At level 90, prestige returns you to level 1 for one of 20 permanent buffs, in a fixed order. It costs 75 Ourosangue for the first and 4,467 for the twentieth (22,760 for all 20), paid from the Bank.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - nivel-e-prestigio
+  - auto-prestigio
+  - perfil
+  - painel-do-site
+labels: [official, verify]
+sidebar:
+  order: 2
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import CostTable from '../../../components/CostTable.astro';
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import FilterTable from '../../../components/FilterTable.astro';
+import Label from '../../../components/Label.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+At level 90, XP stops counting. **Prestige** sends you back to level 1 and gives you a **permanent buff**. There are 20 prestiges, each with its own buff, always in the same order. Buffs stack and are never lost. **Vlad Parker** teaches prestige in the quest *The Cycle of Blood*, in the Winery (Adegaria) of the City of Sangria Falls.
+
+<QuickFacts
+	facts={[
+		['Prestiges', '20'],
+		['Requirement', 'Level 90 and the cost in your Bank'],
+		['Cost', '75 (1st) to 4,467 (20th) Ourosangue'],
+		['All 20', '22,760 Ourosangue'],
+		['Confirmation', 'None on the HUD button'],
+	]}
+/>
+
+## The 20 buffs
+
+<FilterTable placeholder="Filter buffs…">
+
+| Prestige | Buff | Amount |
+|---|---|---|
+| 1 | Damage Reduction | +2% |
+| 2 | Healing Received | +2% |
+| 3 | Max Health | +40 |
+| 4 | Sun Resistance | +8 |
+| 5 | Spell Resistance | +2% |
+| 6 | Physical Resistance | +2% |
+| 7 | Shield Efficiency | +4% |
+| 8 | Movement Speed | +0.5 |
+| 9 | Resource Yield | +8% |
+| 10 | Shapeshift Speed | +0.2 |
+| 11 | Mount Speed | +0.2 |
+| 12 | Blood Drain Reduction | +6% |
+| 13 | Physical Power | +2 |
+| 14 | Spell Power | +2 |
+| 15 | Physical Life Leech | +2% |
+| 16 | Spell Life Leech | +4% |
+| 17 | Attack Speed | +4% |
+| 18 | Weapon Skill Power | +6% |
+| 19 | Ultimate Efficiency | +8% |
+| 20 | Blood Efficiency | +4% |
+
+</FilterTable>
+
+In game, `.level buffs` lists them and marks the ones you have. The Profile's PRESTIGES column (F1) lights up the ones you own and highlights the next.
+
+## Cost
+
+<CostTable id="character-prestige" />
+
+The cost comes from your **Bank balance**, not your inventory. Weapon mastery and blood lineage prestiges use the same range, from 75 to 4,467.
+
+## How to prestige
+
+<PlayModes>
+	<Fragment slot="interface">
+		1. Reach level 90.
+		2. Make sure the cost is in your Bank (F5).
+		3. Click **PRESTIGE** on the Prestige Bar next to the HUD, or on the Profile (F1) below the XP bar.
+
+		You're back at level 1 with the new buff active. **There's no confirmation screen.**
+	</Fragment>
+	<Fragment slot="chat">
+		<Command cmd=".level">Opens the character menu; the Prestige option shows the cost.</Command>
+		<Command cmd=".prestige exp">Prestiges immediately, without confirmation (short form `.pg exp`).</Command>
+	</Fragment>
+</PlayModes>
+
+<Aside type="tip" title="See the cost first">
+Talk to Vlad Parker and choose *I want to prestige.* → *Character.* He shows the cost and only prestiges after you click **Confirm.** You can also prestige from the [website panel](/getting-started/website-panel/).
+</Aside>
+
+## Automatic prestige <Label type="vip" />
+
+With VIP, **Auto-Prestige** can prestige your character automatically the moment you hit 90, with a target and a spending cap. See [Auto-Prestige and Auto-Pulse](/meditation/auto-prestige/).
+
+## What prestige 20 changes
+
+- You can enrol in a **Vampiric School**. See [Schools](/schools/).
+- The PRESTIGE button becomes **GIVE PULSE**, the start of Pulses and Transfusions. See [Endgame](/endgame/).
+
+## Common questions
+
+### I can't prestige. Why?
+
+Either you're not at 90 yet, or your Bank is short. The chat message shows the cost and your balance.
+
+### I hid the Prestige Bar. How do I prestige?
+
+Use the PRESTIGE button on the Profile (F1), or `.prestige exp`.

@@ -1,0 +1,27 @@
+---
+// The 3 weapon-mastery and 3 blood-lineage attributes a class has until you change them.
+//   <ClassDefaults id="mortak" />
+import { classDetails } from '../lib/class-details';
+import { attributeName } from '../data/attribute-names';
+
+interface Props {
+	id: string;
+}
+const { mastery, blood } = classDetails(Astro.props.id).defaultAttributes;
+---
+
+<table class="sf-defaults">
+	<thead>
+		<tr><th scope="col">Weapon mastery</th><th scope="col">Blood lineage</th></tr>
+	</thead>
+	<tbody>
+		{
+			mastery.map((m, i) => (
+				<tr>
+					<td title={m}>{attributeName(m)}</td>
+					<td title={blood[i]}>{attributeName(blood[i])}</td>
+				</tr>
+			))
+		}
+	</tbody>
+</table>

@@ -1,0 +1,82 @@
+---
+title: Training Room
+description: The Sangria Falls Training Room lets you test any class, evolution, Current or variant for free, and measure your DPS on a training dummy. How to use it and read the damage report.
+summary: Talk to Darius at the Training Room teleporter to test any of the 11 classes (with evolutions, Currents and variants) for free. Spawn a dummy with .dummy for a DPS report. Nothing is saved.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - sala-de-treinamento
+labels: [official]
+sidebar:
+  order: 3
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Command from '../../../components/Command.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+Test any class for free, with its weapons, and measure your damage on a training dummy. **Nothing from the test is saved.**
+
+<QuickFacts
+	facts={[
+		['Where', 'City teleport hub → Training Room; NPC Darius'],
+		['Cost', 'None; no time limit, no wait between tests'],
+		['Rooms', '5, one player each'],
+		['Classes', 'All 11, with evolutions, Currents and variants'],
+		['Pets', 'Not allowed (yours is stored)'],
+	]}
+/>
+
+## Start a test
+
+<Steps>
+
+1. Use the **Training Room** teleporter at the city's teleport hub.
+2. Talk to **Darius**. The TEST CLASSES panel opens.
+3. Click **TEST** on a class. You're taken to a room of your own. If all rooms are busy, wait and try again.
+4. **Equip the test weapon** from your inventory (keep up to 3 slots free). Without the class weapon, its bonuses and abilities don't appear.
+
+</Steps>
+
+<Aside type="tip">
+Testing Draekhar or Sangrael? Their Staff is the **Spear** that appeared in your inventory.
+</Aside>
+
+## Test the class
+
+A training target at your level fights back. When it dies, another appears. If you go down, you get up instantly at full health. The **TESTING CLASS** panel (on the right, replacing your quests) lets you:
+
+- switch **EVOLUTION** between BASE, I, II and III, showing what each adds and the TOTAL ON THE CHARACTER
+- pick any of the 6 **Currents** for Draekhar
+- switch the **VARIANT** for Sepulkros (Summoner or Reaper) and Mortak (Unshakable or Relentless), even one you haven't earned
+
+<Command cmd=".class testar noctarin">Switches the class you're testing without leaving the room (class name in lowercase, written together, e.g. `lamuerte`).</Command>
+<Command cmd=".class test">Brings back the side panel if it's gone.</Command>
+
+## Measure your damage
+
+<Steps>
+
+1. Click **CREATE TRAINING DUMMY**, or type `.dummy`. It spawns where you stand.
+2. Hit it with your rotation. Its nameplate shows total damage, DPS and hit count.
+3. Stop hitting. After 4 seconds, a report appears in chat with the **[TRAINING DUMMY]** tag.
+4. Start hitting again to measure again. **RESET** discards a half-finished measurement. **REMOVE** (or `.dummy` again) removes the dummy.
+
+</Steps>
+
+The dummy doesn't move, attack or die. While it's up, the fighting target leaves the room.
+
+**The report** shows damage and hits, DPS and the time window (from first to last hit, not counting the 4 idle seconds), and your average, highest and lowest hit. It counts everything that's yours, including hits, projectiles, areas and class summons, but doesn't break it down by ability. To compare two abilities, measure one at a time.
+
+<Aside type="caution" title="The report didn't appear">
+It only comes after 4 seconds without damage. Poison, burning or a summon still hitting keeps the measurement open.
+</Aside>
+
+## Leaving
+
+Use the door labelled *Sair / Salir / Exit*, and you return near Darius. Walking out, teleporting or disconnecting also ends the test. Your class comes back on its own, even after a disconnect or server restart, and the test weapons vanish. Any left over are removed as soon as you equip them outside.
+
+## What it doesn't do
+
+- No XP, mastery, blood, items or quest progress.
+- It unlocks nothing. Liked a class? Talk to its Master in the Classes Hall. See [Class evolutions](/classes/evolutions/).

@@ -1,0 +1,77 @@
+---
+title: Levels and experience
+description: How the Sangria Falls character level works, from 1 to 90, where XP comes from, what reduces it, and how to level faster.
+summary: Character level runs 1–90 and replaces the gear level. XP comes from kills, quests and meditation; V Bloods give much more; groups get full XP each. At 90 XP is lost until you prestige.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - nivel-e-prestigio
+  - arena-ilusional
+  - meditacao
+  - perfil
+labels: [official, verify]
+sidebar:
+  order: 1
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import Unverified from '../../../components/Unverified.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+Your vampire has a **character level from 1 to 90**. It's the level shown on your vampire, replacing the base game's gear level.
+
+<QuickFacts
+	facts={[
+		['Levels', '1 to 90'],
+		['After 90', 'Prestige (20 in all), then Pulses'],
+		['Death penalty', 'None: dying costs no XP or level'],
+		['Meditation', '630,000 XP per hour; 1 → 90 in about 1h14'],
+	]}
+/>
+
+## Where XP comes from
+
+- **Killing creatures.** V Bloods give much more than normal creatures.
+- **Quests.** Every tutorial step pays XP, and so do many other quests.
+- **Meditation.** XP every minute while standing in the Meditation Chamber. See [Meditation](/meditation/).
+- **The Illusory Arena.** Its enemies give **2.5× character XP**.
+
+## What changes how much you get
+
+| Situation | Effect |
+|---|---|
+| Creature weaker than you | Less XP; the bigger the gap, the less |
+| Creature at your level or above | Full XP |
+| Group play | Everyone nearby and in combat at the kill gets **full** XP. They don't need to be in your clan, and the XP isn't split. |
+| Your pet gets the kill | It counts for you |
+| Docile creatures; creatures from tombs, worm nests and summoning circles | Less XP |
+| Boss summons | No XP |
+| Level 90 | **XP stops counting and is lost** until you prestige |
+
+## Seeing your progress
+
+<PlayModes>
+	<Fragment slot="interface">The XP bar sits on the HUD with your level next to it (for example "Lv. 35"). Hover over it to see how much is left. **F1** opens your Profile with your level, prestige and XP bar. XP gains scroll in the corner of the screen (the *Experience HUD*), which you can hide from the minimap gear.</Fragment>
+	<Fragment slot="chat">
+		<Command cmd=".level">Opens the character menu: level, prestige, XP and the next prestige cost.</Command>
+		<Command cmd=".level log">Turns the character XP messages in chat on or off.</Command>
+	</Fragment>
+</PlayModes>
+
+## XP needed per level
+
+<Unverified q="Q-011">The official guides don't publish the XP needed for each level. The only figure is that meditation takes about 1h14 from level 1 to 90 at 630,000 XP per hour, which puts the whole climb at roughly 777,000 XP. That's this wiki's calculation, not a published number.</Unverified>
+
+## Common questions
+
+### Does prestiging make XP slower?
+
+No. The official guide says prestiging doesn't make XP slower.
+
+### I'm at 90 and still hunting. Am I banking XP?
+
+No. XP at 90 is lost. Prestige first. See [Character prestige](/character/prestige/).
+
+See also [XP bonuses](/character/xp-bonuses/).

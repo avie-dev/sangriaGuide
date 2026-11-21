@@ -1,0 +1,98 @@
+---
+title: Mortak
+description: Mortak, the Greatsword and Mace tank of Sangria Falls. Its two variants (Unshakable and Relentless), abilities, evolutions, attribute bonuses and default attributes, translated from the official class page.
+summary: Mortak is a physical Greatsword/Mace tank. Unshakable has lots of health and resistance but no crit, and taunts with Blood Rage. Relentless trades health for crit and attack speed. Ultimate Glacial Bastion seals you in an ice shield.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - class-mortak
+  - classes
+labels: [official, verify]
+sidebar:
+  order: 5
+---
+
+import ClassCard from '../../../components/ClassCard.astro';
+import ClassEvolutions from '../../../components/ClassEvolutions.astro';
+import ClassAttributes from '../../../components/ClassAttributes.astro';
+import ClassDefaults from '../../../components/ClassDefaults.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note" title="Translated from Portuguese">
+The official class page is in Portuguese. Ability and quest names are given in Portuguese with this wiki's translation. Numbers are as published.
+</Aside>
+
+Mortak **holds the line**. Its Blood Rage taunts everything around it, and its ultimate, *Glacial Bastion*, ends fights with the Mortak at the centre. The Relentless variant trades the wall of health for crit and faster strikes.
+
+<ClassCard id="mortak" />
+
+## How it scales
+
+- **Benefits from:** Physical Power and Weapon Skill Power.
+- **Doesn't use:** Spell Power or Physical Crit. The Unshakable variant sets physical crit chance to zero and compensates with health and resistances.
+- **Unlock quest:** *Provação de Mortak* (Mortak's Trial), from **Razor Mortak**.
+
+## Variants
+
+Your first variant is free: you pick it when you get the class, in the tutorial or at the end of the unlock quest. The other one is a quest from Razor Mortak. Finishing it only unlocks the variant, and you stay on your current one until you switch. With both unlocked, switching is free (the round button next to your class crest, or the Master).
+
+| Variant | Style | Unlock quest |
+|---|---|---|
+| **Unshakable** (*Inabalável*) | Wall of health and resistances, no crit, taunts with Blood Rage | *O Caminho do Inabalável* |
+| **Relentless** (*Implacável*) | Less health, more damage: physical crit and faster strikes | *O Caminho do Implacável* |
+
+If you were a Mortak before variants existed, you're on Unshakable and can do the quest for Relentless. Each variant keeps its own mastery and blood attributes.
+
+## Abilities
+
+Both variants share the same weapons and abilities. The differences are noted.
+
+### Greatsword
+
+| Key | Ability | What it does |
+|---|---|---|
+| Basic | Primary attack | Three heavy swings in a 3.75 m cone: 70%, 70% and 80% physical damage. **Relentless:** each swing also fires 3 fanned projectiles (4.5 m, 20% of Physical Power each). |
+| Q | *Alfange* (Scimitar) | Dash-slash ending in a heavy blow (125% physical). The final cut fires a 34°, 5.2 m ice cone: 120% physical to up to 12 targets, freezing them for 2 s. |
+| E | *Morte desde Cima* (Death from Above) | Leap and crash down on the target spot: 125% physical to up to 10 targets. **Relentless:** on landing, ice spikes run 12 m along the ground (100% of Physical Power, 1.5 s freeze). |
+
+### Mace
+
+| Key | Ability | What it does |
+|---|---|---|
+| Basic | Primary attack | Three blows in a 3 m cone: 50%, 50% and 60% physical. **Relentless:** each blow also fires 3 fanned projectiles (20% of Physical Power each). |
+| Q | *Golpe Esmagador* (Crushing Blow) | Smash the ground: 150% physical at the impact, then a 5 m shockwave dealing 50% physical to up to 12 targets and chilling them (−15% movement speed for 5 s). |
+| E | *Bater* (Bash) | A 125°, 4.2 m sweep: 70% physical to up to 16 targets. |
+
+### Ultimate and passive
+
+- **Ultimate: *Bastião Glacial* (Glacial Bastion).** Scales with Physical Power and Ultimate Efficiency. Leap and land on the target spot (250% magic damage, freezes). You're then sealed in ice for 6 s, with a shield of **550% of your Physical Power** and immunity to crowd control. Every second, an Ice Nova bursts at your feet, 7 in all, each dealing 200% physical in an area and freezing. Breaking the shield ends it early, but the last Nova still fires.
+- **Passive: *Provocação de Sangue* (Blood Taunt), Unshakable only.** With the class achievement, Blood Rage taunts everything within 20 m for 5 s.
+
+## Evolutions
+
+<ClassEvolutions id="mortak" />
+
+Bonuses stack and are saved per class. The tribute is taken from your Bank at the end of each journey. If you can't pay, the step waits.
+
+## Attribute bonuses
+
+What the class weapon adds, by grade. The Total includes the Base and all three evolutions. Hover an attribute for its Portuguese name.
+
+<ClassAttributes id="mortak" q="Q-018" />
+
+## Default attributes
+
+These apply until you choose your own. In the MASTERY & BLOOD tab you can swap them for any 3 of 12 in each list.
+
+<ClassDefaults id="mortak" />
+
+## Commands
+
+As given on the official class page:
+
+<Command cmd=".classe variante">Choose or switch your variant (Unshakable or Relentless).</Command>
+<Command cmd=".classe info mortak">Opens the class page in game.</Command>
+<Command cmd=".classe testar mortak">Try the class in the Training Room.</Command>
+
+The English guides write these as `.class variant` and `.class testar mortak`. Whether both spellings work is [open question Q-020](/about/open-questions/#q-020).

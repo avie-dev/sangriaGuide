@@ -1,0 +1,87 @@
+---
+title: Blood lineage
+description: How blood lineage levels and prestiges work on Sangria Falls, how to level it fastest by draining, its class attributes, and the free first prestige.
+summary: Each blood type levels 0–100 and prestiges up to 20, and only draining (the final bite) gives XP. Drain creatures of your own blood type for the fastest gains. Lineage gives 3 class attributes; Vlad Parker does the first prestige free.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - linhagem-de-sangue
+  - classes
+  - meditacao
+  - auto-prestigio
+labels: [official]
+sidebar:
+  order: 6
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+Every **blood type** you drink (Warrior, Rogue, Scholar, Brute, Worker…) has its own level and prestige. The more you develop a blood, the stronger its bonus to your class.
+
+<QuickFacts
+	facts={[
+		['Level', '0 to 100, per blood type'],
+		['Prestige', 'Up to 20'],
+		['XP from', 'Draining only (the final bite)'],
+		['Cost', '75 to 4,467 Ourosangue; the first is free with Vlad Parker'],
+		['Attributes', '3 per class, chosen freely'],
+	]}
+/>
+
+## Gaining lineage XP
+
+Lineage XP comes **only when you drain a creature's blood** with the final bite. A plain kill doesn't count. It raises your character and weapon, but not your blood. The XP goes to **the blood type you're using** at that moment. Meditation on the Bloodline path also raises the current blood.
+
+**What gives more XP:**
+
+- **Draining creatures of the same blood type as yours.** The official guide calls this by far the fastest way.
+- A high-level creature with high-quality blood.
+- Higher quality in your own blood.
+- V Bloods, according to the boss's level.
+
+<Aside type="caution">
+With **Frail** blood you get no lineage XP and no lineage bonus.
+</Aside>
+
+## What lineage gives
+
+Lineage feeds **3 attributes** to your class, such as healing received, resistances and cooldowns. They grow with the level and prestige of **the blood you're using**. Each blood type keeps its own progress, so switching blood doesn't lose anything. Prestige returns the level to 0, keeps the bonus you've earned, and raises the cap. It doesn't slow XP. The **Awakened** has no lineage attributes.
+
+## Seeing your lineage
+
+<PlayModes>
+	<Fragment slot="interface">**F1** → the BLOOD box shows each blood type's level and prestige (for example "Lv.60 · P.2"). For values: **See more** → **MASTERY & BLOOD**, then scroll to *Blood lineage*.</Fragment>
+	<Fragment slot="chat">
+		<Command cmd=".blood">Opens the lineage menu (`.sg` also works).</Command>
+		<Command cmd=".blood info">Level, prestige and XP remaining for every blood type.</Command>
+		<Command cmd=".blood attributes">Your class's 3 attributes for the current blood.</Command>
+	</Fragment>
+</PlayModes>
+
+## Choosing your 3 attributes
+
+The process is the same as for weapon mastery. In the **MASTERY & BLOOD** tab, check 3 lineage attributes (and 3 mastery ones), then click **CONFIRM SELECTION**. Without the interface, type `.blood` and choose *Change lineage attributes*. The choice is free, saved per class, and only editable for the active class. Each class's defaults are on its [class page](/classes/).
+
+## Prestiging a blood
+
+<Aside type="tip" title="The first one is free">
+The first time a blood reaches 100, the *Blood Lineage* mission appears. **Vlad Parker** does that first prestige for free. Talk to him before clicking PRESTIGE.
+</Aside>
+
+<PlayModes>
+	<Fragment slot="interface">Keep the level-100 blood active and the cost in your Bank, then click **PRESTIGE** on the blood line of the Prestige Bar. It's instant and charges immediately.</Fragment>
+	<Fragment slot="chat"><Command cmd=".prestige blood">Prestiges the current blood immediately, without confirmation (short form `.pg s`).</Command></Fragment>
+</PlayModes>
+
+## Common questions
+
+### I killed a lot of creatures and my blood didn't go up.
+
+You killed them with blows. Lineage XP only comes from draining.
+
+### I switched blood type. Did I lose progress?
+
+No. Each type keeps its own level and prestige. The bonus that counts is always the current blood's.

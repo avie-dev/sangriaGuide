@@ -22,7 +22,7 @@ A page stub is never counted as finished content.
 | 2 | Information architecture and article coverage matrix | Done (2026-11-22) | 191 pages in 18 sections, every brief item mapped (`docs/coverage.yaml`); URL scheme, page types, label rules, unlock-dependency graph and audience paths (`docs/information-architecture.md`); `npm run coverage` validates the matrix and regenerates this tracker; section overviews list their pages from the matrix. |
 | 3 | Site structure and reusable components | Done (2026-11-22) | Components: QuickFacts, Requirements, PlayModes (interface/chat tabs), Command, Currency, CostTable, ClassCard, ClassGrid (filterable), ProgressionPath, Checklist, FilterTable, Label, Unverified, plus automatic breadcrumbs, Before you read, Related guides, Sources, Discord summary and link previews. Validated data collections in `src/data/` (currencies, classes, cost tables; source ids, class references and totals checked at build). Open questions page. Internal link and anchor checking at build (starlight-links-validator); `npm run check:external` for outside links. Component reference at /about/components/. |
 | 4 | Beginner walkthrough | Done (2026-11-22) | 36 pages written: the 20 Getting started pages (what Sangria Falls is, vs vanilla, vs Bloodcraft, joining, interface install and troubleshooting, chat-only play, language, HUD, website panel, tutorial, first class, city, teleports, NPCs, first castle, first-day and first-week checklists, beginner mistakes) and the walkthrough overview plus Stages 1–15. Every claim is checked against the official guides; none is confirmed in game yet (`verified: partly checked`). Open questions Q-001, Q-002, Q-006, Q-008, Q-009, Q-012, Q-013 and Q-017 are flagged inline where they apply. |
-| 5 | Progression, class and meditation guides | Not started | Class pages need translation from Portuguese |
+| 5 | Progression, class and meditation guides | Done (2026-11-22) | 33 pages: Character (9: levels and XP, prestige with all 20 buffs, XP bonuses, Quitina, weapon mastery, blood lineage, statistics with an attribute glossary, profile), Meditation (8: how it works, costs and rates, Double Meditation, Auto-Prestige, AFK settings, worked examples, troubleshooting) and Classes (16: all 11 classes plus the Awakened translated from the Portuguese class pages, choosing a class, evolutions, Training Room). Class tables (evolutions, per-grade attributes, defaults) come from `src/data/class-details.json`, which `research/class-data.mjs` parses from the official pages; it found 5 published totals that don't add up (Q-018, Q-019), which the pages flag. New open questions Q-018 to Q-021. |
 | 6 | Economy, professions, pets, equipment | Not started | |
 | 7 | Dungeons, events, endgame | Not started | |
 | 8 | Calculators and interactive tools | Not started | |
@@ -34,7 +34,7 @@ A page stub is never counted as finished content.
 <!-- coverage:start -->
 _Generated from `docs/coverage.yaml` by `npm run coverage`. Edit the YAML, not these tables._
 
-**191 pages planned** · written: 36 · drafts: 0 · verified: 0 · published: 36 · page stubs: 16
+**191 pages planned** · written: 69 · drafts: 0 · verified: 0 · published: 69 · page stubs: 13
 
 | Phase | Pages |
 |---|---|
@@ -95,49 +95,49 @@ _Generated from `docs/coverage.yaml` by `npm run coverage`. Edit the YAML, not t
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Character progression <br>`/character/` · phase 5 | `nivel-e-prestigio`, `perfil` | sources found | — | — | page stub |  |
-| Levels and experience <br>`/character/levels-and-xp/` · phase 5 | `nivel-e-prestigio`, `arena-ilusional` | sources found | — | — | — | Q-011 |
-| Character prestige <br>`/character/prestige/` · phase 5 | `nivel-e-prestigio` | sources found | — | — | — |  |
-| XP bonuses, multipliers and events <br>`/character/xp-bonuses/` · phase 5 | `nivel-e-prestigio`, `banco`, `meditacao`, `vip` | sources found | — | — | — | Q-001; Q-016 |
-| Quitina (Chitin) <br>`/character/quitina/` · phase 5 | `banco`, `postos-avancados`, `passe-de-batalha` | sources found | — | — | — |  |
-| Weapon mastery <br>`/character/weapon-mastery/` · phase 5 | `maestria-de-arma` | sources found | — | — | — |  |
-| Blood lineage <br>`/character/blood-lineage/` · phase 5 | `linhagem-de-sangue` | sources found | — | — | — |  |
-| Character statistics <br>`/character/stats/` · phase 5 | `perfil`, `classes`, `class-hub` | sources found | — | — | — | Q-009 |
-| The profile sheet <br>`/character/profile/` · phase 5 | `perfil` | sources found | — | — | — |  |
+| Character progression <br>`/character/` · phase 5 | `nivel-e-prestigio`, `perfil` | read | written | partly checked | published |  |
+| Levels and experience <br>`/character/levels-and-xp/` · phase 5 | `nivel-e-prestigio`, `arena-ilusional` | read | written | partly checked | published | Q-011 |
+| Character prestige <br>`/character/prestige/` · phase 5 | `nivel-e-prestigio` | read | written | partly checked | published |  |
+| XP bonuses, multipliers and events <br>`/character/xp-bonuses/` · phase 5 | `nivel-e-prestigio`, `banco`, `meditacao`, `vip` | read | written | partly checked | published | Q-001; Q-016 |
+| Quitina (Chitin) <br>`/character/quitina/` · phase 5 | `banco`, `postos-avancados`, `passe-de-batalha` | read | written | partly checked | published |  |
+| Weapon mastery <br>`/character/weapon-mastery/` · phase 5 | `maestria-de-arma` | read | written | partly checked | published |  |
+| Blood lineage <br>`/character/blood-lineage/` · phase 5 | `linhagem-de-sangue` | read | written | partly checked | published |  |
+| Character statistics <br>`/character/stats/` · phase 5 | `perfil`, `classes`, `class-hub` | read | written | partly checked | published | Q-009 |
+| The profile sheet <br>`/character/profile/` · phase 5 | `perfil` | read | written | partly checked | published |  |
 
 ### Meditation
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Meditation <br>`/meditation/` · phase 5 | `meditacao` | read | — | — | page stub |  |
-| How meditation works <br>`/meditation/how-it-works/` · phase 5 | `meditacao` | read | — | — | — |  |
-| Costs and XP rates <br>`/meditation/costs-and-rates/` · phase 5 | `meditacao`, `vip`, `nivel-e-prestigio` | read | — | — | — | Q-010 |
-| Double Meditation <br>`/meditation/double-meditation/` · phase 5 | `meditacao`, `vip-page` | read | — | — | — |  |
-| Auto-Prestige and Auto-Pulse <br>`/meditation/auto-prestige/` · phase 5 | `auto-prestigio`, `transfusao-e-plasmas`, `vip` | sources found | — | — | — |  |
-| Recommended AFK settings <br>`/meditation/recommended-settings/` · phase 5 | `meditacao`, `auto-prestigio`, `recompensa-online` | sources found | — | — | — |  |
-| Worked meditation examples <br>`/meditation/examples/` · phase 5 | `meditacao`, `nivel-e-prestigio`, `maestria-de-arma`, `linhagem-de-sangue`, `pets`, `transfusao-e-plasmas` | sources found | — | — | — | Q-010; Q-011 |
-| Meditation troubleshooting <br>`/meditation/troubleshooting/` · phase 5 | `meditacao` | read | — | — | — |  |
+| Meditation <br>`/meditation/` · phase 5 | `meditacao` | read | written | partly checked | published |  |
+| How meditation works <br>`/meditation/how-it-works/` · phase 5 | `meditacao` | read | written | partly checked | published |  |
+| Costs and XP rates <br>`/meditation/costs-and-rates/` · phase 5 | `meditacao`, `vip`, `nivel-e-prestigio` | read | written | partly checked | published | Q-010; Q-021 |
+| Double Meditation <br>`/meditation/double-meditation/` · phase 5 | `meditacao`, `vip-page` | read | written | partly checked | published |  |
+| Auto-Prestige and Auto-Pulse <br>`/meditation/auto-prestige/` · phase 5 | `auto-prestigio`, `transfusao-e-plasmas`, `vip` | read | written | partly checked | published |  |
+| Recommended AFK settings <br>`/meditation/recommended-settings/` · phase 5 | `meditacao`, `auto-prestigio`, `recompensa-online` | read | written | partly checked | published |  |
+| Worked meditation examples <br>`/meditation/examples/` · phase 5 | `meditacao`, `nivel-e-prestigio`, `maestria-de-arma`, `linhagem-de-sangue`, `pets`, `transfusao-e-plasmas` | read | written | partly checked | published | Q-010; Q-011; Q-021 |
+| Meditation troubleshooting <br>`/meditation/troubleshooting/` · phase 5 | `meditacao` | read | written | partly checked | published |  |
 
 ### Classes
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Classes <br>`/classes/` · phase 5 | `classes`, `class-hub` | sources found | — | — | page stub |  |
-| Choosing a class <br>`/classes/choosing-a-class/` · phase 5 | `classes`, `class-hub`, `sala-de-treinamento` | sources found | — | — | — | No tier list without testing data |
-| Class evolutions and advanced classes <br>`/classes/evolutions/` · phase 5 | `classes`, `class-hub` | sources found | — | — | — |  |
-| Awakened (Despertado) <br>`/classes/awakened/` · phase 5 | `class-despertado`, `classes` | sources found | — | — | — | Source page is in Portuguese |
-| Mortak <br>`/classes/mortak/` · phase 5 | `class-mortak`, `classes` | sources found | — | — | — | Source page is in Portuguese |
-| Noctarin <br>`/classes/noctarin/` · phase 5 | `class-noctarin`, `classes` | sources found | — | — | — | Source page is in Portuguese |
-| Bastien <br>`/classes/bastien/` · phase 5 | `class-bastien`, `classes` | sources found | — | — | — | Source page is in Portuguese |
-| Carmesyne <br>`/classes/carmesyne/` · phase 5 | `class-carmesyne`, `classes` | sources found | — | — | — | Source page is in Portuguese |
-| Skarn <br>`/classes/skarn/` · phase 5 | `class-skarn`, `classes` | sources found | — | — | — | Source page is in Portuguese |
-| Sepulkros <br>`/classes/sepulkros/` · phase 5 | `class-sepulkros`, `classes` | sources found | — | — | — | Source page is in Portuguese |
-| Draekhar <br>`/classes/draekhar/` · phase 5 | `class-draekhar`, `classes` | read | — | — | — | Q-004; Q-005 |
-| Umbrellis <br>`/classes/umbrellis/` · phase 5 | `class-umbrellis`, `classes` | sources found | — | — | — | Source page is in Portuguese |
-| Sangrael <br>`/classes/sangrael/` · phase 5 | `class-sangrael`, `classes` | sources found | — | — | — | Source page is in Portuguese |
-| La Muerte <br>`/classes/la-muerte/` · phase 5 | `class-lamuerte`, `classes` | sources found | — | — | — | Source page is in Portuguese |
-| General <br>`/classes/general/` · phase 5 | `class-general`, `classes` | sources found | — | — | — | Source page is in Portuguese |
-| Training Room <br>`/classes/training-room/` · phase 5 | `sala-de-treinamento` | sources found | — | — | — |  |
+| Classes <br>`/classes/` · phase 5 | `classes`, `class-hub` | read | written | partly checked | published |  |
+| Choosing a class <br>`/classes/choosing-a-class/` · phase 5 | `classes`, `class-hub`, `sala-de-treinamento` | read | written | partly checked | published | No tier list without testing data |
+| Class evolutions and advanced classes <br>`/classes/evolutions/` · phase 5 | `classes`, `class-hub` | read | written | partly checked | published |  |
+| Awakened (Despertado) <br>`/classes/awakened/` · phase 5 | `class-despertado`, `classes` | read | written | partly checked | published | Source page is in Portuguese |
+| Mortak <br>`/classes/mortak/` · phase 5 | `class-mortak`, `classes` | read | written | partly checked | published | Source page is in Portuguese; Q-018; Q-020 |
+| Noctarin <br>`/classes/noctarin/` · phase 5 | `class-noctarin`, `classes` | read | written | partly checked | published | Source page is in Portuguese |
+| Bastien <br>`/classes/bastien/` · phase 5 | `class-bastien`, `classes` | read | written | partly checked | published | Source page is in Portuguese |
+| Carmesyne <br>`/classes/carmesyne/` · phase 5 | `class-carmesyne`, `classes` | read | written | partly checked | published | Source page is in Portuguese |
+| Skarn <br>`/classes/skarn/` · phase 5 | `class-skarn`, `classes` | read | written | partly checked | published | Source page is in Portuguese |
+| Sepulkros <br>`/classes/sepulkros/` · phase 5 | `class-sepulkros`, `classes` | read | written | partly checked | published | Source page is in Portuguese; Q-020 |
+| Draekhar <br>`/classes/draekhar/` · phase 5 | `class-draekhar`, `classes` | read | written | partly checked | published | Q-004; Q-005; Q-020 |
+| Umbrellis <br>`/classes/umbrellis/` · phase 5 | `class-umbrellis`, `classes` | read | written | partly checked | published | Source page is in Portuguese; Q-019; Q-020 |
+| Sangrael <br>`/classes/sangrael/` · phase 5 | `class-sangrael`, `classes` | read | written | partly checked | published | Source page is in Portuguese |
+| La Muerte <br>`/classes/la-muerte/` · phase 5 | `class-lamuerte`, `classes` | read | written | partly checked | published | Source page is in Portuguese |
+| General <br>`/classes/general/` · phase 5 | `class-general`, `classes` | read | written | partly checked | published | Source page is in Portuguese |
+| Training Room <br>`/classes/training-room/` · phase 5 | `sala-de-treinamento` | read | written | partly checked | published |  |
 
 ### Equipment and builds
 

@@ -1,0 +1,74 @@
+---
+title: Bastien
+description: Bastien, the Spear and Whip control lancer of Sangria Falls. Abilities, evolutions, attribute bonuses and default attributes, translated from the official class page.
+summary: Bastien is a physical Spear/Whip class built on reach, control and survival. Its Holy Explosions are converted to physical damage. Evolution bonuses are shared by both weapons.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - class-bastien
+  - classes
+labels: [official]
+sidebar:
+  order: 7
+---
+
+import ClassCard from '../../../components/ClassCard.astro';
+import ClassEvolutions from '../../../components/ClassEvolutions.astro';
+import ClassAttributes from '../../../components/ClassAttributes.astro';
+import ClassDefaults from '../../../components/ClassDefaults.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note" title="Translated from Portuguese">
+The official class page is in Portuguese. Ability and quest names are given in Portuguese with this wiki's translation. Numbers are as published.
+</Aside>
+
+Bastien mixes **reach and survival**. It controls space with the Spear and the Whip. The kit's Holy Explosion, at the whip's tip and at the end of the spear's Q, is **converted to physical damage**.
+
+<ClassCard id="bastien" />
+
+## How it scales
+
+- **Benefits from:** Physical Power, Physical Crit and Weapon Skill Power.
+- **Doesn't use:** Spell Power.
+- **Unlock quest:** *A Lança Alugada da Luz* (The Light's Hired Lance), from **Aria Bastien**.
+- **Required for:** General needs Bastien at Evolution III.
+
+## Abilities
+
+### Spear
+
+| Key | Ability | What it does |
+|---|---|---|
+| Basic | Primary attack | Each thrust is a long impale: 60% of Physical Power in a 6 m strip ahead, hitting up to 10 enemies. The normal strikes still work for harvesting. |
+| Q | *Mil Lanças* (Thousand Spears) | Eight quick thrusts (17%–20% of Physical Power each) plus Valencia's spear barrage channelled alongside (200% of Physical Power in total). It ends with a Holy Explosion in an area (100%). Pressing again during the channel releases Impale (60%). |
+| E | *Arpão* (Harpoon) | Throws the harpoon (220% of Physical Power), which doesn't pull the target or you. Where it lands, the Paladin's slam hits (115%, incapacitating those nearby) and holy spears rain on the nearest enemy (56% per spear). |
+
+### Whip
+
+| Key | Ability | What it does |
+|---|---|---|
+| Basic | Primary attack | Each lash sets off two Thunderclaps: one at your feet (25%) and one at the tip, 5.5 m away (30%). |
+| Q | *Turbilhão do Chicote Aéreo* (Aerial Whip Whirl) | The standard spin plus six Castleman crosses in two fans of three, forward and back, each dealing 35%. |
+| E | *Chicote Envolvente* (Entangling Whip) | The standard entangle plus a Holy Explosion at the whip's tip, 6 m away (80%, converted to physical). |
+
+## Evolutions
+
+<ClassEvolutions id="bastien" />
+
+## Attribute bonuses
+
+What each class weapon adds, by grade. The Total includes the Base and all three evolutions. Hover an attribute for its Portuguese name.
+
+<ClassAttributes id="bastien" />
+
+## Default attributes
+
+<ClassDefaults id="bastien" />
+
+## Commands
+
+<Command cmd=".classe info bastien">Opens the class page in game.</Command>
+<Command cmd=".classe testar bastien">Try the class in the Training Room.</Command>
+
+The English guides use `.class testar bastien` ([Q-020](/about/open-questions/#q-020)).

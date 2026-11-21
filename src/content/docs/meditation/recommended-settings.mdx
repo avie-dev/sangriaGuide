@@ -1,0 +1,60 @@
+---
+title: Recommended AFK settings
+description: A checklist for long or overnight meditation sessions on Sangria Falls, covering Sangricoin balance, path conditions, reconnecting after restarts, Auto-Prestige limits and the Online Reward.
+summary: Before an overnight session, check your Sangricoins (168 per path for 8 hours) and your path condition. Install AutoContinue to reconnect after restarts, and if you're VIP, set Auto-Prestige caps. Online Reward keeps paying meanwhile.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - meditacao
+  - auto-prestigio
+  - recompensa-online
+  - interface
+  - primeiros-passos
+labels: [official, community, vip, verify]
+sidebar:
+  order: 5
+---
+
+import Checklist from '../../../components/Checklist.astro';
+import Label from '../../../components/Label.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+These recommendations are this wiki's suggestions, built on official rules. <Label type="community" /> Each item says why.
+
+## Before you step away
+
+<Checklist
+	id="afk-meditation"
+	items={[
+		'Enough Sangricoins: 21 per hour per path (168 for 8 hours, 336 on Double Meditation)',
+		'The right path selected (F10 shows ACTIVE)',
+		'Weapon path: the weapon you want to level in your hand',
+		'Blood path: the blood you want to level active (not Frail)',
+		'Pet path: the pet summoned inside the chamber',
+		'Not about to hit max level (a capped path stops yielding)',
+		'VIP: Auto-Prestige on for that track, with a target and a spending cap',
+		'VIP at prestige 20: Auto pulse set the way you want it',
+		'Ourosangue in the Bank for the prestiges Auto-Prestige will pay for',
+		'Optional: the AutoContinue mod installed in the launcher',
+	]}
+/>
+
+## Why each item matters
+
+- **Sangricoins.** Meditation stops when your balance drops below 0.35. Meditation doesn't pay Sangricoins, but the Online Reward does (see below).
+- **Path conditions.** The Weapon path levels the weapon equipped *that minute*, and the Blood path levels the current blood. If the condition fails, the panel shows UNARMED, NO BLOOD or NO PET, and you gain nothing, though you're not charged.
+- **Max level.** At 90 (character) or 100 (weapon, blood, pet), the path stops yielding. Without VIP Auto-Prestige, the rest of the night is wasted, so for long sessions without VIP consider a path that's far from its cap.
+- **Auto-Prestige caps** <Label type="vip" />. Auto-Prestige spends Ourosangue without asking. A spending cap stops surprises. Auto pulse is **on by default** at prestige 20, so decide before you get there.
+- **AutoContinue.** The launcher's optional AutoContinue mod reconnects you after a disconnect or server restart. The staff recommend it for meditating away from the keyboard.
+
+<Aside type="caution" title="Restarts and disconnects">
+Meditation stops if you disconnect, and the server restarts at set times each day. The official guides say that after a reconnect your character returns to where it was, but they don't say whether meditation resumes by itself (see [Q-003](/about/open-questions/#q-003) for restart times). Check for the aura when you come back.
+</Aside>
+
+## The Online Reward offsets some of the cost
+
+You get the Online Reward just for being connected, and meditating counts. After 30 minutes online in a day, it pays every 15 minutes: 0.40 Sangricoin on day 1 of a streak, rising to 0.70 from day 7.
+
+For example, 8 hours online from the start of the day, with a 7-day streak, gives rewards at 30 minutes, 45 minutes, and so on up to 8 hours. That's 31 rewards × 0.70 = **21.7 Sangricoins**, against 168 for 8 hours of one meditation path. This is a calculation from the published rates, not an official figure.
+
+See [Worked examples](/meditation/examples/) for more numbers.

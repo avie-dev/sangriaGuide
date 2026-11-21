@@ -1,0 +1,73 @@
+---
+title: Skarn
+description: Skarn, the Axe and Claws beast class of Sangria Falls. Abilities, the Wild Pack summons, evolutions, attribute bonuses and default attributes, translated from the official class page.
+summary: Skarn is a fast physical melee class with Axe or Claws. Every 15 hits in combat, the beast you chose (18 options) appears beside you. Basics stack fury for up to +160% attack speed.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - class-skarn
+  - classes
+labels: [official]
+sidebar:
+  order: 9
+---
+
+import ClassCard from '../../../components/ClassCard.astro';
+import ClassEvolutions from '../../../components/ClassEvolutions.astro';
+import ClassAttributes from '../../../components/ClassAttributes.astro';
+import ClassDefaults from '../../../components/ClassDefaults.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note" title="Translated from Portuguese">
+The official class page is in Portuguese. Ability and quest names are given in Portuguese with this wiki's translation. Numbers are as published.
+</Aside>
+
+Skarn is **fast melee that fights with company**. Every 15 hits in combat, the beast you chose appears at your side.
+
+<ClassCard id="skarn" />
+
+## How it scales
+
+- **Benefits from:** Physical Power, Physical Crit, Weapon Skill Power and Minion Damage.
+- **Doesn't use:** Spell Power.
+- Beasts spawn with **85% of your Physical Power, multiplied by your Minion Damage**, and can't crit.
+- **Unlock quest:** *O Uivo entre as Ruínas* (The Howl among the Ruins), from **Draco Skarn**.
+
+## Abilities
+
+The basic attack is the same with both weapons.
+
+| Weapon | Key | Ability | What it does |
+|---|---|---|---|
+| Both | Basic | Primary attack | Each combo strike comes with the Werewolf Chieftain's claw: a 3.6 m cone dealing 70%. Each hit stacks fury, +40% attack speed per stack, up to 4 stacks for 3 s. |
+| Claws | Q | *Estocada* (Lunge) | The standard lunge plus the Dire Bear's roar (no damage): doubles your movement speed for 8 s. 12 s cooldown. |
+| Claws | E | *Salto Perfurante* (Piercing Leap) | On landing, the Dire Bear's slam (200% in a 2.8 m radius) and 32 stones over 2 s (70% each). The stun and second leap are removed. 14 s cooldown. |
+| Axe | Q | *Frenesi* (Frenzy) | The standard Frenzy plus the Dire Bear's roar (no damage): doubles your movement speed for 8 s. 12 s cooldown. |
+| Axe | E | *Golpe Cruzado* (Cross Strike) | The standard Cross Strike plus two of Simon's axes 0.4 s later, landing 4–7.5 m around the point. 12 s cooldown. |
+
+### Passive and summons: *Matilha Selvagem* (Wild Pack)
+
+***Fera Interior* (Inner Beast).** Every 15 hits in combat, your chosen beast appears 3 m from you, with 85% of your Physical Power, 5 levels below yours and 50% faster. It deals physical damage and can't crit. There are **18 beasts** to choose from, in the panel opened by the round button next to your class crest, or with `.skarn`.
+
+Locked beasts unlock when you defeat that creature while playing Skarn with a **Minion Collector** in your inventory. There's a chance on each kill, and the Collector is only consumed when it works. Collectors come from dungeon rewards. Skarn can have at most **4 living minions**, and going over kills the oldest.
+
+## Evolutions
+
+<ClassEvolutions id="skarn" />
+
+## Attribute bonuses
+
+What the class weapons add, by grade. The Total includes the Base and all three evolutions. Hover an attribute for its Portuguese name.
+
+<ClassAttributes id="skarn" />
+
+## Default attributes
+
+<ClassDefaults id="skarn" />
+
+## Commands
+
+<Command cmd=".skarn">Opens your beast selection.</Command>
+<Command cmd=".classe info skarn">Opens the class page in game.</Command>
+<Command cmd=".classe testar skarn">Try the class in the Training Room.</Command>

@@ -387,51 +387,86 @@ sections:
         brief: ['C: overview; character vs equipment progression']
         sources: [nivel-e-prestigio, perfil]
         phase: 5
-        built: page stub
+        built: published
+        research: read
+        writing: written
+        verified: partly checked
       - slug: character/levels-and-xp
         title: Levels and experience
         brief: ['C: Character levels and experience', 'C: Experience sources']
         sources: [nivel-e-prestigio, arena-ilusional]
         phase: 5
         missing: [Q-011]
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: character/prestige
         title: Character prestige
         brief: ['C: Prestige system', 'C: Complete prestige cost table', 'C: Permanent prestige bonuses']
         sources: [nivel-e-prestigio]
         needs: [character/levels-and-xp]
         phase: 5
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: character/xp-bonuses
         title: XP bonuses, multipliers and events
         brief: ['C: XP penalties and multipliers', 'C: Beginner XP bonuses', 'C: Server XP events']
         sources: [nivel-e-prestigio, banco, meditacao, vip]
         phase: 5
         missing: [Q-001, Q-016]
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: character/quitina
         title: Quitina (Chitin)
         brief: ['C: Chitin/Quitina', 'J: Chitin/Quitina']
         sources: [banco, postos-avancados, passe-de-batalha]
         phase: 5
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: character/weapon-mastery
         title: Weapon mastery
         brief: ['C: Weapon mastery', 'C: Weapon attributes']
         sources: [maestria-de-arma]
         phase: 5
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: character/blood-lineage
         title: Blood lineage
         brief: ['C: Blood lineage', 'C: Blood attributes']
         sources: [linhagem-de-sangue]
         phase: 5
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: character/stats
         title: Character statistics
         brief: ['C: Character statistics', 'C: Damage scaling', 'C: Physical vs magical damage', 'C: Critical chance and critical damage', 'C: Attack speed and ability speed', 'C: Damage resistance', 'C: Healing and life leech']
         sources: [perfil, classes, class-hub]
         phase: 5
         missing: [Q-009]
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: character/profile
         title: The profile sheet
         brief: ['R: (official system not in the brief)']
         sources: [perfil]
         phase: 5
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
 
   - dir: meditation
     title: Meditation
@@ -442,50 +477,76 @@ sections:
         sources: [meditacao]
         phase: 5
         research: read
-        built: page stub
+        built: published
+        writing: written
+        verified: partly checked
       - slug: meditation/how-it-works
         title: How meditation works
         brief: ['D: How meditation works', 'D: How to unlock the Meditation Chamber', 'D: How to enter and exit', 'D: F10 interface', 'D: Character / Weapon mastery / Bloodline / Pet meditation', 'D: Single meditation', 'D: How to enable and disable each track']
         sources: [meditacao]
         phase: 5
         research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: meditation/costs-and-rates
         title: Costs and XP rates
         brief: ['D: Sangricoin consumption', 'D: XP gained per minute', 'D: Normal vs VIP XP rates', 'D: Server-wide XP multipliers', 'D: Which XP buffs work / do not work', 'D: What happens when coins run out']
         sources: [meditacao, vip, nivel-e-prestigio]
         phase: 5
         research: read
-        missing: [Q-010]
+        missing: [Q-010, Q-021]
+        writing: written
+        verified: partly checked
+        built: published
       - slug: meditation/double-meditation
         title: Double Meditation
         brief: ['D: Double Meditation']
         sources: [meditacao, vip-page]
         phase: 5
         research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: meditation/auto-prestige
         title: Auto-Prestige and Auto-Pulse
         brief: ['D: Automatic prestige', 'D: Automatic Pulse', 'D: Prestige target configuration', 'D: Currency spending limits', 'D: What happens at maximum level']
         sources: [auto-prestigio, transfusao-e-plasmas, vip]
         phase: 5
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: meditation/recommended-settings
         title: Recommended AFK settings
         brief: ['D: Recommended AFK settings', 'D: Online reward income', 'D: What happens without an active pet']
         sources: [meditacao, auto-prestigio, recompensa-online]
         needs: [meditation/how-it-works, meditation/costs-and-rates]
         phase: 5
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: meditation/examples
         title: Worked meditation examples
         brief: ['D: AFK levelling for beginners', 'D: Overnight meditation', 'D: Reaching character Prestige 20', 'D: Maximising weapon mastery', 'D: Maximising blood lineage', 'D: Pet Prestige 20', 'D: Farming Pulses', 'O: meditation cost for Pulses']
         sources: [meditacao, nivel-e-prestigio, maestria-de-arma, linhagem-de-sangue, pets, transfusao-e-plasmas]
         needs: [meditation/costs-and-rates]
         phase: 5
-        missing: [Q-010, Q-011]
+        missing: [Q-010, Q-011, Q-021]
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: meditation/troubleshooting
         title: Meditation troubleshooting
         brief: ['D: Troubleshooting']
         sources: [meditacao]
         phase: 5
         research: read
+        writing: written
+        verified: partly checked
+        built: published
 
   - dir: classes
     title: Classes
@@ -495,40 +556,59 @@ sections:
         brief: ['E: overview']
         sources: [classes, class-hub]
         phase: 5
-        built: page stub
+        built: published
+        research: read
+        writing: written
+        verified: partly checked
       - slug: classes/choosing-a-class
         title: Choosing a class
         brief: ['E: comparison tables by playstyle', 'Design: class selection guide']
         sources: [classes, class-hub, sala-de-treinamento]
         phase: 5
         missing: ['No tier list without testing data']
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: classes/evolutions
         title: Class evolutions and advanced classes
         brief: ['E: Evolution I, II and III', 'E: Evolution requirements', 'E: Evolution costs', 'E: La Muerte and General prerequisites', 'M: Evolution quests', 'M: Class unlock quests']
         sources: [classes, class-hub]
         phase: 5
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: classes/awakened
         title: Awakened (Despertado)
         brief: ['E: starting Awakened state']
         sources: [class-despertado, classes]
         phase: 5
         missing: ['Source page is in Portuguese']
-      - {slug: classes/mortak, title: Mortak, brief: ['E: Mortak'], sources: [class-mortak, classes], phase: 5, missing: ['Source page is in Portuguese']}
-      - {slug: classes/noctarin, title: Noctarin, brief: ['E: Noctarin'], sources: [class-noctarin, classes], phase: 5, missing: ['Source page is in Portuguese']}
-      - {slug: classes/bastien, title: Bastien, brief: ['E: Bastien'], sources: [class-bastien, classes], phase: 5, missing: ['Source page is in Portuguese']}
-      - {slug: classes/carmesyne, title: Carmesyne, brief: ['E: Carmesyne'], sources: [class-carmesyne, classes], phase: 5, missing: ['Source page is in Portuguese']}
-      - {slug: classes/skarn, title: Skarn, brief: ['E: Skarn'], sources: [class-skarn, classes], phase: 5, missing: ['Source page is in Portuguese']}
-      - {slug: classes/sepulkros, title: Sepulkros, brief: ['E: Sepulkros (Reaper vs Summoner, minions, Minion Collectors)'], sources: [class-sepulkros, classes], phase: 5, missing: ['Source page is in Portuguese']}
-      - {slug: classes/draekhar, title: Draekhar, brief: ['E: Draekhar (spear as staff, six Currents)'], sources: [class-draekhar, classes], phase: 5, research: read, missing: [Q-004, Q-005]}
-      - {slug: classes/umbrellis, title: Umbrellis, brief: ['E: Umbrellis'], sources: [class-umbrellis, classes], phase: 5, missing: ['Source page is in Portuguese']}
-      - {slug: classes/sangrael, title: Sangrael, brief: ['E: Sangrael (healing, resurrection, support)'], sources: [class-sangrael, classes], needs: [classes/draekhar], phase: 5, missing: ['Source page is in Portuguese']}
-      - {slug: classes/la-muerte, title: La Muerte, brief: ['E: La Muerte'], sources: [class-lamuerte, classes], needs: [classes/evolutions], phase: 5, missing: ['Source page is in Portuguese']}
-      - {slug: classes/general, title: General, brief: ['E: General'], sources: [class-general, classes], needs: [classes/evolutions], phase: 5, missing: ['Source page is in Portuguese']}
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
+      - {slug: classes/mortak, title: Mortak, brief: ['E: Mortak'], sources: [class-mortak, classes], phase: 5, missing: ['Source page is in Portuguese', Q-018, Q-020], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: classes/noctarin, title: Noctarin, brief: ['E: Noctarin'], sources: [class-noctarin, classes], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: classes/bastien, title: Bastien, brief: ['E: Bastien'], sources: [class-bastien, classes], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: classes/carmesyne, title: Carmesyne, brief: ['E: Carmesyne'], sources: [class-carmesyne, classes], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: classes/skarn, title: Skarn, brief: ['E: Skarn'], sources: [class-skarn, classes], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: classes/sepulkros, title: Sepulkros, brief: ['E: Sepulkros (Reaper vs Summoner, minions, Minion Collectors)'], sources: [class-sepulkros, classes], phase: 5, missing: ['Source page is in Portuguese', Q-020], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: classes/draekhar, title: Draekhar, brief: ['E: Draekhar (spear as staff, six Currents)'], sources: [class-draekhar, classes], phase: 5, research: read, missing: [Q-004, Q-005, Q-020], writing: written, verified: partly checked, built: published}
+      - {slug: classes/umbrellis, title: Umbrellis, brief: ['E: Umbrellis'], sources: [class-umbrellis, classes], phase: 5, missing: ['Source page is in Portuguese', Q-019, Q-020], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: classes/sangrael, title: Sangrael, brief: ['E: Sangrael (healing, resurrection, support)'], sources: [class-sangrael, classes], needs: [classes/draekhar], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: classes/la-muerte, title: La Muerte, brief: ['E: La Muerte'], sources: [class-lamuerte, classes], needs: [classes/evolutions], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: classes/general, title: General, brief: ['E: General'], sources: [class-general, classes], needs: [classes/evolutions], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: partly checked, built: published}
       - slug: classes/training-room
         title: Training Room
         brief: ['E: (official system: test any class)']
         sources: [sala-de-treinamento]
         phase: 5
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
 
   - dir: equipment
     title: Equipment and builds

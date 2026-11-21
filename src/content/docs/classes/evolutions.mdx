@@ -1,0 +1,86 @@
+---
+title: Class evolutions and advanced classes
+description: How Sangria Falls class evolutions work (three quests, tributes of 15,000, 30,000 and 45,000 Ourosangue), every class's evolution names, unlocking and switching classes, and the advanced-class prerequisites.
+summary: Each class has 3 evolution quests ending in tributes of 15,000, 30,000 and 45,000 Ourosangue (90,000 total). Sangrael needs Draekhar I; La Muerte needs Draekhar III, Sepulkros III and Carmesyne II; General needs Umbrellis II, Mortak III and Bastien III.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - classes
+  - class-hub
+labels: [official]
+sidebar:
+  order: 2
+---
+
+import CostTable from '../../../components/CostTable.astro';
+import ProgressionPath from '../../../components/ProgressionPath.astro';
+import { Steps } from '@astrojs/starlight/components';
+
+## Evolving a class
+
+Each class has **3 evolutions**, done in order. Each is a quest from the class's Master that ends with a **tribute** taken from your Bank. Bonuses stack, are permanent, and are saved per class.
+
+<CostTable id="class-evolution" />
+
+<Steps>
+
+1. With the class **active**, talk to its Master.
+2. Choose the evolution's option, for example *I want to begin the Initiate's Oath (Evolution 1).*
+3. Follow the quest steps (F3 or `.quest`).
+4. On the last step, choose *Pay 15,000 Ourosangue.* (30,000 for the second, 45,000 for the third). If you're short, the quest waits. Deposit and talk to the Master again.
+
+</Steps>
+
+## Evolution names
+
+| Class | I | II | III |
+|---|---|---|---|
+| Mortak | Initiate | Sworn | Eternal |
+| Noctarin | Initiate | Penumbra | Nocturnal |
+| Bastien | Initiate | Contracted | Loyal |
+| Carmesyne | Initiate | Purifier | Verdict |
+| Skarn | Initiate | Feral | Savage |
+| Sepulkros | Initiate | Profane | Immortal |
+| Draekhar | Apprentice | Arcanist | Archmage |
+| Umbrellis | Initiate | Veiled | Obscuris |
+| Sangrael | Acolyte | Celebrant | Hierophant |
+| La Muerte | Initiate | Mortis | Absolute |
+| General | Initiate | Ascended | Sovereign |
+
+Each class page has its journey quest names and the attributes each evolution adds.
+
+## Unlocking another class
+
+Only after finishing *The Path of Blood*. Before that, Masters offer neither journeys nor switches.
+
+1. Talk to the Master and choose to start the journey, for example *Yes. I want to start the Mortak journey.*
+2. Complete the quest (steps in F3).
+3. When it's done, the class is unlocked and you become it.
+
+## Switching classes
+
+Talk to the Master of a class you've unlocked and choose to go back to it, for example *Yes. I want to be Mortak again.* It's instant, and you lose nothing from the previous class.
+
+<CostTable id="class-switch" />
+
+## Advanced classes
+
+Three classes need evolutions in other classes first:
+
+<ProgressionPath
+	steps={[
+		{ title: 'Sangrael', detail: 'Draekhar at Evolution I' },
+		{ title: 'La Muerte', detail: 'Draekhar III, Sepulkros III and Carmesyne II' },
+		{ title: 'General', detail: 'Umbrellis II, Mortak III and Bastien III' },
+	]}
+/>
+
+In tribute alone (90,000 Ourosangue per fully evolved class, 45,000 for one at Evolution II):
+
+| Advanced class | Prerequisite tributes |
+|---|---|
+| Sangrael | 15,000 (Draekhar I) |
+| La Muerte | 90,000 + 90,000 + 45,000 = 225,000 |
+| General | 45,000 + 90,000 + 90,000 = 225,000 |
+
+These sums are this wiki's arithmetic from the published tributes. They don't include each class's unlock quest or the 3,000 Ourosangue to switch between classes.

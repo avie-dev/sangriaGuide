@@ -1,0 +1,81 @@
+---
+title: Character statistics
+description: Where your Sangria Falls character's attributes come from, how to see the breakdown in game, class scaling profiles, and an English glossary for the Portuguese attribute names on the official class pages.
+summary: Your attributes add up from the base game, your class and its evolutions, weapon mastery, blood lineage, prestige buffs, plasmas and gear. Hover an attribute in the Profile (F1) to see each part.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - perfil
+  - classes
+  - class-hub
+  - nivel-e-prestigio
+  - maestria-de-arma
+  - linhagem-de-sangue
+  - transfusao-e-plasmas
+  - oficios-ferreiro-alfaiate-encantador
+labels: [official, verify]
+sidebar:
+  order: 7
+---
+
+import Unverified from '../../../components/Unverified.astro';
+import FilterTable from '../../../components/FilterTable.astro';
+import { ATTRIBUTE_NAMES } from '../../../data/attribute-names';
+import { Aside } from '@astrojs/starlight/components';
+
+export const glossary = Object.entries(ATTRIBUTE_NAMES).sort((a, b) => a[1].localeCompare(b[1]));
+
+## Where your attributes come from
+
+| Source | What it adds | Condition |
+|---|---|---|
+| Base game | Your vampire's normal stats | Always |
+| Class and evolutions | The class's attribute table, growing with each evolution | **Only with the class weapon in hand** |
+| Weapon mastery | 3 attributes your class chooses | Grows with the level and prestige of the weapon in hand |
+| Blood lineage | 3 attributes your class chooses | Grows with the level and prestige of your current blood |
+| Character prestige | 20 fixed buffs (Damage Reduction, Max Health, Physical Power…) | Permanent |
+| Plasmas | Bonuses **and penalties** from 8 ancestors | After Transfusions |
+| Gear fortification and refinement | Physical Power (weapon), Health (armour), Magic Power (necklace) | Saved on the item |
+| Vampiric School spell | An extra spell that fires with your basic attack | Not a stat, but extra damage |
+
+## Seeing the breakdown
+
+Press **F1**. The **ATTRIBUTES** column lists everything your character has today, by category (OFFENSIVE, DEFENSIVE, MOBILITY…). **Hover over an attribute** and a box shows where each part comes from (*Base Game*, class, prestige, plasmas…) and the total. This panel exists only with the interface. Without it, use separate commands such as `.level`, `.weapon info`, `.blood info` and `.tf info`.
+
+## Class scaling profiles
+
+Each official class page says which stats a class benefits from and which it doesn't use:
+
+| Profile | Benefits from | Doesn't use | Classes |
+|---|---|---|---|
+| Physical | Physical Power, Physical Crit, Weapon Skill Power | Spell Power | Noctarin, Bastien, Carmesyne, Skarn, Umbrellis, General |
+| Physical (no crit) | Physical Power, Weapon Skill Power | Spell Power, Physical Crit | Mortak |
+| Magic | Spell Power, Spell Crit | Physical Power, Weapon Skill Power | Draekhar, Sangrael, Sepulkros |
+| Hybrid | Spell Power, Spell Crit, Weapon Skill Power, Minion Damage | Physical Power | La Muerte |
+
+Skarn, Sepulkros and La Muerte also benefit from **Minion Damage**. The Sepulkros Reaper variant and Mortak Relentless change some of this. See their class pages.
+
+## How bonuses combine
+
+<Unverified q="Q-009">The guides don't explain how bonuses from different sources combine, for example whether percentages add or multiply, or whether crit and attack speed have caps. This wiki shows each source's numbers as published and doesn't compute combined totals.</Unverified>
+
+## Attribute glossary
+
+The official class pages are in Portuguese. This wiki translates their attribute names as below. Where an English guide already uses a name, such as the prestige buffs, the wiki uses that name. Filter by either language.
+
+<Aside type="note" title="Weapon Cooldown">
+The class pages list *Tempo de Recarga da Arma* ("weapon recharge time") with positive values, such as +8%. The pages don't say whether a higher number means faster cooldowns. The wiki shows the value as published.
+</Aside>
+
+<FilterTable placeholder="Filter attributes…">
+<table>
+	<thead>
+		<tr><th>English (this wiki)</th><th>Portuguese (official class pages)</th></tr>
+	</thead>
+	<tbody>
+		{glossary.map(([pt, en]) => (
+			<tr><td>{en}</td><td lang="pt">{pt}</td></tr>
+		))}
+	</tbody>
+</table>
+</FilterTable>

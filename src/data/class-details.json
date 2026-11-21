@@ -1,0 +1,3480 @@
+{
+	"bastien": {
+		"source": "class-bastien",
+		"tagline": "Control lancer",
+		"profile": "Físico",
+		"benefitsFrom": [
+			"Poder Físico",
+			"Crítico Físico",
+			"Poder da Habilidade de Armas"
+		],
+		"doesNotUse": [
+			"Poder Mágico"
+		],
+		"mentorEpithet": "A Lança Alugada da Luz",
+		"unlockJourney": "A Lança Alugada da Luz",
+		"evolutions": [
+			{
+				"grade": "I",
+				"title": "Iniciado",
+				"journey": "Os Velhos Contratos",
+				"tribute": 15000
+			},
+			{
+				"grade": "II",
+				"title": "Contratado",
+				"journey": "O Preço da Luz",
+				"tribute": 30000
+			},
+			{
+				"grade": "III",
+				"title": "Fiel",
+				"journey": "O Equilíbrio Carmesim",
+				"tribute": 45000
+			}
+		],
+		"attributes": [
+			{
+				"name": "Spear",
+				"stages": [
+					{
+						"stage": "Base",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+3"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+8%"
+							},
+							{
+								"name": "Velocidade de Habilidade",
+								"value": "+20%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+8%"
+							},
+							{
+								"name": "Redução de Dano",
+								"value": "+5%"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "+15%"
+							}
+						]
+					},
+					{
+						"stage": "I",
+						"label": "Ambas as armas",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+3"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+2%"
+							},
+							{
+								"name": "Velocidade de Habilidade",
+								"value": "+10%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+4%"
+							}
+						]
+					},
+					{
+						"stage": "II",
+						"label": "Ambas as armas",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+4"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+6%"
+							},
+							{
+								"name": "Velocidade de Habilidade",
+								"value": "+10%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+6%"
+							},
+							{
+								"name": "Redução da Drenagem de Sangue",
+								"value": "+4%"
+							}
+						]
+					},
+					{
+						"stage": "III",
+						"label": "Ambas as armas",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+5"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+8%"
+							},
+							{
+								"name": "Velocidade de Habilidade",
+								"value": "+20%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+6%"
+							},
+							{
+								"name": "Redução da Drenagem de Sangue",
+								"value": "+4%"
+							}
+						]
+					},
+					{
+						"stage": "Total",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+15"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+24%"
+							},
+							{
+								"name": "Velocidade de Habilidade",
+								"value": "+60%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+24%"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "+15%"
+							},
+							{
+								"name": "Redução da Drenagem de Sangue",
+								"value": "+8%"
+							},
+							{
+								"name": "Redução de Dano",
+								"value": "+5%"
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Whip",
+				"stages": [
+					{
+						"stage": "Base",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+3"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+4%"
+							},
+							{
+								"name": "Velocidade de Habilidade",
+								"value": "+20%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+8%"
+							}
+						]
+					},
+					{
+						"stage": "I",
+						"label": "Ambas as armas",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+3"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+2%"
+							},
+							{
+								"name": "Velocidade de Habilidade",
+								"value": "+10%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+4%"
+							}
+						]
+					},
+					{
+						"stage": "II",
+						"label": "Ambas as armas",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+4"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+6%"
+							},
+							{
+								"name": "Velocidade de Habilidade",
+								"value": "+10%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+6%"
+							},
+							{
+								"name": "Redução da Drenagem de Sangue",
+								"value": "+4%"
+							}
+						]
+					},
+					{
+						"stage": "III",
+						"label": "Ambas as armas",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+5"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+8%"
+							},
+							{
+								"name": "Velocidade de Habilidade",
+								"value": "+20%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+6%"
+							},
+							{
+								"name": "Redução da Drenagem de Sangue",
+								"value": "+4%"
+							}
+						]
+					},
+					{
+						"stage": "Total",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+15"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+20%"
+							},
+							{
+								"name": "Velocidade de Habilidade",
+								"value": "+60%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+24%"
+							},
+							{
+								"name": "Redução da Drenagem de Sangue",
+								"value": "+8%"
+							}
+						]
+					}
+				]
+			}
+		],
+		"defaultAttributes": {
+			"mastery": [
+				"Poder Físico",
+				"Dano Crítico Físico",
+				"Vida Máxima"
+			],
+			"blood": [
+				"Cura Recebida",
+				"Resistência Física",
+				"Resistência Mágica"
+			]
+		},
+		"commands": [
+			{
+				"cmd": ".classe info bastien",
+				"ptDescription": "A página da classe dentro do jogo"
+			},
+			{
+				"cmd": ".classe testar bastien",
+				"ptDescription": "Experimentar a classe na sala de teste"
+			}
+		]
+	},
+	"carmesyne": {
+		"source": "class-carmesyne",
+		"tagline": "Crit duelist",
+		"profile": "Físico",
+		"benefitsFrom": [
+			"Poder Físico",
+			"Crítico Físico",
+			"Poder da Habilidade de Armas"
+		],
+		"doesNotUse": [
+			"Poder Mágico"
+		],
+		"mentorEpithet": "Mestre do Caminho da Pistola Prateada",
+		"unlockJourney": "A Pistola Prateada",
+		"evolutions": [
+			{
+				"grade": "I",
+				"title": "Iniciado",
+				"journey": "Os Julgamentos Carmesins",
+				"tribute": 15000
+			},
+			{
+				"grade": "II",
+				"title": "Purificador",
+				"journey": "A Segunda Purificação",
+				"tribute": 30000
+			},
+			{
+				"grade": "III",
+				"title": "Veredito",
+				"journey": "A Última Guerra",
+				"tribute": 45000
+			}
+		],
+		"attributes": [
+			{
+				"name": "Sword",
+				"stages": [
+					{
+						"stage": "Base",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+18"
+							},
+							{
+								"name": "Velocidade das Habilidades de Arma",
+								"value": "+30%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+15%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Físico",
+								"value": "+3%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+5%"
+							}
+						]
+					},
+					{
+						"stage": "I",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+3"
+							},
+							{
+								"name": "Velocidade das Habilidades de Arma",
+								"value": "+6%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+3%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+2%"
+							}
+						]
+					},
+					{
+						"stage": "II",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+4"
+							},
+							{
+								"name": "Velocidade das Habilidades de Arma",
+								"value": "+10%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+5%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+3%"
+							}
+						]
+					},
+					{
+						"stage": "III",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+5"
+							},
+							{
+								"name": "Velocidade das Habilidades de Arma",
+								"value": "+14%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+7%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+5%"
+							}
+						]
+					},
+					{
+						"stage": "Total",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+30"
+							},
+							{
+								"name": "Velocidade das Habilidades de Arma",
+								"value": "+60%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+30%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Físico",
+								"value": "+5%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+15%"
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Pistols",
+				"stages": [
+					{
+						"stage": "Base",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+15"
+							},
+							{
+								"name": "Velocidade das Habilidades de Arma",
+								"value": "+25%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+15%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Físico",
+								"value": "+3%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+10%"
+							},
+							{
+								"name": "Alcance do Ataque Básico",
+								"value": "+30%"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "-20%"
+							},
+							{
+								"name": "Sem Resistência Física",
+								"flag": true
+							}
+						]
+					},
+					{
+						"stage": "I",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+2"
+							},
+							{
+								"name": "Velocidade das Habilidades de Arma",
+								"value": "+5%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+3%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+2%"
+							}
+						]
+					},
+					{
+						"stage": "II",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+3"
+							},
+							{
+								"name": "Velocidade das Habilidades de Arma",
+								"value": "+8%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+5%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+3%"
+							}
+						]
+					},
+					{
+						"stage": "III",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+5"
+							},
+							{
+								"name": "Velocidade das Habilidades de Arma",
+								"value": "+12%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+7%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+5%"
+							}
+						]
+					},
+					{
+						"stage": "Total",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+25"
+							},
+							{
+								"name": "Velocidade das Habilidades de Arma",
+								"value": "+50%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+30%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Físico",
+								"value": "+5%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+20%"
+							},
+							{
+								"name": "Alcance do Ataque Básico",
+								"value": "+30%"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "-20%"
+							},
+							{
+								"name": "Sem Resistência Física",
+								"flag": true
+							}
+						]
+					}
+				]
+			}
+		],
+		"defaultAttributes": {
+			"mastery": [
+				"Chance de Crítico Físico",
+				"Velocidade de Ataque Primário",
+				"Poder Físico"
+			],
+			"blood": [
+				"Recarga de Habilidades de Arma",
+				"Velocidade de Habilidades",
+				"Recarga da Suprema"
+			]
+		},
+		"commands": [
+			{
+				"cmd": ".classe info carmesyne",
+				"ptDescription": "A página da classe dentro do jogo"
+			},
+			{
+				"cmd": ".classe testar carmesyne",
+				"ptDescription": "Experimentar a classe na sala de teste"
+			}
+		]
+	},
+	"awakened": {
+		"source": "class-despertado",
+		"tagline": "Classe inicial",
+		"profile": "Híbrido",
+		"benefitsFrom": [
+			"Poder Físico",
+			"Poder Mágico"
+		],
+		"doesNotUse": [],
+		"mentorEpithet": null,
+		"unlockJourney": null,
+		"evolutions": [],
+		"attributes": [],
+		"defaultAttributes": {
+			"mastery": [],
+			"blood": []
+		},
+		"commands": [
+			{
+				"cmd": ".classe info despertado",
+				"ptDescription": "A página da classe dentro do jogo"
+			}
+		]
+	},
+	"draekhar": {
+		"source": "class-draekhar",
+		"tagline": "Mage of six Chains",
+		"profile": "Mágico",
+		"benefitsFrom": [
+			"Poder Mágico",
+			"Crítico Mágico"
+		],
+		"doesNotUse": [
+			"Poder Físico",
+			"Poder da Habilidade de Armas"
+		],
+		"mentorEpithet": "Cartógrafo Arcano de Vardoran",
+		"unlockJourney": "O Mapa Começa Aqui",
+		"evolutions": [
+			{
+				"grade": "I",
+				"title": "Aprendiz",
+				"journey": "O Primeiro Traçado",
+				"tribute": 15000
+			},
+			{
+				"grade": "II",
+				"title": "Arcanista",
+				"journey": "As Linhas Convergentes",
+				"tribute": 30000
+			},
+			{
+				"grade": "III",
+				"title": "Arquimago",
+				"journey": "O Traçado Final",
+				"tribute": 45000
+			}
+		],
+		"attributes": [
+			{
+				"name": null,
+				"stages": [
+					{
+						"stage": "Base",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Mágico",
+								"value": "+6"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+2%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+4%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Mágico",
+								"value": "+4%"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "-40%"
+							}
+						]
+					},
+					{
+						"stage": "I",
+						"label": "Aprendiz",
+						"attrs": [
+							{
+								"name": "Poder Mágico",
+								"value": "+4"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+1%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+4%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Mágico",
+								"value": "+6%"
+							}
+						]
+					},
+					{
+						"stage": "II",
+						"label": "Arcanista",
+						"attrs": [
+							{
+								"name": "Poder Mágico",
+								"value": "+5"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+2%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+6%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Mágico",
+								"value": "+8%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Mágico",
+								"value": "+1%"
+							}
+						]
+					},
+					{
+						"stage": "III",
+						"label": "Arquimago",
+						"attrs": [
+							{
+								"name": "Poder Mágico",
+								"value": "+5"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+3%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+6%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Mágico",
+								"value": "+11%"
+							}
+						]
+					},
+					{
+						"stage": "Total",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Mágico",
+								"value": "+20"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+8%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+20%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Mágico",
+								"value": "+5%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Mágico",
+								"value": "+25%"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "-40%"
+							}
+						]
+					}
+				]
+			}
+		],
+		"defaultAttributes": {
+			"mastery": [
+				"Chance de Crítico Mágico",
+				"Dano Crítico Mágico",
+				"Poder Mágico"
+			],
+			"blood": [
+				"Recarga de Feitiços",
+				"Recarga da Suprema",
+				"Redução de Dano de Corrupção"
+			]
+		},
+		"commands": [
+			{
+				"cmd": ".classe corrente",
+				"ptDescription": "Escolher a primeira Corrente ou trocar entre as desbloqueadas"
+			},
+			{
+				"cmd": ".classe info draekhar",
+				"ptDescription": "A página da classe dentro do jogo"
+			},
+			{
+				"cmd": ".classe testar draekhar",
+				"ptDescription": "Experimentar a classe na sala de teste"
+			}
+		]
+	},
+	"general": {
+		"source": "class-general",
+		"tagline": "Martial commander",
+		"profile": "Físico",
+		"benefitsFrom": [
+			"Poder Físico",
+			"Crítico Físico",
+			"Poder da Habilidade de Armas"
+		],
+		"doesNotUse": [
+			"Poder Mágico"
+		],
+		"mentorEpithet": "A General Carmesim",
+		"unlockJourney": "A General Carmesim",
+		"evolutions": [
+			{
+				"grade": "I",
+				"title": "Iniciado",
+				"journey": "A Máquina de Guerra",
+				"tribute": 15000
+			},
+			{
+				"grade": "II",
+				"title": "Ascendido",
+				"journey": "A Legião Perdida",
+				"tribute": 30000
+			},
+			{
+				"grade": "III",
+				"title": "Soberano",
+				"journey": "A Última General",
+				"tribute": 45000
+			}
+		],
+		"attributes": [
+			{
+				"name": null,
+				"stages": [
+					{
+						"stage": "Base",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+5"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+4%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+4%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+12%"
+							}
+						]
+					},
+					{
+						"stage": "I",
+						"label": "Iniciado",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+4"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+4%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+3%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+9%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Físico",
+								"value": "+1%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+4%"
+							}
+						]
+					},
+					{
+						"stage": "II",
+						"label": "Ascendido",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+5"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+5%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+4%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+12%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+5%"
+							}
+						]
+					},
+					{
+						"stage": "III",
+						"label": "Soberano",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+6"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+7%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+4%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+12%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+6%"
+							}
+						]
+					},
+					{
+						"stage": "Total",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+20"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+20%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+15%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+45%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Físico",
+								"value": "+5%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+15%"
+							}
+						]
+					}
+				]
+			}
+		],
+		"defaultAttributes": {
+			"mastery": [
+				"Velocidade de Ataque Primário",
+				"Dano Crítico Físico",
+				"Velocidade de Movimento"
+			],
+			"blood": [
+				"Recarga de Habilidades de Arma",
+				"Cura Recebida",
+				"Redução de Dano de Corrupção"
+			]
+		},
+		"commands": [
+			{
+				"cmd": ".classe info general",
+				"ptDescription": "A página da classe dentro do jogo"
+			},
+			{
+				"cmd": ".classe testar general",
+				"ptDescription": "Experimentar a classe na sala de teste"
+			}
+		]
+	},
+	"la-muerte": {
+		"source": "class-lamuerte",
+		"tagline": "Summoner reaper",
+		"profile": "Híbrido",
+		"benefitsFrom": [
+			"Poder Mágico",
+			"Crítico Mágico",
+			"Poder da Habilidade de Armas",
+			"Dano de Lacaios"
+		],
+		"doesNotUse": [
+			"Poder Físico"
+		],
+		"mentorEpithet": "A Mãe dos Lamentos",
+		"unlockJourney": "A Mãe dos Lamentos",
+		"evolutions": [
+			{
+				"grade": "I",
+				"title": "Iniciado",
+				"journey": "Os Ecos Perdidos",
+				"tribute": 15000
+			},
+			{
+				"grade": "II",
+				"title": "Mortis",
+				"journey": "Os Ecos da Luz",
+				"tribute": 30000
+			},
+			{
+				"grade": "III",
+				"title": "Absoluto",
+				"journey": "O Reino dos Imortais",
+				"tribute": 45000
+			}
+		],
+		"attributes": [
+			{
+				"name": null,
+				"stages": [
+					{
+						"stage": "Base",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Mágico",
+								"value": "+5"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+8%"
+							},
+							{
+								"name": "Velocidade de Recarga de Feitiços",
+								"value": "+5%"
+							},
+							{
+								"name": "Alcance do Ataque Básico",
+								"value": "+55%"
+							},
+							{
+								"name": "Cura Recebida",
+								"value": "-40%"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "-35%"
+							}
+						]
+					},
+					{
+						"stage": "I",
+						"label": "Iniciado",
+						"attrs": [
+							{
+								"name": "Poder Mágico",
+								"value": "+4"
+							},
+							{
+								"name": "Dano de Lacaios",
+								"value": "+5%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+4%"
+							},
+							{
+								"name": "Velocidade de Recarga de Feitiços",
+								"value": "+2%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Mágico",
+								"value": "+5%"
+							}
+						]
+					},
+					{
+						"stage": "II",
+						"label": "Mortis",
+						"attrs": [
+							{
+								"name": "Poder Mágico",
+								"value": "+5"
+							},
+							{
+								"name": "Dano de Lacaios",
+								"value": "+7%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+6%"
+							},
+							{
+								"name": "Velocidade de Recarga de Feitiços",
+								"value": "+4%"
+							},
+							{
+								"name": "Poder Supremo",
+								"value": "+5%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Mágico",
+								"value": "+1%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Mágico",
+								"value": "+7%"
+							}
+						]
+					},
+					{
+						"stage": "III",
+						"label": "Absoluto",
+						"attrs": [
+							{
+								"name": "Poder Mágico",
+								"value": "+6"
+							},
+							{
+								"name": "Dano de Lacaios",
+								"value": "+8%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+7%"
+							},
+							{
+								"name": "Velocidade de Recarga de Feitiços",
+								"value": "+4%"
+							},
+							{
+								"name": "Poder Supremo",
+								"value": "+5%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Mágico",
+								"value": "+3%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Mágico",
+								"value": "+8%"
+							}
+						]
+					},
+					{
+						"stage": "Total",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Mágico",
+								"value": "+20"
+							},
+							{
+								"name": "Dano de Lacaios",
+								"value": "+20%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+25%"
+							},
+							{
+								"name": "Velocidade de Recarga de Feitiços",
+								"value": "+15%"
+							},
+							{
+								"name": "Poder Supremo",
+								"value": "+10%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Mágico",
+								"value": "+4%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Mágico",
+								"value": "+20%"
+							},
+							{
+								"name": "Alcance do Ataque Básico",
+								"value": "+55%"
+							},
+							{
+								"name": "Cura Recebida",
+								"value": "-40%"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "-35%"
+							}
+						]
+					}
+				]
+			}
+		],
+		"defaultAttributes": {
+			"mastery": [
+				"Chance de Crítico Mágico",
+				"Dano Crítico Mágico",
+				"Velocidade de Ataque Primário"
+			],
+			"blood": [
+				"Dano de Lacaios",
+				"Recarga de Habilidades de Arma",
+				"Recarga de Feitiços"
+			]
+		},
+		"commands": [
+			{
+				"cmd": ".lamuerte",
+				"ptDescription": "Painel da Legião Fantasma: escolher o lacaio"
+			},
+			{
+				"cmd": ".classe info lamuerte",
+				"ptDescription": "A página da classe dentro do jogo"
+			},
+			{
+				"cmd": ".classe testar lamuerte",
+				"ptDescription": "Experimentar a classe na sala de teste"
+			}
+		]
+	},
+	"mortak": {
+		"source": "class-mortak",
+		"tagline": "Sworn tank",
+		"profile": "Físico",
+		"benefitsFrom": [
+			"Poder Físico",
+			"Poder da Habilidade de Armas"
+		],
+		"doesNotUse": [
+			"Poder Mágico",
+			"Crítico Físico"
+		],
+		"mentorEpithet": "Mestre do Caminho da Guerra Absoluta",
+		"unlockJourney": "Provação de Mortak",
+		"evolutions": [
+			{
+				"grade": "I",
+				"title": "Iniciado",
+				"journey": "Juramento do Iniciado",
+				"tribute": 15000
+			},
+			{
+				"grade": "II",
+				"title": "Juramentado",
+				"journey": "Pacto do Juramentado",
+				"tribute": 30000
+			},
+			{
+				"grade": "III",
+				"title": "Eterno",
+				"journey": "Legado do Veterano",
+				"tribute": 45000
+			}
+		],
+		"attributes": [
+			{
+				"name": "Mortak Inabalável",
+				"stages": [
+					{
+						"stage": "Base",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+30"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "+7%"
+							},
+							{
+								"name": "Velocidade de Habilidade",
+								"value": "+15%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+10%"
+							},
+							{
+								"name": "Dano contra V Bloods",
+								"value": "+2%"
+							},
+							{
+								"name": "Redução de Dano de Corrupção",
+								"value": "+2%"
+							},
+							{
+								"name": "Redução de Dano",
+								"value": "+2%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "-20%"
+							},
+							{
+								"name": "Sem Chance de Crítico Físico",
+								"flag": true
+							}
+						]
+					},
+					{
+						"stage": "I",
+						"label": "Iniciado",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+9"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "+5%"
+							},
+							{
+								"name": "Velocidade de Habilidade",
+								"value": "+2%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+4%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+8%"
+							},
+							{
+								"name": "Dano contra V Bloods",
+								"value": "+2%"
+							},
+							{
+								"name": "Redução de Dano de Corrupção",
+								"value": "+2%"
+							}
+						]
+					},
+					{
+						"stage": "II",
+						"label": "Juramentado",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+11"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "+7%"
+							},
+							{
+								"name": "Velocidade de Habilidade",
+								"value": "+3%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+5%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+14%"
+							},
+							{
+								"name": "Dano contra V Bloods",
+								"value": "+3%"
+							},
+							{
+								"name": "Redução de Dano de Corrupção",
+								"value": "+3%"
+							},
+							{
+								"name": "Redução de Dano",
+								"value": "+1%"
+							}
+						]
+					},
+					{
+						"stage": "III",
+						"label": "Eterno",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+15"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "+7%"
+							},
+							{
+								"name": "Velocidade de Habilidade",
+								"value": "+5%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+6%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+18%"
+							},
+							{
+								"name": "Dano contra V Bloods",
+								"value": "+3%"
+							},
+							{
+								"name": "Redução de Dano de Corrupção",
+								"value": "+3%"
+							},
+							{
+								"name": "Redução de Dano",
+								"value": "+3%"
+							}
+						]
+					},
+					{
+						"stage": "Total",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+65"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "+25%"
+							},
+							{
+								"name": "Velocidade de Habilidade",
+								"value": "+25%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+25%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+40%"
+							},
+							{
+								"name": "Dano contra V Bloods",
+								"value": "+10%"
+							},
+							{
+								"name": "Redução de Dano de Corrupção",
+								"value": "+10%"
+							},
+							{
+								"name": "Redução de Dano",
+								"value": "+6%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "-20%"
+							},
+							{
+								"name": "Sem Chance de Crítico Físico",
+								"flag": true
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Mortak Implacável",
+				"stages": [
+					{
+						"stage": "Base",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+16"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+3%"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "-20%"
+							},
+							{
+								"name": "Chance de Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Dano Crítico Físico",
+								"value": "+4%"
+							},
+							{
+								"name": "Velocidade de Habilidade",
+								"value": "+9%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+8%"
+							}
+						]
+					},
+					{
+						"stage": "I",
+						"label": "Iniciado",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+5"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+3%"
+							},
+							{
+								"name": "Chance de Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Dano Crítico Físico",
+								"value": "+6%"
+							},
+							{
+								"name": "Velocidade de Habilidade",
+								"value": "+1%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+3%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+4%"
+							}
+						]
+					},
+					{
+						"stage": "II",
+						"label": "Juramentado",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+6"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+4%"
+							},
+							{
+								"name": "Chance de Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Dano Crítico Físico",
+								"value": "+7%"
+							},
+							{
+								"name": "Velocidade de Habilidade",
+								"value": "+2%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+4%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+7%"
+							}
+						]
+					},
+					{
+						"stage": "III",
+						"label": "Eterno",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+8"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+5%"
+							},
+							{
+								"name": "Chance de Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Dano Crítico Físico",
+								"value": "+8%"
+							},
+							{
+								"name": "Velocidade de Habilidade",
+								"value": "+3%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+5%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+9%"
+							}
+						]
+					},
+					{
+						"stage": "Total",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+35"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+15%"
+							},
+							{
+								"name": "Chance de Crítico Físico",
+								"value": "+8%"
+							},
+							{
+								"name": "Dano Crítico Físico",
+								"value": "+25%"
+							},
+							{
+								"name": "Velocidade de Habilidade",
+								"value": "+15%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+20%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+20%"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "-20%"
+							}
+						]
+					}
+				]
+			}
+		],
+		"defaultAttributes": {
+			"mastery": [
+				"Vida Máxima",
+				"Poder Físico",
+				"Roubo de Vida Primário"
+			],
+			"blood": [
+				"Cura Recebida",
+				"Redução de Dano",
+				"Resistência Física"
+			]
+		},
+		"commands": [
+			{
+				"cmd": ".classe variante",
+				"ptDescription": "Escolher ou trocar a variante (Inabalável ou Implacável)"
+			},
+			{
+				"cmd": ".classe info mortak",
+				"ptDescription": "A página da classe dentro do jogo"
+			},
+			{
+				"cmd": ".classe testar mortak",
+				"ptDescription": "Experimentar a classe na sala de teste"
+			}
+		]
+	},
+	"noctarin": {
+		"source": "class-noctarin",
+		"tagline": "Agile archer",
+		"profile": "Físico",
+		"benefitsFrom": [
+			"Poder Físico",
+			"Crítico Físico",
+			"Poder da Habilidade de Armas"
+		],
+		"doesNotUse": [
+			"Poder Mágico"
+		],
+		"mentorEpithet": "A Flecha da Névoa",
+		"unlockJourney": "A Flecha da Névoa",
+		"evolutions": [
+			{
+				"grade": "I",
+				"title": "Iniciado",
+				"journey": "A Névoa da Guerra",
+				"tribute": 15000
+			},
+			{
+				"grade": "II",
+				"title": "Penumbra",
+				"journey": "A Caçada Silenciosa",
+				"tribute": 30000
+			},
+			{
+				"grade": "III",
+				"title": "Noturno",
+				"journey": "A Flecha Antes do Medo",
+				"tribute": 45000
+			}
+		],
+		"attributes": [
+			{
+				"name": "Longbow",
+				"stages": [
+					{
+						"stage": "Base",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+32%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+20%"
+							},
+							{
+								"name": "Poder Físico",
+								"value": "+5"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+12%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+7%"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "-35%"
+							}
+						]
+					},
+					{
+						"stage": "I",
+						"label": "Iniciado",
+						"attrs": [
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+10%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+4%"
+							},
+							{
+								"name": "Poder Físico",
+								"value": "+3"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+7%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+3%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+3%"
+							}
+						]
+					},
+					{
+						"stage": "II",
+						"label": "Penumbra",
+						"attrs": [
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+16%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+6%"
+							},
+							{
+								"name": "Poder Físico",
+								"value": "+5"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+11%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+5%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+4%"
+							}
+						]
+					},
+					{
+						"stage": "III",
+						"label": "Noturno",
+						"attrs": [
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+22%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+10%"
+							},
+							{
+								"name": "Poder Físico",
+								"value": "+7"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+15%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+7%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+6%"
+							}
+						]
+					},
+					{
+						"stage": "Total",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+80%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+40%"
+							},
+							{
+								"name": "Poder Físico",
+								"value": "+20"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+45%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+15%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+20%"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "-35%"
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Crossbow",
+				"stages": [
+					{
+						"stage": "Base",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+20%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+20%"
+							},
+							{
+								"name": "Poder Físico",
+								"value": "+5"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+34%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+12%"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "-35%"
+							}
+						]
+					},
+					{
+						"stage": "I",
+						"label": "Iniciado",
+						"attrs": [
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+7%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+4%"
+							},
+							{
+								"name": "Poder Físico",
+								"value": "+3"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+12%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+3%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+5%"
+							}
+						]
+					},
+					{
+						"stage": "II",
+						"label": "Penumbra",
+						"attrs": [
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+10%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+6%"
+							},
+							{
+								"name": "Poder Físico",
+								"value": "+5"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+20%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+5%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+8%"
+							}
+						]
+					},
+					{
+						"stage": "III",
+						"label": "Noturno",
+						"attrs": [
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+13%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+10%"
+							},
+							{
+								"name": "Poder Físico",
+								"value": "+7"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+29%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+7%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+10%"
+							}
+						]
+					},
+					{
+						"stage": "Total",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+50%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+40%"
+							},
+							{
+								"name": "Poder Físico",
+								"value": "+20"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+95%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+15%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+35%"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "-35%"
+							}
+						]
+					}
+				]
+			}
+		],
+		"defaultAttributes": {
+			"mastery": [
+				"Dano Crítico Físico",
+				"Velocidade de Ataque Primário",
+				"Velocidade de Movimento"
+			],
+			"blood": [
+				"Recarga de Habilidades de Arma",
+				"Velocidade de Habilidades",
+				"Recarga da Suprema"
+			]
+		},
+		"commands": [
+			{
+				"cmd": ".classe info noctarin",
+				"ptDescription": "A página da classe dentro do jogo"
+			},
+			{
+				"cmd": ".classe testar noctarin",
+				"ptDescription": "Experimentar a classe na sala de teste"
+			}
+		]
+	},
+	"sangrael": {
+		"source": "class-sangrael",
+		"tagline": "Blood cleric",
+		"profile": "Mágico",
+		"benefitsFrom": [
+			"Poder Mágico",
+			"Crítico Mágico"
+		],
+		"doesNotUse": [
+			"Poder Físico",
+			"Poder da Habilidade de Armas"
+		],
+		"mentorEpithet": "Hierofante da Liturgia da Ferida",
+		"unlockJourney": "O Voto do Plantão",
+		"evolutions": [
+			{
+				"grade": "I",
+				"title": "Acólito",
+				"journey": "Acólito: O Primeiro Plantão",
+				"tribute": 15000
+			},
+			{
+				"grade": "II",
+				"title": "Celebrante",
+				"journey": "Celebrante: A Prova da Liturgia",
+				"tribute": 30000
+			},
+			{
+				"grade": "III",
+				"title": "Hierofante",
+				"journey": "Hierofante: O Tamanho do Plantão",
+				"tribute": 45000
+			}
+		],
+		"attributes": [
+			{
+				"name": null,
+				"stages": [
+					{
+						"stage": "Base",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Mágico",
+								"value": "+4"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+3%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Mágico",
+								"value": "+2%"
+							},
+							{
+								"name": "Cura Recebida",
+								"value": "+5%"
+							},
+							{
+								"name": "Dano contra V Bloods",
+								"value": "+10%"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "-30%"
+							}
+						]
+					},
+					{
+						"stage": "I",
+						"label": "Acólito",
+						"attrs": [
+							{
+								"name": "Poder Mágico",
+								"value": "+2"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+3%"
+							},
+							{
+								"name": "Cura Recebida",
+								"value": "+5%"
+							}
+						]
+					},
+					{
+						"stage": "II",
+						"label": "Celebrante",
+						"attrs": [
+							{
+								"name": "Poder Mágico",
+								"value": "+3"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+3%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Mágico",
+								"value": "+7%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Mágico",
+								"value": "+1%"
+							}
+						]
+					},
+					{
+						"stage": "III",
+						"label": "Hierofante",
+						"attrs": [
+							{
+								"name": "Poder Mágico",
+								"value": "+3"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+3%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Mágico",
+								"value": "+8%"
+							},
+							{
+								"name": "Cura Recebida",
+								"value": "+5%"
+							}
+						]
+					},
+					{
+						"stage": "Total",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Mágico",
+								"value": "+12"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+12%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Mágico",
+								"value": "+3%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Mágico",
+								"value": "+15%"
+							},
+							{
+								"name": "Cura Recebida",
+								"value": "+15%"
+							},
+							{
+								"name": "Dano contra V Bloods",
+								"value": "+10%"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "-30%"
+							}
+						]
+					}
+				]
+			}
+		],
+		"defaultAttributes": {
+			"mastery": [
+				"Poder Mágico",
+				"Roubo de Vida Mágico",
+				"Chance de Crítico Mágico"
+			],
+			"blood": [
+				"Cura Recebida",
+				"Recarga de Feitiços",
+				"Recarga da Suprema"
+			]
+		},
+		"commands": [
+			{
+				"cmd": ".classe info sangrael",
+				"ptDescription": "A página da classe dentro do jogo"
+			},
+			{
+				"cmd": ".classe testar sangrael",
+				"ptDescription": "Experimentar a classe na sala de teste"
+			}
+		]
+	},
+	"sepulkros": {
+		"source": "class-sepulkros",
+		"tagline": "Summoner necromancer",
+		"profile": "Mágico",
+		"benefitsFrom": [
+			"Poder Mágico",
+			"Crítico Mágico",
+			"Dano de Lacaios"
+		],
+		"doesNotUse": [
+			"Poder Físico",
+			"Poder da Habilidade de Armas"
+		],
+		"mentorEpithet": "Mestre do Caminho do Arquitetador da Pós-Vida",
+		"unlockJourney": "O Arquitetador da Pós-Vida",
+		"evolutions": [
+			{
+				"grade": "I",
+				"title": "Iniciado",
+				"journey": "Os Vestígios Persistentes",
+				"tribute": 15000
+			},
+			{
+				"grade": "II",
+				"title": "Profano",
+				"journey": "A Hipótese Refinada",
+				"tribute": 30000
+			},
+			{
+				"grade": "III",
+				"title": "Imortal",
+				"journey": "A Pergunta Mais Honesta",
+				"tribute": 45000
+			}
+		],
+		"attributes": [
+			{
+				"name": "Sepulkros Invocador",
+				"stages": [
+					{
+						"stage": "Base",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Mágico",
+								"value": "+6"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+2%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+4%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Mágico",
+								"value": "+4%"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "-35%"
+							}
+						]
+					},
+					{
+						"stage": "I",
+						"label": "Iniciado",
+						"attrs": [
+							{
+								"name": "Poder Mágico",
+								"value": "+4"
+							},
+							{
+								"name": "Dano de Lacaios",
+								"value": "+4%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+4%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Mágico",
+								"value": "+4%"
+							}
+						]
+					},
+					{
+						"stage": "II",
+						"label": "Profano",
+						"attrs": [
+							{
+								"name": "Poder Mágico",
+								"value": "+6"
+							},
+							{
+								"name": "Dano de Lacaios",
+								"value": "+6%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+6%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Mágico",
+								"value": "+6%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+1%"
+							}
+						]
+					},
+					{
+						"stage": "III",
+						"label": "Imortal",
+						"attrs": [
+							{
+								"name": "Poder Mágico",
+								"value": "+9"
+							},
+							{
+								"name": "Dano de Lacaios",
+								"value": "+10%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+6%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Mágico",
+								"value": "+6%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+2%"
+							}
+						]
+					},
+					{
+						"stage": "Total",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Mágico",
+								"value": "+25"
+							},
+							{
+								"name": "Dano de Lacaios",
+								"value": "+20%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+5%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+20%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Mágico",
+								"value": "+20%"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "-35%"
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Sepulkros Ceifador",
+				"stages": [
+					{
+						"stage": "Base",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+6"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+2%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+4%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+4%"
+							}
+						]
+					},
+					{
+						"stage": "I",
+						"label": "Iniciado",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+4"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+4%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+4%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+4%"
+							}
+						]
+					},
+					{
+						"stage": "II",
+						"label": "Profano",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+6"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+6%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+6%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+6%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+1%"
+							}
+						]
+					},
+					{
+						"stage": "III",
+						"label": "Imortal",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+9"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+10%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+6%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+6%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+2%"
+							}
+						]
+					},
+					{
+						"stage": "Total",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+25"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+20%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+5%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+20%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+20%"
+							}
+						]
+					}
+				]
+			}
+		],
+		"defaultAttributes": {
+			"mastery": [
+				"Poder Mágico",
+				"Dano Crítico Mágico",
+				"Velocidade de Ataque Primário"
+			],
+			"blood": [
+				"Recarga de Habilidades de Arma",
+				"Dano de Lacaios",
+				"Velocidade de Habilidades"
+			]
+		},
+		"commands": [
+			{
+				"cmd": ".sepulkros",
+				"ptDescription": "Painel da Legião de Ossos: escolher o servo"
+			},
+			{
+				"cmd": ".classe variante",
+				"ptDescription": "Escolher ou trocar a variante (Invocador ou Ceifador)"
+			},
+			{
+				"cmd": ".classe info sepulkros",
+				"ptDescription": "A página da classe dentro do jogo"
+			},
+			{
+				"cmd": ".classe testar sepulkros",
+				"ptDescription": "Experimentar a classe na sala de teste"
+			}
+		]
+	},
+	"skarn": {
+		"source": "class-skarn",
+		"tagline": "Beast and pack",
+		"profile": "Físico",
+		"benefitsFrom": [
+			"Poder Físico",
+			"Crítico Físico",
+			"Poder da Habilidade de Armas",
+			"Dano de Lacaios"
+		],
+		"doesNotUse": [
+			"Poder Mágico"
+		],
+		"mentorEpithet": "O Uivo entre as Ruínas",
+		"unlockJourney": "O Uivo entre as Ruínas",
+		"evolutions": [
+			{
+				"grade": "I",
+				"title": "Iniciado",
+				"journey": "A Falsa Evolução",
+				"tribute": 15000
+			},
+			{
+				"grade": "II",
+				"title": "Feral",
+				"journey": "O Rugido da Floresta",
+				"tribute": 30000
+			},
+			{
+				"grade": "III",
+				"title": "Selvagem",
+				"journey": "O Predador Supremo",
+				"tribute": 45000
+			}
+		],
+		"attributes": [
+			{
+				"name": null,
+				"stages": [
+					{
+						"stage": "Base",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Velocidade de Movimento em Forma Bestial",
+								"value": "+20%"
+							},
+							{
+								"name": "Poder Físico",
+								"value": "+5"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+5%"
+							}
+						]
+					},
+					{
+						"stage": "I",
+						"label": "Iniciado",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+2"
+							},
+							{
+								"name": "Dano de Lacaios",
+								"value": "+4%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+4%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+3%"
+							},
+							{
+								"name": "Velocidade de Movimento em Forma Bestial",
+								"value": "+2%"
+							}
+						]
+					},
+					{
+						"stage": "II",
+						"label": "Feral",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+4"
+							},
+							{
+								"name": "Dano de Lacaios",
+								"value": "+6%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+5%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+5%"
+							},
+							{
+								"name": "Velocidade de Movimento em Forma Bestial",
+								"value": "+3%"
+							}
+						]
+					},
+					{
+						"stage": "III",
+						"label": "Selvagem",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+5"
+							},
+							{
+								"name": "Dano de Lacaios",
+								"value": "+10%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+6%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+7%"
+							},
+							{
+								"name": "Velocidade de Movimento em Forma Bestial",
+								"value": "+5%"
+							},
+							{
+								"name": "Velocidade de Movimento",
+								"value": "+1"
+							}
+						]
+					},
+					{
+						"stage": "Total",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+16"
+							},
+							{
+								"name": "Dano de Lacaios",
+								"value": "+20%"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+20%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+15%"
+							},
+							{
+								"name": "Velocidade de Movimento em Forma Bestial",
+								"value": "+30%"
+							},
+							{
+								"name": "Velocidade de Movimento",
+								"value": "+1"
+							}
+						]
+					}
+				]
+			}
+		],
+		"defaultAttributes": {
+			"mastery": [
+				"Velocidade de Ataque Primário",
+				"Dano Crítico Físico",
+				"Poder Físico"
+			],
+			"blood": [
+				"Recarga de Habilidades de Arma",
+				"Velocidade de Habilidades",
+				"Recarga da Suprema"
+			]
+		},
+		"commands": [
+			{
+				"cmd": ".skarn",
+				"ptDescription": "Painel da Matilha Selvagem: escolher a fera"
+			},
+			{
+				"cmd": ".classe info skarn",
+				"ptDescription": "A página da classe dentro do jogo"
+			},
+			{
+				"cmd": ".classe testar skarn",
+				"ptDescription": "Experimentar a classe na sala de teste"
+			}
+		]
+	},
+	"umbrellis": {
+		"source": "class-umbrellis",
+		"tagline": "Shadow assassin",
+		"profile": "Físico",
+		"benefitsFrom": [
+			"Poder Físico",
+			"Crítico Físico",
+			"Poder da Habilidade de Armas"
+		],
+		"doesNotUse": [
+			"Poder Mágico"
+		],
+		"mentorEpithet": "O Sorriso por Trás da Lâmina",
+		"unlockJourney": "A Arte da Sobrevivência Silenciosa",
+		"evolutions": [
+			{
+				"grade": "I",
+				"title": "Iniciado",
+				"journey": "Os Segredos Não Morrem",
+				"tribute": 15000
+			},
+			{
+				"grade": "II",
+				"title": "Velado",
+				"journey": "Os Olhos da Igreja",
+				"tribute": 30000
+			},
+			{
+				"grade": "III",
+				"title": "Obscuris",
+				"journey": "A Última Sombra",
+				"tribute": 45000
+			}
+		],
+		"attributes": [
+			{
+				"name": "Twinblades",
+				"stages": [
+					{
+						"stage": "Base",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+6"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+20%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+6%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+4%"
+							},
+							{
+								"name": "Velocidade de Movimento",
+								"value": "+0.5"
+							},
+							{
+								"name": "Velocidade de Recarga do Véu",
+								"value": "+6%"
+							},
+							{
+								"name": "Sem Resistência Física",
+								"flag": true
+							},
+							{
+								"name": "Sem Resistência Mágica",
+								"flag": true
+							},
+							{
+								"name": "Sem Redução de Dano",
+								"flag": true
+							}
+						]
+					},
+					{
+						"stage": "I",
+						"label": "Iniciado",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+2"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+4%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+2%"
+							}
+						]
+					},
+					{
+						"stage": "II",
+						"label": "Velado",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+4"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+4%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+4%"
+							},
+							{
+								"name": "Velocidade de Movimento",
+								"value": "+0.5"
+							}
+						]
+					},
+					{
+						"stage": "III",
+						"label": "Obscuris",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+6"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+6%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+4%"
+							},
+							{
+								"name": "Velocidade de Movimento",
+								"value": "+0.5"
+							},
+							{
+								"name": "Velocidade de Recarga do Véu",
+								"value": "+2%"
+							}
+						]
+					},
+					{
+						"stage": "Total",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+18"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+34%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+12%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+14%"
+							},
+							{
+								"name": "Velocidade de Movimento",
+								"value": "+1.5"
+							},
+							{
+								"name": "Velocidade de Recarga do Véu",
+								"value": "+8%"
+							},
+							{
+								"name": "Sem Resistência Física",
+								"flag": true
+							},
+							{
+								"name": "Sem Resistência Mágica",
+								"flag": true
+							},
+							{
+								"name": "Sem Redução de Dano",
+								"flag": true
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Slashers",
+				"stages": [
+					{
+						"stage": "Base",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+14"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+10%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+8%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+4%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+80%"
+							},
+							{
+								"name": "Velocidade de Movimento",
+								"value": "+0.5"
+							},
+							{
+								"name": "Velocidade de Recarga do Véu",
+								"value": "+6%"
+							},
+							{
+								"name": "Sem Resistência Física",
+								"flag": true
+							},
+							{
+								"name": "Sem Resistência Mágica",
+								"flag": true
+							},
+							{
+								"name": "Sem Redução de Dano",
+								"flag": true
+							}
+						]
+					},
+					{
+						"stage": "I",
+						"label": "Iniciado",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+2"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+4%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+2%"
+							}
+						]
+					},
+					{
+						"stage": "II",
+						"label": "Velado",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+4"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+4%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+4%"
+							},
+							{
+								"name": "Velocidade de Movimento",
+								"value": "+0.5"
+							}
+						]
+					},
+					{
+						"stage": "III",
+						"label": "Obscuris",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+6"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+6%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+4%"
+							},
+							{
+								"name": "Velocidade de Movimento",
+								"value": "+0.5"
+							},
+							{
+								"name": "Velocidade de Recarga do Véu",
+								"value": "+2%"
+							}
+						]
+					},
+					{
+						"stage": "Total",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+24"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+24%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+14%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+14%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+80%"
+							},
+							{
+								"name": "Velocidade de Movimento",
+								"value": "+1.5"
+							},
+							{
+								"name": "Velocidade de Recarga do Véu",
+								"value": "+8%"
+							},
+							{
+								"name": "Sem Resistência Física",
+								"flag": true
+							},
+							{
+								"name": "Sem Resistência Mágica",
+								"flag": true
+							},
+							{
+								"name": "Sem Redução de Dano",
+								"flag": true
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Daggers",
+				"stages": [
+					{
+						"stage": "Base",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+6"
+							},
+							{
+								"name": "Chance de Acerto Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+2%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+80%"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+4%"
+							},
+							{
+								"name": "Velocidade de Recarga do Véu",
+								"value": "+8%"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "-20%"
+							},
+							{
+								"name": "Sem Resistência Física",
+								"flag": true
+							},
+							{
+								"name": "Sem Resistência Mágica",
+								"flag": true
+							},
+							{
+								"name": "Sem Redução de Dano",
+								"flag": true
+							}
+						]
+					},
+					{
+						"stage": "I",
+						"label": "Iniciado",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+2"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+4%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+2%"
+							}
+						]
+					},
+					{
+						"stage": "II",
+						"label": "Velado",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+4"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+4%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+4%"
+							},
+							{
+								"name": "Velocidade de Movimento",
+								"value": "+0.5"
+							}
+						]
+					},
+					{
+						"stage": "III",
+						"label": "Obscuris",
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+6"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+6%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+4%"
+							},
+							{
+								"name": "Velocidade de Movimento",
+								"value": "+0.5"
+							},
+							{
+								"name": "Velocidade de Recarga do Véu",
+								"value": "+2%"
+							}
+						]
+					},
+					{
+						"stage": "Total",
+						"label": null,
+						"attrs": [
+							{
+								"name": "Poder Físico",
+								"value": "+18"
+							},
+							{
+								"name": "Poder da Habilidade de Armas",
+								"value": "+24%"
+							},
+							{
+								"name": "Chance de Acerto Crítico Físico",
+								"value": "+2%"
+							},
+							{
+								"name": "Poder de Acerto Crítico Físico",
+								"value": "+8%"
+							},
+							{
+								"name": "Velocidade de Ataque",
+								"value": "+10%"
+							},
+							{
+								"name": "Velocidade de Habilidades",
+								"value": "+80%"
+							},
+							{
+								"name": "Velocidade de Movimento",
+								"value": "+1.5"
+							},
+							{
+								"name": "Tempo de Recarga da Arma",
+								"value": "+4%"
+							},
+							{
+								"name": "Velocidade de Recarga do Véu",
+								"value": "+10%"
+							},
+							{
+								"name": "Vida Máxima",
+								"value": "-20%"
+							},
+							{
+								"name": "Sem Resistência Física",
+								"flag": true
+							},
+							{
+								"name": "Sem Resistência Mágica",
+								"flag": true
+							},
+							{
+								"name": "Sem Redução de Dano",
+								"flag": true
+							}
+						]
+					}
+				]
+			}
+		],
+		"defaultAttributes": {
+			"mastery": [
+				"Dano Crítico Físico",
+				"Chance de Crítico Físico",
+				"Velocidade de Movimento"
+			],
+			"blood": [
+				"Recarga de Habilidades de Arma",
+				"Velocidade de Habilidades",
+				"Redução de Dano de Corrupção"
+			]
+		},
+		"commands": [
+			{
+				"cmd": ".classe info umbrellis",
+				"ptDescription": "A página da classe dentro do jogo"
+			},
+			{
+				"cmd": ".classe testar umbrellis",
+				"ptDescription": "Experimentar a classe na sala de teste"
+			}
+		]
+	}
+}

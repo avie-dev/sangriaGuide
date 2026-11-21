@@ -1,0 +1,96 @@
+---
+title: Sepulkros
+description: Sepulkros, the Scythe necromancer of Sangria Falls. Its Summoner and Reaper variants, the Bone Legion summons, abilities, evolutions, attribute bonuses and default attributes, translated from the official class page.
+summary: Sepulkros is a Scythe necromancer. Summoner (magic) raises a chosen servant every 7 basic hits. Reaper (physical) has wide scythe cuts that Condemn targets, and condemned enemies rise as your skeletons.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - class-sepulkros
+  - classes
+labels: [official]
+sidebar:
+  order: 10
+---
+
+import ClassCard from '../../../components/ClassCard.astro';
+import ClassEvolutions from '../../../components/ClassEvolutions.astro';
+import ClassAttributes from '../../../components/ClassAttributes.astro';
+import ClassDefaults from '../../../components/ClassDefaults.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note" title="Translated from Portuguese">
+The official class page is in Portuguese. Ability and quest names are given in Portuguese with this wiki's translation. Numbers are as published.
+</Aside>
+
+Sepulkros is the server's **necromancer**. As a **Summoner**, every 7 basic hits in combat raise your chosen servant for 15 seconds. As a **Reaper**, the scythe does the work of the dead.
+
+<ClassCard id="sepulkros" />
+
+## How it scales
+
+- **Summoner benefits from:** Spell Power, Spell Crit and Minion Damage. It doesn't use Physical Power or Weapon Skill Power. *Crânio Profano*, *Ceifa Sepulcral* and *Uivo do Ossuário* count as spells.
+- **Reaper** is physical. Its abilities scale with Physical Power and Weapon Skill Power.
+- Bone Legion servants spawn with **half your Spell Power, multiplied by your Minion Damage**, and can't crit.
+- **Unlock quest:** *O Arquitetador da Pós-Vida* (The Architect of the Afterlife), from **Ozzy Sepulkros**.
+- **Required for:** La Muerte needs Sepulkros at Evolution III.
+
+## Variants
+
+Your first variant is free, chosen when you get the class. The other is a quest from Ozzy Sepulkros. Finishing it only unlocks the variant, and you stay on your current one until you switch. With both, switching is free. On the Summoner, the round button opens the minions, where you click *Switch Variant*.
+
+| Variant | Style | Unlock quest |
+|---|---|---|
+| **Summoner** (*Invocador*) | Unholy magic scythe; raises the Bone Legion | *O Caminho do Invocador* |
+| **Reaper** (*Ceifador*) | Physical scythe, wide cuts, crushing impact; no basic-attack summon | *O Caminho do Ceifador* |
+
+If you were Sepulkros before variants existed, you're on Summoner and can do the Reaper quest. Each variant keeps its own mastery and blood attributes.
+
+## Abilities: Summoner
+
+| Key | Ability | What it does |
+|---|---|---|
+| Basic | *Crânio Profano* (Unholy Skull) | Each scythe swing throws a flaming skull (100% magic damage). Every 7 swings, a servant from your Bone Legion rises and fights for 15 s at double movement speed. |
+| Q | *Ceifa Sepulcral* (Sepulchral Reaping) | A wide scythe arc: 130% magic to the target ahead and 100% to the others hit, with knockback and a 2 s slow. The spin also releases a spectral blade in a straight line (100% magic). |
+| E | *Uivo do Ossuário* (Ossuary Howl) | Throws a howling scythe that spins ahead for about 2 s. Contact deals 50% magic. Every 0.25 s it reaps a 1.65 m radius (22% magic per pulse, up to 8 pulses) and applies **Condemnation** (+15% damage taken for 5 s). An unholy skull flies with it and explodes on impact (200% magic in a 3 m area). |
+
+**Passive, *Legião de Ossos* (Bone Legion):** every 7 basic hits in combat, your chosen servant rises with half your Spell Power, at your level and double speed, for 15 s. It deals magic damage and can't crit. There are **12 servants** to choose from (`.sepulkros`).
+
+## Abilities: Reaper
+
+Every Reaper hit applies **Condemnation** (+15% damage taken for 5 s), and **anyone who dies condemned rises as your allied skeleton**.
+
+| Key | Ability | What it does |
+|---|---|---|
+| Basic | *Lâmina do Ceifador* (Reaper's Blade) | Each swing is a wide spectral-sword cut: a 5.5 m cone dealing 55% physical to the main target and up to 10 nearby enemies, with a light knockback. It alternates between two cuts, on foot or mounted, and also harvests ore, wood and plants. |
+| Q | *Revide Sepulcral* (Sepulchral Riposte) | A counter-blow around you: a 4.5 m burst dealing 175% physical to every enemy hit, knocking them away. |
+| E | *Queda da Lápide* (Tombstone Fall) | Target a point up to 8 m away. At the end of the cast, an 8 m diameter crushing blow deals 285% physical to every enemy hit. If the cast is interrupted, nothing happens. |
+
+## Minions and the Fallen Angel
+
+Locked servants unlock when you defeat that creature while playing Sepulkros with a **Minion Collector** in your inventory. There's a chance per kill, and the Collector is only used when it works. Collectors come from dungeon rewards. The **Fallen Angel** is the exception: it comes from the boss **Solarus**. Defeat him while playing the class with a Collector, and anyone nearby also gets a chance.
+
+Living minion limit: **6 for the Summoner, 4 for the Reaper**. Going over kills the oldest.
+
+## Evolutions
+
+<ClassEvolutions id="sepulkros" />
+
+## Attribute bonuses
+
+What the class weapon adds, by grade, for each variant. The Total includes the Base and all three evolutions. Hover an attribute for its Portuguese name.
+
+<ClassAttributes id="sepulkros" />
+
+## Default attributes
+
+<ClassDefaults id="sepulkros" />
+
+## Commands
+
+<Command cmd=".sepulkros">Opens your servant selection.</Command>
+<Command cmd=".classe variante">Choose or switch your variant (Summoner or Reaper).</Command>
+<Command cmd=".classe info sepulkros">Opens the class page in game.</Command>
+<Command cmd=".classe testar sepulkros">Try the class in the Training Room.</Command>
+
+The English guides write the variant command as `.class variant` ([Q-020](/about/open-questions/#q-020)).

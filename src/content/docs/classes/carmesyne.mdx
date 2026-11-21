@@ -1,0 +1,74 @@
+---
+title: Carmesyne
+description: Carmesyne, the Sword and Pistols crit duelist of Sangria Falls. Abilities, evolutions, attribute bonuses and default attributes, translated from the official class page.
+summary: Carmesyne is a physical crit-and-mobility duelist that swaps between Pistols to open distance and Sword to close it. Pistol basics have no pause on the third shot.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - class-carmesyne
+  - classes
+labels: [official]
+sidebar:
+  order: 8
+---
+
+import ClassCard from '../../../components/ClassCard.astro';
+import ClassEvolutions from '../../../components/ClassEvolutions.astro';
+import ClassAttributes from '../../../components/ClassAttributes.astro';
+import ClassDefaults from '../../../components/ClassDefaults.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note" title="Translated from Portuguese">
+The official class page is in Portuguese. Ability and quest names are given in Portuguese with this wiki's translation. Numbers are as published.
+</Aside>
+
+Carmesyne is about **crit and mobility**. It alternates **Pistols and Sword** to open and close distance.
+
+<ClassCard id="carmesyne" />
+
+## How it scales
+
+- **Benefits from:** Physical Power, Physical Crit and Weapon Skill Power.
+- **Doesn't use:** Spell Power. On the sword's E, the dash, the final impact and the Holy Explosion start as magic and are converted to physical.
+- **Unlock quest:** *A Pistola Prateada* (The Silver Pistol), from **Sylar Carmesyne**.
+- **Required for:** La Muerte needs Carmesyne at Evolution II.
+
+## Abilities
+
+### Pistols
+
+| Key | Ability | What it does |
+|---|---|---|
+| Basic | Primary attack | The standard pistol combo without the 1-second pause on the third shot: continuous fire. |
+| Q | *Giro Cruel* (Cruel Spin) | 45 bullets in 4.5 s, each dealing 85%, at −20% movement speed during the burst. 16 s cooldown. |
+| E | *Bala Explosiva* (Explosive Bullet) | 50% more range. On impact it bursts a shock area on the target and applies Chaos Burn, continuous physical damage. |
+
+### Sword
+
+| Key | Ability | What it does |
+|---|---|---|
+| Basic | Primary attack | The standard sword combo, with the class's own visual effects. |
+| Q | *Redemoinho* (Whirlwind) | The spin is stretched to 4.5 s, followed by a Power Wave for 7.5 s when it ends. 16 s cooldown. |
+| E | *Onda de Choque* (Shockwave) | Replaces the wave with Merciless Charge's dash: grabs the first enemy, brakes and bursts at the end with ignite, stun and a Holy Explosion converted to physical. 14 s cooldown. |
+
+## Evolutions
+
+<ClassEvolutions id="carmesyne" />
+
+## Attribute bonuses
+
+What each class weapon adds, by grade. The Total includes the Base and all three evolutions. Hover an attribute for its Portuguese name.
+
+<ClassAttributes id="carmesyne" />
+
+## Default attributes
+
+<ClassDefaults id="carmesyne" />
+
+## Commands
+
+<Command cmd=".classe info carmesyne">Opens the class page in game.</Command>
+<Command cmd=".classe testar carmesyne">Try the class in the Training Room.</Command>
+
+The English guides use `.class testar carmesyne` ([Q-020](/about/open-questions/#q-020)).

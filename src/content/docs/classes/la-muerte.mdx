@@ -1,0 +1,72 @@
+---
+title: La Muerte
+description: La Muerte, the cursed-Pistols summoner reaper of Sangria Falls. Prerequisites, abilities, the Phantom Legion summons, evolutions, attribute bonuses and default attributes, translated from the official class page.
+summary: La Muerte fires death magic from Pistols. Its abilities are weapon skills but all damage is magic, and every 4 basic hits your chosen minion appears. Requires Draekhar III, Sepulkros III and Carmesyne II.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - class-lamuerte
+  - classes
+labels: [official]
+sidebar:
+  order: 14
+---
+
+import ClassCard from '../../../components/ClassCard.astro';
+import ClassEvolutions from '../../../components/ClassEvolutions.astro';
+import ClassAttributes from '../../../components/ClassAttributes.astro';
+import ClassDefaults from '../../../components/ClassDefaults.astro';
+import Requirements from '../../../components/Requirements.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note" title="Translated from Portuguese">
+The official class page is in Portuguese. Ability and quest names are given in Portuguese with this wiki's translation. Numbers are as published.
+</Aside>
+
+La Muerte fires **death magic from Pistols**. Its abilities are weapon skills, but **all their damage is magic**. Every 4 basic hits, the minion you chose takes the field.
+
+<Requirements items={['Draekhar at Evolution III', 'Sepulkros at Evolution III', 'Carmesyne at Evolution II']} />
+
+<ClassCard id="la-muerte" />
+
+## How it scales
+
+- **Hybrid profile. Benefits from:** Spell Power, Spell Crit, Weapon Skill Power and Minion Damage.
+- **Doesn't use:** Physical Power.
+- Minions spawn with **your Spell Power, multiplied by your Minion Damage**, and can't crit.
+- **Unlock quest:** *A Mãe dos Lamentos* (The Mother of Laments), from **Morrigan LaMuerte**.
+
+## Abilities
+
+| Key | Ability | What it does |
+|---|---|---|
+| Basic | *Eco Fantasma* (Phantom Echo) | Each shot sounds twice, the bullet and its echo: 130% magic on the combo's first shot and 115% on the next two. The echo heals you for 5% of your max health and weakens the target by 15% for 5 s. Every 4 shots, a Phantom Legion spirit fights beside you for 12 s. |
+| Q | *Salva Funerária* (Funeral Volley) | Fan the hammer and pour 8 spectral rocks in 2 s towards your aim, each dealing 150% magic to the first target it passes through. |
+| E | *Último Lamento* (Last Lament) | Pass through the Veil, briefly immaterial, and fire a Banshee's wail (100% magic). Where it ends, 8 wolf spirits burst out in all directions, each dealing 80% magic to the first target in its path. |
+
+### Passive and summons: *Legião Fantasma* (Phantom Legion)
+
+***Cortejo da Morte* (Death's Procession).** Every 4 basic hits in combat, your chosen minion appears with your Spell Power, at your level and with double attack speed. There are **13 minions** to choose from, in the panel opened by the round button next to your class crest, or with `.lamuerte`.
+
+Locked minions unlock when you defeat that creature while playing La Muerte with a **Minion Collector** in your inventory. Collectors come from dungeon rewards. La Muerte can have at most **4 living minions**.
+
+## Evolutions
+
+<ClassEvolutions id="la-muerte" />
+
+## Attribute bonuses
+
+What the class weapon adds, by grade. The Total includes the Base and all three evolutions. Hover an attribute for its Portuguese name.
+
+<ClassAttributes id="la-muerte" />
+
+## Default attributes
+
+<ClassDefaults id="la-muerte" />
+
+## Commands
+
+<Command cmd=".lamuerte">Opens your minion selection.</Command>
+<Command cmd=".classe info lamuerte">Opens the class page in game.</Command>
+<Command cmd=".classe testar lamuerte">Try the class in the Training Room, even before you meet the prerequisites.</Command>

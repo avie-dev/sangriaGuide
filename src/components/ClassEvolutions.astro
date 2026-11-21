@@ -1,0 +1,58 @@
+---
+// A class's three evolutions: title, the journey quest's name and the tribute.
+//   <ClassEvolutions id="mortak" />
+// English titles come from the English Classes guide (src/data/classes.yaml); the journey names are
+// the Portuguese names from the official class page.
+import { getEntry } from 'astro:content';
+import { classDetails } from '../lib/class-details';
+import Currency from './Currency.astro';
+
+interface Props {
+	id: string;
+}
+const d = classDetails(Astro.props.id);
+const entry = await getEntry('classes', Astro.props.id);
+if (!entry) throw new Error(`ClassEvolutions: unknown class "${Astro.props.id}"`);
+const en = entry.data.evolutions;
+const total = d.evolutions.reduce((t, e) => t + e.tribute, 0);
+---
+
+<figure class="sf-evo">
+	<table>
+		<thead>
+			<tr><th scope="col">Grade</th><th scope="col">Title</th><th scope="col">Journey quest (Portuguese name)</th><th scope="col">Tribute</th></tr>
+		</thead>
+		<tbody>
+			{
+				d.evolutions.map((e, i) => (
+					<tr>
+						<th scope="row">Evolution {e.grade}</th>
+						<td>
+							{en[i] ?? e.title}
+							{en[i] && en[i] !== e.title && <span class="sf-evo__pt"> ({e.title})</span>}
+						</td>
+						<td><em>{e.journey}</em></td>
+						<td><Currency id="ourosangue" amount={e.tribute} /></td>
+					</tr>
+				))
+			}
+		</tbody>
+		<tfoot>
+			<tr><th scope="row" colspan="3">Total</th><td><Currency id="ourosangue" amount={total} /></td></tr>
+		</tfoot>
+	</table>
+</figure>
+
+<style>
+	.sf-evo {
+		margin: 1rem 0;
+		overflow-x: auto;
+	}
+	.sf-evo table {
+		width: 100%;
+		font-size: var(--sl-text-sm);
+	}
+	.sf-evo__pt {
+		color: var(--sl-color-gray-3);
+	}
+</style>

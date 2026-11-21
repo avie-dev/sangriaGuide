@@ -1,26 +1,52 @@
 ---
 title: Classes
 description: "All 11 classes and the starting Awakened state: abilities, evolutions, prerequisites and how to choose."
-status: planned
+summary: Sangria Falls has 11 classes, taught by Masters in the Classes Hall, each with its own weapons and 3 paid evolutions. Your first class is free; switching costs 3,000 Ourosangue. Three classes need evolutions in others first.
+status: written
+lastVerified: 2026-11-22
 sources:
   - classes
   - class-hub
   - sala-de-treinamento
+labels: [official]
 sidebar:
   label: Overview
   order: 0
 ---
 
 import SectionContents from '../../../components/SectionContents.astro';
+import ClassGrid from '../../../components/ClassGrid.astro';
+import { Aside } from '@astrojs/starlight/components';
 
-All 11 classes and the starting Awakened state: abilities, evolutions, prerequisites and how to choose.
+Every vampire starts as an **Awakened**. The 11 classes are taught by their **Masters** in the **Classes Hall** (City of Sangria Falls, via the teleport hub). Each class has its own weapons, abilities and bonuses, plus **3 evolutions**.
+
+- **Your first class is free**, chosen during the tutorial. Others unlock through each Master's quest.
+- **Unlocked classes are yours forever.** Switching costs 3,000 Ourosangue, and you keep everything.
+- **Class bonuses only apply with the class weapon in hand.**
+- **Try any class free** in the [Training Room](/classes/training-room/).
+
+<ClassGrid />
+
+## At a glance
+
+| Class | Weapons | Profile | Summons | Needs first |
+|---|---|---|---|---|
+| [Mortak](/classes/mortak/) | Greatsword, Mace | Physical (tank) | — | — |
+| [Noctarin](/classes/noctarin/) | Longbow, Crossbow | Physical (ranged) | — | — |
+| [Bastien](/classes/bastien/) | Spear, Whip | Physical | — | — |
+| [Carmesyne](/classes/carmesyne/) | Sword, Pistols | Physical (crit) | — | — |
+| [Skarn](/classes/skarn/) | Axe, Claws | Physical | Beasts | — |
+| [Sepulkros](/classes/sepulkros/) | Scythe | Magic (Summoner) / Physical (Reaper) | Servants (Summoner) | — |
+| [Draekhar](/classes/draekhar/) | Staff | Magic | Some Current E/Q | — |
+| [Umbrellis](/classes/umbrellis/) | Twinblades, Slashers, Daggers | Physical (assassin) | — | — |
+| [Sangrael](/classes/sangrael/) | Staff | Magic (support) | — | Draekhar I |
+| [La Muerte](/classes/la-muerte/) | Pistols | Hybrid | Minions | Draekhar III, Sepulkros III, Carmesyne II |
+| [General](/classes/general/) | Twinblades | Physical | — | Umbrellis II, Mortak III, Bastien III |
+
+<Aside type="note" title="About the class pages">
+The official class pages are in Portuguese, even on the English site. The wiki's class pages are translations. Ability names are given in Portuguese with an English gloss, and attribute names are translated (see the [attribute glossary](/character/stats/#attribute-glossary)). Attribute tables come straight from the official pages. Where a published total doesn't add up, the table flags it.
+</Aside>
 
 ## Pages in this section
 
 <SectionContents />
-
-## What this section will cover
-
-- A page for each class, translated from the official (Portuguese) class pages
-- Evolutions I to III, their tributes and the advanced-class prerequisites
-- Comparison tables by role and playstyle (no tier list without testing data)

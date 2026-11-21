@@ -1,0 +1,92 @@
+---
+title: The profile sheet
+description: The Sangria Falls Profile (F1) shows your level, class, weapons, blood, professions, attributes, prestige buffs and statistics. Also covers other players' profiles and HUD settings.
+summary: Press F1 for your full character sheet. Hover attributes for a breakdown, open personal rankings, change your portrait, and right-click players to view their profile. Interface only; chat users have separate commands.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - perfil
+labels: [official]
+sidebar:
+  order: 8
+---
+
+import Command from '../../../components/Command.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+The **Profile** is your character's full sheet on one screen. It's free and works anywhere. The panel exists **only with the interface**. Without it, the same information comes from separate chat commands (see the end of this page).
+
+## Opening it
+
+Press **F1**, or click your portrait in the top corner of the screen. Esc closes it.
+
+## What's on it
+
+**At the top:**
+
+- Your portrait, with level and prestige.
+- Your name, class, and Pulse, Transfusion and Plasma numbers. **See more** opens your class details.
+- The Battle Pass summary with **OPEN PASS**.
+- The **ACCOUNT** box: VIP, Teleports, Auto-Prestige, Unread mail and Battle Pass, each with an Open or Config. button.
+- Your level, XP bar and prestige. At max level, the **PRESTIGE** button appears here.
+
+**Five columns below:**
+
+| Column | Shows |
+|---|---|
+| WEAPON | Mastery level of each weapon |
+| BLOOD and PROFESSION | Level of each blood type and each profession |
+| ATTRIBUTES | Everything your character has today, by category. Hover for the breakdown by source. |
+| PRESTIGES | The 20 buffs: owned ones lit, the next one highlighted |
+| STATISTICS | Total damage, V Bloods defeated, deaths and other account numbers |
+
+## Personal rankings
+
+In the STATISTICS column, click *Top 3 weapons by damage*, *Top 3 most-hunted bosses* or *Top 3 favorite pets*. A panel opens with three tabs:
+
+- **WEAPONS:** damage dealt with each weapon and its share of your total.
+- **BOSSES:** a wall of every boss by act, with your kill count on each. Bosses you've never hunted stay dark.
+- **PETS:** your pets ordered by kills made with you. A boss counts for more than a normal unit.
+
+Only open-world kills count, so arena and dungeon bosses don't.
+
+## Changing your portrait
+
+<Steps>
+
+1. Press **F1** and click the small edit icon on your portrait.
+2. Choose from 30 portraits (use the arrows to page through).
+3. Click one, and it applies immediately.
+
+</Steps>
+
+Portraits from the Sangrisween shop show first, with an orange ring, and only their owners see them. Other players see your portrait in rankings, your clan, dungeon and arena groups, and mail.
+
+## Other players' profiles
+
+Get within 20 metres of a player, with both of you standing still and out of combat. **Right-click** them and choose **View profile**. Their **Player Panel** shows class, clan, ranking position, equipment and feats. The same menu can invite them to a Dungeon, the Illusory Arena or the Rift of Reality, and to your clan if you're a leader or officer. You can also click a name in the Rankings.
+
+<Aside type="tip" title="Keep your sheet private">
+Minimap gear → **Player Panel** card → **Private**. Then only you and the staff can open it.
+</Aside>
+
+## HUD preferences on the same screen
+
+The minimap gear opens HUD Settings. There you can show or hide the Quest HUD, Experience HUD, Teleport HUD, XP Bonus Notice, Prestige Bar, Prestige Tip, Boss Tracker, Button Tips and (during the event) the Sangrisween Panel. Some boxes have a size option (P, M, G or GG). Other settings there:
+
+- **Profile Panel:** Normal or *Squeezed*. Choose Squeezed if your Profile is cut off on an ultrawide monitor.
+- **School Crest:** the crest size next to players' health bars, or off.
+- **HUD Preset:** Sangria Falls (default), AION 2, League of Legends or Dota 2 layouts. With League of Legends the minimap moves to the bottom right, and with Dota 2 to the bottom left.
+
+If you hide the Prestige Bar, use the Profile's button or `.prestige exp`, `.tf pulso` and `.tf transfundir`.
+
+## Without the interface
+
+<Command cmd=".level">Character menu: level, prestige, bonuses.</Command>
+<Command cmd=".level buffs">Lists the 20 prestige buffs.</Command>
+<Command cmd=".weapon info">Progress of every weapon.</Command>
+<Command cmd=".blood info">Progress of every blood type.</Command>
+<Command cmd=".prof ver">Profession progress.</Command>
+<Command cmd=".tf info">Pulses, transfusions and plasmas.</Command>
+<Command cmd=".vip time">VIP time remaining.</Command>
+<Command cmd=".top">Server rankings and your position.</Command>

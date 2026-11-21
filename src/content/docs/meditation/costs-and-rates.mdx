@@ -1,0 +1,69 @@
+---
+title: Costs and XP rates
+description: Meditation on Sangria Falls costs 0.35 Sangricoin per minute per path and gives 10,500 XP per tick (15,750 with VIP). Hourly and overnight figures, which bonuses count, and where Sangricoins come from.
+summary: 0.35 Sangricoin per minute per path (21/hour, 168 for 8 hours). 10,500 XP per minute = 630,000 per hour; VIP gives +50% (945,000). Personal XP bonuses don't count; server XP events do.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - meditacao
+  - vip
+  - nivel-e-prestigio
+  - banco
+  - recompensa-online
+labels: [official, vip, verify]
+sidebar:
+  order: 2
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Unverified from '../../../components/Unverified.astro';
+import Label from '../../../components/Label.astro';
+
+<QuickFacts
+	facts={[
+		['Tick', 'Every 60 seconds'],
+		['XP per tick', '10,500 (15,750 with VIP)'],
+		['XP per hour', '630,000 (945,000 with VIP)'],
+		['Cost', '0.35 Sangricoin per minute per path'],
+	]}
+/>
+
+## Cost
+
+The cost comes from your **Sangricoin** Bank balance. It isn't paid in Ourosangue.
+
+| Duration | One path | Double Meditation (two paths) |
+|---|---|---|
+| 1 minute | 0.35 | 0.70 |
+| 1 hour | 21 | 42 |
+| 8 hours | 168 | 336 |
+
+**VIP doesn't make meditation cheaper.** It raises the XP, but the cost stays the same. A path that isn't yielding (max level, unarmed, no blood, no pet) is not charged.
+
+## XP rates
+
+| | Per tick (minute) | Per hour | Level 1 → 90 |
+|---|---|---|---|
+| Normal | 10,500 | 630,000 | About 1h14 |
+| VIP <Label type="vip" /> | 15,750 | 945,000 | About 50 minutes |
+
+These are the official figures for meditation. The panel shows each path's XP per minute.
+
+<Unverified q="Q-021">The guides don't say whether the Weapon Mastery and Bloodline paths give the same 10,500 XP per tick, or how much XP each weapon or blood level needs.</Unverified>
+
+<Unverified q="Q-010">The Pet path gives less to a pet with prestige, but the guides don't say how much less. (Outside meditation, each pet prestige reduces its XP gain by 3%.)</Unverified>
+
+## Which bonuses count
+
+| Bonus | Counts in meditation? |
+|---|---|
+| VIP | Yes, +50% |
+| Server XP events | Yes |
+| Quitina | No |
+| Welcome gift (3-day double XP) | No |
+
+## Paying for it: Sangricoins
+
+Sangricoins come from events (Reality Rupture, Goreswine's Judgment, Tower of the Immortals), the **Online Reward**, the Battle Pass, Outpost weeklies and donations. You start with 25. You can't convert Ourosangue into Sangricoins, because the exchange only goes the other way (1 Sangricoin = 35 Ourosangue).
+
+The Online Reward keeps paying while you're connected, including while you meditate: 0.40 to 0.70 Sangricoin every 15 minutes after your first 30 minutes of the day. See [Worked examples](/meditation/examples/).

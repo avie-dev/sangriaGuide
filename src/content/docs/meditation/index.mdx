@@ -1,29 +1,39 @@
 ---
 title: Meditation
 description: "Earning XP while standing still in the Meditation Chamber: costs, rates, VIP and Double Meditation."
-status: planned
+summary: Meditation gives XP every minute in the Meditation Chamber on one of four paths (Character, Weapon, Blood, Pet) for 0.35 Sangricoin per minute. That's 630,000 XP per hour, or 945,000 with VIP.
+status: written
+lastVerified: 2026-11-22
 sources:
   - meditacao
   - auto-prestigio
   - recompensa-online
   - transfusao-e-plasmas
   - vip
+labels: [official, vip]
 sidebar:
   label: Overview
   order: 0
 ---
 
 import SectionContents from '../../../components/SectionContents.astro';
+import QuickFacts from '../../../components/QuickFacts.astro';
 
-Earning XP while standing still in the Meditation Chamber: costs, rates, VIP and Double Meditation.
+Meditation lets you earn XP **standing still**. Inside the Meditation Chamber in the City of Sangria Falls, you gain XP every minute on the path you choose, for a small Sangricoin cost.
+
+<QuickFacts
+	facts={[
+		['Where', 'Meditation Chamber (guardian: Haruki)'],
+		['Paths', 'Character XP, Weapon Mastery, Bloodline, Pet'],
+		['Cost', '0.35 Sangricoin per minute per path (21 per hour)'],
+		['XP', '10,500 per minute = 630,000 per hour (945,000 with VIP)'],
+		['Level 1 → 90', 'About 1h14 (50 minutes with VIP)'],
+		['Open', 'F10, or .meditate'],
+	]}
+/>
+
+Start with [How meditation works](/meditation/how-it-works/), then [Costs and XP rates](/meditation/costs-and-rates/).
 
 ## Pages in this section
 
 <SectionContents />
-
-## What this section will cover
-
-- How the four meditation paths work, with and without the interface
-- Sangricoin costs versus Ourosangue prestige costs
-- Normal and VIP XP rates, server XP events and which bonuses count
-- Worked examples: overnight sessions, Prestige 20, pets and Pulses

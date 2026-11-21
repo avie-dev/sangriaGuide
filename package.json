@@ -9,7 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check && node scripts/coverage.mjs --check",
-    "research": "node research/fetch.mjs && node research/extract.mjs && node research/inventory.mjs",
+    "research": "node research/fetch.mjs && node research/extract.mjs && node research/inventory.mjs && node research/class-data.mjs",
     "coverage": "node scripts/coverage.mjs",
     "check:external": "node scripts/check-external-links.mjs"
   },

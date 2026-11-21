@@ -1,0 +1,98 @@
+---
+title: Weapon mastery
+description: How weapon mastery levels and prestiges work on Sangria Falls, which attributes it gives your class, how to choose them, and the free first prestige.
+summary: Each weapon type levels 0–100 and prestiges up to 20. XP goes to the weapon in your hand at the kill. Mastery gives 3 class attributes you can re-pick for free. Vlad Parker does the first prestige free.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - maestria-de-arma
+  - classes
+  - meditacao
+  - auto-prestigio
+labels: [official]
+sidebar:
+  order: 5
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+Every **weapon type** (sword, axe, spear, pistols…) has its own level and prestige. The more you use a weapon, the stronger the bonus it gives your class.
+
+<QuickFacts
+	facts={[
+		['Level', '0 to 100, per weapon type'],
+		['Prestige', 'Up to 20'],
+		['Cost', '75 to 4,467 Ourosangue; the first is free with Vlad Parker'],
+		['Attributes', '3 per class, chosen freely'],
+	]}
+/>
+
+## Gaining mastery XP
+
+- XP from each kill goes to **the weapon in your hand at that moment**. Fighting unarmed gives nothing.
+- **V Bloods** give more.
+- **Meditation** on the Weapon Mastery path raises the weapon equipped that minute.
+- **No weapon XP** from boss summons or from creatures from tombs, worm nests and summoning circles.
+
+Track gains on the Experience HUD in the corner of the screen, or with `.weapon log` in chat.
+
+<Aside type="note" title="Draekhar and Sangrael">
+For these two classes, the Spear counts as **Staff**. Its XP and prestige go to the Staff.
+</Aside>
+
+## What mastery gives
+
+Mastery feeds **3 attributes** to your class, such as power, crit, attack speed and health. They grow with the level and prestige of **the weapon you're holding**, so a low-level weapon gives a low bonus. Each prestige returns the level to 0 but **keeps** the bonus you've earned, and it raises the cap for the next climb. Prestige doesn't slow XP.
+
+The **Awakened** has no mastery attributes. You need a class for the bonus.
+
+## Seeing your mastery
+
+<PlayModes>
+	<Fragment slot="interface">**F1** → the WEAPON box shows each weapon's level and prestige (for example "Lv.42 · P.3"). For values, click **See more** (or your class crest) → **MASTERY & BLOOD**. The NOW column is what you have; the other columns show the maximum at level 100 with prestige 0, 10 and 20.</Fragment>
+	<Fragment slot="chat">
+		<Command cmd=".weapon">Opens the mastery menu (`.ar` also works).</Command>
+		<Command cmd=".weapon info">Level, prestige and XP of every weapon.</Command>
+		<Command cmd=".weapon attributes">Your class's 3 attributes for the weapon in hand.</Command>
+	</Fragment>
+</PlayModes>
+
+## Choosing your 3 attributes
+
+Each class comes with 3 mastery attributes pre-selected (listed on each [class page](/classes/)). Changing them is **free**, can be redone at any time, and is saved per class. You can only change the **active** class's attributes.
+
+<PlayModes>
+	<Fragment slot="interface">
+		1. Open your class's **MASTERY & BLOOD** tab.
+		2. In *Weapon mastery*, check 3 attributes (the counter shows "3/3 selected"). To swap one, uncheck another first.
+		3. The *Blood lineage* part must also have 3 checked.
+		4. Click **CONFIRM SELECTION**. **RESET** goes back to the class default.
+	</Fragment>
+	<Fragment slot="chat">Type `.weapon` and choose *Change mastery attributes*.</Fragment>
+</PlayModes>
+
+## Prestiging a weapon
+
+<Aside type="tip" title="The first one is free">
+The first time a weapon reaches 100, the *Weapon Mastery* mission appears. Talk to **Vlad Parker** in the Winery before clicking PRESTIGE, and he does that first prestige for free.
+</Aside>
+
+<PlayModes>
+	<Fragment slot="interface">Hold the level-100 weapon, keep the cost in your Bank, and click **PRESTIGE** on the weapon line of the Prestige Bar. It's instant and charges immediately, with no confirmation.</Fragment>
+	<Fragment slot="chat"><Command cmd=".prestige weapon">Prestiges the weapon in hand immediately, without confirmation (short form `.pg a`).</Command></Fragment>
+</PlayModes>
+
+To see the cost first, ask Vlad Parker: *I want to prestige.* → *Weapon Mastery.* He only prestiges after **Confirm.** VIPs can automate weapon prestige with [Auto-Prestige](/meditation/auto-prestige/).
+
+## Common questions
+
+### I switched weapons and my bonuses changed.
+
+That's expected. Only the mastery of the weapon in your hand counts.
+
+### I can't prestige.
+
+The weapon in your hand must be level 100 and the Ourosangue must be in your Bank. Chat says what's missing.

@@ -1,0 +1,71 @@
+---
+title: Quitina (Chitin)
+description: Quitina is the Sangria Falls double-XP consumable. Where it comes from, how to use it on Character, Weapon or Blood, and the stacking rules.
+summary: Each Quitina gives 2x XP for 30 minutes on one track (Character, Weapon or Blood). Up to three at once, one per track. It comes from Outpost missions and the Battle Pass, and is the only Bank currency you can withdraw as an item.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - banco
+  - nivel-e-prestigio
+  - postos-avancados
+  - passe-de-batalha
+labels: [official]
+sidebar:
+  order: 4
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+**Quitina** (Chitin) is one of the five Bank currencies, and the only one you can withdraw as an item. You spend it to double your XP for a while.
+
+<QuickFacts
+	facts={[
+		['Effect', '2x XP for 30 minutes'],
+		['Tracks', 'Character, Weapon or Blood'],
+		['At once', 'Up to 3, one per track'],
+		['Sources', 'Outpost missions, Battle Pass'],
+		['Requires', 'A class chosen in the tutorial'],
+	]}
+/>
+
+## Where it comes from
+
+- **Outpost missions:** the daily pays 1 Quitina and the weekly pays 4, straight into your Bank.
+- **The Battle Pass:** some levels pay Quitina, which goes into your Bank.
+
+## How to use it
+
+<PlayModes>
+	<Fragment slot="interface">
+		1. Press **F5** (Bank).
+		2. On the Quitina card, click **WITHDRAW · DEPOSIT**.
+		3. In the **USE** section, click **Use** on the Character, Weapon or Blood row.
+
+		It comes from your Bank balance first, and from your inventory if the balance is zero. The row shows the time left while it's active.
+	</Fragment>
+	<Fragment slot="chat">
+		Drag a Quitina item out of your inventory as if dropping it. Nothing falls: 1 unit is used, **always on Character**. To get items out of the Bank first:
+
+		<Command cmd=".banco sacar quitina 2">Withdraws 2 Quitina to your inventory.</Command>
+	</Fragment>
+</PlayModes>
+
+With the interface, dragging it out of your inventory also works, and also always applies to Character.
+
+## Stacking rules
+
+- One Quitina per track at a time. With one active, another on the same track is **refused and not spent**.
+- If another personal bonus already counts on that track, such as the 3-day welcome gift on Character, the Quitina is refused and not spent.
+- Server XP bonuses and a Quitina count together.
+- **Quitina doesn't count in meditation.**
+
+<Aside type="tip">
+While the welcome gift covers your character XP, put Quitinas on **Weapon** and **Blood** instead, since those tracks are free.
+</Aside>
+
+## Withdraw and deposit
+
+In the Bank's Quitina card, type an amount and click **Withdraw** or **Deposit**, or use **Withdraw all** / **Deposit all**. Without the interface, `.menu bank` → *Deposit everything from inventory* turns Quitina items back into balance.

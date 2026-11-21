@@ -1,13 +1,17 @@
 ---
 title: Character progression
 description: "Levels, prestige, weapon mastery, blood lineage and the stats that make your vampire stronger."
-status: planned
+summary: Your vampire grows along four tracks. Character level (1–90, 20 prestiges), weapon mastery and blood lineage (0–100, 20 prestiges each), plus your class. All feed one character sheet (F1).
+status: written
+lastVerified: 2026-11-22
 sources:
   - nivel-e-prestigio
   - maestria-de-arma
   - linhagem-de-sangue
   - perfil
   - banco
+  - transfusao-e-plasmas
+labels: [official]
 sidebar:
   label: Overview
   order: 0
@@ -15,15 +19,18 @@ sidebar:
 
 import SectionContents from '../../../components/SectionContents.astro';
 
-Levels, prestige, weapon mastery, blood lineage and the stats that make your vampire stronger.
+Your vampire grows along several tracks at once. Each has its own level and prestige, and each one adds to the attributes on your character sheet.
+
+| Track | Levels | Prestiges | Raised by | Gives |
+|---|---|---|---|---|
+| [Character level](/character/levels-and-xp/) | 1–90 | 20 | Kills, quests, meditation | One permanent buff per prestige |
+| [Weapon mastery](/character/weapon-mastery/) | 0–100 per weapon type | 20 | Kills with that weapon in hand | 3 class-chosen attributes |
+| [Blood lineage](/character/blood-lineage/) | 0–100 per blood type | 20 | Draining (the final bite) | 3 class-chosen attributes |
+| [Class](/classes/) | 3 evolutions | none | Master quests and tributes | Class bonuses, with the class weapon in hand |
+| [Pulses and Transfusions](/endgame/) | After prestige 20 | 250 transfusions | Returning to level 90 | Plasmas for 8 ancestors |
+
+Prestiging any of the three level tracks costs Ourosangue from your Bank, from 75 for the first prestige to 4,467 for the twentieth. Vlad Parker does the first weapon and first blood prestige for free. Your pet has its own level and prestige too. See [Pets](/companions/).
 
 ## Pages in this section
 
 <SectionContents />
-
-## What this section will cover
-
-- Levels 1 to 90 and character prestige, with the full cost table
-- XP sources, bonuses and Quitina (Chitin)
-- Weapon mastery and blood lineage
-- Character statistics and how they relate to equipment

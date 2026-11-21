@@ -1,0 +1,92 @@
+---
+title: Draekhar
+description: Draekhar, the Staff mage of Sangria Falls, and its six Currents (Chains), each replacing the basic attack, Q and E. Abilities, evolutions, attribute bonuses and default attributes, translated from the official class page.
+summary: Draekhar is the pure mage. All damage scales with Spell Power, and it has 40% less max health. You pick one of six Currents (Glacial, Chaos, Storm, Corrupted, Luminous, Blood), each swapping your basic, Q and E.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - class-draekhar
+  - classes
+  - sala-de-treinamento
+labels: [official, verify]
+sidebar:
+  order: 11
+---
+
+import ClassCard from '../../../components/ClassCard.astro';
+import ClassEvolutions from '../../../components/ClassEvolutions.astro';
+import ClassAttributes from '../../../components/ClassAttributes.astro';
+import ClassDefaults from '../../../components/ClassDefaults.astro';
+import Command from '../../../components/Command.astro';
+import Unverified from '../../../components/Unverified.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note" title="Translated from Portuguese">
+The official class page is in Portuguese. Ability, Current and quest names are given in Portuguese with this wiki's translation. Numbers are as published.
+</Aside>
+
+Draekhar is the server's **pure mage**: all its damage scales with Spell Power. Instead of a fixed subclass, you choose a **Current** (*Corrente*, also translated "Chain"). Each one swaps your basic attack, Q and E for an elemental set at once.
+
+<ClassCard id="draekhar" />
+
+## How it scales
+
+- **Benefits from:** Spell Power and Spell Crit.
+- **Doesn't use:** Physical Power or Weapon Skill Power.
+- The basic and Q are spells in every Current. The E is too in Glacial, Chaos and Storm. In Luminous, Blood and Corrupted, the E summons something that inherits your Spell Power and spell crit, so it can crit.
+- **The Staff is the game's Spear.** A Spear held by a Draekhar counts as Staff for mastery.
+- **Unlock quest:** *O Mapa Começa Aqui* (The Map Starts Here), from **Kaelmor Draekhar**.
+- **Required for:** Sangrael (Draekhar Evolution I) and La Muerte (Draekhar Evolution III).
+
+## The six Currents
+
+Your **first Current is free**, chosen when you finish unlocking the class. The other five are quests from Kaelmor (*Variant* in his dialogue). With two or more, switching is free: click the round button next to your class crest and **Use**, or use `.class corrente`.
+
+| Current | Basic | Q | E | Unlock quest |
+|---|---|---|---|---|
+| Glacial (*Glacial*) | *Lança de Cristal* (Crystal Lance) | *Espinhos Rastejantes* (Creeping Spikes) | *Estalactite* (Stalactite) | *O Traço que Não Derrete* |
+| Chaos (*Caos*) | *Seta Caótica* (Chaos Bolt) | *Tremor Caótico* (Chaos Tremor) | *Dardo Caótico* (Chaos Dart) | *A Linha que se Rompe* |
+| Storm (*Tempestade*) | *Dardo Elétrico* (Electric Dart) | *Tiro Pesado* (Heavy Shot) | *Dardos de Iva* (Iva's Darts) | *A Frequência da Tempestade* |
+| Corrupted (*Corrompida*) | *Lâmina de Vento* (Wind Blade) | Summon, see below | *Salto do Cutelo* (Cleaver Leap) | *A Seiva Corrompida* |
+| Luminous (*Luminosa*) | *Projétil do Cardeal* (Cardinal's Projectile) | *Nova de Luz* (Light Nova) | *Discos Sagrados* (Holy Discs), summon | *A Cartografia Sagrada* |
+| Blood (*Sanguínea*) | *Espiral Sanguínea* (Blood Spiral) | *Profecia de Sangue* (Blood Prophecy) | Summon, see below | *A Corrente que Devolve* |
+
+<Unverified q="Q-004">The Corrupted Current's Q is called *Redemoinho do Carniceiro* in the page's Current table but *Jorro Corrompido* in its ability list.</Unverified>
+
+<Unverified q="Q-005">The Current names differ within the page: the list says Caos, Tempestade, Luminosa and Sanguínea, and the ability headings say Caótica, Trovejante, Sagrada and Sangrenta. The Blood Current's E is *Tempestade de Morcegos* in the table and *Pacto Sanguíneo* in the ability list.</Unverified>
+
+## Current abilities
+
+**Glacial.** Basic: fires the Archmage's Crystal Lance (0.5 s cooldown). Q: the Frost Ranger's ice spikes run along the ground towards your aim (8 s). E: hurls the Winter Yeti's stalactite, 230% magic on impact (10 s). It also extends the *Arctic Storm* spell to 5 s instead of 1.2 s: 25 ice cones, freezing at the end (12 s).
+
+**Chaos.** Basic: a projectile dealing about 52% magic that ignites the enemy. Q: a chaos tremor travels in a straight line, about 196% magic, leaving burning ground. E: a chaos dart that explodes on the target, about 225% magic, and ignites it.
+
+**Storm.** Basic: the Gloomrot Stunner's electric dart (0.5 s). Q: the Spider Tank's heavy shot, 200% magic (11 s). E: two of Iva's electric darts, 150% magic each (9 s).
+
+**Corrupted.** Basic: Livith's wind blade (0.5 s). Q (summon, scales with your Spell Power): throws a corruption bubble up to 15 m. It explodes in a 2.5 m radius for 200% magic and splits into 6 splashes (200% each, 1.9 m). Each leaves a corruption pool for 12 s dealing 35% magic per second (13 s cooldown). E: three projectiles from the Butcher's leap, 150% magic each (6 s).
+
+**Luminous.** Basic: the Cardinal's Aide's holy projectile (0.5 s). Q: the Cardinal's Light Nova (16 s). E (summon): places a cocoon up to 10 m away that throws the Paladin's holy discs for 10 s, with 233% of your Spell Power and your crit (30 s).
+
+**Blood.** Basic: Blood Spiral, 80% magic (0.5 s). Q: five projectiles from the Legion's Blood Prophet, 50% magic each (10 s). E (summon): seals a blood pact up to 10 m away, an 8 m explosion for 250% magic. As it fades, it bursts 6 times (one in the centre and five around, 2.5 m each) for 150% magic each (12 s).
+
+## Evolutions
+
+<ClassEvolutions id="draekhar" />
+
+## Attribute bonuses
+
+What the class weapon adds, by grade. The Total includes the Base and all three evolutions. Note the **−40% Max Health**. Hover an attribute for its Portuguese name.
+
+<ClassAttributes id="draekhar" />
+
+## Default attributes
+
+<ClassDefaults id="draekhar" />
+
+## Commands
+
+<Command cmd=".classe corrente">Choose your first Current, or switch between unlocked ones.</Command>
+<Command cmd=".classe info draekhar">Opens the class page in game.</Command>
+<Command cmd=".classe testar draekhar">Try the class in the Training Room. You can pick any Current there.</Command>
+
+The English Classes guide writes the Current command as `.class corrente` ([Q-020](/about/open-questions/#q-020)).

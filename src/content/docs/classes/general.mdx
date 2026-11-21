@@ -1,0 +1,64 @@
+---
+title: General
+description: General, the Twinblades martial commander of Sangria Falls. Prerequisites (the longest of any class), abilities, evolutions, attribute bonuses and default attributes, translated from the official class page.
+summary: General is a physical Twinblades commander whose two heavy skills apply Bleed and Vampiric Curse, draining health to you. It has the longest prerequisite chain, needing Umbrellis II, Mortak III and Bastien III.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - class-general
+  - classes
+labels: [official]
+sidebar:
+  order: 15
+---
+
+import ClassCard from '../../../components/ClassCard.astro';
+import ClassEvolutions from '../../../components/ClassEvolutions.astro';
+import ClassAttributes from '../../../components/ClassAttributes.astro';
+import ClassDefaults from '../../../components/ClassDefaults.astro';
+import Requirements from '../../../components/Requirements.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note" title="Translated from Portuguese">
+The official class page is in Portuguese. Ability and quest names are given in Portuguese with this wiki's translation. Numbers are as published.
+</Aside>
+
+General is **commanding melee** with the Twinblades. Its two heavy skills mark enemies with **Bleed** (*Sangria*) and **Vampiric Curse**, draining health to you. The official page notes it has **the longest prerequisite** of any class.
+
+<Requirements items={['Umbrellis at Evolution II', 'Mortak at Evolution III', 'Bastien at Evolution III']} />
+
+<ClassCard id="general" />
+
+## How it scales
+
+- **Benefits from:** Physical Power, Physical Crit and Weapon Skill Power.
+- **Doesn't use:** Spell Power. The basic attack, *Maça da Tempestade* and *Salto Empalador* are weapon strikes.
+- **Unlock quest:** *A General Carmesim* (The Crimson General), from **Astra General**.
+
+## Abilities
+
+| Key | Ability | What it does |
+|---|---|---|
+| Basic | Primary attack | The General's Twinblades combo. Every three strikes, the class's combat bonus is renewed. |
+| Q | *Maça da Tempestade* (Storm Mace) | Throws the storm mace (60% physical) with a blade of light cutting the same line (140% physical). Anyone hit by the mace is marked with Bleed and Vampiric Curse, draining health to you. |
+| E | *Salto Empalador* (Impaling Leap) | Leap to the target point and crash down: 140% physical around you, with knockback and slow. A rain of spears falls along your path, each dealing 110% physical. Anyone hit by the impact or the spears is marked with Bleed and Vampiric Curse. |
+
+## Evolutions
+
+<ClassEvolutions id="general" />
+
+## Attribute bonuses
+
+What the class weapon adds, by grade. The Total includes the Base and all three evolutions. Hover an attribute for its Portuguese name.
+
+<ClassAttributes id="general" />
+
+## Default attributes
+
+<ClassDefaults id="general" />
+
+## Commands
+
+<Command cmd=".classe info general">Opens the class page in game.</Command>
+<Command cmd=".classe testar general">Try the class in the Training Room, even before you meet the prerequisites.</Command>

@@ -1,0 +1,82 @@
+---
+title: Umbrellis
+description: Umbrellis, the Twinblades, Slashers and Daggers shadow assassin of Sangria Falls. Abilities, evolutions, attribute bonuses and default attributes, translated from the official class page.
+summary: Umbrellis is a physical shadow assassin with the most weapons of any class (Twinblades, Slashers, Daggers). High speed and burst damage, but no resistances or damage reduction from the class. It gains Veil cooldown bonuses.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - class-umbrellis
+  - classes
+labels: [official, verify]
+sidebar:
+  order: 12
+---
+
+import ClassCard from '../../../components/ClassCard.astro';
+import ClassEvolutions from '../../../components/ClassEvolutions.astro';
+import ClassAttributes from '../../../components/ClassAttributes.astro';
+import ClassDefaults from '../../../components/ClassDefaults.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note" title="Translated from Portuguese">
+The official class page is in Portuguese. Ability and quest names are given in Portuguese with this wiki's translation. Numbers are as published.
+</Aside>
+
+Umbrellis is **shadow mobility and burst damage in a short window**. It has more weapons than any other class and gains **Veil cooldown** bonuses. Its attribute tables also carry **No Physical Resistance, No Spell Resistance and No Damage Reduction**.
+
+<ClassCard id="umbrellis" />
+
+## How it scales
+
+- **Benefits from:** Physical Power, Physical Crit and Weapon Skill Power.
+- **Doesn't use:** Spell Power. Lucile's Lethal Injection burst is converted to physical damage.
+- **Unlock quest:** *A Arte da Sobrevivência Silenciosa* (The Art of Silent Survival), from **Mister Nyx Umbrellis**.
+- **Required for:** General needs Umbrellis at Evolution II.
+
+## Abilities
+
+### Slashers
+
+| Key | Ability | What it does |
+|---|---|---|
+| Basic | Primary attack | Each combo strike releases one of Livith's wind blades (4.5 m range, 50%). |
+| Q | *Golpe Elusivo* (Elusive Strike) | Replaces the dash with Livith's double sliding cut: two 12 m cuts towards your aim (80% and 90%) that stop at walls. 10 s cooldown. |
+| E | *Camuflar* (Camouflage) | The standard camouflage. The exit strike brings Lucile's Lethal Injection burst in a 5 m radius (180%, converted to physical). |
+
+### Twinblades
+
+| Key | Ability | What it does |
+|---|---|---|
+| Basic | Primary attack | Each combo strike releases a fan of three of Livith's wind blades at 45° (2.8 m range, 13% each). |
+| Q | *Zagaia* (Javelin) | The standard javelin. Where the blade lands, a ring of eight wind blades bursts out (75% each). |
+| E | *Queda Velada* (Veiled Fall) | Leap through the shadows to a point up to 15 m away, passing through everyone in between. On landing, the twinblades cut everything within 3.5 m (250% physical). |
+
+### Daggers
+
+| Key | Ability | What it does |
+|---|---|---|
+| Q | *Chuva de Adagas* (Dagger Rain) | The standard Dagger Rain, with the class's own visual effect at the start of the throw. |
+
+The official page lists no other changes for Daggers.
+
+## Evolutions
+
+<ClassEvolutions id="umbrellis" />
+
+## Attribute bonuses
+
+What each class weapon adds, by grade. The Total includes the Base and all three evolutions. Hover an attribute for its Portuguese name.
+
+<ClassAttributes id="umbrellis" q="Q-019" />
+
+## Default attributes
+
+<ClassDefaults id="umbrellis" />
+
+## Commands
+
+<Command cmd=".classe info umbrellis">Opens the class page in game.</Command>
+<Command cmd=".classe testar umbrellis">Try the class in the Training Room.</Command>
+
+The English guides use `.class testar umbrellis` ([Q-020](/about/open-questions/#q-020)).

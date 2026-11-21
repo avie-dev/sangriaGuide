@@ -1,0 +1,51 @@
+---
+title: Double Meditation
+description: Double Meditation lets two paths yield at once, each at full XP and full cost. How it's unlocked (donation, separate from VIP) and how to set it up.
+summary: Double Meditation is a separate donation unlock (Discord ticket), not part of VIP. Two different paths yield at once, each with full XP and its own 0.35 Sangricoin per minute.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - meditacao
+  - vip-page
+  - vip
+labels: [official, purchase]
+sidebar:
+  order: 3
+---
+
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+**Double Meditation** makes two paths yield at the same time. Each one gets **full XP** and each one charges its **own 0.35 Sangricoin per minute**, so it costs double.
+
+<Aside type="note" title="How it's unlocked">
+It's a **separate unlock, by donation**: open a ticket on the official Discord (discord.gg/SangriaFalls) and the staff enable it on your account. **It isn't part of VIP**, and neither is the Bloody Pass.
+</Aside>
+
+## Setting it up
+
+<PlayModes>
+	<Fragment slot="interface">
+		1. Press **F10**. The footer of YOUR SESSION shows *Double Meditation unlocked*.
+		2. Each path now has two small buttons, **1st** and **2nd**.
+		3. Click **1st** on your main path and **2nd** on the other. They must be different.
+		4. YOUR SESSION shows both, as PRIMARY and SECONDARY.
+
+		To go back to a single path, click **SELECT** on any path.
+	</Fragment>
+	<Fragment slot="chat">
+		<Command cmd=".meditate double xp pet">Turns on Double Meditation with the Character XP and Pet paths (requires the unlock). Use the path names `xp`, `weapon`, `blood` or `pet`.</Command>
+	</Fragment>
+</PlayModes>
+
+Each path still needs its own condition: the weapon in hand, an active blood, or the pet summoned inside the chamber.
+
+## Cost
+
+| Duration | Double Meditation |
+|---|---|
+| 1 hour | 42 Sangricoins |
+| 8 hours | 336 Sangricoins |
+
+VIP's +50% applies to the XP, not the cost.

@@ -1,0 +1,79 @@
+---
+title: Noctarin
+description: Noctarin, the Longbow and Crossbow archer of Sangria Falls. Abilities, Static Mark passive, evolutions, attribute bonuses and default attributes, translated from the official class page.
+summary: Noctarin is a physical ranged archer with Longbow or Crossbow. Every hit applies Static, a mark that discharges as chain lightning when the target takes damage.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - class-noctarin
+  - classes
+labels: [official]
+sidebar:
+  order: 6
+---
+
+import ClassCard from '../../../components/ClassCard.astro';
+import ClassEvolutions from '../../../components/ClassEvolutions.astro';
+import ClassAttributes from '../../../components/ClassAttributes.astro';
+import ClassDefaults from '../../../components/ClassDefaults.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note" title="Translated from Portuguese">
+The official class page is in Portuguese. Ability and quest names are given in Portuguese with this wiki's translation. Numbers are as published.
+</Aside>
+
+Noctarin is **ranged damage with mobility**. Every hit applies **Static** to the target, and the mark discharges as chain lightning whenever that target takes damage.
+
+<ClassCard id="noctarin" />
+
+## How it scales
+
+- **Benefits from:** Physical Power, Physical Crit and Weapon Skill Power.
+- **Doesn't use:** Spell Power. Every hit is a basic attack or weapon skill.
+- **Unlock quest:** *A Flecha da Névoa* (The Arrow of the Mist), from **Lilith Noctarin**.
+
+## Abilities
+
+### Longbow
+
+| Key | Ability | What it does |
+|---|---|---|
+| Basic | Primary attack | The bow's arrow plus two lightning tendrils that converge at 9 m, the arrow's range. 0.5 s cooldown. Hits apply Static. |
+| Q | *Tiro Múltiplo* (Multishot) | A single volley of 6 arrows in a 50° fan, each followed by a Storm Veil arrow at the same angle. One use per cooldown. |
+| E | *Flecha Guiada* (Guided Arrow) | The standard homing arrow, out and back. Each hit drops the crossbow's Rain of Arrows centre arrow on the target, for up to 6 s. |
+
+### Crossbow
+
+| Key | Ability | What it does |
+|---|---|---|
+| Basic | Primary attack | The crossbow bolt plus two lightning tendrils in a cone 5° to each side. Hits apply Static. |
+| Q | *Chuva de Flechas* (Rain of Arrows) | The crossbow's standard Rain of Arrows, with the class's own visual effect on each bolt. |
+| E | *Disparo Rápido* (Quick Shot) | Three arrows in a tight cone (0° and 5° each side). The first hit sets off a Thunderclap on the target. |
+
+### Passive
+
+- ***Marca Estática* (Static Mark).** Every hit in the kit applies Static. The mark discharges as chain lightning when the target takes damage. It doesn't scale with power.
+
+## Evolutions
+
+<ClassEvolutions id="noctarin" />
+
+## Attribute bonuses
+
+What each class weapon adds, by grade. The Total includes the Base and all three evolutions. Hover an attribute for its Portuguese name.
+
+<ClassAttributes id="noctarin" />
+
+## Default attributes
+
+<ClassDefaults id="noctarin" />
+
+You can swap them for any 3 of 12 in each list in the MASTERY & BLOOD tab.
+
+## Commands
+
+<Command cmd=".classe info noctarin">Opens the class page in game.</Command>
+<Command cmd=".classe testar noctarin">Try the class in the Training Room.</Command>
+
+The English guides use `.class testar noctarin` ([Q-020](/about/open-questions/#q-020)).

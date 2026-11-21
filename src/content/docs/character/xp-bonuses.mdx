@@ -1,0 +1,53 @@
+---
+title: XP bonuses, multipliers and events
+description: Every XP bonus the official Sangria Falls guides mention, including server bonuses, the welcome gift, Quitina, VIP and the Illusory Arena, and which ones stack.
+summary: Server XP bonuses (shown at the top of the screen, .xp), the 3-day welcome gift, Quitina (2x for 30 min per track), VIP (+50% in meditation) and 2.5x character XP in the Illusory Arena.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - nivel-e-prestigio
+  - banco
+  - meditacao
+  - vip
+  - arena-ilusional
+  - rankings
+labels: [official, vip, verify]
+sidebar:
+  order: 3
+---
+
+import Command from '../../../components/Command.astro';
+import Unverified from '../../../components/Unverified.astro';
+import Label from '../../../components/Label.astro';
+
+## The bonuses
+
+| Bonus | Effect | Applies to | How you get it |
+|---|---|---|---|
+| Server XP bonus | Set by the staff | Not specified by the guides; it does count in meditation | Announced in chat with the **[XP]** tag; *XP BONUS ACTIVE* shows at the top of the screen |
+| Welcome gift | Double character XP for 3 days | Character | Starts when you choose your class in the tutorial |
+| [Quitina](/character/quitina/) | Double XP for 30 minutes | Character, Weapon **or** Blood (one Quitina per track) | Outpost missions, Battle Pass |
+| VIP <Label type="vip" /> | +50% XP | **Meditation only** | Donation (Discord ticket) |
+| Illusory Arena | 2.5× character XP from its enemies | Character | Enter the arena |
+
+<Command cmd=".xp">Shows the XP bonuses active right now.</Command>
+
+## What stacks
+
+The official guides state these rules:
+
+- **Server and personal bonuses count together.**
+- **One personal bonus per track.** You can run three Quitinas at once, one each on Character, Weapon and Blood. A second Quitina on the same track is refused and not spent. So is a Quitina on a track where another personal bonus, such as the welcome gift, already applies.
+- **Personal bonuses don't count in meditation.** Only VIP (+50%) and server XP events apply there.
+- **Quitina only works after you've chosen a class** in the tutorial.
+- After 250 transfusions, XP bonuses also apply to Kill Points.
+
+## Hiding the notices
+
+From the minimap gear (HUD Settings), you can turn off the **XP Bonus Notice**, the **Experience HUD** and the **Prestige Bar**.
+
+## What isn't documented
+
+<Unverified q="Q-001">The guides don't say what the "2X" in the RPG 04 server name multiplies, or whether it's a permanent XP rate.</Unverified>
+
+<Unverified q="Q-016">No beginner XP bonus beyond the 3-day welcome gift is documented.</Unverified>

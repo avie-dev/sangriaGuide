@@ -1,0 +1,68 @@
+---
+title: Sangrael
+description: Sangrael, the Staff blood cleric of Sangria Falls and its only true support. Prerequisite, abilities, the Crimson Altar revive, evolutions, attribute bonuses and default attributes, translated from the official class page.
+summary: Sangrael is a magic support. Its attacks damage enemies and heal allies with the same strike, and its ultimate revives every downed vampire within 12 m at full health. Requires Draekhar at Evolution I.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - class-sangrael
+  - classes
+labels: [official]
+sidebar:
+  order: 13
+---
+
+import ClassCard from '../../../components/ClassCard.astro';
+import ClassEvolutions from '../../../components/ClassEvolutions.astro';
+import ClassAttributes from '../../../components/ClassAttributes.astro';
+import ClassDefaults from '../../../components/ClassDefaults.astro';
+import Requirements from '../../../components/Requirements.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note" title="Translated from Portuguese">
+The official class page is in Portuguese. Ability and quest names are given in Portuguese with this wiki's translation. Numbers are as published.
+</Aside>
+
+The official page calls Sangrael the server's **only true support**. It wounds in an area and heals allies with the same strike. Its ultimate raises every downed vampire nearby at full health.
+
+<Requirements items={['Draekhar at Evolution I. Sangrael cannot be your first class.']} />
+
+<ClassCard id="sangrael" />
+
+## How it scales
+
+- **Benefits from:** Spell Power and Spell Crit. Heals come from Spell Power.
+- **Doesn't use:** Physical Power or Weapon Skill Power.
+- *Sangria Menor*, *Liturgia da Ferida* and *Feixe Carmesim* count as spells. *Feixe Carmesim* does **not** count as an ultimate.
+- **The Staff is the game's Spear**, and its mastery counts as Staff.
+- **Unlock quest:** *O Voto do Plantão* (The Vow of the Night Shift), from **Markus Sangrael**.
+
+## Abilities
+
+| Key | Ability | What it does |
+|---|---|---|
+| Basic | *Sangria Menor* (Minor Bloodletting) | Bursts blood where your cursor points: 132% magic in an area with knockback. The same pulse heals allies in the area for 50% of your Spell Power. |
+| Q | *Liturgia da Ferida* (Liturgy of the Wound) | Recite for 1.8 s, immune to knockback, then burst around you: 200% magic and Vampiric Curse on those hit. After 3 s the curse detonates for 150% of your magic damage and drains 30% of it to you as health. Nearby allies recover 150% of your Spell Power, even beyond the limit of the flesh (the black bar). |
+| E | *Feixe Carmesim* (Crimson Beam) | Channel a beam that deals continuous magic damage and applies Drain to enemies, while healing allies in it based on your Spell Power. Each target hit also heals you. |
+| Ultimate | *Alta Carmesim* (Crimson Altar) | After a 1.5 s cast, raises **every downed vampire within 12 m at full health**, ally or not. The class summary adds that it also brings back your last pet that died in the field. Scales with Spell Power and Ultimate Efficiency. |
+| Passive | *Reviver Rápido* (Quick Revive) | Reviving a downed ally takes under a second instead of eight, once every 180 s. |
+
+## Evolutions
+
+<ClassEvolutions id="sangrael" />
+
+## Attribute bonuses
+
+What the class weapon adds, by grade. The Total includes the Base and all three evolutions. Hover an attribute for its Portuguese name.
+
+<ClassAttributes id="sangrael" />
+
+## Default attributes
+
+<ClassDefaults id="sangrael" />
+
+## Commands
+
+<Command cmd=".classe info sangrael">Opens the class page in game.</Command>
+<Command cmd=".classe testar sangrael">Try the class in the Training Room. This works even before you meet the prerequisite.</Command>

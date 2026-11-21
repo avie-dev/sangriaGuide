@@ -1,0 +1,137 @@
+---
+// The attribute bonuses a class weapon gives at each grade, from the official class page.
+//   <ClassAttributes id="mortak" q="Q-018" />
+// The official pages contain a few totals that don't match the sum of their grades. Those cells
+// are flagged, and the build fails unless the page passes `q`: the open question that tracks them.
+import { classDetails, totalMismatches } from '../lib/class-details';
+import { attributeName } from '../data/attribute-names';
+
+interface Props {
+	id: string;
+	/** Open question tracking a published total that doesn't add up, if this class has one. */
+	q?: string;
+}
+const { id, q } = Astro.props;
+const d = classDetails(id);
+const GROUP_NAMES: Record<string, string> = {
+	'Mortak Inabalável': 'Mortak Unshakable',
+	'Mortak Implacável': 'Mortak Relentless',
+	'Sepulkros Invocador': 'Sepulkros Summoner',
+	'Sepulkros Ceifador': 'Sepulkros Reaper',
+};
+const COLS = ['Base', 'I', 'II', 'III', 'Total'] as const;
+const groups = d.attributes.map((g) => {
+	const names: string[] = [];
+	for (const s of [...g.stages].sort((a, b) => (a.stage === 'Total' ? -1 : b.stage === 'Total' ? 1 : 0)))
+		for (const a of s.attrs) if (!names.includes(a.name)) names.push(a.name);
+	const cell = (stage: string, name: string) => {
+		const a = g.stages.find((s) => s.stage === stage)?.attrs.find((x) => x.name === name);
+		return a ? (a.flag ? '✓' : a.value!) : '';
+	};
+	return {
+		title: g.name ? (GROUP_NAMES[g.name] ?? g.name) : null,
+		shared: g.stages.some((s) => s.label === 'Ambas as armas'),
+		rows: names.map((n) => ({ pt: n, en: attributeName(n), cells: COLS.map((c) => cell(c, n)) })),
+		mismatches: new Map(
+			[...totalMismatches(g)].map(([pt, sum]) => {
+				const unit = g.stages.find((s) => s.stage === 'Total')!.attrs.find((a) => a.name === pt)!.value!.endsWith('%') ? '%' : '';
+				return [pt, `${sum > 0 ? '+' : ''}${sum}${unit}`];
+			})
+		),
+	};
+});
+if (groups.some((g) => g.mismatches.size) && !q)
+	throw new Error(`ClassAttributes "${id}": a published total doesn't add up; pass q="Q-xxx" for the open question that tracks it`);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const titles = d.evolutions.map((e) => e.title);
+---
+
+{
+	groups.map((g) => (
+		<figure class="sf-attrs">
+			<table>
+				{g.title && <caption>{g.title}</caption>}
+				<thead>
+					<tr>
+						<th scope="col">Attribute</th>
+						<th scope="col">Base</th>
+						{['I', 'II', 'III'].map((r, i) => (
+							<th scope="col" title={titles[i]}>
+								Evo {r}
+							</th>
+						))}
+						<th scope="col">Total</th>
+					</tr>
+				</thead>
+				<tbody>
+					{g.rows.map((r) => (
+						<tr>
+							<th scope="row" title={r.pt}>
+								{r.en}
+							</th>
+							{r.cells.map((c, i) =>
+								i === 4 && g.mismatches.has(r.pt) ? (
+									<td class="sf-attrs__bad" title={`Base + Evo I–III adds up to ${g.mismatches.get(r.pt)}`}>
+										{c} ⚠
+									</td>
+								) : (
+									<td>{c || '—'}</td>
+								)
+							)}
+						</tr>
+					))}
+				</tbody>
+			</table>
+			{(g.shared || g.mismatches.size > 0) && (
+				<figcaption>
+					{g.shared && <p>The evolution bonuses are the same for every weapon of the class.</p>}
+					{g.mismatches.size > 0 && (
+						<p>
+							⚠ The official page's total doesn't match the sum of its grades for{' '}
+							{[...g.mismatches].map(([pt, sum]) => `${attributeName(pt)} (grades add up to ${sum})`).join('; ')}. Tracked as{' '}
+							<a href={`${base}/about/open-questions/#${q!.toLowerCase()}`}>{q}</a>.
+						</p>
+					)}
+				</figcaption>
+			)}
+		</figure>
+	))
+}
+
+<style>
+	.sf-attrs {
+		margin: 1rem 0;
+		overflow-x: auto;
+	}
+	.sf-attrs table {
+		width: 100%;
+		font-size: var(--sl-text-sm);
+	}
+	.sf-attrs caption {
+		text-align: start;
+		font-weight: 600;
+		padding-bottom: 0.25rem;
+		color: var(--sf-heading);
+	}
+	.sf-attrs td {
+		text-align: end;
+		white-space: nowrap;
+		font-variant-numeric: tabular-nums;
+	}
+	.sf-attrs th[scope='col'] {
+		white-space: nowrap;
+	}
+	.sf-attrs th[scope='row'] {
+		font-weight: 400;
+	}
+	.sf-attrs__bad {
+		color: var(--sl-color-orange-high, #f0a050);
+	}
+	.sf-attrs figcaption {
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-gray-3);
+	}
+	.sf-attrs figcaption p {
+		margin: 0.25rem 0 0;
+	}
+</style>
