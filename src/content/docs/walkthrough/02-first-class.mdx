@@ -1,0 +1,78 @@
+---
+title: 'Stage 2: First class and starter equipment'
+description: Walkthrough stage 2. Choose your free first class, equip its iron weapons and starter kit, and set your mastery and blood attributes.
+summary: Stage 2 pick your free class from its Master in the Classes Hall, equip its iron weapons and starter kit (overflow goes to Mail), choose your variant or Current, and set your 3+3 attributes.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - classes
+  - class-hub
+  - sala-de-treinamento
+  - correio
+labels: [official]
+sidebar:
+  order: 2
+---
+
+import Requirements from '../../../components/Requirements.astro';
+import Checklist from '../../../components/Checklist.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+**Goal:** become a class, equip it properly and understand what makes its bonuses work.
+
+<Requirements items={['The tutorial quest The Path of Blood, up to the Classes Hall step']} />
+
+## 1. Choose your class
+
+When *The Path of Blood* sends you to the Classes Hall, talk to the Master of the class you want, then click **Choose this class** and **Yes, I choose this class**. The first class is free. Unsure which one to pick? See [Choosing your first class](/getting-started/first-class/), which shows every class's weapons and a filterable list.
+
+Three classes can't be chosen first: Sangrael, La Muerte and General need evolutions in other classes.
+
+## 2. Equip the starter gear
+
+You become the class immediately and receive its **iron weapons and a starter kit**. Anything that doesn't fit in your inventory goes to your **Mail** (F6 or `.mail`), so claim it.
+
+<Aside type="caution" title="Hold the class weapon">
+Class bonuses only apply with the class's weapon in hand. Draekhar and Sangrael use the game's **Spear** as their Staff. It works and looks like a staff for those classes.
+</Aside>
+
+## 3. Pick your variant or Current
+
+- **Mortak** and **Sepulkros**: a *Choose your Variant* panel opens (Unshakable or Relentless; Summoner or Reaper). The other variant is a later Master quest.
+- **Draekhar**: choose your first of 6 Currents. The others are later quests from Kaelmor.
+- **La Muerte, Sepulkros and Skarn** summon an ally with their basic attack. Choose it with the round button next to your class crest.
+
+Closed a panel without choosing? Click the round button next to your class crest.
+
+## 4. Set your mastery and blood attributes
+
+Each class uses 3 weapon attributes and 3 blood attributes, which grow with your weapon's and blood's level and prestige. They come pre-selected, and changing them is free.
+
+<Steps>
+
+1. Open your class info (click the class crest or F1 → See more) and go to the **MASTERY & BLOOD** tab.
+2. Check 3 weapon attributes and 3 blood attributes. To pick a different one, uncheck one first.
+3. Click **CONFIRM SELECTION**. RESET returns to the class default.
+
+</Steps>
+
+Without the interface: `.weapon` → *Change mastery attributes* and `.blood` → *Change lineage attributes*.
+
+## Checklist
+
+<Checklist
+	id="wt-02"
+	items={[
+		'Chose a class with its Master',
+		'Equipped the class weapon (and claimed any overflow from Mail)',
+		'Chose a variant or Current if the class has one',
+		'Reviewed the 3 weapon and 3 blood attributes',
+		'Optional: tried other classes in the free Training Room',
+	]}
+/>
+
+## You're done when
+
+You have a class, its weapon in hand, and your attributes set. Remember that switching to another unlocked class later costs 3,000 Ourosangue and keeps all your progress.
+
+**Next:** [Stage 3: Early levelling and bosses](/walkthrough/03-early-levelling/).

@@ -1,0 +1,100 @@
+---
+title: Teleports and teleport hubs
+description: Personal teleport points, the global city teleport and the city's teleport hub on Sangria Falls, with cooldowns, limits and where teleporting is refused.
+summary: Teleporting is free. You save 1 personal point (2 with VIP), which needs a castle; the global teleport goes to the city. Cooldowns are 60 s personal and 30 s global. Vlad Parker's quest The Blood Baptism unlocks it all.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - teleportes
+labels: [official]
+sidebar:
+  order: 14
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import Label from '../../../components/Label.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+Sangria Falls has two travel systems:
+
+- **Teleports** are saved points you use from anywhere.
+- **Teleporters** are fixed braziers in the world, such as the city's teleport hub, which you walk up to.
+
+<QuickFacts
+	facts={[
+		['Cost', 'Free (no Ourosangue, Sangricoins or items)'],
+		['Personal points', '1 (2 with VIP), names up to 10 letters'],
+		['Cooldown', '60 s after a personal point, 30 s after the global one'],
+		['Global teleport', 'City of Sangria'],
+		['Unlocked by', "Vlad Parker's quest The Blood Baptism"],
+	]}
+/>
+
+## Unlocking teleports
+
+**Vlad Parker** unlocks everything in the quest **The Blood Baptism**. During that quest, you must create your point **inside your castle**. After it, you can create points anywhere allowed, including the VIP second point. A personal point needs a castle, either yours or your clan's. Without a castle, your points are erased.
+
+## Opening the teleport panel
+
+<PlayModes>
+	<Fragment slot="interface">Click the **teleport button** next to the minimap (it appears after Vlad Parker's quest), or type `.tp painel`. The panel has two parts: **MY TELEPORTS** and **GLOBAL TELEPORTS**. Your points and the pinned global one also become one-click buttons next to the minimap.</Fragment>
+	<Fragment slot="chat"><Command cmd=".menu teleporte">Opens the teleport menu.</Command><Command cmd=".tp listar">Lists your points.</Command></Fragment>
+</PlayModes>
+
+## Creating a point
+
+<PlayModes>
+	<Fragment slot="interface">
+		1. Stand where you want the point (inside your castle during Vlad Parker's quest).
+		2. Open the panel and find **EMPTY SLOT — CREATE HERE** under MY TELEPORTS.
+		3. Type a short name in the *Teleport name…* field, for example `home`.
+		4. Click **Create**.
+	</Fragment>
+	<Fragment slot="chat">
+		<Command cmd=".tp criar casa">Creates a point called "casa" where you stand. Use your own name, up to 10 letters.</Command>
+	</Fragment>
+</PlayModes>
+
+You can't create a point inside the City of Sangria Falls, inside events, in a boss's area, or in bat form.
+
+## Using, moving and removing a point
+
+<PlayModes>
+	<Fragment slot="interface">Click **Go** next to the point, or its button by the minimap. To remove a point, click the **trash can**. It disappears instantly, with no confirmation.</Fragment>
+	<Fragment slot="chat"><Command cmd=".tp ir casa">Teleports to the "casa" point.</Command><Command cmd=".tp remover casa">Deletes the "casa" point, with no confirmation.</Command></Fragment>
+</PlayModes>
+
+To move a point, remove it and create a new one in the new spot.
+
+## Going to the city
+
+Click the golden city button by the minimap, click **Go** on *City of Sangria* in the panel, or type `.mercado go`. The pin next to the global teleport adds or removes its minimap button. Pets aren't allowed in the city, so a summoned pet is put away before you teleport.
+
+## The city's teleport hub
+
+The braziers in the middle of the city lead to the Schools (members only), the Sangria Bank (after Vlad Parker's teleport quest), the Events Hub, the Classes Hall, Training Room, Professions Hall, Sangrulhos, Meditation and the Museum. See [Navigating Sangria Falls City](/getting-started/city/).
+
+## When teleporting is refused
+
+- In combat, downed, or while reviving someone
+- While talking to an NPC (close the conversation first)
+- In Dracula's room
+- Inside an event (dungeon, Arena, Tower, Rupture, Judgment). You can't turn into a bat there either.
+- **Into** a boss's (V Blood) area, which you have to reach on foot. Teleporting **out** is allowed.
+- On cooldown, when chat shows the seconds left
+
+## Common questions
+
+### My teleports disappeared.
+
+You and your clan no longer have a Castle Heart. Build a castle and create the points again. If your VIP ended, only the second point is removed. <Label type="vip" />
+
+### I can't create a point.
+
+Check that you've reached that step of Vlad Parker's quest, that you're inside your castle if the quest still requires it, that you're not in a forbidden spot, and that you have a free slot.
+
+### A brazier won't let me through.
+
+Either it's a school that isn't yours, or it's the Sangria Bank and you haven't finished Vlad Parker's teleport quest.

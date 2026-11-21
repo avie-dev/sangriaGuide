@@ -21,7 +21,7 @@ A page stub is never counted as finished content.
 | 1 | Research and source inventory | Done (2026-11-22) | 51 guides, 48 chat variants, 63 Portuguese originals, 12 class pages, 7 hubs captured. See source inventory. |
 | 2 | Information architecture and article coverage matrix | Done (2026-11-22) | 191 pages in 18 sections, every brief item mapped (`docs/coverage.yaml`); URL scheme, page types, label rules, unlock-dependency graph and audience paths (`docs/information-architecture.md`); `npm run coverage` validates the matrix and regenerates this tracker; section overviews list their pages from the matrix. |
 | 3 | Site structure and reusable components | Done (2026-11-22) | Components: QuickFacts, Requirements, PlayModes (interface/chat tabs), Command, Currency, CostTable, ClassCard, ClassGrid (filterable), ProgressionPath, Checklist, FilterTable, Label, Unverified, plus automatic breadcrumbs, Before you read, Related guides, Sources, Discord summary and link previews. Validated data collections in `src/data/` (currencies, classes, cost tables; source ids, class references and totals checked at build). Open questions page. Internal link and anchor checking at build (starlight-links-validator); `npm run check:external` for outside links. Component reference at /about/components/. |
-| 4 | Beginner walkthrough | Not started | |
+| 4 | Beginner walkthrough | Done (2026-11-22) | 36 pages written: the 20 Getting started pages (what Sangria Falls is, vs vanilla, vs Bloodcraft, joining, interface install and troubleshooting, chat-only play, language, HUD, website panel, tutorial, first class, city, teleports, NPCs, first castle, first-day and first-week checklists, beginner mistakes) and the walkthrough overview plus Stages 1–15. Every claim is checked against the official guides; none is confirmed in game yet (`verified: partly checked`). Open questions Q-001, Q-002, Q-006, Q-008, Q-009, Q-012, Q-013 and Q-017 are flagged inline where they apply. |
 | 5 | Progression, class and meditation guides | Not started | Class pages need translation from Portuguese |
 | 6 | Economy, professions, pets, equipment | Not started | |
 | 7 | Dungeons, events, endgame | Not started | |
@@ -34,7 +34,7 @@ A page stub is never counted as finished content.
 <!-- coverage:start -->
 _Generated from `docs/coverage.yaml` by `npm run coverage`. Edit the YAML, not these tables._
 
-**191 pages planned** · written: 0 · drafts: 0 · verified: 0 · published: 0 · page stubs: 18
+**191 pages planned** · written: 36 · drafts: 0 · verified: 0 · published: 36 · page stubs: 16
 
 | Phase | Pages |
 |---|---|
@@ -49,47 +49,47 @@ _Generated from `docs/coverage.yaml` by `npm run coverage`. Edit the YAML, not t
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Getting started <br>`/getting-started/` · phase 4 | `primeiros-passos` | sources found | — | — | page stub |  |
-| What is Sangria Falls? <br>`/getting-started/what-is-sangria-falls/` · phase 4 | `primeiros-passos`, `home` | sources found | — | — | — |  |
-| Sangria Falls vs vanilla V Rising <br>`/getting-started/vs-vanilla/` · phase 4 | `primeiros-passos`, `nivel-e-prestigio`, `classes`, `profissoes`, `banco` | sources found | — | — | — | No official comparison: every difference must cite an SF guide |
-| Sangria Falls vs Bloodcraft <br>`/getting-started/vs-bloodcraft/` · phase 4 | `nivel-e-prestigio`, `maestria-de-arma`, `linhagem-de-sangue`, `classes`, `profissoes`, `pets` | sources found | — | — | — | No official comparison; Bloodcraft is not a source for SF mechanics |
-| Joining the server <br>`/getting-started/joining/` · phase 4 | `primeiros-passos` | sources found | — | — | — | Q-001; Q-002 |
-| Installing the interface <br>`/getting-started/interface/` · phase 4 | `interface`, `primeiros-passos` | sources found | — | — | — | Source page is in Portuguese |
-| Interface troubleshooting <br>`/getting-started/interface-troubleshooting/` · phase 4 | `interface` | sources found | — | — | — |  |
-| Playing without the interface <br>`/getting-started/playing-without-the-interface/` · phase 4 | `primeiros-passos`, `comandos` | sources found | — | — | — | Derived from the 48 chat-only guide variants |
-| Setting the language to English <br>`/getting-started/language/` · phase 4 | `primeiros-passos`, `painel-do-site` | sources found | — | — | — |  |
-| Understanding the HUD <br>`/getting-started/hud/` · phase 4 | `primeiros-passos`, `nivel-e-prestigio`, `atalhos` | sources found | — | — | — |  |
-| The website panel <br>`/getting-started/website-panel/` · phase 4 | `painel-do-site` | sources found | — | — | — |  |
-| The Path of Blood tutorial <br>`/getting-started/path-of-blood/` · phase 4 | `missoes`, `classes`, `primeiros-passos` | sources found | — | — | — |  |
-| Choosing your first class <br>`/getting-started/first-class/` · phase 4 | `classes`, `class-hub`, `sala-de-treinamento` | sources found | — | — | — |  |
-| Navigating Sangria Falls City <br>`/getting-started/city/` · phase 4 | `primeiros-passos`, `teleportes` | sources found | — | — | — |  |
-| Teleports and teleport hubs <br>`/getting-started/teleports/` · phase 4 | `teleportes` | sources found | — | — | — |  |
-| Important NPCs <br>`/getting-started/important-npcs/` · phase 4 | `primeiros-passos`, `nivel-e-prestigio`, `profissoes`, `masmorras`, `escolas`, `sangrulhos`, `transfusao-e-plasmas` | sources found | — | — | — | Compiled from mentions across guides |
-| Building your first castle <br>`/getting-started/first-castle/` · phase 4 | `castelo`, `teleportes` | sources found | — | — | — | Castle building itself is base-game; only SF additions are sourced |
-| First-day checklist <br>`/getting-started/first-day/` · phase 4 | `primeiros-passos`, `missoes`, `classes` | sources found | — | — | — |  |
-| First-week roadmap <br>`/getting-started/first-week/` · phase 4 | `nivel-e-prestigio`, `profissoes`, `meditacao`, `pets` | sources found | — | — | — |  |
-| Common beginner mistakes <br>`/getting-started/beginner-mistakes/` · phase 4 | `primeiros-passos`, `nivel-e-prestigio`, `meditacao`, `profissoes` | sources found | — | — | — |  |
+| Getting started <br>`/getting-started/` · phase 4 | `primeiros-passos` | read | written | partly checked | published |  |
+| What is Sangria Falls? <br>`/getting-started/what-is-sangria-falls/` · phase 4 | `primeiros-passos`, `home` | read | written | partly checked | published |  |
+| Sangria Falls vs vanilla V Rising <br>`/getting-started/vs-vanilla/` · phase 4 | `primeiros-passos`, `nivel-e-prestigio`, `classes`, `profissoes`, `banco` | read | written | partly checked | published | No official comparison: every difference must cite an SF guide |
+| Sangria Falls vs Bloodcraft <br>`/getting-started/vs-bloodcraft/` · phase 4 | `nivel-e-prestigio`, `maestria-de-arma`, `linhagem-de-sangue`, `classes`, `profissoes`, `pets` | read | written | partly checked | published | No official comparison; Bloodcraft is not a source for SF mechanics |
+| Joining the server <br>`/getting-started/joining/` · phase 4 | `primeiros-passos` | read | written | partly checked | published | Q-001; Q-002 |
+| Installing the interface <br>`/getting-started/interface/` · phase 4 | `interface`, `primeiros-passos` | read | written | partly checked | published | Source page is in Portuguese |
+| Interface troubleshooting <br>`/getting-started/interface-troubleshooting/` · phase 4 | `interface` | read | written | partly checked | published |  |
+| Playing without the interface <br>`/getting-started/playing-without-the-interface/` · phase 4 | `primeiros-passos`, `comandos` | read | written | partly checked | published | Derived from the 48 chat-only guide variants |
+| Setting the language to English <br>`/getting-started/language/` · phase 4 | `primeiros-passos`, `painel-do-site` | read | written | partly checked | published |  |
+| Understanding the HUD <br>`/getting-started/hud/` · phase 4 | `primeiros-passos`, `nivel-e-prestigio`, `atalhos` | read | written | partly checked | published |  |
+| The website panel <br>`/getting-started/website-panel/` · phase 4 | `painel-do-site` | read | written | partly checked | published |  |
+| The Path of Blood tutorial <br>`/getting-started/path-of-blood/` · phase 4 | `missoes`, `classes`, `primeiros-passos` | read | written | partly checked | published |  |
+| Choosing your first class <br>`/getting-started/first-class/` · phase 4 | `classes`, `class-hub`, `sala-de-treinamento` | read | written | partly checked | published |  |
+| Navigating Sangria Falls City <br>`/getting-started/city/` · phase 4 | `primeiros-passos`, `teleportes` | read | written | partly checked | published |  |
+| Teleports and teleport hubs <br>`/getting-started/teleports/` · phase 4 | `teleportes` | read | written | partly checked | published |  |
+| Important NPCs <br>`/getting-started/important-npcs/` · phase 4 | `primeiros-passos`, `nivel-e-prestigio`, `profissoes`, `masmorras`, `escolas`, `sangrulhos`, `transfusao-e-plasmas` | read | written | partly checked | published | Compiled from mentions across guides |
+| Building your first castle <br>`/getting-started/first-castle/` · phase 4 | `castelo`, `teleportes` | read | written | partly checked | published | Castle building itself is base-game; only SF additions are sourced |
+| First-day checklist <br>`/getting-started/first-day/` · phase 4 | `primeiros-passos`, `missoes`, `classes` | read | written | partly checked | published |  |
+| First-week roadmap <br>`/getting-started/first-week/` · phase 4 | `nivel-e-prestigio`, `profissoes`, `meditacao`, `pets` | read | written | partly checked | published |  |
+| Common beginner mistakes <br>`/getting-started/beginner-mistakes/` · phase 4 | `primeiros-passos`, `nivel-e-prestigio`, `meditacao`, `profissoes` | read | written | partly checked | published |  |
 
 ### Progression walkthrough
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Progression walkthrough <br>`/walkthrough/` · phase 4 | `primeiros-passos` | sources found | — | — | page stub |  |
-| Stage 1: First login and tutorial <br>`/walkthrough/01-first-login/` · phase 4 | `primeiros-passos`, `missoes`, `interface` | sources found | — | — | — |  |
-| Stage 2: First class and starter equipment <br>`/walkthrough/02-first-class/` · phase 4 | `classes`, `class-hub` | sources found | — | — | — |  |
-| Stage 3: Early levelling and bosses <br>`/walkthrough/03-early-levelling/` · phase 4 | `nivel-e-prestigio`, `cacada-de-v-bloods`, `passe-de-batalha`, `pets` | sources found | — | — | — |  |
-| Stage 4: First professions and income <br>`/walkthrough/04-professions-and-income/` · phase 4 | `profissoes`, `coleta-minerador-pescador-lenhador`, `contratos`, `mercador-sombrio`, `recompensa-online` | sources found | — | — | — |  |
-| Stage 5: Weapon mastery and blood lineage <br>`/walkthrough/05-mastery-and-blood/` · phase 4 | `maestria-de-arma`, `linhagem-de-sangue` | sources found | — | — | — |  |
-| Stage 6: Your first pet <br>`/walkthrough/06-first-pet/` · phase 4 | `pets` | sources found | — | — | — |  |
-| Stage 7: Character Prestige 1–10 <br>`/walkthrough/07-prestige-1-10/` · phase 4 | `nivel-e-prestigio`, `meditacao`, `banco` | sources found | — | — | — |  |
-| Stage 8: Character Prestige 11–20 <br>`/walkthrough/08-prestige-11-20/` · phase 4 | `nivel-e-prestigio`, `meditacao`, `auto-prestigio` | sources found | — | — | — |  |
-| Stage 9: Class evolutions <br>`/walkthrough/09-class-evolutions/` · phase 4 | `classes`, `class-hub` | sources found | — | — | — |  |
-| Stage 10: Endgame gear <br>`/walkthrough/10-endgame-gear/` · phase 4 | `masmorras`, `oficios-ferreiro-alfaiate-encantador`, `mercado` | sources found | — | — | — | Q-008 |
-| Stage 11: Vampiric Schools <br>`/walkthrough/11-schools/` · phase 4 | `escolas` | sources found | — | — | — |  |
-| Stage 12: Pulses and Transfusions <br>`/walkthrough/12-pulses-and-transfusions/` · phase 4 | `transfusao-e-plasmas`, `livro-perdido` | sources found | — | — | — |  |
-| Stage 13: Advanced equipment enhancement <br>`/walkthrough/13-advanced-enhancement/` · phase 4 | `oficios-ferreiro-alfaiate-encantador`, `coleta-minerador-pescador-lenhador`, `servicos-de-profissao` | sources found | — | — | — |  |
-| Stage 14: Master and Nightmare dungeons <br>`/walkthrough/14-master-and-nightmare/` · phase 4 | `masmorras`, `quadro-de-grupos`, `incursoes` | sources found | — | — | — | Q-006 |
-| Stage 15: Endgame optimisation <br>`/walkthrough/15-endgame-optimisation/` · phase 4 | `transfusao-e-plasmas`, `rankings`, `torre-dos-imortais` | sources found | — | — | — | Q-009; Q-013 |
+| Progression walkthrough <br>`/walkthrough/` · phase 4 | `primeiros-passos` | read | written | partly checked | published |  |
+| Stage 1: First login and tutorial <br>`/walkthrough/01-first-login/` · phase 4 | `primeiros-passos`, `missoes`, `interface` | read | written | partly checked | published |  |
+| Stage 2: First class and starter equipment <br>`/walkthrough/02-first-class/` · phase 4 | `classes`, `class-hub` | read | written | partly checked | published |  |
+| Stage 3: Early levelling and bosses <br>`/walkthrough/03-early-levelling/` · phase 4 | `nivel-e-prestigio`, `cacada-de-v-bloods`, `passe-de-batalha`, `pets` | read | written | partly checked | published |  |
+| Stage 4: First professions and income <br>`/walkthrough/04-professions-and-income/` · phase 4 | `profissoes`, `coleta-minerador-pescador-lenhador`, `contratos`, `mercador-sombrio`, `recompensa-online` | read | written | partly checked | published |  |
+| Stage 5: Weapon mastery and blood lineage <br>`/walkthrough/05-mastery-and-blood/` · phase 4 | `maestria-de-arma`, `linhagem-de-sangue` | read | written | partly checked | published |  |
+| Stage 6: Your first pet <br>`/walkthrough/06-first-pet/` · phase 4 | `pets` | read | written | partly checked | published |  |
+| Stage 7: Character Prestige 1–10 <br>`/walkthrough/07-prestige-1-10/` · phase 4 | `nivel-e-prestigio`, `meditacao`, `banco` | read | written | partly checked | published |  |
+| Stage 8: Character Prestige 11–20 <br>`/walkthrough/08-prestige-11-20/` · phase 4 | `nivel-e-prestigio`, `meditacao`, `auto-prestigio` | read | written | partly checked | published |  |
+| Stage 9: Class evolutions <br>`/walkthrough/09-class-evolutions/` · phase 4 | `classes`, `class-hub` | read | written | partly checked | published |  |
+| Stage 10: Endgame gear <br>`/walkthrough/10-endgame-gear/` · phase 4 | `masmorras`, `oficios-ferreiro-alfaiate-encantador`, `mercado` | read | written | partly checked | published | Q-008 |
+| Stage 11: Vampiric Schools <br>`/walkthrough/11-schools/` · phase 4 | `escolas` | read | written | partly checked | published |  |
+| Stage 12: Pulses and Transfusions <br>`/walkthrough/12-pulses-and-transfusions/` · phase 4 | `transfusao-e-plasmas`, `livro-perdido` | read | written | partly checked | published |  |
+| Stage 13: Advanced equipment enhancement <br>`/walkthrough/13-advanced-enhancement/` · phase 4 | `oficios-ferreiro-alfaiate-encantador`, `coleta-minerador-pescador-lenhador`, `servicos-de-profissao` | read | written | partly checked | published |  |
+| Stage 14: Master and Nightmare dungeons <br>`/walkthrough/14-master-and-nightmare/` · phase 4 | `masmorras`, `quadro-de-grupos`, `incursoes` | read | written | partly checked | published | Q-006 |
+| Stage 15: Endgame optimisation <br>`/walkthrough/15-endgame-optimisation/` · phase 4 | `transfusao-e-plasmas`, `rankings`, `torre-dos-imortais` | read | written | partly checked | published | Q-009; Q-013 |
 
 ### Character progression
 

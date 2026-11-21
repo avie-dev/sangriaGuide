@@ -1,0 +1,80 @@
+---
+title: 'Stage 3: Early levelling and bosses'
+description: Walkthrough stage 3. How XP works on Sangria Falls, how to level faster, tracking V Blood bosses and earning Battle Pass levels along the way.
+summary: Stage 3 hunt at or above your level, group up (XP isn't split), kill V Bloods (more XP and Battle Pass progress), use the Boss Tracker, and use Quitina for 2x XP.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - nivel-e-prestigio
+  - cacada-de-v-bloods
+  - passe-de-batalha
+  - pets
+  - banco
+labels: [official]
+sidebar:
+  order: 3
+---
+
+import Requirements from '../../../components/Requirements.astro';
+import Checklist from '../../../components/Checklist.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+**Goal:** level your character towards 90 efficiently, and start hunting V Blood bosses.
+
+<Requirements items={['A class (Stage 2)']} />
+
+## How XP works
+
+- XP comes from **killing creatures, doing quests and meditating**. V Bloods give much more.
+- Creatures **weaker than you give less**, and the bigger the gap, the less. Hunt at your level or above.
+- **Groups don't split XP.** Anyone nearby and in combat at the kill gets full XP, even outside your clan.
+- **Your pet's kills count for you.**
+- Docile creatures and creatures from tombs, worm nests and summoning circles give less. Boss summons give nothing.
+- **Dying doesn't cost XP or level.**
+- At **level 90, XP stops counting.** Prestige before you hunt again (Stage 7).
+
+## XP bonuses
+
+| Bonus | What it does | How |
+|---|---|---|
+| Welcome gift | Double character XP for 3 days | Starts when you choose your class in the tutorial |
+| Quitina | Double XP for 30 minutes on Character, Weapon or Blood | Bank (F5) → Quitina card → Use; or drag it out of your inventory (always Character) |
+| Server bonus | Shown as *XP BONUS ACTIVE* at the top of the screen | Type `.xp` for details |
+
+You can run one Quitina on each progression at the same time. On the same progression, a second one is refused (and not spent), and so is one where another personal bonus already applies, such as the welcome gift. Server and personal bonuses stack. Quitina comes from Outpost missions and the Battle Pass.
+
+## Hunting V Bloods
+
+The **Boss Tracker** shows which open-world V Bloods are alive and how long until the others respawn. It tells you *when*, not *where*. Use the game's Blood Altar to find the way.
+
+- Open it from the minimap **gear → Boss Tracker → Manage**. Pin up to 8 bosses to an on-screen BOSSES panel that updates live.
+- A boss shown with a countdown is already in its spot as a red shape you can't attack yet. Wait for the timer to hit zero.
+- You can't teleport into a boss arena or create a teleport there. You can teleport out.
+
+<Command cmd=".boss tempo">Without the interface: lists the bosses spawning right now and each one's time.</Command>
+
+## The Battle Pass starts now
+
+The Battle Pass counts from your first V Blood. Open-world V Bloods give **2 to 10 pass XP** depending on the boss. The XP isn't split: the killer and anyone nearby and in combat get the full value. Rewards don't arrive on their own, so claim them from the **ticket button** by the minimap (a red dot means something is waiting). Leave inventory space: claiming a level with an item needs 10 free slots.
+
+<Aside type="tip">
+Each open-world boss kill also has a 1% chance to give you a pet. See [Stage 6](/walkthrough/06-first-pet/).
+</Aside>
+
+## Checklist
+
+<Checklist
+	id="wt-03"
+	items={[
+		'Hunting creatures at or above my level',
+		'Grouping with others when possible',
+		'Pinned the V Bloods I want in the Boss Tracker',
+		'Claiming Battle Pass rewards as I level',
+		'Using Quitina on weapon or blood while the welcome gift covers character XP',
+	]}
+/>
+
+## You're done when
+
+You're climbing steadily towards level 90, killing V Bloods as you go. Meanwhile, set up your income ([Stage 4](/walkthrough/04-professions-and-income/)) and keep an eye on your weapon and blood levels ([Stage 5](/walkthrough/05-mastery-and-blood/)).

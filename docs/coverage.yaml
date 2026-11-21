@@ -26,114 +26,193 @@ sections:
         brief: ['A: section overview']
         sources: [primeiros-passos]
         phase: 4
-        built: page stub
+        built: published
+        research: read
+        writing: written
+        verified: partly checked
       - slug: getting-started/what-is-sangria-falls
         title: What is Sangria Falls?
         brief: ['A: What is Sangria Falls?']
         sources: [primeiros-passos, home]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: getting-started/vs-vanilla
         title: Sangria Falls vs vanilla V Rising
         brief: ['A: Sangria Falls vs Vanilla V Rising']
         sources: [primeiros-passos, nivel-e-prestigio, classes, profissoes, banco]
         phase: 4
         missing: ['No official comparison: every difference must cite an SF guide']
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: getting-started/vs-bloodcraft
         title: Sangria Falls vs Bloodcraft
         brief: ['A: Sangria Falls vs Bloodcraft']
         sources: [nivel-e-prestigio, maestria-de-arma, linhagem-de-sangue, classes, profissoes, pets]
         phase: 4
         missing: ['No official comparison; Bloodcraft is not a source for SF mechanics']
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: getting-started/joining
         title: Joining the server
         brief: ['A: How to join RPG 04', 'A: Server selection']
         sources: [primeiros-passos]
         phase: 4
         missing: [Q-001, Q-002]
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: getting-started/interface
         title: Installing the interface
         brief: ['A: Installing the custom interface']
         sources: [interface, primeiros-passos]
         phase: 4
         missing: ['Source page is in Portuguese']
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: getting-started/interface-troubleshooting
         title: Interface troubleshooting
         brief: ['A: Interface troubleshooting']
         sources: [interface]
         needs: [getting-started/interface]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: getting-started/playing-without-the-interface
         title: Playing without the interface
         brief: ['A: Installing the custom interface (alternative)']
         sources: [primeiros-passos, comandos]
         phase: 4
         missing: ['Derived from the 48 chat-only guide variants']
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: getting-started/language
         title: Setting the language to English
         brief: ['A: Setting the language to English']
         sources: [primeiros-passos, painel-do-site]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: getting-started/hud
         title: Understanding the HUD
         brief: ['A: Understanding the HUD']
         sources: [primeiros-passos, nivel-e-prestigio, atalhos]
         needs: [getting-started/interface]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: getting-started/website-panel
         title: The website panel
         brief: ['R: (official system not in the brief)']
         sources: [painel-do-site]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: getting-started/path-of-blood
         title: The Path of Blood tutorial
         brief: ['A: The Path of Blood tutorial', 'M: Main tutorial quest']
         sources: [missoes, classes, primeiros-passos]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: getting-started/first-class
         title: Choosing your first class
         brief: ['A: Choosing your first class']
         sources: [classes, class-hub, sala-de-treinamento]
         needs: [getting-started/path-of-blood]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: getting-started/city
         title: Navigating Sangria Falls City
         brief: ['A: Navigating Sangria Falls City']
         sources: [primeiros-passos, teleportes]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: getting-started/teleports
         title: Teleports and teleport hubs
         brief: ['A: Teleport hubs', 'R: Teleportation']
         sources: [teleportes]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: getting-started/important-npcs
         title: Important NPCs
         brief: ['A: Important NPCs']
         sources: [primeiros-passos, nivel-e-prestigio, profissoes, masmorras, escolas, sangrulhos, transfusao-e-plasmas]
         phase: 4
         missing: ['Compiled from mentions across guides']
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: getting-started/first-castle
         title: Building your first castle
         brief: ['A: Building your first castle']
         sources: [castelo, teleportes]
         phase: 4
         missing: ['Castle building itself is base-game; only SF additions are sourced']
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: getting-started/first-day
         title: First-day checklist
         brief: ['A: First-day checklist']
         sources: [primeiros-passos, missoes, classes]
         needs: [getting-started/path-of-blood]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: getting-started/first-week
         title: First-week roadmap
         brief: ['A: First-week progression roadmap']
         sources: [nivel-e-prestigio, profissoes, meditacao, pets]
         needs: [getting-started/first-day]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: getting-started/beginner-mistakes
         title: Common beginner mistakes
         brief: ['A: Common beginner mistakes']
         sources: [primeiros-passos, nivel-e-prestigio, meditacao, profissoes]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
 
   - dir: walkthrough
     title: Progression walkthrough
@@ -143,60 +222,99 @@ sections:
         brief: ['B: overview and stage map']
         sources: [primeiros-passos]
         phase: 4
-        built: page stub
+        built: published
+        research: read
+        writing: written
+        verified: partly checked
       - slug: walkthrough/01-first-login
         title: 'Stage 1: First login and tutorial'
         brief: ['B: Stage 1']
         sources: [primeiros-passos, missoes, interface]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: walkthrough/02-first-class
         title: 'Stage 2: First class and starter equipment'
         brief: ['B: Stage 2']
         sources: [classes, class-hub]
         needs: [walkthrough/01-first-login]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: walkthrough/03-early-levelling
         title: 'Stage 3: Early levelling and bosses'
         brief: ['B: Stage 3']
         sources: [nivel-e-prestigio, cacada-de-v-bloods, passe-de-batalha, pets]
         needs: [walkthrough/02-first-class]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: walkthrough/04-professions-and-income
         title: 'Stage 4: First professions and income'
         brief: ['B: Stage 4']
         sources: [profissoes, coleta-minerador-pescador-lenhador, contratos, mercador-sombrio, recompensa-online]
         needs: [walkthrough/02-first-class]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: walkthrough/05-mastery-and-blood
         title: 'Stage 5: Weapon mastery and blood lineage'
         brief: ['B: Stage 5']
         sources: [maestria-de-arma, linhagem-de-sangue]
         needs: [walkthrough/03-early-levelling]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: walkthrough/06-first-pet
         title: 'Stage 6: Your first pet'
         brief: ['B: Stage 6']
         sources: [pets]
         needs: [walkthrough/03-early-levelling]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: walkthrough/07-prestige-1-10
         title: 'Stage 7: Character Prestige 1–10'
         brief: ['B: Stage 7']
         sources: [nivel-e-prestigio, meditacao, banco]
         needs: [walkthrough/03-early-levelling]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: walkthrough/08-prestige-11-20
         title: 'Stage 8: Character Prestige 11–20'
         brief: ['B: Stage 8']
         sources: [nivel-e-prestigio, meditacao, auto-prestigio]
         needs: [walkthrough/07-prestige-1-10]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: walkthrough/09-class-evolutions
         title: 'Stage 9: Class evolutions'
         brief: ['B: Stage 9']
         sources: [classes, class-hub]
         needs: [walkthrough/04-professions-and-income]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: walkthrough/10-endgame-gear
         title: 'Stage 10: Endgame gear'
         brief: ['B: Stage 10']
@@ -204,24 +322,40 @@ sections:
         needs: [walkthrough/07-prestige-1-10]
         phase: 4
         missing: [Q-008]
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: walkthrough/11-schools
         title: 'Stage 11: Vampiric Schools'
         brief: ['B: Stage 11']
         sources: [escolas]
         needs: [walkthrough/08-prestige-11-20]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: walkthrough/12-pulses-and-transfusions
         title: 'Stage 12: Pulses and Transfusions'
         brief: ['B: Stage 12']
         sources: [transfusao-e-plasmas, livro-perdido]
         needs: [walkthrough/08-prestige-11-20]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: walkthrough/13-advanced-enhancement
         title: 'Stage 13: Advanced equipment enhancement'
         brief: ['B: Stage 13']
         sources: [oficios-ferreiro-alfaiate-encantador, coleta-minerador-pescador-lenhador, servicos-de-profissao]
         needs: [walkthrough/10-endgame-gear]
         phase: 4
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: walkthrough/14-master-and-nightmare
         title: 'Stage 14: Master and Nightmare dungeons'
         brief: ['B: Stage 14']
@@ -229,6 +363,10 @@ sections:
         needs: [walkthrough/10-endgame-gear]
         phase: 4
         missing: [Q-006]
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: walkthrough/15-endgame-optimisation
         title: 'Stage 15: Endgame optimisation'
         brief: ['B: Stage 15']
@@ -236,6 +374,10 @@ sections:
         needs: [walkthrough/12-pulses-and-transfusions]
         phase: 4
         missing: [Q-009, Q-013]
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
 
   - dir: character
     title: Character progression

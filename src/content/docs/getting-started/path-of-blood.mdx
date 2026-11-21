@@ -1,0 +1,113 @@
+---
+title: The Path of Blood tutorial
+description: How the Sangria Falls starter tutorial works, what it teaches and pays, and how to follow and finish it.
+summary: Every new character starts the tutorial on leaving the coffin. Follow the objective on the right, talk to NPCs with F, pick your free class in the Classes Hall, and finish in the city.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - primeiros-passos
+  - missoes
+  - classes
+  - banco
+  - nivel-e-prestigio
+  - profissoes
+  - contratos
+  - teleportes
+labels: [official]
+sidebar:
+  order: 11
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+Every new character starts a guided tutorial. It teaches the server's systems one at a time and pays rewards along the way. The quest that leads to your first class is **The Path of Blood**. Until you finish it, Class Masters won't offer other class journeys or class switches. Follow the tutorial to the end: each step pays XP, and it's the fastest way to earn your first levels.
+
+<QuickFacts
+	facts={[
+		['First quest', 'Where am I?! (active from the start)'],
+		['Tutorial quests', '8'],
+		['Starting balance', '25 Sangricoins; 10,000 Ourosangue earned during the tutorial'],
+		['Welcome gift', 'Double character XP for 3 days after you pick your class'],
+		['Ends in', 'The City of Sangria Falls'],
+	]}
+/>
+
+## What the tutorial covers
+
+According to the official First steps guide, the tutorial introduces:
+
+1. your **level**
+2. the **classes** (you choose your first one, for free, in the Classes Hall)
+3. **prestige**
+4. your **gathering profession**
+5. ways to earn **Ourosangue**, in the *Earning Ourosangue* quest: the Shadow Merchant, Balthazar's contracts and the Outposts
+6. the **Sangrulhos**
+
+It ends by taking you to the City of Sangria Falls.
+
+Other guides mention more tutorial details:
+
+- **Helena Valerius** lets you choose one gathering and one crafting profession during the tutorial.
+- The *Earning Ourosangue* quest includes a one-off apprentice contract from Balthazar: 1,000 wood for 1,500 Ourosangue. It doesn't count towards the daily contract limit.
+- **Vlad Parker's** quest *The Blood Baptism* unlocks teleports. During that quest, you must create your teleport point inside your castle.
+
+The official guides don't publish the full step list. Follow the on-screen objective; it always shows what to do next.
+
+## How to follow it
+
+<Steps>
+
+1. **Create your character and leave the coffin.** The first quest appears on its own. (Without the interface, first choose your language. See [Setting the language to English](/getting-started/language/).)
+
+2. **Watch the current objective.**
+   <PlayModes>
+   	<Fragment slot="interface">It's always on the right side of the screen. Press **F3** for all your quests and their progress.</Fragment>
+   	<Fragment slot="chat">It appears in chat with the **[QUEST]** tag. Forgot it? Type `.quest`.</Fragment>
+   </PlayModes>
+
+3. **Talk to NPCs when asked.** Walk up and interact (**F**). With the interface, a conversation bar opens. Click **Continue** to advance and **Finish** on the last line. Without it, the conversation appears in chat and you answer by typing numbers.
+
+4. **Choose your class** when the tutorial sends you to the Classes Hall. See [Choosing your first class](/getting-started/first-class/).
+
+5. **Keep going to the end.** The tutorial finishes in the city, at the teleport hub.
+
+</Steps>
+
+<Aside type="caution" title="A step only counts when you reach Finish">
+With the interface, closing a conversation early (End conversation or the X) doesn't complete the step. Talk to the NPC again and click through to **Finish**.
+</Aside>
+
+## Rewards worth knowing
+
+- **XP at every step**, plus the **welcome gift**: once you choose your class, character XP counts double for 3 days.
+- **Currency:** you start with 25 Sangricoins and earn 10,000 Ourosangue during the tutorial. Both go to your Bank (F5 or `.menu bank`).
+- **Your class's iron weapons and a starter kit** when you pick your class. Anything that doesn't fit in your inventory goes to your Mail (F6 or `.mail`).
+
+## Some things wait until it's done
+
+The official guides tie a few things to finishing the tutorial:
+
+- **Other classes:** Masters only offer class journeys and switches after *The Path of Blood*.
+- **Meditation:** the MEDITATE button only works once the starter tutorial is finished.
+- **Pets:** you can't summon a pet during the initial tutorial.
+- **Dungeons:** a friend can't invite you until you've finished the starter tutorial.
+- **Double XP from Quitina:** it unlocks only after you choose a class in the tutorial.
+
+## Common questions
+
+### Can I skip tutorial steps?
+
+Tutorial quests can't be abandoned, and step skipping only exists on quests that can be abandoned. You need to play it through.
+
+### An NPC repeats the same line and gives me nothing.
+
+Either you already have that quest, or a requirement is missing. Check the current step:
+
+<Command cmd=".quest">Lists your active quests and each one's current step.</Command>
+
+### Where do I go after the tutorial?
+
+See the [first-day checklist](/getting-started/first-day/), or follow [Stage 2 of the walkthrough](/walkthrough/02-first-class/).

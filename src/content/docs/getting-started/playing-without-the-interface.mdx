@@ -1,0 +1,95 @@
+---
+title: Playing without the interface
+description: How to play Sangria Falls through chat commands, numbered menus and the website panel, without installing any mod.
+summary: Without the interface, type .menu for the numbered general menu, use each system's own command, and use the website panel (sangriafalls.com/painel) for a clickable view.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - primeiros-passos
+  - comandos
+  - atalhos
+  - painel-do-site
+  - missoes
+  - meditacao
+  - pets
+  - teleportes
+  - banco
+labels: [official]
+sidebar:
+  order: 7
+---
+
+import Command from '../../../components/Command.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+The interface is optional. Without it there are no panels or hotkeys, but almost every system works through **chat**. You get numbered menus you answer by typing a number, and direct commands for common actions. The official site has a chat-only version of every guide (the "without interface" variants). This wiki shows both ways in tabs wherever they differ, and remembers which one you picked.
+
+## The general menu
+
+<Steps>
+
+1. Type `.menu` in chat. A numbered list appears.
+2. Type the number of the option you want, for example `2` for Pets.
+3. Type `0` to go back. On the first screen, `0` closes the menu.
+
+</Steps>
+
+<Aside type="caution" title="Stand still">
+Menus close if you walk more than 5 metres while they're open. Chat tells you when that happens. Type the command again and stay put.
+</Aside>
+
+The menu has two screens. The first has Character, Pets, Quests, Teleport, Bank, Market, Mail and Sangrulhos. **More systems** has Battle Pass, School, Achievements, Professions, Meditation, VIP, Dungeons, Rankings, and the weapon, blood and auto-prestige options.
+
+## Talking to NPCs
+
+Interact with an NPC (F) and the conversation appears in chat. Options come numbered under the NPC's name, and you reply by typing the number (`0` exits). Wait for an NPC to finish talking before you interact again.
+
+## Useful commands for your first days
+
+Type commands exactly as shown. Many contain Portuguese words (`.tp criar`, `.pet invocar`), and that's how the server expects them.
+
+<Command cmd=".menu">Opens the server's general menu.</Command>
+<Command cmd=".quest">Lists your active quests and the current step of each.</Command>
+<Command cmd=".lang en">Switches the server to English (`pt` and `es` also work).</Command>
+<Command cmd=".level">Opens the character menu: level, prestige and the cost of your next prestige.</Command>
+<Command cmd=".menu bank">Opens the Bank menu: balances, statement, deposit, withdrawal and exchange.</Command>
+<Command cmd=".mercado go">Teleports you to the market, in the City of Sangria Falls.</Command>
+<Command cmd=".menu teleporte">Opens the teleport menu.</Command>
+<Command cmd=".tp criar casa">Creates a personal teleport point called "casa" where you stand.</Command>
+<Command cmd=".tp ir casa">Teleports to your point called "casa".</Command>
+<Command cmd=".meditate">Opens the meditation menu.</Command>
+<Command cmd=".pet">Opens the pets menu.</Command>
+<Command cmd=".prof">Opens the professions menu.</Command>
+<Command cmd=".class">Opens the classes menu.</Command>
+<Command cmd=".online">Shows your online time and Online Reward streak.</Command>
+<Command cmd=".mail">Opens your mail.</Command>
+<Command cmd=".top">Opens the server rankings.</Command>
+
+The official [commands page](https://www.sangriafalls.com/en/guias/comandos/) lists all 309 player commands by system. It's in Portuguese, even on the English site, and its examples use the Portuguese spellings (for example `.nivel` where the English guides use `.level`).
+
+## Cutting down chat spam
+
+<Command cmd=".level log">Turns character XP messages on or off. `.weapon log`, `.blood log` and `.pet log` do the same for weapon, blood and pet XP.</Command>
+<Command cmd=".notice interface">Turns off the reminder to install the interface that appears when you log in. Type it again to turn it back on.</Command>
+
+## The website panel: clicks without the mod
+
+The [website panel](/getting-started/website-panel/) at sangriafalls.com/painel is a second screen in your browser. Sign in with Steam while you're online in game, and you can do most of what the in-game panels do: prestige, meditation, teleports, market, mail, collections and more. The staff describe it as the graphical option for players without the interface.
+
+## What you miss without the interface
+
+The official guides say almost everything works without it, and each guide warns you when a screen exists only in the interface. Examples mentioned in the guides:
+
+- The Profile panel, with picture, summed attributes and statistics. Without it, separate chat commands show your progress.
+- Chest Management, the searchable list of everything in your castle chests.
+- Hotkeys and on-screen bars, such as the XP bar, Prestige Bar and quest list.
+
+## Common questions
+
+### I typed a number and nothing happened.
+
+The menu closed, either because you walked or because none was open. Type `.menu` again and stand still.
+
+### I can't leave the crypt at the start.
+
+Without the interface you first choose your language. Three NPCs appear when you leave the coffin, one per language. Talk to the English one or type `.lang en`. The crypt door opens only after you choose.

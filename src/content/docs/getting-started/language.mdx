@@ -1,0 +1,60 @@
+---
+title: Setting the language to English
+description: How to switch the server, the launcher, the website panel and the official site to English, and which parts stay in Portuguese.
+summary: Type .lang en in game. The launcher, website panel and official site each have their own language setting. Some official reference pages and in-game labels stay in Portuguese.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - primeiros-passos
+  - interface
+  - painel-do-site
+  - comandos
+  - classes
+labels: [official]
+sidebar:
+  order: 8
+---
+
+import Command from '../../../components/Command.astro';
+import PlayModes from '../../../components/PlayModes.astro';
+
+The server supports **Portuguese, English and Spanish**. Each place you use has its own setting.
+
+## In game
+
+<PlayModes>
+	<Fragment slot="interface">
+		With the interface, the server speaks your **game's language** automatically. To change it at any time, type:
+
+		<Command cmd=".lang en">Switches the server to English. `.lang pt` and `.lang es` switch to Portuguese and Spanish.</Command>
+	</Fragment>
+	<Fragment slot="chat">
+		Without the interface, you choose your language as soon as you leave the coffin. Three NPCs appear in front of you, one per language. Interact (F) with the English one. The NPCs disappear and the crypt door opens. **The door stays shut until you choose.**
+
+		Prefer to type? Use the same command, any time:
+
+		<Command cmd=".lang en">Switches the server to English. `.lang pt` and `.lang es` switch to Portuguese and Spanish.</Command>
+	</Fragment>
+</PlayModes>
+
+## Elsewhere
+
+| Where | How to set English |
+|---|---|
+| Sangria Falls Launcher | In the launcher's settings, choose Portuguese, English or Spanish. |
+| Website panel (sangriafalls.com/painel) | It follows the site language. Use the language selector on the site's top bar. |
+| Official site | The language selector on the top bar. English pages live under sangriafalls.com/en/. |
+
+## What stays in Portuguese
+
+Even with everything set to English, you'll still see Portuguese in a few places. On the official site, these pages are in Portuguese even under /en/:
+
+- the 12 individual class pages
+- the full commands page
+- the interface shortcuts page
+- the interface install page
+- the VIP page
+
+In game, some labels and names are Portuguese. The official guides mention, for example, the Mission Board chalkboards labelled *Quadro de Missões*, and the word *privado* that keeps a chest out of automatic storage. Exit doors are labelled *Sair / Salir / Exit*.
+
+Commands are never translated. Some contain Portuguese words (`.tp criar`, `.banco depositar cristal`) and must be typed exactly as written. This wiki always shows the command as the server expects it and translates only the description.

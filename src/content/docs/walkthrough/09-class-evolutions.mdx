@@ -1,0 +1,74 @@
+---
+title: 'Stage 9: Class evolutions'
+description: Walkthrough stage 9. Evolve your class through its three paid evolutions, unlock other classes, and meet the prerequisites for Sangrael, General and La Muerte.
+summary: Stage 9 each class has 3 evolution quests ending in tributes of 15,000, 30,000 and 45,000 Ourosangue. Other classes unlock through their Master's quest. Three classes need evolutions elsewhere first.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - classes
+  - class-hub
+labels: [official]
+sidebar:
+  order: 9
+---
+
+import Requirements from '../../../components/Requirements.astro';
+import Checklist from '../../../components/Checklist.astro';
+import CostTable from '../../../components/CostTable.astro';
+import ClassCard from '../../../components/ClassCard.astro';
+import { Steps } from '@astrojs/starlight/components';
+
+**Goal:** evolve your main class and, if you like, unlock others.
+
+<Requirements items={['The Path of Blood finished (Masters offer nothing else before that)', 'Ourosangue in your Bank for the tribute']} />
+
+## Evolving your class
+
+Each class has **3 evolutions**, done in order. Each one is a quest from the class's Master that ends with a **tribute** taken from your Bank. Evolution bonuses stack and are permanent.
+
+<CostTable id="class-evolution" />
+
+<Steps>
+
+1. With the class active, talk to its Master.
+2. Choose the first evolution's option, for example *I want to begin the Initiate's Oath (Evolution 1).*
+3. Complete the quest steps (track them in F3 or with `.quest`).
+4. On the last step, choose *Pay 15,000 Ourosangue.* If you're short, the quest waits. Deposit and talk to the Master again.
+
+</Steps>
+
+## Unlocking another class
+
+After *The Path of Blood*, any Master offers their class's journey, for example *Yes. I want to start the Mortak journey.* Finish the quest and the class is unlocked; you switch to it immediately. Unlocked classes are yours forever. Switching back to one costs 3,000 Ourosangue at its Master, and you keep everything: evolutions, Currents, variants and attributes.
+
+<CostTable id="class-switch" />
+
+## Classes with prerequisites
+
+<ClassCard id="sangrael" />
+<ClassCard id="general" />
+<ClassCard id="la-muerte" />
+
+To reach La Muerte, for example, you need Draekhar and Sepulkros to Evolution III and Carmesyne to Evolution II, which means unlocking and evolving those classes first.
+
+## Extra quests along the way
+
+- **Draekhar:** the five other Currents are quests from Master Kaelmor (*Variant* in his dialogue).
+- **Mortak and Sepulkros:** the second variant is a Master quest with kills, two bosses, a night challenge, blood and more.
+- **La Muerte, Sepulkros and Skarn:** locked summons unlock by defeating that creature while playing the class with a **Minion Collector** in your inventory. Collectors come from dungeon rewards.
+
+## Checklist
+
+<Checklist
+	id="wt-09"
+	items={[
+		'Evolution I of my main class',
+		'Evolution II of my main class',
+		'Evolution III of my main class',
+		'Unlocked a second class',
+	]}
+/>
+
+## You're done when
+
+Your main class is at Evolution III, or you're working towards a prerequisite class. See [Classes](/classes/). **Next:** [Stage 10: Endgame gear](/walkthrough/10-endgame-gear/).

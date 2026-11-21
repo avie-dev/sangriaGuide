@@ -1,0 +1,70 @@
+---
+title: 'Stage 10: Endgame gear'
+description: Walkthrough stage 10. Where Sangria Falls endgame weapons and gear come from, including dungeons, the Market and Outposts, and how crafting fortification makes them stronger.
+summary: Stage 10 legendary weapons drop in dungeons (set an affinity) and some Outpost weeklies. Buy on the Market. Fortify with your craft (2,000 Ourosangue per level, up to your craft prestige).
+status: written
+lastVerified: 2026-11-22
+sources:
+  - masmorras
+  - oficios-ferreiro-alfaiate-encantador
+  - mercado
+  - postos-avancados
+  - servicos-de-profissao
+labels: [official, verify]
+sidebar:
+  order: 10
+---
+
+import Requirements from '../../../components/Requirements.astro';
+import Checklist from '../../../components/Checklist.astro';
+import Unverified from '../../../components/Unverified.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+**Goal:** get endgame-quality weapons and gear, and start strengthening them.
+
+<Requirements items={['A group of 2–4 for dungeons (enemies there are always level 90)', 'Ourosangue for fortification and Market purchases']} />
+
+<Unverified q="Q-008">The official guides describe dungeon, Outpost and Market sources, and crafting upgrades. They don't describe the full armour and jewellery progression outside dungeons, or which base-game loot sources Sangria Falls has changed.</Unverified>
+
+## Where gear comes from
+
+**Dungeons.** Every win rolls a chance at a **Blue, Purple or Legendary weapon**, plus materials. Before entering, set your **affinity** at Mark: when a weapon drops, it has a 40% chance of being the type you chose. Affinity doesn't raise the chance of getting a weapon. Start with the Adventurer and Veteran tiers. See [Dungeons](/dungeons/).
+
+**Outposts.** Rank III and above adds specialty loot. **Silverlight Hills** (Cassandra) specialises in armour and **Ruins of Mortium** (Velanna) in necklaces. At Rank V, the weekly at some outposts can even give a legendary weapon.
+
+**The Market.** Other players sell gear in the city (press L). Legendary weapons have minimum prices: 5,000 Ourosangue for Blue, 10,000 for Purple and 20,000 for Orange (unique), plus 1,000 per fortification level and 2,000 per refinement. Purchases are instant, with no confirmation.
+
+## Making gear stronger: fortification
+
+Your crafting profession fortifies one kind of gear:
+
+| Craft | Works on | Per fortification level |
+|---|---|---|
+| Blacksmith | Weapon | +2 Physical Power |
+| Tailor | Chest, gloves, legs, boots | +9 Health per piece |
+| Enchanter | Necklace | +2 Magic Power |
+
+- You can fortify up to your **craft prestige** (at most 10). You need at least 1 prestige.
+- It costs **2,000 Ourosangue per level gained**, the same whether you go one level at a time or straight up. The Tailor pays per piece.
+- Fortification only goes up, and it's saved on the item. Each level also raises maximum durability.
+- Open the panel from your mentor (*Open Fortification & Refinement panel*) or with `.blacksmith panel`, `.tailor panel` or `.enchanter panel`.
+
+<Aside type="tip" title="Not the right craft?">
+Hire another player through **Profession Services** (F4 → Services, or `.services`). Providers need 5+ prestiges in their craft. You pay their price plus the normal 2,000 per level. See [Stage 13](/walkthrough/13-advanced-enhancement/).
+</Aside>
+
+## Checklist
+
+<Checklist
+	id="wt-10"
+	items={[
+		'Forged Adventurer keys and ran a first dungeon with a group',
+		'Set a weapon affinity at Mark',
+		'Got a craft prestige and fortified one piece',
+		'Checked the Market for my weapon type',
+	]}
+/>
+
+## You're done when
+
+You have a legendary weapon or are farming dungeons for one, and your gear is being fortified. **Next:** [Stage 11: Vampiric Schools](/walkthrough/11-schools/) (prestige 20), and later [Stage 13](/walkthrough/13-advanced-enhancement/) and [Stage 14](/walkthrough/14-master-and-nightmare/).

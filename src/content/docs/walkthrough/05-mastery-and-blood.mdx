@@ -1,0 +1,77 @@
+---
+title: 'Stage 5: Weapon mastery and blood lineage'
+description: Walkthrough stage 5. Level the weapon and blood your class uses, choose their attributes, and take the free first prestige from Vlad Parker.
+summary: Stage 5 kill with your class weapon in hand (mastery) and finish creatures with a bite (blood). At level 100, let Vlad Parker do each one's first prestige for free.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - maestria-de-arma
+  - linhagem-de-sangue
+  - classes
+  - meditacao
+labels: [official]
+sidebar:
+  order: 5
+---
+
+import Requirements from '../../../components/Requirements.astro';
+import Checklist from '../../../components/Checklist.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+**Goal:** raise the weapon type and blood type you use, because they feed your class its mastery and lineage bonuses.
+
+<Requirements items={['A class (the Awakened has no mastery or lineage attributes)']} />
+
+## How they work
+
+| | Weapon mastery | Blood lineage |
+|---|---|---|
+| Tracked per | Weapon type (sword, axe, spear, pistols…) | Blood type (Warrior, Rogue, Scholar, Brute, Worker…) |
+| Level / prestige | 0–100 / up to 20 | 0–100 / up to 20 |
+| XP from | Kills, with the weapon **in your hand at the moment of the kill** | **Draining** a creature (the final bite) |
+| Also from | V Bloods (more), meditation | V Bloods (by boss level), meditation |
+| No XP from | Fighting unarmed; boss summons; tombs, worm nests, summoning circles | Plain kills; Frail blood |
+| Gives your class | 3 mastery attributes | 3 lineage attributes |
+
+Both grow with level and prestige. Prestiging returns the level to 0 but **keeps** the bonuses you've earned and raises their cap, and it doesn't slow your XP.
+
+## Levelling blood faster
+
+The official guide says the fastest way by far is draining creatures of **the same blood type as yours**. A high-level creature with high-quality blood also gives more, and so does higher quality blood of your own.
+
+## Your attributes
+
+The attributes your class uses come pre-selected. You can change them for free at any time in your class's **MASTERY & BLOOD** tab (see [Stage 2](/walkthrough/02-first-class/)). The choice is saved per class, and you can only edit the active class. The tab's NOW column shows your current bonus. The other columns show the maximum at level 100 with prestige 0, 10 and 20.
+
+## The free first prestige
+
+<Aside type="tip" title="Talk to Vlad Parker before you click">
+The first time a weapon or blood reaches level 100, a *Weapon Mastery* or *Blood Lineage* mission appears. **Vlad Parker**, in the Winery of the City of Sangria Falls, does that first prestige for free. Clicking PRESTIGE on the HUD instead charges Ourosangue at once, with no confirmation.
+</Aside>
+
+After the first, each prestige costs Ourosangue from your Bank: from 75 up to 4,467 for the twentieth, the same range as character prestige. To see the cost first, ask Vlad (*I want to prestige.* → *Weapon Mastery.* or *Blood Lineage.*). He only prestiges after you click **Confirm.**
+
+## Useful commands
+
+<Command cmd=".weapon">Opens the weapon mastery menu, including attribute choice.</Command>
+<Command cmd=".blood">Opens the blood lineage menu, including attribute choice.</Command>
+<Command cmd=".weapon info">Level, prestige and XP of every weapon.</Command>
+<Command cmd=".blood info">Level, prestige and XP of every blood type.</Command>
+
+## Checklist
+
+<Checklist
+	id="wt-05"
+	items={[
+		'Always killing with my class weapon in hand',
+		'Finishing creatures with a bite to level my blood',
+		'Draining creatures of my own blood type when I can',
+		'Took the free first weapon prestige from Vlad Parker',
+		'Took the free first blood prestige from Vlad Parker',
+	]}
+/>
+
+## You're done when
+
+Your class weapon and main blood have each had their free first prestige, and you know how to keep them climbing. Meditation can also level them, one path at a time (see [Meditation](/meditation/)). **Next:** [Stage 6: Your first pet](/walkthrough/06-first-pet/).

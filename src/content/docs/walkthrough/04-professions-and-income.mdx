@@ -1,0 +1,84 @@
+---
+title: 'Stage 4: First professions and income'
+description: Walkthrough stage 4. Pick your professions and build a daily Ourosangue routine from gathering, profession orders, Balthazar's contracts, Outposts, the Shadow Merchant and the Online Reward.
+summary: Stage 4 pick one crafting and one gathering profession, then build a daily routine of an Outpost mission, Balthazar's contracts and profession orders. Sell spare materials to the Shadow Merchant.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - profissoes
+  - coleta-minerador-pescador-lenhador
+  - contratos
+  - mercador-sombrio
+  - recompensa-online
+  - postos-avancados
+  - banco
+labels: [official]
+sidebar:
+  order: 4
+---
+
+import Requirements from '../../../components/Requirements.astro';
+import Checklist from '../../../components/Checklist.astro';
+import Command from '../../../components/Command.astro';
+import Currency from '../../../components/Currency.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+**Goal:** have both professions running and a daily Ourosangue routine. Prestige, evolutions, transfusions and much more are paid in <Currency id="ourosangue" />, from your Bank.
+
+<Requirements items={['The tutorial finished (Stage 1)']} />
+
+## 1. Your professions
+
+You keep **one crafting** trade (Blacksmith, Tailor or Enchanter) and **one gathering** trade (Miner, Fisher or Woodcutter). The tutorial already lets you choose both with Helena Valerius. Their mentors are in the **Professions Hall**: Ornn, Label, Mirana, Holmo, Mirel and Bram.
+
+- Only the **active** profession earns XP. Each goes from level 0 to 100, with 10 prestiges.
+- **Level alone gives no bonus.** It unlocks better orders and leads to prestige, which is where the bonuses come from.
+- Your first change in each category is free. Later changes cost 1,000 Sangricoins and need 120 days since the last one.
+
+Gathering also pays Ourosangue straight to your Bank on every action: **25 per vein** (Miner), **70 per catch** (Fisher) and **10 per tree** (Woodcutter), more with prestige. Castle trees don't count. The official guides don't publish hourly rates, so this wiki doesn't compare the three (see [Q-012](/about/open-questions/#q-012)).
+
+## 2. Profession orders
+
+For each active profession, your mentor offers **2 orders a day, 1 special order a week and 1 hunt a week**. Talk to the mentor, accept one (a single click accepts), complete it, and return to turn it in for profession XP and Ourosangue. Dailies renew every day, and the special order and hunt renew on Monday (Brasília time). You can't swap or abandon an order.
+
+## 3. Balthazar's contracts
+
+Balthazar, the Master of Contracts, is at **City Hall**. You get **8 personal offers a day** for materials, can accept **3 a day**, and can hold up to **5** accepted contracts. Accepted contracts never expire. Payment goes straight to your Bank, and each completed contract adds a rank point that raises his future pay.
+
+<Command cmd=".contract panel">Opens the contracts panel from anywhere.</Command>
+
+While you've only defeated Act 1 V Bloods, Balthazar adds 2 extra raw-material offers a day at 500 Ourosangue each. They count towards your 3 daily accepts.
+
+## 4. An Outpost mission
+
+There are 7 Outposts, each with a commander. You get **1 daily and 1 weekly mission in total** (not per outpost). Choose one, and you can't switch or abandon it. Find them on a city *Mission Board* or with `.outpost`. Missions pay Quitina and Ourosangue straight to the Bank (the daily: 1 Quitina + 1,500–2,500 Ourosangue by rank), and they build reputation with that outpost.
+
+<Aside type="tip" title="Start with Farbane">
+At prestige 0 and below level 50, Outpost missions ask for Farbane's V Bloods, so the official guide suggests starting at the Farbane outpost.
+</Aside>
+
+## 5. Sell spare materials
+
+The **Shadow Merchant** buys listed materials for a fixed price per unit, from anywhere and instantly. Open it with the **Taunt** emote or `.inv view`. Common materials are worth very little. It's for clearing your bag, not for getting rich, and sales are final. If you're not in a hurry, the Market's automatic sale pays 15% more per unit after 7 to 30 days.
+
+## 6. Free Sangricoins: the Online Reward
+
+Stay online 30 minutes in a day and you receive a reward, then another every 15 minutes, with no daily cap. Each is worth 0.40 Sangricoin on day 1 of a streak, rising to 0.70 from day 7. It's automatic. Type `.online` to see your streak. Sangricoins pay for meditation.
+
+## Checklist
+
+<Checklist
+	id="wt-04"
+	items={[
+		'Chose a crafting and a gathering profession',
+		'Accepted today\'s profession orders',
+		'Accepted up to 3 Balthazar contracts',
+		'Took an Outpost daily (and the weekly)',
+		'Sold spare materials to the Shadow Merchant',
+		'Stayed online 30 minutes for the Online Reward',
+	]}
+/>
+
+## You're done when
+
+You have a repeatable daily routine bringing in Ourosangue, and your professions are levelling. **Next:** [Stage 5: Weapon mastery and blood lineage](/walkthrough/05-mastery-and-blood/). Later, your class evolutions ([Stage 9](/walkthrough/09-class-evolutions/)) will use this income.

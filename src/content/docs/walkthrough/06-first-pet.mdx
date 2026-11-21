@@ -1,0 +1,83 @@
+---
+title: 'Stage 6: Your first pet'
+description: Walkthrough stage 6. Capture a world boss as a pet, summon it, level it, and understand tiers, souls and where pets can't go.
+summary: Stage 6 every open-world boss kill has a 1% chance to become a pet. Summon it with F2 (or .pet), keep it out while hunting so it levels, and raise its tier with souls.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - pets
+  - escolas
+  - meditacao
+labels: [official]
+sidebar:
+  order: 6
+---
+
+import Requirements from '../../../components/Requirements.astro';
+import Checklist from '../../../components/Checklist.astro';
+import QuickFacts from '../../../components/QuickFacts.astro';
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+**Goal:** capture your first pet and keep it levelling alongside you.
+
+<Requirements items={['The initial tutorial finished (you cannot summon a pet during it)']} />
+
+<QuickFacts
+	facts={[
+		['Capture chance', '1% per open-world boss kill'],
+		['Summoned at once', '1'],
+		['Tiers', 'T0 to T5, raised with souls'],
+		['Level / prestige', '1–100 / 20'],
+	]}
+/>
+
+## 1. Capture one
+
+Defeat bosses in the **open world**. Each kill has a **1% chance** to give you that boss as a pet. If you already own it, a successful roll gives +1 soul of it instead.
+
+- **Can't be captured:** Sir Erwin, Gaius, Solarus, Talzur, Adam, Megara and Dracula.
+- **No pet chance:** Illusional Arena and dungeon bosses. Tower bosses and bosses summoned in your castle only drop a soul, and only if you already own that pet.
+- Your school's Sunday bonus doubles the capture chance (from prestige 20, see [Stage 11](/walkthrough/11-schools/)).
+
+## 2. Summon it
+
+<PlayModes>
+	<Fragment slot="interface">Press **F2**, click the pet and click **SUMMON** (DISMISS puts it away). Star up to 3 favourites for one-click summoning. The **Clap** emote summons your last pet, and using it again puts the pet away.</Fragment>
+	<Fragment slot="chat"><Command cmd=".pet">Opens the pets menu.</Command><Command cmd=".pet invocar 3">Summons pet number 3 (the number is shown before its name in the list).</Command><Command cmd=".pet retirar">Puts away the active pet.</Command></Fragment>
+</PlayModes>
+
+There's a 5-second wait between summons. You can't summon in combat, while downed, in bat form, or in Dominant Presence.
+
+## 3. Level it
+
+Your pet earns XP from your kills while it's summoned, and bosses give more. Its kills also count for your XP. You can also meditate on the **Pet** path with the pet summoned inside the Meditation Chamber.
+
+At level 100, a pet **PRESTIGE** button appears next to your HUD (or use `.pet prestige`, with the pet summoned). Pet prestige is free and makes the pet stronger, but each prestige reduces its XP gain by 3%.
+
+## 4. Raise its tier
+
+Tiers (T0 to T5) make the pet stronger. Each raise costs 1 soul of the pet itself. From T2 up, it also costs *sacrificed souls* from the pet's act: 1 for T2, 2 for T3, 4 for T4 and 8 for T5. Any pet of the same act can donate souls to the shared pool. **Sacrificing is permanent.**
+
+Soul items (Act 1 Soul to Act 4 Soul, Primordial Soul, Special Soul) give +1 soul to a random pet of that group. Drag the item out of your inventory to use it.
+
+<Aside type="note" title="Where pets can't go">
+Pets can join you in the Rupture, the Illusional Arena and the Tower. They **can't** enter the Trial, dungeons, the City of Sangria Falls or the class test room. The game puts your pet away when you enter those. If it doesn't come back on its own afterwards, summon it again.
+</Aside>
+
+## Checklist
+
+<Checklist
+	id="wt-06"
+	items={[
+		'Hunting open-world bosses that can be captured',
+		'Captured a first pet',
+		'Keeping it summoned while I hunt',
+		'Know where pets are not allowed',
+	]}
+/>
+
+## You're done when
+
+You have a pet fighting with you. Cristais, which add extra pet attributes, come later from Master and Nightmare dungeons ([Stage 14](/walkthrough/14-master-and-nightmare/)). More in [Pets and companions](/companions/). **Next:** [Stage 7: Character Prestige 1–10](/walkthrough/07-prestige-1-10/).

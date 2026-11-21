@@ -1,0 +1,94 @@
+---
+title: The website panel
+description: Use sangriafalls.com/painel as a second screen for the game, sign in with Steam, unlock actions safely with .site yes, and see what it can do.
+summary: The website panel (sangriafalls.com/painel) is a browser second screen. Sign in with Steam while online in game; viewing is free, actions need a time-limited unlock confirmed with .site yes.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - painel-do-site
+labels: [official]
+sidebar:
+  order: 10
+---
+
+import Command from '../../../components/Command.astro';
+import QuickFacts from '../../../components/QuickFacts.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+The website panel is a second screen for the game, in your browser, on phone or PC. It shows your progress and lets you do most of what the in-game panels do. It works with or without the interface. For players without the interface, it's the graphical alternative to chat commands.
+
+<QuickFacts
+	facts={[
+		['Address', 'sangriafalls.com/painel'],
+		['Sign-in', 'Steam only (the site never sees your password)'],
+		['Needs', 'You online on the server'],
+		['Actions', 'Unlocked for 5 minutes to 12 hours, confirmed in game'],
+	]}
+/>
+
+## Sign in
+
+<Steps>
+
+1. Open [sangriafalls.com/painel](https://www.sangriafalls.com/painel), or click the person icon on the right of the official site's top bar.
+2. Click **Sign in with Steam** and confirm on the Steam page.
+3. Join the server in game. The panel shows your character, level, prestige and balance.
+
+</Steps>
+
+If it says you're offline, join the server and the panel updates by itself. **With the game closed, the panel does nothing.** It's an extension of your game session.
+
+## Unlock actions
+
+Reading costs nothing and needs no unlock. To *do* anything (prestige, buy, meditate, teleport and so on), you open a time window and confirm it in game. That way nobody but you can act on your account through the site.
+
+<Steps>
+
+1. At the top of the panel, on the padlock, choose a duration (5 minutes to 12 hours) and click **Unlock**.
+2. A prompt arrives in game. Confirm it:
+
+   <Command cmd=".site yes">Confirms the website unlock. If you didn't request it, use `.site no`.</Command>
+
+3. While the window is open, action buttons work, and the panel shows a countdown.
+
+</Steps>
+
+<Aside type="caution" title="The unlock is for a time, not per action">
+Any panel action works without asking again until the window ends. When you're done, click **Lock now** or type `.site lock`. Type `.site` on its own to see whether actions are unlocked.
+</Aside>
+
+## What you can do
+
+| Menu group | Includes |
+|---|---|
+| Profile and Progression | Prestige your character, the weapon in hand and the current blood; Pulse and Transfuse; the 20 prestige buffs; plasma distribution |
+| Character | Weapon and blood attribute choice; Auto-Prestige; Meditation; Plasmas; Professions; Teleports |
+| Economy | Market (buy and sell), Prisoners, Bank (balance and statement), Vault, castle Chests |
+| Progress | Quests and Achievements, School, Statistics |
+| Collections | Pets and Sangrulhos |
+| Mail | Read, claim rewards, send and delete |
+| VIP and Battle Pass | Your VIP status and pass rewards |
+
+**Location rules still apply.** Anything that must be done at a place, such as storing items in your castle chests or selling to the Shadow Merchant, still needs your character to be there. The game checks; the site is only the remote control.
+
+## The Extension tab: NPC panels
+
+The Extension tab brings NPC conversation panels to the site, such as Outpost missions, the Shadow Merchant and dialogues.
+
+<Command cmd=".site extension">Turns the Extension on or off.</Command>
+
+Then interact with the NPC in game. Its panel appears on the Extension tab, and you act there. It disappears when you close the panel in game.
+
+## Several devices and servers
+
+The gear next to your name shows where you're signed in and lets you end other sessions. If there's more than one server, choose it with the selector at the top.
+
+## Common questions
+
+### Is it safe?
+
+No action happens without your `.site yes` in game. If a prompt arrives that wasn't you, answer `.site no` and, if you like, `.site lock`.
+
+### How do I set it to English?
+
+The panel follows the site language. Change it with the selector on the top bar.

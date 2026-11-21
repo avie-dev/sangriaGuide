@@ -1,0 +1,79 @@
+---
+title: Navigating Sangria Falls City
+description: The City of Sangria Falls is the server's hub. How to get there, what the teleport hub connects to, and the city's rules.
+summary: The City of Sangria Falls is the hub. Reach it free with the golden minimap button or .mercado go; its central teleport hub links the Schools, Bank, Events Hub, halls, Sangrulhos, Meditation and Museum.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - primeiros-passos
+  - teleportes
+  - mercado
+  - contratos
+  - postos-avancados
+  - escolas
+  - nivel-e-prestigio
+  - cassino
+  - casamento
+  - cofre
+  - meditacao
+labels: [official]
+sidebar:
+  order: 13
+---
+
+import Command from '../../../components/Command.astro';
+import PlayModes from '../../../components/PlayModes.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+The **City of Sangria Falls** is the server's meeting point. Its NPCs, halls, Market and Events Hub are all reached from here. You arrive at the end of the tutorial, landing at the **teleport hub** in the middle of the city.
+
+## Getting to the city
+
+Going to the city is free and instant from anywhere. It has a 30-second cooldown, and it unlocks when Vlad Parker unlocks teleports.
+
+<PlayModes>
+	<Fragment slot="interface">Click the **golden city button** next to the minimap, or open the teleport panel and click **Go** on *City of Sangria* under GLOBAL TELEPORTS.</Fragment>
+	<Fragment slot="chat">
+		<Command cmd=".mercado go">Teleports you to the market in the city, with no wait.</Command>
+		<Command cmd=".tp global cidade_sangria">Teleports you to the City of Sangria Falls.</Command>
+	</Fragment>
+</PlayModes>
+
+## The teleport hub
+
+In the middle of the city stands a ring of braziers. Each one has its destination's name above it. Walk up and interact. They cost nothing and have no wait. Most are round trips, with a brazier on the other side that brings you back, but some are one-way only.
+
+| Destination | What's there | Note |
+|---|---|---|
+| Schools | Frosthiel, Luminara, Serphentis and Sanguinis headquarters | Only members of that school can pass |
+| Sangria Bank | Vaults (in the north of Dunley) | Opens after Vlad Parker's teleport quest |
+| Events Hub | Dungeons, Illusory Arena, Tower, Reality Rupture, Goreswine's Judgment | Each event starts with its NPC here |
+| Classes Hall | The 11 Class Masters | Where you choose and evolve classes |
+| Training Room | Darius, free class testing | |
+| Professions Hall | The six profession mentors | |
+| Sangrulhos | Richard, master of the Sangrulhos | |
+| Meditation | The Meditation Chamber, with Haruki | |
+| Museum | | Not described in the official guides yet |
+
+## Other places in the city
+
+The official guides also place these in the city:
+
+- **The Market.** Press **L** (only works inside the city). Players buy shops at stalls named *Empty shop*.
+- **City Hall**, where Balthazar, the Master of Contracts, stands. Its second floor, above the teleport hub, has the **Casino** machines.
+- **The Winery (Adegaria)**, where Vlad Parker handles prestige.
+- **The main building, first floor**, where Sebastian handles Vampiric School enrolment.
+- **Mission Boards**: chalkboards labelled *Quadro de Missões* that show the seven Outposts.
+- **A-mór, the Cupid**, who handles the Blood Bond (marriage).
+
+## City rules
+
+- **No pets.** If yours is summoned when you teleport in, it's put away automatically. (You *can* summon it inside the Meditation Chamber.)
+- **No personal teleport points** can be created inside the city.
+- **The Market panel only opens inside the city.**
+
+<Aside type="tip">
+Lost? Several panels mark their NPC on your map. The School panel (F11) has a **Mark on map** button for Sebastian, and the Outpost board's **Track** button marks a commander.
+</Aside>
+
+See also [Teleports and teleport hubs](/getting-started/teleports/) and [Important NPCs](/getting-started/important-npcs/).

@@ -1,0 +1,96 @@
+---
+title: Installing the interface
+description: Install the free ScarletInterface mod with the Sangria Falls Launcher, step by step, in English.
+summary: Close V Rising, install the Sangria Falls Launcher, then install BepInEx and ScarletInterface from its Library and start the game with PLAY.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - interface
+  - primeiros-passos
+  - atalhos
+labels: [official]
+sidebar:
+  order: 5
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Command from '../../../components/Command.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+The interface is a free, optional mod for your game client. It adds clickable panels, on-screen bars and keyboard shortcuts. The current interface is called **ScarletInterface**, and every panel and shortcut in this wiki's "With the interface" tabs belongs to it. You install it with a small program from the staff, the **Sangria Falls Launcher**. The launcher finds your V Rising folder, installs the mods, keeps them updated and starts the game.
+
+<Aside type="note" title="The official page is in Portuguese">
+The official install page is only in Portuguese, even on the English site. This page follows it step by step. Button names are given in English, with the Portuguese label in brackets where it differs.
+</Aside>
+
+<QuickFacts
+	facts={[
+		['Download', 'sangriafalls.com/interface'],
+		['Platform', 'Windows'],
+		['Launcher version', '0.3.17, about 80 MB (as of 2026-11-22)'],
+		['Cost', 'Free'],
+		['Required mods', 'BepInEx (base) + ScarletInterface'],
+	]}
+/>
+
+## Install it
+
+<Steps>
+
+1. **Close V Rising.** Windows won't let mods install while the game is open.
+
+2. **Download the launcher** from the official page, [sangriafalls.com/interface](https://www.sangriafalls.com/interface/), and run the setup file (`Sangria-Falls-Launcher-Setup-0.3.17.exe` at the time of writing).
+
+3. **If a blue "Windows protected your PC" screen appears**, click **More info**, then **Run anyway**. The staff explain this is the normal warning for a program without a paid digital signature, which the launcher doesn't have yet.
+
+4. **Follow the installer** (Next, Install). A launcher icon appears on your desktop.
+
+5. **Open the launcher.** The **LIBRARY** (BIBLIOTECA) on the right lists the server's mods.
+
+6. **Install BepInEx** (marked *Essential*). It's the base layer, and no other mod works without it.
+
+7. **Install ScarletInterface.** This mod draws the server's panels, bars and shortcuts.
+
+8. **Click PLAY** (JOGAR). The launcher opens V Rising. Join the server from the server list by searching for **Sangria Falls**.
+
+</Steps>
+
+You only do this once. From then on, **start the game from the launcher**. It updates the mods and itself.
+
+## Check that it worked
+
+Join the server. If the interface is working, you'll see the server's bars and panels on screen. Press **F1** to open your Profile. If nothing appears, see [Interface troubleshooting](/getting-started/interface-troubleshooting/).
+
+## Optional mods in the launcher
+
+The launcher also offers small utilities. They're optional and only affect your own screen. Each installed mod has an on/off switch and an X to uninstall it.
+
+| Mod | Tag | What it does |
+|---|---|---|
+| BepInEx | Essential | The base that lets mods run. Required. |
+| ScarletInterface | Beta | The server interface: clickable panels for quests, pets, classes, market, rankings, mail, clan and more. |
+| AutoContinue | Utils | Reconnects you to the server after a disconnect or restart. Handy if you meditate away from the keyboard. |
+| NoSpiders | Utils | Arachnophobia option: swaps spider models for harmless animals. Combat is unchanged. |
+| NoBloodMoon | Utils | Removes the Blood Moon's red screen filter. The event itself is unchanged. |
+| Crossveil | Utils | Replaces the game cursor and crosshair with your own images. |
+
+<Aside type="caution">
+Uninstalling **BepInEx** removes every other mod too, because they all depend on it.
+</Aside>
+
+## After installing
+
+- The server speaks your game's language (Portuguese, English or Spanish). To change it:
+
+<Command cmd=".lang en">Switches the server's messages to English. Use `.lang pt` or `.lang es` for Portuguese or Spanish.</Command>
+
+- Learn the keys in [Understanding the HUD](/getting-started/hud/) and continue with [The Path of Blood tutorial](/getting-started/path-of-blood/).
+- You can also set the launcher itself to English in its settings.
+
+## Prefer to play without it?
+
+The interface isn't required. Everything works through chat commands and numbered menus, and every official guide has a chat-only version. See [Playing without the interface](/getting-started/playing-without-the-interface/).
+
+<Aside type="note" title="Old interfaces">
+The official video tutorial was recorded before the current interface and shows the older ones (Eclipse and SangrisInterface). If you had the old launcher, it's discontinued, so you can uninstall it. The new launcher replaces it.
+</Aside>

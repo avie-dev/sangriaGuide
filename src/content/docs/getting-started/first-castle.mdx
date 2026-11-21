@@ -1,0 +1,74 @@
+---
+title: Building your first castle
+description: The Sangria Falls additions that matter when you build your first castle, such as teleport points, auto-storage, the chest list and essence warnings. Base building itself is vanilla V Rising.
+summary: You need a castle (yours or your clan's) for personal teleport points. Sangria Falls adds G to store your bag in matching chests, = to search all chests, and clan-wide warnings when Castle Heart essence runs low.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - castelo
+  - teleportes
+  - incursoes
+  - clan
+labels: [official]
+sidebar:
+  order: 16
+---
+
+import Command from '../../../components/Command.astro';
+import PlayModes from '../../../components/PlayModes.astro';
+import Label from '../../../components/Label.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+Placing a Castle Heart, building walls and crafting stations work as in the base game, and this wiki doesn't document them. This page covers what **Sangria Falls adds**, and why your castle matters early on.
+
+## Why you need a castle early
+
+- **Teleports need it.** A personal teleport point requires a castle, either yours or your clan's. During Vlad Parker's quest *The Blood Baptism*, your first point **must be created inside your castle**. See [Teleports](/getting-started/teleports/).
+- **Rift Incursion warnings need it.** You only see Rift Incursions if an **Eye of Twilight** is built in your castle or your clan's castle.
+- **Finding a plot:** during the starting mission that asks you to build a castle, *Free Plot* and *Decaying Plot* icons appear on your map. They disappear once you place the Heart. There's no player command to list free plots.
+
+## Store your bag with one key
+
+Your bag goes into the castle chests that already hold the same item. This works on your castle's grounds or your clan's.
+
+<PlayModes>
+	<Fragment slot="interface">Press **G**, or double-click quickly on your inventory's sort button. Chat shows a **[STORE]** line with how many items went into how many chests.</Fragment>
+	<Fragment slot="chat"><Command cmd=".guardar">Stores your bag in the castle chests that already have the same item.</Command></Fragment>
+</PlayModes>
+
+- **Teach a chest first.** An item is only stored if some chest already holds at least one. Put the first unit in by hand, and next time the key handles it.
+- Your hotbar (the first 8 slots), your equipped weapon and quest items never leave the bag.
+- A chest with **privado** in its name is skipped. Use that for a personal chest.
+- It doesn't work in combat or while downed. If a chest fills up, the rest stays in your bag.
+
+## Find any item: Chest Management
+
+Interface only. Inside your castle, press **=** (or type `.baus`) to open CHEST MANAGEMENT:
+
+<Steps>
+
+1. Search by name or click a category. Each line shows the item, the total and which chests hold it. Unnamed chests appear as B1, B2, B3 and so on.
+2. Click an item's name, and a beam of light shines over the chests that have it for 15 seconds.
+3. Star up to 20 favourites to keep them in the last column.
+
+</Steps>
+
+Name your chests (Wood, Gems, Fish…). The names show in the panel. The **Take** button, which pulls items from the chests straight to your bag, is VIP-only. <Label type="vip" /> Everyone else uses the beam of light and fetches the item by hand.
+
+## Don't let the Heart run dry
+
+When your Castle Heart has **3 days of essence or fewer** left:
+
+- the whole clan gets a **[CASTLE]** warning in chat and a letter titled *YOUR CASTLE WILL FALL*, which even reaches offline members
+- the letter repeats at most once a day while the essence stays low, and players are warned again when they log in
+- a *Your Castle Will Fall* card appears on the Active Events board, turning red under 24 hours
+
+If the essence runs out, the castle starts to decay. If you lose your Castle Heart (and your clan has none), your teleport points are erased.
+
+## Protected items
+
+Legendary weapons, Dracula armour, T8 amulets and Soul Shards **can't be dropped on the ground**. Chat shows **[PROTECTED ITEM]** and the item stays put. On death, the game's normal rule applies. A new clan member can't move these items into or out of another member's castle chests for 12 hours.
+
+<Aside type="tip">
+In a clan? Store and Chest Management work in any castle of your clan. They don't work in a friend's castle outside your clan.
+</Aside>

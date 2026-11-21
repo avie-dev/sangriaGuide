@@ -1,9 +1,12 @@
 ---
 title: Progression walkthrough
 description: "A chronological route from your first login to an optimised endgame character, in 15 stages."
-status: planned
+status: written
+lastVerified: 2026-11-22
+summary: A 15-stage route through Sangria Falls, from the tutorial to 250 transfusions, with requirements, steps and a checklist for each stage.
 sources:
   - primeiros-passos
+  - missoes
   - nivel-e-prestigio
   - classes
   - meditacao
@@ -15,15 +18,22 @@ sidebar:
 ---
 
 import SectionContents from '../../../components/SectionContents.astro';
+import ProgressionPath from '../../../components/ProgressionPath.astro';
 
 A chronological route from your first login to an optimised endgame character, in 15 stages.
 
-## Pages in this section
+Each stage lists what you need first, the steps, the costs from the official guides, and a checklist saved in your browser. The order follows the real unlock dependencies in the official guides. Some stages run in parallel: professions and income (Stage 4) keep going for the whole game, and class evolutions (Stage 9) can start as soon as you can afford them.
+
+<ProgressionPath
+	steps={[
+		{ title: 'Stages 1–3: Start', detail: 'Tutorial, first class, early levelling and V Bloods' },
+		{ title: 'Stages 4–6: Foundations', detail: 'Professions and income, weapon and blood, first pet' },
+		{ title: 'Stages 7–9: Prestige', detail: 'Character prestige 1–20 and class evolutions' },
+		{ title: 'Stages 10–14: Endgame systems', detail: 'Gear, Schools, Pulses and Transfusions, refinement, top dungeons' },
+		{ title: 'Stage 15: Optimisation', detail: '250 transfusions, Kill Points, the Tower' },
+	]}
+/>
+
+## Stages
 
 <SectionContents />
-
-## What this section will cover
-
-- Fifteen stages, from the tutorial to endgame optimisation
-- For each stage: objectives, prerequisites, steps, costs, rewards, what to prioritise and what can wait
-- An order based on the real unlock dependencies found in the official guides

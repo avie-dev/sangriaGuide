@@ -1,0 +1,72 @@
+---
+title: 'Stage 13: Advanced equipment enhancement'
+description: Walkthrough stage 13. Refine your gear up to 5 times, get the refining components from gathering, and buy or sell profession services.
+summary: Stage 13 refinement rolls extra durability and power on a piece (up to 5 rows), using a Perfect gem and a component that gathering drops from prestige 5. Hire or sell services at craft prestige 5+.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - oficios-ferreiro-alfaiate-encantador
+  - coleta-minerador-pescador-lenhador
+  - servicos-de-profissao
+  - postos-avancados
+labels: [official]
+sidebar:
+  order: 13
+---
+
+import Requirements from '../../../components/Requirements.astro';
+import Checklist from '../../../components/Checklist.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+**Goal:** add refinements on top of fortification, and trade crafting services with other players.
+
+<Requirements items={['A crafting profession with prestige (or a provider to hire)', 'Refining materials in your inventory']} />
+
+## Refinement
+
+Each piece accepts up to **5 refinements**. Each one rolls a random bonus: **+100, +200 or +300 durability** and **+1, +2 or +3 power** (the Tailor rolls +3, +5 or +7 Health instead). Refinement number *n* uses *n* of each material.
+
+| Craft | Materials |
+|---|---|
+| Blacksmith | Perfect Ruby + Precious Stone |
+| Tailor | Perfect Topaz + Exceptional Tailoring Component |
+| Enchanter | Perfect Amethyst + Exceptional Magical Component |
+
+- **REFINE AGAIN** re-rolls a row. You lose the old bonus and spend the materials again. A best-possible roll shows **MAX REFINEMENT**.
+- **Refinement can't be undone.**
+
+**Unlocking rows:** craft prestige 7 unlocks up to 3 refinements and prestige 9 up to 4. Your mentor's achievement (a long quest) unlocks the first 2 right away, and the 5th once you reach prestige 10.
+
+## Where the components come from
+
+Gathering feeds crafting. From **gathering prestige 5**, each trade can drop one component, with a small chance that improves up to prestige 10. No achievement is needed.
+
+| Gathering trade | Drops | Used by |
+|---|---|---|
+| Miner | Precious Stone | Blacksmith |
+| Fisher | Exceptional Magical Component | Enchanter |
+| Woodcutter | Exceptional Tailoring Component | Tailor |
+
+They also drop at the **Dunley Outpost** at its highest rank, and other players sell them on the Market. Perfect gems are among the Special rewards from Master and Nightmare dungeons ([Stage 14](/walkthrough/14-master-and-nightmare/)).
+
+## Profession Services
+
+Hire another player to fortify or refine a piece from a craft you don't have, or sell your own services. Open it with **F4 → Services** or `.services`.
+
+- **Hiring:** anyone can. Fortification costs the provider's price plus the normal 2,000 Ourosangue per level gained. Refinement costs the provider's price × the refinement number, using your materials or theirs. The provider doesn't need to be online.
+- **Selling:** needs **5+ prestiges** in your active craft. Publish your prices from F4 → Details → Provide Services. Since 30/09/2026, prices must stay within a floor and ceiling per level, a price can be lowered only once every 24 hours, and each provider takes at most 2 orders per week per prestige.
+
+<Aside type="tip">
+Your craft's limits apply to your own panel. A provider's limits apply when you hire them, and the 5th refinement needs a provider with the achievement and prestige 10.
+</Aside>
+
+## Checklist
+
+<Checklist
+	id="wt-13"
+	items={['Gathering profession at prestige 5 (components start dropping)', 'Craft prestige 7 (up to 3 refinements)', 'First refinement on my main weapon or gear', 'Considered hiring or selling services']}
+/>
+
+## You're done when
+
+Your key pieces are fortified and refined, and you have a source of components. See [Equipment](/equipment/) and [Professions](/professions/). **Next:** [Stage 14: Master and Nightmare dungeons](/walkthrough/14-master-and-nightmare/).

@@ -1,0 +1,98 @@
+---
+title: First-day checklist
+description: A tickable checklist for your first session on Sangria Falls, from the tutorial to your first Ourosangue routine.
+summary: Day one finish the tutorial, pick your class, set up teleports, learn the Bank, try the Training Room, start your professions and set up a daily Ourosangue routine.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - primeiros-passos
+  - missoes
+  - classes
+  - teleportes
+  - banco
+  - nivel-e-prestigio
+  - profissoes
+  - recompensa-online
+  - postos-avancados
+  - contratos
+  - cacada-de-v-bloods
+labels: [official, community]
+sidebar:
+  order: 17
+---
+
+import Checklist from '../../../components/Checklist.astro';
+import Label from '../../../components/Label.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+Tick items as you go. Your ticks are saved in this browser only. Every item is based on an official guide. The order is this wiki's suggestion. <Label type="community" />
+
+## Before you log in
+
+<Checklist
+	id="first-day-before"
+	items={[
+		'Own V Rising on Steam (PC)',
+		'Optional: install the Sangria Falls Launcher, BepInEx and ScarletInterface',
+		'Join the official Discord (discord.gg/SangriaFalls) for help and announcements',
+	]}
+/>
+
+## The tutorial
+
+<Checklist
+	id="first-day-tutorial"
+	items={[
+		'Leave the coffin (without the interface: choose your language with the NPCs or .lang en)',
+		'Follow every tutorial step; each one pays XP',
+		'Choose your free first class in the Classes Hall',
+		'Pick a variant (Mortak, Sepulkros) or Current (Draekhar) if your class has one',
+		'Claim the starter kit from your Mail (F6 or .mail) if your inventory was full',
+		"Choose a gathering and a crafting profession with Helena Valerius",
+		'Reach the City of Sangria Falls',
+	]}
+/>
+
+<Aside type="tip" title="Use the welcome gift">
+Once you choose your class, character XP counts double for **3 days**. Day one is a good time to level hard. A Quitina won't stack on character XP while the gift is active (it's refused and not spent).
+</Aside>
+
+## In the city
+
+<Checklist
+	id="first-day-city"
+	items={[
+		'Open the Bank (F5 or .menu bank) and check your balances',
+		'Deposit any currency items in your bag (.menu bank, option 2)',
+		'Visit the Training Room and test a few classes for free',
+		"Do Vlad Parker's teleport quest, The Blood Baptism (create your first point inside your castle)",
+		'Use the golden city button by the minimap to come back to the city for free',
+		'Open the HUD Settings (minimap gear) and arrange your screen',
+	]}
+/>
+
+## Your first routine
+
+<Checklist
+	id="first-day-routine"
+	items={[
+		'Accept Balthazar\'s contracts (up to 3 a day) at City Hall or with .contract panel',
+		'Take an Outpost daily mission (start with Farbane at low level)',
+		'Accept your profession mentors\' daily orders',
+		'Stay online 30 minutes to unlock the Online Reward and start a streak',
+		'Hunt V Bloods near your level; the Battle Pass counts from your first V Blood',
+	]}
+/>
+
+## Before you log off
+
+<Checklist
+	id="first-day-end"
+	items={[
+		'Claim any Battle Pass rewards (red dot on the ticket button)',
+		'Store loot in your castle with G',
+		'Check you are not sitting at level 90 with XP going to waste',
+	]}
+/>
+
+Next: the [first-week roadmap](/getting-started/first-week/).

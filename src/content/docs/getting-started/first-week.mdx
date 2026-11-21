@@ -1,0 +1,82 @@
+---
+title: First-week roadmap
+description: A suggested plan for your first week on Sangria Falls, covering levelling, prestige, meditation, your first pet, professions and income, built on official mechanics.
+summary: Week one level to 90 and start prestiging, keep a daily Ourosangue routine, start meditating once the tutorial is done, hunt V Bloods for a first pet, and level your professions.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - nivel-e-prestigio
+  - profissoes
+  - meditacao
+  - pets
+  - classes
+  - recompensa-online
+  - postos-avancados
+  - contratos
+  - banco
+  - maestria-de-arma
+  - linhagem-de-sangue
+labels: [official, community]
+sidebar:
+  order: 18
+---
+
+import Label from '../../../components/Label.astro';
+import Currency from '../../../components/Currency.astro';
+import ProgressionPath from '../../../components/ProgressionPath.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+This is a suggested plan, not an official one. <Label type="community" /> The official guides recommend this order after the tutorial: capture your first pet, do the daily Ourosangue routine (an Outpost daily, Balthazar's contracts and your trade orders), then evolve your class or unlock another one. The plan below follows that, with the facts and numbers taken from the official guides.
+
+<ProgressionPath
+	steps={[
+		{ title: 'Days 1–3: welcome gift', detail: 'Double character XP for 3 days after picking your class. Level hard.' },
+		{ title: 'Level 90', detail: 'Prestige at once; XP gained at 90 is lost.' },
+		{ title: 'Daily routine', detail: 'Outpost daily, Balthazar contracts, profession orders, Online Reward.' },
+		{ title: 'First pet', detail: '1% capture chance per open-world boss kill.' },
+		{ title: 'First evolution', detail: '15,000 Ourosangue tribute at the end of the quest.' },
+	]}
+/>
+
+## Levelling and prestige
+
+- **Level 1 → 90.** XP comes from kills, quests and meditation, and V Bloods give much more. Fight creatures at or above your level, because weaker ones give less. Group up: everyone nearby and in combat at the kill gets **full** XP, and it isn't split.
+- **Prestige at 90.** It resets you to level 1 for a permanent buff and costs Ourosangue from your Bank (<Currency id="ourosangue" amount={75} /> for the first). Check the cost with `.level`. See [Stage 7](/walkthrough/07-prestige-1-10/).
+- **Your weapon and blood level too.** Kills raise the weapon in your hand, and draining (the final bite) raises your active blood. Vlad Parker does each one's **first prestige for free**. Talk to him before clicking PRESTIGE.
+
+## Meditation, once the tutorial is done
+
+Meditation gives XP while standing still in the Meditation Chamber: **630,000 XP per hour**, or 945,000 with VIP, at 0.35 Sangricoin per minute (21 per hour) per path. From level 1 to 90 takes about 1h14 (50 minutes with VIP). Your Sangricoins come from the Online Reward and other sources, so meditate when you can't play actively. See [Meditation](/meditation/).
+
+<Aside type="note">
+Personal XP bonuses, such as the welcome gift and Quitina, **don't** count in meditation. Only VIP (+50%) and server XP events do.
+</Aside>
+
+## Income
+
+Ourosangue pays for prestige, class evolutions and more, so set up a daily routine:
+
+| Activity | What it pays | Resets |
+|---|---|---|
+| Outpost daily mission | 1 Quitina + 1,500–2,500 Ourosangue (by rank) | Midnight, Brasília time |
+| Outpost weekly mission | 4 Quitina + 75 Sangricoins + 7,500–10,000 Ourosangue | Monday, Brasília time |
+| Balthazar's contracts | Ourosangue per delivery; accept 3 a day | Offers change at midnight, Brasília time |
+| Gathering profession | 25 per vein, 70 per catch, 10 per tree (before prestige bonuses) | No limit |
+| Profession orders | Profession XP + Ourosangue; 2 daily, 1 weekly special, 1 weekly hunt | Daily / Monday |
+| Online Reward | 0.40–0.70 Sangricoin every 15 min after 30 min online | Midnight, Brasília time |
+
+See [Stage 4: First professions and income](/walkthrough/04-professions-and-income/).
+
+## Your first pet
+
+Defeat bosses in the open world. Each kill has a **1% chance** to give you that boss as a pet. Some bosses can never be captured. Once you have one, keep it summoned while you hunt, because your pet's kills count for your XP and it levels up too. See [Stage 6](/walkthrough/06-first-pet/).
+
+## Your first class evolution
+
+Each evolution is a quest from your class's Master that ends with a tribute: 15,000, then 30,000, then 45,000 Ourosangue. The bonuses stack and are permanent. See [Stage 9](/walkthrough/09-class-evolutions/).
+
+## Common questions
+
+### Should I meditate or hunt?
+
+The official guides publish meditation's rate (630,000 XP per hour) but not the XP you get from hunting, so this wiki can't compare them. Meditation can't level your character and weapon at the same time: you pick one path. Hunting levels your character, weapon and pet at once, and your blood too if you drain.

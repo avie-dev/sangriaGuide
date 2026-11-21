@@ -1,0 +1,81 @@
+---
+title: Choosing your first class
+description: How the free first class works on Sangria Falls, what each of the 11 classes uses, prerequisites, costs, and how to try classes for free first.
+summary: Your first class is free and chosen during the tutorial. You can switch later for 3,000 Ourosangue and keep everything. Try any class first in the free Training Room.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - classes
+  - class-hub
+  - sala-de-treinamento
+  - torre-dos-imortais
+labels: [official]
+sidebar:
+  order: 12
+---
+
+import ClassGrid from '../../../components/ClassGrid.astro';
+import CostTable from '../../../components/CostTable.astro';
+import Command from '../../../components/Command.astro';
+import Currency from '../../../components/Currency.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+Every vampire starts as an **Awakened**, with no class. Your first class is **free** and you pick it during the tutorial, in the Classes Hall. It's not a permanent decision: every class you unlock stays yours, and switching back to one costs <Currency id="ourosangue" amount={3000} />. So pick what looks fun. You aren't locked in.
+
+<Aside type="note" title="No tier list here">
+This wiki doesn't rank classes. The staff publish no balance data, and we won't guess. Use the free Training Room below to judge for yourself.
+</Aside>
+
+## The classes
+
+Three classes can't be your first: **Sangrael**, **La Muerte** and **General** need evolutions in other classes first. Use the filters to narrow the list.
+
+<ClassGrid />
+
+## Try before you choose: the Training Room
+
+The **Training Room** lets you test all 11 classes for free, including their three evolutions and variants, with no time limit. Nothing is saved: when you leave, your own class comes back and the test weapons disappear.
+
+<Steps>
+
+1. At the city teleport hub, use the **Training Room** teleporter and talk to **Darius**.
+2. Click **TEST** on a class. You get a private room and the class's test weapons. Keep up to 3 inventory slots free.
+3. **Equip the test weapon.** Without the class weapon, its bonuses and abilities don't appear.
+4. In the TESTING CLASS panel, switch between **BASE, I, II and III** to feel each evolution. For Draekhar, pick a Current. For Sepulkros and Mortak, pick a variant.
+5. Fight the training target (it hits back), or place a damage dummy to measure your DPS.
+
+</Steps>
+
+<Command cmd=".class testar noctarin">Switches to testing another class without leaving the room (the class name in lowercase, written together, e.g. `lamuerte`).</Command>
+
+There are 5 rooms with one player each, and your pet can't come in. The room gives no XP, items or quest progress. For details, see the official [Training Room guide](https://www.sangriafalls.com/en/guias/sala-de-treinamento/).
+
+You may not reach the Training Room before the tutorial asks you to choose. Your first pick is free, and switching costs only 3,000 Ourosangue, so you can test properly afterwards and change your mind.
+
+## How to choose (in the tutorial)
+
+<Steps>
+
+1. Follow **The Path of Blood** until it sends you to the Classes Hall.
+2. Talk to the Master of the class you want. Their surname is the class name (Razor Mortak, Lilith Noctarin and so on).
+3. Click **Choose this class**, then **Yes, I choose this class**.
+4. You become that class immediately and receive its **iron weapons** and a **starter kit**. Anything that doesn't fit goes to your Mail.
+
+</Steps>
+
+If you choose **Mortak** or **Sepulkros**, a panel asks you to pick a variant. If you choose **Draekhar**, you pick your first Current. If the Current panel didn't appear, click the round button next to your class crest.
+
+## Things to know about any class
+
+- **Class bonuses only apply with the class weapon in hand.** Holding another weapon switches them off.
+- **The Staff** used by Draekhar and Sangrael is the game's **Spear**. With those classes it works and looks like a staff.
+- **Mastery and blood attributes:** each class uses 3 weapon and 3 blood attributes. They're pre-selected, and you can change them for free in the class's MASTERY & BLOOD tab.
+- **The Awakened has no mastery or lineage attributes**, and can't enter the Tower of the Immortals.
+
+## What it costs later
+
+<CostTable id="class-switch" />
+
+<CostTable id="class-evolution" />
+
+Unlocking another class means doing its Master's quest, which you can start only after finishing *The Path of Blood*. See [Stage 9: Class evolutions](/walkthrough/09-class-evolutions/).

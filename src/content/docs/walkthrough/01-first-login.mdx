@@ -1,0 +1,65 @@
+---
+title: 'Stage 1: First login and tutorial'
+description: Walkthrough stage 1. Install the interface (optional), join, set English, and play the starter tutorial through to the city.
+summary: Stage 1 install the interface if you want it, join from the server list, set the language to English, and follow the tutorial to the end, picking your free class on the way.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - primeiros-passos
+  - missoes
+  - interface
+  - banco
+labels: [official]
+sidebar:
+  order: 1
+---
+
+import Requirements from '../../../components/Requirements.astro';
+import Checklist from '../../../components/Checklist.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+**Goal:** get into the game and complete the starter tutorial, which ends in the City of Sangria Falls.
+
+<Requirements items={['V Rising on Steam (PC)', 'Optional: the ScarletInterface, installed with the Sangria Falls Launcher']} />
+
+## 1. Prepare your client
+
+Decide whether you'll use the interface. It's free and optional, and the official guides say the experience is much better with it. Install it before you join: [Installing the interface](/getting-started/interface/). If you'd rather not, read [Playing without the interface](/getting-started/playing-without-the-interface/).
+
+## 2. Join and set the language
+
+Open V Rising (from the launcher's PLAY button if you use it), search for **Sangria Falls** in the server list and join. See [Joining the server](/getting-started/joining/).
+
+With the interface, the server uses your game's language. Without it, three NPCs ask you to choose when you leave the coffin. Either way, you can switch at any time:
+
+<Command cmd=".lang en">Switches the server to English.</Command>
+
+## 3. Play the tutorial
+
+The first quest, *Where am I?!*, is active from the start. The tutorial has 8 quests. It teaches your level, the classes, prestige, a gathering profession, ways to earn Ourosangue and the Sangrulhos, and ends in the city. Follow the objective on the right of the screen (or `.quest` in chat) and talk to NPCs with **F**.
+
+You choose your **free first class** during the tutorial, in the Classes Hall. That's [Stage 2](/walkthrough/02-first-class/). Details: [The Path of Blood tutorial](/getting-started/path-of-blood/).
+
+<Aside type="tip">
+Every tutorial step pays XP, and choosing your class starts a **3-day double character XP** welcome gift. Don't rush past the tutorial.
+</Aside>
+
+## Checklist
+
+<Checklist
+	id="wt-01"
+	items={[
+		'Interface installed (or decided to play through chat)',
+		'Joined Sangria Falls and set the language to English',
+		'Followed the tutorial quests in order',
+		'Chose a free first class',
+		'Arrived at the teleport hub in the City of Sangria Falls',
+	]}
+/>
+
+## You're done when
+
+You're standing at the teleport hub in the City of Sangria Falls with a class. You start with 25 Sangricoins and earn 10,000 Ourosangue during the tutorial, so check your Bank (F5 or `.menu bank`).
+
+**Next:** [Stage 2: First class and starter equipment](/walkthrough/02-first-class/).

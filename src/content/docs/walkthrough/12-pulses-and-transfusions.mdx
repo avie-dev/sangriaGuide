@@ -1,0 +1,77 @@
+---
+title: 'Stage 12: Pulses and Transfusions'
+description: Walkthrough stage 12. After prestige 20, turn each return to level 90 into a Pulse, trade 10 Pulses for a Transfusion, and distribute plasmas among the 8 ancestors.
+summary: Stage 12 at prestige 20 and level 90, PULSE resets you to level 1 for free. 10 Pulses + 10,000 Ourosangue (8,000 VIP) = a Transfusion with 10 plasmas. Some transfusions are sealed until you hear a Lost Book chapter.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - transfusao-e-plasmas
+  - livro-perdido
+  - auto-prestigio
+labels: [official, vip]
+sidebar:
+  order: 12
+---
+
+import Requirements from '../../../components/Requirements.astro';
+import Checklist from '../../../components/Checklist.astro';
+import CostTable from '../../../components/CostTable.astro';
+import ProgressionPath from '../../../components/ProgressionPath.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+**Goal:** start the transfusion loop that powers the endgame.
+
+<Requirements items={['Character prestige 20', 'The quest The Call of Blood, from Nyxaris (arrives on its own)']} />
+
+<ProgressionPath
+	steps={[
+		{ title: 'Level 90 at prestige 20', detail: 'Click PULSE: back to level 1, +1 Pulse, no cost' },
+		{ title: '10 Pulses', detail: 'Plus 10,000 Ourosangue (8,000 with VIP) in the Bank' },
+		{ title: 'Transfusion', detail: '+10 free plasmas; up to 250 transfusions' },
+		{ title: 'Plasmas', detail: 'Distributed among 8 ancestors, up to 1,000 each' },
+	]}
+/>
+
+Your guide is **Nyxaris, the Last Oracle**, in her laboratory in Farbane. Her quests arrive on their own.
+
+## Pulses
+
+At prestige 20, the PRESTIGE button becomes **PULSE** when you reach level 90. A Pulse returns you to level 1 and adds +1 Pulse. It costs nothing, and you keep your prestige, buffs and plasmas. The first time, return to Nyxaris to close *The Call of Blood*. Pulses stack without limit.
+
+## Transfusions
+
+<CostTable id="transfusion" />
+
+Gather **10 Pulses** and leave the Ourosangue in your Bank. The first time, the quest *The First Transfusion* arrives, and Nyxaris unlocks transfusion 1. Then click **TRANSFUSE** on the prestige bar for 10 free plasmas. If you're short on Ourosangue, nothing is spent. Your Pulses stay saved.
+
+<Aside type="caution" title="Sealed transfusions">
+Some transfusions arrive **sealed**: the TRANSFUSE button vanishes and the game warns you. Go to Nyxaris and hear the chapter she tells (an *Echo* quest). The seal lifts and the chapter goes into your **Lost Book**. Book I's chapters come at transfusions 5, 10, 15 … 50; Book II's at 65, 80 … 170; Book III's at 190, 205, 220, 235 and 250.
+</Aside>
+
+## Plasmas
+
+Press **F12** (or `.tf`). Click an ancestor (Nosferatu, Vladimir, Cazador, Barnabas, Akasha, Carmilla, Selene or Katherine) to see its **bonuses and penalties**. Both grow at the same pace as you add plasmas. Add plasmas with **+**, **+10**, a typed number or **Max**, then click **Save and Activate**.
+
+- Once saved, plasmas can't be taken out of an ancestor except by **Reset** (50 Sangricoins). **Clear** undoes unsaved changes for free.
+- At most 1,000 plasmas per ancestor. The game's maximum is 2,500 plasmas, so nobody fills all 8.
+- Without VIP you have 1 preset; with VIP, 3 that you can switch between for free.
+
+The guides don't publish whether ancestor bonuses have caps or diminishing returns (see [Q-013](/about/open-questions/#q-013)), so read the penalties before saving.
+
+<Command cmd=".tf info">Shows your Pulses, transfusions done, free plasmas and how much is in each ancestor.</Command>
+
+## If you use Auto-Prestige
+
+Auto pulse is **on by default** at prestige 20. You can cap how many Pulses it gives, or switch it off, in the Auto-Prestige LIMITS board. It never transfuses for you.
+
+## Checklist
+
+<Checklist
+	id="wt-12"
+	items={['Talked to Nyxaris (The Call of Blood)', 'Gave a first Pulse', 'Completed The First Transfusion', 'Distributed my first 10 plasmas after reading the penalties', 'Heard the first Echo chapter (transfusion 5)']}
+/>
+
+## You're done when
+
+The loop is running: level to 90, pulse, and transfuse every 10 Pulses. **Next:** [Stage 13: Advanced equipment enhancement](/walkthrough/13-advanced-enhancement/).

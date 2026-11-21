@@ -1,0 +1,84 @@
+---
+title: 'Stage 7: Character Prestige 1–10'
+description: Walkthrough stage 7. How character prestige works, what the first ten prestige buffs give, what it costs, and using meditation to get back to 90.
+summary: Stage 7 at level 90, prestige back to level 1 for a permanent buff, paid from your Bank (75 Ourosangue for the first). Meditation takes about 1h14 from 1 to 90.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - nivel-e-prestigio
+  - meditacao
+  - banco
+labels: [official, verify]
+sidebar:
+  order: 7
+---
+
+import Requirements from '../../../components/Requirements.astro';
+import Checklist from '../../../components/Checklist.astro';
+import CostTable from '../../../components/CostTable.astro';
+import Command from '../../../components/Command.astro';
+import PlayModes from '../../../components/PlayModes.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+**Goal:** reach your first ten character prestiges.
+
+<Requirements items={['Level 90', 'The prestige cost in Ourosangue in your Bank (not your inventory)']} />
+
+## How prestige works
+
+At level 90, XP stops counting. Prestiging returns you to **level 1** and gives you one **permanent buff**, 20 in all, always in the same order. Buffs stack and are never lost. Prestiging doesn't slow your XP. **Vlad Parker** teaches prestige in the quest *The Cycle of Blood*, in the Winery (Adegaria) of the City of Sangria Falls.
+
+## How to prestige
+
+<PlayModes>
+	<Fragment slot="interface">At level 90, click **PRESTIGE** on the Prestige Bar next to the HUD, or on the Profile (F1) below the XP bar. **It's instant, with no confirmation screen.**</Fragment>
+	<Fragment slot="chat"><Command cmd=".level">Opens the character menu. Its Prestige option shows the cost.</Command><Command cmd=".prestige exp">Prestiges immediately, without confirmation.</Command></Fragment>
+</PlayModes>
+
+<Aside type="tip">
+To see the cost first, type `.level`, or talk to Vlad Parker: *I want to prestige.* → *Character.* He only prestiges after you click **Confirm.**
+</Aside>
+
+## Buffs 1–10
+
+| Prestige | Buff |
+|---|---|
+| 1 | Damage Reduction +2% |
+| 2 | Healing Received +2% |
+| 3 | Max Health +40 |
+| 4 | Sun Resistance +8 |
+| 5 | Spell Resistance +2% |
+| 6 | Physical Resistance +2% |
+| 7 | Shield Efficiency +4% |
+| 8 | Movement Speed +0.5 |
+| 9 | Resource Yield +8% |
+| 10 | Shapeshift Speed +0.2 |
+
+In game, `.level buffs` lists them and marks the ones you have.
+
+## What it costs
+
+<CostTable id="character-prestige" />
+
+The official guide gives only the first cost, the twentieth and the total. The rest show as "Not published" until someone checks them with `.level` in game.
+
+## Getting back to 90 quickly
+
+- **Meditation:** 630,000 XP per hour (945,000 with VIP), at 0.35 Sangricoin per minute. From level 1 to 90 takes about **1h14** (50 minutes with VIP). Press F10 or type `.meditate`. See [Meditation](/meditation/).
+- **Hunting:** V Bloods, groups and quests, as in [Stage 3](/walkthrough/03-early-levelling/). Quitina gives 2x XP for 30 minutes, but not while meditating.
+
+## Checklist
+
+<Checklist
+	id="wt-07"
+	items={[
+		'Keeping enough Ourosangue in the Bank for the next prestige',
+		'Prestiging as soon as I reach 90',
+		'Using meditation when I cannot play actively',
+		'Reached prestige 10',
+	]}
+/>
+
+## You're done when
+
+You've reached prestige 10. **Next:** [Stage 8: Character Prestige 11–20](/walkthrough/08-prestige-11-20/).

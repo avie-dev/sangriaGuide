@@ -1,0 +1,72 @@
+---
+title: Interface troubleshooting
+description: Fixes for the common problems when installing or running the ScarletInterface and the Sangria Falls Launcher.
+summary: Nothing showing in game? Check that BepInEx and ScarletInterface are Installed and switched on in the launcher, then start the game with PLAY. Still broken? Open a Discord ticket.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - interface
+  - primeiros-passos
+labels: [official]
+sidebar:
+  order: 6
+---
+
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+These are the problems the official install page lists, with the staff's fixes. If none of them helps, open a ticket on the official Discord (discord.gg/SangriaFalls) and the team will help.
+
+## I installed it and nothing appears in game
+
+<Steps>
+
+1. Close the game.
+2. Open the launcher and check that **BepInEx** and **ScarletInterface** both show as **Installed**, with their switch **on**.
+3. Start the game with the launcher's **PLAY** (JOGAR) button, not from Steam.
+4. Join the server again.
+
+</Steps>
+
+If it still doesn't work, open a ticket on Discord.
+
+## Windows says it protected my computer
+
+This is Windows' standard warning for programs without a paid digital signature, which the launcher doesn't have yet. The staff say it isn't a virus. Click **More info**. "Unknown publisher" appears. Then click **Run anyway**.
+
+## The launcher found the wrong game folder
+
+This happens if you have V Rising on more than one drive.
+
+<Steps>
+
+1. In the launcher, open the settings (the gear) and click **Detect again**.
+2. If it's still wrong, find the right folder in Steam: **Library → right-click V Rising → Manage → Browse local files**. Copy the path of the folder that opens.
+3. Back in the launcher, click **Choose manually**, paste the path and select the folder.
+
+</Steps>
+
+## An "unknown" mod appears in the Library
+
+This is a mod you installed some other way, for example from Thunderstore or for another server. "Unknown" only means the launcher doesn't recognise it, not that it's dangerous. You can remove it with its **X**.
+
+To add an outside mod yourself, close the game, click the folder icon next to **LIBRARY** and drop the DLL inside.
+
+## I had the old launcher
+
+It's been discontinued. You can uninstall or delete it, because the new launcher replaces it.
+
+## I want the launcher in English
+
+Choose Portuguese, English or Spanish in the launcher's settings.
+
+## The panels work but the text is in Portuguese
+
+The server follows your game's language. Type `.lang en` in chat to switch to English. Some official reference pages and in-game labels are only in Portuguese. See [Setting the language to English](/getting-started/language/).
+
+## A panel won't close
+
+**Esc** closes any panel, and the key that opened a panel also closes it (press F1 again to close the Profile). You can rebind the keys in the game's **Controls** options tab.
+
+<Aside type="tip">
+While you sort out the interface, you can keep playing. Everything works through chat (`.menu`) or the [website panel](/getting-started/website-panel/).
+</Aside>

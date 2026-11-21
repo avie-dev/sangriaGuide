@@ -1,0 +1,84 @@
+---
+title: 'Stage 11: Vampiric Schools'
+description: Walkthrough stage 11. Enrol in a Vampiric School at prestige 20, earn rank through daily missions and events, and unlock an extra auto-casting spell.
+summary: Stage 11 at prestige 20, enrol for free with Sebastian. Daily missions (+600) and school events (up to 800) raise your rank. Rank 1, 4 and 8 unlock spell tiers. Score every 7 days to stay enrolled.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - escolas
+labels: [official]
+sidebar:
+  order: 11
+---
+
+import Requirements from '../../../components/Requirements.astro';
+import Checklist from '../../../components/Checklist.astro';
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Command from '../../../components/Command.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+**Goal:** join a school and unlock its spells.
+
+<Requirements items={['Character prestige 20']} />
+
+<QuickFacts
+	facts={[
+		['Schools', 'Frosthiel, Luminara, Serphentis, Sanguinis'],
+		['Enrolment', 'Free, with Sebastian'],
+		['Rank', '0 to 10; points are never lost'],
+		['Spell tiers', 'Tier 1 at rank 1, Tier 2 at rank 4, Tier 3 at rank 8'],
+		['Prize', 'The spell, and double pet capture during the Sunday bonus'],
+	]}
+/>
+
+The four schools share the same 44 spells. Only the story, headquarters and NPCs differ, so pick whichever appeals to you. A school pays no currency or items.
+
+## 1. Enrol
+
+<Steps>
+
+1. Go to the city and press **F11** (or `.school`). Click **Mark on map**. Sebastian is on the first floor of the city's main building.
+2. Talk to him and choose **View the schools**.
+3. Click **I'M INTERESTED** on the school you want. Enrolment is immediate. A full school shows *SCHOOL FULL*, so choose another or come back later.
+4. Use your school's teleporter at the city teleport hub. Only students can pass.
+
+</Steps>
+
+## 2. Reach rank 1
+
+You start at rank 0, with no spell. Tier 1 opens at rank 1 (800 points), and **two daily missions** get you there.
+
+**Daily mission (+600):** at your headquarters, talk to your professor and choose *Today's tasks*. You get 3 simple tasks inside the headquarters. One mission per day, resetting at midnight (Brasília time).
+
+## 3. Choose your spell
+
+In **F11 → GRIMOIRE**, click **Select** on a spell. Only one is active at a time. It fires automatically with your basic attack, from any weapon, whenever its cooldown ends. Each rank shortens its cooldown by 5%.
+
+## 4. School events
+
+Three 20-minute events a day, Monday to Saturday (Brasília time), worth up to 800 points each:
+
+| Days | Times |
+|---|---|
+| Monday, Tuesday | 10:00, 15:00, 20:00 |
+| Wednesday, Thursday | 8:00, 17:00, 22:00 |
+| Friday, Saturday | 11:00, 16:00, 21:00 |
+
+The points your school earns during the week become **Sunday bonus** time from 19:00 (Brasília time), up to 3 hours at 10,000 points. During it, your pet capture chance doubles.
+
+<Aside type="caution" title="Stay active">
+Score at least once every 7 days to keep your enrolment. If you go 7 days without scoring, or 14 days without joining the server, you leave the school. Your rank and points are kept, so you can just enrol again.
+</Aside>
+
+<Command cmd=".school info">Shows your school, rank, points, active spell and time left to score.</Command>
+
+## Checklist
+
+<Checklist
+	id="wt-11"
+	items={['Enrolled in a school', 'Completed two daily missions (rank 1)', 'Selected a Tier 1 spell', 'Joined a school event']}
+/>
+
+## You're done when
+
+You have a school spell active and a habit of doing the daily mission. Tier 2 opens at rank 4 and Tier 3 at rank 8. See [Vampiric Schools](/schools/). **Next:** [Stage 12: Pulses and Transfusions](/walkthrough/12-pulses-and-transfusions/).

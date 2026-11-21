@@ -1,0 +1,77 @@
+---
+title: 'Stage 8: Character Prestige 11–20'
+description: Walkthrough stage 8. The last ten prestige buffs, total cost, Auto-Prestige for VIPs, and what unlocks at prestige 20.
+summary: Stage 8 prestiges 11–20 add damage, power, leech and efficiency buffs. All 20 cost 22,760 Ourosangue in total. At prestige 20, Schools open and PRESTIGE becomes PULSE.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - nivel-e-prestigio
+  - meditacao
+  - auto-prestigio
+  - transfusao-e-plasmas
+  - escolas
+labels: [official, vip]
+sidebar:
+  order: 8
+---
+
+import Requirements from '../../../components/Requirements.astro';
+import Checklist from '../../../components/Checklist.astro';
+import Label from '../../../components/Label.astro';
+import Currency from '../../../components/Currency.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+**Goal:** reach character prestige 20, the gateway to the endgame.
+
+<Requirements items={['Prestige 10 (Stage 7)']} />
+
+## Buffs 11–20
+
+| Prestige | Buff |
+|---|---|
+| 11 | Mount Speed +0.2 |
+| 12 | Blood Drain Reduction +6% |
+| 13 | Physical Power +2 |
+| 14 | Spell Power +2 |
+| 15 | Physical Life Leech +2% |
+| 16 | Spell Life Leech +4% |
+| 17 | Attack Speed +4% |
+| 18 | Weapon Skill Power +6% |
+| 19 | Ultimate Efficiency +8% |
+| 20 | Blood Efficiency +4% |
+
+## Cost
+
+Costs rise with each prestige. The twentieth costs <Currency id="ourosangue" amount={4467} />, and all twenty together cost <Currency id="ourosangue" amount={22760} />. The guide doesn't publish the individual costs for prestiges 2 to 19 (see [Q-017](/about/open-questions/#q-017)). Type `.level` before each one to see the next cost.
+
+## Auto-Prestige <Label type="vip" />
+
+VIPs can let **Auto-Prestige** prestige the character, weapon in hand, active blood and summoned pet automatically, the moment each hits max level. It works anywhere while you're online, and you don't need to be meditating. It charges the normal cost from your Bank, and pet prestige is free.
+
+- Open it with **F8 → Auto-Prestige → CONFIGURE**, or `.ap panel`. Turn each type on separately.
+- Set a **target** (stop at prestige N, or MAX for 20) and a **spending cap** in Ourosangue.
+
+<Aside type="caution" title="Auto pulse is on by default">
+At prestige 20, the Character type starts giving **Pulses** at level 90 (Stage 12). If you're not ready, turn **Auto pulse** off in the LIMITS board before you reach prestige 20. Auto-Prestige never transfuses; that's always manual.
+</Aside>
+
+## What prestige 20 unlocks
+
+- **Vampiric Schools.** Enrolment opens at prestige 20. See [Stage 11](/walkthrough/11-schools/).
+- **Pulses.** The **PRESTIGE** button becomes **GIVE PULSE**, and Nyxaris sends you the quest *The Call of Blood*. See [Stage 12](/walkthrough/12-pulses-and-transfusions/).
+
+## Checklist
+
+<Checklist
+	id="wt-08"
+	items={[
+		'Checking each prestige cost with .level',
+		'VIP only: set Auto-Prestige targets and a spending cap',
+		'Decided whether Auto pulse should be on before prestige 20',
+		'Reached prestige 20',
+	]}
+/>
+
+## You're done when
+
+You've reached prestige 20. Two paths open in parallel: [Stage 9](/walkthrough/09-class-evolutions/) (class evolutions) if you haven't done them yet, and the endgame from [Stage 11](/walkthrough/11-schools/).
