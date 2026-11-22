@@ -1,0 +1,29 @@
+---
+title: Commands
+description: "All 309 Sangria Falls player commands, filterable and copyable, from the official commands page. English descriptions where an English guide gives one, otherwise the official Portuguese text."
+summary: "Every player command on the server (309), by system, with a copy button. Commands are shown exactly as the server expects them and never translated. About a third have English descriptions from the English guides; the rest show the official Portuguese text."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - comandos
+labels: [official, verify]
+sidebar:
+  order: 1
+---
+
+import CommandTable from '../../../components/CommandTable.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note" title="About this list">
+The official commands page is only in Portuguese, and it uses the Portuguese spellings (`.nivel`, `.arma`, `.sangue`). The English guides use English spellings for some of the same commands (`.level`, `.weapon`, `.blood`), and this wiki's articles show those. Both spellings appear in the official sources. Whether every pair works interchangeably isn't stated ([Q-020](/about/open-questions/#q-020)).
+
+Descriptions in *italics* are the official Portuguese text, where no English guide lists that exact command.
+</Aside>
+
+Type a word to filter, by command, system, or description. Filtering ignores accents.
+
+<CommandTable />
+
+## Chat menus
+
+Without the interface, `.menu` opens the general numbered menu: type a number to choose and `0` to go back. Stand still, because walking more than 5 metres closes it. See [Playing without the interface](/getting-started/playing-without-the-interface/).

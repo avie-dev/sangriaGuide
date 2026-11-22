@@ -1,0 +1,72 @@
+---
+title: Tower of the Immortals
+description: The Sangria Falls Tower of the Immortals, an endless solo boss climb. Waves and floors, the 11 weekly per-class rankings, prizes, and the one-slot rule.
+summary: "Endless solo waves of bosses (+10% damage per wave), 24 hours, free, with the Herald at the Events Hub. Each class has its own weekly ranking; top 3 earn 150/100/50 Sangricoins plus 20,000/15,000/10,000 Ourosangue. Reach wave 20 ten times a week for 200 Sangricoins."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - torre-dos-imortais
+  - pets
+  - passe-de-batalha
+labels: [official, verify]
+sidebar:
+  order: 4
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Unverified from '../../../components/Unverified.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<QuickFacts
+	facts={[
+		['NPC', 'The Herald (Events Hub); talk to him once to unlock entry'],
+		['Open', '24 hours, free, unlimited entries'],
+		['Players', 'Solo; 3 towers, so up to 3 people at once'],
+		['Requirement', 'One of the 11 classes (not the Awakened)'],
+		['Pets', 'Allowed; no bat form or teleport inside'],
+	]}
+/>
+
+## The climb
+
+- The first wave arrives 7 seconds after entering, and each next wave 10 seconds after the last.
+- **Each wave adds +10% damage** over the first, with no limit (wave 11 hits twice as hard).
+- Every **15 waves**, you go up a floor. On the 5th floor, waves continue until you fall.
+
+| Waves | Bosses |
+|---|---|
+| 1–10 | One weak boss |
+| 11–20 | One strong boss |
+| 21–40 | One strong + one weak |
+| 41+ | Two strong |
+
+**There's no revive.** Fall, and the run ends. Falling off the edge just puts you back on the floor, with no penalty. You return to the Hub at full health, and a summary appears (class, wave, floor, time, damage, bosses defeated). You can't leave mid-run by command, and a disconnect ends the run.
+
+## Rankings
+
+- **11 weekly rankings, one per class.** Your run counts for the class **you entered with**, so pick it before entering.
+- Within a class, the **highest wave** wins, and ties go to the **shortest time**.
+- **One slot per player:** you appear only in the class where your *placement* is best. For example, 3rd with Bastien (wave 50) and 2nd with Mortak (wave 20) puts your slot at 2nd with Mortak. Your records in other classes stay saved.
+- Tabs: CURRENT WEEK, PREVIOUS WEEK, ALL-TIME (with an **All** view of each player's best).
+
+## Prizes
+
+| Place (per class) | Sangricoins | Ourosangue |
+|---|---|---|
+| 1st | 150 | 20,000 |
+| 2nd | 100 | 15,000 |
+| 3rd | 50 | 10,000 |
+
+Up to 33 players are rewarded each week. **Participation:** reach **wave 20 ten times** in a week, with any classes (progress adds up), for **200 Sangricoins**, once a week. Reaching wave 20 means winning the first 19, and you can earn both prizes.
+
+Prizes go straight to your Bank, even offline, when the week closes. That happens the first time anyone uses the Tower or opens the ranking after **Monday 00:00 (server clock)**, or at a server restart.
+
+<Unverified q="Q-003">The Tower guide says "server clock" for the Monday reset, while other guides say Brasília time. Whether they're the same isn't stated.</Unverified>
+
+## Other rewards
+
+Each boss gives a little **Battle Pass XP** (half the open-world value, and only to whoever got the kill). If you already own that boss as a pet, it can give a **soul**. Bosses drop no items, and the Tower never gives a new pet.
+
+<Aside type="tip">
+Entry is greyed out if you're outside the Hub, wounded, in combat, in bat form, classless, mid class-test, or all three towers are busy (**Free towers: 0/3**).
+</Aside>

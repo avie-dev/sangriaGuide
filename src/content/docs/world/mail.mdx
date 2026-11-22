@@ -1,0 +1,47 @@
+---
+title: Mail
+description: "Sangria Falls mail: write to any player (even offline), claim team and system rewards (15 free slots), block players, and the letters you'll receive from the server."
+summary: "Mail (F6 or .mail) works anywhere. Write text-only messages to any player, even offline. Rewards come only from the team and systems (dungeons, incursion keys, Soul Shards); items need 15 free slots. Deleting is instant."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - correio
+  - castelo
+  - masmorras
+labels: [official]
+sidebar:
+  order: 5
+---
+
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+Mail is free and works anywhere. The box keeps your **100 most recent** messages. Press **F6**, click the envelope by the minimap, or type `.mail`. A red dot and a corner notice tell you when new mail arrives. Tabs: **Inbox, Sent, Write, Block**.
+
+## Writing
+
+**Write** tab: in **To:**, the exact in-game name; then **Subject:** and **Message:** (up to 280 letters; `||` makes a line break). Click **Send**. If the name is wrong, chat tells you. Players read it when they log in.
+
+**Between players, mail is text only.** You can't send items or coins.
+
+## Rewards
+
+Rewards come from the **team** (crown icon) and **systems** (gift icon), such as dungeon rewards, incursion dungeon keys and boss Soul Shards. Open the letter → **Claim reward**, or **Claim all** in the Inbox.
+
+<Aside type="caution" title="15 free slots">
+Items need **15 free inventory slots**, or the claim doesn't happen and waits in the box. Coins go to the Bank. Team mail may have a **deadline**, so claim it soon.
+</Aside>
+
+Letters you'll see:
+
+- **Dungeon System:** your dungeon win reward.
+- **The Order of the Observers:** a Soul Shard, or a dungeon key from an incursion gate boss.
+- **Red WARNING:** an important server notice, for example *YOUR CASTLE WILL FALL* (low Castle Heart essence). There's no reply and no reward.
+
+## Deleting and blocking
+
+Deleting (the trash can, or **Delete**) is **instant, with no confirmation**, so claim rewards first. **Block** on a player's message stops their mail, and the **Block** tab lists and unblocks. Team and system mail can't be blocked.
+
+<Command cmd=".mail">Opens the mail menu (`.email` also works).</Command>
+<Command cmd=".mail resgatar-tudo">Claims all pending rewards.</Command>
+<Command cmd='.mail enviar Azor "Trade" "I have 50 ingots. Want them?"'>Sends a mail in one line (subject and message in quotes).</Command>

@@ -1,0 +1,55 @@
+---
+title: Forming a party
+description: How to form a 2–4 player dungeon group at Mark on Sangria Falls, invite players, and use the group board to find people when you're not at the Events Hub.
+summary: "At Mark, choose the tier and invite players standing near him who have a key of that tier. They get 30 seconds to accept. Need people? Mark interest on the group board (two-people minimap button or .group) and leaders at the Hub can call you."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - masmorras
+  - quadro-de-grupos
+labels: [official]
+sidebar:
+  order: 2
+---
+
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import { Steps } from '@astrojs/starlight/components';
+
+## At Mark
+
+<PlayModes>
+	<Fragment slot="interface">
+		1. Choose the tier.
+		2. Ask your friends to stand near Mark. They appear in the **NEAR MARK** list. Click **Invite**. Anyone marked "No key" can't be invited.
+		3. Each invited player gets a notice and has **30 seconds** to click **Accept** (or Decline).
+		4. Check the **READY TO ENTER?** board: 2–4 players, everyone with a key, a free room, and nobody in combat or downed.
+		5. Click **Enter the Dungeon**. Everyone's key is spent now.
+	</Fragment>
+	<Fragment slot="chat">
+		<Command cmd=".dungeon">Mark's menu: lead, invite, start and affinity.</Command>
+		<Command cmd=".dungeon accept">Accepts a group invite (30 seconds). `.dungeon decline` declines.</Command>
+		<Command cmd=".dungeon start">Starts the run (leader only).</Command>
+		<Command cmd=".dungeon leave">Leaves or disbands the group before the run starts.</Command>
+	</Fragment>
+</PlayModes>
+
+**Whoever invites becomes the leader.** Only the leader invites, removes someone (the red button by their name) and starts. **End Group** disbands, and invited players can **Leave Group**. Pets are collected when the group forms and come back after the run.
+
+### Why can't I invite my friend?
+
+They must be near Mark, have a key of the same tier, have finished the starter tutorial, and not be in another group.
+
+## Finding people: the group board
+
+<Steps>
+
+1. Open the **group board**: the round two-people button by the minimap, or `.group`. It works anywhere on the map.
+2. On the **Dungeon** row, click the tier (Adventurer, Veteran, Master or Nightmare). That click marks you. Don't click MARKED afterwards, or you'll unmark yourself.
+3. Your mark lasts **30 minutes**, and opening the board renews it. Make sure you have that tier's key first.
+4. A leader at the Hub sees you in **LOOKING FOR GROUP** and clicks **Call**. A card appears on your screen. Click **On my way**.
+5. Travel to the Events Hub through the city teleporter (nobody is teleported for you). The invite arrives when you get there.
+
+</Steps>
+
+Leaders can call the same person again after 2 minutes, and anyone called gets at least 10 minutes of mark to arrive. The board also works for the Rift, the Illusory Arena and the Judgment. See [Group board](/events/group-board/).

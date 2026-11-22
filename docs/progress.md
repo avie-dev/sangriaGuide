@@ -24,7 +24,7 @@ A page stub is never counted as finished content.
 | 4 | Beginner walkthrough | Done (2026-11-22) | 36 pages written: the 20 Getting started pages (what Sangria Falls is, vs vanilla, vs Bloodcraft, joining, interface install and troubleshooting, chat-only play, language, HUD, website panel, tutorial, first class, city, teleports, NPCs, first castle, first-day and first-week checklists, beginner mistakes) and the walkthrough overview plus Stages 1–15. Every claim is checked against the official guides; none is confirmed in game yet (`verified: partly checked`). Open questions Q-001, Q-002, Q-006, Q-008, Q-009, Q-012, Q-013 and Q-017 are flagged inline where they apply. |
 | 5 | Progression, class and meditation guides | Done (2026-11-22) | 33 pages: Character (9: levels and XP, prestige with all 20 buffs, XP bonuses, Quitina, weapon mastery, blood lineage, statistics with an attribute glossary, profile), Meditation (8: how it works, costs and rates, Double Meditation, Auto-Prestige, AFK settings, worked examples, troubleshooting) and Classes (16: all 11 classes plus the Awakened translated from the Portuguese class pages, choosing a class, evolutions, Training Room). Class tables (evolutions, per-grade attributes, defaults) come from `src/data/class-details.json`, which `research/class-data.mjs` parses from the official pages; it found 5 published totals that don't add up (Q-018, Q-019), which the pages flag. New open questions Q-018 to Q-021. |
 | 6 | Economy, professions, pets, equipment | Done (2026-11-22) | 49 pages. Economy (12: currencies, Bank, Vault, Market, contracts, Shadow Merchant, Casino, Online Reward, Prisoners, an earning guide of official payouts and limits, budgets totalled from official prices). Professions (11: orders, each trade, a gathering comparison, services, aquarium). Companions (10: pets, capture, souls and tiers, levels, Cristais, recommendations, Sangrulhos, eggs, fusion). Equipment (16: weapons, affinity, armour and jewellery, fortification, refinement, Perfect gems, spell jewels, bonuses by class, upgrade priorities, six build-archetype frameworks with no claimed optimum). New cost tables (vault, chest expansion, Mobile Depot, profession prestige, fortification) and a ClassBonusSummary component. New open question Q-022. |
-| 7 | Dungeons, events, endgame | Not started | |
+| 7 | Dungeons, events, endgame | Done (2026-11-22) | 61 pages, covering every remaining section. Dungeons (11, including four per-dungeon pages whose rooms are undocumented, Q-023), Events (9), Quests (6), Schools (3), Endgame (6), Support (6), World (10) and Reference (10: all 309 commands, shortcuts, NPCs, items, bosses, a Portuguese–English glossary, every cost table, every published chance, progression requirements). New data: `src/data/commands.json` (parsed by `research/commands-data.mjs`, with English descriptions where an English guide gives the same command) and `src/data/npcs.yaml` (a validated collection shared by two pages). New components: CommandTable and NpcTable. Corrections: the Marriage Joint Account is an exception to "no transfers between players"; Q-006 is partly answered (Rupture and Judgment groups can't hurt each other). New open question Q-023. |
 | 8 | Calculators and interactive tools | Not started | |
 | 9 | Source verification and QA | Not started | |
 | 10 | Deployment and contribution readiness | Not started | Do not deploy until the user asks |
@@ -34,7 +34,7 @@ A page stub is never counted as finished content.
 <!-- coverage:start -->
 _Generated from `docs/coverage.yaml` by `npm run coverage`. Edit the YAML, not these tables._
 
-**191 pages planned** · written: 118 · drafts: 0 · verified: 0 · published: 118 · page stubs: 9
+**191 pages planned** · written: 179 · drafts: 0 · verified: 0 · published: 179 · page stubs: 1
 
 | Phase | Pages |
 |---|---|
@@ -212,103 +212,103 @@ _Generated from `docs/coverage.yaml` by `npm run coverage`. Edit the YAML, not t
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Dungeons <br>`/dungeons/` · phase 7 | `masmorras` | sources found | — | — | page stub |  |
-| Dungeon keys <br>`/dungeons/keys/` · phase 7 | `masmorras`, `incursoes` | sources found | — | — | — |  |
-| Forming a party <br>`/dungeons/forming-a-party/` · phase 7 | `masmorras`, `quadro-de-grupos` | sources found | — | — | — |  |
-| Difficulties and preparation <br>`/dungeons/difficulties/` · phase 7 | `masmorras` | sources found | — | — | — |  |
-| Death, wipes and dungeon rules <br>`/dungeons/rules-and-risks/` · phase 7 | `masmorras`, `pets` | sources found | — | — | — | Q-006 |
-| Dungeon rewards and loot <br>`/dungeons/rewards/` · phase 7 | `masmorras`, `correio` | sources found | — | — | — |  |
-| Party roles and compositions <br>`/dungeons/party-roles/` · phase 7 | `masmorras`, `classes` | sources found | — | — | — | Community recommendation |
-| Sanctuary of Redemption <br>`/dungeons/sanctuary-of-redemption/` · phase 7 | `masmorras` | sources found | — | — | — | Room and boss mechanics are not documented officially |
-| Grove of Disenchantment <br>`/dungeons/grove-of-disenchantment/` · phase 7 | `masmorras` | sources found | — | — | — | Room and boss mechanics are not documented officially |
-| Blood Dominion <br>`/dungeons/blood-dominion/` · phase 7 | `masmorras` | sources found | — | — | — | Room and boss mechanics are not documented officially |
-| Corrupted Temple <br>`/dungeons/corrupted-temple/` · phase 7 | `masmorras` | sources found | — | — | — | Room and boss mechanics are not documented officially |
+| Dungeons <br>`/dungeons/` · phase 7 | `masmorras` | read | written | partly checked | published |  |
+| Dungeon keys <br>`/dungeons/keys/` · phase 7 | `masmorras`, `incursoes` | read | written | partly checked | published |  |
+| Forming a party <br>`/dungeons/forming-a-party/` · phase 7 | `masmorras`, `quadro-de-grupos` | read | written | partly checked | published |  |
+| Difficulties and preparation <br>`/dungeons/difficulties/` · phase 7 | `masmorras` | read | written | partly checked | published |  |
+| Death, wipes and dungeon rules <br>`/dungeons/rules-and-risks/` · phase 7 | `masmorras`, `pets` | read | written | partly checked | published | Q-006 |
+| Dungeon rewards and loot <br>`/dungeons/rewards/` · phase 7 | `masmorras`, `correio` | read | written | partly checked | published | Q-022 |
+| Party roles and compositions <br>`/dungeons/party-roles/` · phase 7 | `masmorras`, `classes` | read | written | partly checked | published | Community recommendation |
+| Sanctuary of Redemption <br>`/dungeons/sanctuary-of-redemption/` · phase 7 | `masmorras` | read | written | partly checked | published | Room and boss mechanics are not documented officially; Q-023 |
+| Grove of Disenchantment <br>`/dungeons/grove-of-disenchantment/` · phase 7 | `masmorras` | read | written | partly checked | published | Room and boss mechanics are not documented officially; Q-023 |
+| Blood Dominion <br>`/dungeons/blood-dominion/` · phase 7 | `masmorras` | read | written | partly checked | published | Room and boss mechanics are not documented officially; Q-023 |
+| Corrupted Temple <br>`/dungeons/corrupted-temple/` · phase 7 | `masmorras` | read | written | partly checked | published | Room and boss mechanics are not documented officially; Q-023 |
 
 ### Events
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Events <br>`/events/` · phase 7 | `quadro-de-grupos`, `ruptura-da-realidade` | sources found | — | — | page stub |  |
-| Illusory Arena <br>`/events/illusory-arena/` · phase 7 | `arena-ilusional` | sources found | — | — | — |  |
-| Tower of the Immortals <br>`/events/tower-of-the-immortals/` · phase 7 | `torre-dos-imortais` | sources found | — | — | — |  |
-| Reality Rupture <br>`/events/reality-rupture/` · phase 7 | `ruptura-da-realidade` | sources found | — | — | — |  |
-| Goreswine's Judgment <br>`/events/goreswines-judgment/` · phase 7 | `julgamento-de-goreswine` | sources found | — | — | — |  |
-| Rift Incursions <br>`/events/rift-incursions/` · phase 7 | `incursoes` | sources found | — | — | — |  |
-| V Blood Hunt <br>`/events/v-blood-hunt/` · phase 7 | `cacada-de-v-bloods` | sources found | — | — | — |  |
-| Group board <br>`/events/group-board/` · phase 7 | `quadro-de-grupos` | sources found | — | — | — |  |
-| Seasonal events <br>`/events/seasonal/` · phase 7 | `facanhas`, `pets`, `passe-de-batalha` | sources found | — | — | — | Only Sangrisween 2026 medals and event pets are documented |
+| Events <br>`/events/` · phase 7 | `quadro-de-grupos`, `ruptura-da-realidade` | read | written | partly checked | published |  |
+| Illusory Arena <br>`/events/illusory-arena/` · phase 7 | `arena-ilusional` | read | written | partly checked | published | Q-006 |
+| Tower of the Immortals <br>`/events/tower-of-the-immortals/` · phase 7 | `torre-dos-imortais` | read | written | partly checked | published | Q-003 |
+| Reality Rupture <br>`/events/reality-rupture/` · phase 7 | `ruptura-da-realidade` | read | written | partly checked | published |  |
+| Goreswine's Judgment <br>`/events/goreswines-judgment/` · phase 7 | `julgamento-de-goreswine` | read | written | partly checked | published |  |
+| Rift Incursions <br>`/events/rift-incursions/` · phase 7 | `incursoes` | read | written | partly checked | published |  |
+| V Blood Hunt <br>`/events/v-blood-hunt/` · phase 7 | `cacada-de-v-bloods` | read | written | partly checked | published |  |
+| Group board <br>`/events/group-board/` · phase 7 | `quadro-de-grupos` | read | written | partly checked | published |  |
+| Seasonal events <br>`/events/seasonal/` · phase 7 | `facanhas`, `pets`, `passe-de-batalha` | read | written | partly checked | published | Only Sangrisween 2026 medals and event pets are documented |
 
 ### Outposts and quests
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Outposts and quests <br>`/quests/` · phase 7 | `missoes`, `postos-avancados` | sources found | — | — | page stub |  |
-| Outposts <br>`/quests/outposts/` · phase 7 | `postos-avancados` | sources found | — | — | — |  |
-| Quests and quest tracking <br>`/quests/quests/` · phase 7 | `missoes` | sources found | — | — | — |  |
-| Class unlock and evolution quests <br>`/quests/class-quests/` · phase 7 | `classes`, `class-hub` | sources found | — | — | — |  |
-| Nyxaris and the endgame quests <br>`/quests/nyxaris/` · phase 7 | `transfusao-e-plasmas`, `livro-perdido`, `missoes` | sources found | — | — | — |  |
-| The Lost Book <br>`/quests/lost-book/` · phase 7 | `livro-perdido` | sources found | — | — | — |  |
+| Outposts and quests <br>`/quests/` · phase 7 | `missoes`, `postos-avancados` | read | written | partly checked | published |  |
+| Outposts <br>`/quests/outposts/` · phase 7 | `postos-avancados` | read | written | partly checked | published |  |
+| Quests and quest tracking <br>`/quests/quests/` · phase 7 | `missoes` | read | written | partly checked | published |  |
+| Class unlock and evolution quests <br>`/quests/class-quests/` · phase 7 | `classes`, `class-hub` | read | written | partly checked | published |  |
+| Nyxaris and the endgame quests <br>`/quests/nyxaris/` · phase 7 | `transfusao-e-plasmas`, `livro-perdido`, `missoes` | read | written | partly checked | published |  |
+| The Lost Book <br>`/quests/lost-book/` · phase 7 | `livro-perdido` | read | written | partly checked | published |  |
 
 ### Vampiric Schools
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Vampiric Schools <br>`/schools/` · phase 7 | `escolas` | sources found | — | — | page stub |  |
-| School ranks and points <br>`/schools/ranks-and-points/` · phase 7 | `escolas` | sources found | — | — | — |  |
-| School spells <br>`/schools/spells/` · phase 7 | `escolas`, `classes` | sources found | — | — | — |  |
+| Vampiric Schools <br>`/schools/` · phase 7 | `escolas` | read | written | partly checked | published |  |
+| School ranks and points <br>`/schools/ranks-and-points/` · phase 7 | `escolas` | read | written | partly checked | published |  |
+| School spells <br>`/schools/spells/` · phase 7 | `escolas`, `classes` | read | written | partly checked | published |  |
 
 ### Endgame
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Endgame <br>`/endgame/` · phase 7 | `transfusao-e-plasmas`, `nivel-e-prestigio` | sources found | — | — | page stub |  |
-| Pulses <br>`/endgame/pulses/` · phase 7 | `transfusao-e-plasmas`, `auto-prestigio` | sources found | — | — | — |  |
-| Transfusions <br>`/endgame/transfusions/` · phase 7 | `transfusao-e-plasmas`, `livro-perdido` | sources found | — | — | — |  |
-| Plasmas <br>`/endgame/plasmas/` · phase 7 | `transfusao-e-plasmas` | sources found | — | — | — | Q-013 |
-| Plasma investment by class <br>`/endgame/plasmas-by-class/` · phase 7 | `transfusao-e-plasmas`, `classes` | sources found | — | — | — | Community recommendation |
-| After 250 transfusions <br>`/endgame/after-250-transfusions/` · phase 7 | `transfusao-e-plasmas`, `rankings` | sources found | — | — | — |  |
+| Endgame <br>`/endgame/` · phase 7 | `transfusao-e-plasmas`, `nivel-e-prestigio` | read | written | partly checked | published |  |
+| Pulses <br>`/endgame/pulses/` · phase 7 | `transfusao-e-plasmas`, `auto-prestigio` | read | written | partly checked | published |  |
+| Transfusions <br>`/endgame/transfusions/` · phase 7 | `transfusao-e-plasmas`, `livro-perdido` | read | written | partly checked | published |  |
+| Plasmas <br>`/endgame/plasmas/` · phase 7 | `transfusao-e-plasmas` | read | written | partly checked | published | Q-013 |
+| Plasma investment by class <br>`/endgame/plasmas-by-class/` · phase 7 | `transfusao-e-plasmas`, `classes` | read | written | partly checked | published | Community recommendation |
+| After 250 transfusions <br>`/endgame/after-250-transfusions/` · phase 7 | `transfusao-e-plasmas`, `rankings` | read | written | partly checked | published |  |
 
 ### Battle Pass and VIP
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Battle Pass and VIP <br>`/support/` · phase 7 | `vip`, `vip-page` | sources found | — | — | page stub |  |
-| Battle Pass <br>`/support/battle-pass/` · phase 7 | `passe-de-batalha` | sources found | — | — | — |  |
-| Farming Battle Pass XP <br>`/support/battle-pass-farming/` · phase 7 | `passe-de-batalha`, `cacada-de-v-bloods`, `ruptura-da-realidade` | sources found | — | — | — | Community recommendation |
-| VIP <br>`/support/vip/` · phase 7 | `vip`, `vip-page`, `auto-prestigio`, `meditacao` | sources found | — | — | — |  |
-| Optional purchases <br>`/support/optional-purchases/` · phase 7 | `vip-page`, `meditacao`, `passe-de-batalha`, `clan` | sources found | — | — | — | No prices are published; do not invent them |
-| Free vs VIP progression <br>`/support/free-vs-vip/` · phase 7 | `vip`, `meditacao`, `transfusao-e-plasmas`, `sangrulhos`, `teleportes` | sources found | — | — | — |  |
+| Battle Pass and VIP <br>`/support/` · phase 7 | `vip`, `vip-page` | read | written | partly checked | published |  |
+| Battle Pass <br>`/support/battle-pass/` · phase 7 | `passe-de-batalha` | read | written | partly checked | published |  |
+| Farming Battle Pass XP <br>`/support/battle-pass-farming/` · phase 7 | `passe-de-batalha`, `cacada-de-v-bloods`, `ruptura-da-realidade` | read | written | partly checked | published | Community recommendation |
+| VIP <br>`/support/vip/` · phase 7 | `vip`, `vip-page`, `auto-prestigio`, `meditacao` | read | written | partly checked | published |  |
+| Optional purchases <br>`/support/optional-purchases/` · phase 7 | `vip-page`, `meditacao`, `passe-de-batalha`, `clan` | read | written | partly checked | published | No prices are published; do not invent them |
+| Free vs VIP progression <br>`/support/free-vs-vip/` · phase 7 | `vip`, `meditacao`, `transfusao-e-plasmas`, `sangrulhos`, `teleportes` | read | written | partly checked | published |  |
 
 ### World and community
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| World and community <br>`/world/` · phase 7 | `castelo`, `clan` | sources found | — | — | page stub |  |
-| Castle helpers <br>`/world/castle/` · phase 7 | `castelo` | sources found | — | — | — |  |
-| Furniture <br>`/world/furniture/` · phase 7 | `moveis` | sources found | — | — | — |  |
-| Clan <br>`/world/clan/` · phase 7 | `clan` | sources found | — | — | — |  |
-| Marriage <br>`/world/marriage/` · phase 7 | `casamento` | sources found | — | — | — |  |
-| Mail <br>`/world/mail/` · phase 7 | `correio` | sources found | — | — | — |  |
-| Rankings <br>`/world/rankings/` · phase 7 | `rankings` | sources found | — | — | — |  |
-| Achievements <br>`/world/achievements/` · phase 7 | `conquistas` | sources found | — | — | — |  |
-| Feats, Fame and titles <br>`/world/feats-fame-titles/` · phase 7 | `facanhas`, `conquistas`, `casamento` | sources found | — | — | — |  |
-| Community rules <br>`/world/community-rules/` · phase 7 | — | — | — | — | — | Q-014 |
+| World and community <br>`/world/` · phase 7 | `castelo`, `clan` | read | written | partly checked | published |  |
+| Castle helpers <br>`/world/castle/` · phase 7 | `castelo` | read | written | partly checked | published |  |
+| Furniture <br>`/world/furniture/` · phase 7 | `moveis` | read | written | partly checked | published |  |
+| Clan <br>`/world/clan/` · phase 7 | `clan` | read | written | partly checked | published |  |
+| Marriage <br>`/world/marriage/` · phase 7 | `casamento` | read | written | partly checked | published |  |
+| Mail <br>`/world/mail/` · phase 7 | `correio` | read | written | partly checked | published |  |
+| Rankings <br>`/world/rankings/` · phase 7 | `rankings` | read | written | partly checked | published |  |
+| Achievements <br>`/world/achievements/` · phase 7 | `conquistas` | read | written | partly checked | published |  |
+| Feats, Fame and titles <br>`/world/feats-fame-titles/` · phase 7 | `facanhas`, `conquistas`, `casamento` | read | written | partly checked | published |  |
+| Community rules <br>`/world/community-rules/` · phase 7 | — | read | written | partly checked | published | Q-014 |
 | Frequently asked questions <br>`/world/faq/` · phase 9 | `primeiros-passos` | sources found | — | — | — | Compiled from every guide FAQ |
 
 ### Reference
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Reference <br>`/reference/` · phase 7 | `comandos`, `atalhos` | sources found | — | — | page stub |  |
-| Player commands <br>`/reference/commands/` · phase 7 | `comandos` | sources found | — | — | — | 309 commands; descriptions are in Portuguese |
-| Keyboard shortcuts <br>`/reference/shortcuts/` · phase 7 | `atalhos` | sources found | — | — | — | Source page is in Portuguese |
-| NPC directory <br>`/reference/npcs/` · phase 7 | `primeiros-passos`, `profissoes`, `masmorras`, `escolas`, `sangrulhos`, `transfusao-e-plasmas`, `postos-avancados` | sources found | — | — | — | Compiled across guides |
-| Item directory <br>`/reference/items/` · phase 7 | `masmorras`, `banco`, `pets`, `sangrulhos`, `oficios-ferreiro-alfaiate-encantador` | sources found | — | — | — | Compiled across guides |
-| Boss directory <br>`/reference/bosses/` · phase 7 | `pets`, `cacada-de-v-bloods`, `ruptura-da-realidade`, `julgamento-de-goreswine` | sources found | — | — | — | Compiled across guides |
-| Glossary <br>`/reference/glossary/` · phase 7 | `comandos` | sources found | — | — | — | Portuguese–English term map compiled across guides |
-| Upgrade cost tables <br>`/reference/cost-tables/` · phase 7 | `nivel-e-prestigio`, `maestria-de-arma`, `linhagem-de-sangue`, `classes`, `pets`, `oficios-ferreiro-alfaiate-encantador`, `transfusao-e-plasmas` | sources found | — | — | — |  |
-| Drop rates <br>`/reference/drop-rates/` · phase 7 | `pets`, `masmorras`, `arena-ilusional`, `coleta-minerador-pescador-lenhador` | sources found | — | — | — |  |
-| Progression requirements <br>`/reference/progression-requirements/` · phase 7 | `classes`, `escolas`, `transfusao-e-plasmas`, `julgamento-de-goreswine`, `ruptura-da-realidade`, `oficios-ferreiro-alfaiate-encantador` | sources found | — | — | — |  |
+| Reference <br>`/reference/` · phase 7 | `comandos`, `atalhos` | read | written | partly checked | published |  |
+| Player commands <br>`/reference/commands/` · phase 7 | `comandos` | read | written | partly checked | published | 309 commands; descriptions are in Portuguese; Q-020 |
+| Keyboard shortcuts <br>`/reference/shortcuts/` · phase 7 | `atalhos` | read | written | partly checked | published | Source page is in Portuguese |
+| NPC directory <br>`/reference/npcs/` · phase 7 | `primeiros-passos`, `profissoes`, `masmorras`, `escolas`, `sangrulhos`, `transfusao-e-plasmas`, `postos-avancados` | read | written | partly checked | published | Compiled across guides |
+| Item directory <br>`/reference/items/` · phase 7 | `masmorras`, `banco`, `pets`, `sangrulhos`, `oficios-ferreiro-alfaiate-encantador` | read | written | partly checked | published | Compiled across guides |
+| Boss directory <br>`/reference/bosses/` · phase 7 | `pets`, `cacada-de-v-bloods`, `ruptura-da-realidade`, `julgamento-de-goreswine` | read | written | partly checked | published | Compiled across guides |
+| Glossary <br>`/reference/glossary/` · phase 7 | `comandos` | read | written | partly checked | published | Portuguese–English term map compiled across guides |
+| Upgrade cost tables <br>`/reference/cost-tables/` · phase 7 | `nivel-e-prestigio`, `maestria-de-arma`, `linhagem-de-sangue`, `classes`, `pets`, `oficios-ferreiro-alfaiate-encantador`, `transfusao-e-plasmas` | read | written | partly checked | published |  |
+| Drop rates <br>`/reference/drop-rates/` · phase 7 | `pets`, `masmorras`, `arena-ilusional`, `coleta-minerador-pescador-lenhador` | read | written | partly checked | published |  |
+| Progression requirements <br>`/reference/progression-requirements/` · phase 7 | `classes`, `escolas`, `transfusao-e-plasmas`, `julgamento-de-goreswine`, `ruptura-da-realidade`, `oficios-ferreiro-alfaiate-encantador` | read | written | partly checked | published |  |
 | Server mechanics FAQ <br>`/reference/mechanics-faq/` · phase 9 | `nivel-e-prestigio`, `meditacao` | sources found | — | — | — |  |
 | Troubleshooting <br>`/reference/troubleshooting/` · phase 9 | `interface`, `meditacao`, `missoes`, `painel-do-site` | sources found | — | — | — |  |
 

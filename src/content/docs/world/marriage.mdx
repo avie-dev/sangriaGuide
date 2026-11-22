@@ -1,0 +1,71 @@
+---
+title: Marriage (Blood Bond)
+description: "The Sangria Falls Blood Bond: engagement, Blood Vows (5 Rifts, 5 Dungeons, 1 Judgment), the ceremony with A-mór, Bond Points and levels, the Joint Account, partner teleport, and divorce."
+summary: "Propose (right-click → Engagement), complete the Blood Vows together (5 Rifts, 5 Dungeons, 1 Judgment), then marry before A-mór. Bond Points unlock titles, partner teleport, a Joint Account (send Ourosangue), portraits and an aura. It gives no progression advantage."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - casamento
+labels: [official]
+sidebar:
+  order: 4
+---
+
+import Command from '../../../components/Command.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+The **Blood Bond** joins two players. It's **social and cosmetic**: none of it gives XP, damage, defence, drops or Fame. Each player has one engagement or marriage at a time, and only what you do together **after** the engagement counts.
+
+## Opening the Book of Unions
+
+The round **pink heart** button at the top left (below the HUD's left wing, in the default Sangria Falls layout), the heart button in your Profile (F1), `.marriage`, or *Open the Book of Unions* with **A-mór, the Cupid**, in the city (the way in while you're single).
+
+## Proposing
+
+Right-click a nearby player → **Engagement**, or from afar:
+
+<Command cmd=".marriage invite Duke">Proposes to a player (replace with their name).</Command>
+
+They get a proposal card for **2 minutes**. Once you're engaged, a heart appears on both HUDs. *Call off engagement* erases your Vows progress.
+
+## The Blood Vows
+
+Together, with **both present at the end**: **5 Rifts** (Reality Rupture wins), **5 Dungeons** and **1 Judgment** (Goreswine defeated). Chat announces each one that counts. The **Vows** tab tracks progress, and *Ceremony unlocked!* appears when you're done.
+
+## The ceremony
+
+<Steps>
+
+1. Go together to **A-mór** and choose *Speak the vows*.
+2. Optionally write a phrase (up to 80 characters), then click **Confirm my vows** (or *Confirm without a phrase*).
+3. When both confirm near A-mór, the **BLOOD UNION** banner announces you to the whole server.
+
+</Steps>
+
+## Bond Points and levels
+
+Earned together, near each other or in the same activity: **unit 1, elite 5, V Blood 50, Rift 100, Dungeon 100, Judgment 250**.
+
+| Level | Points | Rewards |
+|---|---|---|
+| I · Blood Promise | At the wedding | *Crimson Consort* title, official record, teleport to your partner, your spouse's heart on your nameplate |
+| II · Crimson Bond | 2,500 | **Joint Account** |
+| III · Shadow Union | 5,000 | Exclusive wedding portraits |
+| IV · Eternal Bond | 10,000 | A special Chronicle entry and the couple's aura |
+| V · Bound Souls | 20,000 + 30 days married | *Soul of Eternity* title and vow renewal with A-mór |
+
+## Using the rewards
+
+- **Teleport to your partner:** 15-minute cooldown. It won't work if *you* are in combat (your partner can be), in activities (including the class test), in event or boss zones, in Dracula's room, in someone else's vault, near an incursion, or with a castle under attack.
+- **Joint Account:** type an amount and **Send**. The Ourosangue goes to your partner's Bank, even offline. It needs **7 days of marriage**, with a limit of **50,000 per day per couple**, resetting at midnight. This is the only documented way to send Ourosangue to another player.
+- **Title, portrait, aura:** from the left card, the Union tab, and *Couple's aura: on/off*.
+
+The Book also has a **Chronicle** (milestones and anniversaries), **Statistics**, 7 union **achievements** (no Fame) and the server's **Registry** of couples.
+
+## Divorce
+
+**Ask for divorce** and confirm. It ends in **72 hours** unless cancelled, or at once if your partner agrees. Teleport and the Joint Account lock while you wait.
+
+<Aside type="caution">
+Divorce loses points, titles and portraits, and both of you wait **7 days** before a new engagement.
+</Aside>

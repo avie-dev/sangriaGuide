@@ -1,0 +1,56 @@
+---
+title: V Blood hunting
+description: The Sangria Falls Boss Tracker shows which open-world V Blood bosses are alive and when others respawn. Pinning bosses, the on-screen panel, and what V Bloods give.
+summary: "The Boss Tracker (minimap gear → Boss Tracker → Manage, or .boss tempo) shows each open-world V Blood as alive or with a respawn countdown. Pin up to 8 to a live on-screen panel. It tells you when, not where."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - cacada-de-v-bloods
+  - passe-de-batalha
+  - pets
+  - nivel-e-prestigio
+  - rankings
+labels: [official]
+sidebar:
+  order: 6
+---
+
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+## The Boss Tracker
+
+It covers the **open-world** V Bloods only, not dungeon, arena, tower or incursion bosses. It's free, has no requirement, and works anywhere. It shows each boss as **alive** (green) or with a **countdown** (red), the same timer as the game's Blood Altar. During the countdown, the boss is already in its spot as a red shape you can't attack yet.
+
+<PlayModes>
+	<Fragment slot="interface">
+		Click the **minimap gear** → **Boss Tracker** card → **Manage**. Bosses are listed by Act 1–4, alphabetically. A ×3 means the boss spawns in 3 places and shows alive if any one is.
+
+		- **Pin** a boss (the pin left of its name) to add it to the on-screen **BOSSES** panel, which updates every second. Pin up to **8**, and **Unpin all** clears the list. Pins are saved between sessions.
+		- Drag the panel to move it, and use the sun icon for transparency (100/80/50/30%). Size (P, M, G, GG) and opacity are on the gear's Boss Tracker card. **X** hides it, and **Show HUD** brings it back.
+	</Fragment>
+	<Fragment slot="chat">
+		<Command cmd=".boss tempo">Lists the bosses spawning right now and each one's time.</Command>
+		<Command cmd=".boss tempo tristan">Shows whether one boss is alive or how long until it's back.</Command>
+	</Fragment>
+</PlayModes>
+
+<Aside type="note">
+The tracker tells you **when**, not **where**. Use the game's **Blood Altar** to track the way. You can't teleport into a boss's fight area, but you can teleport out.
+</Aside>
+
+## "It said alive, but the boss isn't there"
+
+Someone just killed it. The countdown only starts when the red shape appears, which needs a player nearby. Wait there, and the shape appears and the timer starts.
+
+## What V Bloods give
+
+| Reward | Detail |
+|---|---|
+| Character XP | Much more than normal creatures |
+| Weapon and blood XP | More for weapon mastery; blood lineage by the boss's level |
+| Battle Pass XP | 2–10 per open-world V Blood, not split |
+| Pet | 1% capture chance (a soul if you already own it); some bosses can't be captured |
+| Soul Shards | Solarus, Megara, Dracula, Talzur and Adam: a chance by mail for the killer and anyone near the body |
+| Boss ranking | Only open-world kills count |

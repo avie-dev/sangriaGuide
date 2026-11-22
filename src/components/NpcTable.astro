@@ -1,0 +1,32 @@
+---
+// A filterable table of NPCs from src/data/npcs.yaml.
+//   <NpcTable />           every NPC the official guides name
+//   <NpcTable beginner />  only those flagged for new players
+import { getCollection } from 'astro:content';
+import FilterTable from './FilterTable.astro';
+
+interface Props {
+	beginner?: boolean;
+}
+const all = await getCollection('npcs');
+const rows = Astro.props.beginner ? all.filter((n) => n.data.beginner) : all;
+---
+
+<FilterTable placeholder="Filter by name, role or place…" label="Filter NPCs">
+	<table>
+		<thead>
+			<tr><th scope="col">NPC</th><th scope="col">What they handle</th><th scope="col">Where</th></tr>
+		</thead>
+		<tbody>
+			{
+				rows.map((n) => (
+					<tr>
+						<td>{n.data.name}</td>
+						<td>{n.data.role}</td>
+						<td>{n.data.where ?? 'Not stated'}</td>
+					</tr>
+				))
+			}
+		</tbody>
+	</table>
+</FilterTable>

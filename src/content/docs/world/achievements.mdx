@@ -1,0 +1,54 @@
+---
+title: Achievements
+description: "Sangria Falls achievements: 12 long quests with permanent bonuses. The Pillars (200,000 Ourosangue echoes), Luminance, Thanatos, profession refinement unlocks and Mortak's class achievements."
+summary: "12 achievements in 4 categories (Pillars 5, Journeys 2, Professions 3, Classes 2). Four Pillars are bought from Asterion for 200,000 Ourosangue each; Megara needs 3 of them. Luminance (10 transfusions) gives sun immunity, and Thanatos (30) a free revive each hour."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - conquistas
+labels: [official]
+sidebar:
+  order: 7
+---
+
+import FilterTable from '../../../components/FilterTable.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+Achievements are the server's longest quests, made for advanced players. Each one finished leaves a **permanent bonus** that survives death and logging out. You can work on several at once, but **none can be abandoned**. Open them with **F9** (or the medal by the minimap).
+
+## Starting one
+
+In F9, click **TRACK** on an achievement to mark its NPC on your map (one at a time). Talk to them and choose the achievement, and it becomes a normal quest in F3. Bought Pillars don't become quests: the buff applies immediately. Hover over a name to see its requirements and buffs.
+
+## All 12
+
+<FilterTable placeholder="Filter achievements…">
+
+| Achievement | Category | Start with | Requires | Gives |
+|---|---|---|---|---|
+| Pillar of Solarus | Pillars | Asterion | 200,000 Ourosangue in the Bank (echo) | +50 Sun Resistance, +5% Primary Attack Speed, +10 Physical Power |
+| Pillar of the Monster | Pillars | Asterion | 200,000 Ourosangue (echo) | +50 Sun Resistance, +5% Primary Attack Speed, +10 Physical Power |
+| Pillar of the Colossus | Pillars | Asterion | 200,000 Ourosangue (echo) | +50 Garlic and Holy Resistance, +5% Movement Speed, +20% Resource Yield |
+| Pillar of the Winged Horror | Pillars | Asterion | 200,000 Ourosangue (echo) | +50 Silver and Fire Resistance, +10 Spell Power, +5% Spell Crit Chance |
+| Pillar of Megara | Pillars | Asterion | 3 of the 4 Pillars above; quest ends with a 200,000 tribute | +50% Corruption Resistance, +10 Spell Power, +20% Spell Crit Damage |
+| Luminance | Journeys | Aria Bastien | 10 transfusions | Permanent sun immunity |
+| Thanatos | Journeys | Ozzy Sepulkros | 30 transfusions | When downed, get up at full health once per hour |
+| Blacksmith achievement (name not published) | Professions | Ornn | Blacksmith active | Refinement up to +5 (the 5th at profession prestige 10) |
+| Tailor achievement (name not published) | Professions | Label | Tailor active | Refinement up to +5 (the 5th at prestige 10) |
+| Enchanter achievement (name not published) | Professions | Mirana | Enchanter active | Refinement up to +5 (the 5th at prestige 10) |
+| Furious Roar | Classes | Razor Mortak | Mortak; the *Unshakable Will* journey | Frozen Blood Rage: taunts within 20 m |
+| Collector of Suffering | Classes | Razor Mortak | Mortak; *Mortak's Suffering* journey | Defeated units become suffering, which Blood Rage turns into weapon durability |
+
+</FilterTable>
+
+<Aside type="note" title="Pillars changed">
+The four Pillars (Solarus, Monster, Colossus, Winged Horror) **are no longer quests**. You buy the echo from Asterion. Without the balance, nothing is charged. Players who had the Pillar deposited on the old server got it free. Old in-progress Pillar missions were removed, and handed-in items weren't returned.
+</Aside>
+
+Most achievement steps involve delivering items (a bit at a time is fine), defeating many enemies from certain regions, and defeating V Bloods. The two Classes achievements work only with Mortak active. See [Class quests](/quests/class-quests/) for the Unshakable Will's steps.
+
+## Thanatos cooldown
+
+Once you've finished Thanatos (title *Son of Thanatos*), a **skull** by the ability bar shows a **green ring** when ready, or a **red ring with minutes left** while recharging. Hover for the exact time, or click to post it in chat. Hide it with the minimap gear's *Thanatos Cooldown* card. `.thanatos` (or `.tn`) shows it in chat.
+
+**Hidden achievement** lines are achievements that haven't been revealed yet.

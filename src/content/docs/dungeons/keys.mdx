@@ -1,0 +1,64 @@
+---
+title: Dungeon keys
+description: How to get Sangria Falls dungeon keys. Forging recipes for each tier, fusing spare keys, Rift Incursion fragments and ready-made key drops.
+summary: "Forge keys at Mark: Adventurer 500 Stygian Shard + 150 Copper Ingot; Veteran 750 Stygian Shard + 20 Reinforced Plank; Master 500 Greater Stygian Shard + 15 Dark Silver Ingot; Nightmare 1,000 Greater Stygian Shard + 5 Power Core. Fuse 5 Adventurer → 1 Veteran, 3 Veteran → 1 Master."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - masmorras
+  - incursoes
+labels: [official]
+sidebar:
+  order: 1
+---
+
+import Command from '../../../components/Command.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+Each player spends **1 key of the chosen tier** on entry. The same key works for all four dungeons.
+
+## Forging (at Mark)
+
+| Tier | Recipe for 1 key |
+|---|---|
+| Adventurer | 500 Stygian Shard + 150 Copper Ingot |
+| Veteran | 750 Stygian Shard + 20 Reinforced Plank |
+| Master | 500 Greater Stygian Shard + 15 Dark Silver Ingot |
+| Nightmare | 1,000 Greater Stygian Shard + 5 Power Core |
+
+<Steps>
+
+1. At the Events Hub, talk to **Mark**. The Sangria Dungeons panel opens.
+2. Click the tier. The **KEY** column shows the materials and how many you have. They must be in your inventory.
+3. Choose **x1, x5, x10 or x15** and click **Forge** (**Cancel** undoes the choice).
+
+</Steps>
+
+## Fusing spare keys
+
+| Fuse | Into |
+|---|---|
+| 5 Adventurer keys | 1 Veteran key |
+| 3 Veteran keys | 1 Master key |
+| — | **Nightmare can't be fused.** It comes only from forging or an incursion boss. |
+
+Click the tier you want to *receive* (Veteran or Master). Then, in the KEY column, **Fuse** makes one and **All** fuses as many as possible. The keys must be in your inventory.
+
+## Where the materials come from: Rift Incursions
+
+**Stygian Shards** and **Greater Stygian Shards** come from [Rift Incursions](/events/rift-incursions/). Each portal or gate destroyed gives **50** to everyone inside its circle, so a full rift (2 portals + 1 gate) gives 150. Incursion I pays Stygian Shard, and II and III pay Greater Stygian Shard.
+
+## Ready-made keys
+
+When an incursion's **gate boss** dies, each player in the circle or near the body gets their own draw for a key, delivered by **Mail** (a letter from *The Order of the Observers*).
+
+| Incursion | Possible keys |
+|---|---|
+| I | Adventurer or Veteran |
+| II and III | Any tier; high tiers are rarest |
+
+<Aside type="caution" title="Not from anywhere else">
+Dungeons don't drop keys, and keys can't be crafted at a workbench or fed to the Devourer. A boss summoned in your castle (Blood Soul ritual) doesn't give a key either.
+</Aside>
+
+<Command cmd=".dungeon">Without the interface: Mark's menu, with forge, fuse, enter and affinity.</Command>

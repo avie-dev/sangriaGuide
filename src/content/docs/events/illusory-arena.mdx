@@ -1,0 +1,78 @@
+---
+title: Illusory Arena
+description: The Sangria Falls Illusory Arena, with 30 waves solo or in a duo. Standard vs Guided modes, entry fees, timers, rewards (2.5× XP, 5% rare prize) and duo rules.
+summary: "30 waves, solo or duo, open 24 hours with Master Gale at the Events Hub. Entry 2,000 (Standard, random factions) or 8,000 Ourosangue (Guided, you pick). Enemies give 2.5× character XP; a win gives 500 Ourosangue and a 5% chance of a Ressonador or Pet Soul."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - arena-ilusional
+  - facanhas
+labels: [official, verify]
+sidebar:
+  order: 3
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Command from '../../../components/Command.astro';
+import Unverified from '../../../components/Unverified.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<QuickFacts
+	facts={[
+		['NPC', 'Master Gale (Events Hub)'],
+		['Open', '24 hours, no entry limit'],
+		['Players', 'Solo or duo'],
+		['Waves', '30; bosses on 5, 10, 15, 20, 25, 30'],
+		['Entry (each player)', 'Standard 2,000 · Guided 8,000 Ourosangue'],
+		['Pets', 'Allowed'],
+		['Arenas', '5'],
+	]}
+/>
+
+## Modes
+
+| | Standard | Guided |
+|---|---|---|
+| Entry | 2,000 Ourosangue | 8,000 Ourosangue |
+| Enemy faction | Random each wave | You pick, for all 30 waves |
+| Factions | — | Bandits, Militia, Undead, Mortium, Luz Argenta, Oakveil, Gloomrot |
+| Rare-prize Pet Soul | Acts I–II | Acts I–IV |
+
+## Rewards
+
+- Enemies give **2.5× character XP**.
+- **A win** (killing the wave-30 boss): **500 Ourosangue** and a **5% chance** of a rare prize, either **1 Ressonador** (to your Bank) or **1 Pet Soul** for a boss pet you already own.
+- The official guide says it plainly: the 500 doesn't cover the entry fee. People come for the rare prize and the XP.
+- A loss, time-out or giving up returns nothing, including the entry fee. If the run breaks because of a server failure, the fee is refunded.
+- The Arena gives **no Battle Pass XP**, and bosses killed here don't count for pets or boss rankings.
+
+## Entering
+
+1. Talk to **Master Gale**. Check how many arenas are free and your balance.
+2. Choose **Standard Arena** or **Guided Arena** (clicking a faction switches to Guided).
+3. Click **ENTER THE ILLUSION**. You get 20 seconds to prepare, which is a good time to summon your pet.
+
+You must be standing, out of combat, out of bat form and not biting anyone.
+
+## Duo
+
+Both players stand in the Events Hub. The leader picks the mode, finds the partner under **THE DUO → IN THE HUB**, and clicks **Invite**. The partner has 30 seconds to accept. **Each pays their own entry and gets the full prize. Enemies are stronger in a duo.**
+
+<Unverified q="Q-006">Unlike the Rupture and Judgment guides, the Arena guide doesn't say whether duo partners can hurt each other.</Unverified>
+
+## Timers and losing
+
+- The next wave arrives when 3 or fewer enemies remain, and the leftovers stay.
+- A **normal wave** has a 2-minute limit. If it runs out, the leftovers vanish and the next wave comes. That's not a loss.
+- A **boss wave** has a **5-minute** limit. Only the boss matters, and if time runs out it's a loss.
+- The **whole run** is limited to **40 minutes**. You can't leave the area, because the edge pulls you back.
+- **Solo:** you have 5 seconds to get up on your own, or you lose. **Duo:** you wait for your partner, and it's a loss only when both are down.
+- A disconnect holds your spot. If everyone drops, the run waits 3 minutes, then ends.
+
+<Aside type="danger">
+Pressing X while downed gives up. You die, your item bag stays inside, and you get no prize, even if your partner wins.
+</Aside>
+
+<Command cmd=".arena info">Your history: runs started, arenas completed, best wave.</Command>
+
+Full wins count towards the *Lord of Illusions* medal, but only runs you finished without quitting.

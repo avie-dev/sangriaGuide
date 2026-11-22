@@ -1,0 +1,81 @@
+---
+title: Cost tables
+description: Every Sangria Falls cost table in one place, covering prestige, class evolutions, Transfusions, fortification, profession prestige and the Vault, from the wiki's validated data.
+summary: "All the wiki's cost tables on one page, plus other published costs: switching class 3,000, Market shop 5,000, Arena 2,000/8,000, Sangrulho fusion 2,000, pet Cristal redistribute 15,000 or reset 75 Sangricoins, plasma reset 50 Sangricoins, Pillars 200,000."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - nivel-e-prestigio
+  - maestria-de-arma
+  - linhagem-de-sangue
+  - classes
+  - pets
+  - oficios-ferreiro-alfaiate-encantador
+  - transfusao-e-plasmas
+  - cofre
+  - profissoes
+  - mercado
+  - arena-ilusional
+  - sangrulhos
+  - conquistas
+  - meditacao
+  - moveis
+  - aquario
+  - contratos
+labels: [official, verify]
+sidebar:
+  order: 7
+---
+
+import CostTable from '../../../components/CostTable.astro';
+import FilterTable from '../../../components/FilterTable.astro';
+
+These tables come from `src/data/cost-tables.yaml`, and the build checks that each stated total matches its rows. Weapon and blood prestige use the same range as character prestige.
+
+<CostTable id="character-prestige" />
+
+<CostTable id="class-evolution" />
+
+<CostTable id="class-switch" />
+
+<CostTable id="transfusion" />
+
+<CostTable id="fortification" />
+
+<CostTable id="profession-prestige" />
+
+<CostTable id="vault" />
+
+<CostTable id="vault-chest-expansion" />
+
+<CostTable id="mobile-depot" />
+
+## Other published costs
+
+<FilterTable placeholder="Filter costs…">
+
+| What | Cost |
+|---|---|
+| Weapon or blood prestige | 75 to 4,467 Ourosangue (the first is free with Vlad Parker) |
+| Paid profession change | 1,000 Sangricoins (first change free; 120 days apart) |
+| Meditation | 0.35 Sangricoin per minute per path |
+| Market shop | 5,000 Ourosangue, once |
+| Player contract fee | 10% of the reward (not refunded) |
+| Illusory Arena entry | 2,000 (Standard) / 8,000 (Guided) Ourosangue |
+| Sangrulho fusion | 2,000 Ourosangue |
+| Sangrulho incubation speed-ups | +1h 15 · +6h 80 · +24h 300 Sangricoins |
+| Pet Cristais REDISTRIBUTE | 15,000 Ourosangue |
+| Pet Cristais RESET | 75 Sangricoins |
+| Plasma Reset | 50 Sangricoins |
+| Pillar echo (each of 4) | 200,000 Ourosangue |
+| Pillar of Megara tribute | 200,000 Ourosangue |
+| Casino spin | 500 to 3,000 Ourosangue |
+| Furniture piece | 30 to 250 Sangricoins |
+| Aquarium (Fisher craft) | 2,000 Ourosangue + 20 Iron Ingots, 20 Glass, 50 Oil, 1 The Fish |
+| Aquarium food | 100 Ourosangue + 2 Fish Bones, 10 Oil each |
+| School transfer | First free; then rising Ourosangue (amounts not published) |
+| Teleports | Free |
+
+</FilterTable>
+
+For totals (all 20 prestiges, 250 Transfusions and so on), see [Budgets](/economy/budgets/).

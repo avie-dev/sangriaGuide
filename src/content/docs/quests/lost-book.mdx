@@ -1,0 +1,36 @@
+---
+title: The Lost Book
+description: The Lost Book is the Sangria Falls story book. 23 chapters in three books, unlocked through Nyxaris's Echo quests at transfusion milestones, and how to read them.
+summary: "23 story chapters in 3 books, unlocked one per chapter transfusion (5, 10 … 50; 65 … 170; 190 … 250) through Nyxaris's Echo quests. Read them with the book button by the minimap, or .codex without the interface. No stat bonus."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - livro-perdido
+labels: [official]
+sidebar:
+  order: 5
+---
+
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+
+The **Lost Book** is the story of Sangria Falls: **23 chapters** in three books, with text and illustrations. Reading costs nothing and **gives no attribute bonus**. Unlocked chapters stay in the book to reread.
+
+| Book | Chapters |
+|---|---|
+| BOOK I | 1–10 |
+| BOOK II | 11–18 |
+| BOOK III | 19–23 |
+
+## Unlocking chapters
+
+Each chapter comes with one of Nyxaris's transfusions. First reach prestige 20 (*The Call of Blood*) and gather 10 Pulses (*The First Transfusion*). Then each chapter transfusion brings an **Echo** quest. See [Nyxaris](/quests/nyxaris/) for the schedule.
+
+## Reading
+
+<PlayModes>
+	<Fragment slot="interface">Click the **book button** by the minimap (it appears after the first tutorial quest). The panel *THE LOST BOOKS OF SANGRIA FALLS* opens. Choose BOOK I, II or III. Unlocked chapters show **READ**, and locked ones show **SEALED**. Use **Next** and **Previous** to turn pages, and **End** or **Index** to return to the chapters. Close it with the X, since there's no hotkey. If a tab says *Book not found*, you haven't unlocked any of its chapters yet.</Fragment>
+	<Fragment slot="chat"><Command cmd=".codex">Opens the book as a reading menu in chat, with next and previous pages. The text is the same as in the interface, without covers or illustrations.</Command></Fragment>
+</PlayModes>
+
+Clicked READ and got "sealed"? You haven't heard that chapter yet. Do its Echo quest with Nyxaris.

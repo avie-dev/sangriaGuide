@@ -70,6 +70,17 @@ const costTables = defineCollection({
 		}),
 });
 
+const npcs = defineCollection({
+	loader: file('src/data/npcs.yaml'),
+	schema: z.object({
+		name: z.string(),
+		role: z.string(),
+		where: z.string().nullable(),
+		beginner: z.boolean().default(false),
+		sources: sourceIds.pipe(z.array(z.string()).min(1)),
+	}),
+});
+
 export const collections = {
 	docs: defineCollection({
 		loader: docsLoader(),
@@ -91,4 +102,5 @@ export const collections = {
 	currencies,
 	classes,
 	costTables,
+	npcs,
 };

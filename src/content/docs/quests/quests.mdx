@@ -1,0 +1,80 @@
+---
+title: Quests and the quest panel
+description: How Sangria Falls quests work. Picking up, tracking, pinning, delivering items, abandoning, skipping steps with Sangricoins, and daily and weekly resets.
+summary: "Press F3 for your quests, grouped by origin. Pin up to 3 to the HUD. Deliver items in the Delivery panel. Only some quests can be abandoned, and step skipping (Sangricoins, counting steps at 30%+) only exists on those. Dailies reset at midnight Brasília time."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - missoes
+labels: [official]
+sidebar:
+  order: 1
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<QuickFacts
+	facts={[
+		['Tutorial quests', '8 (starting with Where am I?!)'],
+		['Active quests', 'No limit'],
+		['Shown on HUD', 'Up to 3 (2 inside Arena, Tower, Rupture, Judgment)'],
+		['Echoes of Nyxaris', '23'],
+	]}
+/>
+
+A quest is a sequence of steps: talk to someone, defeat enemies, deliver items, go somewhere. Most are given by NPCs in the City of Sangria Falls, and some arrive on their own when you hit a milestone. The current step's objective is marked on the map. Rewards vary: XP, items, Ourosangue, even permanent bonuses.
+
+## Opening
+
+<PlayModes>
+	<Fragment slot="interface">Press **F3** (or the quests button by the minimap, or `.quest panel`). **ACTIVE** and **COMPLETED** tabs are on the left (completed quests show their date), and details are on the right: **JOURNEY** (all steps) and **REWARD**.</Fragment>
+	<Fragment slot="chat">
+		<Command cmd=".quest">Lists your active quests and each one's current step.</Command>
+		<Command cmd=".menu quests">The quests menu: pin, abandon, skip a step.</Command>
+	</Fragment>
+</PlayModes>
+
+Quests are grouped by origin, each group with a coloured title and a count: **CLASS, PROFESSIONS, OUTPOSTS, SCHOOL, ACHIEVEMENTS, DUNGEONS, CHRONICLES, VAULT, FIRST STEPS, OTHER**. Click a group to collapse it (the panel remembers). Under each name you see where it comes from. Daily, Weekly and Hunt quests show the time to reset.
+
+## Talking to NPCs
+
+Interact with **F**. Click **Continue** to advance, **Back** to go back one line, and **Finish** on the last line. **A step only counts when you reach Finish.** Closing early with *End conversation* or the X means talking to them again.
+
+NPCs with services open a menu. If they're in one of your quests, the first option is *Continue: quest name*. *See available quests* lists what they offer. An NPC in two of your quests asks which one you want to handle.
+
+## Pinning
+
+F3 → the quest → **Pin to HUD** (click again to unpin). The pinned quest rises to the top of the on-screen list and shows first within its group.
+
+## Delivering items
+
+Carry the items and talk to the quest's NPC. The **Delivery** panel shows only the items in your bag that the quest accepts. Click them (or **Select all**) and then **Deliver**. You can deliver a bit at a time. The weapon in your hand never appears there. For "one of each piece" quests, only undelivered pieces are accepted, worn pieces must be taken off first, and a *Missing:* line shows what's left.
+
+## Abandoning and skipping
+
+- **Abandon:** F3 → the quest → **Abandon** → *Yes, abandon*. Only a few quests allow it, such as class quests. The tutorial, story, achievements, dungeons, Outposts and profession commissions don't. Abandoning erases progress.
+- **Skip a step:** a **Skip for…** button on the current step, priced in Sangricoins. It's only available on abandonable quests, only on counting steps (for example "Kill 40 enemies"), and only with at least 30% done. Talk-to-NPC steps never skip.
+
+<Aside type="caution">
+Skipping spends Sangricoins from your Bank, and there's no refund.
+</Aside>
+
+## Resets
+
+| Quest type | Resets |
+|---|---|
+| Daily | Midnight (Brasília time) |
+| Weekly and Hunt | Monday midnight (Brasília time) |
+
+An unfinished quest disappears at the reset, and chat tells you.
+
+## Common questions
+
+**I died mid-quest.** Progress is generally kept. Only some challenges restart when you go down, such as survive-for-a-time ones.
+
+**The NPC just repeats a line.** You already have the quest, or you're missing a requirement. Check your current step in F3.
+
+**The on-screen quest list vanished.** Inside a dungeon it gives way to the dungeon board, and it comes back when you leave.

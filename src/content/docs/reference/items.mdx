@@ -1,0 +1,61 @@
+---
+title: Items
+description: Sangria Falls items named in the official guides (currencies, key materials, refining materials, pet and Sangrulho items, protected items), with where they come from and what they're for.
+summary: "A filterable list of server-specific items from the guides: Bank currencies and their item forms, dungeon key materials, refining gems and components, pet Soul items, Cristais, Vampiric Dust, Minion Collectors, and protected items."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - masmorras
+  - banco
+  - pets
+  - sangrulhos
+  - oficios-ferreiro-alfaiate-encantador
+  - coleta-minerador-pescador-lenhador
+  - incursoes
+  - castelo
+  - aquario
+  - mercador-sombrio
+  - classes
+labels: [official]
+sidebar:
+  order: 4
+---
+
+import FilterTable from '../../../components/FilterTable.astro';
+
+<FilterTable placeholder="Filter items…">
+
+| Item | Kind | Comes from | Used for |
+|---|---|---|---|
+| Primal Stygian Shard | Currency item | — | Deposit with `.menu bank` → becomes Ourosangue |
+| Greater Essence (retired) | Old currency | — | Deposit: 1,000 Ourosangue each |
+| Quitina | Currency (item or balance) | Outposts, Battle Pass | 2x XP for 30 minutes |
+| Ressonador | Currency (item or balance) | Arena, Master/Nightmare dungeons, Battle Pass, events | Sangrulho eggs |
+| Cristal | Currency (item or balance) | Master/Nightmare dungeons, drops | Pet attributes |
+| Stygian Shard | Key material | Rift Incursion I | Adventurer and Veteran keys |
+| Greater Stygian Shard | Key material | Rift Incursions II–III | Master and Nightmare keys |
+| Copper Ingot | Key material | — | Adventurer key (150); vault quest (15) |
+| Reinforced Plank | Key material | — | Veteran key (20); aquarium upgrades |
+| Dark Silver Ingot | Key material | — | Master key (15); Shadow Merchant 10 each |
+| Power Core | Key material | — | Nightmare key (5); Shadow Merchant 100 each |
+| Dungeon keys (4 tiers) | Key | Forged or fused at Mark; incursion bosses (mail) | Dungeon entry |
+| Perfect Ruby | Refining gem | Master/Nightmare Special roll; Market | Blacksmith refinement |
+| Perfect Topaz | Refining gem | As above | Tailor refinement |
+| Perfect Amethyst | Refining gem | As above | Enchanter refinement |
+| Precious Stone | Refining component | Miner prestige 5+; Dunley Outpost; Market | Blacksmith refinement |
+| Exceptional Tailoring Component | Refining component | Woodcutter prestige 5+; Dunley Outpost; Market | Tailor refinement |
+| Exceptional Magical Component | Refining component | Fisher prestige 5+; Dunley Outpost; Market | Enchanter refinement |
+| Act 1–4 Soul, Primordial Soul, Special Soul | Pet item | Battle Pass and other rewards | +1 soul to a random pet of that group (drag out of your inventory) |
+| Sacrificed Souls | Pet resource | Sacrificing pet souls; gathering prestige 6–9 | Pet tiers T2–T5 |
+| Vampiric Dust | Sangrulho item | Richard's quest (30); Oakveil Outpost quests | Restores 20% Sangrulho energy |
+| Minion Collector | Class item | Dungeon rewards | Unlocks Skarn/Sepulkros/La Muerte summons |
+| The Fish | Rare fish | Level-10 aquariums | Crafting aquariums; Shadow Merchant 4,000 |
+| Aquarium food | Account balance | Fishers (2 Fish Bones, 10 Oil, 100 Ourosangue) | Aquarium production |
+| Soul Shards | Protected item | Solarus, Megara, Dracula, Talzur, Adam (by mail) | Castle pedestals; Shadow Merchant 800 |
+| Legendary weapons, Dracula armour, T8 amulets | Protected items | Dungeons, Outposts, Market | Gear; can't be dropped on the ground |
+| Ancestral weapon fragments | Material | — | Shadow Merchant 200/500/1,000 |
+| Bloody Pouch, Bloody Bag | Battle Pass items | Bloody Pass | Not described |
+
+</FilterTable>
+
+"—" means the guides name the item but not its source, so these are presumably base-game materials.

@@ -1,0 +1,82 @@
+---
+title: Outposts
+description: "The seven Sangria Falls Outposts: daily and weekly missions, reputation ranks I–V, pay, region specialties and how to pick an outpost."
+summary: "Seven Outposts, each with a commander and its own reputation (ranks I–V). You get 1 daily and 1 weekly mission in total (not per outpost). Daily: 1 Quitina + 1,500–2,500 Ourosangue; weekly: 4 Quitina + 75 Sangricoins + 7,500–10,000. Rank III+ adds specialty loot."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - postos-avancados
+labels: [official]
+sidebar:
+  order: 2
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Command from '../../../components/Command.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+<QuickFacts
+	facts={[
+		['Outposts', '7, one per region'],
+		['Missions', '1 daily + 1 weekly in total'],
+		['Reputation', '+20 daily, +70 weekly (+50% on the daily at the outpost asking for help)'],
+		['Resets', 'Daily at midnight; weekly on Monday (Brasília time)'],
+		['Pay', 'Straight to your Bank on completion'],
+	]}
+/>
+
+<Aside type="caution">
+Choosing an outpost uses up the day's (or week's) slot. You **can't switch or abandon** an Outpost mission. You can take the daily at one outpost and the weekly at another.
+</Aside>
+
+## Taking a mission
+
+<Steps>
+
+1. In the city, press **F** at a **Mission Board** (the chalkboard labelled *Quadro de Missões*), or type `.outpost` anywhere. It shows the 7 commanders and your rank with each. The one asking for help today is marked *Needs help · +50%*.
+2. Click **Track** on a commander to mark them on your map. The board only shows the way, and the commander hands out the mission.
+3. Go to the outpost and talk to the commander. The COMMAND POST panel shows the DAILY and WEEKLY missions, their pay and time left.
+4. Click **Accept daily mission** or **Accept weekly mission**. Complete the steps (F3), and the pay goes into your Bank automatically.
+
+</Steps>
+
+## Ranks
+
+Reputation is **per outpost**. Rising in Gloomrot changes nothing in Oakveil.
+
+| Rank | Reputation | Unlocks |
+|---|---|---|
+| I · Outsider | 0 | Ourosangue and Quitina on every mission |
+| II · Recognized | 100 | More Ourosangue |
+| III · Ally | 250 | The region's specialty loot |
+| IV · Honored | 500 | More specialty loot, better materials |
+| V · Confidant | 900 | The most loot, plus a chance at a rare item; at some outposts the weekly can give a legendary weapon |
+
+On the daily, specialty loot is a chance. On the weekly, it always comes. Doing the daily and weekly at the same outpost takes **about a month** to reach Rank V.
+
+## Pay
+
+| Mission | Base pay |
+|---|---|
+| Daily | 1 Quitina + 1,500–2,500 Ourosangue (by rank) |
+| Weekly | 4 Quitina + 75 Sangricoins + 7,500–10,000 Ourosangue (by rank) |
+
+## The seven outposts
+
+| Outpost | Commander | Specialty |
+|---|---|---|
+| Farbane Woods | Ekundayo | Gathering: woods, ores, fish |
+| Dunley Farmlands | Alistair | Assorted loot (refining components at top rank) |
+| Ruins of Mortium | Velanna | Necklaces |
+| Gloomrot | Moira | Crafting materials and weapon repair |
+| Cursed Forest | Yharn | More Ourosangue: base pay up to 4,000 daily and 15,000 weekly |
+| Oakveil Woodlands | Eir | Pets, souls and Cristais (and Vampiric Dust quests) |
+| Silverlight Hills | Cassandra | Armour |
+
+The commander's panel shows what each rank can give under *Specialization loot*.
+
+## Which bosses?
+
+Requested bosses depend on your prestige. At **prestige 0 and below level 50**, missions ask for **Farbane's V Bloods**, and the enemies spawned for it match your level (later they spawn above it). So start at Farbane. There, while you have up to 1 transfusion, bosses stop at names like Cyril, Domina and Ziva. The "needs help" outpost is personal and changes daily.
+
+<Command cmd=".outpost">Opens the Mission Board from anywhere.</Command>

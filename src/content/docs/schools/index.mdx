@@ -1,23 +1,57 @@
 ---
 title: Vampiric Schools
-description: "Joining a school, ranks, points and school spells."
-status: planned
+description: "The four Sangria Falls Vampiric Schools: enrolment at prestige 20, ranks, spells, events and the Sunday pet-capture bonus."
+summary: "At character prestige 20, enrol for free with Sebastian in Frosthiel, Luminara, Serphentis or Sanguinis. All four share the same 44 spells; rank 1/4/8 unlocks spell tiers. Score every 7 days to stay enrolled. Sunday bonus: double pet capture."
+status: written
+lastVerified: 2026-11-22
 sources:
   - escolas
+labels: [official]
 sidebar:
   label: Overview
   order: 0
 ---
 
 import SectionContents from '../../../components/SectionContents.astro';
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Command from '../../../components/Command.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
 
-Joining a school, ranks, points and school spells.
+<QuickFacts
+	facts={[
+		['Schools', 'Frosthiel, Luminara, Serphentis, Sanguinis'],
+		['Requirement', 'Character prestige 20'],
+		['Enrolment', 'Free, with Sebastian (main building, first floor)'],
+		['Prize', 'An extra spell and the Sunday double pet-capture bonus'],
+		['Open', 'F11, or .school'],
+	]}
+/>
+
+The spells are **the same in all four schools**. Only the story, headquarters and NPCs differ. A school pays no currency or items.
+
+## Enrolling
+
+<Steps>
+
+1. Go to the city and press **F11** → **Mark on map**. Sebastian is on the first floor of the city's main building.
+2. Talk to him → **View the schools**.
+3. Read all four and click **I'M INTERESTED** on one. Enrolment is immediate. A school showing *SCHOOL FULL. UNAVAILABLE RIGHT NOW* can't take you yet.
+4. From now on, your school's brazier at the city teleport hub lets you through to the headquarters.
+
+</Steps>
+
+<Aside type="caution" title="Stay active">
+Score at least once **every 7 days**. If you go 7 days without scoring, or **14 days without logging in**, you leave the school and get a mail about it. Your rank and points are kept, so you can just enrol again.
+</Aside>
+
+## Switching schools
+
+Talk to Sebastian → *I want to request a school transfer*. It's a **swap**: choose a destination and click **Register Transfer**. When a student from that school clicks **SWAP** on your request, you change places. The first transfer is free, and later ones cost more Ourosangue each time. **Cancel Request** doesn't refund what you paid. Your rank in each school is saved.
+
+## School chat
+
+<Command cmd="!escola anyone for the stake?">Sends a message only to your school. `!escola` on its own pins the school channel, and `!global` returns to normal chat.</Command>
 
 ## Pages in this section
 
 <SectionContents />
-
-## What this section will cover
-
-- The four schools, ranks and points
-- School spells and whether your choice changes combat power

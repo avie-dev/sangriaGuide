@@ -1,0 +1,53 @@
+---
+title: Furniture
+description: "The Sangria Falls furniture shop: decorative castle pieces bought with Sangricoins (30–250 each), castle limits by Heart level, placing, moving and removing."
+summary: "Buy decorative furniture (bookcases, tables, seats, lighting, banners) for 30–250 Sangricoins each with .furniture or the couch button. Place it in your or your clan's castle; the limit is 15/30/50/75/100 pieces by Castle Heart level. Removed pieces return to storage."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - moveis
+labels: [official]
+sidebar:
+  order: 2
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Command from '../../../components/Command.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+<QuickFacts
+	facts={[
+		['Price', '30 to 250 Sangricoins each, by size'],
+		['Categories', 'Bookcases, Tables, Seats, Lighting, Banners, Decoration'],
+		['Castle limit', '15 / 30 / 50 / 75 / 100 pieces (Heart levels 1–5)'],
+		['Open', '.furniture, or the couch button by the minimap'],
+	]}
+/>
+
+Furniture pieces are decorations that aren't in the build menu. They don't break, don't drop loot, and anyone in the clan can move them. The panel has three tabs: **Shop**, **My storage** and **In the castle**.
+
+## Buying
+
+Pick a piece in **Shop**. The display case lets you drag to rotate and scroll to zoom. Click **Buy for … Sangricoin**, then **Confirm**. It goes to **My storage** and shows in your Bank statement as *Furniture purchase*.
+
+## Placing
+
+<Steps>
+
+1. Go inside your (or your clan's) castle territory. The footer shows the castle level and piece count.
+2. **My storage** → the piece → **Place in the castle**.
+3. Controls: **left click** places, **Q/E** rotate, **C/T** raise and lower (up to 4 m), **R twice** removes the piece under the cursor, **Space** finishes. Each click places another while you have more in storage.
+
+</Steps>
+
+Pieces rest on whatever is below, so you can put books on a table. Entering combat or leaving the territory ends placement, and your ability keys act as these controls meanwhile.
+
+## Moving and removing
+
+**In the castle** shows each piece and who bought it. **Move with the cursor**: click a piece, carry it, and click to drop it. **Remove** sends it back to **the buyer's** storage, and they're notified.
+
+<Aside type="note">
+Furniture is never lost. If the castle falls (destroyed, abandoned or taken), every piece returns to its buyer's storage.
+</Aside>
+
+<Command cmd=".furniture">Opens the furniture panel.</Command>

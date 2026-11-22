@@ -1,26 +1,35 @@
 ---
 title: Endgame
-description: "Prestige 20, Pulses, Transfusions and Plasmas."
-status: planned
+description: "The Sangria Falls endgame after prestige 20: Pulses, Transfusions, plasmas, Kill Points and the long-term goals."
+summary: "After prestige 20, each return to level 90 is a free Pulse. 10 Pulses + 10,000 Ourosangue (8,000 VIP) make a Transfusion worth 10 plasmas, up to 250. After 250, kills give Kill Points for the Progression ranking."
+status: written
+lastVerified: 2026-11-22
 sources:
   - transfusao-e-plasmas
-  - auto-prestigio
   - nivel-e-prestigio
+  - rankings
+  - livro-perdido
+labels: [official]
 sidebar:
   label: Overview
   order: 0
 ---
 
 import SectionContents from '../../../components/SectionContents.astro';
+import ProgressionPath from '../../../components/ProgressionPath.astro';
 
-Prestige 20, Pulses, Transfusions and Plasmas.
+<ProgressionPath
+	steps={[
+		{ title: 'Prestige 20', detail: 'Schools open; PRESTIGE becomes PULSE; Nyxaris calls you' },
+		{ title: 'Pulses', detail: 'Each return to level 90 at prestige 20; free' },
+		{ title: 'Transfusions', detail: '10 Pulses + 10,000 Ourosangue (8,000 VIP) → 10 plasmas; up to 250' },
+		{ title: 'Plasmas', detail: 'Distributed across 8 ancestors, with bonuses and penalties' },
+		{ title: 'After 250', detail: 'Level fixed at 90; kills give Kill Points' },
+	]}
+/>
+
+Alongside this loop: [Vampiric Schools](/schools/), [Master and Nightmare dungeons](/dungeons/), the [Tower of the Immortals](/events/tower-of-the-immortals/) and [achievements](/world/achievements/) (Luminance at 10 transfusions, Thanatos at 30).
 
 ## Pages in this section
 
 <SectionContents />
-
-## What this section will cover
-
-- Pulses, Transfusions and Plasmas with worked cost examples
-- Automatic prestige and Pulse
-- Long-term optimisation

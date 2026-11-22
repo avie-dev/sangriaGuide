@@ -1,0 +1,69 @@
+---
+title: Castle
+description: "Sangria Falls castle helpers: store your bag with G, Chest Management (=) with search, favourites and VIP Take, the essence warnings, Soul Shards by mail, and protected items."
+summary: "In your (or your clan's) castle, G stores your bag in chests that already hold the same items, and = opens Chest Management to find anything (VIPs can Take items). The clan is warned when the Castle Heart has 3 days of essence or fewer. Soul Shards arrive by mail."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - castelo
+  - clan
+  - correio
+labels: [official, vip]
+sidebar:
+  order: 1
+---
+
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import Label from '../../../components/Label.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+Building itself is the base game. These are the server's additions. For a first-time walkthrough, see [Building your first castle](/getting-started/first-castle/).
+
+## Store your bag (G)
+
+<PlayModes>
+	<Fragment slot="interface">Inside your castle (or your clan's), press **G**, or double-click the inventory sort button. Chat shows **[STORE]**.</Fragment>
+	<Fragment slot="chat"><Command cmd=".guardar">Stores your bag in chests that already have the same item.</Command></Fragment>
+</PlayModes>
+
+- An item is only stored if some chest already holds one, so put the first unit in by hand.
+- It never moves your hotbar (first 8 slots), equipped weapon or quest items.
+- Chests with **privado** in the name are skipped (and hidden from Chest Management).
+- It doesn't work in combat or while downed. If a chest is full, the rest stays in your bag.
+- In your bank vault, G stores into the vault chests.
+
+## Chest Management (=)
+
+Interface only. Press **=** inside the castle (`.baus` also opens it).
+
+- Search or pick a category. Each line shows the item, the total and which chests hold it (unnamed chests show as B1, B2…).
+- Click a name for a 15-second **light beam** over the chests holding it.
+- **STORE ALL** works like G. Click a chest to see only its contents, and **All chests** goes back.
+- **Blood potions** show one line per blood, with type and quality, for example *Blood Merlot Rogue 100%*.
+- **Favourites:** star up to 20 items. They stay in the last column and work in any castle you're in. Items that run out show ×0, dimmed.
+
+### Take (VIP) <Label type="vip" />
+
+VIPs can **Take** items straight to their bag, even from several chests. A unique piece (weapon, armour, jewel or blood potion) with 1 unit goes straight in. Otherwise type an amount or click **Max**. Max leaves 1 unit in each chest so G can refill it. If your amount would empty a chest, the panel asks: *Keep 1* or *Take it all anyway*.
+
+## The essence warning
+
+When the Castle Heart has **3 days of essence or fewer**:
+
+- The whole clan gets a **[CASTLE]** chat warning and a letter titled *YOUR CASTLE WILL FALL*, which reaches offline members too. It repeats at most once a day, and players are warned again at login.
+- A *Your Castle Will Fall* card appears on the Active Events board, turning red under 24 hours.
+- If the essence runs out, the castle decays and the warning gets stronger. Refill it, and chat confirms the new time.
+
+The clan panel's **CASTLE HEART** indicator shows the time left too, or *frozen*, *decaying* or *no castle*.
+
+## Soul Shards and protected items
+
+- **Soul Shards don't drop on the ground.** When Solarus, Megara, Dracula, Talzur or Adam die in the open world, the killer and players near the body each get a chance of the shard **by mail** (a letter from *The Order of the Observers*).
+- Each castle Soul Shard pedestal has **21 slots** and accepts only its own shard.
+- **Protected items** (legendary weapons, Dracula armour, T8 amulets, Soul Shards) can't be dropped on the ground. Chat shows **[PROTECTED ITEM]**. On death, the game's normal rule applies.
+- New clan members have a **12-hour quarantine** for protected items. See [Clan](/world/clan/).
+
+<Aside type="note">
+There's no player command to see free plots. *Free Plot* and *Decaying Plot* icons appear on the map during the starting mission that asks you to build a castle.
+</Aside>

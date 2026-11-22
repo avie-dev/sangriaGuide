@@ -1,0 +1,53 @@
+# Every NPC the official guides name, with what they handle and where they are.
+# `beginner: true` puts the NPC on the Important NPCs page too. `where: null` means no guide says.
+# Shown by <NpcTable /> (all) and <NpcTable beginner /> (beginner subset).
+
+- { id: helena-valerius, name: Helena Valerius, role: Choosing a gathering and a crafting profession during the tutorial, where: Tutorial, beginner: true, sources: [profissoes] }
+- { id: vlad-parker, name: Vlad Parker, role: "Character prestige (The Cycle of Blood); unlocks teleports (The Blood Baptism); free first weapon and blood prestige", where: "Winery (Adegaria), City of Sangria Falls", beginner: true, sources: [nivel-e-prestigio, teleportes, maestria-de-arma] }
+- { id: razor-mortak, name: Razor Mortak, role: "Mortak class Master; Classes achievements (Furious Roar, Collector of Suffering)", where: Classes Hall, beginner: true, sources: [classes, conquistas] }
+- { id: lilith-noctarin, name: Lilith Noctarin, role: Noctarin class Master, where: Classes Hall, beginner: true, sources: [classes] }
+- { id: aria-bastien, name: Aria Bastien, role: Bastien class Master; Luminance achievement, where: Classes Hall, beginner: true, sources: [classes, conquistas] }
+- { id: sylar-carmesyne, name: Sylar Carmesyne, role: Carmesyne class Master, where: Classes Hall, beginner: true, sources: [classes] }
+- { id: draco-skarn, name: Draco Skarn, role: Skarn class Master, where: Classes Hall, beginner: true, sources: [classes] }
+- { id: ozzy-sepulkros, name: Ozzy Sepulkros, role: Sepulkros class Master; Thanatos achievement, where: Classes Hall, beginner: true, sources: [classes, conquistas] }
+- { id: kaelmor-draekhar, name: Kaelmor Draekhar, role: Draekhar class Master and its Currents, where: Classes Hall, beginner: true, sources: [classes] }
+- { id: nyx-umbrellis, name: Mister Nyx Umbrellis, role: Umbrellis class Master, where: Classes Hall, beginner: true, sources: [classes] }
+- { id: markus-sangrael, name: Markus Sangrael, role: Sangrael class Master, where: Classes Hall, beginner: true, sources: [classes] }
+- { id: morrigan-lamuerte, name: Morrigan LaMuerte, role: La Muerte class Master, where: Classes Hall, beginner: true, sources: [classes] }
+- { id: astra-general, name: Astra General, role: General class Master, where: Classes Hall, beginner: true, sources: [classes] }
+- { id: darius, name: Darius, role: Free class testing, where: Training Room, beginner: true, sources: [sala-de-treinamento] }
+- { id: ornn, name: Ornn, role: "Blacksmith mentor; weapon fortification and refinement; Blacksmith achievement", where: Professions Hall, beginner: true, sources: [profissoes, oficios-ferreiro-alfaiate-encantador, conquistas] }
+- { id: label, name: Label, role: "Tailor mentor; armour fortification and refinement; Tailor achievement", where: Professions Hall, beginner: true, sources: [profissoes, oficios-ferreiro-alfaiate-encantador, conquistas] }
+- { id: mirana, name: Mirana, role: "Enchanter mentor; necklace fortification and refinement; Enchanter achievement", where: Professions Hall, beginner: true, sources: [profissoes, oficios-ferreiro-alfaiate-encantador, conquistas] }
+- { id: holmo, name: Holmo, role: Miner mentor, where: Professions Hall, beginner: true, sources: [profissoes] }
+- { id: mirel, name: Mirel, role: Fisher mentor; aquariums and fish food, where: Professions Hall, beginner: true, sources: [profissoes, aquario] }
+- { id: bram, name: Bram, role: Woodcutter mentor, where: Professions Hall, beginner: true, sources: [profissoes] }
+- { id: balthazar, name: Balthazar, role: Master of Contracts, where: "City Hall, City of Sangria Falls", beginner: true, sources: [contratos] }
+- { id: haruki, name: Haruki, role: Guardian of the Meditation Chamber; switches your meditation path, where: Meditation Chamber, beginner: true, sources: [meditacao] }
+- { id: richard, name: Richard, role: Master of the Sangrulhos (Ressonador and fusion), where: Sangrulhos (city teleport hub), beginner: true, sources: [sangrulhos] }
+- { id: sebastian, name: Sebastian, role: Vampiric School enrolment and transfers, where: "Main building, first floor, City of Sangria Falls", beginner: true, sources: [escolas] }
+- { id: a-mor, name: "A-mór, the Cupid", role: "Blood Bond (marriage): ceremony and Book of Unions", where: City of Sangria Falls, beginner: true, sources: [casamento] }
+- { id: viktor, name: Viktor, role: "Vault quest Worthy of a Vault; vaults, chests and Mobile Depot", where: Sangria Bank hall (north of Dunley), beginner: true, sources: [cofre] }
+- { id: mark, name: Mark, role: Dungeon keys (forge and fuse), groups, entry and weapon affinity, where: Events Hub, beginner: true, sources: [masmorras] }
+- { id: master-gale, name: Master Gale, role: Illusory Arena, where: Events Hub, beginner: true, sources: [arena-ilusional] }
+- { id: herald, name: The Herald, role: Tower of the Immortals, where: Events Hub, beginner: true, sources: [torre-dos-imortais] }
+- { id: orek, name: "Orek, Guardian of the Rifts", role: Reality Rupture, where: Events Hub, beginner: true, sources: [ruptura-da-realidade] }
+- { id: mordekai, name: "Mordekai, the Sentinel of Judgment", role: Goreswine's Judgment, where: Events Hub, beginner: true, sources: [julgamento-de-goreswine] }
+- { id: nyxaris, name: "Nyxaris, the Last Oracle", role: "Pulses, Transfusions, seals and the Lost Book chapters", where: Her laboratory in Farbane, beginner: true, sources: [transfusao-e-plasmas, livro-perdido] }
+- { id: asterion, name: Asterion, role: Pillar achievements (echoes for 200,000 Ourosangue; Pillar of Megara quest), where: null, beginner: true, sources: [conquistas] }
+- { id: hallo, name: Hallo, role: Sangrisween event shop (also on the website panel's Extension tab), where: null, sources: [painel-do-site] }
+- { id: ekundayo, name: Ekundayo, role: Outpost commander (gathering specialty), where: Farbane Woods Outpost, sources: [postos-avancados] }
+- { id: alistair, name: Alistair, role: Outpost commander (assorted loot; refining components at top rank), where: Dunley Farmlands Outpost, sources: [postos-avancados, oficios-ferreiro-alfaiate-encantador] }
+- { id: velanna, name: Velanna, role: Outpost commander (necklaces), where: Ruins of Mortium Outpost, sources: [postos-avancados] }
+- { id: moira, name: Moira, role: Outpost commander (crafting materials and weapon repair), where: Gloomrot Outpost, sources: [postos-avancados] }
+- { id: yharn, name: Yharn, role: Outpost commander (more Ourosangue), where: Cursed Forest Outpost, sources: [postos-avancados] }
+- { id: eir, name: Eir, role: "Outpost commander (pets, souls, Cristais; Vampiric Dust quests)", where: Oakveil Woodlands Outpost, sources: [postos-avancados, sangrulhos] }
+- { id: cassandra, name: Cassandra, role: Outpost commander (armour), where: Silverlight Hills Outpost, sources: [postos-avancados] }
+- { id: aldren-alvaneve, name: Aldren Alvaneve, role: School professor (daily mission), where: Frosthiel headquarters, sources: [escolas] }
+- { id: lumielle-solenne, name: Lumielle Solenne, role: School professor (daily mission), where: Luminara headquarters, sources: [escolas] }
+- { id: angi-viper, name: Angi Viper, role: School professor (daily mission), where: Serphentis headquarters, sources: [escolas] }
+- { id: sangrev-rubrescarlate, name: Sangrev Rubrescarlate, role: School professor (daily mission), where: Sanguinis headquarters, sources: [escolas] }
+- { id: motte-invernal, name: Motte Invernal, role: School event delivery NPC, where: Frosthiel (marked on the map during events), sources: [escolas] }
+- { id: aureon-sol, name: Aureon Sol, role: School event delivery NPC, where: Luminara (marked on the map during events), sources: [escolas] }
+- { id: seth-malefic, name: Seth Malefic, role: School event delivery NPC, where: Serphentis (marked on the map during events), sources: [escolas] }
+- { id: vespera-hemoria, name: Vespera Hemoria, role: School event delivery NPC, where: Sanguinis (marked on the map during events), sources: [escolas] }

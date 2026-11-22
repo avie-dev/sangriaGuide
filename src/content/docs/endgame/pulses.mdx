@@ -1,0 +1,44 @@
+---
+title: Pulses
+description: "Sangria Falls Pulses: at prestige 20 and level 90, PULSE resets you to level 1 for free and stores a Pulse. How to pulse, with and without the interface, and Auto-Pulse."
+summary: "At prestige 20, reaching level 90 lets you PULSE: back to level 1, +1 Pulse, no cost, and nothing else lost. Pulses stack without limit and pay for Transfusions (10 each). VIP Auto-Prestige pulses automatically unless you turn it off."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - transfusao-e-plasmas
+  - auto-prestigio
+  - perfil
+labels: [official, vip]
+sidebar:
+  order: 1
+---
+
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import Label from '../../../components/Label.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+A **Pulse** is what prestige becomes after prestige 20. At level 90 you pulse: your **level goes back to 1** and you gain **+1 Pulse**. It costs nothing, and you keep your prestige, buffs and plasmas.
+
+## The first Pulse
+
+When you reach prestige 20, **Nyxaris** sends the quest *The Call of Blood*. Talk to her, climb to 90, pulse, then **go back to her** to close the quest. After that, just repeat.
+
+## How to pulse
+
+<PlayModes>
+	<Fragment slot="interface">At level 90, click **PULSE** on the prestige bar (it appears there when available). The Profile (F1) has the same button.</Fragment>
+	<Fragment slot="chat"><Command cmd=".tf pulso">Gives a Pulse immediately, without confirmation.</Command></Fragment>
+</PlayModes>
+
+- **Pulses stack with no limit.** You can save more than 10.
+- Each Transfusion uses 10 Pulses.
+- After the **250th transfusion**, Pulses end, the button disappears, and any saved Pulses turn into Kill Points.
+
+## Auto-Pulse <Label type="vip" />
+
+With VIP Auto-Prestige's **Character XP** type on, prestige 20 makes it **pulse automatically** at 90. **Auto pulse is on by default.** Turn it off in the LIMITS board, or cap it with *Pulses to give*. It never transfuses. See [Auto-Prestige](/meditation/auto-prestige/).
+
+<Aside type="tip">
+Meditation is a steady way to climb back to 90: about 1h14 per Pulse, or 50 minutes with VIP. See [Worked meditation examples](/meditation/examples/).
+</Aside>

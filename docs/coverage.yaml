@@ -957,43 +957,71 @@ sections:
         brief: ['K: overview', 'K: Dungeon unlock requirements', 'K: Events Hub location', 'K: Mark NPC', 'K: Party size', 'K: Time limits', 'K: Enemy scaling']
         sources: [masmorras]
         phase: 7
-        built: page stub
+        built: published
+        research: read
+        writing: written
+        verified: partly checked
       - slug: dungeons/keys
         title: Dungeon keys
         brief: ['K: Dungeon keys', 'K: Key crafting recipes', 'K: Key material refunds']
         sources: [masmorras, incursoes]
         phase: 7
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: dungeons/forming-a-party
         title: Forming a party
         brief: ['K: Party formation', 'K: Group finder', 'K: Party size']
         sources: [masmorras, quadro-de-grupos]
         phase: 7
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: dungeons/difficulties
         title: Difficulties and preparation
         brief: ['K: Difficulty levels', 'K: Difficulty modifiers', 'K: Preparation guides for each difficulty']
         sources: [masmorras]
         phase: 7
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: dungeons/rules-and-risks
         title: Death, wipes and dungeon rules
         brief: ['K: Death and revival', 'K: Party wipes', 'K: Inventory loss risks', 'K: Friendly fire and PvP behavior', 'K: Pet restrictions', 'K: Class summon restrictions']
         sources: [masmorras, pets]
         phase: 7
         missing: [Q-006]
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: dungeons/rewards
         title: Dungeon rewards and loot
         brief: ['K: Reward distribution', 'K: Reward probabilities', 'K: Reward mail', 'K: Loot encyclopedia']
         sources: [masmorras, correio]
         phase: 7
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
+        missing: [Q-022]
       - slug: dungeons/party-roles
         title: Party roles and compositions
         brief: ['K: Recommended party compositions; tank, healer, magical and physical DPS roles']
         sources: [masmorras, classes]
         phase: 7
         missing: ['Community recommendation']
-      - {slug: dungeons/sanctuary-of-redemption, title: Sanctuary of Redemption, brief: ['K: Sanctuary of Redemption', 'K: Room and boss mechanics'], sources: [masmorras], phase: 7, missing: ['Room and boss mechanics are not documented officially']}
-      - {slug: dungeons/grove-of-disenchantment, title: Grove of Disenchantment, brief: ['K: Grove of Disenchantment', 'K: Room and boss mechanics'], sources: [masmorras], phase: 7, missing: ['Room and boss mechanics are not documented officially']}
-      - {slug: dungeons/blood-dominion, title: Blood Dominion, brief: ['K: Blood Dominion', 'K: Room and boss mechanics'], sources: [masmorras], phase: 7, missing: ['Room and boss mechanics are not documented officially']}
-      - {slug: dungeons/corrupted-temple, title: Corrupted Temple, brief: ['K: Corrupted Temple', 'K: Room and boss mechanics'], sources: [masmorras], phase: 7, missing: ['Room and boss mechanics are not documented officially']}
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
+      - {slug: dungeons/sanctuary-of-redemption, title: Sanctuary of Redemption, brief: ['K: Sanctuary of Redemption', 'K: Room and boss mechanics'], sources: [masmorras], phase: 7, missing: ['Room and boss mechanics are not documented officially', Q-023], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: dungeons/grove-of-disenchantment, title: Grove of Disenchantment, brief: ['K: Grove of Disenchantment', 'K: Room and boss mechanics'], sources: [masmorras], phase: 7, missing: ['Room and boss mechanics are not documented officially', Q-023], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: dungeons/blood-dominion, title: Blood Dominion, brief: ['K: Blood Dominion', 'K: Room and boss mechanics'], sources: [masmorras], phase: 7, missing: ['Room and boss mechanics are not documented officially', Q-023], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: dungeons/corrupted-temple, title: Corrupted Temple, brief: ['K: Corrupted Temple', 'K: Room and boss mechanics'], sources: [masmorras], phase: 7, missing: ['Room and boss mechanics are not documented officially', Q-023], research: read, writing: written, verified: partly checked, built: published}
 
   - dir: events
     title: Events
@@ -1003,20 +1031,27 @@ sections:
         brief: ['L: overview and schedule table']
         sources: [quadro-de-grupos, ruptura-da-realidade]
         phase: 7
-        built: page stub
-      - {slug: events/illusory-arena, title: Illusory Arena, brief: ['L: Illusory Arena'], sources: [arena-ilusional], phase: 7}
-      - {slug: events/tower-of-the-immortals, title: Tower of the Immortals, brief: ['L: Tower of the Immortals'], sources: [torre-dos-imortais], phase: 7}
-      - {slug: events/reality-rupture, title: Reality Rupture, brief: ['L: Reality Ruptures'], sources: [ruptura-da-realidade], phase: 7}
-      - {slug: events/goreswines-judgment, title: "Goreswine's Judgment", brief: ["L: Goreswine's Judgment"], sources: [julgamento-de-goreswine], phase: 7}
-      - {slug: events/rift-incursions, title: Rift Incursions, brief: ['L: Rift Incursions'], sources: [incursoes], phase: 7}
-      - {slug: events/v-blood-hunt, title: V Blood Hunt, brief: ['L: V Blood Hunt'], sources: [cacada-de-v-bloods], phase: 7}
-      - {slug: events/group-board, title: Group board, brief: ['L: Group Board'], sources: [quadro-de-grupos], phase: 7}
+        built: published
+        research: read
+        writing: written
+        verified: partly checked
+      - {slug: events/illusory-arena, title: Illusory Arena, brief: ['L: Illusory Arena'], sources: [arena-ilusional], phase: 7, research: read, writing: written, verified: partly checked, built: published, missing: [Q-006]}
+      - {slug: events/tower-of-the-immortals, title: Tower of the Immortals, brief: ['L: Tower of the Immortals'], sources: [torre-dos-imortais], phase: 7, research: read, writing: written, verified: partly checked, built: published, missing: [Q-003]}
+      - {slug: events/reality-rupture, title: Reality Rupture, brief: ['L: Reality Ruptures'], sources: [ruptura-da-realidade], phase: 7, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: events/goreswines-judgment, title: "Goreswine's Judgment", brief: ["L: Goreswine's Judgment"], sources: [julgamento-de-goreswine], phase: 7, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: events/rift-incursions, title: Rift Incursions, brief: ['L: Rift Incursions'], sources: [incursoes], phase: 7, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: events/v-blood-hunt, title: V Blood Hunt, brief: ['L: V Blood Hunt'], sources: [cacada-de-v-bloods], phase: 7, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: events/group-board, title: Group board, brief: ['L: Group Board'], sources: [quadro-de-grupos], phase: 7, research: read, writing: written, verified: partly checked, built: published}
       - slug: events/seasonal
         title: Seasonal events
         brief: ['L: Other documented seasonal events']
         sources: [facanhas, pets, passe-de-batalha]
         phase: 7
         missing: ['Only Sangrisween 2026 medals and event pets are documented']
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
 
   - dir: quests
     title: Outposts and quests
@@ -1026,29 +1061,48 @@ sections:
         brief: ['M: overview']
         sources: [missoes, postos-avancados]
         phase: 7
-        built: page stub
+        built: published
+        research: read
+        writing: written
+        verified: partly checked
       - slug: quests/outposts
         title: Outposts
         brief: ['M: Every outpost and location', 'M: Outpost commanders', 'M: Daily missions', 'M: Weekly missions', 'M: Reputation ranks', 'M: Reputation bonuses', 'M: Specialized rewards', 'M: Mission restrictions']
         sources: [postos-avancados]
         phase: 7
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: quests/quests
         title: Quests and quest tracking
         brief: ['M: Quest tracking', 'M: How to find NPCs', 'M: Troubleshooting quests']
         sources: [missoes]
         phase: 7
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: quests/class-quests
         title: Class unlock and evolution quests
         brief: ['M: Class unlock quests', 'M: Evolution quests']
         sources: [classes, class-hub]
         needs: [classes/evolutions]
         phase: 7
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: quests/nyxaris
         title: Nyxaris and the endgame quests
         brief: ['M: Endgame quests', 'M: Nyxaris and the laboratory']
         sources: [transfusao-e-plasmas, livro-perdido, missoes]
         phase: 7
-      - {slug: quests/lost-book, title: The Lost Book, brief: ['M: The Lost Book'], sources: [livro-perdido], phase: 7}
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
+      - {slug: quests/lost-book, title: The Lost Book, brief: ['M: The Lost Book'], sources: [livro-perdido], phase: 7, research: read, writing: written, verified: partly checked, built: published}
 
   - dir: schools
     title: Vampiric Schools
@@ -1058,17 +1112,28 @@ sections:
         brief: ['N: How to unlock schools', 'N: How to enroll', 'N: Enrollment NPC', 'N: School headquarters', 'N: All four schools', 'N: Changing schools', 'N: Does a school change combat power?']
         sources: [escolas]
         phase: 7
-        built: page stub
+        built: published
+        research: read
+        writing: written
+        verified: partly checked
       - slug: schools/ranks-and-points
         title: School ranks and points
         brief: ['N: School ranks', 'N: School points', 'N: Daily missions', 'N: School events', 'N: School bonuses', 'N: Sunday bonuses']
         sources: [escolas]
         phase: 7
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: schools/spells
         title: School spells
         brief: ['N: School spells', 'N: Spell tiers', 'N: Spell cooldowns', 'N: Recommended spells by class']
         sources: [escolas, classes]
         phase: 7
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
 
   - dir: endgame
     title: Endgame
@@ -1078,18 +1143,29 @@ sections:
         brief: ['O: overview', 'O: Character Prestige 20', 'O: Long-term progression']
         sources: [transfusao-e-plasmas, nivel-e-prestigio]
         phase: 7
-        built: page stub
+        built: published
+        research: read
+        writing: written
+        verified: partly checked
       - slug: endgame/pulses
         title: Pulses
         brief: ['O: Pulses', 'O: Pulse requirements', 'O: Pulse costs', 'O: Automatic Pulse']
         sources: [transfusao-e-plasmas, auto-prestigio]
         phase: 7
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: endgame/transfusions
         title: Transfusions
         brief: ['O: Transfusions', 'O: Transfusion costs', 'O: VIP discounts', 'O: Ourosangue needed for Transfusions']
         sources: [transfusao-e-plasmas, livro-perdido]
         needs: [endgame/pulses]
         phase: 7
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: endgame/plasmas
         title: Plasmas
         brief: ['O: Plasmas', 'O: Plasma allocation', 'O: Plasma reset mechanics', 'O: All available Plasma attributes', 'O: Diminishing returns']
@@ -1097,6 +1173,10 @@ sections:
         needs: [endgame/transfusions]
         phase: 7
         missing: [Q-013]
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: endgame/plasmas-by-class
         title: Plasma investment by class
         brief: ['O: Recommended Plasma investment by class']
@@ -1104,11 +1184,19 @@ sections:
         needs: [endgame/plasmas]
         phase: 7
         missing: ['Community recommendation']
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: endgame/after-250-transfusions
         title: After 250 transfusions
         brief: ['O: Endgame optimization', 'R: Rankings (Kill Points)']
         sources: [transfusao-e-plasmas, rankings]
         phase: 7
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
 
   - dir: support
     title: Battle Pass and VIP
@@ -1118,12 +1206,19 @@ sections:
         brief: ['Q: Clearly identify which systems require separate purchases']
         sources: [vip, vip-page]
         phase: 7
-        built: page stub
+        built: published
+        research: read
+        writing: written
+        verified: partly checked
       - slug: support/battle-pass
         title: Battle Pass
         brief: ['P: How Battle Pass works', 'P: Free reward track', 'P: Bloody reward track', 'P: How to unlock Bloody Pass', 'P: Seasonal progression', 'P: Battle Pass experience', 'P: Boss XP rewards', 'P: Event XP rewards', 'P: Reward claiming', 'P: Retroactive premium rewards', 'P: Season expiration']
         sources: [passe-de-batalha]
         phase: 7
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: support/battle-pass-farming
         title: Farming Battle Pass XP
         brief: ['P: Efficient Battle Pass farming']
@@ -1131,23 +1226,39 @@ sections:
         needs: [support/battle-pass]
         phase: 7
         missing: ['Community recommendation']
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: support/vip
         title: VIP
         brief: ['Q: VIP benefits', 'Q: VIP duration', 'Q: Meditation bonuses', 'Q: Automatic prestige', 'Q: Automatic Pulse']
         sources: [vip, vip-page, auto-prestigio, meditacao]
         phase: 7
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: support/optional-purchases
         title: Optional purchases
         brief: ['Q: Double Meditation', 'Q: Bloody Battle Pass', 'Q: Available donation options']
         sources: [vip-page, meditacao, passe-de-batalha, clan]
         phase: 7
         missing: ['No prices are published; do not invent them']
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: support/free-vs-vip
         title: Free vs VIP progression
         brief: ['Q: Free vs VIP progression comparison', 'Q: What free players can accomplish']
         sources: [vip, meditacao, transfusao-e-plasmas, sangrulhos, teleportes]
         needs: [support/vip]
         phase: 7
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
 
   - dir: world
     title: World and community
@@ -1157,29 +1268,44 @@ sections:
         brief: ['R: overview']
         sources: [castelo, clan]
         phase: 7
-        built: page stub
+        built: published
+        research: read
+        writing: written
+        verified: partly checked
       - slug: world/castle
         title: Castle helpers
         brief: ['R: Castle systems', 'R: Castle storage', 'R: Castle search', 'R: Castle building limits']
         sources: [castelo]
         phase: 7
-      - {slug: world/furniture, title: Furniture, brief: ['R: Furniture'], sources: [moveis], phase: 7}
-      - {slug: world/clan, title: Clan, brief: ['R: Clan mechanics'], sources: [clan], phase: 7}
-      - {slug: world/marriage, title: Marriage, brief: ['R: Marriage'], sources: [casamento], phase: 7}
-      - {slug: world/mail, title: Mail, brief: ['R: Mail'], sources: [correio], phase: 7}
-      - {slug: world/rankings, title: Rankings, brief: ['R: Rankings'], sources: [rankings], phase: 7}
-      - {slug: world/achievements, title: Achievements, brief: ['R: Achievements'], sources: [conquistas], phase: 7}
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
+      - {slug: world/furniture, title: Furniture, brief: ['R: Furniture'], sources: [moveis], phase: 7, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: world/clan, title: Clan, brief: ['R: Clan mechanics'], sources: [clan], phase: 7, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: world/marriage, title: Marriage, brief: ['R: Marriage'], sources: [casamento], phase: 7, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: world/mail, title: Mail, brief: ['R: Mail'], sources: [correio], phase: 7, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: world/rankings, title: Rankings, brief: ['R: Rankings'], sources: [rankings], phase: 7, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: world/achievements, title: Achievements, brief: ['R: Achievements'], sources: [conquistas], phase: 7, research: read, writing: written, verified: partly checked, built: published}
       - slug: world/feats-fame-titles
         title: Feats, Fame and titles
         brief: ['R: Feats', 'R: Fame', 'R: Titles', 'R: How to equip or hide titles']
         sources: [facanhas, conquistas, casamento]
         phase: 7
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: world/community-rules
         title: Community rules
         brief: ['R: Community rules']
         sources: []
         phase: 7
         missing: [Q-014]
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: world/faq
         title: Frequently asked questions
         brief: ['R: Frequently asked questions']
@@ -1195,29 +1321,44 @@ sections:
         brief: ['S: overview']
         sources: [comandos, atalhos]
         phase: 7
-        built: page stub
+        built: published
+        research: read
+        writing: written
+        verified: partly checked
       - slug: reference/commands
         title: Player commands
         brief: ['S: All player commands', 'S: Portuguese command names and English descriptions']
         sources: [comandos]
         phase: 7
-        missing: ['309 commands; descriptions are in Portuguese']
-      - {slug: reference/shortcuts, title: Keyboard shortcuts, brief: ['S: All keyboard shortcuts'], sources: [atalhos], phase: 7, missing: ['Source page is in Portuguese']}
-      - {slug: reference/npcs, title: NPC directory, brief: ['S: NPC directory'], sources: [primeiros-passos, profissoes, masmorras, escolas, sangrulhos, transfusao-e-plasmas, postos-avancados], phase: 7, missing: ['Compiled across guides']}
-      - {slug: reference/items, title: Item directory, brief: ['S: Item directory'], sources: [masmorras, banco, pets, sangrulhos, oficios-ferreiro-alfaiate-encantador], phase: 7, missing: ['Compiled across guides']}
-      - {slug: reference/bosses, title: Boss directory, brief: ['S: Boss directory'], sources: [pets, cacada-de-v-bloods, ruptura-da-realidade, julgamento-de-goreswine], phase: 7, missing: ['Compiled across guides']}
-      - {slug: reference/glossary, title: Glossary, brief: ['S: Terminology glossary'], sources: [comandos], phase: 7, missing: ['Portuguese–English term map compiled across guides']}
+        missing: ['309 commands; descriptions are in Portuguese', Q-020]
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
+      - {slug: reference/shortcuts, title: Keyboard shortcuts, brief: ['S: All keyboard shortcuts'], sources: [atalhos], phase: 7, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: reference/npcs, title: NPC directory, brief: ['S: NPC directory'], sources: [primeiros-passos, profissoes, masmorras, escolas, sangrulhos, transfusao-e-plasmas, postos-avancados], phase: 7, missing: ['Compiled across guides'], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: reference/items, title: Item directory, brief: ['S: Item directory'], sources: [masmorras, banco, pets, sangrulhos, oficios-ferreiro-alfaiate-encantador], phase: 7, missing: ['Compiled across guides'], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: reference/bosses, title: Boss directory, brief: ['S: Boss directory'], sources: [pets, cacada-de-v-bloods, ruptura-da-realidade, julgamento-de-goreswine], phase: 7, missing: ['Compiled across guides'], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: reference/glossary, title: Glossary, brief: ['S: Terminology glossary'], sources: [comandos], phase: 7, missing: ['Portuguese–English term map compiled across guides'], research: read, writing: written, verified: partly checked, built: published}
       - slug: reference/cost-tables
         title: Upgrade cost tables
         brief: ['S: Upgrade cost tables']
         sources: [nivel-e-prestigio, maestria-de-arma, linhagem-de-sangue, classes, pets, oficios-ferreiro-alfaiate-encantador, transfusao-e-plasmas]
         phase: 7
-      - {slug: reference/drop-rates, title: Drop rates, brief: ['S: Drop rate tables'], sources: [pets, masmorras, arena-ilusional, coleta-minerador-pescador-lenhador], phase: 7}
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
+      - {slug: reference/drop-rates, title: Drop rates, brief: ['S: Drop rate tables'], sources: [pets, masmorras, arena-ilusional, coleta-minerador-pescador-lenhador], phase: 7, research: read, writing: written, verified: partly checked, built: published}
       - slug: reference/progression-requirements
         title: Progression requirements
         brief: ['S: Progression requirements']
         sources: [classes, escolas, transfusao-e-plasmas, julgamento-de-goreswine, ruptura-da-realidade, oficios-ferreiro-alfaiate-encantador]
         phase: 7
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - {slug: reference/mechanics-faq, title: Server mechanics FAQ, brief: ['S: Server mechanics FAQ'], sources: [nivel-e-prestigio, meditacao], phase: 9}
       - {slug: reference/troubleshooting, title: Troubleshooting, brief: ['S: Troubleshooting encyclopedia'], sources: [interface, meditacao, missoes, painel-do-site], phase: 9}
 

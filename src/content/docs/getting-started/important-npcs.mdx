@@ -30,52 +30,14 @@ sidebar:
   order: 15
 ---
 
-import FilterTable from '../../../components/FilterTable.astro';
+import NpcTable from '../../../components/NpcTable.astro';
 import { Aside } from '@astrojs/starlight/components';
 
 The official guides don't keep a single NPC list. This page collects every NPC they mention by name, with what each one does and where the guides place them. Talk to an NPC with **F**. NPCs that offer a service open a menu. If they're part of one of your quests, the first option is *Continue: quest name*.
 
-<FilterTable placeholder="Filter by name, role or place…">
+<NpcTable beginner />
 
-| NPC | What they handle | Where |
-|---|---|---|
-| Helena Valerius | Choosing a gathering and a crafting profession during the tutorial | Tutorial |
-| Vlad Parker | Character prestige (*The Cycle of Blood*); unlocks teleports (*The Blood Baptism*); free first weapon and blood prestige | Winery (Adegaria), City of Sangria Falls |
-| Razor Mortak | Mortak class; Classes achievement | Classes Hall |
-| Lilith Noctarin | Noctarin class | Classes Hall |
-| Aria Bastien | Bastien class; Luminance achievement | Classes Hall |
-| Sylar Carmesyne | Carmesyne class | Classes Hall |
-| Draco Skarn | Skarn class | Classes Hall |
-| Ozzy Sepulkros | Sepulkros class; Thanatos achievement | Classes Hall |
-| Kaelmor Draekhar | Draekhar class and its Currents | Classes Hall |
-| Mister Nyx Umbrellis | Umbrellis class | Classes Hall |
-| Markus Sangrael | Sangrael class | Classes Hall |
-| Morrigan LaMuerte | La Muerte class | Classes Hall |
-| Astra General | General class | Classes Hall |
-| Darius | Free class testing | Training Room |
-| Ornn | Blacksmith mentor, weapon fortification and refinement | Professions Hall |
-| Label | Tailor mentor, armour fortification and refinement | Professions Hall |
-| Mirana | Enchanter mentor, necklace fortification and refinement | Professions Hall |
-| Holmo | Miner mentor | Professions Hall |
-| Mirel | Fisher mentor; aquariums and fish food | Professions Hall |
-| Bram | Woodcutter mentor | Professions Hall |
-| Balthazar | Master of Contracts | City Hall, City of Sangria Falls |
-| Haruki | Guardian of the Meditation Chamber | Meditation Chamber |
-| Richard | Master of the Sangrulhos | Sangrulhos (city teleport hub) |
-| Sebastian | Vampiric School enrolment and transfers | Main building, first floor, City of Sangria Falls |
-| A-mór, the Cupid | Blood Bond (marriage) | City of Sangria Falls |
-| Viktor | Vault quest *Worthy of a Vault* | Sangria Bank |
-| Mark | Dungeon keys and entry | Events Hub |
-| Master Gale | Illusory Arena | Events Hub |
-| The Herald | Tower of the Immortals | Events Hub |
-| Orek, Guardian of the Rifts | Reality Rupture | Events Hub |
-| Mordekai, the Sentinel of Judgment | Goreswine's Judgment | Events Hub |
-| Nyxaris, the Last Oracle | Pulses, Transfusions and the Lost Book chapters | Her laboratory in Farbane |
-| Asterion | Pillars achievement | Not stated |
-| Outpost commanders | Daily and weekly Outpost missions: Ekundayo (Farbane Woods), Alistair (Dunley Farmlands), Velanna (Ruins of Mortium), Moira (Gloomrot), Yharn (Cursed Forest), Eir (Oakveil Woodlands), Cassandra (Silverlight Hills) | Their outposts |
-| School professors | School daily missions: Aldren Alvaneve (Frosthiel), Lumielle Solenne (Luminara), Angi Viper (Serphentis), Sangrev Rubrescarlate (Sanguinis) | School headquarters |
-
-</FilterTable>
+The [full NPC reference](/reference/npcs/) also lists Outpost commanders, school professors and event NPCs.
 
 <Aside type="note" title="Class Master names">
 The official class pages give some Masters a title, such as *Dama* Lilith Noctarin, *Lady* Aria Bastien and *Lord* Draco Skarn. The table uses the short names that the guides use in running text.

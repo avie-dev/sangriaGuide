@@ -1,0 +1,62 @@
+---
+title: Goreswine's Judgment
+description: "Goreswine's Judgment on Sangria Falls: a 3–5 player court against the Unholy Judge, with cells instead of death. Schedule, rewards, how sessions start, and the prison mechanic."
+summary: "Three windows a day (Brasília time). 3–5 players at level 90, no pets. Goreswine has 650,000 health; you have 15 minutes. Fallen players are jailed and freed by teammates. A win pays 2,500–3,500 Ourosangue and 20–30 Sangricoins, once a day."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - julgamento-de-goreswine
+labels: [official]
+sidebar:
+  order: 2
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<QuickFacts
+	facts={[
+		['Windows (Brasília)', '00:15–11:30 · 12:15–17:30 · 18:15–23:30'],
+		['NPC', 'Mordekai, the Sentinel of Judgment (Events Hub)'],
+		['Requirement', 'Level 90'],
+		['Players', '3 to 5 (no solo); one session at a time'],
+		['Fight', '15 minutes'],
+		['Pets', 'Not allowed'],
+		['Reward', '2,500–3,500 Ourosangue, 20–30 Sangricoins, 50 Pass XP'],
+	]}
+/>
+
+The reward is rolled within its range for each player, and **prisoners get the full prize too**. There's only **one rewarded victory per day**. The three windows exist for people who play at different times.
+
+## Joining
+
+1. Talk to **Mordekai** and click **APPEAR IN COURT**. You go to the Waiting Room.
+2. The first to appear becomes the leader, and the server is told a session has opened.
+3. **With 3 players**, the leader can click **START**. If they don't, the session starts by itself 3 minutes after the third player arrives. **With 5**, it starts at once.
+
+<Aside type="caution" title="30 seconds to enter">
+When the session starts, the gates open and you have **30 seconds** to enter the arena. Anyone left behind returns to the Hub with no prize. It doesn't use up your victory, so just appear for the next session.
+</Aside>
+
+## The fight
+
+- Goreswine has **650,000 health**, the same for 3 or 5 players.
+- **Every minute**, he releases a court guard from a cell, so long fights get crowded.
+- The central **pillar** attacks the group as Goreswine loses health.
+- **Fire** barely hurts him, and **knockback** doesn't move him.
+- Group members are **allies**: your hits don't hurt each other.
+- Each player can have **at most 4 summons** alive, and a fifth vanishes as it's born.
+
+## Prison, not death
+
+- Fall, and you're **jailed in a cell** at full health but **silenced** (you can't cast). You can watch through the bars.
+- A free teammate **hits your cell door from outside**. 15 seconds later the door opens for **5 seconds**, so walk out. Miss it and you're jailed again. Knocking from the inside doesn't work.
+
+## Ending
+
+- **Victory:** everyone (prisoners included) is paid and returns to the Hub, and a damage ranking appears.
+- **Defeat:** everyone is jailed or the 15 minutes run out. No prize, but nothing is blocked, so appear again while the window is open.
+
+## Help runs
+
+After your rewarded win, you can appear to help (**APPEAR (HELP, NO REWARD)**) until you reach **3 wins** that day. Then the stamp reads *SENTENCE SERVED*. Check exactly what you earned in your Bank statement, on the line labelled *Goreswine's Judgment*.

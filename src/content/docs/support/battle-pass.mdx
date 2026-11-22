@@ -1,0 +1,66 @@
+---
+title: Battle Pass
+description: "The Sangria Falls Battle Pass: 150-level seasons, earning pass XP from V Bloods and events, claiming Free and Bloody rewards, inventory space, and season turnover."
+summary: "The current season, Dracula vs Solarus, has 150 levels. Earn pass XP from V Bloods (2–10), Rupture wins (20–70), the Judgment (50) and Tower bosses. Each level has a FREE reward and a BLOODY one (Bloody Pass by donation). Claim rewards yourself; leave 10 slots free."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - passe-de-batalha
+labels: [official, purchase]
+sidebar:
+  order: 1
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<QuickFacts
+	facts={[
+		['Current season', 'Dracula vs Solarus'],
+		['Levels', '150'],
+		['Rows', 'FREE (everyone) and BLOODY (Bloody Pass)'],
+		['Starts', 'From your first V Blood kill'],
+		['Open', 'The ticket button by the minimap, or F1 → OPEN PASS'],
+	]}
+/>
+
+## Earning pass XP
+
+| Source | Pass XP |
+|---|---|
+| Open-world V Blood | 2–10, by boss (killer and anyone nearby in combat get the full amount) |
+| Reality Rupture win | 20–70, by difficulty |
+| Goreswine's Judgment win | 50 |
+| Tower of the Immortals | Half the normal value per boss, only for whoever got the kill |
+| Illusory Arena | None |
+
+Each gain shows on the right as **[PASS] +5 XP**, with your level and percentage. There's one level, and it applies to both rows.
+
+**No XP?** The usual reasons: it was in the Arena, the season has ended, you're at max level, or you didn't get the kill and weren't nearby and in combat.
+
+## Claiming rewards
+
+Levelling up doesn't hand anything out. **You claim each reward.** A red dot on the ticket means rewards are waiting, and the panel opens on your next level's page.
+
+- The top row is **FREE**, and the bottom row is **BLOODY**. Each page shows 6 levels.
+- Slot states: **AVAILABLE** (claim it), **CLAIMED**, **LEVEL 25** (not reached yet), **EXCLUSIVE** (Bloody only).
+- **CLAIM ALL** at the top takes everything.
+
+<Aside type="caution" title="Inventory space">
+Claiming a level with an item needs **10 free slots**, and **CLAIM ALL** needs 5 per level. If space runs out, claiming stops, tells you how far it got, and nothing is lost. Currencies (Sangricoins, Ourosangue, Quitina, Ressonador) go straight to the Bank.
+</Aside>
+
+<Command cmd=".pass level 25">Shows level 25's rewards.</Command>
+
+## The Bloody Pass
+
+It unlocks the BLOODY row, a second reward at every level. It's obtained **by donation** through a Discord ticket. There's no in-game purchase, and **it doesn't come with VIP**. It counts **only for the season it's activated in**. Activating mid-season unlocks the Bloody rewards for levels you've already passed, so use **CLAIM ALL**. The top of the panel shows FREE or BLOODY.
+
+## Season turnover
+
+The panel shows **TIME LEFT**. When a season ends, XP freezes, but **claims stay open**. At the next season only levels reset, and what you claimed stays yours. The Bloody Pass doesn't carry over. Claim everything before the turnover to be safe.
+
+**Pet Souls** from the pass: drag the item out of your inventory to add +1 soul to a random pet of that act.
+
+**After a server wipe**, your pass level and claims stay on your account. When the team enables it, `.pass reclaimwipe` returns items from claimed levels. Currencies, pet Souls, the Bloody Pouch and the Bloody Bag don't come back.

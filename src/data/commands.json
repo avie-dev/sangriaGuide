@@ -1,0 +1,1953 @@
+[
+	{
+		"cmd": ".menu",
+		"system": "First steps",
+		"source": "primeiros-passos",
+		"pt": "Abre o menu geral do servidor",
+		"en": "Opens the server's general menu"
+	},
+	{
+		"cmd": ".quest",
+		"system": "First steps",
+		"source": "primeiros-passos",
+		"pt": "Mostra as suas missões ativas",
+		"en": "Shows your active quests"
+	},
+	{
+		"cmd": ".lang pt",
+		"system": "First steps",
+		"source": "primeiros-passos",
+		"pt": "Muda o idioma (pt, en, es)"
+	},
+	{
+		"cmd": ".nivel log",
+		"system": "First steps",
+		"source": "primeiros-passos",
+		"pt": "Liga ou desliga os avisos de XP"
+	},
+	{
+		"cmd": ".arma log",
+		"system": "First steps",
+		"source": "primeiros-passos",
+		"pt": "Liga ou desliga os avisos de XP"
+	},
+	{
+		"cmd": ".sangue log",
+		"system": "First steps",
+		"source": "primeiros-passos",
+		"pt": "Liga ou desliga os avisos de XP"
+	},
+	{
+		"cmd": ".pet log",
+		"system": "First steps",
+		"source": "primeiros-passos",
+		"pt": "Liga ou desliga os avisos de XP",
+		"en": "Turn the XP notices on and off"
+	},
+	{
+		"cmd": ".aviso interface",
+		"system": "First steps",
+		"source": "primeiros-passos",
+		"pt": "Liga ou desliga o lembrete de instalar a interface"
+	},
+	{
+		"cmd": ".mercado ir",
+		"system": "First steps",
+		"source": "primeiros-passos",
+		"pt": "Teleporta para o mercado, na cidade"
+	},
+	{
+		"cmd": ".nivel",
+		"system": "Level and Prestige",
+		"source": "nivel-e-prestigio",
+		"pt": "Abre o menu do personagem (.nv também funciona)"
+	},
+	{
+		"cmd": ".prestigio exp",
+		"system": "Level and Prestige",
+		"source": "nivel-e-prestigio",
+		"pt": "Prestigia na hora, sem confirmação (curto: .pg exp)"
+	},
+	{
+		"cmd": ".nivel buffs",
+		"system": "Level and Prestige",
+		"source": "nivel-e-prestigio",
+		"pt": "Lista os 20 buffs de prestígio"
+	},
+	{
+		"cmd": ".nivel log",
+		"system": "Level and Prestige",
+		"source": "nivel-e-prestigio",
+		"pt": "Liga ou desliga o XP de personagem no chat"
+	},
+	{
+		"cmd": ".xp",
+		"system": "Level and Prestige",
+		"source": "nivel-e-prestigio",
+		"pt": "Mostra os bônus de XP ativos",
+		"en": "Shows the active XP bonuses"
+	},
+	{
+		"cmd": ".menu",
+		"system": "Level and Prestige",
+		"source": "nivel-e-prestigio",
+		"pt": "Menu geral do servidor (opção Personagem)",
+		"en": "General server menu (option Character)"
+	},
+	{
+		"cmd": ".arma",
+		"system": "Weapon Mastery",
+		"source": "maestria-de-arma",
+		"pt": "Abre o menu de maestria (.ar também funciona)"
+	},
+	{
+		"cmd": ".arma info",
+		"system": "Weapon Mastery",
+		"source": "maestria-de-arma",
+		"pt": "Nível, prestígio e XP de todas as armas"
+	},
+	{
+		"cmd": ".arma atributos",
+		"system": "Weapon Mastery",
+		"source": "maestria-de-arma",
+		"pt": "Os 3 atributos da sua classe para a arma em mãos"
+	},
+	{
+		"cmd": ".prestigio arma",
+		"system": "Weapon Mastery",
+		"source": "maestria-de-arma",
+		"pt": "Prestigia a arma em mãos na hora, sem confirmação (curto: .pg a)"
+	},
+	{
+		"cmd": ".arma log",
+		"system": "Weapon Mastery",
+		"source": "maestria-de-arma",
+		"pt": "Liga ou desliga o XP de arma no chat"
+	},
+	{
+		"cmd": ".xp",
+		"system": "Weapon Mastery",
+		"source": "maestria-de-arma",
+		"pt": "Mostra os bônus de XP ativos no servidor",
+		"en": "Shows the XP bonuses active on the server"
+	},
+	{
+		"cmd": ".sangue",
+		"system": "Blood Lineage",
+		"source": "linhagem-de-sangue",
+		"pt": "Abre o menu de linhagem (.sg também funciona)"
+	},
+	{
+		"cmd": ".sangue info",
+		"system": "Blood Lineage",
+		"source": "linhagem-de-sangue",
+		"pt": "Nível, prestígio e XP que falta em todos os tipos de sangue"
+	},
+	{
+		"cmd": ".sangue atributos",
+		"system": "Blood Lineage",
+		"source": "linhagem-de-sangue",
+		"pt": "Os 3 atributos da sua classe para o sangue atual"
+	},
+	{
+		"cmd": ".prestigio sangue",
+		"system": "Blood Lineage",
+		"source": "linhagem-de-sangue",
+		"pt": "Prestigia o sangue atual na hora, sem confirmação (curto: .pg s)"
+	},
+	{
+		"cmd": ".sangue log",
+		"system": "Blood Lineage",
+		"source": "linhagem-de-sangue",
+		"pt": "Liga ou desliga o XP de sangue no chat"
+	},
+	{
+		"cmd": ".xp",
+		"system": "Blood Lineage",
+		"source": "linhagem-de-sangue",
+		"pt": "Mostra os bônus de XP ativos no servidor",
+		"en": "Shows the XP bonuses active on the server"
+	},
+	{
+		"cmd": ".ap status",
+		"system": "Auto-Prestige",
+		"source": "auto-prestigio",
+		"pt": "Mostra tipos ligados, alvos, pulsos e teto",
+		"en": "Shows types on, targets, pulses and cap"
+	},
+	{
+		"cmd": ".ap ativar exp",
+		"system": "Auto-Prestige",
+		"source": "auto-prestigio",
+		"pt": "Liga ou desliga um tipo (exp, arma, sangue, pet)"
+	},
+	{
+		"cmd": ".ap desativar exp",
+		"system": "Auto-Prestige",
+		"source": "auto-prestigio",
+		"pt": "Liga ou desliga um tipo (exp, arma, sangue, pet)"
+	},
+	{
+		"cmd": ".ap alvo arma 10",
+		"system": "Auto-Prestige",
+		"source": "auto-prestigio",
+		"pt": "A arma para no prestígio 10 (max tira o alvo)"
+	},
+	{
+		"cmd": ".ap teto 5000",
+		"system": "Auto-Prestige",
+		"source": "auto-prestigio",
+		"pt": "Limite de Ourosangue que o auto pode gastar (0 tira o limite)"
+	},
+	{
+		"cmd": ".ap pulso desligar",
+		"system": "Auto-Prestige",
+		"source": "auto-prestigio",
+		"pt": "Desliga ou liga o pulso automático"
+	},
+	{
+		"cmd": ".ap pulso ligar",
+		"system": "Auto-Prestige",
+		"source": "auto-prestigio",
+		"pt": "Desliga ou liga o pulso automático"
+	},
+	{
+		"cmd": ".ap pulsos 5",
+		"system": "Auto-Prestige",
+		"source": "auto-prestigio",
+		"pt": "Quantos pulsos o auto pode dar (0 tira o limite)"
+	},
+	{
+		"cmd": ".nivel",
+		"system": "Auto-Prestige",
+		"source": "auto-prestigio",
+		"pt": "Menu do personagem, com a opção Auto-prestígio"
+	},
+	{
+		"cmd": ".tf",
+		"system": "Pulses, Transfusions and Plasmas",
+		"source": "transfusao-e-plasmas",
+		"pt": "Abre o menu da transfusão",
+		"en": "Opens the transfusion menu"
+	},
+	{
+		"cmd": ".tf info",
+		"system": "Pulses, Transfusions and Plasmas",
+		"source": "transfusao-e-plasmas",
+		"pt": "Mostra Pulsos, transfusões, plasmas livres e quanto há em cada ancestral",
+		"en": "Shows Pulses, transfusions, free plasmas and how much is in each ancestor"
+	},
+	{
+		"cmd": ".tf pulso",
+		"system": "Pulses, Transfusions and Plasmas",
+		"source": "transfusao-e-plasmas",
+		"pt": "Dá um Pulso na hora, sem pedir confirmação",
+		"en": "Gives a Pulse right away, without asking for confirmation"
+	},
+	{
+		"cmd": ".tf transfundir",
+		"system": "Pulses, Transfusions and Plasmas",
+		"source": "transfusao-e-plasmas",
+		"pt": "Faz a transfusão na hora, sem pedir confirmação",
+		"en": "Does the transfusion right away, without asking for confirmation"
+	},
+	{
+		"cmd": ".tf preset-carregar 2",
+		"system": "Pulses, Transfusions and Plasmas",
+		"source": "transfusao-e-plasmas",
+		"pt": "Ativa o preset 2 já salvo (VIP)",
+		"en": "Activates preset 2 already saved (VIP)"
+	},
+	{
+		"cmd": ".menu tf",
+		"system": "Pulses, Transfusions and Plasmas",
+		"source": "transfusao-e-plasmas",
+		"pt": "O mesmo menu, pelo menu geral",
+		"en": "The same menu, from the general menu"
+	},
+	{
+		"cmd": ".meditar",
+		"system": "Meditation",
+		"source": "meditacao",
+		"pt": "Abre o menu da meditação (ou .menu meditar)"
+	},
+	{
+		"cmd": ".meditar exp",
+		"system": "Meditation",
+		"source": "meditacao",
+		"pt": "Escolhe o caminho EXP de Personagem"
+	},
+	{
+		"cmd": ".meditar arma",
+		"system": "Meditation",
+		"source": "meditacao",
+		"pt": "Escolhe o caminho Maestria de Arma"
+	},
+	{
+		"cmd": ".meditar sangue",
+		"system": "Meditation",
+		"source": "meditacao",
+		"pt": "Escolhe o caminho Linhagem Sanguínea"
+	},
+	{
+		"cmd": ".meditar pet",
+		"system": "Meditation",
+		"source": "meditacao",
+		"pt": "Escolhe o caminho Pet"
+	},
+	{
+		"cmd": ".meditar ir",
+		"system": "Meditation",
+		"source": "meditacao",
+		"pt": "Leva você para a Câmara de Meditação"
+	},
+	{
+		"cmd": ".meditar tipo",
+		"system": "Meditation",
+		"source": "meditacao",
+		"pt": "Mostra o caminho atual"
+	},
+	{
+		"cmd": ".meditar dupla exp pet",
+		"system": "Meditation",
+		"source": "meditacao",
+		"pt": "Liga a Meditação Dupla com dois caminhos (exige o desbloqueio)"
+	},
+	{
+		"cmd": ".classe",
+		"system": "Classes",
+		"source": "classes",
+		"pt": "Abre o menu de classes"
+	},
+	{
+		"cmd": ".classe corrente",
+		"system": "Classes",
+		"source": "classes",
+		"pt": "Escolhe ou troca a Corrente do Draekhar"
+	},
+	{
+		"cmd": ".classe variante",
+		"system": "Classes",
+		"source": "classes",
+		"pt": "Escolhe ou troca a variante do Sepulkros ou do Mortak"
+	},
+	{
+		"cmd": ".lamuerte",
+		"system": "Classes",
+		"source": "classes",
+		"pt": "Abre a invocação do ataque básico da sua classe",
+		"en": "Opens your class's basic attack summon"
+	},
+	{
+		"cmd": ".sepulkros",
+		"system": "Classes",
+		"source": "classes",
+		"pt": "Abre a invocação do ataque básico da sua classe",
+		"en": "Opens your class's basic attack summon"
+	},
+	{
+		"cmd": ".skarn",
+		"system": "Classes",
+		"source": "classes",
+		"pt": "Abre a invocação do ataque básico da sua classe",
+		"en": "Opens your class's basic attack summon"
+	},
+	{
+		"cmd": ".arma atributos",
+		"system": "Classes",
+		"source": "classes",
+		"pt": "Mostra a sua classe e os atributos de arma dela"
+	},
+	{
+		"cmd": ".sangue atributos",
+		"system": "Classes",
+		"source": "classes",
+		"pt": "Mostra os atributos de sangue da classe"
+	},
+	{
+		"cmd": ".quest",
+		"system": "Classes",
+		"source": "classes",
+		"pt": "Mostra as suas missões e o passo atual",
+		"en": "Shows your quests and the current step"
+	},
+	{
+		"cmd": ".classe teste",
+		"system": "Classes",
+		"source": "classes",
+		"pt": "Opções da Sala de Treinamento (só lá dentro; veja o guia dela)"
+	},
+	{
+		"cmd": ".classe teste",
+		"system": "Training Room",
+		"source": "sala-de-treinamento",
+		"pt": "Abre o menu da sala: evoluções, atributos, Corrente, variante, saco de pancadas e troca de classe"
+	},
+	{
+		"cmd": ".saco",
+		"system": "Training Room",
+		"source": "sala-de-treinamento",
+		"pt": "Cria o saco de pancadas onde você está; se já existe, remove"
+	},
+	{
+		"cmd": ".nivel",
+		"system": "Profile",
+		"source": "perfil",
+		"pt": "Abre o menu Personagem (nível, prestígio, bônus)"
+	},
+	{
+		"cmd": ".nivel buffs",
+		"system": "Profile",
+		"source": "perfil",
+		"pt": "Lista os 20 bônus de prestígio"
+	},
+	{
+		"cmd": ".arma info",
+		"system": "Profile",
+		"source": "perfil",
+		"pt": "Progresso de todas as armas"
+	},
+	{
+		"cmd": ".sangue info",
+		"system": "Profile",
+		"source": "perfil",
+		"pt": "Progresso de todos os tipos de sangue"
+	},
+	{
+		"cmd": ".prof ver",
+		"system": "Profile",
+		"source": "perfil",
+		"pt": "Progresso das profissões",
+		"en": "Professions progress"
+	},
+	{
+		"cmd": ".tf info",
+		"system": "Profile",
+		"source": "perfil",
+		"pt": "Pulsos, transfusões e plasmas",
+		"en": "Pulses, transfusions and plasmas"
+	},
+	{
+		"cmd": ".pet info",
+		"system": "Profile",
+		"source": "perfil",
+		"pt": "Ficha do pet invocado",
+		"en": "Summoned pet's sheet"
+	},
+	{
+		"cmd": ".vip tempo",
+		"system": "Profile",
+		"source": "perfil",
+		"pt": "Tempo restante de VIP"
+	},
+	{
+		"cmd": ".top",
+		"system": "Profile",
+		"source": "perfil",
+		"pt": "Rankings do servidor e a sua posição",
+		"en": "Server rankings and your position"
+	},
+	{
+		"cmd": ".nivel log",
+		"system": "Profile",
+		"source": "perfil",
+		"pt": "Ligam e desligam o aviso de XP no chat"
+	},
+	{
+		"cmd": ".arma log",
+		"system": "Profile",
+		"source": "perfil",
+		"pt": "Ligam e desligam o aviso de XP no chat"
+	},
+	{
+		"cmd": ".sangue log",
+		"system": "Profile",
+		"source": "perfil",
+		"pt": "Ligam e desligam o aviso de XP no chat"
+	},
+	{
+		"cmd": ".pet log",
+		"system": "Profile",
+		"source": "perfil",
+		"pt": "Ligam e desligam o aviso de XP no chat",
+		"en": "Turn the XP notice in chat on and off"
+	},
+	{
+		"cmd": ".top",
+		"system": "Rankings",
+		"source": "rankings",
+		"pt": "Abre o menu de rankings",
+		"en": "Opens the rankings menu"
+	},
+	{
+		"cmd": ".ranking",
+		"system": "Rankings",
+		"source": "rankings",
+		"pt": "A mesma coisa, com outro nome",
+		"en": "The same thing, with another name"
+	},
+	{
+		"cmd": ".rank",
+		"system": "Rankings",
+		"source": "rankings",
+		"pt": "A mesma coisa, com outro nome",
+		"en": "The same thing, with another name"
+	},
+	{
+		"cmd": ".menu ranking",
+		"system": "Rankings",
+		"source": "rankings",
+		"pt": "Abre o mesmo menu pelo menu geral",
+		"en": "Opens the same menu from the general menu"
+	},
+	{
+		"cmd": ".pet",
+		"system": "Pets",
+		"source": "pets",
+		"pt": "Abre o menu de pets",
+		"en": "Opens the pets menu"
+	},
+	{
+		"cmd": ".pet invocar 3",
+		"system": "Pets",
+		"source": "pets",
+		"pt": "Invoca o pet de número 3 (atalho: .pet i 3)",
+		"en": "Summons pet number 3 (shortcut: .pet i 3)"
+	},
+	{
+		"cmd": ".pet desinvocar",
+		"system": "Pets",
+		"source": "pets",
+		"pt": "Guarda o pet ativo (atalho: .pet di)"
+	},
+	{
+		"cmd": ".pet info",
+		"system": "Pets",
+		"source": "pets",
+		"pt": "Ficha do pet invocado; .pet info 3 mostra a de outro pet",
+		"en": "Summoned pet's sheet; .pet info 3 shows another pet's"
+	},
+	{
+		"cmd": ".pet tier 3",
+		"system": "Pets",
+		"source": "pets",
+		"pt": "Sobe o tier do pet 3, sem pedir confirmação",
+		"en": "Raises pet 3's tier, with no confirmation prompt"
+	},
+	{
+		"cmd": ".pet sacrificar 3",
+		"system": "Pets",
+		"source": "pets",
+		"pt": "Sacrifica 1 alma do pet 3, sem pedir confirmação",
+		"en": "Sacrifices 1 soul from pet 3, with no confirmation prompt"
+	},
+	{
+		"cmd": ".pet prestigio",
+		"system": "Pets",
+		"source": "pets",
+		"pt": "Prestigia o pet invocado no nível 100 (atalho: .pet pg)",
+		"en": "Prestiges the summoned pet at level 100 (shortcut: .pet pg)"
+	},
+	{
+		"cmd": ".pet cristais 3",
+		"system": "Pets",
+		"source": "pets",
+		"pt": "Mostra os Cristais do pet 3",
+		"en": "Shows pet 3's Cristais"
+	},
+	{
+		"cmd": ".pet log",
+		"system": "Pets",
+		"source": "pets",
+		"pt": "Liga ou desliga o XP do pet no chat",
+		"en": "Turns the pet's XP in chat on or off"
+	},
+	{
+		"cmd": ".banco depositar cristal",
+		"system": "Pets",
+		"source": "pets",
+		"pt": "Deposita os Cristais do inventário",
+		"en": "Deposits the Cristais from your inventory"
+	},
+	{
+		"cmd": ".sangrulhos",
+		"system": "Sangrulhos",
+		"source": "sangrulhos",
+		"pt": "Abre o menu (atalho: .sngr)",
+		"en": "Opens the menu (shortcut: .sngr)"
+	},
+	{
+		"cmd": ".sangrulhos rolar 5",
+		"system": "Sangrulhos",
+		"source": "sangrulhos",
+		"pt": "Usa 5 Ressonadores (aceita 1, 5 ou 10), sem pedir confirmação"
+	},
+	{
+		"cmd": ".sangrulhos banner destaque",
+		"system": "Sangrulhos",
+		"source": "sangrulhos",
+		"pt": "Ativa o banner Destaque (aleatorio volta ao normal)",
+		"en": "Turns on the Featured banner (aleatorio returns to normal)"
+	},
+	{
+		"cmd": ".sangrulhos desequipar 1",
+		"system": "Sangrulhos",
+		"source": "sangrulhos",
+		"pt": "Esvazia o slot 1 (ou 2)",
+		"en": "Empties slot 1 (or 2)"
+	},
+	{
+		"cmd": ".menu sangrulhos",
+		"system": "Sangrulhos",
+		"source": "sangrulhos",
+		"pt": "Abre o mesmo menu pelo menu geral",
+		"en": "Opens the same menu from the general menu"
+	},
+	{
+		"cmd": ".pri mercado",
+		"system": "Prisoners",
+		"source": "prisioneiros",
+		"pt": "Lista os prisioneiros à venda",
+		"en": "Lists the prisoners for sale"
+	},
+	{
+		"cmd": ".pri buscar guerreiro 80",
+		"system": "Prisoners",
+		"source": "prisioneiros",
+		"pt": "Filtra por tipo de sangue e qualidade mínima",
+		"en": "Filters by blood type and minimum quality"
+	},
+	{
+		"cmd": ".pri comprar 12",
+		"system": "Prisoners",
+		"source": "prisioneiros",
+		"pt": "Compra o anúncio de código 12",
+		"en": "Buys the listing with code 12"
+	},
+	{
+		"cmd": ".pri estoque",
+		"system": "Prisoners",
+		"source": "prisioneiros",
+		"pt": "Mostra os prisioneiros que você comprou e ainda não chamou",
+		"en": "Shows the prisoners you bought and haven't called yet"
+	},
+	{
+		"cmd": ".pri chamar 12",
+		"system": "Prisoners",
+		"source": "prisioneiros",
+		"pt": "Coloca o prisioneiro 12 na cela vazia ao seu lado",
+		"en": "Puts prisoner 12 into the empty cell next to you"
+	},
+	{
+		"cmd": ".pri vender 5000",
+		"system": "Prisoners",
+		"source": "prisioneiros",
+		"pt": "Anuncia o prisioneiro da cela ao seu lado por 5.000 Ourosangue",
+		"en": "Lists the prisoner in the cell next to you for 5,000 Ourosangue"
+	},
+	{
+		"cmd": ".pri vendendo",
+		"system": "Prisoners",
+		"source": "prisioneiros",
+		"pt": "Mostra os seus anúncios ativos",
+		"en": "Shows your active listings"
+	},
+	{
+		"cmd": ".pri cancelar 12",
+		"system": "Prisoners",
+		"source": "prisioneiros",
+		"pt": "Cancela o anúncio 12 e devolve o prisioneiro ao estoque",
+		"en": "Cancels listing 12 and returns the prisoner to your stock"
+	},
+	{
+		"cmd": ".prof",
+		"system": "Professions",
+		"source": "profissoes",
+		"pt": "Abre o menu de profissões",
+		"en": "Opens the professions menu"
+	},
+	{
+		"cmd": ".prof ver",
+		"system": "Professions",
+		"source": "profissoes",
+		"pt": "Lista as suas profissões, com nível e prestígio",
+		"en": "Professions progress"
+	},
+	{
+		"cmd": ".prof ver ferreiro",
+		"system": "Professions",
+		"source": "profissoes",
+		"pt": "Mostra nível, XP e prestígio de uma profissão"
+	},
+	{
+		"cmd": ".prestigio profissao ferreiro",
+		"system": "Professions",
+		"source": "profissoes",
+		"pt": "Prestigia direto, sem pedir confirmação (só no nível 100)"
+	},
+	{
+		"cmd": ".quest",
+		"system": "Professions",
+		"source": "profissoes",
+		"pt": "Mostra as encomendas aceitas e o progresso",
+		"en": "Shows the accepted orders and the progress"
+	},
+	{
+		"cmd": ".item ver tudo",
+		"system": "Crafts: Blacksmith, Tailor and Enchanter",
+		"source": "oficios-ferreiro-alfaiate-encantador",
+		"pt": "Fortificação, refino e durabilidade de tudo o que está equipado"
+	},
+	{
+		"cmd": ".item ver arma",
+		"system": "Crafts: Blacksmith, Tailor and Enchanter",
+		"source": "oficios-ferreiro-alfaiate-encantador",
+		"pt": "Só a arma (também aceita colar, peitoral, luvas, calcas e botas)"
+	},
+	{
+		"cmd": ".prof",
+		"system": "Crafts: Blacksmith, Tailor and Enchanter",
+		"source": "oficios-ferreiro-alfaiate-encantador",
+		"pt": "Menu de profissões: nível e prestígio do seu ofício",
+		"en": "Professions menu: level and prestige of your craft"
+	},
+	{
+		"cmd": ".prestigio profissao ferreiro",
+		"system": "Crafts: Blacksmith, Tailor and Enchanter",
+		"source": "oficios-ferreiro-alfaiate-encantador",
+		"pt": "Prestigia o ofício no nível 100 (troque pelo nome do seu)"
+	},
+	{
+		"cmd": ".menu banco",
+		"system": "Crafts: Blacksmith, Tailor and Enchanter",
+		"source": "oficios-ferreiro-alfaiate-encantador",
+		"pt": "Abre o menu do Banco, para conferir o saldo de Ourosangue antes de fortificar"
+	},
+	{
+		"cmd": ".prof",
+		"system": "Gathering: Miner, Fisher and Woodcutter",
+		"source": "coleta-minerador-pescador-lenhador",
+		"pt": "Abre o menu de profissões",
+		"en": "Opens the professions menu"
+	},
+	{
+		"cmd": ".prof ver minerador",
+		"system": "Gathering: Miner, Fisher and Woodcutter",
+		"source": "coleta-minerador-pescador-lenhador",
+		"pt": "Mostra nível, XP e prestígio de uma profissão (troque pelo nome da sua)",
+		"en": "Shows level, XP and prestige of one profession (swap in yours)"
+	},
+	{
+		"cmd": ".prestigio profissao minerador",
+		"system": "Gathering: Miner, Fisher and Woodcutter",
+		"source": "coleta-minerador-pescador-lenhador",
+		"pt": "Prestigia no nível 100, sem pedir confirmação"
+	},
+	{
+		"cmd": ".quest",
+		"system": "Gathering: Miner, Fisher and Woodcutter",
+		"source": "coleta-minerador-pescador-lenhador",
+		"pt": "Mostra as encomendas aceitas e o progresso",
+		"en": "Shows the accepted orders and the progress"
+	},
+	{
+		"cmd": ".servicos",
+		"system": "Profession Services",
+		"source": "servicos-de-profissao",
+		"pt": "Abre o menu de serviços (também .serv)"
+	},
+	{
+		"cmd": ".servicos quadro",
+		"system": "Profession Services",
+		"source": "servicos-de-profissao",
+		"pt": "Abre o mesmo menu de serviços"
+	},
+	{
+		"cmd": ".aquario",
+		"system": "Aquarium",
+		"source": "aquario",
+		"pt": "Abre o menu."
+	},
+	{
+		"cmd": ".aquario listar",
+		"system": "Aquarium",
+		"source": "aquario",
+		"pt": "Lista os aquários com o número de cada um."
+	},
+	{
+		"cmd": ".aquario fabricar",
+		"system": "Aquarium",
+		"source": "aquario",
+		"pt": "Fabrica um aquário."
+	},
+	{
+		"cmd": ".aquario racao 5",
+		"system": "Aquarium",
+		"source": "aquario",
+		"pt": "Fabrica 5 rações."
+	},
+	{
+		"cmd": ".aquario instalar 1",
+		"system": "Aquarium",
+		"source": "aquario",
+		"pt": "Instala o aquário 1 pelo cursor."
+	},
+	{
+		"cmd": ".aquario alimentar 1",
+		"system": "Aquarium",
+		"source": "aquario",
+		"pt": "Enche o tanque do aquário 1."
+	},
+	{
+		"cmd": ".aquario coletar 1",
+		"system": "Aquarium",
+		"source": "aquario",
+		"pt": "Pega os peixes do aquário 1."
+	},
+	{
+		"cmd": ".aquario recolher 1",
+		"system": "Aquarium",
+		"source": "aquario",
+		"pt": "Volta o aquário 1 ao depósito."
+	},
+	{
+		"cmd": ".aquario evoluir 1",
+		"system": "Aquarium",
+		"source": "aquario",
+		"pt": "Evolui o aquário 1, pagando os materiais."
+	},
+	{
+		"cmd": ".aquario venderpeixes 1 comum 5",
+		"system": "Aquarium",
+		"source": "aquario",
+		"pt": "Vende 5 peixes comuns do aquário 1."
+	},
+	{
+		"cmd": ".aquario venderpeixes 1 tudo",
+		"system": "Aquarium",
+		"source": "aquario",
+		"pt": "Vende todos os peixes do aquário 1, menos O Peixe."
+	},
+	{
+		"cmd": ".aquario historico 1",
+		"system": "Aquarium",
+		"source": "aquario",
+		"pt": "Mostra os últimos resgates do aquário 1."
+	},
+	{
+		"cmd": ".aquario ajuda",
+		"system": "Aquarium",
+		"source": "aquario",
+		"pt": "Explica como o aquário funciona."
+	},
+	{
+		"cmd": ".aquario anunciar 1 15000",
+		"system": "Aquarium",
+		"source": "aquario",
+		"pt": "Anuncia o aquário 1 por 15.000 Ourosangue."
+	},
+	{
+		"cmd": ".aquario lote 10 1000",
+		"system": "Aquarium",
+		"source": "aquario",
+		"pt": "Anuncia 10 rações do seu saldo por 1.000 Ourosangue."
+	},
+	{
+		"cmd": ".aquario mercado",
+		"system": "Aquarium",
+		"source": "aquario",
+		"pt": "Lista os anúncios."
+	},
+	{
+		"cmd": ".aquario comprar 1",
+		"system": "Aquarium",
+		"source": "aquario",
+		"pt": "Compra o anúncio 1."
+	},
+	{
+		"cmd": ".aquario cancelar 1",
+		"system": "Aquarium",
+		"source": "aquario",
+		"pt": "Cancela o seu anúncio de número 1."
+	},
+	{
+		"cmd": ".masmorra",
+		"system": "Dungeons",
+		"source": "masmorras",
+		"pt": "Abre o menu: liderar, convidar, iniciar e afinidade (a masmorra é sorteada)"
+	},
+	{
+		"cmd": ".masmorra aceitar",
+		"system": "Dungeons",
+		"source": "masmorras",
+		"pt": "Aceita o convite de grupo (você tem 30 segundos)"
+	},
+	{
+		"cmd": ".masmorra recusar",
+		"system": "Dungeons",
+		"source": "masmorras",
+		"pt": "Recusa o convite"
+	},
+	{
+		"cmd": ".masmorra iniciar",
+		"system": "Dungeons",
+		"source": "masmorras",
+		"pt": "Inicia a run (só o líder)"
+	},
+	{
+		"cmd": ".masmorra sair",
+		"system": "Dungeons",
+		"source": "masmorras",
+		"pt": "Sai do grupo ou desfaz, antes de a run começar"
+	},
+	{
+		"cmd": ".quest",
+		"system": "Dungeons",
+		"source": "masmorras",
+		"pt": "Mostra a etapa atual da masmorra",
+		"en": "Shows the current step of the dungeon"
+	},
+	{
+		"cmd": ".correio",
+		"system": "Dungeons",
+		"source": "masmorras",
+		"pt": "Abre o correio para resgatar o prêmio"
+	},
+	{
+		"cmd": ".arena",
+		"system": "Illusory Arena",
+		"source": "arena-ilusional",
+		"pt": "Abre o menu da arena (o mesmo do Mestre Gale; .arena menu também serve)",
+		"en": "Opens the arena menu (the same one from Master Gale; .arena menu also works)"
+	},
+	{
+		"cmd": ".arena modo padrao",
+		"system": "Illusory Arena",
+		"source": "arena-ilusional",
+		"pt": "Escolhe a Arena Padrão"
+	},
+	{
+		"cmd": ".arena modo guiada mortium",
+		"system": "Illusory Arena",
+		"source": "arena-ilusional",
+		"pt": "Escolhe a Arena Guiada contra Mortium (facções: bandidos, milicia, mortosvivos, mortium, luzargenta, oakveil, gloomrot)"
+	},
+	{
+		"cmd": ".arena convidar Nome",
+		"system": "Illusory Arena",
+		"source": "arena-ilusional",
+		"pt": "Convida um jogador para a dupla"
+	},
+	{
+		"cmd": ".arena aceitar",
+		"system": "Illusory Arena",
+		"source": "arena-ilusional",
+		"pt": "Responde ao convite"
+	},
+	{
+		"cmd": ".arena recusar",
+		"system": "Illusory Arena",
+		"source": "arena-ilusional",
+		"pt": "Responde ao convite"
+	},
+	{
+		"cmd": ".arena sair",
+		"system": "Illusory Arena",
+		"source": "arena-ilusional",
+		"pt": "Desfaz a dupla antes de começar"
+	},
+	{
+		"cmd": ".arena iniciar",
+		"system": "Illusory Arena",
+		"source": "arena-ilusional",
+		"pt": "Começa a expedição (só o líder)"
+	},
+	{
+		"cmd": ".arena info",
+		"system": "Illusory Arena",
+		"source": "arena-ilusional",
+		"pt": "Mostra o seu histórico e, durante a expedição, a onda atual",
+		"en": "Shows your history and, during the run, the current wave"
+	},
+	{
+		"cmd": ".torre entrar",
+		"system": "Tower of the Immortals",
+		"source": "torre-dos-imortais",
+		"pt": "Entra na Torre (dentro do Hub de Eventos, depois de já ter falado com o Arauto)"
+	},
+	{
+		"cmd": ".torre status",
+		"system": "Tower of the Immortals",
+		"source": "torre-dos-imortais",
+		"pt": "Torres livres e, durante a run, a sua onda, andar e tempo"
+	},
+	{
+		"cmd": ".torre top",
+		"system": "Tower of the Immortals",
+		"source": "torre-dos-imortais",
+		"pt": "Pódios da semana (Top 3 de cada classe)"
+	},
+	{
+		"cmd": ".torre top <classe>",
+		"system": "Tower of the Immortals",
+		"source": "torre-dos-imortais",
+		"pt": "Top 25 da semana de uma classe (ex.: .torre top mortak)"
+	},
+	{
+		"cmd": ".torre top geral",
+		"system": "Tower of the Immortals",
+		"source": "torre-dos-imortais",
+		"pt": "Top 25 de todos os tempos (melhor de cada jogador)"
+	},
+	{
+		"cmd": ".torre top geral <classe>",
+		"system": "Tower of the Immortals",
+		"source": "torre-dos-imortais",
+		"pt": "Top 25 de todos os tempos de uma classe"
+	},
+	{
+		"cmd": ".torre meurank",
+		"system": "Tower of the Immortals",
+		"source": "torre-dos-imortais",
+		"pt": "A sua vaga na semana, os seus recordes por classe e o contador da onda 20"
+	},
+	{
+		"cmd": ".mercado ir",
+		"system": "Tower of the Immortals",
+		"source": "torre-dos-imortais",
+		"pt": "Teleporta para a cidade"
+	},
+	{
+		"cmd": ".ruptura",
+		"system": "Reality Rupture",
+		"source": "ruptura-da-realidade",
+		"pt": "Abre o menu da Ruptura no chat",
+		"en": "Opens the Rupture menu in chat"
+	},
+	{
+		"cmd": ".ruptura status",
+		"system": "Reality Rupture",
+		"source": "ruptura-da-realidade",
+		"pt": "Mostra se está aberta, o Soberano, as passagens livres e se você pode entrar",
+		"en": "Shows whether it's open, the Sovereign, the free crossings and whether you can enter"
+	},
+	{
+		"cmd": ".ruptura dificuldade 3",
+		"system": "Reality Rupture",
+		"source": "ruptura-da-realidade",
+		"pt": "Escolhe a dificuldade (1 a 4)"
+	},
+	{
+		"cmd": ".ruptura convidar Valen",
+		"system": "Reality Rupture",
+		"source": "ruptura-da-realidade",
+		"pt": "Convida um jogador que está no Hub de Eventos"
+	},
+	{
+		"cmd": ".ruptura aceitar",
+		"system": "Reality Rupture",
+		"source": "ruptura-da-realidade",
+		"pt": "Responde a um convite"
+	},
+	{
+		"cmd": ".ruptura recusar",
+		"system": "Reality Rupture",
+		"source": "ruptura-da-realidade",
+		"pt": "Responde a um convite"
+	},
+	{
+		"cmd": ".ruptura grupo",
+		"system": "Reality Rupture",
+		"source": "ruptura-da-realidade",
+		"pt": "Mostra o grupo e quem está pronto"
+	},
+	{
+		"cmd": ".ruptura desagrupar",
+		"system": "Reality Rupture",
+		"source": "ruptura-da-realidade",
+		"pt": "Sai do grupo (o líder desfaz o grupo)"
+	},
+	{
+		"cmd": ".ruptura entrar",
+		"system": "Reality Rupture",
+		"source": "ruptura-da-realidade",
+		"pt": "Atravessa, sozinho ou com o grupo (só o líder)"
+	},
+	{
+		"cmd": ".mercado ir",
+		"system": "Reality Rupture",
+		"source": "ruptura-da-realidade",
+		"pt": "Teleporta para a cidade"
+	},
+	{
+		"cmd": ".julgamento status",
+		"system": "Goreswine's Judgment",
+		"source": "julgamento-de-goreswine",
+		"pt": "Estado do tribunal e da sessão, e se você pode entrar"
+	},
+	{
+		"cmd": ".julgamento entrar",
+		"system": "Goreswine's Judgment",
+		"source": "julgamento-de-goreswine",
+		"pt": "Comparece ao tribunal (dentro do Hub de Eventos)"
+	},
+	{
+		"cmd": ".julgamento comecar",
+		"system": "Goreswine's Judgment",
+		"source": "julgamento-de-goreswine",
+		"pt": "Só o líder: dá início à sessão com 3 ou mais jogadores"
+	},
+	{
+		"cmd": ".menu banco",
+		"system": "Goreswine's Judgment",
+		"source": "julgamento-de-goreswine",
+		"pt": "Abre o menu do banco, com o extrato"
+	},
+	{
+		"cmd": ".mercado ir",
+		"system": "Goreswine's Judgment",
+		"source": "julgamento-de-goreswine",
+		"pt": "Teleporta para a cidade"
+	},
+	{
+		"cmd": ".grupo",
+		"system": "Group board",
+		"source": "quadro-de-grupos",
+		"pt": "Mostra o quadro no chat (.grupo listar também serve)"
+	},
+	{
+		"cmd": ".grupo marcar ruptura",
+		"system": "Group board",
+		"source": "quadro-de-grupos",
+		"pt": "Marca interesse na Ruptura (vale arena, julgamento)"
+	},
+	{
+		"cmd": ".grupo marcar masmorra pesadelo",
+		"system": "Group board",
+		"source": "quadro-de-grupos",
+		"pt": "Marca a Masmorra no grau Pesadelo"
+	},
+	{
+		"cmd": ".grupo desmarcar arena",
+		"system": "Group board",
+		"source": "quadro-de-grupos",
+		"pt": "Tira a marca da Arena"
+	},
+	{
+		"cmd": ".grupo chamar masmorra Nome",
+		"system": "Group board",
+		"source": "quadro-de-grupos",
+		"pt": "Chama um interessado ao Hub (precisa estar no Hub)"
+	},
+	{
+		"cmd": ".grupo chamar-todos julgamento",
+		"system": "Group board",
+		"source": "quadro-de-grupos",
+		"pt": "Chama todos os interessados do Julgamento"
+	},
+	{
+		"cmd": ".grupo indo ruptura",
+		"system": "Group board",
+		"source": "quadro-de-grupos",
+		"pt": "Responde a uma chamada"
+	},
+	{
+		"cmd": ".grupo nao ruptura",
+		"system": "Group board",
+		"source": "quadro-de-grupos",
+		"pt": "Responde a uma chamada"
+	},
+	{
+		"cmd": ".correio",
+		"system": "Rift Incursions",
+		"source": "incursoes",
+		"pt": "Abre o Correio, onde a chave sorteada chega"
+	},
+	{
+		"cmd": ".menu",
+		"system": "Rift Incursions",
+		"source": "incursoes",
+		"pt": "Abre o menu geral, com todos os sistemas",
+		"en": "Opens the general menu, with all systems"
+	},
+	{
+		"cmd": ".boss tempo",
+		"system": "V Blood Hunt",
+		"source": "cacada-de-v-bloods",
+		"pt": "Lista os chefes que estão nascendo agora e o tempo de cada um",
+		"en": "Lists the bosses spawning right now and each one's time"
+	},
+	{
+		"cmd": ".boss tempo tristan",
+		"system": "V Blood Hunt",
+		"source": "cacada-de-v-bloods",
+		"pt": "Mostra se um chefe está vivo ou em quanto tempo ele volta",
+		"en": "Shows whether a boss is alive or how long until it comes back"
+	},
+	{
+		"cmd": ".escola",
+		"system": "Vampiric Schools",
+		"source": "escolas",
+		"pt": "Abre o menu da escola"
+	},
+	{
+		"cmd": ".escola info",
+		"system": "Vampiric Schools",
+		"source": "escolas",
+		"pt": "Mostra escola, rank, pontos, magia ativa e o prazo para pontuar"
+	},
+	{
+		"cmd": ".escola rastrear",
+		"system": "Vampiric Schools",
+		"source": "escolas",
+		"pt": "Marca (ou desmarca) o Sebastian no mapa"
+	},
+	{
+		"cmd": ".quest",
+		"system": "Vampiric Schools",
+		"source": "escolas",
+		"pt": "Mostra as suas missões, incluindo a diária da escola",
+		"en": "Shows your missions, including the school's daily one"
+	},
+	{
+		"cmd": ".mercado ir",
+		"system": "Vampiric Schools",
+		"source": "escolas",
+		"pt": "Teleporta para a cidade"
+	},
+	{
+		"cmd": "!escola oi",
+		"system": "Vampiric Schools",
+		"source": "escolas",
+		"pt": "Manda a mensagem só para a sua escola"
+	},
+	{
+		"cmd": ".menu banco",
+		"system": "Bank",
+		"source": "banco",
+		"pt": "Abre o menu do banco (saldos, extrato, depósito, saque e câmbio)"
+	},
+	{
+		"cmd": ".menu",
+		"system": "Bank",
+		"source": "banco",
+		"pt": "Abre o menu geral; o Banco é a opção 5",
+		"en": "Opens the general menu; the Bank is option 5"
+	},
+	{
+		"cmd": ".banco sacar quitina 2",
+		"system": "Bank",
+		"source": "banco",
+		"pt": "Saca 2 Quitina para o inventário",
+		"en": "Withdraws 2 Quitina to the inventory"
+	},
+	{
+		"cmd": ".banco cambio 10",
+		"system": "Bank",
+		"source": "banco",
+		"pt": "Troca 10 Sangricoins por 350 Ourosangue",
+		"en": "Exchanges 10 Sangricoins for 350 Ourosangue"
+	},
+	{
+		"cmd": ".guardar",
+		"system": "Vault",
+		"source": "cofre",
+		"pt": "Dentro do cofre, guarda nos baús tudo o que já tem igual lá dentro",
+		"en": "Inside the vault, stores in the chests everything you already have matching there"
+	},
+	{
+		"cmd": ".menu banco",
+		"system": "Vault",
+		"source": "cofre",
+		"pt": "Mostra o seu saldo de Ourosangue antes de comprar ou expandir"
+	},
+	{
+		"cmd": ".deposito abrir",
+		"system": "Vault",
+		"source": "cofre",
+		"pt": "Abre ou fecha o Depósito Móvel (precisa de mochila equipada)"
+	},
+	{
+		"cmd": ".mercado",
+		"system": "Market",
+		"source": "mercado",
+		"pt": "Abre o menu do mercado"
+	},
+	{
+		"cmd": ".mercado ir",
+		"system": "Market",
+		"source": "mercado",
+		"pt": "Teleporta para o mercado"
+	},
+	{
+		"cmd": ".mercado buscar truta",
+		"system": "Market",
+		"source": "mercado",
+		"pt": "Busca ofertas pelo nome e mostra um código para cada uma"
+	},
+	{
+		"cmd": ".mercado comprar 3",
+		"system": "Market",
+		"source": "mercado",
+		"pt": "Compra a oferta de código 3 da sua última busca"
+	},
+	{
+		"cmd": ".mercado preco 2500",
+		"system": "Market",
+		"source": "mercado",
+		"pt": "Define o preço do item que você acabou de colocar na banca"
+	},
+	{
+		"cmd": ".mercado preco 2500 7",
+		"system": "Market",
+		"source": "mercado",
+		"pt": "Define o preço e liga a venda automática em 7 dias"
+	},
+	{
+		"cmd": ".mercado itens",
+		"system": "Market",
+		"source": "mercado",
+		"pt": "Lista os itens e preços da sua loja"
+	},
+	{
+		"cmd": ".mercado abrir",
+		"system": "Market",
+		"source": "mercado",
+		"pt": "Abre ou fecha a sua loja"
+	},
+	{
+		"cmd": ".mercado fechar",
+		"system": "Market",
+		"source": "mercado",
+		"pt": "Abre ou fecha a sua loja"
+	},
+	{
+		"cmd": ".mercado loja",
+		"system": "Market",
+		"source": "mercado",
+		"pt": "Teleporta para a sua banca"
+	},
+	{
+		"cmd": ".mercado renomear Nome",
+		"system": "Market",
+		"source": "mercado",
+		"pt": "Troca o nome da loja"
+	},
+	{
+		"cmd": ".mercado mochila",
+		"system": "Market",
+		"source": "mercado",
+		"pt": "Abre a mochila do mercado (itens devolvidos de uma loja perdida)"
+	},
+	{
+		"cmd": ".contrato ofertas",
+		"system": "Contracts",
+		"source": "contratos",
+		"pt": "Mostra as suas ofertas do dia, numeradas"
+	},
+	{
+		"cmd": ".contrato aceitar 2",
+		"system": "Contracts",
+		"source": "contratos",
+		"pt": "Aceita a oferta número 2"
+	},
+	{
+		"cmd": ".contrato meus",
+		"system": "Contracts",
+		"source": "contratos",
+		"pt": "Seus contratos, com o código de cada um, e os limites do dia"
+	},
+	{
+		"cmd": ".contrato entregar-oferta A1",
+		"system": "Contracts",
+		"source": "contratos",
+		"pt": "Entrega o contrato aceito A1"
+	},
+	{
+		"cmd": ".contrato abandonar A1",
+		"system": "Contracts",
+		"source": "contratos",
+		"pt": "Abandona o contrato aceito A1"
+	},
+	{
+		"cmd": ".contrato listar",
+		"system": "Contracts",
+		"source": "contratos",
+		"pt": "Contratos abertos de jogadores"
+	},
+	{
+		"cmd": ".contrato entregar C12",
+		"system": "Contracts",
+		"source": "contratos",
+		"pt": "Entrega tudo o que você tiver no contrato C12"
+	},
+	{
+		"cmd": ".contrato entregar C12 2",
+		"system": "Contracts",
+		"source": "contratos",
+		"pt": "Entrega só 2 lotes no contrato C12"
+	},
+	{
+		"cmd": ".contrato itens",
+		"system": "Contracts",
+		"source": "contratos",
+		"pt": "Itens aceitos, lote e valor-base"
+	},
+	{
+		"cmd": ".contrato retirar C12",
+		"system": "Contracts",
+		"source": "contratos",
+		"pt": "Retira os itens entregues no seu contrato C12"
+	},
+	{
+		"cmd": ".contrato cancelar C12",
+		"system": "Contracts",
+		"source": "contratos",
+		"pt": "Cancela o seu contrato C12 (só sem entregas)"
+	},
+	{
+		"cmd": ".contrato rank",
+		"system": "Contracts",
+		"source": "contratos",
+		"pt": "Seu rank, pontos e o próximo degrau"
+	},
+	{
+		"cmd": ".inv ver",
+		"system": "Shadow Merchant",
+		"source": "mercador-sombrio",
+		"pt": "Chama o baú do Mercador Sombrio na sua frente (ou traz ele de volta e renova o tempo)"
+	},
+	{
+		"cmd": ".inv vender",
+		"system": "Shadow Merchant",
+		"source": "mercador-sombrio",
+		"pt": "Vende tudo o que está no baú"
+	},
+	{
+		"cmd": ".cassino aposta 1000",
+		"system": "Casino",
+		"source": "cassino",
+		"pt": "Define a sua aposta em 1.000 Ourosangue (de 500 a 3.000)"
+	},
+	{
+		"cmd": ".cassino aposta",
+		"system": "Casino",
+		"source": "cassino",
+		"pt": "Mostra a sua aposta atual"
+	},
+	{
+		"cmd": ".cassino tabela",
+		"system": "Casino",
+		"source": "cassino",
+		"pt": "Mostra a tabela de pagamento no chat"
+	},
+	{
+		"cmd": ".cas aposta 1000",
+		"system": "Casino",
+		"source": "cassino",
+		"pt": "O mesmo comando, com o nome curto do grupo",
+		"en": "The same command, with the group's short name"
+	},
+	{
+		"cmd": ".online",
+		"system": "Online Reward",
+		"source": "recompensa-online",
+		"pt": "Mostra a sua sequência, o tempo online de hoje e a próxima recompensa",
+		"en": "Shows your streak, today's online time and the next reward"
+	},
+	{
+		"cmd": ".onl",
+		"system": "Online Reward",
+		"source": "recompensa-online",
+		"pt": "O mesmo comando, com o nome curto",
+		"en": "The same command, with the short name"
+	},
+	{
+		"cmd": ".quest",
+		"system": "Quests",
+		"source": "missoes",
+		"pt": "Lista as missões ativas e o passo atual de cada uma (também funciona como .missao e .missoes)",
+		"en": "Lists the active quests and the current step of each (also works as .quests)"
+	},
+	{
+		"cmd": ".quest ver",
+		"system": "Quests",
+		"source": "missoes",
+		"pt": "A mesma lista"
+	},
+	{
+		"cmd": ".menu missoes",
+		"system": "Quests",
+		"source": "missoes",
+		"pt": "Abre o menu de missões (fixar, abandonar, pular etapa)"
+	},
+	{
+		"cmd": ".menu",
+		"system": "Quests",
+		"source": "missoes",
+		"pt": "Abre o menu geral; Missões é a opção 3",
+		"en": "Opens the general menu; Quests is option 3"
+	},
+	{
+		"cmd": ".conquistas",
+		"system": "Achievements",
+		"source": "conquistas",
+		"pt": "Abre o menu de conquistas (ou .menu conquistas)"
+	},
+	{
+		"cmd": ".menu",
+		"system": "Achievements",
+		"source": "conquistas",
+		"pt": "Abre o menu geral; as conquistas ficam em Mais sistemas",
+		"en": "Opens the general menu; achievements are under More systems"
+	},
+	{
+		"cmd": ".quest",
+		"system": "Achievements",
+		"source": "conquistas",
+		"pt": "Lista as suas missões ativas, incluindo as de conquista",
+		"en": "Lists your active quests, including achievement ones"
+	},
+	{
+		"cmd": ".thanatos",
+		"system": "Achievements",
+		"source": "conquistas",
+		"pt": "Mostra se o Thanatos está pronto para te levantar ou quanto falta (ou .tn)",
+		"en": "Shows whether Thanatos is ready to raise you or how long is left (or .tn)"
+	},
+	{
+		"cmd": ".facanhas",
+		"system": "Feats",
+		"source": "facanhas",
+		"pt": "Abre o menu das Façanhas"
+	},
+	{
+		"cmd": ".fc",
+		"system": "Feats",
+		"source": "facanhas",
+		"pt": "O mesmo comando, com o nome curto",
+		"en": "The same command, short name"
+	},
+	{
+		"cmd": ".facanhas variante",
+		"system": "Feats",
+		"source": "facanhas",
+		"pt": "Troca os títulos entre a forma masculina e a feminina"
+	},
+	{
+		"cmd": ".facanhas titulo patente",
+		"system": "Feats",
+		"source": "facanhas",
+		"pt": "Usa o título da sua patente"
+	},
+	{
+		"cmd": ".facanhas titulo nenhum",
+		"system": "Feats",
+		"source": "facanhas",
+		"pt": "Tira o título"
+	},
+	{
+		"cmd": ".codex",
+		"system": "The Lost Book",
+		"source": "livro-perdido",
+		"pt": "Abre o Livro Perdido no chat (lista os livros que você tem).",
+		"en": "Opens the Lost Book in chat (lists the books you have)."
+	},
+	{
+		"cmd": ".menu",
+		"system": "The Lost Book",
+		"source": "livro-perdido",
+		"pt": "Abre o menu geral do servidor.",
+		"en": "Opens the server's general menu."
+	},
+	{
+		"cmd": ".posto",
+		"system": "Outposts",
+		"source": "postos-avancados",
+		"pt": "Abre o menu: regiões, ranks e o posto que pede ajuda hoje"
+	},
+	{
+		"cmd": ".posto rastrear gloomrot",
+		"system": "Outposts",
+		"source": "postos-avancados",
+		"pt": "Marca (ou desmarca) o comandante daquela região no mapa"
+	},
+	{
+		"cmd": ".posto aceitar gloomrot diaria",
+		"system": "Outposts",
+		"source": "postos-avancados",
+		"pt": "Aceita a diária"
+	},
+	{
+		"cmd": ".posto aceitar gloomrot semanal",
+		"system": "Outposts",
+		"source": "postos-avancados",
+		"pt": "Aceita a semanal"
+	},
+	{
+		"cmd": ".quest",
+		"system": "Outposts",
+		"source": "postos-avancados",
+		"pt": "Mostra os passos da missão que você pegou",
+		"en": "Shows the steps of the mission you took"
+	},
+	{
+		"cmd": ".menu teleporte",
+		"system": "Teleports",
+		"source": "teleportes",
+		"pt": "Abre o menu de teleporte",
+		"en": "Opens the teleport menu"
+	},
+	{
+		"cmd": ".tp criar casa",
+		"system": "Teleports",
+		"source": "teleportes",
+		"pt": "Cria um ponto chamado casa onde você está",
+		"en": "Creates a point called casa where you are"
+	},
+	{
+		"cmd": ".tp ir casa",
+		"system": "Teleports",
+		"source": "teleportes",
+		"pt": "Teleporta para o ponto casa",
+		"en": "Teleports to the casa point"
+	},
+	{
+		"cmd": ".tp listar",
+		"system": "Teleports",
+		"source": "teleportes",
+		"pt": "Lista os seus pontos",
+		"en": "Lists your points"
+	},
+	{
+		"cmd": ".tp remover casa",
+		"system": "Teleports",
+		"source": "teleportes",
+		"pt": "Apaga o ponto casa, sem pedir confirmação",
+		"en": "Deletes the casa point, without asking for confirmation"
+	},
+	{
+		"cmd": ".tp global cidade_sangria",
+		"system": "Teleports",
+		"source": "teleportes",
+		"pt": "Teleporta para a Cidade de Sangria Falls",
+		"en": "Teleports to the City of Sangria Falls"
+	},
+	{
+		"cmd": ".mercado ir",
+		"system": "Teleports",
+		"source": "teleportes",
+		"pt": "Teleporta para o mercado, na cidade"
+	},
+	{
+		"cmd": ".guardar",
+		"system": "Castle",
+		"source": "castelo",
+		"pt": "Guarda a mochila nos baús do castelo que já têm o mesmo item",
+		"en": "Stores your bag in the castle chests that already have the same item"
+	},
+	{
+		"cmd": ".correio",
+		"system": "Castle",
+		"source": "castelo",
+		"pt": "Abre o correio, onde chega a carta de aviso da essência"
+	},
+	{
+		"cmd": ".moveis loja",
+		"system": "Furniture",
+		"source": "moveis",
+		"pt": "Lista os móveis à venda com número e preço."
+	},
+	{
+		"cmd": ".moveis loja mesas 2",
+		"system": "Furniture",
+		"source": "moveis",
+		"pt": "Página 2 da categoria Mesas."
+	},
+	{
+		"cmd": ".moveis comprar 24",
+		"system": "Furniture",
+		"source": "moveis",
+		"pt": "Compra o móvel número 24."
+	},
+	{
+		"cmd": ".moveis deposito",
+		"system": "Furniture",
+		"source": "moveis",
+		"pt": "Mostra seus móveis guardados e colocados."
+	},
+	{
+		"cmd": ".moveis colocar 73",
+		"system": "Furniture",
+		"source": "moveis",
+		"pt": "Coloca o móvel número 73 pelo cursor."
+	},
+	{
+		"cmd": ".moveis mover",
+		"system": "Furniture",
+		"source": "moveis",
+		"pt": "Pega e solta móveis do castelo pelo cursor."
+	},
+	{
+		"cmd": ".moveis cancelar",
+		"system": "Furniture",
+		"source": "moveis",
+		"pt": "Encerra a colocação (o mesmo que Espaço)."
+	},
+	{
+		"cmd": ".clan convidar Nome",
+		"system": "Clan",
+		"source": "clan",
+		"pt": "Convida um jogador online e sem clã (líder e oficiais)"
+	},
+	{
+		"cmd": ".clan aceitar",
+		"system": "Clan",
+		"source": "clan",
+		"pt": "Aceita o convite pendente",
+		"en": "Accepts the pending invite"
+	},
+	{
+		"cmd": ".clan recusar",
+		"system": "Clan",
+		"source": "clan",
+		"pt": "Recusa o convite pendente",
+		"en": "Declines the pending invite"
+	},
+	{
+		"cmd": ".clan vagas",
+		"system": "Clan",
+		"source": "clan",
+		"pt": "Mostra as suas vagas extras e a lotação do clã",
+		"en": "Shows your extra slots and the clan's capacity"
+	},
+	{
+		"cmd": ".casamento",
+		"system": "Marriage",
+		"source": "casamento",
+		"pt": "O seu estado no chat"
+	},
+	{
+		"cmd": ".casamento convidar Duke",
+		"system": "Marriage",
+		"source": "casamento",
+		"pt": "Pede em noivado"
+	},
+	{
+		"cmd": ".casamento aceitar",
+		"system": "Marriage",
+		"source": "casamento",
+		"pt": "Responde a um pedido"
+	},
+	{
+		"cmd": ".casamento recusar",
+		"system": "Marriage",
+		"source": "casamento",
+		"pt": "Responde a um pedido"
+	},
+	{
+		"cmd": ".casamento votos Juntos em todas as noites",
+		"system": "Marriage",
+		"source": "casamento",
+		"pt": "Votos diante de A-mór (frase de até 80 caracteres)"
+	},
+	{
+		"cmd": ".casamento confirmar",
+		"system": "Marriage",
+		"source": "casamento",
+		"pt": "Votos diante de A-mór (frase de até 80 caracteres)"
+	},
+	{
+		"cmd": ".casamento tp",
+		"system": "Marriage",
+		"source": "casamento",
+		"pt": "Teleporta até o seu par"
+	},
+	{
+		"cmd": ".casamento transferir 5000",
+		"system": "Marriage",
+		"source": "casamento",
+		"pt": "Conta Conjugal"
+	},
+	{
+		"cmd": ".casamento titulo alma",
+		"system": "Marriage",
+		"source": "casamento",
+		"pt": "Título de casamento"
+	},
+	{
+		"cmd": ".casamento registro",
+		"system": "Marriage",
+		"source": "casamento",
+		"pt": "Casais do servidor"
+	},
+	{
+		"cmd": ".casamento divorcio",
+		"system": "Marriage",
+		"source": "casamento",
+		"pt": "Divórcio"
+	},
+	{
+		"cmd": ".casamento manter",
+		"system": "Marriage",
+		"source": "casamento",
+		"pt": "Divórcio"
+	},
+	{
+		"cmd": ".cs",
+		"system": "Marriage",
+		"source": "casamento",
+		"pt": "Atalho de .casamento (ex.: .cs tp)",
+		"en": "Shortcut for .marriage (e.g. .cs tp)"
+	},
+	{
+		"cmd": ".correio",
+		"system": "Mail",
+		"source": "correio",
+		"pt": "Abre o menu do correio (.mail e .email fazem o mesmo)"
+	},
+	{
+		"cmd": ".correio compor",
+		"system": "Mail",
+		"source": "correio",
+		"pt": "Vai direto para escrever uma mensagem nova"
+	},
+	{
+		"cmd": ".correio ler 1",
+		"system": "Mail",
+		"source": "correio",
+		"pt": "Mostra no chat a conversa nº 1 (a 1 é a mais recente)"
+	},
+	{
+		"cmd": ".correio resgatar 1",
+		"system": "Mail",
+		"source": "correio",
+		"pt": "Resgata a recompensa da conversa nº 1"
+	},
+	{
+		"cmd": ".correio deletar 1",
+		"system": "Mail",
+		"source": "correio",
+		"pt": "Apaga a conversa nº 1, sem pedir confirmação"
+	},
+	{
+		"cmd": ".correio ler-tudo",
+		"system": "Mail",
+		"source": "correio",
+		"pt": "Marca tudo como lido"
+	},
+	{
+		"cmd": ".correio resgatar-tudo",
+		"system": "Mail",
+		"source": "correio",
+		"pt": "Resgata todas as recompensas pendentes"
+	},
+	{
+		"cmd": ".correio enviar Azor \"Troca\" \"Tenho 50 lingotes. Quer?\"",
+		"system": "Mail",
+		"source": "correio",
+		"pt": "Envia em uma linha só (assunto e mensagem entre aspas)"
+	},
+	{
+		"cmd": ".vip",
+		"system": "VIP",
+		"source": "vip",
+		"pt": "Abre o menu do VIP (ou .menu vip)",
+		"en": "Opens the VIP menu (or .menu vip)"
+	},
+	{
+		"cmd": ".menu vip",
+		"system": "VIP",
+		"source": "vip",
+		"pt": "O mesmo menu do VIP (tempo restante e benefícios ligados)",
+		"en": "The same VIP menu (time left and enabled benefits)"
+	},
+	{
+		"cmd": ".vip tempo",
+		"system": "VIP",
+		"source": "vip",
+		"pt": "Mostra o tempo restante e a data em que o VIP acaba"
+	},
+	{
+		"cmd": ".vip aura",
+		"system": "VIP",
+		"source": "vip",
+		"pt": "Abre a escolha de aura (ou .vip au)",
+		"en": "Opens the aura choice (or .vip au)"
+	},
+	{
+		"cmd": ".vip aura 5",
+		"system": "VIP",
+		"source": "vip",
+		"pt": "Põe a aura número 5 da lista (de 1 a 28)",
+		"en": "Puts on aura number 5 in the list (1 to 28)"
+	},
+	{
+		"cmd": ".vip aura nenhuma",
+		"system": "VIP",
+		"source": "vip",
+		"pt": "Tira a aura"
+	},
+	{
+		"cmd": ".menu",
+		"system": "VIP",
+		"source": "vip",
+		"pt": "Menu geral do servidor",
+		"en": "The server's general menu"
+	},
+	{
+		"cmd": ".pet",
+		"system": "VIP",
+		"source": "vip",
+		"pt": "Menu de pets (para invocar o Willfred Primal)",
+		"en": "Pet menu (to summon Willfred Primal)"
+	},
+	{
+		"cmd": ".passe",
+		"system": "Battle Pass",
+		"source": "passe-de-batalha",
+		"pt": "Abre o menu do passe (ou .menu passe)"
+	},
+	{
+		"cmd": ".passe",
+		"system": "Battle Pass",
+		"source": "passe-de-batalha",
+		"pt": "Mostra um resumo no chat: trilha, nível, XP e níveis disponíveis"
+	},
+	{
+		"cmd": ".passe nivel 25",
+		"system": "Battle Pass",
+		"source": "passe-de-batalha",
+		"pt": "Mostra as recompensas do nível 25"
+	},
+	{
+		"cmd": ".passe resgatar 25",
+		"system": "Battle Pass",
+		"source": "passe-de-batalha",
+		"pt": "Resgata o nível 25 (grátis e sangrenta, se você tiver)"
+	},
+	{
+		"cmd": ".passe rt",
+		"system": "Battle Pass",
+		"source": "passe-de-batalha",
+		"pt": "Resgata tudo o que estiver disponível"
+	},
+	{
+		"cmd": ".passe rtg",
+		"system": "Battle Pass",
+		"source": "passe-de-batalha",
+		"pt": "Resgata só as gratuitas / só as sangrentas"
+	},
+	{
+		"cmd": ".passe rtp",
+		"system": "Battle Pass",
+		"source": "passe-de-batalha",
+		"pt": "Resgata só as gratuitas / só as sangrentas"
+	},
+	{
+		"cmd": ".passe resgatarwipe",
+		"system": "Battle Pass",
+		"source": "passe-de-batalha",
+		"pt": "Recupera os itens do passe depois de um wipe"
+	}
+]

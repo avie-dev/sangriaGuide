@@ -1,0 +1,60 @@
+---
+title: Clan
+description: "Sangria Falls clans: the server's invite system, extra slots up to 8 members, the clan panel with log and chat, the one-castle rule and the 12-hour protected-item quarantine."
+summary: "Clans start with 4 slots; each member can add 0–4 donated extra slots, up to 8 members. Always invite with the server's clan panel (.clan). One castle per clan. New members can't move protected items in others' castles for 12 hours."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - clan
+  - castelo
+labels: [official, purchase]
+sidebar:
+  order: 3
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<QuickFacts
+	facts={[
+		['Slots', '4 base, +0–4 per member (donation); maximum 8'],
+		['Castles', '1 per clan'],
+		['Invites', 'Leader and officers; 1 minute; online, clanless players'],
+		['Open', 'Clan button by the minimap, or .clan'],
+	]}
+/>
+
+The clan is the base game's. Creating it, leaving, kicking and ranks still use the game's clan menu. The server adds extra slots, its own invite, and a panel.
+
+## The panel
+
+At the top: **MEMBERS** (for example 5 / 6 slots), **ONLINE NOW**, **MY RANK**, and **CASTLE HEART** (time left, or *frozen*, *decaying* or *no castle*; it changes colour when time is short). Below are three columns:
+
+- **MEMBERS**
+- **CLAN LOG:** joins (and who invited), leaves, kicks, rank changes, and Blood Essence added to or removed from the Heart
+- **CHAT:** clan chat history. Talk in the game's normal clan chat. The leader can pin a **Leader's Note** of up to 200 letters.
+
+## Inviting
+
+<Aside type="caution">
+**Always use the server's invite.** The game menu's invite doesn't see extra slots and stops working at 4 members.
+</Aside>
+
+In **MEMBERS**, click **+** → **Invite** next to an online, clanless player, or type a name in *Invite by name…*. The invitee gets a **Clan invite** card (who, which clan, the new member count) and has **1 minute** to accept.
+
+<Command cmd=".clan convidar Name">Invites a player (leader and officers).</Command>
+<Command cmd=".clan aceitar">Accepts a pending invite (`.clan recusar` declines).</Command>
+<Command cmd=".clan vagas">Shows your extra slots and the clan's capacity.</Command>
+
+## Extra slots
+
+Extra slots come **from donation**, unlocked by the team (Discord ticket). Slots in use are **locked to the clan**: the player who brought them **can't leave or be kicked** until the clan fits without them. Chat says how many members the clan needs to drop to.
+
+## One castle per clan
+
+A player who has a castle can't join a clan that already has one.
+
+## New-member quarantine (12 hours)
+
+After joining, **protected items** (legendary weapons, Dracula armour, T8 amulets, Soul Shards) can't go into or out of the chests, workbenches or servants of a castle that **isn't yours**. This applies if either the player moving the item or the castle's owner is in quarantine. Your own inventory and castle are unaffected, and so are all other items. The clan's creator has no quarantine. If a chest holds a protected item, "move all" is locked, so move other items one by one.

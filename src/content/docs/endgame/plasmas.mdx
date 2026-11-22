@@ -1,0 +1,56 @@
+---
+title: Plasmas
+description: "Distributing Sangria Falls plasmas across the 8 ancestors: bonuses and penalties, saving, resetting (50 Sangricoins) and VIP presets."
+summary: "Each Transfusion gives 10 plasmas to place on 8 ancestors (Nosferatu, Vladimir, Cazador, Barnabas, Akasha, Carmilla, Selene, Katherine), up to 1,000 each. Each gives bonuses and penalties that grow together. Saved plasmas only come out with a 50-Sangricoin Reset."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - transfusao-e-plasmas
+labels: [official, vip, verify]
+sidebar:
+  order: 3
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Unverified from '../../../components/Unverified.astro';
+import Label from '../../../components/Label.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+<QuickFacts
+	facts={[
+		['Ancestors', 'Nosferatu, Vladimir, Cazador, Barnabas, Akasha, Carmilla, Selene, Katherine'],
+		['Per ancestor', 'Up to 1,000 plasmas'],
+		['Game maximum', '2,500 plasmas (so nobody fills all 8)'],
+		['Reset', '50 Sangricoins'],
+		['Presets', '1 (3 with VIP)'],
+		['Open', 'F12, or .tf'],
+	]}
+/>
+
+Each ancestor gives **bonuses and penalties**. **The penalties grow at the same pace as the bonuses.** The more plasmas, the stronger both.
+
+<Unverified q="Q-013">The official guide doesn't list each ancestor's bonuses and penalties (they're shown in game, as "current / maximum"), or whether they have caps or diminishing returns beyond the 1,000-plasma limit.</Unverified>
+
+## Distributing
+
+<Steps>
+
+1. Press **F12**. The PLASMA TYPES panel shows your free plasmas, distributed plasmas and presets.
+2. Click an ancestor. The right column shows its **BONUSES** and **PENALTIES**.
+3. Add plasmas with **+**, **+10**, a typed amount and **Set**, or **Max** (everything that fits).
+4. Repeat for other ancestors if you're splitting.
+5. Click **Save and Activate**. The bonuses only apply now.
+
+</Steps>
+
+**Clear** undoes unsaved changes for free.
+
+<Aside type="caution">
+Once saved, you **can't take plasmas out** of an ancestor, except with **Reset** (50 Sangricoins), which frees all of them. Read the penalties first.
+</Aside>
+
+## Presets <Label type="vip" />
+
+A preset is a saved distribution of the same plasmas. With VIP you can build **3** and switch for free. Click *Create build/preset* on card 2 or 3. **Save** stores it, and **Save and Activate** also applies it. The card marked **IN USE** is active, and you can name a preset (up to 20 letters). If your VIP ends, the one in use stays active, presets 2 and 3 lock, and transfusions cost 10,000 again.
+
+`.tf preset-carregar 2` activates saved preset 2 without the interface.
