@@ -1,14 +1,14 @@
 # Changelog
 
-The version history of the Sangria Falls Wiki. Newest first. Dates are when the work was done; the
-wiki hasn't been published yet. Each entry's details are in the git history and in
+The version history of the Sangria Falls Wiki. Newest first. Dates are when the work was done. The
+wiki is published at https://avie-dev.github.io/sangriaGuide/. Each entry's details are in the git history and in
 `docs/progress.md`.
 
 ## 2026-11-22: Deployment and contribution readiness (Phase 10)
 
 - Homepage with the roadmap, popular guides, class overview, essential commands, latest updates and FAQ.
-- Deployment setup for Cloudflare Pages (`docs/deployment.md`), security headers, `robots.txt` pointing to the sitemap.
-- GitHub Actions: checks, tests and build on every push and pull request. A weekly job re-downloads the official guides and re-runs the source audit to catch changes.
+- Published on GitHub Pages (https://avie-dev.github.io/sangriaGuide/), deployed from `main` by GitHub Actions after the checks pass. Internal links get the `/sangriaGuide` sub-path at build time. `robots.txt` points to the sitemap. See `docs/deployment.md`.
+- GitHub Actions: checks, tests and build on every pull request. A weekly job re-downloads the official guides and re-runs the source audit to catch changes.
 - Issue and pull request templates, and a "How to contribute" page on the site.
 - Previous and next page links on every article.
 - Removed the copy-summary-for-Discord button from pages.

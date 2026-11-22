@@ -12,7 +12,7 @@ The full project brief is in [`docs/master-prompt.md`](docs/master-prompt.md). P
 - Articles in Markdown/MDX under `src/content/docs/`
 - Game data as JSON/TypeScript under `src/data/`, kept apart from components
 - Search with Pagefind (built into Starlight), sitemap included
-- Hosting: Cloudflare Pages, not deployed yet. See [`docs/deployment.md`](docs/deployment.md)
+- Hosted on GitHub Pages: https://avie-dev.github.io/sangriaGuide/ (published from `main` by GitHub Actions). See [`docs/deployment.md`](docs/deployment.md)
 
 ## Local development
 
@@ -20,7 +20,7 @@ Requires Node.js 22 or later.
 
 ```powershell
 npm install
-npm run dev        # http://localhost:4321
+npm run dev        # http://localhost:4321/sangriaGuide/
 npm run build      # static site in dist/, with the search index
 npm run preview    # serve the built site
 npm run check      # type-check, and fail if docs/progress.md is out of date
@@ -62,7 +62,7 @@ To refresh the research snapshots and source registry: `npm run research`.
 
 ## Deploying
 
-See [`docs/deployment.md`](docs/deployment.md) for the Cloudflare Pages settings, the site address and repository settings, and the CI workflows (`.github/workflows/`). Nothing has been deployed yet.
+Every push to `main` is checked, built and published to GitHub Pages by `.github/workflows/deploy.yml`. See [`docs/deployment.md`](docs/deployment.md) for the address and sub-path settings, moving to a custom domain, and the other workflows.
 
 ## Contributing
 

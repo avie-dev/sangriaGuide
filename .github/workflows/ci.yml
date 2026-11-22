@@ -1,11 +1,11 @@
-# Runs on every push and pull request: type-check, tracker check, calculator tests, and a full
-# build (which fails on broken internal links and invalid game data).
+# Runs on every pull request: type-check, tracker check, calculator tests, and a full build (which
+# fails on broken internal links and invalid game data). Pushes to main run the same checks in
+# deploy.yml before publishing.
 name: CI
 
 on:
-  push:
-    branches: [main]
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
