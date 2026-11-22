@@ -63,7 +63,7 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'About this wiki',
-					items: ['about', 'about/labels', 'about/sources', 'about/open-questions', 'about/contributing', 'about/changelog', 'about/components'],
+					items: ['about', 'about/labels', 'about/sources', 'about/open-questions', 'about/contributing', 'about/changelog'],
 				},
 				section('Getting started', 'getting-started'),
 				section('Progression walkthrough', 'walkthrough'),

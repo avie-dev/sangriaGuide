@@ -137,8 +137,7 @@ for (const file of walk(DOCS).sort()) {
 	const fm = parse(fmText);
 	(fm.sources ?? []).forEach((s) => cited.add(s));
 	if (fm.status === 'planned') findings.planned.push(rel);
-	// about/components demonstrates the components with examples, so it's exempt.
-	if (/<Unverified\b/.test(body) && !(fm.labels ?? []).includes('verify') && rel !== 'about/components') findings.labels.push(rel);
+	if (/<Unverified\b/.test(body) && !(fm.labels ?? []).includes('verify')) findings.labels.push(rel);
 
 	// Numbers: in the body and the description/summary.
 	const pageSources = (fm.sources ?? []).filter((s) => sourceNumbers.has(s));

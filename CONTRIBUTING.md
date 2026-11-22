@@ -40,7 +40,7 @@ Added automatically, with no component needed: breadcrumbs, the labels, a work-i
 
 ## Components
 
-Every component is shown with a live example on the [Components for contributors](src/content/docs/about/components.mdx) page (`/about/components/` on the site). Import from `src/components/`.
+Import from `src/components/`. Copy-paste examples are under [Component examples](#component-examples) below.
 
 | Component | Use it for |
 |---|---|
@@ -60,6 +60,90 @@ Every component is shown with a live example on the [Components for contributors
 | `FilterTable` | Wraps a Markdown table and adds a text filter |
 | `Label` | A label on one claim |
 | `Unverified` | A claim the sources don't settle, linked to its open question |
+
+## Component examples
+
+Copy-paste examples for each component. Import from `src/components/` at the top of the `.mdx` file (see any article for the import lines).
+
+### Quick facts
+
+```mdx
+<QuickFacts facts={[['Cost', '0.35 Sangricoin per minute per path'], ['XP per hour', '630,000 (945,000 with VIP)'], ['Where', 'Meditation Chamber']]} />
+```
+
+### Requirements
+
+```mdx
+<Requirements items={['Starter tutorial finished', 'A meditation path selected', 'Sangricoins in the Bank (at least 0.35)']} />
+```
+
+### With and without the interface
+
+```mdx
+<PlayModes>
+  <Fragment slot="interface">Press **F10**. The MEDITATION panel opens anywhere on the map.</Fragment>
+  <Fragment slot="chat">Type `.meditate` in chat. A numbered menu appears; type a number to choose, `0` to exit.</Fragment>
+</PlayModes>
+```
+
+### Commands
+
+```mdx
+<Command cmd=".meditate panel">Opens the meditation panel (with the interface).</Command>
+```
+
+### Currency amounts
+
+```mdx
+Switching class costs <Currency id="ourosangue" amount={3000} />.
+```
+
+### Cost tables
+
+```mdx
+<CostTable id="class-evolution" />
+```
+
+### Class cards
+
+```mdx
+<ClassCard id="sangrael" />
+<ClassGrid />
+```
+
+### Progression diagrams
+
+```mdx
+<ProgressionPath steps={[
+  { title: 'Level 90', detail: 'XP stops counting until you prestige' },
+  { title: 'Prestige 1–20', detail: '75 to 4,467 Ourosangue each' },
+  { title: 'Prestige 20', detail: 'Schools open; Prestige becomes Give Pulse' },
+]} />
+```
+
+### Checklists
+
+```mdx
+<Checklist id="example" items={['Finish The Path of Blood', 'Choose your first class', 'Open the Bank with F5']} />
+```
+
+### Filterable tables
+
+```mdx
+<FilterTable placeholder="Filter currencies…">
+| Currency | Used for |
+|---|---|
+| Ourosangue | Everyday purchases, prestige, evolutions |
+</FilterTable>
+```
+
+### Labels and unverified claims
+
+```mdx
+Double Meditation is a separate unlock. <Label type="purchase" />
+
+<Unverified q="Q-006">Whether friendly fire is on inside dungeons is not documented.</Unverified>
+```
 
 ## Game data
 

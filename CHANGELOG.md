@@ -12,6 +12,7 @@ wiki is published at https://avie-dev.github.io/sangriaGuide/. Each entry's deta
 - Issue and pull request templates, and a "How to contribute" page on the site.
 - Previous and next page links on every article.
 - Removed the copy-summary-for-Discord button from pages.
+- Removed the contributor-only components page from the public site; its examples are now in `CONTRIBUTING.md`.
 - Connected to the GitHub repository (`avie-dev/sangriaGuide`): every page has an "Edit page" link, and the contribute page links to the issue templates.
 
 ## 2026-11-22: Source verification and QA (Phase 9)

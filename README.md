@@ -51,7 +51,7 @@ research/                 source research (Phase 1)
   open-questions.md       things that need staff or community confirmation
 src/
   content/docs/           wiki articles, one folder per sidebar section
-  components/             article components (see /about/components/ on the site)
+  components/             article components (examples in CONTRIBUTING.md)
   components/overrides/   Starlight overrides (dark default, labels, sources, footer)
   data/                   game data (currencies, classes, cost tables), source registry, labels
   lib/coverage.ts         build-time access to the page plan and open questions
