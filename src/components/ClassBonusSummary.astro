@@ -1,0 +1,84 @@
+---
+// Every class's fully evolved (Evolution III) weapon bonuses side by side, from src/data/class-details.json.
+//   <ClassBonusSummary />
+// Values are the published "Total" column. Totals the official pages get wrong are marked.
+import { getCollection } from 'astro:content';
+import { classDetails, totalMismatches } from '../lib/class-details';
+import { attributeName } from '../data/attribute-names';
+import { liveHref } from '../lib/coverage';
+
+const GROUP_NAMES: Record<string, string> = {
+	'Mortak Inabalável': 'Unshakable',
+	'Mortak Implacável': 'Relentless',
+	'Sepulkros Invocador': 'Summoner',
+	'Sepulkros Ceifador': 'Reaper',
+};
+const classes = (await getCollection('classes')).filter((c) => !c.data.starting).sort((a, b) => a.data.order - b.data.order);
+const rows = classes.flatMap((c) =>
+	classDetails(c.id).attributes.map((g) => {
+		const bad = totalMismatches(g);
+		const total = g.stages.find((s) => s.stage === 'Total')!;
+		return {
+			id: c.id,
+			name: c.data.name,
+			group: g.name ? (GROUP_NAMES[g.name] ?? g.name) : c.data.weapons.join(', '),
+			href: liveHref(`classes/${c.id}`),
+			attrs: total.attrs.map((a) => ({ text: a.flag ? attributeName(a.name) : `${attributeName(a.name)} ${a.value}`, bad: bad.has(a.name) })),
+		};
+	})
+);
+---
+
+<div class="sf-bonus not-content">
+	<table>
+		<thead>
+			<tr><th scope="col">Class</th><th scope="col">Weapon / variant</th><th scope="col">Total at Evolution III</th></tr>
+		</thead>
+		<tbody>
+			{
+				rows.map((r) => (
+					<tr>
+						<th scope="row">{r.href ? <a href={r.href}>{r.name}</a> : r.name}</th>
+						<td>{r.group}</td>
+						<td>
+							{r.attrs.map((a, i) => (
+								<>
+									{i > 0 && ' · '}
+									<span class={a.bad ? 'sf-bonus__bad' : undefined} title={a.bad ? "The official page's total doesn't match its grades" : undefined}>
+										{a.text}
+										{a.bad && ' ⚠'}
+									</span>
+								</>
+							))}
+						</td>
+					</tr>
+				))
+			}
+		</tbody>
+	</table>
+</div>
+
+<style>
+	.sf-bonus {
+		overflow-x: auto;
+		margin-block: 1rem;
+	}
+	.sf-bonus table {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: var(--sl-text-sm);
+	}
+	.sf-bonus th,
+	.sf-bonus td {
+		text-align: start;
+		vertical-align: top;
+		padding: 0.4rem 0.5rem;
+		border-bottom: 1px solid var(--sl-color-gray-5);
+	}
+	.sf-bonus thead th {
+		color: var(--sl-color-gray-2);
+	}
+	.sf-bonus__bad {
+		color: var(--sl-color-orange-high, #f0a050);
+	}
+</style>

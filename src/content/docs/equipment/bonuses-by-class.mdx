@@ -1,0 +1,39 @@
+---
+title: Bonuses by class
+description: Every Sangria Falls class's fully evolved weapon bonuses side by side, from the official class pages. They apply only with the class weapon in hand.
+summary: A table of each class and weapon or variant's total bonuses at Evolution III, taken from the official class pages. Class bonuses only apply while you hold that class's weapon.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - classes
+  - class-hub
+  - class-mortak
+  - class-noctarin
+  - class-bastien
+  - class-carmesyne
+  - class-skarn
+  - class-sepulkros
+  - class-draekhar
+  - class-umbrellis
+  - class-sangrael
+  - class-lamuerte
+  - class-general
+labels: [official, verify]
+sidebar:
+  order: 8
+---
+
+import ClassBonusSummary from '../../../components/ClassBonusSummary.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="caution" title="Only with the class weapon">
+Class bonuses apply **only while you hold that class's weapon**. A different weapon switches them off.
+</Aside>
+
+These are the published **Total** columns, meaning the base plus all three evolutions. For the bonus at each evolution, see the class's own page. Attribute names are this wiki's translations (see the [glossary](/character/stats/#attribute-glossary)). A ⚠ marks a published total that doesn't match its parts ([Q-018](/about/open-questions/#q-018), [Q-019](/about/open-questions/#q-019)).
+
+<ClassBonusSummary />
+
+## On top of the class bonus
+
+Your character's attributes also come from weapon mastery, blood lineage, prestige buffs, plasmas, achievements and gear fortification. See [Character statistics](/character/stats/). How these combine isn't documented ([Q-009](/about/open-questions/#q-009)).

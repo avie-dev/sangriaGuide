@@ -1,0 +1,54 @@
+---
+title: Work orders and hunts
+description: Sangria Falls profession mentors offer 2 orders a day, 1 special order and 1 hunt a week. How to accept, complete and turn them in, and the rules for crafted pieces.
+summary: For each active profession, the mentor offers 2 daily orders, 1 weekly special and 1 weekly hunt. Clicking accepts it; they can't be swapped or abandoned. Turn in for profession XP and Ourosangue.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - profissoes
+labels: [official]
+sidebar:
+  order: 1
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+<QuickFacts
+	facts={[
+		['Per active profession', '2 daily orders, 1 weekly special order, 1 weekly hunt'],
+		['Pays', 'Profession XP + Ourosangue to your Bank'],
+		['Resets', 'Daily at midnight; weekly on Monday (Brasília time)'],
+		['Swap or abandon', 'Not possible'],
+	]}
+/>
+
+## Taking and turning in
+
+<Steps>
+
+1. Talk to your profession's mentor in the Professions Hall.
+2. Click *Today's work orders.*, *This week's special order.* or *This week's hunt.* **Clicking already accepts it.**
+3. Complete it. Progress shows in your Quests (F3 or `.quest`).
+4. Return to the mentor to turn it in. For crafting orders, the **Delivery** window opens: click the pieces (or **Select all**), then **Deliver**.
+
+</Steps>
+
+## Rules for crafting orders
+
+- Only production **you set at the workbench** counts. Buying, taking from a chest, or cancelling production doesn't.
+- At turn-in, any piece of the requested type works, and the mentor keeps it. The weapon in your hand is never turned in.
+- Each crafted piece counts for **one** order. An order asking for that specific piece takes it first. For example, a Scourgestone Pendant goes to *Green Pendant* before *Continuous Work*, and chat tells you.
+- Production queued at the workbench when you accepted counts too, if it finishes afterwards.
+
+## Rules for gathering orders
+
+No order needs a particular place on the map. Ore, fish and trees count wherever you gather them (except castle trees for the Woodcutter).
+
+## Better orders
+
+Higher profession levels unlock harder orders that pay more. If your mentor has no hunt for you, your level doesn't reach one yet.
+
+<Aside type="note">
+The guides don't publish the order list, the XP or the Ourosangue for each order.
+</Aside>

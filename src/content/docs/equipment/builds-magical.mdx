@@ -1,0 +1,52 @@
+---
+title: Magic damage builds
+description: The documented sources of Spell Power and spell crit on Sangria Falls, for Draekhar, Sangrael, Sepulkros Summoner and La Muerte. A framework, not a tested build.
+summary: Magic classes benefit from Spell Power and spell crit. Documented sources include class bonuses, Enchanter fortification (+2 Magic Power per level), prestiges 14 and 16, and the Pillars of the Winged Horror and Megara. No tested builds are published.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - classes
+  - nivel-e-prestigio
+  - oficios-ferreiro-alfaiate-encantador
+  - conquistas
+  - class-draekhar
+  - class-sepulkros
+labels: [community, verify]
+sidebar:
+  order: 11
+---
+
+import ClassDefaults from '../../../components/ClassDefaults.astro';
+import Unverified from '../../../components/Unverified.astro';
+
+<Unverified q="Q-009">There are no tested builds yet. How bonuses stack isn't documented. This page lists **where magic stats come from**.</Unverified>
+
+## Classes
+
+According to the official pages, these benefit from **Spell Power and Spell Crit** and don't use Physical Power or Weapon Skill Power: **Draekhar**, **Sangrael** and **Sepulkros (Summoner)**. **La Muerte** is hybrid (Spell Power, Spell Crit, Weapon Skill Power and Minion Damage).
+
+Draekhar has **−40% Max Health** from its class table.
+
+## Documented sources
+
+| Source | Gives |
+|---|---|
+| Class weapon (evolutions) | See [Bonuses by class](/equipment/bonuses-by-class/) |
+| Enchanter fortification (necklace) | +2 Magic Power per level (up to +20 at P10) |
+| Necklace refinement | +1 to +3 power per row |
+| Prestige 14 | Spell Power +2 |
+| Prestige 16 | Spell Life Leech +4% |
+| Pillar of the Winged Horror | +10 Spell Power, +5% Spell Crit Chance, +50 Silver and Fire Resistance |
+| Pillar of Megara | +10 Spell Power, +20% Spell Crit Damage, +50% Corruption Resistance |
+| Weapon mastery / blood lineage | 3 attributes each, your choice of 12 |
+| Plasmas | Ancestor bonuses (with penalties) |
+
+## Default attributes (examples)
+
+**Draekhar**
+
+<ClassDefaults id="draekhar" />
+
+**Sepulkros**
+
+<ClassDefaults id="sepulkros" />

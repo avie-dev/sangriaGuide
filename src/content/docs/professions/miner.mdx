@@ -1,0 +1,43 @@
+---
+title: Miner
+description: The Sangria Falls Miner (mentor Holmo) earns 25 Ourosangue per vein (+10% per prestige), extra ore, Precious Stones for the Blacksmith from prestige 5, and pet souls from prestige 6.
+summary: Miners break ore veins, crystals and gems for 25 Ourosangue per vein (50 at prestige 10), +5% extra ore per prestige, Precious Stones (Blacksmith refining) from prestige 5 and Sacrificed Souls from prestige 6.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - coleta-minerador-pescador-lenhador
+  - profissoes
+labels: [official]
+sidebar:
+  order: 5
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Command from '../../../components/Command.astro';
+
+<QuickFacts
+	facts={[
+		['Mentor', 'Holmo, Professions Hall'],
+		['XP from', 'Breaking ore veins, crystals and gems'],
+		['Ourosangue', '25 per vein, +10% per prestige (50 at prestige 10)'],
+		['Extra ore', '+5% per prestige, rounded up'],
+		['Refining drop (P5+)', 'Precious Stone, used by the Blacksmith'],
+	]}
+/>
+
+## Prestige rewards
+
+| Prestige | Adds |
+|---|---|
+| Each | +10% Ourosangue per vein, +5% extra ore |
+| 5 and up | A small chance of **Precious Stone** per vein, improving up to prestige 10 (no achievement needed) |
+| 6 to 9 | **Sacrificed Souls** for pets: each prestige unlocks one more act. Each unlocked act raises the chance, but at most one soul drops per vein, rolled separately from the Precious Stone. |
+
+The guides don't give the drop chances.
+
+## Commands
+
+<Command cmd=".prof ver minerador">Shows the Miner's level, XP and prestige.</Command>
+<Command cmd=".prestige profession minerador">Prestiges at level 100, with no confirmation.</Command>
+
+See [Comparing the gathering trades](/professions/gathering-comparison/).

@@ -1,0 +1,68 @@
+---
+title: Sangrulho eggs
+description: Getting Sangrulho eggs on Sangria Falls with Ressonador. Rarity guarantees, Random vs Featured banners, incubation times, speed-ups and where Ressonador comes from.
+summary: Each Ressonador use gives an egg. A Rare is guaranteed within 15 uses, a Legendary within 40 (30 on Featured). Eggs incubate 8, 24 or 72 hours by rarity, 2 at a time (4 with VIP). Speed-ups cost Sangricoins.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - sangrulhos
+  - masmorras
+  - arena-ilusional
+  - passe-de-batalha
+labels: [official, vip]
+sidebar:
+  order: 8
+---
+
+import Command from '../../../components/Command.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+## Using Ressonador
+
+<Steps>
+
+1. Talk to **Richard** → *Acquire a Sangrulho*, or type `.sangrulhos resonator`.
+2. The RESSONADOR panel shows your balance, the odds of each rarity, and the uses left before a guarantee.
+3. Click **USE 1**, **USE 5** or **USE 10**. Each use spends 1 Ressonador from your Bank and gives one egg.
+4. Flip the cards (or **REVEAL ALL**), then **CLOSE**.
+
+</Steps>
+
+<Aside type="caution">
+No confirmation: once you click USE, it's spent. The eggs enter your collection the moment you use the Ressonador, so dropping from the server during the cards loses nothing.
+</Aside>
+
+## Guarantees
+
+| Guarantee | After | Resets when |
+|---|---|---|
+| Rare | 15 uses without a Rare | You get a Rare (or a Legendary) |
+| Legendary | 40 uses without a Legendary (**30 on Featured**) | You get a Legendary. A Rare doesn't reset this count. |
+
+## Banners
+
+- **RANDOM:** any type can come out.
+- **FEATURED:** every Legendary that comes out is the featured Sangrulho.
+
+Switching is free, and the panel shows the current feature and the upcoming ones. The official advice: use Featured only if you want that Sangrulho as a Legendary.
+
+## Incubating
+
+| Rarity | Incubation |
+|---|---|
+| Common | 8 hours |
+| Rare | 24 hours |
+| Legendary | 72 hours |
+
+**2 eggs incubate at a time, or 4 with VIP.** F7 → **EGGS** → **INCUBATE**. Time runs while you're offline. When it's ready, click **HATCH**. The attribute value is only revealed then, and eggs that finished while you were offline hatch when you log in. A ready egg frees its incubation slot even before you hatch it.
+
+**Speed-ups** (click an incubating egg): +1h for 15, +6h for 80, +24h for 300 Sangricoins, or **HATCH NOW**. Speeding up doesn't change what hatches.
+
+## Where Ressonador comes from
+
+- Illusory Arena (a rare prize: 5% chance per win of a Ressonador or Pet Soul)
+- **Master and Nightmare** dungeons (Special roll)
+- Battle Pass and events
+- Richard's quest (the first 2)
+
+<Command cmd=".sangrulhos resonator">Opens the Ressonador panel.</Command>

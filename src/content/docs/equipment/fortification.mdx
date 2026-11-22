@@ -1,0 +1,55 @@
+---
+title: Fortification
+description: Fortifying Sangria Falls gear with the Blacksmith, Tailor or Enchanter. Bonuses per level, the 2,000 Ourosangue per level cost, the craft-prestige cap, and hiring a provider.
+summary: Fortification adds +2 Physical Power (weapon), +9 Health (each armour piece) or +2 Magic Power (necklace) per level, up to your craft prestige (max 10). It costs 2,000 Ourosangue per level gained and only goes up.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - oficios-ferreiro-alfaiate-encantador
+  - servicos-de-profissao
+  - mercado
+labels: [official]
+sidebar:
+  order: 4
+---
+
+import CostTable from '../../../components/CostTable.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+## What it gives
+
+| Craft | Piece | Per fortification level | At P10 |
+|---|---|---|---|
+| Blacksmith | Weapon | +2 Physical Power | +20 Physical Power |
+| Tailor | Chest, gloves, legs, boots | +9 Health per piece | +90 Health per piece (+360 for all four) |
+| Enchanter | Necklace | +2 Magic Power | +20 Magic Power |
+
+Each level also raises the piece's **maximum durability**. The bonus is **saved on the item**, so it counts for whoever uses it, even after it's sold.
+
+## Rules
+
+- You need **at least 1 prestige** in the craft. You can fortify up to your prestige number (P1–P10).
+- **2,000 Ourosangue per level gained**, from your Bank. The price is the same whether you go one level at a time or straight up: P0 → P5 is 10,000, and P4 → P5 is 2,000.
+- **Fortification only goes up.**
+- **Prestiging your craft doesn't upgrade your pieces.** It unlocks the next level, which you then pay for.
+
+<CostTable id="fortification" />
+
+## How to fortify
+
+<Steps>
+
+1. Open your craft's panel: talk to Ornn, Label or Mirana → *Open Fortification & Refinement panel*, or type `.blacksmith panel` / `.tailor panel` / `.enchanter panel`.
+2. Click the piece on the left.
+3. Under **FORTIFICATION**, click the level (only levels above the current one, up to your prestige).
+4. **Confirm Action** shows the cost. Click **Confirm**.
+
+</Steps>
+
+<Aside type="tip" title="Not your craft?">
+Hire a provider through [Profession services](/professions/services/). They can fortify up to *their* prestige. You pay their price per level plus the game's 2,000 per level.
+</Aside>
+
+## Fortification and resale
+
+On the Market, each fortification level adds 1,000 Ourosangue to the minimum price of legendary weapons, Dracula armour and T08 necklaces. Fortified items are excluded from automatic sale.

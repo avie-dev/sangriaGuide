@@ -1,0 +1,99 @@
+---
+title: Contracts
+description: Balthazar's material contracts and player contracts on Sangria Falls. Daily limits, delivering, creating buy orders, fees, and the contract ranks.
+summary: Balthazar (City Hall, or .contract panel) offers 8 personal material contracts a day. Accept 3 a day, hold 5. Players can also post paid material requests (10% fee). Completed contracts raise your rank and Balthazar's pay.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - contratos
+labels: [official]
+sidebar:
+  order: 5
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Command from '../../../components/Command.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+Deliver materials for Ourosangue, or pay other players to deliver them to you. Contracts are handled by **Balthazar, the Master of Contracts**, at City Hall in the City of Sangria Falls.
+
+<QuickFacts
+	facts={[
+		["Balthazar's offers", '8 per day, just for you'],
+		['Accept', '3 per day; hold up to 5'],
+		['Reset', 'Midnight, Brasília time'],
+		['Accepted contracts', 'Never expire'],
+		['What counts', 'Materials only (no weapons or equipment)'],
+	]}
+/>
+
+## Opening the panel
+
+Talk to Balthazar and choose *Open the contracts panel*, or from anywhere:
+
+<Command cmd=".contract panel">Opens the contracts panel.</Command>
+
+The panel has four tabs (**Balthazar**, **Players**, **Mine**, **Create**), with your rank, daily limits and balance on the left.
+
+## Balthazar's contracts
+
+<Steps>
+
+1. **Balthazar** tab: each offer shows the item, quantity and pay. Click **ACCEPT**.
+2. Gather the full quantity in your inventory. The line shows how much you already have.
+3. **Mine** tab → *Accepted contracts* → **Deliver**. You're paid instantly and earn 1 rank point.
+
+</Steps>
+
+**Abandon** frees the slot, but the day's accept doesn't come back. Offers only ask for materials from regions you've reached, based on the V Bloods you've defeated.
+
+<Aside type="tip" title="New players">
+While you've only defeated Act 1 V Bloods (Alfa to Quincey), Balthazar adds **2 extra raw-material offers a day at 500 Ourosangue each**. They count towards your 3 accepts. The tutorial's apprentice contract (1,000 wood for 1,500 Ourosangue) comes once and doesn't count.
+</Aside>
+
+## Delivering on player contracts
+
+**Players** tab: each line shows the item, how much is left, the remaining pay, who created it, and the deadline. Click **Deliver all** or **1 batch**. Delivery is always in batches, and you're paid in proportion. A *complete only* line must be filled in one go. You can deliver on up to **5 different players' contracts per day**.
+
+Anything above an item's base value is capped at **7,500 Ourosangue per day** on player contracts. Delivering at base value doesn't use that cap.
+
+## Creating a contract (buying materials)
+
+<Steps>
+
+1. **Create** tab: click the item.
+2. Set **Batches** (−10, −1, +1, +10).
+3. Set **Total reward**: Minimum, Maximum, or a value between them.
+4. Choose the deadline (6, 12 or 24 hours) and delivery type: **Partial** or **Complete**.
+5. Check the total cost and click **Create contract**.
+
+</Steps>
+
+The total is the reward **plus a 10% fee**, taken from your Bank immediately. The reward is held for whoever delivers. **The fee is never refunded**, not even if you cancel. You can create 3 contracts a day and have 3 open.
+
+When someone delivers, **Mine → My buy orders → Collect** gives you the items, even if you were offline. If nobody has delivered, **Cancel** returns the reward. When the deadline passes, any unused reward returns on its own. You can't deliver on your own contract, and you can't choose who delivers.
+
+## Ranks
+
+Each completed Balthazar contract gives 1 point. Your first delivery of the day on each player contract also gives 1. Points never reset.
+
+| Rank | Points |
+|---|---|
+| Apprentice | Start |
+| Envoy | Not published |
+| Trader | Not published |
+| Magnate | Not published |
+| Hand of Balthazar | 300 |
+
+Higher ranks make Balthazar pay more, from your next offers onwards.
+
+## Without the interface
+
+<Command cmd=".contract offers">Your offers for the day, numbered.</Command>
+<Command cmd=".contract accept 2">Accepts offer number 2.</Command>
+<Command cmd=".contract mine">Your contracts (each with a code) and the day's limits.</Command>
+<Command cmd=".contract deliver-offer A1">Delivers accepted contract A1.</Command>
+<Command cmd=".contract list">Open player contracts.</Command>
+<Command cmd=".contract deliver C12">Delivers everything you have on player contract C12.</Command>
+<Command cmd=".contract collect C12">Collects the items delivered on your contract C12.</Command>
+<Command cmd=".contract rank">Your rank, points and the next step.</Command>

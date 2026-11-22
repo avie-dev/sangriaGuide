@@ -1,0 +1,51 @@
+---
+title: Tailor
+description: The Sangria Falls Tailor (mentor Label) fortifies chest, gloves, legs and boots for +9 Health per piece per level, and refines them with Perfect Topaz and Exceptional Tailoring Component.
+summary: The Tailor fortifies chest, gloves, legs and boots (+9 Health per piece per level; 2,000 Ourosangue per level per piece) and refines them with Perfect Topaz + Exceptional Tailoring Component. XP comes from sewing armour, capes and bags.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - oficios-ferreiro-alfaiate-encantador
+  - profissoes
+  - conquistas
+labels: [official]
+sidebar:
+  order: 3
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<QuickFacts
+	facts={[
+		['Mentor', 'Label, Professions Hall'],
+		['Works on', 'Chest, gloves, legs, boots'],
+		['Fortification', '+9 Health per piece per level (P1–P10)'],
+		['Refinement materials', 'Perfect Topaz + Exceptional Tailoring Component'],
+		['Component comes from', 'Woodcutter (prestige 5+), Dunley Outpost, Market'],
+	]}
+/>
+
+## Earning XP
+
+Sew armour, capes and bags at the **Tailoring Bench**. Only items you set to be produced count.
+
+## Fortifying armour
+
+Fortify up to your Tailor prestige (max 10). Your panel lists EQUIPPED ARMOR and IN INVENTORY.
+
+<Aside type="caution">
+The Tailor pays **per piece**. Fortifying all four pieces costs four times as much: 80,000 Ourosangue to take all four from P0 to P10.
+</Aside>
+
+## Refining armour
+
+Up to 5 refinements per piece, each rolling **+3, +5 or +7 Health** plus +100/+200/+300 durability. Refinement *n* uses *n* of each material. Prestige 7 unlocks 3 refinements and prestige 9 unlocks 4. **Label's achievement** unlocks the first 2 right away, and the 5th at prestige 10.
+
+## Commands
+
+<Command cmd=".tailor panel">Opens the Fortification & Refinement panel from anywhere.</Command>
+<Command cmd=".item check tudo">Shows fortification, refinement and durability for all your gear (`peitoral`, `luvas`, `calcas`, `botas` for one piece).</Command>
+
+At the mentor, *View equipped gear.* shows the same.

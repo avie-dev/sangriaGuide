@@ -1,0 +1,68 @@
+---
+title: Refinement
+description: Refining Sangria Falls gear. Five rolled refinement rows per piece, the bonus ranges, materials, unlocking rows by craft prestige or achievement, and re-rolling.
+summary: Each piece takes up to 5 refinements, each rolling +100–300 durability and +1–3 power (+3–7 Health for Tailor pieces). Refinement n uses n Perfect gems and n components. Rows unlock at craft prestige 7 and 9, or through the mentor's achievement.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - oficios-ferreiro-alfaiate-encantador
+  - coleta-minerador-pescador-lenhador
+  - conquistas
+  - servicos-de-profissao
+labels: [official]
+sidebar:
+  order: 5
+---
+
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+## The roll
+
+Each refinement rolls a random bonus:
+
+| Craft | Durability | Power / Health |
+|---|---|---|
+| Blacksmith (weapon) | +100, +200 or +300 | +1, +2 or +3 power |
+| Enchanter (necklace) | +100, +200 or +300 | +1, +2 or +3 power |
+| Tailor (armour) | +100, +200 or +300 | +3, +5 or +7 Health |
+
+A row that rolls the best result shows **MAX REFINEMENT**.
+
+## Materials
+
+Refinement number *n* uses *n* of each material, so all five use 15 of each.
+
+| Craft | Gem | Component | Component from |
+|---|---|---|---|
+| Blacksmith | Perfect Ruby | Precious Stone | Miner, prestige 5+ |
+| Tailor | Perfect Topaz | Exceptional Tailoring Component | Woodcutter, prestige 5+ |
+| Enchanter | Perfect Amethyst | Exceptional Magical Component | Fisher, prestige 5+ |
+
+Components also drop at the **Dunley Outpost** at its highest rank, and other players sell them on the Market. For gems, see [Perfect gems](/equipment/perfect-gems/).
+
+## Unlocking rows
+
+| Unlock | Rows |
+|---|---|
+| Craft prestige 7 | Up to 3 |
+| Craft prestige 9 | Up to 4 |
+| Your mentor's achievement | Rows 1–2 immediately |
+| Achievement + craft prestige 10 | Row 5 |
+
+A row marked *Locked* or *NOT AVAILABLE* isn't unlocked for you yet. To start the achievement, talk to your mentor (Ornn, Label or Mirana) and choose the option ending in *(achievement: …)*. It's a long quest.
+
+## How to refine
+
+<Steps>
+
+1. In your craft panel, select the piece and scroll to **REFINEMENT** (rows 1–5, each showing its material cost).
+2. Click **REFINE** on the next free row, then **Confirm**.
+3. Don't like the roll? **REFINE AGAIN** re-rolls that row. The old bonus is lost and the materials are spent again.
+
+</Steps>
+
+<Aside type="caution">
+**Refinement can't be undone.** On the Market, each refinement adds 2,000 to a protected item's minimum price, and refined items are excluded from automatic sale.
+</Aside>
+
+Not your craft, or rows still locked? A [provider](/professions/services/) can refine within *their* limits. The 5th row needs a provider with the achievement and prestige 10.

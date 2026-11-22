@@ -1,0 +1,42 @@
+---
+title: Pet levels and prestige
+description: How Sangria Falls pets level (from your kills and the Pet meditation path), prestige at 100 for free, and the 3% XP reduction per prestige.
+summary: A summoned pet earns XP from your kills (bosses give more) and from the Pet meditation path. At level 100 it can prestige for free, up to 20 times, getting stronger but earning 3% less XP per prestige.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - pets
+  - meditacao
+  - auto-prestigio
+labels: [official, verify]
+sidebar:
+  order: 4
+---
+
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import Unverified from '../../../components/Unverified.astro';
+import Label from '../../../components/Label.astro';
+
+## Levelling
+
+- **Hunt with the pet summoned.** It earns XP from each of your kills, and bosses give more. Its health and XP show on the pet HUD below yours. Its kills also count towards your own XP.
+- **Meditation, Pet path only.** Summon the pet *inside* the Meditation Chamber and choose the Pet path. Meditating any other path gives the pet nothing. On this path the aura shows on the pet.
+
+## Prestige
+
+At **level 100**, a pet **PRESTIGE** button appears next to your HUD, with the pet's portrait.
+
+<PlayModes>
+	<Fragment slot="interface">Click the pet PRESTIGE button. The pet must be summoned.</Fragment>
+	<Fragment slot="chat"><Command cmd=".pet prestige">Prestiges the summoned pet at level 100 (short: `.pet pg`).</Command></Fragment>
+</PlayModes>
+
+- The pet returns to level 1 but **gets stronger with each prestige**, up to 20.
+- **Each prestige reduces its XP gain by 3%.**
+- **Pet prestige is free.** It costs no Ourosangue.
+- VIPs can let [Auto-Prestige](/meditation/auto-prestige/) handle it for the summoned pet. <Label type="vip" />
+
+<Unverified q="Q-010">The Pet meditation path gives less XP to a prestiged pet, but the guides don't say whether that's the same 3% per prestige or a different amount.</Unverified>
+
+The guides don't publish how much stronger each prestige or tier makes a pet.

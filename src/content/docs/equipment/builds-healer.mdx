@@ -1,0 +1,46 @@
+---
+title: Healer builds
+description: Sangrael is the Sangria Falls support class. Its heals scale with Spell Power. Documented sources of Spell Power and ultimate efficiency. A framework, not a tested build.
+summary: Sangrael's heals come from Spell Power. Its ultimate revives every downed vampire within 12 m, and its passive revives allies in under a second every 180 s. Spell Power sources include Enchanter fortification, prestige 14 and the Pillars. No tested builds exist.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - class-sangrael
+  - classes
+  - nivel-e-prestigio
+  - oficios-ferreiro-alfaiate-encantador
+  - conquistas
+labels: [community, verify]
+sidebar:
+  order: 13
+---
+
+import ClassDefaults from '../../../components/ClassDefaults.astro';
+import Unverified from '../../../components/Unverified.astro';
+
+<Unverified q="Q-009">There are no tested builds, and how healing scales with each bonus beyond "from Spell Power" isn't documented.</Unverified>
+
+## The healer class
+
+**Sangrael** is the only class the official pages call a true support. It needs **Draekhar at Evolution I**. See [Sangrael](/classes/sangrael/).
+
+- *Sangria Menor* heals allies in its area for **50% of your Spell Power**.
+- *Liturgia da Ferida* restores **150% of your Spell Power** to nearby allies.
+- *Feixe Carmesim* heals allies in the beam, based on Spell Power, and heals you per target hit.
+- *Alta Carmesim* (ultimate) revives every downed vampire within 12 m at full health. It scales with Spell Power and **Ultimate Efficiency**.
+- *Reviver Rápido* (passive): revive an ally in under a second, once every 180 s.
+
+## Documented sources
+
+| Source | Gives |
+|---|---|
+| Enchanter fortification / refinement | +2 Magic Power per level; +1 to +3 power per row |
+| Prestige 14 | Spell Power +2 |
+| Prestige 16 | Spell Life Leech +4% |
+| Prestige 19 | Ultimate Efficiency +8% |
+| Prestige 2 | Healing Received +2% (for yourself) |
+| Pillars of the Winged Horror / Megara | +10 Spell Power each (plus spell crit) |
+
+## Default attributes
+
+<ClassDefaults id="sangrael" />

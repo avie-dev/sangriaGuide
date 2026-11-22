@@ -1,0 +1,76 @@
+---
+title: Profession services
+description: Hire another Sangria Falls player to fortify or refine gear from a craft you don't have, or sell your own services at craft prestige 5. Prices, price limits and weekly slots.
+summary: Anyone can hire (F4 → Services, or .services). Providers need 5+ prestiges in their active craft. You pay the provider's price, plus 2,000 per level for fortification. Since 30/09/2026, prices have floors and ceilings, and providers have weekly slots.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - servicos-de-profissao
+labels: [official]
+sidebar:
+  order: 9
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Command from '../../../components/Command.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+<QuickFacts
+	facts={[
+		['Hire', 'Anyone, no profession needed'],
+		['Offer', '5+ prestiges in your active craft'],
+		['Provider online?', 'Not needed: applied instantly'],
+		['Server fee', 'None (plus the game’s 2,000 per fortification level)'],
+		['Open', 'F4 → Services, or .services'],
+	]}
+/>
+
+## Hiring
+
+<Steps>
+
+1. Open the board and filter by Blacksmith, Tailor or Enchanter. Each card shows prestige, fortification and refinement limits, prices and material stock.
+2. Click **Hire**, then click the piece under YOUR GEAR.
+3. Choose **FORTIFY** (click a level, e.g. P5), or **REFINEMENT** *With my materials* / *With provider's materials*. **Redo** re-rolls an existing refinement.
+4. Check the summary (provider's price, base cost, materials, TOTAL) and click **Confirm**.
+
+</Steps>
+
+<Aside type="caution">
+The refinement bonus is random and can't be undone, and fortification only goes up.
+</Aside>
+
+## Cost
+
+- **Fortification:** the provider's price per level gained **plus** 2,000 Ourosangue per level. For example, a 500 price over 3 levels costs 1,500 + 6,000 = 7,500.
+- **Refinement:** the provider's price × the refinement number. Refinement #3 costs three times their price and uses 3 of each material.
+- A provider fortifies up to their own prestige and refines only as far as they've unlocked. The **5th refinement** needs a provider with the trade's achievement and prestige 10.
+
+Materials: Perfect Ruby + gemstone (Blacksmith), Perfect Topaz + Exceptional Tailoring Component (Tailor), Perfect Amethyst + Exceptional Magical Component (Enchanter). The crafts guide calls the Blacksmith's component *Precious Stone*.
+
+## Offering services
+
+<Steps>
+
+1. F4 → **Details** on your craft → **Provide Services** (lit at 5 prestiges).
+2. Tick Fortification, Refinement or both.
+3. Fill in three prices: fortification per level, refinement with your materials, and refinement with the client's materials.
+4. **Save prices** → **Publish to the board**. **Pause offer** removes you from the board but keeps your prices.
+
+</Steps>
+
+To sell refinement with your own materials, stock them via **Manage Materials** (Deposit 1/10/50/All). Refinement #4 takes 4 gems and 4 components from your stock, so price accordingly. Each hire sends a **[SERVICE]** notice, delivered when you log in if you were offline.
+
+## Board rules (since 30/09/2026)
+
+| Rule | Detail |
+|---|---|
+| Fortification price | 3,500–15,000 per level gained |
+| Refinement, client's materials | 3,500–15,000 per level |
+| Refinement, provider's materials | 6,000–25,000 per level |
+| Lowering a price | Once per 24 hours per price; raising is free |
+| Weekly slots | 2 orders per week per prestige (P5 = 10, P10 = 20); reset Monday |
+
+You can't hire yourself. For your own craft, use the craft panel.
+
+<Command cmd=".services">Opens the services board (a numbered menu without the interface).</Command>

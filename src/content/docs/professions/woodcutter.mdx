@@ -1,0 +1,37 @@
+---
+title: Woodcutter
+description: The Sangria Falls Woodcutter (mentor Bram) earns 10 Ourosangue per tree (+10% per prestige), extra wood, Exceptional Tailoring Components from prestige 5 and pet souls from prestige 6.
+summary: Woodcutters fell trees across the world (not castle trees) for 10 Ourosangue each (20 at prestige 10), +5% extra wood per prestige, Exceptional Tailoring Components (Tailor refining) from prestige 5 and souls from prestige 6.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - coleta-minerador-pescador-lenhador
+  - profissoes
+labels: [official]
+sidebar:
+  order: 7
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+
+<QuickFacts
+	facts={[
+		['Mentor', 'Bram, Professions Hall'],
+		['XP from', 'Felling trees out in the world (castle trees don’t count)'],
+		['Ourosangue', '10 per tree, +10% per prestige (20 at prestige 10)'],
+		['Extra wood', '+5% per prestige, rounded up'],
+		['Refining drop (P5+)', 'Exceptional Tailoring Component, used by the Tailor'],
+	]}
+/>
+
+## Prestige rewards
+
+| Prestige | Adds |
+|---|---|
+| Each | +10% Ourosangue per tree, +5% extra wood |
+| 5 and up | A small chance of **Exceptional Tailoring Component** per tree, improving up to prestige 10 |
+| 6 to 9 | **Sacrificed Souls**: one more act per prestige; at most one soul per tree, rolled separately from the component |
+
+**Castle trees don't count**, for XP or Ourosangue.
+
+See [Comparing the gathering trades](/professions/gathering-comparison/).

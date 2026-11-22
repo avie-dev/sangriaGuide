@@ -1,0 +1,60 @@
+---
+title: Sangrulhos
+description: Sangrulhos are collectible Sangria Falls creatures that each give an attribute bonus. Equipping up to 2, energy and Vampiric Dust, lineages, and Richard's quest.
+summary: Sangrulhos give one attribute bonus each while equipped (up to 2; two of the same type stack). They lose energy in combat and are recharged with Vampiric Dust. Eggs come from Ressonador; duplicates fuse.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - sangrulhos
+labels: [official]
+sidebar:
+  order: 7
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<QuickFacts
+	facts={[
+		['Equipped', 'Up to 2'],
+		['Lineages', 'Draconic, Gargoyle, Raven, Bat'],
+		['Master', 'Richard (Sangrulhos teleporter at the city hub)'],
+		['Open', 'F7, or .sangrulhos'],
+	]}
+/>
+
+Each Sangrulho gives **one attribute bonus** while equipped. Two of the same type equipped add their bonuses together. The panel's **?** button opens the SANGRULHOS GUIDE, with each type's attribute range and the fusion rules.
+
+## Getting started
+
+**Richard's quest** gives your first **2 Ressonador** and **30 Vampiric Dust**. The tutorial also introduces the Sangrulhos. See [Sangrulho eggs](/companions/sangrulho-eggs/).
+
+## Equipping
+
+F7 → click a Sangrulho → **EQUIP** (or **UNEQUIP**). The strip at the bottom shows your equipped Sangrulhos and incubating eggs.
+
+## Energy and Vampiric Dust
+
+Energy drops **only in combat**, and only while equipped.
+
+| Energy | Bonus |
+|---|---|
+| 40% and up | Full |
+| Below 40% | 75% |
+| Below 10% | 50% |
+| 0% | None (it doesn't disappear) |
+
+**FEED** uses 1 **Vampiric Dust** from your inventory and restores 20% energy. Below 40%, the Sangrulhos button on the HUD (the crow) shows a red dot until you feed or unequip.
+
+<Aside type="tip" title="Vampiric Dust">
+After Richard's 30, it comes from the quests of the **Oakveil Woodlands Outpost**.
+</Aside>
+
+## Collection
+
+The tabs split your collection by lineage (**DRACONIC, GARGOYLE, RAVEN, BAT**), and the **EGGS** tab holds unhatched eggs.
+
+<Command cmd=".sangrulhos">Opens the Sangrulhos panel.</Command>
+
+More: [Eggs](/companions/sangrulho-eggs/) · [Fusion](/companions/sangrulho-fusion/)

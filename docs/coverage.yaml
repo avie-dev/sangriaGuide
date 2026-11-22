@@ -618,63 +618,102 @@ sections:
         brief: ['F: overview; upgrade priorities']
         sources: [masmorras, oficios-ferreiro-alfaiate-encantador]
         phase: 6
-        built: page stub
+        built: published
+        research: read
+        writing: written
+        verified: partly checked
       - slug: equipment/weapons
         title: Weapon progression
         brief: ['F: Weapon progression', 'F: Ancestral weapons', 'F: Rare / Epic / Legendary weapons', 'F: Unique weapon effects', 'F: How to obtain legendary weapons']
         sources: [masmorras, mercado, mercador-sombrio]
         phase: 6
-        missing: [Q-008]
+        missing: [Q-008, Q-022]
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: equipment/weapon-affinity
         title: Weapon affinity
         brief: ['F: Weapon affinity', 'K: Weapon affinity']
         sources: [masmorras, comandos]
         phase: 6
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: equipment/armour-and-jewellery
         title: Armour and jewellery
         brief: ['F: Armor progression', 'F: Jewelry progression']
         sources: [oficios-ferreiro-alfaiate-encantador, mercado]
         phase: 6
         missing: [Q-008]
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: equipment/fortification
         title: Fortification
         brief: ['F: Equipment fortification', 'I: Fortification']
         sources: [oficios-ferreiro-alfaiate-encantador, servicos-de-profissao]
         phase: 6
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: equipment/refinement
         title: Refinement
         brief: ['F: Equipment refinement', 'F: Refinement materials', 'I: Refinement']
         sources: [oficios-ferreiro-alfaiate-encantador, coleta-minerador-pescador-lenhador, conquistas]
         phase: 6
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: equipment/perfect-gems
         title: Perfect Gems
         brief: ['F: Perfect Gems']
         sources: [masmorras]
         phase: 6
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: equipment/spell-jewels
         title: Spell jewels
         brief: ['F: Spell jewels']
         sources: []
         phase: 6
         missing: [Q-007]
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: equipment/bonuses-by-class
         title: Which bonuses help which class
         brief: ['F: Explain which equipment bonuses actually benefit each class']
         sources: [classes, class-hub]
         needs: [classes/choosing-a-class]
         phase: 6
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: equipment/upgrade-priorities
         title: Upgrade priorities
         brief: ['F: Equipment upgrade priorities']
         sources: [oficios-ferreiro-alfaiate-encantador, masmorras]
         phase: 6
         missing: ['Community recommendation']
-      - {slug: equipment/builds-physical, title: Physical DPS builds, brief: ['F: Physical DPS builds'], sources: [classes], phase: 6, missing: ['Community recommendation; no testing data yet']}
-      - {slug: equipment/builds-magical, title: Magical DPS builds, brief: ['F: Magical DPS builds'], sources: [classes, class-draekhar], phase: 6, missing: ['Community recommendation; no testing data yet']}
-      - {slug: equipment/builds-tank, title: Tank builds, brief: ['F: Tank builds'], sources: [classes, class-mortak], phase: 6, missing: ['Community recommendation; no testing data yet']}
-      - {slug: equipment/builds-healer, title: Healer builds, brief: ['F: Healer builds'], sources: [classes, class-sangrael], phase: 6, missing: ['Community recommendation; no testing data yet']}
-      - {slug: equipment/builds-summoner, title: Summoner builds, brief: ['F: Summoner builds'], sources: [classes, class-sepulkros, class-lamuerte], phase: 6, missing: ['Community recommendation; no testing data yet']}
-      - {slug: equipment/builds-hybrid, title: Hybrid builds, brief: ['F: Hybrid builds'], sources: [classes], phase: 6, missing: ['Community recommendation; no testing data yet']}
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
+      - {slug: equipment/builds-physical, title: Physical DPS builds, brief: ['F: Physical DPS builds'], sources: [classes], phase: 6, missing: ['Community recommendation; no testing data yet'], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: equipment/builds-magical, title: Magical DPS builds, brief: ['F: Magical DPS builds'], sources: [classes, class-draekhar], phase: 6, missing: ['Community recommendation; no testing data yet'], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: equipment/builds-tank, title: Tank builds, brief: ['F: Tank builds'], sources: [classes, class-mortak], phase: 6, missing: ['Community recommendation; no testing data yet'], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: equipment/builds-healer, title: Healer builds, brief: ['F: Healer builds'], sources: [classes, class-sangrael], phase: 6, missing: ['Community recommendation; no testing data yet'], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: equipment/builds-summoner, title: Summoner builds, brief: ['F: Summoner builds'], sources: [classes, class-sepulkros, class-lamuerte], phase: 6, missing: ['Community recommendation; no testing data yet'], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: equipment/builds-hybrid, title: Hybrid builds, brief: ['F: Hybrid builds'], sources: [classes], phase: 6, missing: ['Community recommendation; no testing data yet'], research: read, writing: written, verified: partly checked, built: published}
 
   - dir: companions
     title: Pets and Sangrulhos
@@ -684,35 +723,55 @@ sections:
         brief: ['G: overview', 'G: pets vs class summons vs Sangrulhos']
         sources: [pets, sangrulhos, classes]
         phase: 6
-        built: page stub
+        built: published
+        research: read
+        writing: written
+        verified: partly checked
       - slug: companions/pets
         title: How pets work
         brief: ['G: How pets work', 'G: Pet commands', 'G: Summoning and dismissing pets', 'G: Pet management']
         sources: [pets]
         phase: 6
         research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: companions/pet-capture
         title: Capturing pets
         brief: ['G: How to capture bosses', 'G: Pet capture probability', 'G: Eligible and ineligible bosses']
         sources: [pets, escolas]
         phase: 6
         research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: companions/pet-souls
         title: Pet souls
         brief: ['G: Boss Souls', 'G: Act Souls', 'G: How to farm pet souls']
         sources: [pets, coleta-minerador-pescador-lenhador, arena-ilusional]
         phase: 6
         research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: companions/pet-progression
         title: Pet tiers, levels and prestige
         brief: ['G: Pet levels', 'G: Pet prestige', 'G: Pet tiers', 'G: Pet attributes', 'G: Pet variants', 'G: Pet damage scaling', 'G: Pet meditation']
         sources: [pets, meditacao]
         phase: 6
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: companions/pet-crystals
         title: Pet crystals
         brief: ['G: Crystal system (all items)']
         sources: [pets, masmorras]
         phase: 6
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: companions/pet-recommendations
         title: Recommended pets and upgrade priorities
         brief: ['G: Recommended pets by role', 'G: Pet upgrade priorities']
@@ -720,21 +779,37 @@ sections:
         needs: [companions/pet-progression]
         phase: 6
         missing: ['Community recommendation']
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: companions/sangrulhos
         title: Sangrulhos
         brief: ['H: Introduction', 'H: Collection system', 'H: Equipping Sangrulhos', 'H: Attribute bonuses', 'H: Recommended progression']
         sources: [sangrulhos]
         phase: 6
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: companions/sangrulho-eggs
         title: Sangrulho eggs and incubation
         brief: ['H: Obtaining eggs', 'H: Resonators', 'H: Incubation', 'H: Rarities']
         sources: [sangrulhos, masmorras, arena-ilusional]
         phase: 6
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: companions/sangrulho-fusion
         title: Sangrulho fusion and duplicates
         brief: ['H: Fusion', 'H: Duplicate management']
         sources: [sangrulhos]
         phase: 6
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
 
   - dir: professions
     title: Professions
@@ -744,34 +819,53 @@ sections:
         brief: ['I: overview', 'I: Profession switching', 'I: Gathering and crafting synergy']
         sources: [profissoes]
         phase: 6
-        built: page stub
+        built: published
+        research: read
+        writing: written
+        verified: partly checked
       - slug: professions/orders
         title: Daily orders and profession XP
         brief: ['I: Experience sources', 'I: Daily orders', 'I: Level requirements']
         sources: [profissoes]
         phase: 6
-      - {slug: professions/blacksmith, title: Blacksmith, brief: ['I: Blacksmith'], sources: [oficios-ferreiro-alfaiate-encantador, profissoes], phase: 6}
-      - {slug: professions/tailor, title: Tailor, brief: ['I: Tailor'], sources: [oficios-ferreiro-alfaiate-encantador, profissoes], phase: 6}
-      - {slug: professions/enchanter, title: Enchanter, brief: ['I: Enchanter'], sources: [oficios-ferreiro-alfaiate-encantador, profissoes], phase: 6}
-      - {slug: professions/miner, title: Miner, brief: ['I: Miner'], sources: [coleta-minerador-pescador-lenhador, profissoes], phase: 6}
-      - {slug: professions/fisher, title: Fisher, brief: ['I: Fisher'], sources: [coleta-minerador-pescador-lenhador, profissoes, aquario], phase: 6}
-      - {slug: professions/woodcutter, title: Woodcutter, brief: ['I: Woodcutter'], sources: [coleta-minerador-pescador-lenhador, profissoes], phase: 6}
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
+      - {slug: professions/blacksmith, title: Blacksmith, brief: ['I: Blacksmith'], sources: [oficios-ferreiro-alfaiate-encantador, profissoes], phase: 6, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: professions/tailor, title: Tailor, brief: ['I: Tailor'], sources: [oficios-ferreiro-alfaiate-encantador, profissoes], phase: 6, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: professions/enchanter, title: Enchanter, brief: ['I: Enchanter'], sources: [oficios-ferreiro-alfaiate-encantador, profissoes], phase: 6, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: professions/miner, title: Miner, brief: ['I: Miner'], sources: [coleta-minerador-pescador-lenhador, profissoes], phase: 6, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: professions/fisher, title: Fisher, brief: ['I: Fisher'], sources: [coleta-minerador-pescador-lenhador, profissoes, aquario], phase: 6, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: professions/woodcutter, title: Woodcutter, brief: ['I: Woodcutter'], sources: [coleta-minerador-pescador-lenhador, profissoes], phase: 6, research: read, writing: written, verified: partly checked, built: published}
       - slug: professions/gathering-comparison
         title: Comparing the gathering professions
         brief: ['I: Compare gathering professions (income, availability, convenience, refinement materials, combat benefits)']
         sources: [coleta-minerador-pescador-lenhador, oficios-ferreiro-alfaiate-encantador]
         phase: 6
         missing: [Q-012]
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: professions/services
         title: Profession services
         brief: ['I: Profession services', 'I: Offline service sales', 'J: Profession services']
         sources: [servicos-de-profissao]
         phase: 6
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: professions/aquarium
         title: Aquarium
         brief: ['I: Aquarium mechanics']
         sources: [aquario]
         phase: 6
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
 
   - dir: economy
     title: Economy
@@ -781,48 +875,79 @@ sections:
         brief: ['J: overview']
         sources: [banco]
         phase: 6
-        built: page stub
+        built: published
+        research: read
+        writing: written
+        verified: partly checked
       - slug: economy/currencies
         title: Currencies
         brief: ['J: Ourosangue', 'J: Sangricoins', 'J: Crystals', 'J: Other documented currencies', 'S: Currency directory']
         sources: [banco, recompensa-online, pets, sangrulhos]
         phase: 6
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: economy/bank
         title: Bank
         brief: ['J: Bank system', 'J: Transaction history']
         sources: [banco]
         phase: 6
-      - {slug: economy/vault, title: Vault, brief: ['J: Vault'], sources: [cofre], phase: 6}
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
+      - {slug: economy/vault, title: Vault, brief: ['J: Vault'], sources: [cofre], phase: 6, research: read, writing: written, verified: partly checked, built: published}
       - slug: economy/market
         title: Player market and shops
         brief: ['J: Player marketplace', 'J: Opening a shop', 'J: Offline sales']
         sources: [mercado]
         phase: 6
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: economy/contracts
         title: Contracts
         brief: ['J: Contracts', 'J: Player contracts']
         sources: [contratos]
         phase: 6
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: economy/shadow-merchant
         title: Shadow Merchant
         brief: ['J: Shadow Merchant', 'J: Selling raw materials', 'J: Selling refined materials']
         sources: [mercador-sombrio]
         phase: 6
-      - {slug: economy/casino, title: Casino, brief: ['J: (official system not in the brief)'], sources: [cassino], phase: 6}
-      - {slug: economy/online-reward, title: Online reward, brief: ['J: Online rewards'], sources: [recompensa-online], phase: 6}
-      - {slug: economy/prisoners, title: Prisoner market, brief: ['R: Prisoner market'], sources: [prisioneiros], phase: 6}
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
+      - {slug: economy/casino, title: Casino, brief: ['J: (official system not in the brief)'], sources: [cassino], phase: 6, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: economy/online-reward, title: Online reward, brief: ['J: Online rewards'], sources: [recompensa-online], phase: 6, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: economy/prisoners, title: Prisoner market, brief: ['R: Prisoner market'], sources: [prisioneiros], phase: 6, research: read, writing: written, verified: partly checked, built: published}
       - slug: economy/earning-guide
         title: How to earn currency
         brief: ['J: Beginner income', 'J: Daily income', 'J: Weekly income', 'J: Active farming', 'J: Passive income', 'J: Gathering profession income', 'J: Selling surplus resources']
         sources: [coleta-minerador-pescador-lenhador, contratos, mercador-sombrio, postos-avancados, recompensa-online, ruptura-da-realidade, torre-dos-imortais]
         phase: 6
         missing: ['Income rates are not published; use ranges labelled as estimates']
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
       - slug: economy/budgets
         title: Example budgets
         brief: ['J: Example budgets for character prestige, class evolutions and Transfusions']
         sources: [nivel-e-prestigio, classes, transfusao-e-plasmas, maestria-de-arma, linhagem-de-sangue]
         needs: [character/prestige, classes/evolutions]
         phase: 6
+        research: read
+        writing: written
+        verified: partly checked
+        built: published
 
   - dir: dungeons
     title: Dungeons

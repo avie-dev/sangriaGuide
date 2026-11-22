@@ -1,0 +1,45 @@
+---
+title: Upgrade priorities
+description: A suggested order for upgrading Sangria Falls gear, based on the official costs and unlocks. A community recommendation, not a tested optimum.
+summary: "A suggested order: get your class weapon (dungeons with affinity), take a crafting prestige and fortify the piece your craft covers, pair your gathering trade with your craft for components, then refine. Hire services for the crafts you don't have."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - oficios-ferreiro-alfaiate-encantador
+  - masmorras
+  - coleta-minerador-pescador-lenhador
+  - servicos-de-profissao
+  - classes
+labels: [official, community]
+sidebar:
+  order: 9
+---
+
+import ProgressionPath from '../../../components/ProgressionPath.astro';
+import Label from '../../../components/Label.astro';
+
+This is a suggested order, built from official costs and unlocks. It isn't a tested optimum. <Label type="community" />
+
+<ProgressionPath
+	steps={[
+		{ title: '1. Your class weapon', detail: 'Class bonuses need it in hand. Farm dungeons with affinity set to it, or buy on the Market.' },
+		{ title: '2. Craft prestige 1+', detail: 'Fortification is capped at your craft prestige.' },
+		{ title: '3. Fortify your craft’s piece', detail: '2,000 Ourosangue per level, permanent, saved on the item.' },
+		{ title: '4. Gathering prestige 5', detail: 'Starts dropping the refining component your craft needs.' },
+		{ title: '5. Craft prestige 7', detail: 'Unlocks 3 refinement rows (or 2 now via the achievement).' },
+		{ title: '6. Refine', detail: 'Re-roll rows you dislike; the 5th row needs the achievement and prestige 10.' },
+		{ title: '7. Hire services', detail: 'For the crafts you don’t have (5+ prestige providers).' },
+	]}
+/>
+
+## Why this order
+
+- **Fortification is cheap and certain.** It costs 2,000 per level, has no randomness, and the bonus stays on the item.
+- **Refinement is random and needs scarce materials** (a Perfect gem plus a component per refinement number), so it pays off once your gathering trade supplies the component.
+- **Pair your trades.** Blacksmith with Miner, Enchanter with Fisher, Tailor with Woodcutter: each gathering trade feeds one crafting trade's components.
+- **Tailors pay per piece.** Four armour pieces cost four times as much to fortify. Factor that in if your class wants health.
+- **Your weapon matters most to class bonuses**, since they switch off without it.
+
+## Check your progress
+
+`.item check tudo`, or F4 → Details on your craft, shows the fortification, refinement and durability of what you're wearing.

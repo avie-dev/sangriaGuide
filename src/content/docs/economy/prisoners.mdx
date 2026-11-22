@@ -1,0 +1,64 @@
+---
+title: Prisoners
+description: The Sangria Falls Prisoner Market lets you buy and sell prisoners for 1,000–15,000 Ourosangue, filtered by blood type and quality. Stock, cells and limits.
+summary: The Prisoner Market (chained-fist minimap button or .pri painel) lists prisoners for 1,000–15,000 Ourosangue with no fee. Bought prisoners go to a stock of 2; call them into an empty castle cell.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - prisioneiros
+labels: [official]
+sidebar:
+  order: 9
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Command from '../../../components/Command.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+You capture prisoners as in the base game: dominate the unit and lock it in a Prison Cell in your castle. The **Prisoner Market** lets you trade them for Ourosangue, keeping their blood type, quality and level.
+
+<QuickFacts
+	facts={[
+		['Price range', '1,000 to 15,000 Ourosangue'],
+		['Fee', 'None'],
+		['Stock', 'Up to 2 bought prisoners'],
+		['Listings', '2 at a time'],
+		['Purchase cooldown', '10 minutes between purchases'],
+	]}
+/>
+
+Open it from anywhere with the **chained fist** button by the minimap, or:
+
+<Command cmd=".pri painel">Opens the PRISONER MARKET (tabs: MARKET, MY SALES, MY STOCK).</Command>
+
+## Buying
+
+<Steps>
+
+1. **MARKET** tab: filter by blood type and minimum quality (steps of 10%). **Lowest price** sorts cheapest first.
+2. Click **Buy**, then **Confirm**.
+3. The prisoner goes to **MY STOCK**. You don't need to be anywhere in particular to buy.
+
+</Steps>
+
+Blood types in the filter: Warrior, Scholar, Brute, Rogue, Worker, Mutant, Draculin, Creature, Corrupted and Frailed.
+
+## Putting it in a cell
+
+Stand within **3 metres** of an empty Prison Cell in your castle (or your clan's). Put away your pet, leave Dominating Presence, and have no other follower. Then click **Call** in MY STOCK. If the cell refuses it, it returns to your stock, so nothing is lost.
+
+## Selling
+
+1. Stand next to the cell holding the prisoner. It must be **well fed: at least 99% health and at most 1% misery**.
+2. **MY SALES**: type a price (1,000–15,000) and click **List prisoner next to you**.
+3. The prisoner leaves the cell and becomes a listing. The Ourosangue reaches your Bank when it sells, even offline.
+
+**Cancel** returns a listing to your stock.
+
+<Aside type="caution">
+With a full stock (2) you can't buy or cancel a listing, so call one into a cell first. If you go **more than 15 days** without logging in, **your stock is deleted**. Listings and prisoners already in cells are unaffected.
+</Aside>
+
+## Can't buy?
+
+Not enough balance, a full stock, less than 10 minutes since your last purchase, or the listing is yours or a clanmate's.

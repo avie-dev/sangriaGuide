@@ -1,0 +1,86 @@
+---
+title: The Bank
+description: How the Sangria Falls Bank works, with balances, the statement, depositing currency items, Quitina, and exchanging Sangricoins for Ourosangue, with and without the interface.
+summary: The Bank (F5 or .menu bank) works anywhere and holds five balances. Deposit currency items with .menu bank → option 2. Exchange Sangricoins at 1 = 35 Ourosangue (one way). No fees, no transfers between players.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - banco
+labels: [official]
+sidebar:
+  order: 2
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+The Bank is your account's wallet. It works **from anywhere on the map**, with no NPC needed. Market, Vault, Arena, prestiges and the other systems charge and pay straight into it, so you never carry currency in your pocket.
+
+<QuickFacts
+	facts={[
+		['Balances', '5'],
+		['Fees', 'None to deposit, withdraw or exchange'],
+		['Exchange', '1 Sangricoin = 35 Ourosangue (one way)'],
+		['Withdraw as item', 'Quitina only'],
+		['Transfers', 'None between players'],
+	]}
+/>
+
+## Opening it
+
+<PlayModes>
+	<Fragment slot="interface">Press **F5**, or click the bank icon on the minimap. The five balances are at the top, and the **STATEMENT** with your latest transactions is below.</Fragment>
+	<Fragment slot="chat"><Command cmd=".menu bank">Opens the Bank menu: balances, statement, deposit, withdrawal and exchange.</Command> `.banco open` also works.</Fragment>
+</PlayModes>
+
+## Depositing currency items
+
+Some currencies also exist as items: **Primal Stygian Shard** (becomes Ourosangue), **Quitina**, **Ressonador** and **Cristal**. To turn them into balance, which you can't lose on death:
+
+<Steps>
+
+1. Type `.menu bank`. A numbered menu appears.
+2. Type `2` for *Deposit everything from inventory*.
+3. Chat shows what was deposited. It also appears in the statement.
+
+</Steps>
+
+The panel has no general deposit button, so interface users use this chat menu too. Stand still, because the menu closes if you walk more than 5 metres. Cristais also have their own command:
+
+<Command cmd=".banco depositar cristal">Deposits the Cristais in your inventory.</Command>
+
+## Exchanging Sangricoins for Ourosangue
+
+<Steps>
+
+1. `.menu bank`, then `4` (*Currency exchange*).
+2. `1` (*Sangricoins → Ourosangue (1 = 35)*).
+3. Type how many Sangricoins, for example `10`, to receive 350 Ourosangue.
+
+</Steps>
+
+<Command cmd=".banco cambio 10">Exchanges 10 Sangricoins for 350 Ourosangue directly.</Command>
+
+<Aside type="caution">
+The exchange only goes one way. Ourosangue can't become Sangricoins. Transactions made with the direct commands don't show in the statement; those made through the menu do.
+</Aside>
+
+## Quitina
+
+On the Quitina card (F5), **WITHDRAW · DEPOSIT** moves Quitina between the Bank and your inventory, and **USE** activates it on Character, Weapon or Blood. Without the interface: `.banco sacar quitina 2` withdraws 2. See [Quitina](/character/quitina/).
+
+## Reading the statement
+
+Each line shows the amount, currency, reason and date. **Green +** is income and **red −** is spending. Identical consecutive transactions are grouped with **×** and a count. The panel shows up to 30 lines.
+
+## Common questions
+
+### Can I send Ourosangue to a friend?
+
+No. Ourosangue only changes hands through Market sales, contracts and profession services.
+
+### Can I withdraw Ourosangue or Sangricoins as items?
+
+No. Only Quitina can be withdrawn.

@@ -1,0 +1,49 @@
+---
+title: Summoner builds
+description: How Sangria Falls minions scale (Skarn, Sepulkros Summoner, La Muerte), their limits, Minion Damage and Minion Collectors. A framework, not a tested build.
+summary: "Minions scale from your power multiplied by Minion Damage: Skarn beasts 85% of Physical Power, Sepulkros servants half your Spell Power, La Muerte minions your full Spell Power. None can crit. Collectors from dungeons unlock more summons."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - classes
+  - class-skarn
+  - class-sepulkros
+  - class-lamuerte
+labels: [community, verify]
+sidebar:
+  order: 14
+---
+
+import ClassDefaults from '../../../components/ClassDefaults.astro';
+import Unverified from '../../../components/Unverified.astro';
+
+<Unverified q="Q-009">There are no tested builds, and how Minion Damage combines with other bonuses isn't documented.</Unverified>
+
+## How minions scale
+
+| Class | Trigger | Minion strength | Duration | Options | Living limit |
+|---|---|---|---|---|---|
+| [Skarn](/classes/skarn/) | Every 15 hits in combat | 85% of your Physical Power × Minion Damage; 5 levels below you; 50% faster | — | 18 beasts | 4 |
+| [Sepulkros](/classes/sepulkros/) Summoner | Every 7 basic hits in combat | Half your Spell Power × Minion Damage; your level; double speed | 15 s | 12 servants | 6 |
+| [La Muerte](/classes/la-muerte/) | Every 4 basic hits in combat | Your Spell Power × Minion Damage; your level; double attack speed | 12 s (spirits) | 13 minions | 4 |
+
+**Minions can't crit.** Going over the living limit kills the oldest. Sepulkros **Reaper** has no basic-attack summon. Instead, enemies that die while condemned rise as your skeletons (limit 4).
+
+## Unlocking more summons
+
+Locked summons unlock when you defeat that creature while playing the class with a **Minion Collector** in your inventory. There's a chance per kill, and the Collector is used only when it works. Collectors come from **dungeon rewards**. Sepulkros's **Fallen Angel** comes from the boss **Solarus**.
+
+## Documented sources
+
+- **Minion Damage** appears in Skarn's, Sepulkros's and La Muerte's attribute tables and "benefits from" lists.
+- Your **Physical Power** (Skarn) or **Spell Power** (Sepulkros, La Muerte) sources apply too. See [Physical](/equipment/builds-physical/) and [Magic](/equipment/builds-magical/) builds.
+
+## Default attributes
+
+**Skarn**
+
+<ClassDefaults id="skarn" />
+
+**La Muerte**
+
+<ClassDefaults id="la-muerte" />

@@ -1,0 +1,102 @@
+---
+title: Market
+description: The Sangria Falls player Market. Buy and sell with Ourosangue, open a shop, minimum prices for legendary gear, automatic sale, and losing an inactive shop.
+summary: The Market (press L, city only) sells player items for Ourosangue with no fee. A shop costs 5,000 once (56 slots) and sells while you're offline. Prices are per stack. Purchases are instant with no confirmation.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - mercado
+  - mercador-sombrio
+labels: [official]
+sidebar:
+  order: 4
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Command from '../../../components/Command.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+<QuickFacts
+	facts={[
+		['Where', 'City of Sangria Falls only (press L)'],
+		['Currency', 'Ourosangue, from the Bank'],
+		['Shop', '5,000 Ourosangue once; 1 per player; 56 slots'],
+		['Fee', 'None: sellers get the full price'],
+		['Price', 'For the whole stack, not per unit'],
+	]}
+/>
+
+Go to the city (the golden button by the minimap, the teleport panel, or `.mercado go`) and press **L**. The panel doesn't open outside the city.
+
+## Buying
+
+<Steps>
+
+1. Press **L**. Pick a category (WEAPONS, RESOURCES, CONSUMABLES…) or search by name. In WEAPONS, the **Blue**, **Purple** and **Orange** buttons show only legendaries of that colour.
+2. Click **PRICE** to sort cheapest first.
+3. Click a row to see the item's details.
+4. Click **Buy**.
+
+</Steps>
+
+<Aside type="caution">
+Buying is **instant, with no confirmation screen**, and can't be undone. Check the item, amount and price first.
+</Aside>
+
+**View Shops** lists the open shops and everything a seller has. Each row has a **star** (keep it in Favourites, up to 30) and a **crossed-out eye** (hide it, up to 200; unhide from the Hidden tab).
+
+## Getting a shop
+
+In the city, find a stall named **Empty shop**, interact, and confirm the 5,000 Ourosangue. The shop starts closed.
+
+## Selling
+
+<Steps>
+
+1. Press **L** → **Sell** on the bottom bar.
+2. Click an item in your inventory and check **Lowest price on the market**.
+3. Type the price for the **whole stack** and click **List**. Repeat for other items.
+4. Click **Manage shop** → **Open shop**. It now sells on its own, even while you're offline.
+
+</Steps>
+
+To add, remove or cancel listings, close the shop first (**Manage shop** → **Close shop**), make the changes, and reopen it. Each slot holds at most 4,000 units, so split bigger stacks. Sale proceeds go straight to your Bank. **History** shows your purchases and sales. When your last item sells, the shop closes itself.
+
+## Minimum prices
+
+| Item | Minimum |
+|---|---|
+| Dracula armour piece or Soul Shard | 5,000 |
+| T08 necklace | 1,000 |
+| Blue legendary weapon | 5,000 |
+| Purple legendary weapon | 10,000 |
+| Orange legendary weapon (unique) | 20,000 |
+
+On these items, each **fortification level adds 1,000** and each **refinement adds 2,000** to the minimum. For example, an Orange weapon at fortification 10 with 3 refinements needs at least 36,000. The sell panel shows the minimum.
+
+## Automatic sale
+
+When listing, you can set a deadline of **7, 15, 20 or 30 days** (off by default). If nobody buys by then, the server buys the item:
+
+| Item | Server pays |
+|---|---|
+| Dracula armour piece | 1,000 |
+| T08 necklace | 1,500 |
+| Blue legendary weapon | 1,000 |
+| Purple legendary weapon | 3,000 |
+| Orange legendary weapon (unique) | 10,000 |
+| Anything the Shadow Merchant buys | 15% more per unit than the Merchant (a Soul Shard: 920) |
+
+The value is the same for every deadline. Items with fortification or refinement, and ancestral weapon fragments, are excluded. Removing the item cancels it, and a closed shop waits until it reopens.
+
+## Losing your shop
+
+If you go **5 days without logging in**, the shop is freed and your items go to market storage. They aren't lost:
+
+<Command cmd=".market storage">Opens your market storage.</Command>
+
+A shop that stays **empty and closed for 48 hours** is also freed. You can rename yours under **Manage shop → Rename**.
+
+## Can't buy?
+
+The usual reasons: a full inventory, not enough balance, the seller's shop has closed, or the item just sold.

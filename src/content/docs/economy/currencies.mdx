@@ -1,0 +1,54 @@
+---
+title: Currencies
+description: The five Sangria Falls Bank currencies (Ourosangue, Sangricoins, Quitina, Ressonador and Cristais), where each comes from and what it's spent on.
+summary: Ourosangue is everyday money; Sangricoins pay for meditation and some resets (1 = 35 Ourosangue, one way); Quitina gives 2x XP; Ressonador rolls Sangrulho eggs; Cristais upgrade pets. All live in the Bank.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - banco
+  - recompensa-online
+  - pets
+  - sangrulhos
+  - postos-avancados
+  - passe-de-batalha
+  - masmorras
+  - arena-ilusional
+labels: [official]
+sidebar:
+  order: 1
+---
+
+import FilterTable from '../../../components/FilterTable.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+Your Bank holds five balances. None of them takes inventory space or is lost on death.
+
+<FilterTable placeholder="Filter currencies…">
+
+| Currency | Comes from | Spent on | As an item? |
+|---|---|---|---|
+| **Ourosangue** (everyday money) | Events, Balthazar's contracts, Market sales, the Shadow Merchant, gathering, Outpost missions, exchanging Sangricoins | Market and shop purchases, the Vault, Arena entry, character/weapon/blood prestige, Transfusions, class evolutions, Sangrulho fusion, fortification, the Casino | No |
+| **Sangricoins** (special) | Reality Rupture, Goreswine's Judgment, Tower of the Immortals, the Online Reward, Battle Pass, Outpost weeklies, donations | Meditation, speeding up Sangrulho incubation, some resets (pet Cristais, plasma reset), profession prestige and paid profession changes, furniture | No |
+| **Quitina** (Chitin) | Outpost missions, Battle Pass | 2x XP for 30 minutes on Character, Weapon or Blood | **Yes**, the only one you can withdraw |
+| **Ressonador** | Illusory Arena (rare prize), Master and Nightmare dungeons, Battle Pass, events; Richard's quest gives the first 2 | Rolling Sangrulho eggs (1 per use) | Exists as an item; deposit it |
+| **Cristais** | Master and Nightmare dungeon rewards, drops | Upgrading pet attributes (1 per attempt) | Exists as an item; deposit it |
+
+</FilterTable>
+
+<Aside type="note" title="Exchange">
+**1 Sangricoin = 35 Ourosangue**, and only that way round. You can't turn Ourosangue into Sangricoins.
+</Aside>
+
+## Starting balance
+
+You start with **25 Sangricoins** and earn **10,000 Ourosangue** during the tutorial.
+
+## Retired currency
+
+The old *Greater Essence* item was retired, and its balance was converted to Ourosangue. If you still have some, deposit it through `.menu bank` → *Deposit everything from inventory*. Each unit becomes 1,000 Ourosangue.
+
+## Decimals
+
+Some systems pay or charge fractions, such as the Shadow Merchant and meditation (0.35 Sangricoin per minute), so balances can show decimals.
+
+More detail: [Bank](/economy/bank/), [Quitina](/character/quitina/), [Online Reward](/economy/online-reward/).

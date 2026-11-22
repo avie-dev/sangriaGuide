@@ -23,7 +23,7 @@ A page stub is never counted as finished content.
 | 3 | Site structure and reusable components | Done (2026-11-22) | Components: QuickFacts, Requirements, PlayModes (interface/chat tabs), Command, Currency, CostTable, ClassCard, ClassGrid (filterable), ProgressionPath, Checklist, FilterTable, Label, Unverified, plus automatic breadcrumbs, Before you read, Related guides, Sources, Discord summary and link previews. Validated data collections in `src/data/` (currencies, classes, cost tables; source ids, class references and totals checked at build). Open questions page. Internal link and anchor checking at build (starlight-links-validator); `npm run check:external` for outside links. Component reference at /about/components/. |
 | 4 | Beginner walkthrough | Done (2026-11-22) | 36 pages written: the 20 Getting started pages (what Sangria Falls is, vs vanilla, vs Bloodcraft, joining, interface install and troubleshooting, chat-only play, language, HUD, website panel, tutorial, first class, city, teleports, NPCs, first castle, first-day and first-week checklists, beginner mistakes) and the walkthrough overview plus Stages 1–15. Every claim is checked against the official guides; none is confirmed in game yet (`verified: partly checked`). Open questions Q-001, Q-002, Q-006, Q-008, Q-009, Q-012, Q-013 and Q-017 are flagged inline where they apply. |
 | 5 | Progression, class and meditation guides | Done (2026-11-22) | 33 pages: Character (9: levels and XP, prestige with all 20 buffs, XP bonuses, Quitina, weapon mastery, blood lineage, statistics with an attribute glossary, profile), Meditation (8: how it works, costs and rates, Double Meditation, Auto-Prestige, AFK settings, worked examples, troubleshooting) and Classes (16: all 11 classes plus the Awakened translated from the Portuguese class pages, choosing a class, evolutions, Training Room). Class tables (evolutions, per-grade attributes, defaults) come from `src/data/class-details.json`, which `research/class-data.mjs` parses from the official pages; it found 5 published totals that don't add up (Q-018, Q-019), which the pages flag. New open questions Q-018 to Q-021. |
-| 6 | Economy, professions, pets, equipment | Not started | |
+| 6 | Economy, professions, pets, equipment | Done (2026-11-22) | 49 pages. Economy (12: currencies, Bank, Vault, Market, contracts, Shadow Merchant, Casino, Online Reward, Prisoners, an earning guide of official payouts and limits, budgets totalled from official prices). Professions (11: orders, each trade, a gathering comparison, services, aquarium). Companions (10: pets, capture, souls and tiers, levels, Cristais, recommendations, Sangrulhos, eggs, fusion). Equipment (16: weapons, affinity, armour and jewellery, fortification, refinement, Perfect gems, spell jewels, bonuses by class, upgrade priorities, six build-archetype frameworks with no claimed optimum). New cost tables (vault, chest expansion, Mobile Depot, profession prestige, fortification) and a ClassBonusSummary component. New open question Q-022. |
 | 7 | Dungeons, events, endgame | Not started | |
 | 8 | Calculators and interactive tools | Not started | |
 | 9 | Source verification and QA | Not started | |
@@ -34,7 +34,7 @@ A page stub is never counted as finished content.
 <!-- coverage:start -->
 _Generated from `docs/coverage.yaml` by `npm run coverage`. Edit the YAML, not these tables._
 
-**191 pages planned** · written: 69 · drafts: 0 · verified: 0 · published: 69 · page stubs: 13
+**191 pages planned** · written: 118 · drafts: 0 · verified: 0 · published: 118 · page stubs: 9
 
 | Phase | Pages |
 |---|---|
@@ -143,70 +143,70 @@ _Generated from `docs/coverage.yaml` by `npm run coverage`. Edit the YAML, not t
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Equipment and builds <br>`/equipment/` · phase 6 | `masmorras`, `oficios-ferreiro-alfaiate-encantador` | sources found | — | — | page stub |  |
-| Weapon progression <br>`/equipment/weapons/` · phase 6 | `masmorras`, `mercado`, `mercador-sombrio` | sources found | — | — | — | Q-008 |
-| Weapon affinity <br>`/equipment/weapon-affinity/` · phase 6 | `masmorras`, `comandos` | sources found | — | — | — |  |
-| Armour and jewellery <br>`/equipment/armour-and-jewellery/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `mercado` | sources found | — | — | — | Q-008 |
-| Fortification <br>`/equipment/fortification/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `servicos-de-profissao` | sources found | — | — | — |  |
-| Refinement <br>`/equipment/refinement/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `coleta-minerador-pescador-lenhador`, `conquistas` | sources found | — | — | — |  |
-| Perfect Gems <br>`/equipment/perfect-gems/` · phase 6 | `masmorras` | sources found | — | — | — |  |
-| Spell jewels <br>`/equipment/spell-jewels/` · phase 6 | — | — | — | — | — | Q-007 |
-| Which bonuses help which class <br>`/equipment/bonuses-by-class/` · phase 6 | `classes`, `class-hub` | sources found | — | — | — |  |
-| Upgrade priorities <br>`/equipment/upgrade-priorities/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `masmorras` | sources found | — | — | — | Community recommendation |
-| Physical DPS builds <br>`/equipment/builds-physical/` · phase 6 | `classes` | sources found | — | — | — | Community recommendation; no testing data yet |
-| Magical DPS builds <br>`/equipment/builds-magical/` · phase 6 | `classes`, `class-draekhar` | sources found | — | — | — | Community recommendation; no testing data yet |
-| Tank builds <br>`/equipment/builds-tank/` · phase 6 | `classes`, `class-mortak` | sources found | — | — | — | Community recommendation; no testing data yet |
-| Healer builds <br>`/equipment/builds-healer/` · phase 6 | `classes`, `class-sangrael` | sources found | — | — | — | Community recommendation; no testing data yet |
-| Summoner builds <br>`/equipment/builds-summoner/` · phase 6 | `classes`, `class-sepulkros`, `class-lamuerte` | sources found | — | — | — | Community recommendation; no testing data yet |
-| Hybrid builds <br>`/equipment/builds-hybrid/` · phase 6 | `classes` | sources found | — | — | — | Community recommendation; no testing data yet |
+| Equipment and builds <br>`/equipment/` · phase 6 | `masmorras`, `oficios-ferreiro-alfaiate-encantador` | read | written | partly checked | published |  |
+| Weapon progression <br>`/equipment/weapons/` · phase 6 | `masmorras`, `mercado`, `mercador-sombrio` | read | written | partly checked | published | Q-008; Q-022 |
+| Weapon affinity <br>`/equipment/weapon-affinity/` · phase 6 | `masmorras`, `comandos` | read | written | partly checked | published |  |
+| Armour and jewellery <br>`/equipment/armour-and-jewellery/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `mercado` | read | written | partly checked | published | Q-008 |
+| Fortification <br>`/equipment/fortification/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `servicos-de-profissao` | read | written | partly checked | published |  |
+| Refinement <br>`/equipment/refinement/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `coleta-minerador-pescador-lenhador`, `conquistas` | read | written | partly checked | published |  |
+| Perfect Gems <br>`/equipment/perfect-gems/` · phase 6 | `masmorras` | read | written | partly checked | published |  |
+| Spell jewels <br>`/equipment/spell-jewels/` · phase 6 | — | read | written | partly checked | published | Q-007 |
+| Which bonuses help which class <br>`/equipment/bonuses-by-class/` · phase 6 | `classes`, `class-hub` | read | written | partly checked | published |  |
+| Upgrade priorities <br>`/equipment/upgrade-priorities/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `masmorras` | read | written | partly checked | published | Community recommendation |
+| Physical DPS builds <br>`/equipment/builds-physical/` · phase 6 | `classes` | read | written | partly checked | published | Community recommendation; no testing data yet |
+| Magical DPS builds <br>`/equipment/builds-magical/` · phase 6 | `classes`, `class-draekhar` | read | written | partly checked | published | Community recommendation; no testing data yet |
+| Tank builds <br>`/equipment/builds-tank/` · phase 6 | `classes`, `class-mortak` | read | written | partly checked | published | Community recommendation; no testing data yet |
+| Healer builds <br>`/equipment/builds-healer/` · phase 6 | `classes`, `class-sangrael` | read | written | partly checked | published | Community recommendation; no testing data yet |
+| Summoner builds <br>`/equipment/builds-summoner/` · phase 6 | `classes`, `class-sepulkros`, `class-lamuerte` | read | written | partly checked | published | Community recommendation; no testing data yet |
+| Hybrid builds <br>`/equipment/builds-hybrid/` · phase 6 | `classes` | read | written | partly checked | published | Community recommendation; no testing data yet |
 
 ### Pets and Sangrulhos
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Pets and Sangrulhos <br>`/companions/` · phase 6 | `pets`, `sangrulhos`, `classes` | sources found | — | — | page stub |  |
-| How pets work <br>`/companions/pets/` · phase 6 | `pets` | read | — | — | — |  |
-| Capturing pets <br>`/companions/pet-capture/` · phase 6 | `pets`, `escolas` | read | — | — | — |  |
-| Pet souls <br>`/companions/pet-souls/` · phase 6 | `pets`, `coleta-minerador-pescador-lenhador`, `arena-ilusional` | read | — | — | — |  |
-| Pet tiers, levels and prestige <br>`/companions/pet-progression/` · phase 6 | `pets`, `meditacao` | sources found | — | — | — |  |
-| Pet crystals <br>`/companions/pet-crystals/` · phase 6 | `pets`, `masmorras` | sources found | — | — | — |  |
-| Recommended pets and upgrade priorities <br>`/companions/pet-recommendations/` · phase 6 | `pets` | sources found | — | — | — | Community recommendation |
-| Sangrulhos <br>`/companions/sangrulhos/` · phase 6 | `sangrulhos` | sources found | — | — | — |  |
-| Sangrulho eggs and incubation <br>`/companions/sangrulho-eggs/` · phase 6 | `sangrulhos`, `masmorras`, `arena-ilusional` | sources found | — | — | — |  |
-| Sangrulho fusion and duplicates <br>`/companions/sangrulho-fusion/` · phase 6 | `sangrulhos` | sources found | — | — | — |  |
+| Pets and Sangrulhos <br>`/companions/` · phase 6 | `pets`, `sangrulhos`, `classes` | read | written | partly checked | published |  |
+| How pets work <br>`/companions/pets/` · phase 6 | `pets` | read | written | partly checked | published |  |
+| Capturing pets <br>`/companions/pet-capture/` · phase 6 | `pets`, `escolas` | read | written | partly checked | published |  |
+| Pet souls <br>`/companions/pet-souls/` · phase 6 | `pets`, `coleta-minerador-pescador-lenhador`, `arena-ilusional` | read | written | partly checked | published |  |
+| Pet tiers, levels and prestige <br>`/companions/pet-progression/` · phase 6 | `pets`, `meditacao` | read | written | partly checked | published |  |
+| Pet crystals <br>`/companions/pet-crystals/` · phase 6 | `pets`, `masmorras` | read | written | partly checked | published |  |
+| Recommended pets and upgrade priorities <br>`/companions/pet-recommendations/` · phase 6 | `pets` | read | written | partly checked | published | Community recommendation |
+| Sangrulhos <br>`/companions/sangrulhos/` · phase 6 | `sangrulhos` | read | written | partly checked | published |  |
+| Sangrulho eggs and incubation <br>`/companions/sangrulho-eggs/` · phase 6 | `sangrulhos`, `masmorras`, `arena-ilusional` | read | written | partly checked | published |  |
+| Sangrulho fusion and duplicates <br>`/companions/sangrulho-fusion/` · phase 6 | `sangrulhos` | read | written | partly checked | published |  |
 
 ### Professions
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Professions <br>`/professions/` · phase 6 | `profissoes` | sources found | — | — | page stub |  |
-| Daily orders and profession XP <br>`/professions/orders/` · phase 6 | `profissoes` | sources found | — | — | — |  |
-| Blacksmith <br>`/professions/blacksmith/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `profissoes` | sources found | — | — | — |  |
-| Tailor <br>`/professions/tailor/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `profissoes` | sources found | — | — | — |  |
-| Enchanter <br>`/professions/enchanter/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `profissoes` | sources found | — | — | — |  |
-| Miner <br>`/professions/miner/` · phase 6 | `coleta-minerador-pescador-lenhador`, `profissoes` | sources found | — | — | — |  |
-| Fisher <br>`/professions/fisher/` · phase 6 | `coleta-minerador-pescador-lenhador`, `profissoes`, `aquario` | sources found | — | — | — |  |
-| Woodcutter <br>`/professions/woodcutter/` · phase 6 | `coleta-minerador-pescador-lenhador`, `profissoes` | sources found | — | — | — |  |
-| Comparing the gathering professions <br>`/professions/gathering-comparison/` · phase 6 | `coleta-minerador-pescador-lenhador`, `oficios-ferreiro-alfaiate-encantador` | sources found | — | — | — | Q-012 |
-| Profession services <br>`/professions/services/` · phase 6 | `servicos-de-profissao` | sources found | — | — | — |  |
-| Aquarium <br>`/professions/aquarium/` · phase 6 | `aquario` | sources found | — | — | — |  |
+| Professions <br>`/professions/` · phase 6 | `profissoes` | read | written | partly checked | published |  |
+| Daily orders and profession XP <br>`/professions/orders/` · phase 6 | `profissoes` | read | written | partly checked | published |  |
+| Blacksmith <br>`/professions/blacksmith/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `profissoes` | read | written | partly checked | published |  |
+| Tailor <br>`/professions/tailor/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `profissoes` | read | written | partly checked | published |  |
+| Enchanter <br>`/professions/enchanter/` · phase 6 | `oficios-ferreiro-alfaiate-encantador`, `profissoes` | read | written | partly checked | published |  |
+| Miner <br>`/professions/miner/` · phase 6 | `coleta-minerador-pescador-lenhador`, `profissoes` | read | written | partly checked | published |  |
+| Fisher <br>`/professions/fisher/` · phase 6 | `coleta-minerador-pescador-lenhador`, `profissoes`, `aquario` | read | written | partly checked | published |  |
+| Woodcutter <br>`/professions/woodcutter/` · phase 6 | `coleta-minerador-pescador-lenhador`, `profissoes` | read | written | partly checked | published |  |
+| Comparing the gathering professions <br>`/professions/gathering-comparison/` · phase 6 | `coleta-minerador-pescador-lenhador`, `oficios-ferreiro-alfaiate-encantador` | read | written | partly checked | published | Q-012 |
+| Profession services <br>`/professions/services/` · phase 6 | `servicos-de-profissao` | read | written | partly checked | published |  |
+| Aquarium <br>`/professions/aquarium/` · phase 6 | `aquario` | read | written | partly checked | published |  |
 
 ### Economy
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Economy <br>`/economy/` · phase 6 | `banco` | sources found | — | — | page stub |  |
-| Currencies <br>`/economy/currencies/` · phase 6 | `banco`, `recompensa-online`, `pets`, `sangrulhos` | sources found | — | — | — |  |
-| Bank <br>`/economy/bank/` · phase 6 | `banco` | sources found | — | — | — |  |
-| Vault <br>`/economy/vault/` · phase 6 | `cofre` | sources found | — | — | — |  |
-| Player market and shops <br>`/economy/market/` · phase 6 | `mercado` | sources found | — | — | — |  |
-| Contracts <br>`/economy/contracts/` · phase 6 | `contratos` | sources found | — | — | — |  |
-| Shadow Merchant <br>`/economy/shadow-merchant/` · phase 6 | `mercador-sombrio` | sources found | — | — | — |  |
-| Casino <br>`/economy/casino/` · phase 6 | `cassino` | sources found | — | — | — |  |
-| Online reward <br>`/economy/online-reward/` · phase 6 | `recompensa-online` | sources found | — | — | — |  |
-| Prisoner market <br>`/economy/prisoners/` · phase 6 | `prisioneiros` | sources found | — | — | — |  |
-| How to earn currency <br>`/economy/earning-guide/` · phase 6 | `coleta-minerador-pescador-lenhador`, `contratos`, `mercador-sombrio`, `postos-avancados`, `recompensa-online`, `ruptura-da-realidade`, `torre-dos-imortais` | sources found | — | — | — | Income rates are not published; use ranges labelled as estimates |
-| Example budgets <br>`/economy/budgets/` · phase 6 | `nivel-e-prestigio`, `classes`, `transfusao-e-plasmas`, `maestria-de-arma`, `linhagem-de-sangue` | sources found | — | — | — |  |
+| Economy <br>`/economy/` · phase 6 | `banco` | read | written | partly checked | published |  |
+| Currencies <br>`/economy/currencies/` · phase 6 | `banco`, `recompensa-online`, `pets`, `sangrulhos` | read | written | partly checked | published |  |
+| Bank <br>`/economy/bank/` · phase 6 | `banco` | read | written | partly checked | published |  |
+| Vault <br>`/economy/vault/` · phase 6 | `cofre` | read | written | partly checked | published |  |
+| Player market and shops <br>`/economy/market/` · phase 6 | `mercado` | read | written | partly checked | published |  |
+| Contracts <br>`/economy/contracts/` · phase 6 | `contratos` | read | written | partly checked | published |  |
+| Shadow Merchant <br>`/economy/shadow-merchant/` · phase 6 | `mercador-sombrio` | read | written | partly checked | published |  |
+| Casino <br>`/economy/casino/` · phase 6 | `cassino` | read | written | partly checked | published |  |
+| Online reward <br>`/economy/online-reward/` · phase 6 | `recompensa-online` | read | written | partly checked | published |  |
+| Prisoner market <br>`/economy/prisoners/` · phase 6 | `prisioneiros` | read | written | partly checked | published |  |
+| How to earn currency <br>`/economy/earning-guide/` · phase 6 | `coleta-minerador-pescador-lenhador`, `contratos`, `mercador-sombrio`, `postos-avancados`, `recompensa-online`, `ruptura-da-realidade`, `torre-dos-imortais` | read | written | partly checked | published | Income rates are not published; use ranges labelled as estimates |
+| Example budgets <br>`/economy/budgets/` · phase 6 | `nivel-e-prestigio`, `classes`, `transfusao-e-plasmas`, `maestria-de-arma`, `linhagem-de-sangue` | read | written | partly checked | published |  |
 
 ### Dungeons
 

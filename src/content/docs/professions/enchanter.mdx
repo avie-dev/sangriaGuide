@@ -1,0 +1,46 @@
+---
+title: Enchanter
+description: The Sangria Falls Enchanter (mentor Mirana) fortifies necklaces for +2 Magic Power per level and refines them with Perfect Amethyst and Exceptional Magical Component.
+summary: The Enchanter fortifies your necklace (+2 Magic Power per level; 2,000 Ourosangue per level) and refines it with Perfect Amethyst + Exceptional Magical Component. XP comes from making rings, pendants and amulets.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - oficios-ferreiro-alfaiate-encantador
+  - profissoes
+  - conquistas
+labels: [official]
+sidebar:
+  order: 4
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Command from '../../../components/Command.astro';
+
+<QuickFacts
+	facts={[
+		['Mentor', 'Mirana, Professions Hall'],
+		['Works on', 'Necklace (shown as EQUIPPED GRIMOIRE)'],
+		['Fortification', '+2 Magic Power per level (P1–P10)'],
+		['Refinement materials', 'Perfect Amethyst + Exceptional Magical Component'],
+		['Component comes from', 'Fisher (prestige 5+), Dunley Outpost, Market'],
+	]}
+/>
+
+## Earning XP
+
+Make rings, pendants and amulets at the **Artisan Table**. Only items you set to be produced count.
+
+## Fortifying the necklace
+
+Fortify up to your Enchanter prestige (max 10), at 2,000 Ourosangue per level. The panel shows your necklace as **EQUIPPED GRIMOIRE**, plus pieces IN INVENTORY.
+
+## Refining the necklace
+
+Up to 5 refinements, each rolling +100/+200/+300 durability and +1/+2/+3 power. Refinement *n* uses *n* of each material. Prestige 7 unlocks 3 refinements and prestige 9 unlocks 4. **Mirana's achievement** unlocks the first 2 right away, and the 5th at prestige 10.
+
+## Commands
+
+<Command cmd=".enchanter panel">Opens the Fortification & Refinement panel from anywhere.</Command>
+<Command cmd=".item check colar">Shows your necklace's fortification, refinement and durability.</Command>
+
+At the mentor, *View equipped necklace.* shows the same.

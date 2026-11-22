@@ -1,0 +1,64 @@
+---
+title: Pets
+description: How Sangria Falls pets work, from summoning and dismissing to favourites, where pets can and can't go, the collections, aura and crown, with and without the interface.
+summary: A pet is a world boss you captured. One is summoned at a time (F2 or .pet). Pets can join you in the Rupture, Illusional Arena and Tower, but not the city, dungeons, the Trial or the class test room.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - pets
+labels: [official]
+sidebar:
+  order: 1
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+
+<QuickFacts
+	facts={[
+		['Summoned', '1 at a time'],
+		['Level / prestige', '1–100 / 20'],
+		['Tier', 'T0 to T5'],
+		['Extra attributes', 'Up to 5 with Cristais, each up to +10'],
+		['Open', 'F2, or .pet'],
+	]}
+/>
+
+## The panel
+
+Press **F2**. The tabs at the top are the collections: **ACT 1 to ACT 4, PRIMAL, SPECIAL, SANGRIS**, plus **SOULS** and **CRISTAIS**. Pets you don't have yet appear in black and white. Click a pet you own to open its sheet.
+
+*Special Pets* and the *Sangris* pets (Alfa Sangris, and Homem & Brutus Sangris) only come from server events. Homem fights beside Brutus and shares his tier, Cristais, aura and crown. Rift Incursion gate bosses can also become pets, in the **Primordial** category.
+
+## Summoning and dismissing
+
+<PlayModes>
+	<Fragment slot="interface">**F2** → click the pet → **SUMMON** (or **DISMISS**). Star up to **3 favourites** for the FAVORITE PETS strip, one click from summoning. The **Clap** emote summons your last pet, and clapping again puts it away. Click the pet's portrait on the HUD to open its sheet.</Fragment>
+	<Fragment slot="chat">
+		<Command cmd=".pet invocar 3">Summons pet number 3 (the number appears before each name in the menu list). Short: `.pet i 3`.</Command>
+		<Command cmd=".pet retirar">Puts away the active pet (short: `.pet di`).</Command>
+		<Command cmd=".pet info">The summoned pet's sheet; `.pet info 3` shows another's.</Command>
+	</Fragment>
+</PlayModes>
+
+There's a 5-second wait between summons. You can't summon in combat, while downed, in bat form, in Dominant Presence or during the initial tutorial.
+
+## Where pets can go
+
+| Allowed | Not allowed (the pet is stored automatically) |
+|---|---|
+| Open world, Reality Rupture, Illusional Arena, Tower of the Immortals, the Meditation Chamber | City of Sangria Falls, dungeons, Goreswine's Judgment (the Trial), the class test room |
+
+After bat form or travel, the pet comes back on its own. After the city, a dungeon or the test room, summon it again if it doesn't. If your pet dies, nothing is lost: leave combat and summon it again.
+
+## Aura and crown
+
+A pet with a tier gains an **aura**, and at **T5** a **crown**. To hide them: F2 → the pet → **VISUAL** → toggle *Body aura* or *Crown (Tier 5)*. This is cosmetic only, and the tier bonuses stay.
+
+## More on pets
+
+- [Capturing pets](/companions/pet-capture/)
+- [Pet souls and tiers](/companions/pet-souls/)
+- [Pet levels and prestige](/companions/pet-progression/)
+- [Pet Cristais](/companions/pet-crystals/)

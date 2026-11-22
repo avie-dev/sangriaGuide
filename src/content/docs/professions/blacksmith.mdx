@@ -1,0 +1,47 @@
+---
+title: Blacksmith
+description: The Sangria Falls Blacksmith (mentor Ornn) fortifies weapons for +2 Physical Power per level and refines them with Perfect Ruby and Precious Stone. How it earns XP and how its panel works.
+summary: The Blacksmith fortifies weapons (+2 Physical Power per level, up to its prestige, 2,000 Ourosangue per level) and refines them with Perfect Ruby + Precious Stone. XP comes from forging, tempering and repairing weapons.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - oficios-ferreiro-alfaiate-encantador
+  - profissoes
+  - conquistas
+  - servicos-de-profissao
+labels: [official]
+sidebar:
+  order: 2
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Command from '../../../components/Command.astro';
+
+<QuickFacts
+	facts={[
+		['Mentor', 'Ornn, Professions Hall'],
+		['Works on', 'Weapons'],
+		['Fortification', '+2 Physical Power per level (P1–P10)'],
+		['Refinement materials', 'Perfect Ruby + Precious Stone'],
+		['Component comes from', 'Miner (prestige 5+), Dunley Outpost, Market'],
+	]}
+/>
+
+## Earning XP
+
+Forge weapons at the workbench, temper or repair weapons at the Forge, and pull items from the Fusion Forge. XP goes to whoever **set the item to be produced**. Buying it ready-made, taking it from a chest or cancelling production gives none. F4 → Details → *HOW TO EARN XP* shows each item's XP.
+
+## Fortifying weapons
+
+You can fortify up to your Blacksmith prestige (max 10). It costs 2,000 Ourosangue per level gained and only goes up. Each level also raises maximum durability. Your panel lists WEAPONS IN INVENTORY. See [Fortification](/equipment/fortification/).
+
+## Refining weapons
+
+Up to 5 refinements per weapon, each rolling +100/+200/+300 durability and +1/+2/+3 power. Refinement *n* uses *n* Perfect Rubies and *n* Precious Stones. Prestige 7 unlocks 3 refinements and prestige 9 unlocks 4. **Ornn's achievement** unlocks the first 2 right away, and the 5th at prestige 10. See [Refinement](/equipment/refinement/).
+
+## Commands
+
+<Command cmd=".blacksmith panel">Opens the Fortification & Refinement panel from anywhere.</Command>
+<Command cmd=".item check arma">Shows your equipped weapon's fortification, refinement and durability.</Command>
+
+At the mentor, *View equipped weapon.* shows the same. With 5 prestiges you can [sell your services](/professions/services/).

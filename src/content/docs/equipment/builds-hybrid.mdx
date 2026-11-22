@@ -1,0 +1,43 @@
+---
+title: Hybrid builds
+description: Hybrid scaling on Sangria Falls. La Muerte (weapon skills that deal magic damage), the Awakened, and kits that convert damage types. A framework, not a tested build.
+summary: Officially hybrid are La Muerte (benefits from Spell Power, Spell Crit, Weapon Skill Power and Minion Damage, not Physical Power) and the Awakened. Some physical kits convert magic effects to physical. No tested builds exist.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - classes
+  - class-lamuerte
+  - class-despertado
+  - class-bastien
+  - class-carmesyne
+  - class-umbrellis
+labels: [community, verify]
+sidebar:
+  order: 15
+---
+
+import ClassDefaults from '../../../components/ClassDefaults.astro';
+import Unverified from '../../../components/Unverified.astro';
+
+<Unverified q="Q-009">There are no tested builds, and how mixed bonuses stack isn't documented.</Unverified>
+
+## Officially hybrid
+
+| Class | Profile | Benefits from | Doesn't use |
+|---|---|---|---|
+| [La Muerte](/classes/la-muerte/) | Hybrid | Spell Power, Spell Crit, Weapon Skill Power, Minion Damage | Physical Power |
+| [Awakened](/classes/awakened/) | Hybrid | Physical Power, Spell Power (+5 each from the class) | — |
+
+La Muerte's Q and E are **weapon skills whose damage is all magic**. So Weapon Skill Power and Spell Power both matter, according to its page. The Awakened has no kit, no evolutions, and no mastery or lineage attributes. It's a starting state, not a build.
+
+## Conversions inside physical kits
+
+Some physical classes use effects that start as magic but are **converted to physical**, so they still scale as physical:
+
+- **Bastien:** the Holy Explosion at the whip's tip and at the end of the spear's Q.
+- **Carmesyne:** the sword's E (dash, final impact and Holy Explosion).
+- **Umbrellis:** Lucile's Lethal Injection burst on the Slashers' E.
+
+## Default attributes
+
+<ClassDefaults id="la-muerte" />

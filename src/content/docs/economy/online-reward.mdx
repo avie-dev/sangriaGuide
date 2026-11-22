@@ -1,0 +1,60 @@
+---
+title: Online Reward
+description: Sangria Falls pays Sangricoins just for being online. After 30 minutes in a day, a reward every 15 minutes, rising from 0.40 to 0.70 with a daily streak.
+summary: Be online 30 minutes in a day (Brasília time), then get a Sangricoin reward every 15 minutes, with no cap. Each is worth 0.35 + 0.05 per streak day, up to 0.70 from day 7. Check it with .online.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - recompensa-online
+labels: [official]
+sidebar:
+  order: 8
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<QuickFacts
+	facts={[
+		['Unlock', '30 minutes online in a day (sessions add up)'],
+		['Then', 'One reward every 15 minutes online, no daily limit'],
+		['Value', '0.35 + 0.05 per streak day: 0.40 → 0.70'],
+		['Day resets', 'Midnight, Brasília time'],
+		['Paid to', 'Your Bank, with an [ONLINE REWARD] notice'],
+	]}
+/>
+
+It's automatic. Stay connected with your character in the world, and there's no NPC, panel or command needed to get paid. It works the same with or without the interface.
+
+<Command cmd=".online">Shows your streak, today's online time, time to the next reward and its value, and what you've earned today and in total. `.onl` also works.</Command>
+
+## Streak values
+
+| Streak day | Per reward |
+|---|---|
+| 1 | 0.40 |
+| 2 | 0.45 |
+| 3 | 0.50 |
+| 4 | 0.55 |
+| 5 | 0.60 |
+| 6 | 0.65 |
+| 7 and after | 0.70 |
+
+A day counts towards the streak only when you complete its 30 minutes. A whole day without them resets the streak to day 1. The streak keeps counting after day 7 (for your best), but the value stops rising.
+
+## Examples (official)
+
+- 1 hour online on day 1: rewards at 30 min, 45 min and 1h, so 3 × 0.40 = **1.20**.
+- 1 hour with a 7-day streak: 3 × 0.70 = **2.10**.
+- 2 hours with a 7-day streak: 7 rewards = **4.90**.
+
+<Aside type="caution" title="Midnight">
+Time played before midnight stays with the day that ended. The new day starts from zero, so playing past midnight doesn't carry your minutes over. Leaving the game doesn't reset the day's time, though. If you left at 40 minutes, your next reward comes when the day's total reaches 45.
+</Aside>
+
+## Lost your streak to server downtime?
+
+Open a ticket on Discord (discord.gg/SangriaFalls) so the staff can review it.
+
+Sangricoins pay for meditation, Sangrulho incubation speed-ups and some resets, and exchange into Ourosangue at the Bank.

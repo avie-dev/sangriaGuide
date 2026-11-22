@@ -1,0 +1,58 @@
+---
+title: Casino
+description: The Sangria Falls Casino machines on the City Hall's second floor. Bets of 500–3,000 Ourosangue, the paytable, and how prizes scale.
+summary: Casino machines (City Hall, 2nd floor, above the teleport hub) take 500–3,000 Ourosangue per spin from your Bank. Each spin has 3 rows; matching rows pay, and Tattered Claws cancels the whole spin.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - cassino
+labels: [official]
+sidebar:
+  order: 7
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<QuickFacts
+	facts={[
+		['Where', 'City of Sangria Falls, City Hall 2nd floor (above the teleport hub)'],
+		['Bet', '500 to 3,000 Ourosangue per spin, from the Bank'],
+		['Rows', '3 per spin; each pays separately'],
+		['Play from afar', 'No: you must use a machine'],
+	]}
+/>
+
+The Casino is a set of betting machines that pay in Ourosangue. Walk up to one and interact to open the CASINO panel. Each machine serves one player at a time.
+
+## How to bet
+
+1. Choose the bet: 500, 1,000, 1,500, 2,000, 2,500 or 3,000.
+2. Check the **Prize multiplier** line.
+3. Click **SPIN**. The button shows the amount it will take.
+
+<Aside type="caution">
+Each SPIN charges immediately, with no confirmation. The bet and prize are settled the instant you spin, and the animation is just a show.
+</Aside>
+
+## Paytable
+
+For one matching row at the **minimum bet (500)**:
+
+| Three of | Pays |
+|---|---|
+| Fish | 250 |
+| Gem | 750 |
+| Jewel | 2,000 |
+| Twilight Call | 5,000 |
+| Magic Stone | 15,000 |
+| Demon Fragment | 100,000 |
+| Tattered Claws | Nothing, and **cancels the whole spin**, even other winning rows |
+
+Prizes scale with the bet: double at 1,000, six times at 3,000. **Betting more doesn't change your chance of winning**, only the prize size. The panel's *How it works* tab has the current paytable. If it differs from this page, the game is right.
+
+The official guide doesn't publish the odds of each symbol, so this wiki can't say whether the Casino pays back more or less than you put in.
+
+## Tracking
+
+The **History** tab shows spins, amount wagered, amount received, biggest prize and your balance (up or down). In the Bank statement, bets show as *Casino - bet* and prizes as *Casino - prize*.

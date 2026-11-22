@@ -1,0 +1,66 @@
+---
+title: Pet Cristais
+description: Sangria Falls pet Cristais add up to 5 extra attributes per pet, each up to +10, capped by tier. Evolving, failure, redistributing and resetting.
+summary: Each pet picks up to 5 attributes and evolves them with Cristais (1 per attempt; failure only costs the Cristal and raises the next chance). The tier caps the level (T1 +2 … T5 +10). Cristais come from Master and Nightmare dungeons.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - pets
+  - masmorras
+  - postos-avancados
+labels: [official]
+sidebar:
+  order: 5
+---
+
+import Command from '../../../components/Command.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+**Cristais** give a pet extra attributes, such as health, crit and speed. Each pet chooses **up to 5 attributes**, and each can reach **+10**.
+
+## Evolving
+
+<Steps>
+
+1. F2 → the pet → **CRYSTAL SYSTEM**.
+2. Under AVAILABLE ATTRIBUTES, click **+** on the attribute you want.
+3. Click **EVOLVE**. Each attempt spends **1 Cristal** from your Bank. The panel shows the CURRENT CHANCE.
+
+</Steps>
+
+**On failure**, you lose only the Cristal. The level doesn't drop, and the next chance rises a little.
+
+<Aside type="caution">
+The attribute **choice is final**. Only RESET undoes it.
+</Aside>
+
+## Tier caps
+
+| Pet tier | Max attribute level |
+|---|---|
+| T0 | Can't evolve |
+| T1 | +2 |
+| T2 | +4 |
+| T3 | +6 |
+| T4 | +8 |
+| T5 | +10 |
+
+See [Pet souls and tiers](/companions/pet-souls/).
+
+## Redistribute or reset
+
+| Option | Cost | Effect |
+|---|---|---|
+| **REDISTRIBUTE** | 15,000 Ourosangue | Resets the levels but keeps the chosen attributes |
+| **RESET** | 75 Sangricoins | Also erases the attribute choice |
+
+Both return **1 Cristal per level** the pet had. These returned Cristais are tied to that pet and **evolve without a roll**.
+
+## Getting Cristais
+
+- **Master and Nightmare dungeon rewards** (the Special roll), straight into your Bank.
+- The **Oakveil Woodlands Outpost** specialises in pets, souls and Cristais (from Rank III).
+- Have the item in your inventory? Deposit it:
+
+<Command cmd=".banco depositar cristal">Deposits the Cristais from your inventory into the Bank.</Command>
+<Command cmd=".pet cristais 3">Shows pet 3's Cristais.</Command>

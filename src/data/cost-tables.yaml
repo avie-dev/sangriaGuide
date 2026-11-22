@@ -45,3 +45,64 @@
     - { label: With VIP, cost: 8000 }
   note: Each Transfusion also needs 10 Pulses and yields 10 Plasmas. The limit is 250 Transfusions.
   sources: [transfusao-e-plasmas]
+
+- id: vault
+  title: Vault purchase
+  currency: ourosangue
+  rowLabel: Vault
+  rows:
+    - { label: 'Small vault (up to 4 chests)', cost: 5000 }
+    - { label: 'Large vault (up to 14 chests)', cost: 10000 }
+    - { label: 'Each extra chest', cost: 20000 }
+  note: One-time payments, no rent. The first chest comes with the vault. Requires Viktor's quest Worthy of a Vault first.
+  sources: [cofre]
+
+- id: vault-chest-expansion
+  title: Expanding one vault chest (21 to 77 slots)
+  currency: ourosangue
+  rowLabel: Expansion (+7 slots each)
+  rows:
+    - { label: '1st (28 slots)', cost: 2500 }
+    - { label: '2nd (35 slots)', cost: 5000 }
+    - { label: '3rd (42 slots)', cost: 7500 }
+    - { label: '4th (49 slots)', cost: 10000 }
+    - { label: '5th (56 slots)', cost: 12500 }
+    - { label: '6th (63 slots)', cost: 15000 }
+    - { label: '7th (70 slots)', cost: 17500 }
+    - { label: '8th (77 slots)', cost: 20000 }
+  total: 90000
+  note: Per chest.
+  sources: [cofre]
+
+- id: mobile-depot
+  title: Mobile Depot (5 to 27 slots)
+  currency: ourosangue
+  rowLabel: Step
+  rows:
+    - { label: 'Purchase (5 slots)', cost: 10000 }
+    - { label: '1st expansion', cost: 10000 }
+    - { label: '2nd expansion', cost: 15000 }
+    - { label: '3rd expansion', cost: 20000 }
+    - { label: '4th expansion', cost: 25000 }
+    - { label: '5th expansion (27 slots)', cost: 30000 }
+  total: 110000
+  note: Vault owners only. The guide doesn't give the slot count after each expansion, only 5 at purchase and 27 after the fifth.
+  sources: [cofre]
+
+- id: profession-prestige
+  title: Profession prestige
+  currency: sangricoins
+  rowLabel: Prestige
+  rows:
+    - { label: 'Each prestige (1–10)', cost: 75 }
+  note: Per profession; 750 Sangricoins for all ten. Paid from the Bank at level 100, with no confirmation.
+  sources: [profissoes]
+
+- id: fortification
+  title: Gear fortification
+  currency: ourosangue
+  rowLabel: Fortification
+  rows:
+    - { label: 'Per level gained (P1–P10)', cost: 2000 }
+  note: Per piece; P0 to P10 costs 20,000. You can fortify up to your craft prestige. The Tailor pays per armour piece. Hiring a provider adds their price.
+  sources: [oficios-ferreiro-alfaiate-encantador, servicos-de-profissao]

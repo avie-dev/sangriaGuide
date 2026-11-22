@@ -1,0 +1,81 @@
+---
+title: Shadow Merchant
+description: The Sangria Falls Shadow Merchant buys listed materials instantly from anywhere for a fixed price. How to open it, sample prices, and when the Market or contracts pay better.
+summary: Use the Taunt emote or .inv view to open the Shadow Merchant anywhere. It buys listed materials at fixed prices, instantly and with no undo. Common materials are worth very little; the Market's automatic sale pays 15% more but takes 7–30 days.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - mercador-sombrio
+  - mercado
+labels: [official]
+sidebar:
+  order: 6
+---
+
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import FilterTable from '../../../components/FilterTable.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+The **Shadow Merchant** is an automatic buyer. There's no NPC or shop: you open it wherever you are. It pays a fixed price per unit, straight into your Bank.
+
+## Opening and selling
+
+<PlayModes>
+	<Fragment slot="interface">
+		Use the **Taunt** emote, or type `.inv view`. (In combat, the emote doesn't open it.)
+
+		1. Under ITEMS IN INVENTORY, only items the Merchant buys appear. Click the ones to sell, or **Select all**.
+		2. Check each value and the **Total** under SELECTION.
+		3. Click **SELL SELECTED**.
+
+		The **?** button shows the full price table, including items you don't have.
+	</Fragment>
+	<Fragment slot="chat">
+		<Command cmd=".inv view">Calls the Shadow Merchant's chest in front of you (or brings it back and renews its time).</Command>
+		<Command cmd=".inv sell">Sells everything in the chest.</Command>
+	</Fragment>
+</PlayModes>
+
+<Aside type="caution">
+Sales are final, with no undo.
+</Aside>
+
+## What it pays
+
+Examples from the official guide, in Ourosangue per unit. The panel always shows the exact value.
+
+<FilterTable placeholder="Filter items…">
+
+| Item | Per unit |
+|---|---|
+| Wood, stone, pollen | 0.01 |
+| Plank, stone brick | 0.4 |
+| Copper ingot | 0.8 |
+| Iron ingot | 1 |
+| Seeds | 1.66 |
+| Fish, fish bone | 2 |
+| Flawless gems | 3.33 |
+| Gold ingot | 6 |
+| Dark silver ingot | 10 |
+| Primal Blood Essence | 35 |
+| Onyx tear | 50 |
+| Power core | 100 |
+| Ancestral weapon fragments | 200, 500 or 1,000 by type |
+| Soul Shards | 800 |
+| The Fish | 4,000 |
+
+</FilterTable>
+
+It buys only listed items: basic materials, hides, fish, ingots, flawless gems, seeds, paper, coins, ancestral weapon fragments and Soul Shards.
+
+## Merchant, Market or contracts?
+
+| Option | Pays | Speed |
+|---|---|---|
+| Shadow Merchant | Fixed, low for common materials | Instant |
+| Market automatic sale | 15% more per unit than the Merchant (not ancestral weapon fragments) | After a 7–30 day deadline |
+| Market listing | Your price | When a player buys |
+| Balthazar's contracts | Per contract | When you deliver |
+
+The official guide's advice: the Merchant is for clearing your inventory, not for getting rich.

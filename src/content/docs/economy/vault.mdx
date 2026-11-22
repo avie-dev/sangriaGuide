@@ -1,0 +1,73 @@
+---
+title: Vault
+description: The Sangria Falls Vault is a private storage room in the Sangria Bank. Viktor's unlock quest, small and large vault prices, chest expansions, the Mobile Depot, and what happens if you're away.
+summary: Do Viktor's quest Worthy of a Vault, then buy a small (5,000) or large (10,000 Ourosangue) vault, a one-time cost. Chests grow from 21 to 77 slots (90,000 each). A Mobile Depot opens anywhere from your bag.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - cofre
+labels: [official]
+sidebar:
+  order: 3
+---
+
+import CostTable from '../../../components/CostTable.astro';
+import Command from '../../../components/Command.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+The **Vault** is a private room inside the **Sangria Bank**, in the north of Dunley. Only you can enter, and your chests appear when you arrive. You pay once, with no rent.
+
+## Getting there
+
+Use the **Sangria Bank** brazier at the city teleport hub. It opens after Vlad Parker's teleport quest. Inside, interact with the hall entrance to appear in your vault. To leave, interact with the vault door.
+
+<Command cmd=".interface cofre">Opens the vault panel from anywhere: chests, expansions, buying a chest, even buying the vault.</Command>
+
+## Unlocking and buying
+
+<Steps>
+
+1. Talk to **Viktor** in the Bank hall and choose *I accept the Trial*.
+2. Complete ***Worthy of a Vault***:
+   - harvest 3 bloods at 40% quality or higher
+   - collect 500 stone
+   - deliver 15 Copper Ingots to Viktor
+   - defeat 3 guardians at the copper mine
+   - return to Viktor
+3. Talk to Viktor again and choose a **Large** or **Small** vault. He tells you your vault number.
+
+</Steps>
+
+The quest is done only once. Vaults are limited, and Viktor shows how many of each size are free. If none are left, you wait for an opening.
+
+<CostTable id="vault" />
+
+## Growing it
+
+Every chest starts at 21 slots and grows by 7 per expansion, to 77. Expand from Viktor (*My chests*) or the vault panel.
+
+<CostTable id="vault-chest-expansion" />
+
+## Using it
+
+- Click a chest in the **Chests** strip to move stacks between it and your inventory. *Organize chest* tidies it, and *Store matching* fills it with items it already holds.
+- **G** stores everything matching across all vault chests. It never touches your first 8 slots, equipped weapon or quest items, and doesn't work in combat.
+- **=** or **MANAGE** lists all items totalled across chests. You can search, filter, or **Take** a quantity straight to your bag.
+
+## Mobile Depot
+
+A chest bound to your vault that opens anywhere. Only vault owners can buy it, from Viktor or the panel.
+
+<CostTable id="mobile-depot" />
+
+To open it, **equip a bag and right-click it**, or use `.depot open`. Only you can open it, not even your clan. Items must be moved to your inventory, never straight to the ground, and the equipped bag itself can't go in. Without a vault it won't open, but the items stay stored. If it won't open, step away from chests and stations.
+
+## If you're away or downsize
+
+<Aside type="caution" title="15 days away">
+If you go **15 days without logging in**, you lose the **room only**. Chests, levels and items are kept until you buy another vault, and you don't redo the quest.
+</Aside>
+
+- **Releasing** the vault (Viktor or the panel) gives no refund, but chests and items are kept for next time.
+- Moving from a large to a small vault keeps the first 4 chests active. The rest go dormant with everything inside, and come back if you have a large vault again.
+- Nobody else can use your vault, not even your clan. For shared storage, use castle chests.

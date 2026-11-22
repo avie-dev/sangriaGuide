@@ -1,28 +1,76 @@
 ---
 title: Professions
-description: "The three crafting and three gathering professions, and how they pay."
-status: planned
+description: "Sangria Falls professions: three crafting and three gathering trades, levels, prestige, changing trades and what each one gives."
+summary: Keep one crafting (Blacksmith, Tailor, Enchanter) and one gathering trade (Miner, Fisher, Woodcutter). Each levels 0–100 and prestiges 10 times (75 Sangricoins each). Bonuses come only from prestige.
+status: written
+lastVerified: 2026-11-22
 sources:
   - profissoes
   - oficios-ferreiro-alfaiate-encantador
   - coleta-minerador-pescador-lenhador
   - servicos-de-profissao
-  - aquario
+labels: [official]
 sidebar:
   label: Overview
   order: 0
 ---
 
 import SectionContents from '../../../components/SectionContents.astro';
+import QuickFacts from '../../../components/QuickFacts.astro';
+import CostTable from '../../../components/CostTable.astro';
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
 
-The three crafting and three gathering professions, and how they pay.
+<QuickFacts
+	facts={[
+		['Trades', '3 crafting + 3 gathering'],
+		['Active', '1 crafting + 1 gathering'],
+		['Level / prestige', '0–100 / 10'],
+		['Mentors', 'Professions Hall (city teleport hub)'],
+		['Open', 'F4, or .prof'],
+	]}
+/>
+
+| Category | Trade | Mentor | What prestige gives |
+|---|---|---|---|
+| Crafting | [Blacksmith](/professions/blacksmith/) | Ornn | Fortify weapons (+2 Physical Power per level) |
+| Crafting | [Tailor](/professions/tailor/) | Label | Fortify chest, gloves, legs, boots (+9 Health per piece per level) |
+| Crafting | [Enchanter](/professions/enchanter/) | Mirana | Fortify necklaces (+2 Magic Power per level) |
+| Gathering | [Miner](/professions/miner/) | Holmo | +10% Ourosangue and +5% extra ore per prestige |
+| Gathering | [Fisher](/professions/fisher/) | Mirel | +15% Ourosangue per prestige; +1 fish every 2 prestiges |
+| Gathering | [Woodcutter](/professions/woodcutter/) | Bram | +10% Ourosangue and +5% extra wood per prestige |
+
+## The rules
+
+- **Only the active profession earns XP.** You keep one crafting and one gathering trade.
+- **Level gives no bonus by itself.** It unlocks better orders and leads to prestige, where the bonuses are.
+- **Choosing is free.** The tutorial lets you choose both with Helena Valerius.
+- **Changing:** the first change in each category is free. After that, each costs **1,000 Sangricoins** and needs **120 days** since the last one. The old trade's level and prestige are kept for when you return, but its accepted orders are abandoned.
+- From **gathering prestige 5**, you get refining components. From **prestige 6**, pet souls. With **5 crafting prestiges**, you can [sell services](/professions/services/).
+
+<Aside type="caution">
+The **Prestige** button acts instantly, with no confirmation. XP past level 100 isn't lost: it starts your next climb.
+</Aside>
+
+<CostTable id="profession-prestige" />
+
+## Choosing and changing
+
+Talk to the mentor in the Professions Hall:
+
+- **To choose:** *Yes. I want…*, then *I'm sure. I want to be…*
+- **To change:** *I want to change my trade (… to …)*, then *Confirm the change*. F4 shows whether your change is free, what it costs, or how many days you have left.
+
+<PlayModes>
+	<Fragment slot="interface">**F4** shows the CRAFT and GATHERING columns. Your active trade shows ACTIVE, its level, XP bar and prestige. **Details** shows how it earns XP, what prestige gives, and your gear.</Fragment>
+	<Fragment slot="chat">
+		<Command cmd=".prof">Opens the professions menu.</Command>
+		<Command cmd=".prof view blacksmith">Level, XP and prestige of one profession.</Command>
+		<Command cmd=".prestige profession blacksmith">Prestiges at level 100, with no confirmation.</Command>
+	</Fragment>
+</PlayModes>
 
 ## Pages in this section
 
 <SectionContents />
-
-## What this section will cover
-
-- Blacksmith, Tailor and Enchanter
-- Miner, Fisher and Woodcutter, compared fairly
-- Profession services and the Aquarium

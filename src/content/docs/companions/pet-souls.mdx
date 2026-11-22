@@ -1,0 +1,62 @@
+---
+title: Pet souls and tiers
+description: How Sangria Falls pet tiers (T0–T5) work, the soul costs per tier, sacrificed souls shared per act, Soul items, and where souls come from.
+summary: Each tier raise costs 1 soul of the pet itself, plus sacrificed souls from its act from T2 (1, 2, 4, 8). Sacrificing is permanent. Souls come from duplicate captures, Soul items, gathering prestige 6+ and some events.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - pets
+  - coleta-minerador-pescador-lenhador
+  - arena-ilusional
+  - torre-dos-imortais
+  - passe-de-batalha
+  - postos-avancados
+labels: [official]
+sidebar:
+  order: 3
+---
+
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+Souls raise a pet's **tier**, from **T0 to T5**. Each tier makes the pet stronger, caps how far its Cristais can go, and gives it an aura (a crown at T5).
+
+## Tier costs
+
+| Raise to | Souls of the pet itself | Sacrificed souls from its act |
+|---|---|---|
+| T1 | 1 | — |
+| T2 | 1 | 1 |
+| T3 | 1 | 2 |
+| T4 | 1 | 4 |
+| T5 | 1 | 8 |
+| **Total T0 → T5** | **5** | **15** |
+
+<PlayModes>
+	<Fragment slot="interface">F2 → the pet → **RAISE TIER**. The sheet shows the cost. Click **Raise** to confirm.</Fragment>
+	<Fragment slot="chat"><Command cmd=".pet tier 3">Raises pet 3's tier, with no confirmation.</Command></Fragment>
+</PlayModes>
+
+## Sacrificed souls
+
+Sacrificed souls are a **shared stock for the whole act**, and any pet from that act can donate to it.
+
+- F2 → the donating pet → **SACRIFICE SOUL** → **Sacrifice**. Or use the **SOULS** tab, which lists every pet with a stored soul, even ones you haven't captured, then **SACRIFICE** → **CONFIRM**.
+- Without the interface: `.pet sacrificar 3` sacrifices one soul from pet 3, with no confirmation.
+
+<Aside type="caution">
+Sacrificing is **permanent**. The soul doesn't return to the pet.
+</Aside>
+
+## Where souls come from
+
+| Source | Gives |
+|---|---|
+| Open-world boss kill when you already own that pet | +1 soul (1% chance) |
+| Tower of the Immortals boss / castle-summoned boss | A soul, if you own the pet |
+| **Soul items** (Act 1–4 Soul, Primordial Soul, Special Soul) | +1 soul to a random pet of that group. Drag the item out of your inventory to use it. |
+| Battle Pass | Pet Soul items at some levels |
+| Illusional Arena win | 5% chance of a rare prize: 1 Ressonador or 1 Pet Soul |
+| Gathering prestige 6–9 | **Sacrificed Souls**, one more act per prestige |
+| Oakveil Woodlands Outpost | Specialises in pets, souls and Cristais (from Rank III) |

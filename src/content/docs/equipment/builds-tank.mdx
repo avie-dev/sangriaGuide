@@ -1,0 +1,42 @@
+---
+title: Tank builds
+description: The documented sources of health, resistance and damage reduction on Sangria Falls for tanking with Mortak Unshakable. A framework, not a tested build.
+summary: Mortak Unshakable is the official tank, with lots of health and resistance, Blood Rage taunts, and an ice-shield ultimate. Documented defensive sources include Tailor fortification (+9 Health per piece per level), prestiges 1–7 and the Thanatos and Mortak achievements.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - classes
+  - class-mortak
+  - nivel-e-prestigio
+  - oficios-ferreiro-alfaiate-encantador
+  - conquistas
+labels: [community, verify]
+sidebar:
+  order: 12
+---
+
+import ClassDefaults from '../../../components/ClassDefaults.astro';
+import Unverified from '../../../components/Unverified.astro';
+
+<Unverified q="Q-009">There are no tested builds, and how defensive bonuses stack isn't documented.</Unverified>
+
+## The tank class
+
+**Mortak Unshakable** is the class the official pages describe as holding the line: lots of health and resistance, **no physical crit**, and Blood Rage that taunts everything within 20 m with the class achievement. Its ultimate, *Glacial Bastion*, gives a shield of 550% of your Physical Power and crowd-control immunity for 6 s. See [Mortak](/classes/mortak/).
+
+## Documented defensive sources
+
+| Source | Gives |
+|---|---|
+| Mortak Unshakable class table | Max Health, Damage Reduction, Corruption Damage Reduction and more (see the class page) |
+| Tailor fortification | +9 Health per armour piece per level (+360 for four pieces at P10) |
+| Tailor refinement | +3 to +7 Health per row |
+| Prestiges 1–7 | Damage Reduction +2%, Healing Received +2%, Max Health +40, Sun Resistance +8, Spell Resistance +2%, Physical Resistance +2%, Shield Efficiency +4% |
+| Thanatos achievement (30 Transfusions) | When downed, get up at full health once per hour |
+| *Furious Roar* (Mortak achievement) | Blood Rage taunts enemies within 20 m |
+| *Collector of Suffering* (Mortak achievement) | Units you defeat become suffering, which Blood Rage turns into weapon durability |
+| Pillar of the Colossus | +50 Garlic and Holy Resistance, +5% Movement Speed, +20% Resource Yield |
+
+## Default attributes
+
+<ClassDefaults id="mortak" />

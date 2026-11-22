@@ -1,0 +1,38 @@
+---
+title: Weapon affinity
+description: Dungeon weapon affinity on Sangria Falls. Set a preferred weapon type at Mark so 40% of dropped weapons are that type. How to set it, with and without the interface.
+summary: Set a weapon affinity at Mark before a dungeon. When a weapon drops, it has a 40% chance of being that type. Affinity doesn't raise the chance of getting a weapon, and the affinity saved at the moment of victory counts.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - masmorras
+  - comandos
+labels: [official]
+sidebar:
+  order: 2
+---
+
+import PlayModes from '../../../components/PlayModes.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+**Affinity** is the weapon type you'd prefer from dungeon rewards. When a weapon drops in your prize, it has a **40% chance** of being that type.
+
+<Aside type="caution">
+Affinity **doesn't raise the chance of getting a weapon**, only which type it is when one drops. Set it **before entering**: the affinity saved at the moment of victory is the one that counts.
+</Aside>
+
+## Setting it
+
+<PlayModes>
+	<Fragment slot="interface">At the Events Hub, talk to **Mark**. At the top of the Sangria Dungeons panel, click **CHANGE** and pick a weapon type.</Fragment>
+	<Fragment slot="chat"><Command cmd=".dungeon">Opens the dungeon menu. Choose *Set weapon affinity*.</Command> Talking to Mark also offers *Set weapon affinity*.</Fragment>
+</PlayModes>
+
+## Tips
+
+- Set it to your **class weapon**, since class bonuses only work with it in hand.
+- Each player rolls their own prize, so every player in the group can set their own affinity.
+- The panel shows the chance of each prize, tier by tier.
+
+See [Dungeons](/dungeons/).

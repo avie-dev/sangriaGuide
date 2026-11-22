@@ -1,0 +1,50 @@
+---
+title: Fisher
+description: The Sangria Falls Fisher (mentor Mirel) earns 70 Ourosangue per catch (+15% per prestige), extra fish, Exceptional Magical Components from prestige 5, pet souls from prestige 6, and crafts aquariums.
+summary: Fishers earn 70 Ourosangue per catch (175 at prestige 10), +1 fish every 2 prestiges, Exceptional Magical Components (Enchanter refining) from prestige 5, pet souls from prestige 6, and can craft aquariums and their food.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - coleta-minerador-pescador-lenhador
+  - profissoes
+  - aquario
+labels: [official]
+sidebar:
+  order: 6
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<QuickFacts
+	facts={[
+		['Mentor', 'Mirel, Professions Hall'],
+		['XP from', 'Fishing at any fishing spot'],
+		['Ourosangue', '70 per catch, +15% per prestige (175 at prestige 10)'],
+		['Extra fish', '+1 every 2 prestiges (up to +5 at prestige 10)'],
+		['Refining drop (P5+)', 'Exceptional Magical Component, used by the Enchanter'],
+	]}
+/>
+
+## XP by region
+
+Fishing XP depends on the region: **Farbane, Dunley, Cursed Forest, Silverlight and Oakveil**. The further along the region, the more XP.
+
+## Prestige rewards
+
+| Prestige | Adds |
+|---|---|
+| Each | +15% Ourosangue per catch |
+| 2, 4, 6, 8, 10 | +1 extra fish (up to +5) |
+| 5 and up | A small chance of **Exceptional Magical Component** per catch, improving up to prestige 10 |
+| 6 to 9 | **Sacrificed Souls**: one more act per prestige. For the Fisher, **each act rolls its own chance per catch**. |
+
+<Aside type="caution">
+The extra fish **drops on the ground beside you**. Pick it up before you leave.
+</Aside>
+
+## Aquariums
+
+Only an active Fisher can craft **aquariums** and their **food**, and each Fisher prestige gives the owner's aquariums +5% production. See [Aquarium](/professions/aquarium/).
+
+Type `.prof` to open the professions menu, where you can view and prestige the trade without the interface.

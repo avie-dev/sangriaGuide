@@ -1,0 +1,90 @@
+---
+title: Aquarium
+description: Sangria Falls aquariums, crafted by Fishers, produce fish in your castle even while you're offline. Crafting, food, installation, level 1–10 upgrades, fish prices and the aquarium market.
+summary: Fishers craft aquariums (20 Iron Ingots, 20 Glass, 50 Oil, 1 The Fish, 2,000 Ourosangue) and food. Installed in a castle, a tank makes 8–24 fish a day by level, as long as it has food. Anyone can buy one.
+status: written
+lastVerified: 2026-11-22
+sources:
+  - aquario
+labels: [official]
+sidebar:
+  order: 10
+---
+
+import QuickFacts from '../../../components/QuickFacts.astro';
+import Command from '../../../components/Command.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+<QuickFacts
+	facts={[
+		['Crafted by', 'Active Fishers only (anyone can buy one)'],
+		['Per player', 'Up to 3 installed; 12 per castle in total'],
+		['Runs', 'Offline too, while it has food and room'],
+		['Levels', '1 to 10'],
+		['Open', '.aquarium, F on the tank, or Mirel'],
+	]}
+/>
+
+## Tank levels
+
+| Level | Tank | Fish per day | Holds | Fish types |
+|---|---|---|---|---|
+| 1–4 | Small | 8 | 24 | Common |
+| 5–9 | Large | 16 | 48 | + Uncommon |
+| 10 | Large | 24 | 78 | + Rare, and occasionally **The Fish** |
+
+An active Fisher owner gets +5% production per Fisher prestige.
+
+## Food
+
+Food is a **balance on your account**, not an item. Each food is worth 18, 12 or 6 hours of production depending on the level, and a tank holds up to 8. Without food, or with the fish limit reached, the tank stops and spends nothing. Whoever feeds a tank uses their own food balance.
+
+## Crafting (Fishers)
+
+| Item | Cost |
+|---|---|
+| Aquarium | 20 Iron Ingots, 20 Glass, 50 Oil, 1 The Fish, 2,000 Ourosangue |
+| Food (each) | 2 Fish Bones, 10 Oil, 100 Ourosangue |
+
+You can craft 10 food a day, plus 5 per Fisher prestige (60 at prestige 10).
+
+## Installing, feeding and collecting
+
+- On your castle's (or your clan's castle's) grounds: **My aquariums** → the tank → **Install**. Place it with left-click, rotate with Q/E, raise and lower with C/T, and cancel with Space. Entering combat or leaving the grounds cancels placement.
+- Press **F** on the tank: **Feed** (+1) or **Fill the tank**, then **Collect** when fish are ready. Without inventory room, the rest drops on the ground.
+- Clanmates can feed and collect, and the fish go to whoever collects. Each tank keeps its last 30 withdrawals under **History**.
+- **Return to storage** moves a tank. If the castle falls, it returns to the owner's storage with its level, food and fish.
+
+## Upgrading (owner only)
+
+A bar fills with fish produced, then you pay materials. The bar stops at the next goal, and excess doesn't carry over, so upgrade promptly.
+
+| To level | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+|---|---|---|---|---|---|---|---|---|---|
+| Fish produced | 40 | 80 | 120 | 160 | 288 | 416 | 544 | 672 | 800 |
+| Iron Ingots | 50 | 75 | 100 | 125 | 150 | 175 | 200 | 225 | 250 |
+| Reinforced Planks | 20 | 30 | 40 | 50 | 60 | 70 | 80 | 90 | 100 |
+
+## Selling fish (owner only)
+
+Sell straight from the tank (**Sell fish**). The Ourosangue goes to your Bank. Price per fish by tank level:
+
+| Rarity | Level 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Common | 30 | 32 | 34 | 36 | 38 | 39 | 40 | 41 | 42 | 42 |
+| Uncommon | — | — | — | — | 44 | 46 | 48 | 49 | 50 | 52 |
+| Rare | — | — | — | — | — | — | — | — | — | 85 |
+
+<Aside type="tip">
+**The Fish** isn't sold here. Collect it to craft another aquarium, or sell it to the Shadow Merchant for 4,000.
+</Aside>
+
+## The aquarium market
+
+- **Sell a tank:** collect, *Return to storage*, set a price (at least 10,000), and list it. You're paid even offline.
+- **Sell food in lots** (1–100) from the Craft tab. Anyone with food in their balance can do this, Fisher or not.
+- **Buy** tanks (they keep their level and food) or food lots from the Market tab.
+- Up to 5 listings at once, tanks and lots combined.
+
+<Command cmd=".aquarium">Opens the aquarium menu.</Command>
+<Command cmd=".aquarium sellfish 1 all">Sells all fish in aquarium 1, except The Fish.</Command>
