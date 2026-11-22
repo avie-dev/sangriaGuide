@@ -8,7 +8,7 @@ wiki is published at https://avie-dev.github.io/sangriaGuide/. Each entry's deta
 
 - Homepage with the roadmap, popular guides, class overview, essential commands, latest updates and FAQ.
 - Published on GitHub Pages (https://avie-dev.github.io/sangriaGuide/), deployed from `main` by GitHub Actions after the checks pass. Internal links get the `/sangriaGuide` sub-path at build time. `robots.txt` points to the sitemap. See `docs/deployment.md`.
-- GitHub Actions: checks, tests and build on every pull request. A weekly job re-downloads the official guides and re-runs the source audit to catch changes.
+- One GitHub Actions workflow (`deploy.yml`) checks, tests, builds and publishes on every push to `main`.
 - Issue and pull request templates, and a "How to contribute" page on the site.
 - Previous and next page links on every article.
 - Removed the copy-summary-for-Discord button from pages.

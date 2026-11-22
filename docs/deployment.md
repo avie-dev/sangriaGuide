@@ -38,13 +38,9 @@ The local dev server follows the same base: open http://localhost:4321/sangriaGu
 
 ## Checks
 
-| Where | What |
-|---|---|
-| Every push to `main` (`deploy.yml`) | Check, test, build, publish |
-| Every pull request (`ci.yml`) | Check, test, build (no publishing) |
-| Weekly (`source-drift.yml`) | Downloads the official guides (`npm run research`), runs `npm run audit` and the external link check. A failure means the official site changed. Read the attached `audit-report` and update the wiki. |
+`deploy.yml` is the only workflow. It runs `npm run check`, `npm test` and `npm run build` before every publish, and a failure stops the publish. For other people's pull requests, run the same checks locally before merging (see below).
 
-The official snapshots (`research/raw/`, `research/text/`) are copies of official text, so they're never committed. They're recreated with `npm run research`.
+The source audit (`npm run audit`) isn't automated, because it needs the official snapshots (`npm run research`). Those are copies of official text and are never committed. Run it before a release, or when the official site changes.
 
 ## Before a release
 

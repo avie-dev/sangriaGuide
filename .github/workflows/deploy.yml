@@ -26,9 +26,9 @@ jobs:
         with:
           node-version-file: .node-version
           cache: npm
-      # The lockfile is written by npm 11; Node 22's bundled npm 10 reads it as out of sync.
-      - run: npm install -g npm@11
-      - run: npm ci
+      # Clean install from the lockfile; if the lockfile disagrees with this platform's optional
+      # native packages (it's maintained on Windows), fall back to a normal install.
+      - run: npm ci || npm install --no-audit --no-fund
       - run: npm run check
       - run: npm test
       # SITE_URL and BASE_PATH default to the GitHub Pages address in astro.config.mjs.
