@@ -1,0 +1,37 @@
+# Weekly: re-download the official Sangria Falls guides and re-run the source audit, so changes on
+# the official site (new numbers, renamed commands, removed systems) show up as a failed run.
+# The snapshots are never committed; the audit report is attached to the run as an artifact.
+name: Source drift
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # Mondays 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - name: Download the official guides
+        run: npm run research
+      - name: Audit every page against them
+        run: npm run audit
+      - name: Check links to outside sites
+        if: always()
+        run: npm run build && npm run check:external
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: audit-report
+          path: |
+            docs/audit-report.md
+            research/source-inventory.md

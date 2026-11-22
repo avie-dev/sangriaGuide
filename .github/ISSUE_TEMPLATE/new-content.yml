@@ -1,0 +1,15 @@
+name: Content request
+description: A topic, page or tool the wiki is missing.
+labels: [content]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What's missing
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Official sources
+      description: Links to the official guides that cover it, if any.

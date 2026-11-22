@@ -1,0 +1,13 @@
+---
+// A link into the wiki's GitHub repository, or plain text while no repository is configured.
+//   <RepoLink path="issues/new?template=correction.yml">report a correction</RepoLink>
+// The repository URL comes from REPO_URL in astro.config.mjs (see docs/deployment.md).
+interface Props {
+	/** Path under the repository URL, e.g. "issues" or "blob/main/CONTRIBUTING.md". */
+	path?: string;
+}
+const repo = (import.meta.env.PUBLIC_REPO_URL ?? '').replace(/\/$/, '');
+const href = repo ? `${repo}/${Astro.props.path ?? ''}`.replace(/\/$/, '') : null;
+---
+
+{href ? <a href={href}><slot /></a> : <span><slot /></span>}

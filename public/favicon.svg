@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- An original blood-drop mark for the wiki (not official Sangria Falls or V Rising art). -->
+  <rect width="64" height="64" rx="12" fill="#14110f"/>
+  <path d="M32 9C32 9 15 31 15 41a17 17 0 0 0 34 0C49 31 32 9 32 9z" fill="#9b1c2a"/>
+  <path d="M25 41a7 7 0 0 0 7 7" stroke="#c9a24a" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

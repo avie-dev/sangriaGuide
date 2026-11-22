@@ -4,7 +4,7 @@ An unofficial, English-first community wiki and progression guide for [Sangria F
 
 It is not operated or endorsed by the Sangria Falls staff. Every article links to the official pages it is based on.
 
-The full project brief is in [`docs/master-prompt.md`](docs/master-prompt.md). Progress is tracked in [`docs/progress.md`](docs/progress.md).
+The full project brief is in [`docs/master-prompt.md`](docs/master-prompt.md). Progress is tracked in [`docs/progress.md`](docs/progress.md), the version history is in [`CHANGELOG.md`](CHANGELOG.md), and the latest quality check is in [`docs/qa-report.md`](docs/qa-report.md).
 
 ## Stack
 
@@ -12,7 +12,7 @@ The full project brief is in [`docs/master-prompt.md`](docs/master-prompt.md). P
 - Articles in Markdown/MDX under `src/content/docs/`
 - Game data as JSON/TypeScript under `src/data/`, kept apart from components
 - Search with Pagefind (built into Starlight), sitemap included
-- Planned hosting: Cloudflare Pages (not deployed yet)
+- Hosting: Cloudflare Pages, not deployed yet. See [`docs/deployment.md`](docs/deployment.md)
 
 ## Local development
 
@@ -41,6 +41,8 @@ docs/
 scripts/
   coverage.mjs            validates coverage.yaml, regenerates the tracker
   check-external-links.mjs  checks outside links in the built site
+  audit.mjs               checks every number and command against the official sources
+tests/                    calculator tests (npm test)
 research/                 source research (Phase 1)
   fetch.mjs               downloads official pages into research/raw/ (gitignored)
   extract.mjs             converts them to plain text in research/text/ (gitignored)
@@ -58,6 +60,10 @@ src/
 
 To refresh the research snapshots and source registry: `npm run research`.
 
-## Writing an article
+## Deploying
 
-See [`CONTRIBUTING.md`](CONTRIBUTING.md).
+See [`docs/deployment.md`](docs/deployment.md) for the Cloudflare Pages settings, the site address and repository settings, and the CI workflows (`.github/workflows/`). Nothing has been deployed yet.
+
+## Contributing
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for writing and editing pages, and `/about/contributing/` on the site for reporting corrections. Issue and pull request templates are in `.github/`.

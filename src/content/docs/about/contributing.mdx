@@ -1,0 +1,46 @@
+---
+title: How to contribute
+description: How to help the Sangria Falls Wiki by reporting a correction, answering an open question, or writing and editing articles. What counts as evidence, and the rules every page follows.
+summary: Spotted something wrong? Report it with a screenshot or a staff reply. Know an answer to an open question? Share it. Want to write? Every page follows a few accuracy rules.
+status: verified
+lastVerified: 2026-11-22
+---
+
+import RepoLink from '../../../components/RepoLink.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+This wiki is only as good as its accuracy. The most useful help is telling us when something is wrong or missing.
+
+<Aside type="note" title="Repository">
+Contributions go through the wiki's <RepoLink>GitHub repository</RepoLink>. You need a free GitHub account to open an issue or a pull request.
+</Aside>
+
+## Report a correction
+
+<Steps>
+
+1. Note the page and the exact sentence or number.
+2. Gather **evidence**: a screenshot from the game (a panel, the chat or an NPC dialogue), the official guide that says otherwise, or a reply from the Sangria Falls staff.
+3. Open a <RepoLink path="issues/new?template=correction.yml">correction report</RepoLink> with the page, what it says, what it should say, and the evidence.
+
+</Steps>
+
+Please don't send corrections based only on other servers, vanilla V Rising or the Bloodcraft mod. Sangria Falls changes many systems, so only Sangria Falls evidence counts.
+
+## Answer an open question
+
+The [open questions page](/about/open-questions/) lists what the official guides don't settle, such as XP per level, unpublished prestige costs, and how bonuses stack. If you know an answer and can show it, open an <RepoLink path="issues/new?template=open-question.yml">open-question answer</RepoLink>. Screenshots of `.level`, the F1 attribute breakdown, or a panel's numbers are ideal.
+
+## Suggest or write a page
+
+Missing a topic? Suggest it with a <RepoLink path="issues/new?template=new-content.yml">content request</RepoLink>. To write or edit pages yourself, read the <RepoLink path="blob/main/CONTRIBUTING.md">contributing guide</RepoLink>. It covers the page format, the components, the game data files, and the checks to run before a pull request.
+
+## The rules every page follows
+
+- **No invented mechanics, numbers or commands.** Everything comes from an official Sangria Falls page, and each page lists its sources.
+- **Official facts and advice are kept apart** with [labels](/about/labels/). Anything unconfirmed is marked "Requires verification".
+- **No tier lists or "best" claims** without real testing data.
+- **Commands are never translated.** Only their descriptions are.
+- **Paraphrase, don't copy** the official guides.
+
+Every number and command on the wiki is checked automatically against the official guides (`npm run audit`). The [changelog](/about/changelog/) shows the latest check.

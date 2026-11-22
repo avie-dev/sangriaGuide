@@ -131,7 +131,7 @@ let numbersChecked = 0;
 let commandsChecked = 0;
 for (const file of walk(DOCS).sort()) {
 	pages++;
-	const rel = path.relative(DOCS, file).replace(/\\/g, '/').replace(/\.mdx$/, '').replace(/\/index$/, '').replace(/^index$/, '');
+	const rel = path.relative(DOCS, file).replace(/\\/g, '/').replace(/\.mdx$/, '').replace(/\/index$/, ''); // the homepage stays "index"
 	const raw = fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n');
 	const [, fmText, body] = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/) ?? [];
 	const fm = parse(fmText);

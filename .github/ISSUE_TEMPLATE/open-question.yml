@@ -1,0 +1,25 @@
+name: Answer an open question
+description: You can settle one of the wiki's open questions (Q-001 …).
+title: 'Q-0XX: '
+labels: [open-question]
+body:
+  - type: input
+    id: question
+    attributes:
+      label: Question number
+      placeholder: Q-017
+    validations:
+      required: true
+  - type: textarea
+    id: answer
+    attributes:
+      label: The answer
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Screenshots (e.g. `.level`, the F1 attribute breakdown, a panel), with the date and your server.
+    validations:
+      required: true

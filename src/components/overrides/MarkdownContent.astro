@@ -1,10 +1,9 @@
 ---
-// Starlight's article body, followed by related guides, the official sources with the
-// last-verified date, and a "copy for Discord" button.
+// Starlight's article body, followed by related guides and the official sources with the
+// last-verified date.
 import Default from '@astrojs/starlight/components/MarkdownContent.astro';
 import RelatedGuides from '../RelatedGuides.astro';
 import Sources from '../Sources.astro';
-import DiscordShare from '../DiscordShare.astro';
 
 const data = Astro.locals.starlightRoute.entry.data;
 const isArticle = data.template !== 'splash';
@@ -15,5 +14,4 @@ const showSources = isArticle && (data.sources.length > 0 || data.status !== 'pl
 	<slot />
 	{isArticle && <RelatedGuides />}
 	{showSources && <Sources />}
-	{isArticle && <DiscordShare />}
 </Default>

@@ -26,7 +26,7 @@ Thanks for helping. This wiki's value is accuracy, so the rules below matter mor
 ---
 title: Meditation
 description: One or two sentences; also used in search results.
-summary: Optional. A Discord-friendly one-liner; used for link previews instead of the description.
+summary: Optional. A one-line summary; used for link previews instead of the description.
 status: draft            # planned | draft | written | verified
 lastVerified: 2026-11-22 # the day you checked every claim against the sources
 sources:                 # ids from src/data/official-sources.json
@@ -36,7 +36,7 @@ labels: [official, vip]  # official | community | rpg04 | verify | vip | purchas
 ---
 ```
 
-Added automatically, with no component needed: breadcrumbs, the labels, a work-in-progress notice (unless `status: verified`), *Before you read* and *Related guides* links (from `needs` in `coverage.yaml`), the official sources with the last-verified date, and a *Copy summary for Discord* button. Unknown source ids fail the build, and so do broken internal links and anchors.
+Added automatically, with no component needed: breadcrumbs, the labels, a work-in-progress notice (unless `status: verified`), *Before you read* and *Related guides* links (from `needs` in `coverage.yaml`), and the official sources with the last-verified date. Unknown source ids fail the build, and so do broken internal links and anchors.
 
 ## Components
 

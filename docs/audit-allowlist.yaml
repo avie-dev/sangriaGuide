@@ -96,3 +96,15 @@ meditation/double-meditation:
 
 tools/pet-upgrade-calculator:
   - { n: 15, why: 'Sacrificed souls 1 + 2 + 4 + 8' }
+
+# Wiki statistics (pages, tests, checks), not game facts.
+index:
+  - { n: 15, why: 'Number of walkthrough stages on this wiki' }
+  - { n: 191, why: 'Number of pages in the coverage plan' }
+  - { n: 23, why: 'Number of open questions in research/open-questions.md' }
+
+about/changelog:
+  - { n: 1275, why: 'Numbers checked by the 2026-11-22 audit' }
+  - { n: 337, why: 'Commands checked by the 2026-11-22 audit' }
+  - { n: 189, why: 'External links checked' }
+  - { n: 33, why: 'Calculator tests' }

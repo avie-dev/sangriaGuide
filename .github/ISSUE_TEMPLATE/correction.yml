@@ -1,0 +1,40 @@
+name: Correction
+description: Something on the wiki is wrong or out of date.
+title: 'Correction: '
+labels: [correction]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The wiki page address.
+      placeholder: https://…/character/prestige/
+    validations:
+      required: true
+  - type: textarea
+    id: says
+    attributes:
+      label: What the page says
+    validations:
+      required: true
+  - type: textarea
+    id: should
+    attributes:
+      label: What it should say
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: A screenshot from the game, a link to the official guide, or a staff reply. Only Sangria Falls evidence counts (not vanilla V Rising, Bloodcraft or other servers).
+    validations:
+      required: true
+  - type: dropdown
+    id: server
+    attributes:
+      label: Server
+      options:
+        - '[GLOBAL] Sangria Falls [RPG 04] [2X]'
+        - Another Sangria Falls server
+        - Not server-specific

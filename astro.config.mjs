@@ -7,9 +7,18 @@ import starlightLinksValidator from 'starlight-links-validator';
 /** @param {string} label @param {string} directory */
 const section = (label, directory) => ({ label, collapsed: true, items: [{ autogenerate: { directory } }] });
 
+// ---- Deployment settings (see docs/deployment.md) ----
+// The public address of the site, used for the sitemap, canonical URLs, social previews and
+// robots.txt. Placeholder until a domain is chosen. SITE_URL overrides it at build time.
+const SITE = process.env.SITE_URL || 'https://sangria-falls-wiki.pages.dev';
+// The GitHub repository. Every page gets an "Edit page" link and the contribute page links to the
+// issue templates. REPO_URL overrides it at build time (an empty REPO_URL turns the links off).
+const REPO = process.env.REPO_URL ?? 'https://github.com/avie-dev/sangriaGuide';
+
 export default defineConfig({
-	// Placeholder until a domain is chosen; used for the sitemap and canonical URLs.
-	site: 'https://sangria-falls-wiki.pages.dev',
+	site: SITE,
+	// Lets components link to the repository (src/components/RepoLink.astro).
+	vite: { define: { 'import.meta.env.PUBLIC_REPO_URL': JSON.stringify(REPO) } },
 	integrations: [
 		starlight({
 			title: 'Sangria Falls Wiki',
@@ -19,9 +28,8 @@ export default defineConfig({
 			description:
 				'Unofficial, English-first community wiki for the Sangria Falls V Rising server: from your first login to endgame.',
 			lastUpdated: true,
-			// Off while every section has only an "Overview" page (prev/next would all read "Overview").
-			// Turn back on once sections have real articles.
-			pagination: false,
+			favicon: '/favicon.svg',
+			...(REPO ? { editLink: { baseUrl: `${REPO.replace(/\/$/, '')}/edit/main/` } } : {}),
 			routeMiddleware: './src/routeData.ts',
 			customCss: [
 				'@fontsource/cinzel/600.css',
@@ -44,7 +52,10 @@ export default defineConfig({
 				{ tag: 'meta', attrs: { property: 'og:site_name', content: 'Sangria Falls Wiki (unofficial)' } },
 			],
 			sidebar: [
-				{ label: 'About this wiki', items: ['about', 'about/labels', 'about/sources', 'about/open-questions', 'about/components'] },
+				{
+					label: 'About this wiki',
+					items: ['about', 'about/labels', 'about/sources', 'about/open-questions', 'about/contributing', 'about/changelog', 'about/components'],
+				},
 				section('Getting started', 'getting-started'),
 				section('Progression walkthrough', 'walkthrough'),
 				section('Character progression', 'character'),

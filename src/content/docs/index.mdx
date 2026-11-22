@@ -1,29 +1,35 @@
 ---
 title: Welcome to Sangria Falls Wiki
 description: Unofficial, English-first community wiki for the Sangria Falls V Rising server. Your complete guide from awakening to endgame.
+summary: The unofficial English wiki for the Sangria Falls V Rising server, with a 15-stage walkthrough, all 11 classes, calculators and every system, each claim linked to the official guides.
 template: splash
+sources:
+  - primeiros-passos
+  - classes
+  - nivel-e-prestigio
+  - comandos
+  - meditacao
+  - mercado
 hero:
   tagline: Your complete guide from awakening to endgame.
   actions:
     - text: Start your journey
       link: /getting-started/
       icon: right-arrow
-    - text: How this wiki works
-      link: /about/
+    - text: Beginner walkthrough
+      link: /walkthrough/
       variant: minimal
 ---
 
 import { Aside, Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import ProgressionPath from '../../components/ProgressionPath.astro';
+import ClassGrid from '../../components/ClassGrid.astro';
+import Command from '../../components/Command.astro';
 
 <Aside type="caution" title="Unofficial community wiki">
-	This wiki is maintained independently by players. It is not operated or endorsed by the Sangria
-	Falls staff. The official guides live at [sangriafalls.com](https://www.sangriafalls.com/en/guias/),
-	and every article here links to the official pages it is based on.
-</Aside>
-
-<Aside type="note" title="Under construction">
-	The wiki is being written section by section. Pages that aren't finished say so at the top. Until a
-	section is written, its overview page links straight to the official guides.
+	This wiki is maintained independently by players. **It is not operated or endorsed by the Sangria
+	Falls staff.** The official guides live at [sangriafalls.com](https://www.sangriafalls.com/en/guias/),
+	and every article here links to the official pages it's based on.
 </Aside>
 
 ## Where do you want to go?
@@ -31,19 +37,86 @@ import { Aside, Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
 <CardGrid>
 	<LinkCard title="Start your journey" description="Join the server, install the interface and pick your first class." href="/getting-started/" />
 	<LinkCard title="Complete beginner walkthrough" description="Fifteen stages from first login to endgame." href="/walkthrough/" />
-	<LinkCard title="Explore all classes" description="Eleven classes, three evolutions each." href="/classes/" />
+	<LinkCard title="Explore all classes" description="Eleven classes, three evolutions each, translated from the official pages." href="/classes/" />
 	<LinkCard title="Character progression" description="Levels, prestige, weapon mastery and blood lineage." href="/character/" />
-	<LinkCard title="Meditation" description="Earn XP standing still, and what it costs." href="/meditation/" />
-	<LinkCard title="Professions and economy" description="Six professions, five currencies, many ways to earn." href="/professions/" />
+	<LinkCard title="Meditation calculator" description="How long your Sangricoins last, and the XP you'll get." href="/tools/meditation-calculator/" />
+	<LinkCard title="Professions and economy" description="Six professions, five currencies, many ways to earn." href="/economy/" />
 	<LinkCard title="Gear and legendary weapons" description="Weapon tiers, fortification, refinement and Perfect Gems." href="/equipment/" />
 	<LinkCard title="Pets and summons" description="Capture bosses, raise their tier and collect Sangrulhos." href="/companions/" />
-	<LinkCard title="Dungeons and events" description="Four dungeons, four difficulties and the server's events." href="/dungeons/" />
-	<LinkCard title="Endgame" description="Pulses, Transfusions and Plasmas after Prestige 20." href="/endgame/" />
+	<LinkCard title="Dungeons and events" description="Four dungeons, four tiers, and the server's events." href="/dungeons/" />
+	<LinkCard title="Endgame builds" description="Pulses, Transfusions, Plasmas and build frameworks." href="/endgame/" />
+</CardGrid>
+
+## New player roadmap
+
+<ProgressionPath
+	steps={[
+		{ title: 'Join and install', detail: 'Steam (PC), the free ScarletInterface, English with .lang en' },
+		{ title: 'The Path of Blood', detail: 'The tutorial pays XP and gives your free first class' },
+		{ title: 'Level 1 → 90', detail: 'Hunt at your level, group up, use meditation' },
+		{ title: 'Daily routine', detail: 'Outpost mission, Balthazar contracts, profession orders' },
+		{ title: 'Prestige 1–20', detail: 'Twenty permanent buffs; class evolutions along the way' },
+		{ title: 'Endgame', detail: 'Schools, Pulses, Transfusions and the Tower' },
+	]}
+/>
+
+Follow it step by step in the [walkthrough](/walkthrough/), or tick off the [first-day checklist](/getting-started/first-day/).
+
+## Popular guides
+
+The pages new and returning players need most:
+
+<CardGrid>
+	<LinkCard title="First-day checklist" href="/getting-started/first-day/" />
+	<LinkCard title="Playing without the interface" href="/getting-started/playing-without-the-interface/" />
+	<LinkCard title="Choosing a class" href="/classes/choosing-a-class/" />
+	<LinkCard title="Character prestige" href="/character/prestige/" />
+	<LinkCard title="How meditation works" href="/meditation/how-it-works/" />
+	<LinkCard title="Earning guide" href="/economy/earning-guide/" />
+	<LinkCard title="Dungeon keys" href="/dungeons/keys/" />
+	<LinkCard title="Pulses and Transfusions" href="/endgame/transfusions/" />
+</CardGrid>
+
+## Class overview
+
+<ClassGrid />
+
+## Essential commands
+
+Type these exactly as shown. The full list of 309 is on the [commands page](/reference/commands/).
+
+<Command cmd=".menu">Opens the general menu (no interface needed).</Command>
+<Command cmd=".lang en">Switches the server to English.</Command>
+<Command cmd=".quest">Your active quests and their current step.</Command>
+<Command cmd=".level">Your level, prestige and the next prestige cost.</Command>
+<Command cmd=".mercado go">Teleports you to the city.</Command>
+<Command cmd=".meditate">Opens the meditation menu.</Command>
+
+## Latest verified updates
+
+<CardGrid>
+	<Card title="Every page source-checked" icon="approve-check">
+		All 191 pages checked against the official guides on 2026-11-22: every number and command audited. See the [QA summary](/about/changelog/).
+	</Card>
+	<Card title="Calculators" icon="puzzle">
+		Eight [tools](/tools/), built only on published figures, from meditation to dungeon keys.
+	</Card>
+	<Card title="Open questions" icon="information">
+		23 things the official guides don't settle, tracked on the [open questions page](/about/open-questions/). Know an answer? Tell us.
+	</Card>
+</CardGrid>
+
+Full history: [Changelog](/about/changelog/).
+
+## Frequently asked questions
+
+<CardGrid>
+	<LinkCard title="Frequently asked questions" description="Quick answers from every official guide's FAQ." href="/world/faq/" />
+	<LinkCard title="Server mechanics FAQ" description="XP, bonuses, chances, resets: what's documented and what isn't." href="/reference/mechanics-faq/" />
+	<LinkCard title="Troubleshooting" description="Search a problem, get the cause and the fix." href="/reference/troubleshooting/" />
 </CardGrid>
 
 ## What makes this wiki different
-
-The official guides explain each system on its own. This wiki connects them, so it can answer the questions you actually run into:
 
 <CardGrid>
 	<Card title="What should I do next?" icon="rocket">
@@ -53,7 +126,7 @@ The official guides explain each system on its own. This wiki connects them, so 
 		Every claim is labelled: officially confirmed, community recommendation, or requires verification.
 	</Card>
 	<Card title="In English" icon="translate">
-		Many official pages (all class pages, the command list) are only in Portuguese. We translate them.
+		Many official pages, such as all the class pages and the command list, are only in Portuguese. We translate them.
 	</Card>
 	<Card title="With or without the interface" icon="laptop">
 		Steps for ScarletInterface panels and for chat-only players.
