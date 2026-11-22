@@ -92,3 +92,5 @@ npm run build
 ```
 
 `npm run check:external` (after a build) checks external links; run it when you add or change links to outside sites.
+
+`npm run audit` checks every number and command on every page against the official snapshots in `research/text/`, which come from `npm run research`. Run it after editing articles. A number you calculated yourself (a total, a per-hour figure) goes in `docs/audit-allowlist.yaml` with its formula. A number from a guide your page doesn't cite means you should add that guide to the page's `sources`.

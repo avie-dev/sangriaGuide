@@ -29,7 +29,7 @@ sections:
         built: published
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
       - slug: getting-started/what-is-sangria-falls
         title: What is Sangria Falls?
         brief: ['A: What is Sangria Falls?']
@@ -37,7 +37,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: getting-started/vs-vanilla
         title: Sangria Falls vs vanilla V Rising
@@ -47,7 +47,7 @@ sections:
         missing: ['No official comparison: every difference must cite an SF guide']
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: getting-started/vs-bloodcraft
         title: Sangria Falls vs Bloodcraft
@@ -57,7 +57,7 @@ sections:
         missing: ['No official comparison; Bloodcraft is not a source for SF mechanics']
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: getting-started/joining
         title: Joining the server
@@ -67,7 +67,7 @@ sections:
         missing: [Q-001, Q-002]
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: getting-started/interface
         title: Installing the interface
@@ -77,7 +77,7 @@ sections:
         missing: ['Source page is in Portuguese']
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: getting-started/interface-troubleshooting
         title: Interface troubleshooting
@@ -87,7 +87,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: getting-started/playing-without-the-interface
         title: Playing without the interface
@@ -97,7 +97,7 @@ sections:
         missing: ['Derived from the 48 chat-only guide variants']
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: getting-started/language
         title: Setting the language to English
@@ -106,7 +106,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: getting-started/hud
         title: Understanding the HUD
@@ -116,7 +116,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: getting-started/website-panel
         title: The website panel
@@ -125,7 +125,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: getting-started/path-of-blood
         title: The Path of Blood tutorial
@@ -134,7 +134,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: getting-started/first-class
         title: Choosing your first class
@@ -144,7 +144,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: getting-started/city
         title: Navigating Sangria Falls City
@@ -153,7 +153,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: getting-started/teleports
         title: Teleports and teleport hubs
@@ -162,7 +162,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: getting-started/important-npcs
         title: Important NPCs
@@ -172,7 +172,7 @@ sections:
         missing: ['Compiled from mentions across guides']
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: getting-started/first-castle
         title: Building your first castle
@@ -182,7 +182,7 @@ sections:
         missing: ['Castle building itself is base-game; only SF additions are sourced']
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: getting-started/first-day
         title: First-day checklist
@@ -192,7 +192,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: getting-started/first-week
         title: First-week roadmap
@@ -202,7 +202,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: getting-started/beginner-mistakes
         title: Common beginner mistakes
@@ -211,7 +211,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
 
   - dir: walkthrough
@@ -225,7 +225,7 @@ sections:
         built: published
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
       - slug: walkthrough/01-first-login
         title: 'Stage 1: First login and tutorial'
         brief: ['B: Stage 1']
@@ -233,7 +233,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: walkthrough/02-first-class
         title: 'Stage 2: First class and starter equipment'
@@ -243,7 +243,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: walkthrough/03-early-levelling
         title: 'Stage 3: Early levelling and bosses'
@@ -253,7 +253,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: walkthrough/04-professions-and-income
         title: 'Stage 4: First professions and income'
@@ -263,7 +263,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: walkthrough/05-mastery-and-blood
         title: 'Stage 5: Weapon mastery and blood lineage'
@@ -273,7 +273,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: walkthrough/06-first-pet
         title: 'Stage 6: Your first pet'
@@ -283,7 +283,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: walkthrough/07-prestige-1-10
         title: 'Stage 7: Character Prestige 1–10'
@@ -293,7 +293,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: walkthrough/08-prestige-11-20
         title: 'Stage 8: Character Prestige 11–20'
@@ -303,7 +303,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: walkthrough/09-class-evolutions
         title: 'Stage 9: Class evolutions'
@@ -313,7 +313,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: walkthrough/10-endgame-gear
         title: 'Stage 10: Endgame gear'
@@ -324,7 +324,7 @@ sections:
         missing: [Q-008]
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: walkthrough/11-schools
         title: 'Stage 11: Vampiric Schools'
@@ -334,7 +334,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: walkthrough/12-pulses-and-transfusions
         title: 'Stage 12: Pulses and Transfusions'
@@ -344,7 +344,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: walkthrough/13-advanced-enhancement
         title: 'Stage 13: Advanced equipment enhancement'
@@ -354,7 +354,7 @@ sections:
         phase: 4
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: walkthrough/14-master-and-nightmare
         title: 'Stage 14: Master and Nightmare dungeons'
@@ -365,7 +365,7 @@ sections:
         missing: [Q-006]
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: walkthrough/15-endgame-optimisation
         title: 'Stage 15: Endgame optimisation'
@@ -376,7 +376,7 @@ sections:
         missing: [Q-009, Q-013]
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
 
   - dir: character
@@ -390,7 +390,7 @@ sections:
         built: published
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
       - slug: character/levels-and-xp
         title: Levels and experience
         brief: ['C: Character levels and experience', 'C: Experience sources']
@@ -399,7 +399,7 @@ sections:
         missing: [Q-011]
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: character/prestige
         title: Character prestige
@@ -409,7 +409,7 @@ sections:
         phase: 5
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: character/xp-bonuses
         title: XP bonuses, multipliers and events
@@ -419,7 +419,7 @@ sections:
         missing: [Q-001, Q-016]
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: character/quitina
         title: Quitina (Chitin)
@@ -428,7 +428,7 @@ sections:
         phase: 5
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: character/weapon-mastery
         title: Weapon mastery
@@ -437,7 +437,7 @@ sections:
         phase: 5
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: character/blood-lineage
         title: Blood lineage
@@ -446,7 +446,7 @@ sections:
         phase: 5
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: character/stats
         title: Character statistics
@@ -456,7 +456,7 @@ sections:
         missing: [Q-009]
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: character/profile
         title: The profile sheet
@@ -465,7 +465,7 @@ sections:
         phase: 5
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
 
   - dir: meditation
@@ -479,7 +479,7 @@ sections:
         research: read
         built: published
         writing: written
-        verified: partly checked
+        verified: verified
       - slug: meditation/how-it-works
         title: How meditation works
         brief: ['D: How meditation works', 'D: How to unlock the Meditation Chamber', 'D: How to enter and exit', 'D: F10 interface', 'D: Character / Weapon mastery / Bloodline / Pet meditation', 'D: Single meditation', 'D: How to enable and disable each track']
@@ -487,7 +487,7 @@ sections:
         phase: 5
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: meditation/costs-and-rates
         title: Costs and XP rates
@@ -497,7 +497,7 @@ sections:
         research: read
         missing: [Q-010, Q-021]
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: meditation/double-meditation
         title: Double Meditation
@@ -506,7 +506,7 @@ sections:
         phase: 5
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: meditation/auto-prestige
         title: Auto-Prestige and Auto-Pulse
@@ -515,7 +515,7 @@ sections:
         phase: 5
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: meditation/recommended-settings
         title: Recommended AFK settings
@@ -525,7 +525,7 @@ sections:
         phase: 5
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: meditation/examples
         title: Worked meditation examples
@@ -536,7 +536,7 @@ sections:
         missing: [Q-010, Q-011, Q-021]
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: meditation/troubleshooting
         title: Meditation troubleshooting
@@ -545,7 +545,7 @@ sections:
         phase: 5
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
 
   - dir: classes
@@ -559,7 +559,7 @@ sections:
         built: published
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
       - slug: classes/choosing-a-class
         title: Choosing a class
         brief: ['E: comparison tables by playstyle', 'Design: class selection guide']
@@ -568,7 +568,7 @@ sections:
         missing: ['No tier list without testing data']
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: classes/evolutions
         title: Class evolutions and advanced classes
@@ -577,7 +577,7 @@ sections:
         phase: 5
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: classes/awakened
         title: Awakened (Despertado)
@@ -587,19 +587,19 @@ sections:
         missing: ['Source page is in Portuguese']
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
-      - {slug: classes/mortak, title: Mortak, brief: ['E: Mortak'], sources: [class-mortak, classes], phase: 5, missing: ['Source page is in Portuguese', Q-018, Q-020], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: classes/noctarin, title: Noctarin, brief: ['E: Noctarin'], sources: [class-noctarin, classes], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: classes/bastien, title: Bastien, brief: ['E: Bastien'], sources: [class-bastien, classes], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: classes/carmesyne, title: Carmesyne, brief: ['E: Carmesyne'], sources: [class-carmesyne, classes], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: classes/skarn, title: Skarn, brief: ['E: Skarn'], sources: [class-skarn, classes], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: classes/sepulkros, title: Sepulkros, brief: ['E: Sepulkros (Reaper vs Summoner, minions, Minion Collectors)'], sources: [class-sepulkros, classes], phase: 5, missing: ['Source page is in Portuguese', Q-020], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: classes/draekhar, title: Draekhar, brief: ['E: Draekhar (spear as staff, six Currents)'], sources: [class-draekhar, classes], phase: 5, research: read, missing: [Q-004, Q-005, Q-020], writing: written, verified: partly checked, built: published}
-      - {slug: classes/umbrellis, title: Umbrellis, brief: ['E: Umbrellis'], sources: [class-umbrellis, classes], phase: 5, missing: ['Source page is in Portuguese', Q-019, Q-020], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: classes/sangrael, title: Sangrael, brief: ['E: Sangrael (healing, resurrection, support)'], sources: [class-sangrael, classes], needs: [classes/draekhar], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: classes/la-muerte, title: La Muerte, brief: ['E: La Muerte'], sources: [class-lamuerte, classes], needs: [classes/evolutions], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: classes/general, title: General, brief: ['E: General'], sources: [class-general, classes], needs: [classes/evolutions], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: classes/mortak, title: Mortak, brief: ['E: Mortak'], sources: [class-mortak, classes], phase: 5, missing: ['Source page is in Portuguese', Q-018, Q-020], research: read, writing: written, verified: verified, built: published}
+      - {slug: classes/noctarin, title: Noctarin, brief: ['E: Noctarin'], sources: [class-noctarin, classes], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: verified, built: published}
+      - {slug: classes/bastien, title: Bastien, brief: ['E: Bastien'], sources: [class-bastien, classes], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: verified, built: published}
+      - {slug: classes/carmesyne, title: Carmesyne, brief: ['E: Carmesyne'], sources: [class-carmesyne, classes], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: verified, built: published}
+      - {slug: classes/skarn, title: Skarn, brief: ['E: Skarn'], sources: [class-skarn, classes], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: verified, built: published}
+      - {slug: classes/sepulkros, title: Sepulkros, brief: ['E: Sepulkros (Reaper vs Summoner, minions, Minion Collectors)'], sources: [class-sepulkros, classes], phase: 5, missing: ['Source page is in Portuguese', Q-020], research: read, writing: written, verified: verified, built: published}
+      - {slug: classes/draekhar, title: Draekhar, brief: ['E: Draekhar (spear as staff, six Currents)'], sources: [class-draekhar, classes], phase: 5, research: read, missing: [Q-004, Q-005, Q-020], writing: written, verified: verified, built: published}
+      - {slug: classes/umbrellis, title: Umbrellis, brief: ['E: Umbrellis'], sources: [class-umbrellis, classes], phase: 5, missing: ['Source page is in Portuguese', Q-019, Q-020], research: read, writing: written, verified: verified, built: published}
+      - {slug: classes/sangrael, title: Sangrael, brief: ['E: Sangrael (healing, resurrection, support)'], sources: [class-sangrael, classes], needs: [classes/draekhar], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: verified, built: published}
+      - {slug: classes/la-muerte, title: La Muerte, brief: ['E: La Muerte'], sources: [class-lamuerte, classes], needs: [classes/evolutions], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: verified, built: published}
+      - {slug: classes/general, title: General, brief: ['E: General'], sources: [class-general, classes], needs: [classes/evolutions], phase: 5, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: verified, built: published}
       - slug: classes/training-room
         title: Training Room
         brief: ['E: (official system: test any class)']
@@ -607,7 +607,7 @@ sections:
         phase: 5
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
 
   - dir: equipment
@@ -621,7 +621,7 @@ sections:
         built: published
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
       - slug: equipment/weapons
         title: Weapon progression
         brief: ['F: Weapon progression', 'F: Ancestral weapons', 'F: Rare / Epic / Legendary weapons', 'F: Unique weapon effects', 'F: How to obtain legendary weapons']
@@ -630,7 +630,7 @@ sections:
         missing: [Q-008, Q-022]
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: equipment/weapon-affinity
         title: Weapon affinity
@@ -639,7 +639,7 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: equipment/armour-and-jewellery
         title: Armour and jewellery
@@ -649,7 +649,7 @@ sections:
         missing: [Q-008]
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: equipment/fortification
         title: Fortification
@@ -658,7 +658,7 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: equipment/refinement
         title: Refinement
@@ -667,7 +667,7 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: equipment/perfect-gems
         title: Perfect Gems
@@ -676,7 +676,7 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: equipment/spell-jewels
         title: Spell jewels
@@ -686,7 +686,7 @@ sections:
         missing: [Q-007]
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: equipment/bonuses-by-class
         title: Which bonuses help which class
@@ -696,7 +696,7 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: equipment/upgrade-priorities
         title: Upgrade priorities
@@ -706,14 +706,14 @@ sections:
         missing: ['Community recommendation']
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
-      - {slug: equipment/builds-physical, title: Physical DPS builds, brief: ['F: Physical DPS builds'], sources: [classes], phase: 6, missing: ['Community recommendation; no testing data yet'], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: equipment/builds-magical, title: Magical DPS builds, brief: ['F: Magical DPS builds'], sources: [classes, class-draekhar], phase: 6, missing: ['Community recommendation; no testing data yet'], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: equipment/builds-tank, title: Tank builds, brief: ['F: Tank builds'], sources: [classes, class-mortak], phase: 6, missing: ['Community recommendation; no testing data yet'], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: equipment/builds-healer, title: Healer builds, brief: ['F: Healer builds'], sources: [classes, class-sangrael], phase: 6, missing: ['Community recommendation; no testing data yet'], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: equipment/builds-summoner, title: Summoner builds, brief: ['F: Summoner builds'], sources: [classes, class-sepulkros, class-lamuerte], phase: 6, missing: ['Community recommendation; no testing data yet'], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: equipment/builds-hybrid, title: Hybrid builds, brief: ['F: Hybrid builds'], sources: [classes], phase: 6, missing: ['Community recommendation; no testing data yet'], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: equipment/builds-physical, title: Physical DPS builds, brief: ['F: Physical DPS builds'], sources: [classes], phase: 6, missing: ['Community recommendation; no testing data yet'], research: read, writing: written, verified: verified, built: published}
+      - {slug: equipment/builds-magical, title: Magical DPS builds, brief: ['F: Magical DPS builds'], sources: [classes, class-draekhar], phase: 6, missing: ['Community recommendation; no testing data yet'], research: read, writing: written, verified: verified, built: published}
+      - {slug: equipment/builds-tank, title: Tank builds, brief: ['F: Tank builds'], sources: [classes, class-mortak], phase: 6, missing: ['Community recommendation; no testing data yet'], research: read, writing: written, verified: verified, built: published}
+      - {slug: equipment/builds-healer, title: Healer builds, brief: ['F: Healer builds'], sources: [classes, class-sangrael], phase: 6, missing: ['Community recommendation; no testing data yet'], research: read, writing: written, verified: verified, built: published}
+      - {slug: equipment/builds-summoner, title: Summoner builds, brief: ['F: Summoner builds'], sources: [classes, class-sepulkros, class-lamuerte], phase: 6, missing: ['Community recommendation; no testing data yet'], research: read, writing: written, verified: verified, built: published}
+      - {slug: equipment/builds-hybrid, title: Hybrid builds, brief: ['F: Hybrid builds'], sources: [classes], phase: 6, missing: ['Community recommendation; no testing data yet'], research: read, writing: written, verified: verified, built: published}
 
   - dir: companions
     title: Pets and Sangrulhos
@@ -726,7 +726,7 @@ sections:
         built: published
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
       - slug: companions/pets
         title: How pets work
         brief: ['G: How pets work', 'G: Pet commands', 'G: Summoning and dismissing pets', 'G: Pet management']
@@ -734,7 +734,7 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: companions/pet-capture
         title: Capturing pets
@@ -743,7 +743,7 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: companions/pet-souls
         title: Pet souls
@@ -752,7 +752,7 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: companions/pet-progression
         title: Pet tiers, levels and prestige
@@ -761,7 +761,7 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: companions/pet-crystals
         title: Pet crystals
@@ -770,7 +770,7 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: companions/pet-recommendations
         title: Recommended pets and upgrade priorities
@@ -781,7 +781,7 @@ sections:
         missing: ['Community recommendation']
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: companions/sangrulhos
         title: Sangrulhos
@@ -790,7 +790,7 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: companions/sangrulho-eggs
         title: Sangrulho eggs and incubation
@@ -799,7 +799,7 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: companions/sangrulho-fusion
         title: Sangrulho fusion and duplicates
@@ -808,7 +808,7 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
 
   - dir: professions
@@ -822,7 +822,7 @@ sections:
         built: published
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
       - slug: professions/orders
         title: Daily orders and profession XP
         brief: ['I: Experience sources', 'I: Daily orders', 'I: Level requirements']
@@ -830,14 +830,14 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
-      - {slug: professions/blacksmith, title: Blacksmith, brief: ['I: Blacksmith'], sources: [oficios-ferreiro-alfaiate-encantador, profissoes], phase: 6, research: read, writing: written, verified: partly checked, built: published}
-      - {slug: professions/tailor, title: Tailor, brief: ['I: Tailor'], sources: [oficios-ferreiro-alfaiate-encantador, profissoes], phase: 6, research: read, writing: written, verified: partly checked, built: published}
-      - {slug: professions/enchanter, title: Enchanter, brief: ['I: Enchanter'], sources: [oficios-ferreiro-alfaiate-encantador, profissoes], phase: 6, research: read, writing: written, verified: partly checked, built: published}
-      - {slug: professions/miner, title: Miner, brief: ['I: Miner'], sources: [coleta-minerador-pescador-lenhador, profissoes], phase: 6, research: read, writing: written, verified: partly checked, built: published}
-      - {slug: professions/fisher, title: Fisher, brief: ['I: Fisher'], sources: [coleta-minerador-pescador-lenhador, profissoes, aquario], phase: 6, research: read, writing: written, verified: partly checked, built: published}
-      - {slug: professions/woodcutter, title: Woodcutter, brief: ['I: Woodcutter'], sources: [coleta-minerador-pescador-lenhador, profissoes], phase: 6, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: professions/blacksmith, title: Blacksmith, brief: ['I: Blacksmith'], sources: [oficios-ferreiro-alfaiate-encantador, profissoes], phase: 6, research: read, writing: written, verified: verified, built: published}
+      - {slug: professions/tailor, title: Tailor, brief: ['I: Tailor'], sources: [oficios-ferreiro-alfaiate-encantador, profissoes], phase: 6, research: read, writing: written, verified: verified, built: published}
+      - {slug: professions/enchanter, title: Enchanter, brief: ['I: Enchanter'], sources: [oficios-ferreiro-alfaiate-encantador, profissoes], phase: 6, research: read, writing: written, verified: verified, built: published}
+      - {slug: professions/miner, title: Miner, brief: ['I: Miner'], sources: [coleta-minerador-pescador-lenhador, profissoes], phase: 6, research: read, writing: written, verified: verified, built: published}
+      - {slug: professions/fisher, title: Fisher, brief: ['I: Fisher'], sources: [coleta-minerador-pescador-lenhador, profissoes, aquario], phase: 6, research: read, writing: written, verified: verified, built: published}
+      - {slug: professions/woodcutter, title: Woodcutter, brief: ['I: Woodcutter'], sources: [coleta-minerador-pescador-lenhador, profissoes], phase: 6, research: read, writing: written, verified: verified, built: published}
       - slug: professions/gathering-comparison
         title: Comparing the gathering professions
         brief: ['I: Compare gathering professions (income, availability, convenience, refinement materials, combat benefits)']
@@ -846,7 +846,7 @@ sections:
         missing: [Q-012]
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: professions/services
         title: Profession services
@@ -855,7 +855,7 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: professions/aquarium
         title: Aquarium
@@ -864,7 +864,7 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
 
   - dir: economy
@@ -878,7 +878,7 @@ sections:
         built: published
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
       - slug: economy/currencies
         title: Currencies
         brief: ['J: Ourosangue', 'J: Sangricoins', 'J: Crystals', 'J: Other documented currencies', 'S: Currency directory']
@@ -886,7 +886,7 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: economy/bank
         title: Bank
@@ -895,9 +895,9 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
-      - {slug: economy/vault, title: Vault, brief: ['J: Vault'], sources: [cofre], phase: 6, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: economy/vault, title: Vault, brief: ['J: Vault'], sources: [cofre], phase: 6, research: read, writing: written, verified: verified, built: published}
       - slug: economy/market
         title: Player market and shops
         brief: ['J: Player marketplace', 'J: Opening a shop', 'J: Offline sales']
@@ -905,7 +905,7 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: economy/contracts
         title: Contracts
@@ -914,7 +914,7 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: economy/shadow-merchant
         title: Shadow Merchant
@@ -923,11 +923,11 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
-      - {slug: economy/casino, title: Casino, brief: ['J: (official system not in the brief)'], sources: [cassino], phase: 6, research: read, writing: written, verified: partly checked, built: published}
-      - {slug: economy/online-reward, title: Online reward, brief: ['J: Online rewards'], sources: [recompensa-online], phase: 6, research: read, writing: written, verified: partly checked, built: published}
-      - {slug: economy/prisoners, title: Prisoner market, brief: ['R: Prisoner market'], sources: [prisioneiros], phase: 6, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: economy/casino, title: Casino, brief: ['J: (official system not in the brief)'], sources: [cassino], phase: 6, research: read, writing: written, verified: verified, built: published}
+      - {slug: economy/online-reward, title: Online reward, brief: ['J: Online rewards'], sources: [recompensa-online], phase: 6, research: read, writing: written, verified: verified, built: published}
+      - {slug: economy/prisoners, title: Prisoner market, brief: ['R: Prisoner market'], sources: [prisioneiros], phase: 6, research: read, writing: written, verified: verified, built: published}
       - slug: economy/earning-guide
         title: How to earn currency
         brief: ['J: Beginner income', 'J: Daily income', 'J: Weekly income', 'J: Active farming', 'J: Passive income', 'J: Gathering profession income', 'J: Selling surplus resources']
@@ -936,7 +936,7 @@ sections:
         missing: ['Income rates are not published; use ranges labelled as estimates']
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: economy/budgets
         title: Example budgets
@@ -946,7 +946,7 @@ sections:
         phase: 6
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
 
   - dir: dungeons
@@ -960,7 +960,7 @@ sections:
         built: published
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
       - slug: dungeons/keys
         title: Dungeon keys
         brief: ['K: Dungeon keys', 'K: Key crafting recipes', 'K: Key material refunds']
@@ -968,7 +968,7 @@ sections:
         phase: 7
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: dungeons/forming-a-party
         title: Forming a party
@@ -977,7 +977,7 @@ sections:
         phase: 7
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: dungeons/difficulties
         title: Difficulties and preparation
@@ -986,7 +986,7 @@ sections:
         phase: 7
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: dungeons/rules-and-risks
         title: Death, wipes and dungeon rules
@@ -996,7 +996,7 @@ sections:
         missing: [Q-006]
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: dungeons/rewards
         title: Dungeon rewards and loot
@@ -1005,7 +1005,7 @@ sections:
         phase: 7
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
         missing: [Q-022]
       - slug: dungeons/party-roles
@@ -1016,12 +1016,12 @@ sections:
         missing: ['Community recommendation']
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
-      - {slug: dungeons/sanctuary-of-redemption, title: Sanctuary of Redemption, brief: ['K: Sanctuary of Redemption', 'K: Room and boss mechanics'], sources: [masmorras], phase: 7, missing: ['Room and boss mechanics are not documented officially', Q-023], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: dungeons/grove-of-disenchantment, title: Grove of Disenchantment, brief: ['K: Grove of Disenchantment', 'K: Room and boss mechanics'], sources: [masmorras], phase: 7, missing: ['Room and boss mechanics are not documented officially', Q-023], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: dungeons/blood-dominion, title: Blood Dominion, brief: ['K: Blood Dominion', 'K: Room and boss mechanics'], sources: [masmorras], phase: 7, missing: ['Room and boss mechanics are not documented officially', Q-023], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: dungeons/corrupted-temple, title: Corrupted Temple, brief: ['K: Corrupted Temple', 'K: Room and boss mechanics'], sources: [masmorras], phase: 7, missing: ['Room and boss mechanics are not documented officially', Q-023], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: dungeons/sanctuary-of-redemption, title: Sanctuary of Redemption, brief: ['K: Sanctuary of Redemption', 'K: Room and boss mechanics'], sources: [masmorras], phase: 7, missing: ['Room and boss mechanics are not documented officially', Q-023], research: read, writing: written, verified: verified, built: published}
+      - {slug: dungeons/grove-of-disenchantment, title: Grove of Disenchantment, brief: ['K: Grove of Disenchantment', 'K: Room and boss mechanics'], sources: [masmorras], phase: 7, missing: ['Room and boss mechanics are not documented officially', Q-023], research: read, writing: written, verified: verified, built: published}
+      - {slug: dungeons/blood-dominion, title: Blood Dominion, brief: ['K: Blood Dominion', 'K: Room and boss mechanics'], sources: [masmorras], phase: 7, missing: ['Room and boss mechanics are not documented officially', Q-023], research: read, writing: written, verified: verified, built: published}
+      - {slug: dungeons/corrupted-temple, title: Corrupted Temple, brief: ['K: Corrupted Temple', 'K: Room and boss mechanics'], sources: [masmorras], phase: 7, missing: ['Room and boss mechanics are not documented officially', Q-023], research: read, writing: written, verified: verified, built: published}
 
   - dir: events
     title: Events
@@ -1034,14 +1034,14 @@ sections:
         built: published
         research: read
         writing: written
-        verified: partly checked
-      - {slug: events/illusory-arena, title: Illusory Arena, brief: ['L: Illusory Arena'], sources: [arena-ilusional], phase: 7, research: read, writing: written, verified: partly checked, built: published, missing: [Q-006]}
-      - {slug: events/tower-of-the-immortals, title: Tower of the Immortals, brief: ['L: Tower of the Immortals'], sources: [torre-dos-imortais], phase: 7, research: read, writing: written, verified: partly checked, built: published, missing: [Q-003]}
-      - {slug: events/reality-rupture, title: Reality Rupture, brief: ['L: Reality Ruptures'], sources: [ruptura-da-realidade], phase: 7, research: read, writing: written, verified: partly checked, built: published}
-      - {slug: events/goreswines-judgment, title: "Goreswine's Judgment", brief: ["L: Goreswine's Judgment"], sources: [julgamento-de-goreswine], phase: 7, research: read, writing: written, verified: partly checked, built: published}
-      - {slug: events/rift-incursions, title: Rift Incursions, brief: ['L: Rift Incursions'], sources: [incursoes], phase: 7, research: read, writing: written, verified: partly checked, built: published}
-      - {slug: events/v-blood-hunt, title: V Blood Hunt, brief: ['L: V Blood Hunt'], sources: [cacada-de-v-bloods], phase: 7, research: read, writing: written, verified: partly checked, built: published}
-      - {slug: events/group-board, title: Group board, brief: ['L: Group Board'], sources: [quadro-de-grupos], phase: 7, research: read, writing: written, verified: partly checked, built: published}
+        verified: verified
+      - {slug: events/illusory-arena, title: Illusory Arena, brief: ['L: Illusory Arena'], sources: [arena-ilusional], phase: 7, research: read, writing: written, verified: verified, built: published, missing: [Q-006]}
+      - {slug: events/tower-of-the-immortals, title: Tower of the Immortals, brief: ['L: Tower of the Immortals'], sources: [torre-dos-imortais], phase: 7, research: read, writing: written, verified: verified, built: published, missing: [Q-003]}
+      - {slug: events/reality-rupture, title: Reality Rupture, brief: ['L: Reality Ruptures'], sources: [ruptura-da-realidade], phase: 7, research: read, writing: written, verified: verified, built: published}
+      - {slug: events/goreswines-judgment, title: "Goreswine's Judgment", brief: ["L: Goreswine's Judgment"], sources: [julgamento-de-goreswine], phase: 7, research: read, writing: written, verified: verified, built: published}
+      - {slug: events/rift-incursions, title: Rift Incursions, brief: ['L: Rift Incursions'], sources: [incursoes], phase: 7, research: read, writing: written, verified: verified, built: published}
+      - {slug: events/v-blood-hunt, title: V Blood Hunt, brief: ['L: V Blood Hunt'], sources: [cacada-de-v-bloods], phase: 7, research: read, writing: written, verified: verified, built: published}
+      - {slug: events/group-board, title: Group board, brief: ['L: Group Board'], sources: [quadro-de-grupos], phase: 7, research: read, writing: written, verified: verified, built: published}
       - slug: events/seasonal
         title: Seasonal events
         brief: ['L: Other documented seasonal events']
@@ -1050,7 +1050,7 @@ sections:
         missing: ['Only Sangrisween 2026 medals and event pets are documented']
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
 
   - dir: quests
@@ -1064,7 +1064,7 @@ sections:
         built: published
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
       - slug: quests/outposts
         title: Outposts
         brief: ['M: Every outpost and location', 'M: Outpost commanders', 'M: Daily missions', 'M: Weekly missions', 'M: Reputation ranks', 'M: Reputation bonuses', 'M: Specialized rewards', 'M: Mission restrictions']
@@ -1072,7 +1072,7 @@ sections:
         phase: 7
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: quests/quests
         title: Quests and quest tracking
@@ -1081,7 +1081,7 @@ sections:
         phase: 7
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: quests/class-quests
         title: Class unlock and evolution quests
@@ -1091,7 +1091,7 @@ sections:
         phase: 7
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: quests/nyxaris
         title: Nyxaris and the endgame quests
@@ -1100,9 +1100,9 @@ sections:
         phase: 7
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
-      - {slug: quests/lost-book, title: The Lost Book, brief: ['M: The Lost Book'], sources: [livro-perdido], phase: 7, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: quests/lost-book, title: The Lost Book, brief: ['M: The Lost Book'], sources: [livro-perdido], phase: 7, research: read, writing: written, verified: verified, built: published}
 
   - dir: schools
     title: Vampiric Schools
@@ -1115,7 +1115,7 @@ sections:
         built: published
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
       - slug: schools/ranks-and-points
         title: School ranks and points
         brief: ['N: School ranks', 'N: School points', 'N: Daily missions', 'N: School events', 'N: School bonuses', 'N: Sunday bonuses']
@@ -1123,7 +1123,7 @@ sections:
         phase: 7
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: schools/spells
         title: School spells
@@ -1132,7 +1132,7 @@ sections:
         phase: 7
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
 
   - dir: endgame
@@ -1146,7 +1146,7 @@ sections:
         built: published
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
       - slug: endgame/pulses
         title: Pulses
         brief: ['O: Pulses', 'O: Pulse requirements', 'O: Pulse costs', 'O: Automatic Pulse']
@@ -1154,7 +1154,7 @@ sections:
         phase: 7
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: endgame/transfusions
         title: Transfusions
@@ -1164,7 +1164,7 @@ sections:
         phase: 7
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: endgame/plasmas
         title: Plasmas
@@ -1175,7 +1175,7 @@ sections:
         missing: [Q-013]
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: endgame/plasmas-by-class
         title: Plasma investment by class
@@ -1186,7 +1186,7 @@ sections:
         missing: ['Community recommendation']
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: endgame/after-250-transfusions
         title: After 250 transfusions
@@ -1195,7 +1195,7 @@ sections:
         phase: 7
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
 
   - dir: support
@@ -1209,7 +1209,7 @@ sections:
         built: published
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
       - slug: support/battle-pass
         title: Battle Pass
         brief: ['P: How Battle Pass works', 'P: Free reward track', 'P: Bloody reward track', 'P: How to unlock Bloody Pass', 'P: Seasonal progression', 'P: Battle Pass experience', 'P: Boss XP rewards', 'P: Event XP rewards', 'P: Reward claiming', 'P: Retroactive premium rewards', 'P: Season expiration']
@@ -1217,7 +1217,7 @@ sections:
         phase: 7
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: support/battle-pass-farming
         title: Farming Battle Pass XP
@@ -1228,7 +1228,7 @@ sections:
         missing: ['Community recommendation']
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: support/vip
         title: VIP
@@ -1237,7 +1237,7 @@ sections:
         phase: 7
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: support/optional-purchases
         title: Optional purchases
@@ -1247,7 +1247,7 @@ sections:
         missing: ['No prices are published; do not invent them']
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: support/free-vs-vip
         title: Free vs VIP progression
@@ -1257,7 +1257,7 @@ sections:
         phase: 7
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
 
   - dir: world
@@ -1271,7 +1271,7 @@ sections:
         built: published
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
       - slug: world/castle
         title: Castle helpers
         brief: ['R: Castle systems', 'R: Castle storage', 'R: Castle search', 'R: Castle building limits']
@@ -1279,14 +1279,14 @@ sections:
         phase: 7
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
-      - {slug: world/furniture, title: Furniture, brief: ['R: Furniture'], sources: [moveis], phase: 7, research: read, writing: written, verified: partly checked, built: published}
-      - {slug: world/clan, title: Clan, brief: ['R: Clan mechanics'], sources: [clan], phase: 7, research: read, writing: written, verified: partly checked, built: published}
-      - {slug: world/marriage, title: Marriage, brief: ['R: Marriage'], sources: [casamento], phase: 7, research: read, writing: written, verified: partly checked, built: published}
-      - {slug: world/mail, title: Mail, brief: ['R: Mail'], sources: [correio], phase: 7, research: read, writing: written, verified: partly checked, built: published}
-      - {slug: world/rankings, title: Rankings, brief: ['R: Rankings'], sources: [rankings], phase: 7, research: read, writing: written, verified: partly checked, built: published}
-      - {slug: world/achievements, title: Achievements, brief: ['R: Achievements'], sources: [conquistas], phase: 7, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: world/furniture, title: Furniture, brief: ['R: Furniture'], sources: [moveis], phase: 7, research: read, writing: written, verified: verified, built: published}
+      - {slug: world/clan, title: Clan, brief: ['R: Clan mechanics'], sources: [clan], phase: 7, research: read, writing: written, verified: verified, built: published}
+      - {slug: world/marriage, title: Marriage, brief: ['R: Marriage'], sources: [casamento], phase: 7, research: read, writing: written, verified: verified, built: published}
+      - {slug: world/mail, title: Mail, brief: ['R: Mail'], sources: [correio], phase: 7, research: read, writing: written, verified: verified, built: published}
+      - {slug: world/rankings, title: Rankings, brief: ['R: Rankings'], sources: [rankings], phase: 7, research: read, writing: written, verified: verified, built: published}
+      - {slug: world/achievements, title: Achievements, brief: ['R: Achievements'], sources: [conquistas], phase: 7, research: read, writing: written, verified: verified, built: published}
       - slug: world/feats-fame-titles
         title: Feats, Fame and titles
         brief: ['R: Feats', 'R: Fame', 'R: Titles', 'R: How to equip or hide titles']
@@ -1294,7 +1294,7 @@ sections:
         phase: 7
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: world/community-rules
         title: Community rules
@@ -1304,7 +1304,7 @@ sections:
         missing: [Q-014]
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
       - slug: world/faq
         title: Frequently asked questions
@@ -1312,6 +1312,10 @@ sections:
         sources: [primeiros-passos]
         phase: 9
         missing: ['Compiled from every guide FAQ']
+        research: read
+        writing: written
+        built: published
+        verified: verified
 
   - dir: reference
     title: Reference
@@ -1324,7 +1328,7 @@ sections:
         built: published
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
       - slug: reference/commands
         title: Player commands
         brief: ['S: All player commands', 'S: Portuguese command names and English descriptions']
@@ -1333,13 +1337,13 @@ sections:
         missing: ['309 commands; descriptions are in Portuguese', Q-020]
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
-      - {slug: reference/shortcuts, title: Keyboard shortcuts, brief: ['S: All keyboard shortcuts'], sources: [atalhos], phase: 7, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: reference/npcs, title: NPC directory, brief: ['S: NPC directory'], sources: [primeiros-passos, profissoes, masmorras, escolas, sangrulhos, transfusao-e-plasmas, postos-avancados], phase: 7, missing: ['Compiled across guides'], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: reference/items, title: Item directory, brief: ['S: Item directory'], sources: [masmorras, banco, pets, sangrulhos, oficios-ferreiro-alfaiate-encantador], phase: 7, missing: ['Compiled across guides'], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: reference/bosses, title: Boss directory, brief: ['S: Boss directory'], sources: [pets, cacada-de-v-bloods, ruptura-da-realidade, julgamento-de-goreswine], phase: 7, missing: ['Compiled across guides'], research: read, writing: written, verified: partly checked, built: published}
-      - {slug: reference/glossary, title: Glossary, brief: ['S: Terminology glossary'], sources: [comandos], phase: 7, missing: ['Portuguese–English term map compiled across guides'], research: read, writing: written, verified: partly checked, built: published}
+      - {slug: reference/shortcuts, title: Keyboard shortcuts, brief: ['S: All keyboard shortcuts'], sources: [atalhos], phase: 7, missing: ['Source page is in Portuguese'], research: read, writing: written, verified: verified, built: published}
+      - {slug: reference/npcs, title: NPC directory, brief: ['S: NPC directory'], sources: [primeiros-passos, profissoes, masmorras, escolas, sangrulhos, transfusao-e-plasmas, postos-avancados], phase: 7, missing: ['Compiled across guides'], research: read, writing: written, verified: verified, built: published}
+      - {slug: reference/items, title: Item directory, brief: ['S: Item directory'], sources: [masmorras, banco, pets, sangrulhos, oficios-ferreiro-alfaiate-encantador], phase: 7, missing: ['Compiled across guides'], research: read, writing: written, verified: verified, built: published}
+      - {slug: reference/bosses, title: Boss directory, brief: ['S: Boss directory'], sources: [pets, cacada-de-v-bloods, ruptura-da-realidade, julgamento-de-goreswine], phase: 7, missing: ['Compiled across guides'], research: read, writing: written, verified: verified, built: published}
+      - {slug: reference/glossary, title: Glossary, brief: ['S: Terminology glossary'], sources: [comandos], phase: 7, missing: ['Portuguese–English term map compiled across guides'], research: read, writing: written, verified: verified, built: published}
       - slug: reference/cost-tables
         title: Upgrade cost tables
         brief: ['S: Upgrade cost tables']
@@ -1347,9 +1351,9 @@ sections:
         phase: 7
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
-      - {slug: reference/drop-rates, title: Drop rates, brief: ['S: Drop rate tables'], sources: [pets, masmorras, arena-ilusional, coleta-minerador-pescador-lenhador], phase: 7, research: read, writing: written, verified: partly checked, built: published}
+      - {slug: reference/drop-rates, title: Drop rates, brief: ['S: Drop rate tables'], sources: [pets, masmorras, arena-ilusional, coleta-minerador-pescador-lenhador], phase: 7, research: read, writing: written, verified: verified, built: published}
       - slug: reference/progression-requirements
         title: Progression requirements
         brief: ['S: Progression requirements']
@@ -1357,10 +1361,10 @@ sections:
         phase: 7
         research: read
         writing: written
-        verified: partly checked
+        verified: verified
         built: published
-      - {slug: reference/mechanics-faq, title: Server mechanics FAQ, brief: ['S: Server mechanics FAQ'], sources: [nivel-e-prestigio, meditacao], phase: 9}
-      - {slug: reference/troubleshooting, title: Troubleshooting, brief: ['S: Troubleshooting encyclopedia'], sources: [interface, meditacao, missoes, painel-do-site], phase: 9}
+      - {slug: reference/mechanics-faq, title: Server mechanics FAQ, brief: ['S: Server mechanics FAQ'], sources: [nivel-e-prestigio, meditacao], phase: 9, research: read, writing: written, built: published, verified: verified}
+      - {slug: reference/troubleshooting, title: Troubleshooting, brief: ['S: Troubleshooting encyclopedia'], sources: [interface, meditacao, missoes, painel-do-site], phase: 9, research: read, writing: written, built: published, verified: verified}
 
   - dir: tools
     title: Tools
@@ -1373,12 +1377,12 @@ sections:
         built: published
         research: read
         writing: written
-        verified: partly checked
-      - {slug: tools/meditation-calculator, title: Meditation calculator, brief: ['4.1 Meditation Calculator'], sources: [meditacao, nivel-e-prestigio, recompensa-online, vip], phase: 8, research: read, missing: [Q-010, Q-011, Q-021], writing: written, verified: partly checked, built: tested}
-      - {slug: tools/prestige-calculator, title: Prestige calculator, brief: ['4.2 Prestige Calculator'], sources: [nivel-e-prestigio, maestria-de-arma, linhagem-de-sangue], phase: 8, research: read, writing: written, verified: partly checked, built: tested, missing: [Q-017]}
-      - {slug: tools/pulse-calculator, title: Pulse and Transfusion calculator, brief: ['4.3 Pulse and Transfusion Calculator'], sources: [transfusao-e-plasmas, meditacao], phase: 8, research: read, writing: written, verified: partly checked, built: tested}
-      - {slug: tools/profession-income-calculator, title: Profession income calculator, brief: ['4.4 Profession Income Calculator'], sources: [coleta-minerador-pescador-lenhador], phase: 8, missing: [Q-012], research: read, writing: written, verified: partly checked, built: tested}
-      - {slug: tools/class-evolution-calculator, title: Class evolution calculator, brief: ['4.5 Class Evolution Calculator'], sources: [classes], phase: 8, research: read, writing: written, verified: partly checked, built: tested}
-      - {slug: tools/pet-upgrade-calculator, title: Pet upgrade calculator, brief: ['4.6 Pet Upgrade Calculator'], sources: [pets], phase: 8, research: read, writing: written, verified: partly checked, built: tested}
-      - {slug: tools/dungeon-key-calculator, title: Dungeon key calculator, brief: ['4.7 Dungeon Key Calculator'], sources: [masmorras], phase: 8, research: read, writing: written, verified: partly checked, built: tested}
-      - {slug: tools/build-planner, title: Build planner, brief: ['4.8 Build Planner'], sources: [classes, perfil, maestria-de-arma, linhagem-de-sangue, escolas, pets, sangrulhos, transfusao-e-plasmas], phase: 8, missing: [Q-009], research: read, writing: written, verified: partly checked, built: tested}
+        verified: verified
+      - {slug: tools/meditation-calculator, title: Meditation calculator, brief: ['4.1 Meditation Calculator'], sources: [meditacao, nivel-e-prestigio, recompensa-online, vip], phase: 8, research: read, missing: [Q-010, Q-011, Q-021], writing: written, verified: verified, built: tested}
+      - {slug: tools/prestige-calculator, title: Prestige calculator, brief: ['4.2 Prestige Calculator'], sources: [nivel-e-prestigio, maestria-de-arma, linhagem-de-sangue], phase: 8, research: read, writing: written, verified: verified, built: tested, missing: [Q-017]}
+      - {slug: tools/pulse-calculator, title: Pulse and Transfusion calculator, brief: ['4.3 Pulse and Transfusion Calculator'], sources: [transfusao-e-plasmas, meditacao], phase: 8, research: read, writing: written, verified: verified, built: tested}
+      - {slug: tools/profession-income-calculator, title: Profession income calculator, brief: ['4.4 Profession Income Calculator'], sources: [coleta-minerador-pescador-lenhador], phase: 8, missing: [Q-012], research: read, writing: written, verified: verified, built: tested}
+      - {slug: tools/class-evolution-calculator, title: Class evolution calculator, brief: ['4.5 Class Evolution Calculator'], sources: [classes], phase: 8, research: read, writing: written, verified: verified, built: tested}
+      - {slug: tools/pet-upgrade-calculator, title: Pet upgrade calculator, brief: ['4.6 Pet Upgrade Calculator'], sources: [pets], phase: 8, research: read, writing: written, verified: verified, built: tested}
+      - {slug: tools/dungeon-key-calculator, title: Dungeon key calculator, brief: ['4.7 Dungeon Key Calculator'], sources: [masmorras], phase: 8, research: read, writing: written, verified: verified, built: tested}
+      - {slug: tools/build-planner, title: Build planner, brief: ['4.8 Build Planner'], sources: [classes, perfil, maestria-de-arma, linhagem-de-sangue, escolas, pets, sangrulhos, transfusao-e-plasmas], phase: 8, missing: [Q-009], research: read, writing: written, verified: verified, built: tested}

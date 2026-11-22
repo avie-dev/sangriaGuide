@@ -1,0 +1,74 @@
+---
+title: Server mechanics FAQ
+description: How core Sangria Falls mechanics work, including XP and death, group rules, prestige, bonuses, chances and resets, with what's documented and what isn't.
+summary: "XP isn't split in groups, death costs no XP, XP at max level is lost, prestige buttons have no confirmation, personal bonuses don't count in meditation, and resets follow Brasília time. Stacking rules, XP curves and most drop chances aren't published."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - nivel-e-prestigio
+  - meditacao
+  - maestria-de-arma
+  - linhagem-de-sangue
+  - banco
+  - passe-de-batalha
+  - missoes
+  - pets
+  - ruptura-da-realidade
+  - julgamento-de-goreswine
+  - masmorras
+labels: [official, verify]
+sidebar:
+  order: 10
+---
+
+import Unverified from '../../../components/Unverified.astro';
+
+## XP
+
+**Is XP split in a group?** No. Everyone nearby and in combat at the kill gets full XP, clan or not. The same goes for Battle Pass XP from open-world V Bloods. ([Levels and experience](/character/levels-and-xp/))
+
+**Does dying cost XP?** No, not XP and not levels.
+
+**What happens to XP at the level cap?** At character level 90, XP stops counting and is lost until you prestige. The guides don't say whether weapon or blood XP past 100 is kept. Profession XP past 100 does carry into the next climb after prestige.
+
+**Who gets weapon and blood XP?** Weapon XP goes to the weapon in your hand at the moment of the kill. Blood XP only comes from draining (the final bite) and goes to your current blood.
+
+**Do weaker creatures give less?** Yes. The bigger the gap, the less. Tombs, worm nests and summoning circles give less, and boss summons give nothing.
+
+## Bonuses
+
+**Which XP bonuses stack?** Server and personal bonuses count together. Only one personal bonus applies per track, so a Quitina is refused (and not spent) if one is already active. Personal bonuses don't count in meditation, while VIP (+50%) and server events do. ([XP bonuses](/character/xp-bonuses/))
+
+<Unverified q="Q-009">How attribute bonuses from different sources combine (class, mastery, lineage, prestige, plasmas, gear, achievements) isn't documented, and neither are crit or speed caps. In game, hover an attribute in your Profile (F1) to see each part and the total.</Unverified>
+
+**Do class bonuses always apply?** Only with the class weapon in hand.
+
+## Prestige and progression
+
+**Is there a confirmation?** Not on the HUD PRESTIGE, PULSE and TRANSFUSE buttons, the profession Prestige button, or the matching chat commands. Vlad Parker shows the cost and asks for **Confirm**.
+
+**Where are costs paid from?** Your Bank balance, never your inventory.
+
+<Unverified q="Q-011">The XP needed per level isn't published. Only "level 1 → 90 in about 1h14 of meditation" is.</Unverified>
+
+## Chances
+
+**Which chances are published?** Pet capture (1% per open-world boss kill), the Arena rare prize (5%), dungeon weapon affinity (40% of dropped weapons) and the Sangrulho guarantees. Everything else, such as key drops, component drops, Soul Shards and Cristal success, is shown in game or not published at all. ([Drop rates](/reference/drop-rates/))
+
+## Groups and PvP
+
+**Can group members hurt each other?** In the Reality Rupture and Goreswine's Judgment, no: the guides say everyone becomes an ally.
+
+<Unverified q="Q-006">The Dungeons and Illusory Arena guides don't say whether there's friendly fire.</Unverified>
+
+**What does pressing X while downed do?** In dungeons, the Arena and the Rupture, it means giving up. You die, lose the reward, and drop your item bag.
+
+## Time and resets
+
+**What timezone?** Brasília time, for quest, contract, Outpost, profession-order and Online Reward resets, and for Rupture, Judgment and school event schedules. The Tower's weekly reset is stated as "server clock". ([Q-003](/about/open-questions/#q-003))
+
+| Resets at midnight | Resets Monday at midnight |
+|---|---|
+| Daily quests, Outpost dailies, Balthazar's offers, profession dailies, school daily, Online Reward day | Weekly and hunt quests, Outpost weeklies, profession special orders and hunts, school weekly progress, Tower rankings |
+
+**Server restarts?** At set times each day, with a warning 30 minutes before. The times aren't published.

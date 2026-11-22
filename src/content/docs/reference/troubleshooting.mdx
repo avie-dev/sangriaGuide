@@ -1,0 +1,95 @@
+---
+title: Troubleshooting
+description: A filterable list of common Sangria Falls problems with their causes and fixes, from the interface, meditation, quests and website panel to pets, mail, the Market and events.
+summary: "Search a symptom (\"no XP\", \"can't prestige\", \"invite failed\", \"panel won't open\") to see the cause and the fix, compiled from every official guide's common questions."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - interface
+  - meditacao
+  - missoes
+  - painel-do-site
+  - nivel-e-prestigio
+  - maestria-de-arma
+  - linhagem-de-sangue
+  - pets
+  - castelo
+  - correio
+  - mercado
+  - masmorras
+  - teleportes
+  - escolas
+  - quadro-de-grupos
+  - incursoes
+  - clan
+  - sala-de-treinamento
+  - passe-de-batalha
+  - sangrulhos
+  - servicos-de-profissao
+  - prisioneiros
+  - cacada-de-v-bloods
+  - recompensa-online
+  - classes
+labels: [official]
+sidebar:
+  order: 11
+---
+
+import FilterTable from '../../../components/FilterTable.astro';
+
+Type a word from your problem. If nothing here fits, open a ticket on the official Discord (discord.gg/SangriaFalls).
+
+<FilterTable placeholder="Describe the problem (e.g. no XP, prestige, invite)…" label="Filter problems">
+
+| Problem | Likely cause | Fix |
+|---|---|---|
+| Interface installed but nothing in game | Mods off, or game started from Steam | In the launcher, check BepInEx and ScarletInterface are Installed and on, then start with PLAY ([details](/getting-started/interface-troubleshooting/)) |
+| Windows says it protected the PC | No paid signature on the launcher | More info → Run anyway |
+| Launcher found the wrong game folder | V Rising on several drives | Settings → Detect again, or Choose manually with the Steam folder path |
+| Server speaks Portuguese | Language not set | `.lang en` |
+| Can't leave the crypt (no interface) | Language not chosen | Talk to the English NPC or type `.lang en` |
+| Chat menu number does nothing | Menu closed (you walked over 5 m) | Type `.menu` again and stand still |
+| Not gaining character XP | Level 90 cap | Prestige |
+| Weapon XP not rising | Unarmed, wrong weapon, or summons, tombs and nests | Kill with the weapon in hand |
+| Blood not levelling | Killing without draining; Frail blood | Finish creatures with the bite |
+| Can't prestige | Not at max level, or the cost isn't in the Bank | Deposit in the Bank; chat shows the cost and your balance |
+| Class bonuses gone | Not holding the class weapon | Equip the class weapon |
+| Draekhar/Sangrael has no Staff | The Staff is the Spear | Equip the Spear |
+| Draekhar Current choice didn't appear | Panel closed | Round button next to the class crest |
+| Meditation: no XP | UNARMED, NO BLOOD, NO PET, MAX LEVEL, or under 0.35 Sangricoins | Fix the condition, or add Sangricoins ([details](/meditation/troubleshooting/)) |
+| MEDITATE button does nothing | Tutorial not finished or no path chosen | Finish the tutorial; SELECT a path |
+| Quitina refused | Same track already boosted, or a personal bonus (welcome gift) active | Use it on another track |
+| Quest step didn't count | Conversation closed before Finish | Talk again and click through to Finish |
+| NPC repeats a line, no quest | Already have it, or missing a requirement | Check the step in F3 |
+| Daily quest vanished | Midnight reset (Brasília) | Unfinished dailies disappear at reset |
+| Quest list gone from the screen | Inside a dungeon | It returns when you leave |
+| Website panel says offline | Not in game | Join the server; the panel updates |
+| Website actions don't work | Not unlocked | Unlock on the padlock and confirm with `.site yes` |
+| Pet vanished | Entered the city, a dungeon or the test room | Summon it again |
+| Can't summon pet | In combat, downed, bat form, Dominant Presence, tutorial, 5-second wait | Wait or leave the state |
+| Killed boss, no pet | 1% chance; uncapturable boss; Arena or dungeon | Keep hunting open-world bosses |
+| Sangrulho bonus gone | Energy at 0% | FEED with Vampiric Dust |
+| G stored nothing | No chest holds that item yet | Put the first unit in by hand |
+| Mail claim does nothing | Fewer than 15 free slots | Free 15 inventory slots |
+| Battle Pass claim stops | Fewer than 10 free slots (5 per level for CLAIM ALL) | Free inventory space |
+| Market won't open | Outside the city | Go to the city and press L |
+| Can't buy on the Market | Full inventory, low balance, shop closed, already sold | Check each |
+| Market shop gone | 5 days offline, or empty and closed for 48 h | Items are in `.market storage` |
+| Teleport refused | Combat, downed, NPC talk, event, boss area, cooldown | Wait, or leave the state |
+| Teleport points gone | No Castle Heart (yours or clan's); VIP ended (second point) | Rebuild a castle and recreate the points |
+| School brazier won't open | Not that school's member | Use your own school's brazier |
+| Bank brazier won't open | Vlad Parker's teleport quest not done | Finish *The Blood Baptism* |
+| Left the school | 7 days without scoring or 14 offline | Enrol again; rank is kept |
+| Can't invite a friend to a dungeon | Not near Mark, no key of the tier, tutorial unfinished, already grouped | Fix the missing condition |
+| Called by the group board but no invite | Caller left, group full, window closed, wrong tier or key | Talk to the event NPC; chat explains |
+| No Rift Incursion board | No Eye of Twilight in your or your clan's castle | Build one |
+| No fragments from a portal | Not inside the circle when it fell, or full inventory | Stand in the circle |
+| Can't leave the clan | Your extra slots are in use | The clan must shrink first |
+| Clan invite fails (castle) | Both you and the clan have a castle | One castle per clan |
+| Training dummy report missing | Damage still ticking (poison, burn, summons) | Wait 4 seconds with no damage |
+| Service offer not on the board | Not your active craft, under 5 prestiges, no service ticked, unpublished | Fix and publish |
+| Can't list a prisoner | Health under 99% or misery over 1% | Feed it in the cell |
+| Online Reward streak reset | A whole day without 30 minutes | Starts again from day 1; server outage → Discord ticket |
+| Boss tracker says alive but no boss | Someone just killed it | Wait in the spot for the red shape and timer |
+
+</FilterTable>

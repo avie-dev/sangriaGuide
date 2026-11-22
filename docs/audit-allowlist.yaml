@@ -1,0 +1,98 @@
+# Numbers on wiki pages that don't appear in any official source, with the reason each is allowed.
+# Almost all are this wiki's arithmetic from published figures; the formula is given so anyone can
+# re-check it. `node scripts/audit.mjs` fails on any unexplained number not listed here.
+# Keyed by page (path under src/content/docs, without .mdx; "index" pages use the folder name).
+
+character/levels-and-xp:
+  - { n: 777000, why: '74 min (published 1h14) × 10,500 XP per minute; the page calls it our calculation' }
+
+classes/evolutions:
+  - { n: 225000, why: 'La Muerte: 90,000 + 90,000 + 45,000; General: 45,000 + 90,000 + 90,000 (published tributes)' }
+
+economy/budgets:
+  - { n: 225000, why: 'Prerequisite tributes, as above' }
+  - { n: 2500000, why: '250 Transfusions × 10,000' }
+  - { n: 2000000, why: '250 Transfusions × 8,000 (VIP)' }
+  - { n: 22685, why: '22,760 − 75 (first weapon/blood prestige free with Vlad Parker)' }
+  - { n: 68130, why: '22,760 + 22,685 + 22,685' }
+  - { n: 990000, why: '11 classes × 90,000' }
+  - { n: 80000, why: '10 Transfusions × 8,000 (VIP); also 4 armour pieces × 20,000' }
+  - { n: 300000, why: '30 Transfusions × 10,000' }
+  - { n: 240000, why: '30 Transfusions × 8,000' }
+  - { n: 110000, why: 'Mobile Depot 10,000 + 10,000 + 15,000 + 20,000 + 25,000 + 30,000' }
+
+  - { n: 100000, why: '10 Transfusions × 10,000' }
+
+economy/earning-guide:
+  - { n: 18000, why: '3 Rupture windows × 6,000 (Nightmare)' }
+  - { n: 9000, why: '3 Rupture windows × 3,000 (Adventurer)' }
+
+equipment/spell-jewels:
+  - { n: 51, why: 'Number of guides on the official guides hub (research/source-inventory.md)' }
+
+world/community-rules:
+  - { n: 51, why: 'Number of guides on the official guides hub (research/source-inventory.md)' }
+
+meditation/examples:
+  - { n: 175, why: '10 climbs × 50 min × 0.35 (VIP)' }
+  - { n: 45, why: 'An example level in a sentence about partial climbs' }
+  - { n: 26, why: '74 min × 0.35 = 25.9, rounded in the summary' }
+  - { n: 25.9, why: '74 min × 0.35' }
+  - { n: 17.5, why: '50 min × 0.35' }
+  - { n: 518, why: '20 climbs × 74 min × 0.35' }
+  - { n: 259, why: '10 climbs × 74 min × 0.35' }
+  - { n: 5040000, why: '480 min × 10,500' }
+  - { n: 7560000, why: '480 min × 15,750' }
+  - { n: 6.5, why: '480 min ÷ 74 min' }
+  - { n: 9.6, why: '480 min ÷ 50 min' }
+  - { n: 735, why: '21 Sangricoins × 35 (published exchange rate)' }
+
+meditation/recommended-settings:
+  - { n: 31, why: 'Online Reward at 30, 45 … 480 minutes: (480 − 30) ÷ 15 + 1' }
+  - { n: 21.7, why: '31 rewards × 0.70' }
+
+professions/tailor:
+  - { n: 80000, why: '4 pieces × 10 levels × 2,000' }
+
+support/free-vs-vip:
+  - { n: 2500000, why: '250 Transfusions × 10,000' }
+  - { n: 2000000, why: '250 Transfusions × 8,000' }
+
+tools/meditation-calculator:
+  - { n: 777000, why: '74 min × 10,500 XP' }
+
+tools/prestige-calculator:
+  - { n: 22685, why: '22,760 − 75' }
+  - { n: 18218, why: '22,760 − 75 − 4,467 (prestiges 2–19 together)' }
+  - { n: 1012, why: '18,218 ÷ 18' }
+  - { n: 18, why: 'Count of unpublished prestige costs (prestiges 2–19)' }
+  - { n: 19, why: 'The range 19 → 20 (a prestige position)' }
+  - { n: 1.24, why: 'Ratio of a geometric curve fitted to the three published figures; the page labels it an inference that the tool does not use (Q-017)' }
+
+classes/skarn:
+  - { n: 160, why: '4 fury stacks × 40% attack speed (published per-stack value and cap)' }
+
+classes/choosing-a-class:
+  - { n: 40, why: 'Draekhar −40% Max Health (class page; written with a typographic minus)' }
+
+companions/sangrulhos:
+  - { n: 50, why: 'The guide says the bonus drops "to half" below 10% energy' }
+
+equipment/builds-tank:
+  - { n: 360, why: '+9 Health × 10 levels × 4 pieces' }
+
+equipment/fortification:
+  - { n: 90, why: '+9 Health × 10 levels' }
+  - { n: 360, why: '+9 Health × 10 levels × 4 pieces' }
+
+getting-started/vs-bloodcraft:
+  - { n: 300, why: '"over 300": the official commands page lists 309' }
+
+meditation/costs-and-rates:
+  - { n: 42, why: '2 paths × 21 Sangricoins per hour' }
+
+meditation/double-meditation:
+  - { n: 42, why: '2 paths × 21 Sangricoins per hour' }
+
+tools/pet-upgrade-calculator:
+  - { n: 15, why: 'Sacrificed souls 1 + 2 + 4 + 8' }

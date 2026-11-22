@@ -24,6 +24,8 @@ npm run dev        # http://localhost:4321
 npm run build      # static site in dist/, with the search index
 npm run preview    # serve the built site
 npm run check      # type-check, and fail if docs/progress.md is out of date
+npm test           # calculator tests (src/lib/calc)
+npm run audit      # check every number and command against the official sources (needs npm run research)
 npm run coverage   # validate docs/coverage.yaml and regenerate docs/progress.md
 npm run check:external  # after a build: check links to outside sites
 ```

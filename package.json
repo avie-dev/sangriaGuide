@@ -12,7 +12,8 @@
     "research": "node research/fetch.mjs && node research/extract.mjs && node research/inventory.mjs && node research/class-data.mjs && node research/commands-data.mjs",
     "coverage": "node scripts/coverage.mjs",
     "check:external": "node scripts/check-external-links.mjs",
-    "test": "node --test tests/calc.test.ts"
+    "test": "node --test tests/calc.test.ts",
+    "audit": "node scripts/audit.mjs"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.43.1",
