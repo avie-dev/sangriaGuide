@@ -1,7 +1,9 @@
 ---
 title: Tools
-description: "Calculators and planners built only on verified formulas."
-status: planned
+description: "Calculators and planners for Sangria Falls, built only on published figures."
+summary: "Eight calculators: meditation, prestige, Pulses and Transfusions, gathering income, class evolutions, pet upgrades, dungeon keys and a build planner. Each uses only official numbers and says what it can't calculate."
+status: written
+lastVerified: 2026-11-22
 sources:
   - meditacao
   - nivel-e-prestigio
@@ -9,6 +11,7 @@ sources:
   - pets
   - masmorras
   - classes
+labels: [official]
 sidebar:
   label: Overview
   order: 0
@@ -16,14 +19,21 @@ sidebar:
 
 import SectionContents from '../../../components/SectionContents.astro';
 
-Calculators and planners built only on verified formulas.
+Every calculator uses only numbers from the official guides. Each one is listed in `src/data/` with its source and checked when the site builds. Where a guide doesn't publish something, the calculator says so instead of guessing. It shows ranges, asks for your own figures, or leaves the value out. The brief for this wiki is strict about it: no invented XP curves, formulas or probabilities.
+
+| Tool | Answers | Can't do (yet) |
+|---|---|---|
+| [Meditation](/tools/meditation-calculator/) | How long your Sangricoins last, the XP, and how many level 1 → 90 climbs | Partial level ranges (no XP table, Q-011); Weapon, Blood or Pet path rates (Q-021, Q-010) |
+| [Prestige](/tools/prestige-calculator/) | Ourosangue for any character, weapon or blood prestige range | Exact costs for prestiges 2–19, so it gives bounds (Q-017) |
+| [Pulses and Transfusions](/tools/pulse-calculator/) | Pulses, Ourosangue, plasmas, sealed transfusions and meditation time for a target | — |
+| [Gathering income](/tools/profession-income-calculator/) | Ourosangue per hour for Miner, Fisher and Woodcutter at your own rates | Default rates (none are published, Q-012) |
+| [Class evolutions](/tools/class-evolution-calculator/) | Tributes, switches and unlocks for any class, including advanced ones | — |
+| [Pet upgrades](/tools/pet-upgrade-calculator/) | Souls per tier, the Cristal cap, minimum Cristais | Expected Cristal attempts (the chance isn't published) |
+| [Dungeon keys](/tools/dungeon-key-calculator/) | Materials for any number of keys, fusion routes, returns, incursions | Key drop chances |
+| [Build planner](/tools/build-planner/) | Every published bonus your build gets, source by source | Combined totals (stacking isn't documented, Q-009) |
+
+Inputs are kept in the page address, so you can bookmark or share a filled-in calculator.
 
 ## Pages in this section
 
 <SectionContents />
-
-## What this section will cover
-
-- Meditation, prestige, Pulse and Transfusion calculators
-- Profession income, class evolution, pet upgrade and dungeon key calculators
-- A build planner that only computes stats whose stacking rules are verified

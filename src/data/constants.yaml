@@ -1,0 +1,65 @@
+# Single numbers the calculators use, each with its official source. Validated at build time
+# (source ids must exist). Calculators never use a number that isn't here or in another data file.
+# `derived: true` marks a value this wiki computed from published figures; the note says how.
+
+# Meditation
+- { id: meditation-xp-per-tick, value: 10500, unit: XP per minute, sources: [meditacao] }
+- { id: meditation-xp-per-tick-vip, value: 15750, unit: XP per minute, sources: [meditacao] }
+- { id: meditation-cost-per-minute, value: 0.35, unit: Sangricoins per minute per path, sources: [meditacao] }
+- { id: meditation-climb-minutes, value: 74, unit: minutes for level 1 → 90, note: 'Published as "about 1h14".', sources: [meditacao] }
+- { id: meditation-climb-minutes-vip, value: 50, unit: minutes for level 1 → 90 with VIP, note: 'Published as "50 minutes".', sources: [meditacao] }
+
+# Online Reward
+- { id: online-unlock-minutes, value: 30, unit: minutes online in the day before the first reward, sources: [recompensa-online] }
+- { id: online-interval-minutes, value: 15, unit: minutes between rewards, sources: [recompensa-online] }
+- { id: online-base, value: 0.35, unit: Sangricoins per reward before the streak bonus, sources: [recompensa-online] }
+- { id: online-per-streak-day, value: 0.05, unit: Sangricoins added per streak day, sources: [recompensa-online] }
+- { id: online-max-streak-days, value: 7, unit: streak days after which the value stops rising, sources: [recompensa-online] }
+
+# Prestige (character, weapon, blood) — only these three figures are published (Q-017)
+- { id: prestige-first, value: 75, unit: Ourosangue, sources: [nivel-e-prestigio] }
+- { id: prestige-last, value: 4467, unit: Ourosangue (20th prestige), sources: [nivel-e-prestigio] }
+- { id: prestige-total, value: 22760, unit: Ourosangue for all 20, sources: [nivel-e-prestigio] }
+- { id: prestige-count, value: 20, unit: prestiges, sources: [nivel-e-prestigio] }
+
+# Pulses and Transfusions
+- { id: pulses-per-transfusion, value: 10, unit: Pulses, sources: [transfusao-e-plasmas] }
+- { id: transfusion-cost, value: 10000, unit: Ourosangue, sources: [transfusao-e-plasmas] }
+- { id: transfusion-cost-vip, value: 8000, unit: Ourosangue, sources: [transfusao-e-plasmas] }
+- { id: plasmas-per-transfusion, value: 10, unit: plasmas, sources: [transfusao-e-plasmas] }
+- { id: transfusion-max, value: 250, unit: transfusions, sources: [transfusao-e-plasmas] }
+
+# Classes
+- { id: class-switch-cost, value: 3000, unit: Ourosangue, sources: [classes] }
+
+# Gathering pay (Ourosangue per action at prestige 0, and the bonus per prestige as a fraction)
+- { id: miner-pay, value: 25, unit: Ourosangue per vein, sources: [coleta-minerador-pescador-lenhador] }
+- { id: miner-pay-per-prestige, value: 0.10, unit: fraction per prestige, sources: [coleta-minerador-pescador-lenhador] }
+- { id: fisher-pay, value: 70, unit: Ourosangue per catch, sources: [coleta-minerador-pescador-lenhador] }
+- { id: fisher-pay-per-prestige, value: 0.15, unit: fraction per prestige, sources: [coleta-minerador-pescador-lenhador] }
+- { id: woodcutter-pay, value: 10, unit: Ourosangue per tree, sources: [coleta-minerador-pescador-lenhador] }
+- { id: woodcutter-pay-per-prestige, value: 0.10, unit: fraction per prestige, sources: [coleta-minerador-pescador-lenhador] }
+- { id: profession-max-prestige, value: 10, unit: prestiges, sources: [profissoes] }
+
+# Pets
+- { id: pet-own-souls-per-tier, value: 1, unit: souls of the pet itself per tier raise, sources: [pets] }
+- { id: pet-sacrifice-t1, value: 0, unit: sacrificed souls to reach T1, sources: [pets] }
+- { id: pet-sacrifice-t2, value: 1, unit: sacrificed souls to reach T2, sources: [pets] }
+- { id: pet-sacrifice-t3, value: 2, unit: sacrificed souls to reach T3, sources: [pets] }
+- { id: pet-sacrifice-t4, value: 4, unit: sacrificed souls to reach T4, sources: [pets] }
+- { id: pet-sacrifice-t5, value: 8, unit: sacrificed souls to reach T5, sources: [pets] }
+- { id: pet-crystal-cap-per-tier, value: 2, unit: max attribute level per tier (T1 +2 … T5 +10), sources: [pets] }
+- { id: pet-crystal-max-attributes, value: 5, unit: attributes per pet, sources: [pets] }
+- { id: pet-crystal-redistribute, value: 15000, unit: Ourosangue, sources: [pets] }
+- { id: pet-crystal-reset, value: 75, unit: Sangricoins, sources: [pets] }
+- { id: pet-capture-chance, value: 0.01, unit: chance per open-world boss kill, sources: [pets] }
+
+# Dungeons
+- { id: dungeon-material-return, value: 0.20, unit: fraction of the key's materials returned per win, sources: [masmorras] }
+- { id: dungeon-min-party, value: 2, unit: players, sources: [masmorras] }
+- { id: dungeon-max-party, value: 4, unit: players, sources: [masmorras] }
+- { id: incursion-fragments-per-structure, value: 50, unit: fragments per portal or gate, sources: [incursoes] }
+- { id: incursion-structures-per-rift, value: 3, unit: portals and gates in a full rift (2 + 1), sources: [incursoes] }
+
+# Fortification
+- { id: fortification-cost-per-level, value: 2000, unit: Ourosangue, sources: [oficios-ferreiro-alfaiate-encantador] }

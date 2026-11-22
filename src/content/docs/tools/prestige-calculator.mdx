@@ -1,0 +1,29 @@
+---
+title: Prestige calculator
+description: "The Ourosangue cost of any range of Sangria Falls character, weapon or blood prestiges, exact where the official figures allow and as firm bounds otherwise."
+summary: "Choose a prestige range for your character, a weapon and a blood. You get the exact Ourosangue cost when the published figures cover it (e.g. all 20 = 22,760), and otherwise the lowest and highest possible cost."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - nivel-e-prestigio
+  - maestria-de-arma
+  - linhagem-de-sangue
+labels: [official, verify]
+sidebar:
+  order: 2
+---
+
+import PrestigeCalculator from '../../../components/tools/PrestigeCalculator.astro';
+import Unverified from '../../../components/Unverified.astro';
+
+<PrestigeCalculator />
+
+## How it works
+
+The guide publishes three numbers: the **1st prestige costs 75**, the **20th costs 4,467**, and **all 20 cost 22,760**. It also says costs rise with each prestige. So:
+
+- A range that uses only those figures is **exact**: 0 → 1 = 75, 19 → 20 = 4,467, 0 → 20 = 22,760, 1 → 20 = 22,685.
+- Otherwise, each unpublished cost (prestiges 2–19) is at least 75 and at most 4,467, all 18 add up to **18,218** (an average of about 1,012), and they rise one after another. So the lowest few can't average more than 1,012, and the highest few can't average less. The calculator gives the tightest **range** those facts allow.
+- Weapon and blood prestiges use the same price range. The first one is free with Vlad Parker (untick the box if you skipped him).
+
+<Unverified q="Q-017">A curve fitted to the three numbers (about ×1.24 per prestige) would give single figures, but that's our inference, not a source, so the calculator doesn't use it. Type `.level` in game to see your next exact cost, and help fill in the table.</Unverified>

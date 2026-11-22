@@ -1,0 +1,106 @@
+---
+// Meditation calculator UI. Logic: src/lib/calc/meditation.ts (tested in tests/calc.test.ts).
+import { constantsMap } from '../../lib/tool-data';
+const data = { constants: await constantsMap() };
+---
+
+<sf-meditation-calc class="sf-tool" data-tool>
+	<script type="application/json" data-tool-data set:html={JSON.stringify(data)} />
+	<form>
+		<label>Sangricoin balance <input name="balance" type="number" min="0" step="0.01" value="168" inputmode="decimal" /></label>
+		<label>
+			Paths
+			<select name="paths">
+				<option value="1">One path</option>
+				<option value="2">Double Meditation (two paths)</option>
+			</select>
+		</label>
+		<label>
+			Path
+			<select name="path">
+				<option value="xp">Character XP</option>
+				<option value="weapon">Weapon Mastery</option>
+				<option value="blood">Bloodline</option>
+				<option value="pet">Pet</option>
+			</select>
+		</label>
+		<label>Stop after (minutes, blank = until the balance runs out) <input name="minutes" type="number" min="0" step="1" placeholder="until empty" /></label>
+		<label>Server XP event bonus (%) <input name="bonus" type="number" min="0" step="1" value="0" /></label>
+		<label class="sf-tool__check"><input name="vip" type="checkbox" /> VIP (+50% meditation XP)</label>
+		<label>Current character prestige <input name="prestige" type="number" min="0" max="20" step="1" value="0" /></label>
+		<fieldset>
+			<legend>Online Reward during the session</legend>
+			<label class="sf-tool__check"><input name="online" type="checkbox" checked /> Count it</label>
+			<label>Streak day <input name="streak" type="number" min="1" step="1" value="1" /></label>
+			<label>Minutes already online today <input name="onlineToday" type="number" min="0" step="1" value="0" /></label>
+			<label>Minutes until midnight (Brasília, blank = ignore) <input name="midnight" type="number" min="0" step="1" placeholder="ignore" /></label>
+		</fieldset>
+	</form>
+	<div class="sf-tool__out" data-out aria-live="polite"></div>
+</sf-meditation-calc>
+
+<script>
+	import { simulateMeditation } from '../../lib/calc/meditation.ts';
+	import { prestigeCost } from '../../lib/calc/prestige.ts';
+	import type { Constants } from '../../lib/calc/constants.ts';
+	import { toolData, wireForm, num, str, bool, fmt, fmt0, duration } from '../../scripts/tool';
+
+	class MeditationCalc extends HTMLElement {
+		connectedCallback() {
+			const { constants: c } = toolData<{ constants: Constants }>(this);
+			const form = this.querySelector('form')!;
+			const out = this.querySelector<HTMLElement>('[data-out]')!;
+			wireForm(form, 'med', () => {
+				const minutesRaw = str(form, 'minutes').trim();
+				const midnightRaw = str(form, 'midnight').trim();
+				const path = str(form, 'path');
+				const r = simulateMeditation(c, {
+					balance: num(form, 'balance'),
+					paths: num(form, 'paths') === 2 ? 2 : 1,
+					vip: bool(form, 'vip'),
+					serverBonusPct: num(form, 'bonus'),
+					minutes: minutesRaw === '' ? null : Number(minutesRaw),
+					onlineReward: bool(form, 'online'),
+					streakDay: num(form, 'streak') || 1,
+					onlineToday: num(form, 'onlineToday'),
+					minutesToMidnight: midnightRaw === '' ? null : Number(midnightRaw),
+				});
+				const why = { balance: 'It stopped when your Sangricoins ran out.', duration: 'It stopped at the time you set.', cap: 'It stopped at this calculator’s 7-day limit.' }[r.stoppedBecause];
+				const both = 'additive' in r.xpPerPath;
+				const xp = 'single' in r.xpPerPath ? fmt0(r.xpPerPath.single) : `${fmt0(r.xpPerPath.additive)} – ${fmt0(r.xpPerPath.multiplicative)}`;
+				let climbs = '';
+				let prestigeHtml = '';
+				if (path === 'xp') {
+					const n = 'single' in r.climbs ? r.climbs.single : r.climbs.additive;
+					const n2 = 'single' in r.climbs ? null : r.climbs.multiplicative;
+					climbs = n2 === null ? fmt(n) : `${fmt(n)} – ${fmt(n2)}`;
+					const start = Math.min(20, Math.max(0, Math.floor(num(form, 'prestige'))));
+					const full = Math.floor(n);
+					const prestiges = Math.min(full, 20 - start);
+					if (prestiges > 0) {
+						const pc = prestigeCost(c, start, start + prestiges);
+						const cost = pc.exact !== null ? `${fmt0(pc.exact)} Ourosangue` : `between ${fmt0(pc.min)} and ${fmt0(pc.max)} Ourosangue (only some prestige costs are published)`;
+						prestigeHtml = `<p>Prestiging after each full climb from prestige ${start} would take you to <strong>prestige ${start + prestiges}</strong> and cost <strong>${cost}</strong>.${full > prestiges ? ` The remaining ${full - prestiges} climb(s) would be Pulses (free).` : ''}</p>`;
+					} else if (start >= 20 && full > 0) {
+						prestigeHtml = `<p>At prestige 20, each full climb is a <strong>Pulse</strong> (free): about <strong>${full}</strong>.</p>`;
+					}
+				}
+				out.innerHTML = `
+					<dl class="sf-tool__stats">
+						<div><dt>Meditation time</dt><dd>${duration(r.minutes)}</dd></div>
+						<div><dt>XP per path</dt><dd>${xp}</dd></div>
+						<div><dt>Sangricoins spent</dt><dd>${fmt(r.sangricoinsSpent)}</dd></div>
+						<div><dt>Online Reward earned</dt><dd>${fmt(r.onlineRewardEarned)} (${r.onlineRewards})</dd></div>
+						<div><dt>Balance left</dt><dd>${fmt(r.remainingBalance)}</dd></div>
+						${path === 'xp' ? `<div><dt>Level 1 → 90 climbs</dt><dd>${climbs}</dd></div>` : ''}
+					</dl>
+					<p class="sf-tool__note">${why} Ourosangue spent on meditation: 0 (it's paid in Sangricoins).</p>
+					${prestigeHtml}
+					${both ? `<p class="sf-tool__warn">With VIP <em>and</em> a server event, the guides don't say whether the bonuses add (${fmt0((r.xpPerPath as { additive: number }).additive)}) or multiply (${fmt0((r.xpPerPath as { multiplicative: number }).multiplicative)}), so both are shown.</p>` : ''}
+					${path !== 'xp' ? `<p class="sf-tool__warn">The XP shown is the published Character rate. The guides don't confirm the ${path === 'pet' ? 'Pet path rate (and a prestiged pet gains less)' : 'Weapon and Bloodline path rates'}; see the open questions. A path that can't progress (max level, no weapon, no blood, no pet) costs nothing and gives nothing.</p>` : ''}
+					<p class="sf-tool__note">A "climb" uses the published "level 1 → 90 in about 1h14" (${fmt0(r.climbXp)} XP), so it's approximate. Partial level ranges can't be calculated: the XP needed per level isn't published.</p>`;
+			});
+		}
+	}
+	customElements.define('sf-meditation-calc', MeditationCalc);
+</script>

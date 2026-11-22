@@ -1,0 +1,27 @@
+# The 23 Lost Book chapters and the transfusion each one seals, from the official Lost Book guide.
+# The transfusion that brings a chapter is sealed until you hear its Echo with Nyxaris.
+# Transfusion 1 is also sealed (unlocked by the quest The First Transfusion) but brings no chapter.
+
+- { id: echo-01, chapter: 1, book: 1, transfusion: 5, sources: [livro-perdido] }
+- { id: echo-02, chapter: 2, book: 1, transfusion: 10, sources: [livro-perdido] }
+- { id: echo-03, chapter: 3, book: 1, transfusion: 15, sources: [livro-perdido] }
+- { id: echo-04, chapter: 4, book: 1, transfusion: 20, sources: [livro-perdido] }
+- { id: echo-05, chapter: 5, book: 1, transfusion: 25, sources: [livro-perdido] }
+- { id: echo-06, chapter: 6, book: 1, transfusion: 30, sources: [livro-perdido] }
+- { id: echo-07, chapter: 7, book: 1, transfusion: 35, sources: [livro-perdido] }
+- { id: echo-08, chapter: 8, book: 1, transfusion: 40, sources: [livro-perdido] }
+- { id: echo-09, chapter: 9, book: 1, transfusion: 45, sources: [livro-perdido] }
+- { id: echo-10, chapter: 10, book: 1, transfusion: 50, sources: [livro-perdido] }
+- { id: echo-11, chapter: 11, book: 2, transfusion: 65, sources: [livro-perdido] }
+- { id: echo-12, chapter: 12, book: 2, transfusion: 80, sources: [livro-perdido] }
+- { id: echo-13, chapter: 13, book: 2, transfusion: 95, sources: [livro-perdido] }
+- { id: echo-14, chapter: 14, book: 2, transfusion: 110, sources: [livro-perdido] }
+- { id: echo-15, chapter: 15, book: 2, transfusion: 125, sources: [livro-perdido] }
+- { id: echo-16, chapter: 16, book: 2, transfusion: 140, sources: [livro-perdido] }
+- { id: echo-17, chapter: 17, book: 2, transfusion: 155, sources: [livro-perdido] }
+- { id: echo-18, chapter: 18, book: 2, transfusion: 170, sources: [livro-perdido] }
+- { id: echo-19, chapter: 19, book: 3, transfusion: 190, sources: [livro-perdido] }
+- { id: echo-20, chapter: 20, book: 3, transfusion: 205, sources: [livro-perdido] }
+- { id: echo-21, chapter: 21, book: 3, transfusion: 220, sources: [livro-perdido] }
+- { id: echo-22, chapter: 22, book: 3, transfusion: 235, sources: [livro-perdido] }
+- { id: echo-23, chapter: 23, book: 3, transfusion: 250, sources: [livro-perdido] }

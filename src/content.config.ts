@@ -81,6 +81,47 @@ const npcs = defineCollection({
 	}),
 });
 
+const constants = defineCollection({
+	loader: file('src/data/constants.yaml'),
+	schema: z.object({
+		value: z.number(),
+		unit: z.string(),
+		note: z.string().optional(),
+		derived: z.boolean().default(false),
+		sources: sourceIds.pipe(z.array(z.string()).min(1)),
+	}),
+});
+
+const dungeonKeys = defineCollection({
+	loader: file('src/data/dungeon-keys.yaml'),
+	schema: z.object({
+		name: z.string(),
+		order: z.number().int(),
+		materials: z.array(z.object({ item: z.string(), qty: z.number().int().positive() })).min(1),
+		fuseFrom: z.number().int().positive().nullable(),
+		sources: sourceIds.pipe(z.array(z.string()).min(1)),
+	}),
+});
+
+const attrList = z.array(z.object({ name: z.string(), value: z.string().regex(/^[+-]\d+(\.\d+)?%?$/) })).min(1);
+const buffs = defineCollection({
+	loader: file('src/data/buffs.yaml'),
+	schema: z.discriminatedUnion('kind', [
+		z.object({ kind: z.literal('prestige'), prestige: z.number().int().min(1).max(20), attrs: attrList, sources: sourceIds }),
+		z.object({ kind: z.literal('achievement'), name: z.string(), attrs: attrList, sources: sourceIds }),
+	]),
+});
+
+const lostBook = defineCollection({
+	loader: file('src/data/lost-book.yaml'),
+	schema: z.object({
+		chapter: z.number().int().min(1).max(23),
+		book: z.number().int().min(1).max(3),
+		transfusion: z.number().int().min(1).max(250),
+		sources: sourceIds,
+	}),
+});
+
 export const collections = {
 	docs: defineCollection({
 		loader: docsLoader(),
@@ -103,4 +144,8 @@ export const collections = {
 	classes,
 	costTables,
 	npcs,
+	constants,
+	dungeonKeys,
+	buffs,
+	lostBook,
 };

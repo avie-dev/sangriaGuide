@@ -1,0 +1,61 @@
+---
+// Dungeon key calculator UI. Logic: src/lib/calc/dungeons.ts.
+import { getCollection } from 'astro:content';
+import { constantsMap } from '../../lib/tool-data';
+const tiers = (await getCollection('dungeonKeys')).map((e) => ({ id: e.id, ...e.data })).sort((a, b) => a.order - b.order);
+const data = { constants: await constantsMap(), tiers };
+---
+
+<sf-key-calc class="sf-tool" data-tool>
+	<script type="application/json" data-tool-data set:html={JSON.stringify(data)} />
+	<form>
+		<label>Tier <select name="tier">{tiers.map((t) => <option value={t.id}>{t.name}</option>)}</select></label>
+		<label>Runs <input name="runs" type="number" min="0" step="1" value="5" /></label>
+		<label>
+			Keys you provide (players)
+			<select name="players"><option value="1">Just mine</option><option value="2">2</option><option value="3">3</option><option value="4">4 (whole party)</option></select>
+		</label>
+		<label>Keys already in hand <input name="have" type="number" min="0" step="1" value="0" /></label>
+	</form>
+	<div class="sf-tool__out" data-out aria-live="polite"></div>
+</sf-key-calc>
+
+<script>
+	import { dungeonPlan, keyRoutes, riftsFor, type KeyTier, type Materials } from '../../lib/calc/dungeons.ts';
+	import type { Constants } from '../../lib/calc/constants.ts';
+	import { toolData, wireForm, num, str, fmt0, esc } from '../../scripts/tool';
+
+	const list = (m: Materials) =>
+		Object.entries(m)
+			.map(([item, qty]) => `${fmt0(qty)} ${esc(item)}`)
+			.join(' + ') || '—';
+
+	class KeyCalc extends HTMLElement {
+		connectedCallback() {
+			const { constants: c, tiers } = toolData<{ constants: Constants; tiers: KeyTier[] }>(this);
+			const form = this.querySelector('form')!;
+			const out = this.querySelector<HTMLElement>('[data-out]')!;
+			wireForm(form, 'key', () => {
+				const tierId = str(form, 'tier');
+				const p = dungeonPlan(c, tiers, tierId, num(form, 'runs'), num(form, 'players'));
+				const toMake = Math.max(0, p.keys - Math.max(0, Math.floor(num(form, 'have'))));
+				const routes = keyRoutes(tiers, tierId, toMake);
+				const tier = tiers.find((t) => t.id === tierId)!;
+				out.innerHTML = `
+					<dl class="sf-tool__stats">
+						<div><dt>Keys needed</dt><dd>${fmt0(p.keys)}</dd></div>
+						<div><dt>Keys to make</dt><dd>${fmt0(toMake)}</dd></div>
+					</dl>
+					<div class="sf-tool__scroll"><table>
+						<thead><tr><th>Route</th><th>Materials for ${fmt0(toMake)} key(s)</th></tr></thead>
+						<tbody>${routes.map((r) => `<tr><td>${esc(r.label)}${Object.keys(r.keysForged)[0] !== tier.name ? ` (${fmt0(Object.values(r.keysForged)[0])} ${esc(Object.keys(r.keysForged)[0])})` : ''}</td><td>${list(r.materials)}</td></tr>`).join('')}</tbody>
+					</table></div>
+					${tier.id === 'nightmare' ? '<p>Nightmare keys can’t be fused. They come only from forging or from Rift Incursion II–III gate bosses.</p>' : ''}
+					<p>If all ${fmt0(p.keys)} run(s) are won, each win returns 20% of that key's materials: <strong>${list(p.returnedIfAllWon)}</strong> back in total.</p>
+					${riftsFor(c, routes[0].materials).map((s) => `<p>${fmt0(s.amount)} ${esc(s.item)} is about <strong>${fmt0(s.fullRifts)} full Rift Incursions</strong> at 150 fragments each (2 portals + 1 gate, 50 each, if you're in every circle). ${s.item === 'Greater Stygian Shard' ? 'Greater Stygian Shards come from incursions II and III.' : 'Stygian Shards come from incursion I.'}</p>`).join('')}
+					<p class="sf-tool__note">Each player spends 1 key of the tier per run, and a loss returns nothing. The materials must be in your inventory when you forge at Mark. Ready-made keys can also drop from incursion gate bosses, but the chance isn't published.</p>`;
+			});
+		}
+	}
+	customElements.define('sf-key-calc', KeyCalc);
+</script>

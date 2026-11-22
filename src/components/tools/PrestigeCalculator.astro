@@ -1,0 +1,65 @@
+---
+// Prestige calculator UI. Logic: src/lib/calc/prestige.ts.
+import { constantsMap } from '../../lib/tool-data';
+const data = { constants: await constantsMap() };
+const tracks = [
+	{ key: 'ch', label: 'Character', from: 0, to: 20 },
+	{ key: 'wp', label: 'Weapon (one type)', from: 0, to: 0 },
+	{ key: 'bl', label: 'Blood (one type)', from: 0, to: 0 },
+];
+---
+
+<sf-prestige-calc class="sf-tool" data-tool>
+	<script type="application/json" data-tool-data set:html={JSON.stringify(data)} />
+	<form>
+		{
+			tracks.map((t) => (
+				<fieldset>
+					<legend>{t.label}</legend>
+					<label>From prestige <input name={`${t.key}From`} type="number" min="0" max="20" step="1" value={t.from} /></label>
+					<label>To prestige <input name={`${t.key}To`} type="number" min="0" max="20" step="1" value={t.to} /></label>
+				</fieldset>
+			))
+		}
+		<label class="sf-tool__check"><input name="free" type="checkbox" checked /> Vlad Parker does the first weapon and blood prestige free</label>
+	</form>
+	<div class="sf-tool__out" data-out aria-live="polite"></div>
+</sf-prestige-calc>
+
+<script>
+	import { prestigePlan, type PrestigeCost } from '../../lib/calc/prestige.ts';
+	import type { Constants } from '../../lib/calc/constants.ts';
+	import { toolData, wireForm, num, bool, fmt0 } from '../../scripts/tool';
+
+	const show = (p: PrestigeCost) => (p.exact !== null ? `${fmt0(p.exact)}` : `${fmt0(p.min)} – ${fmt0(p.max)}`);
+
+	class PrestigeCalc extends HTMLElement {
+		connectedCallback() {
+			const { constants: c } = toolData<{ constants: Constants }>(this);
+			const form = this.querySelector('form')!;
+			const out = this.querySelector<HTMLElement>('[data-out]')!;
+			const range = (key: string) => {
+				const from = Math.min(20, Math.max(0, Math.floor(num(form, `${key}From`))));
+				const to = Math.min(20, Math.max(from, Math.floor(num(form, `${key}To`))));
+				return { from, to };
+			};
+			wireForm(form, 'pre', () => {
+				const p = prestigePlan(c, range('ch'), range('wp'), range('bl'), bool(form, 'free'));
+				const exactAll = p.total.exact !== null;
+				out.innerHTML = `
+					<div class="sf-tool__scroll"><table>
+						<thead><tr><th>Track</th><th>Ourosangue</th></tr></thead>
+						<tbody>
+							<tr><td>Character</td><td>${show(p.character)}</td></tr>
+							<tr><td>Weapon</td><td>${show(p.weapon)}</td></tr>
+							<tr><td>Blood</td><td>${show(p.blood)}</td></tr>
+						</tbody>
+						<tfoot><tr><th>Total</th><th>${show(p.total)}</th></tr></tfoot>
+					</table></div>
+					${exactAll ? '' : `<p class="sf-tool__warn">Ranges show the lowest and highest possible cost. The official guide publishes only the 1st prestige (75), the 20th (4,467) and the total for all 20 (22,760), and says costs rise each time. Type <code>.level</code> in game to see your next exact cost (open question Q-017).</p>`}
+					<p class="sf-tool__note">Paid from your Bank balance. Weapon and blood prestige are per weapon type and per blood type.</p>`;
+			});
+		}
+	}
+	customElements.define('sf-prestige-calc', PrestigeCalc);
+</script>

@@ -1,0 +1,26 @@
+---
+title: Gathering income calculator
+description: "Compare Miner, Fisher and Woodcutter Ourosangue on Sangria Falls at your own prestige and your own actions per hour."
+summary: "Enter each gathering trade's prestige and how many veins, catches or trees you manage per hour. It shows Ourosangue per action (official), per hour and per session, plus the prestige extra-resource bonus."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - coleta-minerador-pescador-lenhador
+  - profissoes
+labels: [official, verify]
+sidebar:
+  order: 4
+---
+
+import ProfessionIncomeCalculator from '../../../components/tools/ProfessionIncomeCalculator.astro';
+import Unverified from '../../../components/Unverified.astro';
+
+<ProfessionIncomeCalculator />
+
+## How it works
+
+Pay per action is official: **Miner 25 (+10% per prestige), Fisher 70 (+15%), Woodcutter 10 (+10%)**, which gives 50, 175 and 20 at prestige 10. Your hourly income is that pay times **your** actions per hour.
+
+<Unverified q="Q-012">How many actions you can fit in an hour isn't published and depends on where and how you gather. Time yourself for a few minutes and enter the rate, and please share your numbers.</Unverified>
+
+It leaves out profession orders, refining components and pet souls (chances not published), selling the gathered resources, and aquariums. See [Comparing the gathering trades](/professions/gathering-comparison/).

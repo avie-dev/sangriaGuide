@@ -1,0 +1,38 @@
+# Dungeon key recipes and fusions, from the official Dungeons guide (masmorras).
+# `fuseFrom`: how many keys of the tier below make one of this tier (null = can't be fused into).
+
+- id: adventurer
+  name: Adventurer
+  order: 1
+  materials:
+    - { item: Stygian Shard, qty: 500 }
+    - { item: Copper Ingot, qty: 150 }
+  fuseFrom: null
+  sources: [masmorras]
+
+- id: veteran
+  name: Veteran
+  order: 2
+  materials:
+    - { item: Stygian Shard, qty: 750 }
+    - { item: Reinforced Plank, qty: 20 }
+  fuseFrom: 5
+  sources: [masmorras]
+
+- id: master
+  name: Master
+  order: 3
+  materials:
+    - { item: Greater Stygian Shard, qty: 500 }
+    - { item: Dark Silver Ingot, qty: 15 }
+  fuseFrom: 3
+  sources: [masmorras]
+
+- id: nightmare
+  name: Nightmare
+  order: 4
+  materials:
+    - { item: Greater Stygian Shard, qty: 1000 }
+    - { item: Power Core, qty: 5 }
+  fuseFrom: null
+  sources: [masmorras]

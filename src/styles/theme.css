@@ -70,3 +70,113 @@ header.header {
 .sl-markdown-content table tr:nth-child(even) {
 	background: color-mix(in srgb, var(--sl-color-gray-6) 60%, transparent);
 }
+
+/* ---------- Calculators (src/components/tools/*) ---------- */
+.sf-tool {
+	border: 1px solid var(--sl-color-gray-5);
+	border-top: 3px solid var(--sf-crimson);
+	border-radius: 0.375rem;
+	padding: 1rem;
+	margin-block: 1.5rem;
+	background: var(--sl-color-gray-6);
+}
+.sf-tool form {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+	gap: 0.75rem 1rem;
+	margin: 0;
+}
+.sf-tool fieldset {
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+	gap: 0.75rem 1rem;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 0.25rem;
+	padding: 0.75rem;
+	margin: 0;
+}
+.sf-tool legend {
+	font-weight: 600;
+	padding-inline: 0.25rem;
+	color: var(--sf-heading);
+}
+.sf-tool label {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	font-size: var(--sl-text-sm);
+	color: var(--sl-color-gray-2);
+	margin: 0;
+}
+.sf-tool label.sf-tool__check {
+	flex-direction: row;
+	align-items: center;
+	gap: 0.5rem;
+}
+.sf-tool input:not([type='checkbox']),
+.sf-tool select {
+	width: 100%;
+	min-width: 0;
+	padding: 0.35rem 0.5rem;
+	border: 1px solid var(--sl-color-gray-4);
+	border-radius: 0.25rem;
+	background: var(--sl-color-black);
+	color: var(--sl-color-white);
+	font: inherit;
+	font-size: var(--sl-text-sm);
+}
+.sf-tool__out {
+	margin-top: 1rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--sl-color-gray-5);
+}
+.sf-tool__out > :first-child {
+	margin-top: 0;
+}
+.sf-tool__stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+	gap: 0.75rem;
+	margin: 0 0 1rem;
+}
+.sf-tool__stats div {
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 0.25rem;
+	padding: 0.5rem 0.75rem;
+	background: var(--sl-color-black);
+}
+.sf-tool__stats dt {
+	font-size: var(--sl-text-xs);
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: var(--sl-color-gray-3);
+}
+.sf-tool__stats dd {
+	margin: 0.15rem 0 0;
+	font-size: var(--sl-text-lg);
+	font-weight: 600;
+	color: var(--sl-color-white);
+	font-variant-numeric: tabular-nums;
+}
+.sf-tool__out table {
+	width: 100%;
+	font-size: var(--sl-text-sm);
+	font-variant-numeric: tabular-nums;
+}
+.sf-tool__note {
+	font-size: var(--sl-text-xs);
+	color: var(--sl-color-gray-3);
+}
+.sf-tool__warn {
+	font-size: var(--sl-text-sm);
+	border-left: 3px solid var(--sf-gold);
+	padding-left: 0.6rem;
+	color: var(--sl-color-gray-2);
+}
+.sf-tool__error {
+	color: var(--sl-color-red-high, #ff8a8a);
+}
+.sf-tool__scroll {
+	overflow-x: auto;
+}

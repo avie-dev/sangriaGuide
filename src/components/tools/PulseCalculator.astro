@@ -1,0 +1,58 @@
+---
+// Pulse and Transfusion calculator UI. Logic: src/lib/calc/pulses.ts.
+import { constantsMap, chapterTransfusions } from '../../lib/tool-data';
+const data = { constants: await constantsMap(), chapters: await chapterTransfusions() };
+---
+
+<sf-pulse-calc class="sf-tool" data-tool>
+	<script type="application/json" data-tool-data set:html={JSON.stringify(data)} />
+	<form>
+		<label>Transfusions done <input name="done" type="number" min="0" max="250" step="1" value="0" /></label>
+		<label>Target transfusions <input name="target" type="number" min="0" max="250" step="1" value="10" /></label>
+		<label>Pulses already stored <input name="stored" type="number" min="0" step="1" value="0" /></label>
+		<label>Sangricoin balance (for meditation) <input name="balance" type="number" min="0" step="0.01" placeholder="optional" /></label>
+		<label>Ourosangue balance <input name="ouro" type="number" min="0" step="1" placeholder="optional" /></label>
+		<label class="sf-tool__check"><input name="vip" type="checkbox" /> VIP (8,000 per Transfusion; faster meditation)</label>
+	</form>
+	<div class="sf-tool__out" data-out aria-live="polite"></div>
+</sf-pulse-calc>
+
+<script>
+	import { pulsePlan } from '../../lib/calc/pulses.ts';
+	import type { Constants } from '../../lib/calc/constants.ts';
+	import { toolData, wireForm, num, str, bool, fmt, fmt0, duration } from '../../scripts/tool';
+
+	class PulseCalc extends HTMLElement {
+		connectedCallback() {
+			const { constants: c, chapters } = toolData<{ constants: Constants; chapters: number[] }>(this);
+			const form = this.querySelector('form')!;
+			const out = this.querySelector<HTMLElement>('[data-out]')!;
+			wireForm(form, 'pulse', () => {
+				const r = pulsePlan(c, chapters, {
+					transfusionsDone: num(form, 'done'),
+					targetTransfusions: num(form, 'target'),
+					storedPulses: num(form, 'stored'),
+					vip: bool(form, 'vip'),
+				});
+				const sangriShort = str(form, 'balance').trim() === '' ? 0 : Math.max(0, r.meditationSangricoins - num(form, 'balance'));
+				const ouroShort = str(form, 'ouro').trim() === '' ? 0 : Math.max(0, r.ourosangue - num(form, 'ouro'));
+				out.innerHTML = `
+					<dl class="sf-tool__stats">
+						<div><dt>Transfusions</dt><dd>${fmt0(r.transfusions)}</dd></div>
+						<div><dt>Pulses still needed</dt><dd>${fmt0(r.pulsesNeeded)}</dd></div>
+						<div><dt>Ourosangue</dt><dd>${fmt0(r.ourosangue)}</dd></div>
+						<div><dt>Plasmas gained</dt><dd>${fmt0(r.plasmas)} (total ${fmt0(r.totalPlasmasAfter)})</dd></div>
+						<div><dt>Meditation (all Pulses)</dt><dd>${duration(r.meditationMinutes)}</dd></div>
+						<div><dt>Meditation Sangricoins</dt><dd>${fmt(r.meditationSangricoins)}</dd></div>
+					</dl>
+					${ouroShort > 0 ? `<p class="sf-tool__warn">You're <strong>${fmt0(ouroShort)} Ourosangue</strong> short for these Transfusions.</p>` : ''}
+					${sangriShort > 0 ? `<p class="sf-tool__warn">Meditating every Pulse would need <strong>${fmt(sangriShort)}</strong> more Sangricoins. Hunting also gives Pulses.</p>` : ''}
+					${r.pulsesLeftOver ? `<p>${fmt0(r.pulsesLeftOver)} stored Pulse(s) left over afterwards.</p>` : ''}
+					${r.sealed.length ? `<p><strong>Sealed transfusions in this range:</strong> ${r.sealed.join(', ')}. Each needs Nyxaris first: <em>The First Transfusion</em> for #1, an Echo quest for the others.</p>` : ''}
+					${r.milestones.length ? `<p><strong>Milestones:</strong> ${r.milestones.map((m) => `${m.at}: ${m.name}`).join('; ')}.</p>` : ''}
+					<p class="sf-tool__note">Meditation time assumes every Pulse is a full level 1 → 90 climb by meditation at the published rate (about 74 minutes, 50 with VIP). It's an estimate.</p>`;
+			});
+		}
+	}
+	customElements.define('sf-pulse-calc', PulseCalc);
+</script>

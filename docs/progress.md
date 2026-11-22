@@ -25,7 +25,7 @@ A page stub is never counted as finished content.
 | 5 | Progression, class and meditation guides | Done (2026-11-22) | 33 pages: Character (9: levels and XP, prestige with all 20 buffs, XP bonuses, Quitina, weapon mastery, blood lineage, statistics with an attribute glossary, profile), Meditation (8: how it works, costs and rates, Double Meditation, Auto-Prestige, AFK settings, worked examples, troubleshooting) and Classes (16: all 11 classes plus the Awakened translated from the Portuguese class pages, choosing a class, evolutions, Training Room). Class tables (evolutions, per-grade attributes, defaults) come from `src/data/class-details.json`, which `research/class-data.mjs` parses from the official pages; it found 5 published totals that don't add up (Q-018, Q-019), which the pages flag. New open questions Q-018 to Q-021. |
 | 6 | Economy, professions, pets, equipment | Done (2026-11-22) | 49 pages. Economy (12: currencies, Bank, Vault, Market, contracts, Shadow Merchant, Casino, Online Reward, Prisoners, an earning guide of official payouts and limits, budgets totalled from official prices). Professions (11: orders, each trade, a gathering comparison, services, aquarium). Companions (10: pets, capture, souls and tiers, levels, Cristais, recommendations, Sangrulhos, eggs, fusion). Equipment (16: weapons, affinity, armour and jewellery, fortification, refinement, Perfect gems, spell jewels, bonuses by class, upgrade priorities, six build-archetype frameworks with no claimed optimum). New cost tables (vault, chest expansion, Mobile Depot, profession prestige, fortification) and a ClassBonusSummary component. New open question Q-022. |
 | 7 | Dungeons, events, endgame | Done (2026-11-22) | 61 pages, covering every remaining section. Dungeons (11, including four per-dungeon pages whose rooms are undocumented, Q-023), Events (9), Quests (6), Schools (3), Endgame (6), Support (6), World (10) and Reference (10: all 309 commands, shortcuts, NPCs, items, bosses, a Portuguese–English glossary, every cost table, every published chance, progression requirements). New data: `src/data/commands.json` (parsed by `research/commands-data.mjs`, with English descriptions where an English guide gives the same command) and `src/data/npcs.yaml` (a validated collection shared by two pages). New components: CommandTable and NpcTable. Corrections: the Marriage Joint Account is an exception to "no transfers between players"; Q-006 is partly answered (Rupture and Judgment groups can't hurt each other). New open question Q-023. |
-| 8 | Calculators and interactive tools | Not started | |
+| 8 | Calculators and interactive tools | Done (2026-11-22) | Eight tools on /tools/: meditation, prestige, Pulses and Transfusions, gathering income, class evolutions, pet upgrades, dungeon keys and a build planner. The logic lives in `src/lib/calc/` as pure TypeScript, covered by 32 tests (`npm test`) that check the official examples. Every number comes from validated data files (`src/data/constants.yaml`, `dungeon-keys.yaml`, `buffs.yaml`, `lost-book.yaml`). No curves, rates or chances are invented: prestige costs show exact values or firm bounds (Q-017), gathering needs your own rates (Q-012), Cristal attempts show only the minimum, and the build planner lists sources without adding them (Q-009). Inputs are kept in the URL, so calculations can be shared. |
 | 9 | Source verification and QA | Not started | |
 | 10 | Deployment and contribution readiness | Not started | Do not deploy until the user asks |
 
@@ -34,7 +34,7 @@ A page stub is never counted as finished content.
 <!-- coverage:start -->
 _Generated from `docs/coverage.yaml` by `npm run coverage`. Edit the YAML, not these tables._
 
-**191 pages planned** · written: 179 · drafts: 0 · verified: 0 · published: 179 · page stubs: 1
+**191 pages planned** · written: 188 · drafts: 0 · verified: 0 · published: 188 · page stubs: 0
 
 | Phase | Pages |
 |---|---|
@@ -316,13 +316,13 @@ _Generated from `docs/coverage.yaml` by `npm run coverage`. Edit the YAML, not t
 
 | Article | Sources | Research | Writing | Verification | Implementation | Missing information |
 |---|---|---|---|---|---|---|
-| Tools <br>`/tools/` · phase 8 | `meditacao` | sources found | — | — | page stub |  |
-| Meditation calculator <br>`/tools/meditation-calculator/` · phase 8 | `meditacao`, `nivel-e-prestigio`, `recompensa-online`, `vip` | read | — | — | — | Q-010; Q-011 |
-| Prestige calculator <br>`/tools/prestige-calculator/` · phase 8 | `nivel-e-prestigio`, `maestria-de-arma`, `linhagem-de-sangue` | sources found | — | — | — |  |
-| Pulse and Transfusion calculator <br>`/tools/pulse-calculator/` · phase 8 | `transfusao-e-plasmas`, `meditacao` | sources found | — | — | — |  |
-| Profession income calculator <br>`/tools/profession-income-calculator/` · phase 8 | `coleta-minerador-pescador-lenhador` | sources found | — | — | — | Q-012 |
-| Class evolution calculator <br>`/tools/class-evolution-calculator/` · phase 8 | `classes` | sources found | — | — | — |  |
-| Pet upgrade calculator <br>`/tools/pet-upgrade-calculator/` · phase 8 | `pets` | sources found | — | — | — |  |
-| Dungeon key calculator <br>`/tools/dungeon-key-calculator/` · phase 8 | `masmorras` | sources found | — | — | — |  |
-| Build planner <br>`/tools/build-planner/` · phase 8 | `classes`, `perfil`, `maestria-de-arma`, `linhagem-de-sangue`, `escolas`, `pets`, `sangrulhos`, `transfusao-e-plasmas` | sources found | — | — | — | Q-009 |
+| Tools <br>`/tools/` · phase 8 | `meditacao` | read | written | partly checked | published |  |
+| Meditation calculator <br>`/tools/meditation-calculator/` · phase 8 | `meditacao`, `nivel-e-prestigio`, `recompensa-online`, `vip` | read | written | partly checked | tested | Q-010; Q-011; Q-021 |
+| Prestige calculator <br>`/tools/prestige-calculator/` · phase 8 | `nivel-e-prestigio`, `maestria-de-arma`, `linhagem-de-sangue` | read | written | partly checked | tested | Q-017 |
+| Pulse and Transfusion calculator <br>`/tools/pulse-calculator/` · phase 8 | `transfusao-e-plasmas`, `meditacao` | read | written | partly checked | tested |  |
+| Profession income calculator <br>`/tools/profession-income-calculator/` · phase 8 | `coleta-minerador-pescador-lenhador` | read | written | partly checked | tested | Q-012 |
+| Class evolution calculator <br>`/tools/class-evolution-calculator/` · phase 8 | `classes` | read | written | partly checked | tested |  |
+| Pet upgrade calculator <br>`/tools/pet-upgrade-calculator/` · phase 8 | `pets` | read | written | partly checked | tested |  |
+| Dungeon key calculator <br>`/tools/dungeon-key-calculator/` · phase 8 | `masmorras` | read | written | partly checked | tested |  |
+| Build planner <br>`/tools/build-planner/` · phase 8 | `classes`, `perfil`, `maestria-de-arma`, `linhagem-de-sangue`, `escolas`, `pets`, `sangrulhos`, `transfusao-e-plasmas` | read | written | partly checked | tested | Q-009 |
 <!-- coverage:end -->

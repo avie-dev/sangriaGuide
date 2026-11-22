@@ -1,0 +1,23 @@
+---
+title: Pet upgrade calculator
+description: "Souls needed to raise a Sangria Falls pet's tier, the Cristal cap per tier, and the minimum Cristais for your attribute targets."
+summary: "Choose a tier range to see own souls (1 per tier) and sacrificed souls (1, 2, 4, 8 for T2–T5). Set Cristal targets to see the tier cap (+2 per tier) and the minimum Cristais if every attempt succeeds."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - pets
+labels: [official, verify]
+sidebar:
+  order: 6
+---
+
+import PetUpgradeCalculator from '../../../components/tools/PetUpgradeCalculator.astro';
+
+<PetUpgradeCalculator />
+
+## How it works
+
+- **Tiers:** each raise costs **1 soul of the pet itself**, plus **sacrificed souls from its act**: 1 (T2), 2 (T3), 4 (T4) and 8 (T5). So T0 → T5 is 5 + 15.
+- **Cristais:** up to 5 attributes, each capped at **+2 per tier** (T5 +10). Each attempt costs 1 Cristal. The calculator lowers targets above your tier's cap.
+
+**Expected attempts can't be calculated.** The evolve chance isn't published. The panel shows a CURRENT CHANCE that rises after each failure. So the result is the **minimum**, with every attempt succeeding. See [Pet Cristais](/companions/pet-crystals/).

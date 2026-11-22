@@ -1,0 +1,38 @@
+---
+title: Meditation calculator
+description: "How long your Sangricoins last in the Sangria Falls Meditation Chamber, the XP you get, and how many level 1 → 90 climbs, including VIP, Double Meditation, server events and the Online Reward."
+summary: "Enter your Sangricoins and options to see how long meditation runs, the XP per path, the Online Reward earned meanwhile, and roughly how many level 1 → 90 climbs (and prestiges) that is. Uses only published rates."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - meditacao
+  - nivel-e-prestigio
+  - recompensa-online
+  - vip
+labels: [official, verify]
+sidebar:
+  order: 1
+---
+
+import MeditationCalculator from '../../../components/tools/MeditationCalculator.astro';
+import Unverified from '../../../components/Unverified.astro';
+
+<MeditationCalculator />
+
+## How it works
+
+It simulates the session minute by minute:
+
+- Each minute costs **0.35 Sangricoin per path** (0.70 on Double Meditation) and gives **10,500 XP** (15,750 with VIP). It stops when your balance can't cover the next minute.
+- With **Online Reward** on, a reward lands in your balance after 30 minutes online in the day, then every 15 minutes (0.40 → 0.70 by streak day). It resets at midnight if you say when midnight is.
+- A **climb** is the published "level 1 → 90 in about 1h14", which is 777,000 XP at the normal rate. On the Character path, the calculator also shows where prestiging after each full climb would take you, and what those prestiges cost (exact or as bounds; see the [prestige calculator](/tools/prestige-calculator/)).
+
+## What it can't do
+
+<Unverified q="Q-011">There's no published XP-per-level table, so it can't tell you how long level 45 → 90 takes. Only full climbs.</Unverified>
+
+<Unverified q="Q-021">It shows the published Character rate for every path. The Weapon and Bloodline rates aren't confirmed, and the Pet path gives less to a prestiged pet by an unpublished amount (Q-010).</Unverified>
+
+**VIP plus a server event:** the guides don't say whether the +50% and the event bonus add or multiply, so you see both results.
+
+See [Costs and XP rates](/meditation/costs-and-rates/) and [Worked examples](/meditation/examples/).

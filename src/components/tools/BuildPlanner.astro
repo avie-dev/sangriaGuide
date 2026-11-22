@@ -1,0 +1,158 @@
+---
+// Build planner UI. Logic: src/lib/calc/build.ts. Lists each source's published bonuses separately
+// and never adds different sources together (stacking isn't documented, Q-009).
+import { getCollection } from 'astro:content';
+import { classDetails } from '../../lib/class-details';
+import { attributeName } from '../../data/attribute-names';
+
+const GROUP_NAMES: Record<string, string> = {
+	'Mortak Inabalável': 'Unshakable',
+	'Mortak Implacável': 'Relentless',
+	'Sepulkros Invocador': 'Summoner',
+	'Sepulkros Ceifador': 'Reaper',
+};
+const STAGE_ORDER = ['Base', 'I', 'II', 'III'];
+const entries = (await getCollection('classes')).filter((e) => !e.data.starting).sort((a, b) => a.data.order - b.data.order);
+const classes = entries.map((e) => {
+	const d = classDetails(e.id);
+	return {
+		id: e.id,
+		name: e.data.name,
+		groups: d.attributes.map((g) => ({
+			name: g.name ? (GROUP_NAMES[g.name] ?? g.name) : e.data.weapons.join(' / '),
+			stages: STAGE_ORDER.map((st) => ({
+				stage: st,
+				attrs: (g.stages.find((s) => s.stage === st)?.attrs ?? []).map((a) => ({ name: attributeName(a.name), value: a.flag ? '✓' : a.value! })),
+			})),
+			total: g.stages.find((s) => s.stage === 'Total')?.attrs.map((a) => ({ name: attributeName(a.name), value: a.flag ? '✓' : a.value! })),
+		})),
+		benefitsFrom: d.benefitsFrom.map(attributeName),
+		doesNotUse: d.doesNotUse.map(attributeName),
+		defaults: { mastery: d.defaultAttributes.mastery.map(attributeName), blood: d.defaultAttributes.blood.map(attributeName) },
+	};
+});
+const buffs = await getCollection('buffs');
+const prestigeBuffs = buffs
+	.filter((b) => b.data.kind === 'prestige')
+	.map((b) => b.data as { prestige: number; attrs: { name: string; value: string }[] })
+	.sort((a, b) => a.prestige - b.prestige);
+const achievements = buffs
+	.filter((b) => b.data.kind === 'achievement')
+	.map((b) => ({ id: b.id, ...(b.data as { name: string; attrs: { name: string; value: string }[] }) }));
+const data = { classes, prestigeBuffs, achievements };
+---
+
+<sf-build-planner class="sf-tool" data-tool>
+	<script type="application/json" data-tool-data set:html={JSON.stringify(data)} />
+	<form>
+		<fieldset>
+			<legend>Class</legend>
+			<label>Class <select name="cls">{classes.map((c) => <option value={c.id}>{c.name}</option>)}</select></label>
+			<label>Weapon or variant <select name="group" data-groups></select></label>
+			<label>
+				Evolution
+				<select name="evo"><option value="0">Base</option><option value="1">I</option><option value="2">II</option><option value="3" selected>III</option></select>
+			</label>
+		</fieldset>
+		<fieldset>
+			<legend>Character</legend>
+			<label>Character prestige (0–20) <input name="prestige" type="number" min="0" max="20" step="1" value="20" /></label>
+			{
+				achievements.map((a) => (
+					<label class="sf-tool__check">
+						<input name={`ach-${a.id}`} type="checkbox" /> {a.name}
+					</label>
+				))
+			}
+		</fieldset>
+		<fieldset>
+			<legend>Gear fortification (P0–P10) and refinement rolls</legend>
+			<label>Weapon fortification <input name="fWeapon" type="number" min="0" max="10" step="1" value="0" /></label>
+			<label>Weapon refinement: sum of power rolls <input name="rWeapon" type="number" min="0" max="15" step="1" value="0" /></label>
+			<label>Necklace fortification <input name="fNeck" type="number" min="0" max="10" step="1" value="0" /></label>
+			<label>Necklace refinement: sum of power rolls <input name="rNeck" type="number" min="0" max="15" step="1" value="0" /></label>
+			<label>Armour pieces fortified (0–4) <input name="armourPieces" type="number" min="0" max="4" step="1" value="0" /></label>
+			<label>Their fortification level <input name="fArmour" type="number" min="0" max="10" step="1" value="0" /></label>
+			<label>Armour refinement: sum of Health rolls <input name="rArmour" type="number" min="0" max="140" step="1" value="0" /></label>
+		</fieldset>
+		<fieldset>
+			<legend>Not computable yet: notes only</legend>
+			<label>School spell <input name="spell" type="text" maxlength="60" placeholder="e.g. Tier 2 spell name" /></label>
+			<label>Pet <input name="pet" type="text" maxlength="60" placeholder="pet, tier, Cristais" /></label>
+			<label>Sangrulhos <input name="sangrulho" type="text" maxlength="60" placeholder="type and value" /></label>
+			<label>Plasmas <input name="plasmas" type="text" maxlength="80" placeholder="ancestor: plasmas" /></label>
+		</fieldset>
+	</form>
+	<div class="sf-tool__out" data-out aria-live="polite"></div>
+</sf-build-planner>
+
+<script>
+	import { classBonusOfficial, overlaps, unusedByClass, sumWithinSource, type PlannerClass, type SourceBlock, type Attr } from '../../lib/calc/build.ts';
+	import { toolData, wireForm, num, str, bool, esc } from '../../scripts/tool';
+
+	interface Data {
+		classes: PlannerClass[];
+		prestigeBuffs: { prestige: number; attrs: Attr[] }[];
+		achievements: { id: string; name: string; attrs: Attr[] }[];
+	}
+
+	const table = (attrs: Attr[]) =>
+		attrs.length
+			? `<table><tbody>${attrs.map((a) => `<tr><td>${esc(a.name)}</td><td>${esc(a.value)}</td></tr>`).join('')}</tbody></table>`
+			: '<p class="sf-tool__note">Nothing from this source.</p>';
+
+	class BuildPlanner extends HTMLElement {
+		connectedCallback() {
+			const d = toolData<Data>(this);
+			const form = this.querySelector('form')!;
+			const out = this.querySelector<HTMLElement>('[data-out]')!;
+			const groupSel = form.querySelector<HTMLSelectElement>('[data-groups]')!;
+			const fillGroups = () => {
+				const cls = d.classes.find((c) => c.id === str(form, 'cls'))!;
+				const keep = groupSel.value;
+				groupSel.innerHTML = cls.groups.map((g, i) => `<option value="${i}">${esc(g.name)}</option>`).join('');
+				if ([...groupSel.options].some((o) => o.value === keep)) groupSel.value = keep;
+			};
+			form.querySelector('[name="cls"]')!.addEventListener('change', fillGroups);
+			fillGroups();
+			wireForm(form, 'build', () => {
+				fillGroups();
+				const cls = d.classes.find((c) => c.id === str(form, 'cls'))!;
+				const group = cls.groups[Number(groupSel.value) || 0];
+				const evo = num(form, 'evo');
+				const prestige = Math.min(20, Math.max(0, Math.floor(num(form, 'prestige'))));
+				const clamp10 = (n: number) => Math.min(10, Math.max(0, Math.floor(n)));
+				const blocks: SourceBlock[] = [];
+				const cb = classBonusOfficial(group, evo);
+				const mism = cb.mismatches.map((m) => `${m.name}: the page's total says ${m.published}, but its grades add up to ${m.summed}`).join('; ');
+				blocks.push({ source: `${cls.name} (${group.name}), ${evo ? `Evolution ${['', 'I', 'II', 'III'][evo]}` : 'base'}`, attrs: cb.attrs, note: `Only with the class weapon in hand.${mism ? ` The official page is inconsistent here (${mism}); see open questions Q-018 and Q-019.` : ''}` });
+				blocks.push({ source: `Prestige buffs 1–${prestige}`, attrs: sumWithinSource(d.prestigeBuffs.filter((b) => b.prestige <= prestige).map((b) => b.attrs)) });
+				for (const a of d.achievements) if (bool(form, `ach-${a.id}`)) blocks.push({ source: a.name, attrs: a.attrs });
+				const gear: Attr[] = [];
+				const fW = clamp10(num(form, 'fWeapon')), fN = clamp10(num(form, 'fNeck')), fA = clamp10(num(form, 'fArmour'));
+				const pieces = Math.min(4, Math.max(0, Math.floor(num(form, 'armourPieces'))));
+				if (fW) gear.push({ name: 'Physical Power', value: `+${fW * 2}` });
+				if (fN) gear.push({ name: 'Magic Power', value: `+${fN * 2}` });
+				if (fA && pieces) gear.push({ name: 'Max Health', value: `+${fA * 9 * pieces}` });
+				const rW = Math.max(0, num(form, 'rWeapon')), rN = Math.max(0, num(form, 'rNeck')), rA = Math.max(0, num(form, 'rArmour'));
+				if (rW) gear.push({ name: 'Weapon refinement power', value: `+${rW}` });
+				if (rN) gear.push({ name: 'Necklace refinement power', value: `+${rN}` });
+				if (rA) gear.push({ name: 'Max Health', value: `+${rA}` });
+				blocks.push({ source: 'Gear fortification and refinement', attrs: sumWithinSource([gear]), note: 'Saved on the items. The Enchanter guide says "Magic Power"; refinement rolls say only "power".' });
+
+				const over = overlaps(blocks);
+				const unused = unusedByClass(cls, blocks);
+				const notes = ['spell', 'pet', 'sangrulho', 'plasmas'].map((k) => [k, str(form, k).trim()]).filter(([, v]) => v);
+				out.innerHTML = `
+					<p class="sf-tool__warn">Each source is listed separately. <strong>This planner doesn't add sources together</strong>, because the official guides don't explain how bonuses combine (open question Q-009). In game, hover an attribute in your Profile (F1) to see the real total.</p>
+					${blocks.map((b) => `<h4>${esc(b.source)}</h4>${b.note ? `<p class="sf-tool__note">${esc(b.note)}</p>` : ''}<div class="sf-tool__scroll">${table(b.attrs)}</div>`).join('')}
+					<h4>Weapon mastery and blood lineage</h4>
+					<p>${esc(cls.name)}'s defaults are mastery: <strong>${cls.defaults.mastery.map(esc).join(', ')}</strong>, and blood: <strong>${cls.defaults.blood.map(esc).join(', ')}</strong>. You can re-pick any 3 of 12 in each list. Their values depend on your weapon's and blood's level and prestige, which the guides don't tabulate. In game, see the NOW column of MASTERY & BLOOD.</p>
+					${over.length ? `<h4>Attributes from more than one source</h4><div class="sf-tool__scroll"><table><thead><tr><th>Attribute</th><th>From</th></tr></thead><tbody>${over.map((o) => `<tr><td>${esc(o.name)}</td><td>${o.from.map((f) => `${esc(f.value)} (${esc(f.source)})`).join('; ')}</td></tr>`).join('')}</tbody></table></div><p class="sf-tool__note">Listed, not added: the stacking rules aren't published.</p>` : ''}
+					${unused.length ? `<p class="sf-tool__warn">${esc(cls.name)}'s class page says it doesn't use: ${unused.map(esc).join(', ')}.</p>` : ''}
+					${notes.length ? `<h4>Your notes</h4><ul>${notes.map(([k, v]) => `<li>${esc(k)}: ${esc(v!)}</li>`).join('')}</ul><p class="sf-tool__note">School spells, pets, Sangrulhos and plasma ancestors aren't computed, because their attribute values aren't published.</p>` : ''}`;
+			});
+		}
+	}
+	customElements.define('sf-build-planner', BuildPlanner);
+</script>

@@ -1,0 +1,72 @@
+---
+// Pet upgrade calculator UI. Logic: src/lib/calc/pets.ts.
+import { constantsMap } from '../../lib/tool-data';
+const data = { constants: await constantsMap() };
+const tiers = [0, 1, 2, 3, 4, 5];
+---
+
+<sf-pet-calc class="sf-tool" data-tool>
+	<script type="application/json" data-tool-data set:html={JSON.stringify(data)} />
+	<form>
+		<fieldset>
+			<legend>Tier</legend>
+			<label>Current tier <select name="from">{tiers.map((t) => <option value={t}>T{t}</option>)}</select></label>
+			<label>Target tier <select name="to">{tiers.map((t) => <option value={t} selected={t === 5}>T{t}</option>)}</select></label>
+			<label>Own souls stored <input name="own" type="number" min="0" step="1" value="0" /></label>
+			<label>Sacrificed souls in this act <input name="sac" type="number" min="0" step="1" value="0" /></label>
+		</fieldset>
+		<fieldset>
+			<legend>Cristais (up to 5 attributes)</legend>
+			{
+				[1, 2, 3, 4, 5].map((i) => (
+					<label>
+						Attribute {i}: now → target
+						<span style="display:flex;gap:0.4rem">
+							<input name={`c${i}`} type="number" min="0" max="10" step="1" value="0" aria-label={`Attribute ${i} current level`} />
+							<input name={`t${i}`} type="number" min="0" max="10" step="1" value={i === 1 ? 10 : 0} aria-label={`Attribute ${i} target level`} />
+						</span>
+					</label>
+				))
+			}
+			<label>Cristais in the Bank <input name="have" type="number" min="0" step="1" value="0" /></label>
+		</fieldset>
+	</form>
+	<div class="sf-tool__out" data-out aria-live="polite"></div>
+</sf-pet-calc>
+
+<script>
+	import { tierCost, crystalPlan } from '../../lib/calc/pets.ts';
+	import type { Constants } from '../../lib/calc/constants.ts';
+	import { toolData, wireForm, num, fmt0 } from '../../scripts/tool';
+
+	class PetCalc extends HTMLElement {
+		connectedCallback() {
+			const { constants: c } = toolData<{ constants: Constants }>(this);
+			const form = this.querySelector('form')!;
+			const out = this.querySelector<HTMLElement>('[data-out]')!;
+			wireForm(form, 'pet', () => {
+				const from = num(form, 'from');
+				const to = Math.max(from, num(form, 'to'));
+				const t = tierCost(c, from, to);
+				const cur = [1, 2, 3, 4, 5].map((i) => num(form, `c${i}`));
+				const tgt = [1, 2, 3, 4, 5].map((i) => num(form, `t${i}`));
+				const cp = crystalPlan(c, to, cur, tgt);
+				const needOwn = Math.max(0, t.ownSouls - num(form, 'own'));
+				const needSac = Math.max(0, t.sacrificedSouls - num(form, 'sac'));
+				const needCr = Math.max(0, cp.minimumCristais - num(form, 'have'));
+				out.innerHTML = `
+					<dl class="sf-tool__stats">
+						<div><dt>Own souls (this pet)</dt><dd>${t.ownSouls}${needOwn ? ` · need ${needOwn} more` : ''}</dd></div>
+						<div><dt>Sacrificed souls (its act)</dt><dd>${t.sacrificedSouls}${needSac ? ` · need ${needSac} more` : ''}</dd></div>
+						<div><dt>Cristal cap at T${to}</dt><dd>+${cp.cap}</dd></div>
+						<div><dt>Cristais, at minimum</dt><dd>${fmt0(cp.minimumCristais)}${needCr ? ` · need ${fmt0(needCr)} more` : ''}</dd></div>
+					</dl>
+					${t.perTier.length ? `<div class="sf-tool__scroll"><table><thead><tr><th>Raise to</th><th>Own souls</th><th>Sacrificed souls</th></tr></thead><tbody>${t.perTier.map((r) => `<tr><td>T${r.tier}</td><td>${r.ownSouls}</td><td>${r.sacrificedSouls}</td></tr>`).join('')}</tbody></table></div>` : ''}
+					${cp.cappedAttributes ? `<p class="sf-tool__warn">${cp.cappedAttributes} attribute target(s) exceed the T${to} cap (+${cp.cap}) and were lowered. Raise the tier first.</p>` : ''}
+					<p class="sf-tool__warn">"At minimum" assumes every evolve attempt succeeds. The success chance isn't published (the panel shows it as CURRENT CHANCE, rising after each failure), so the real number is higher and can't be estimated.</p>
+					<p class="sf-tool__note">Pet prestige is free. REDISTRIBUTE costs 15,000 Ourosangue and RESET costs 75 Sangricoins. Both return 1 Cristal per level, tied to that pet. Sacrificing a soul is permanent.</p>`;
+			});
+		}
+	}
+	customElements.define('sf-pet-calc', PetCalc);
+</script>

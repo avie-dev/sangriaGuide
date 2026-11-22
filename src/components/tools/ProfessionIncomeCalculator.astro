@@ -1,0 +1,60 @@
+---
+// Gathering income comparison. Logic: src/lib/calc/professions.ts.
+import { constantsMap } from '../../lib/tool-data';
+const data = { constants: await constantsMap() };
+const trades = [
+	{ key: 'miner', label: 'Miner', unit: 'veins per hour' },
+	{ key: 'fisher', label: 'Fisher', unit: 'catches per hour' },
+	{ key: 'woodcutter', label: 'Woodcutter', unit: 'trees per hour' },
+];
+---
+
+<sf-profession-calc class="sf-tool" data-tool>
+	<script type="application/json" data-tool-data set:html={JSON.stringify(data)} />
+	<form>
+		{
+			trades.map((t) => (
+				<fieldset>
+					<legend>{t.label}</legend>
+					<label>Prestige (0–10) <input name={`${t.key}P`} type="number" min="0" max="10" step="1" value="0" /></label>
+					<label>Your rate: {t.unit} <input name={`${t.key}Rate`} type="number" min="0" step="1" placeholder="time yourself" /></label>
+				</fieldset>
+			))
+		}
+		<label>Hours <input name="hours" type="number" min="0" step="0.5" value="1" /></label>
+	</form>
+	<div class="sf-tool__out" data-out aria-live="polite"></div>
+</sf-profession-calc>
+
+<script>
+	import { gatheringIncome, GATHERERS } from '../../lib/calc/professions.ts';
+	import type { Constants } from '../../lib/calc/constants.ts';
+	import { toolData, wireForm, num, str, fmt, fmt0 } from '../../scripts/tool';
+
+	const NAMES = { miner: 'Miner', fisher: 'Fisher', woodcutter: 'Woodcutter' } as const;
+
+	class ProfessionCalc extends HTMLElement {
+		connectedCallback() {
+			const { constants: c } = toolData<{ constants: Constants }>(this);
+			const form = this.querySelector('form')!;
+			const out = this.querySelector<HTMLElement>('[data-out]')!;
+			wireForm(form, 'prof', () => {
+				const hours = Math.max(0, num(form, 'hours'));
+				const rows = GATHERERS.map((t) => ({ ...gatheringIncome(c, t, num(form, `${t}P`), num(form, `${t}Rate`)), hasRate: str(form, `${t}Rate`).trim() !== '' }));
+				const ranked = rows.filter((r) => r.hasRate).sort((a, b) => b.perHour - a.perHour);
+				out.innerHTML = `
+					<div class="sf-tool__scroll"><table>
+						<thead><tr><th>Trade</th><th>Per action</th><th>Per hour</th><th>For ${fmt(hours)} h</th><th>Extra resources</th></tr></thead>
+						<tbody>${rows
+							.map(
+								(r) => `<tr><td>${NAMES[r.trade]} (P${r.prestige})</td><td>${fmt(r.payPerAction)}</td><td>${r.hasRate ? fmt0(r.perHour) : '—'}</td><td>${r.hasRate ? fmt0(r.perHour * hours) : '—'}</td><td>${r.extra}</td></tr>`
+							)
+							.join('')}</tbody>
+					</table></div>
+					${ranked.length >= 2 ? `<p>With your rates, <strong>${NAMES[ranked[0].trade]}</strong> earns the most Ourosangue per hour.</p>` : `<p class="sf-tool__warn">Enter your own actions per hour to compare. The official guides publish the pay per action but not how many actions fit in an hour (open question Q-012).</p>`}
+					<p class="sf-tool__note">Ourosangue goes straight to your Bank on each action. It doesn't include profession orders, refining components (prestige 5+), pet souls (prestige 6+), selling the extra resources, or Fisher aquariums.</p>`;
+			});
+		}
+	}
+	customElements.define('sf-profession-calc', ProfessionCalc);
+</script>

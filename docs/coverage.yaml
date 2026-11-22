@@ -1370,12 +1370,15 @@ sections:
         brief: ['4: overview']
         sources: [meditacao]
         phase: 8
-        built: page stub
-      - {slug: tools/meditation-calculator, title: Meditation calculator, brief: ['4.1 Meditation Calculator'], sources: [meditacao, nivel-e-prestigio, recompensa-online, vip], phase: 8, research: read, missing: [Q-010, Q-011]}
-      - {slug: tools/prestige-calculator, title: Prestige calculator, brief: ['4.2 Prestige Calculator'], sources: [nivel-e-prestigio, maestria-de-arma, linhagem-de-sangue], phase: 8}
-      - {slug: tools/pulse-calculator, title: Pulse and Transfusion calculator, brief: ['4.3 Pulse and Transfusion Calculator'], sources: [transfusao-e-plasmas, meditacao], phase: 8}
-      - {slug: tools/profession-income-calculator, title: Profession income calculator, brief: ['4.4 Profession Income Calculator'], sources: [coleta-minerador-pescador-lenhador], phase: 8, missing: [Q-012]}
-      - {slug: tools/class-evolution-calculator, title: Class evolution calculator, brief: ['4.5 Class Evolution Calculator'], sources: [classes], phase: 8}
-      - {slug: tools/pet-upgrade-calculator, title: Pet upgrade calculator, brief: ['4.6 Pet Upgrade Calculator'], sources: [pets], phase: 8}
-      - {slug: tools/dungeon-key-calculator, title: Dungeon key calculator, brief: ['4.7 Dungeon Key Calculator'], sources: [masmorras], phase: 8}
-      - {slug: tools/build-planner, title: Build planner, brief: ['4.8 Build Planner'], sources: [classes, perfil, maestria-de-arma, linhagem-de-sangue, escolas, pets, sangrulhos, transfusao-e-plasmas], phase: 8, missing: [Q-009]}
+        built: published
+        research: read
+        writing: written
+        verified: partly checked
+      - {slug: tools/meditation-calculator, title: Meditation calculator, brief: ['4.1 Meditation Calculator'], sources: [meditacao, nivel-e-prestigio, recompensa-online, vip], phase: 8, research: read, missing: [Q-010, Q-011, Q-021], writing: written, verified: partly checked, built: tested}
+      - {slug: tools/prestige-calculator, title: Prestige calculator, brief: ['4.2 Prestige Calculator'], sources: [nivel-e-prestigio, maestria-de-arma, linhagem-de-sangue], phase: 8, research: read, writing: written, verified: partly checked, built: tested, missing: [Q-017]}
+      - {slug: tools/pulse-calculator, title: Pulse and Transfusion calculator, brief: ['4.3 Pulse and Transfusion Calculator'], sources: [transfusao-e-plasmas, meditacao], phase: 8, research: read, writing: written, verified: partly checked, built: tested}
+      - {slug: tools/profession-income-calculator, title: Profession income calculator, brief: ['4.4 Profession Income Calculator'], sources: [coleta-minerador-pescador-lenhador], phase: 8, missing: [Q-012], research: read, writing: written, verified: partly checked, built: tested}
+      - {slug: tools/class-evolution-calculator, title: Class evolution calculator, brief: ['4.5 Class Evolution Calculator'], sources: [classes], phase: 8, research: read, writing: written, verified: partly checked, built: tested}
+      - {slug: tools/pet-upgrade-calculator, title: Pet upgrade calculator, brief: ['4.6 Pet Upgrade Calculator'], sources: [pets], phase: 8, research: read, writing: written, verified: partly checked, built: tested}
+      - {slug: tools/dungeon-key-calculator, title: Dungeon key calculator, brief: ['4.7 Dungeon Key Calculator'], sources: [masmorras], phase: 8, research: read, writing: written, verified: partly checked, built: tested}
+      - {slug: tools/build-planner, title: Build planner, brief: ['4.8 Build Planner'], sources: [classes, perfil, maestria-de-arma, linhagem-de-sangue, escolas, pets, sangrulhos, transfusao-e-plasmas], phase: 8, missing: [Q-009], research: read, writing: written, verified: partly checked, built: tested}

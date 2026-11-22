@@ -1,0 +1,30 @@
+# Fixed attribute bonuses the build planner can list: the 20 character prestige buffs (in order)
+# and the achievements that give attributes. Values exactly as the English guides state them.
+# `kind: prestige` entries have `prestige` (1–20); `kind: achievement` entries have a `name`.
+
+- { id: prestige-01, kind: prestige, prestige: 1, attrs: [{ name: Damage Reduction, value: '+2%' }], sources: [nivel-e-prestigio] }
+- { id: prestige-02, kind: prestige, prestige: 2, attrs: [{ name: Healing Received, value: '+2%' }], sources: [nivel-e-prestigio] }
+- { id: prestige-03, kind: prestige, prestige: 3, attrs: [{ name: Max Health, value: '+40' }], sources: [nivel-e-prestigio] }
+- { id: prestige-04, kind: prestige, prestige: 4, attrs: [{ name: Sun Resistance, value: '+8' }], sources: [nivel-e-prestigio] }
+- { id: prestige-05, kind: prestige, prestige: 5, attrs: [{ name: Spell Resistance, value: '+2%' }], sources: [nivel-e-prestigio] }
+- { id: prestige-06, kind: prestige, prestige: 6, attrs: [{ name: Physical Resistance, value: '+2%' }], sources: [nivel-e-prestigio] }
+- { id: prestige-07, kind: prestige, prestige: 7, attrs: [{ name: Shield Efficiency, value: '+4%' }], sources: [nivel-e-prestigio] }
+- { id: prestige-08, kind: prestige, prestige: 8, attrs: [{ name: Movement Speed, value: '+0.5' }], sources: [nivel-e-prestigio] }
+- { id: prestige-09, kind: prestige, prestige: 9, attrs: [{ name: Resource Yield, value: '+8%' }], sources: [nivel-e-prestigio] }
+- { id: prestige-10, kind: prestige, prestige: 10, attrs: [{ name: Shapeshift Speed, value: '+0.2' }], sources: [nivel-e-prestigio] }
+- { id: prestige-11, kind: prestige, prestige: 11, attrs: [{ name: Mount Speed, value: '+0.2' }], sources: [nivel-e-prestigio] }
+- { id: prestige-12, kind: prestige, prestige: 12, attrs: [{ name: Blood Drain Reduction, value: '+6%' }], sources: [nivel-e-prestigio] }
+- { id: prestige-13, kind: prestige, prestige: 13, attrs: [{ name: Physical Power, value: '+2' }], sources: [nivel-e-prestigio] }
+- { id: prestige-14, kind: prestige, prestige: 14, attrs: [{ name: Spell Power, value: '+2' }], sources: [nivel-e-prestigio] }
+- { id: prestige-15, kind: prestige, prestige: 15, attrs: [{ name: Physical Life Leech, value: '+2%' }], sources: [nivel-e-prestigio] }
+- { id: prestige-16, kind: prestige, prestige: 16, attrs: [{ name: Spell Life Leech, value: '+4%' }], sources: [nivel-e-prestigio] }
+- { id: prestige-17, kind: prestige, prestige: 17, attrs: [{ name: Attack Speed, value: '+4%' }], sources: [nivel-e-prestigio] }
+- { id: prestige-18, kind: prestige, prestige: 18, attrs: [{ name: Weapon Skill Power, value: '+6%' }], sources: [nivel-e-prestigio] }
+- { id: prestige-19, kind: prestige, prestige: 19, attrs: [{ name: Ultimate Efficiency, value: '+8%' }], sources: [nivel-e-prestigio] }
+- { id: prestige-20, kind: prestige, prestige: 20, attrs: [{ name: Blood Efficiency, value: '+4%' }], sources: [nivel-e-prestigio] }
+
+- { id: pillar-solarus, kind: achievement, name: Pillar of Solarus, attrs: [{ name: Sun Resistance, value: '+50' }, { name: Primary Attack Speed, value: '+5%' }, { name: Physical Power, value: '+10' }], sources: [conquistas] }
+- { id: pillar-monster, kind: achievement, name: Pillar of the Monster, attrs: [{ name: Sun Resistance, value: '+50' }, { name: Primary Attack Speed, value: '+5%' }, { name: Physical Power, value: '+10' }], sources: [conquistas] }
+- { id: pillar-colossus, kind: achievement, name: Pillar of the Colossus, attrs: [{ name: Garlic Resistance, value: '+50' }, { name: Holy Resistance, value: '+50' }, { name: Movement Speed, value: '+5%' }, { name: Resource Yield, value: '+20%' }], sources: [conquistas] }
+- { id: pillar-winged-horror, kind: achievement, name: Pillar of the Winged Horror, attrs: [{ name: Silver Resistance, value: '+50' }, { name: Fire Resistance, value: '+50' }, { name: Spell Power, value: '+10' }, { name: Spell Critical Strike Chance, value: '+5%' }], sources: [conquistas] }
+- { id: pillar-megara, kind: achievement, name: Pillar of Megara, attrs: [{ name: Corruption Resistance, value: '+50%' }, { name: Spell Power, value: '+10' }, { name: Spell Critical Strike Damage, value: '+20%' }], sources: [conquistas] }

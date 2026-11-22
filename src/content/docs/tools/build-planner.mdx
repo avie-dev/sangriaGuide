@@ -1,0 +1,45 @@
+---
+title: Build planner
+description: "Plan a Sangria Falls build and see every published bonus it gets, source by source: class and evolution, prestige buffs, achievements and gear upgrades. Nothing is added up across sources."
+summary: "Choose class, weapon or variant, evolution, prestige, Pillars and gear upgrades. The planner lists each source's published bonuses separately, flags stats your class doesn't use, and lists (but never adds) attributes that come from several sources."
+status: written
+lastVerified: 2026-11-22
+sources:
+  - classes
+  - perfil
+  - maestria-de-arma
+  - linhagem-de-sangue
+  - escolas
+  - pets
+  - sangrulhos
+  - transfusao-e-plasmas
+  - nivel-e-prestigio
+  - conquistas
+  - oficios-ferreiro-alfaiate-encantador
+labels: [official, verify]
+sidebar:
+  order: 8
+---
+
+import BuildPlanner from '../../../components/tools/BuildPlanner.astro';
+import Unverified from '../../../components/Unverified.astro';
+
+<BuildPlanner />
+
+## Why there's no grand total
+
+<Unverified q="Q-009">The official guides don't explain how bonuses from different sources combine. Do percentages add or multiply? Are there caps? Without that, any total would be invented. So the planner shows each source on its own and **lists** overlapping attributes side by side. In game, hover an attribute in your Profile (F1) to see the real breakdown and total.</Unverified>
+
+## What it includes
+
+| Source | Shown as |
+|---|---|
+| Class, weapon or variant, evolution | The official class table, cumulative to your evolution |
+| Prestige buffs 1–20 | The 20 published buffs, cumulative |
+| Pillar achievements | Their published bonuses |
+| Fortification | +2 Physical Power (weapon), +2 Magic Power (necklace), +9 Health per armour piece, per level |
+| Refinement | The rolls you enter |
+| Mastery and blood | Your class's default attributes (values depend on levels and aren't tabulated) |
+| School spell, pet, Sangrulhos, plasmas | Your notes only (values not published) |
+
+The class tables are translated from the Portuguese class pages, and a few of their published totals don't add up (Q-018, Q-019). The planner sums each class's own stages.

@@ -1,0 +1,99 @@
+---
+// Class evolution calculator UI. Logic: src/lib/calc/classes.ts.
+import { getCollection } from 'astro:content';
+import { constantsMap } from '../../lib/tool-data';
+import { classDetails } from '../../lib/class-details';
+
+const entries = (await getCollection('classes')).filter((e) => !e.data.starting).sort((a, b) => a.data.order - b.data.order);
+const classes = entries.map((e) => ({
+	id: e.id,
+	name: e.data.name,
+	tributes: classDetails(e.id).evolutions.map((x) => x.tribute),
+	requires: e.data.requires.map((r) => ({ class: r.class.id, evolution: r.evolution })),
+}));
+const data = { constants: await constantsMap(), classes };
+const states = [
+	['-1', 'Locked'],
+	['0', 'Unlocked'],
+	['1', 'Evolution I'],
+	['2', 'Evolution II'],
+	['3', 'Evolution III'],
+];
+---
+
+<sf-class-calc class="sf-tool" data-tool>
+	<script type="application/json" data-tool-data set:html={JSON.stringify(data)} />
+	<form>
+		<label>
+			Goal class
+			<select name="target">{classes.map((c) => <option value={c.id}>{c.name}</option>)}</select>
+		</label>
+		<label>
+			Goal
+			<select name="targetEvo">
+				<option value="0">Unlock it</option>
+				<option value="1">Evolution I</option>
+				<option value="2">Evolution II</option>
+				<option value="3" selected>Evolution III</option>
+			</select>
+		</label>
+		<label>
+			Active class now
+			<select name="active"><option value="">None (Awakened)</option>{classes.map((c) => <option value={c.id}>{c.name}</option>)}</select>
+		</label>
+		<fieldset>
+			<legend>Where you are with each class</legend>
+			{
+				classes.map((c) => (
+					<label>
+						{c.name}
+						<select name={`s-${c.id}`}>{states.map(([v, l]) => <option value={v}>{l}</option>)}</select>
+					</label>
+				))
+			}
+		</fieldset>
+	</form>
+	<div class="sf-tool__out" data-out aria-live="polite"></div>
+</sf-class-calc>
+
+<script>
+	import { classPlan, type ClassInfo } from '../../lib/calc/classes.ts';
+	import type { Constants } from '../../lib/calc/constants.ts';
+	import { toolData, wireForm, num, str, fmt0, esc } from '../../scripts/tool';
+
+	const roman = ['—', 'I', 'II', 'III'];
+
+	class ClassCalc extends HTMLElement {
+		connectedCallback() {
+			const { constants: c, classes } = toolData<{ constants: Constants; classes: ClassInfo[] }>(this);
+			const form = this.querySelector('form')!;
+			const out = this.querySelector<HTMLElement>('[data-out]')!;
+			wireForm(form, 'cls', () => {
+				const state = Object.fromEntries(classes.map((x) => [x.id, num(form, `s-${x.id}`)]));
+				const active = str(form, 'active') || null;
+				const r = classPlan(c, classes, state, active, str(form, 'target'), num(form, 'targetEvo'));
+				if (!r.steps.length) {
+					out.innerHTML = `<p>You've already reached that goal.</p>`;
+					return;
+				}
+				out.innerHTML = `
+					<dl class="sf-tool__stats">
+						<div><dt>Tributes</dt><dd>${fmt0(r.tributes)}</dd></div>
+						<div><dt>Class switches</dt><dd>${r.switches} (${fmt0(r.switchCost)})</dd></div>
+						<div><dt>Total Ourosangue</dt><dd>${fmt0(r.total)}</dd></div>
+						<div><dt>Classes to unlock</dt><dd>${r.unlocks}</dd></div>
+					</dl>
+					<div class="sf-tool__scroll"><table>
+						<thead><tr><th>Step</th><th>Class</th><th>Do</th><th>Ourosangue</th><th>Why</th></tr></thead>
+						<tbody>${r.steps
+							.map(
+								(s, i) => `<tr><td>${i + 1}</td><td>${esc(s.name)}</td><td>${s.unlock ? "Unlock (Master's quest), then " : s.switchCost ? 'Switch to it, then ' : ''}${s.toEvolution > s.fromEvolution ? `Evolution ${roman[s.fromEvolution + 1]}${s.toEvolution > s.fromEvolution + 1 ? ` → ${roman[s.toEvolution]}` : ''}` : 'nothing more'}</td><td>${fmt0(s.tribute + s.switchCost)}</td><td>${esc(s.reason)}</td></tr>`
+							)
+							.join('')}</tbody>
+					</table></div>
+					<p class="sf-tool__note">Assumes you finish each class before moving to the next: unlocking a class makes it active for free, and returning to one you own costs 3,000. Other classes' unlock quests can only start after <em>The Path of Blood</em>. Tributes are paid from the Bank at the end of each evolution quest.</p>`;
+			});
+		}
+	}
+	customElements.define('sf-class-calc', ClassCalc);
+</script>
