@@ -20,6 +20,8 @@ jobs:
         with:
           node-version-file: .node-version
           cache: npm
+      # The lockfile is written by npm 11; Node 22's bundled npm 10 reads it as out of sync.
+      - run: npm install -g npm@11
       - run: npm ci
       - name: Download the official guides
         run: npm run research
